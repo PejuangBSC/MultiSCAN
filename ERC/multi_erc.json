@@ -273,7 +273,7 @@
       "symbol": "BCHUSDT",
       "sc": "0x85c4edc43724e954e5849caaab61a26a9cb65f1b",
       "desimal": 18,
-      "status": "FALSE",
+      "status": true,
       "wd": 0.039
     },
     {
@@ -434,7 +434,7 @@
       "symbol": "CTXCUSDT",
       "sc": "0xea11755ae41d889ceec39a63e6ff75a02bc1c00d",
       "desimal": 18,
-      "status": "FALSE",
+      "status": true,
       "wd": 46
     },
     {
@@ -553,7 +553,7 @@
       "symbol": "ENJUSDT",
       "sc": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
       "desimal": 18,
-      "status": "FALSE",
+      "status": true,
       "wd": 32
     },
     {
@@ -595,7 +595,7 @@
       "symbol": "FILUSDT",
       "sc": "0x8e16bf47065fe843a82f4399baf5abac4e0822b7",
       "desimal": 18,
-      "status": "FALSE",
+      "status": true,
       "wd": 1.89
     },
     {
@@ -791,7 +791,7 @@
       "symbol": "IOTXUSDT",
       "sc": "0x6fb3e0a217407efff7ca062d46c26e5d60a14d69",
       "desimal": 18,
-      "status": "FALSE",
+      "status": true,
       "wd": 0
     },
     {
@@ -1414,7 +1414,7 @@
       "symbol": "TRXUSDT",
       "sc": "0xf230b790e05390fc8295f4d3f60332c93bed42e2",
       "desimal": 6,
-      "status": "FALSE",
+      "status": true,
       "wd": 85
     },
     {
