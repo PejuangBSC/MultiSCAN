@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-       <title>MODAL v.01</title>
+    <title>MODAL v.01</title>
     <link rel="icon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/current-assets-3716445-3104684.png" type="image/x-icon">
-
     <script src="
 https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js
 "></script>
@@ -69,7 +68,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
 
       function rateKalkulator() {
         $.getJSON(
-          "https://www.binance.me/api/v3/ticker/price?symbols=[%22USDTBIDR%22,%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22]"
+          "https://cors.gemul-putra.workers.dev/?https://www.binance.me/api/v3/ticker/price?symbols=[%22USDTBIDR%22,%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22]"
         )
           .done(function (response) {
             response.forEach((res) => {
@@ -102,7 +101,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
         console.log(symbolRandom.toUpperCase());
         if (symbolRandom) {
           $.getJSON(
-            "https://www.binance.me/api/v3/ticker/price?symbol=" +
+            "https://cors.gemul-putra.workers.dev/?https://www.binance.me/api/v3/ticker/price?symbol=" +
               symbolRandom.toUpperCase() +
               "USDT"
           )
