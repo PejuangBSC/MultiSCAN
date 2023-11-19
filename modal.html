@@ -68,7 +68,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
 
       function rateKalkulator() {
         $.getJSON(
-          "https://cors.gemul-putra.workers.dev/?https://www.binance.me/api/v3/ticker/price?symbols=[%22USDTBIDR%22,%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22]"
+          "https://www.binance.me/api/v3/ticker/price?symbols=[%22USDTBIDR%22,%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22]"
         )
           .done(function (response) {
             response.forEach((res) => {
@@ -101,7 +101,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
         console.log(symbolRandom.toUpperCase());
         if (symbolRandom) {
           $.getJSON(
-            "https://cors.gemul-putra.workers.dev/?https://www.binance.me/api/v3/ticker/price?symbol=" +
+            "https://www.binance.me/api/v3/ticker/price?symbol=" +
               symbolRandom.toUpperCase() +
               "USDT"
           )
