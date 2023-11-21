@@ -1,5 +1,33 @@
 {
-  "serverCORS": [
+  "serverCORS": [      
+      [
+        "https://worker-winter-sound-52bd.pedig30998.workers.dev/?",
+        "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+        "https://worker-weathered-forest-2a2e.fiwala7986.workers.dev/?",
+        "https://worker-still-tooth-553b.sewis68418.workers.dev/?",
+        "https://worker-solitary-waterfall-f039.fomev71287.workers.dev/?",
+        "https://server4.dajom23364.workers.dev/?",
+        "https://server3.hopevap663.workers.dev/?",
+        "https://worker-blue-mountain-bee9.hibes27870.workers.dev/?",
+        "https://worker-still-morning-642c.kehoc99044.workers.dev/?",
+        "https://myserver4.lamowa2709.workers.dev/?",
+        "https://myserver5.mohafe9330.workers.dev/?"
+      ],
+      [
+        "https://worker-young-bush-ce2e.micejiy771.workers.dev/?",
+        "https://worker-sparkling-silence-9d41.federi4672.workers.dev/?",
+        "https://worker-polished-cloud-77bd.renel72768.workers.dev/?",
+        "https://worker-sweet-darkness-d1c0.risiv74771.workers.dev/?",
+        "https://worker-jolly-wildflower-c305.kacito9688.workers.dev/?",
+        "https://worker-dawn-king-f162.kekam96808.workers.dev/?",
+        "https://worker-shrill-bonus-9ca6.wipihoh336.workers.dev/?",
+        "https://worker-tiny-bar-013f.gicot48223.workers.dev/?",
+        "https://worker-tight-violet-dbda.xemojos811.workers.dev/?",
+        "https://worker-tight-lab-9cc4.fetec22957.workers.dev/?",
+        "https://server2.holabaj699.workers.dev/?",
+        "https://myserver3.ceteg74201.workers.dev/?"
+      ],
       [  
         "https://1.iiknrbtxoz.workers.dev/?",
         "https://2.5iz3h20guj.workers.dev/?",
@@ -80,44 +108,16 @@
         "https://worker-tiny-dust-22f2.capaji8287.workers.dev/?",
         "https://worker-old-disk-8a9a.kehaxa7686.workers.dev/?",
         "https://worker-yellow-wood-677d.lanafi2429.workers.dev/?",
-        "https://worker-cool-tree-07c7.kifira7062.workers.dev/?"
+        "https://worker-cool-tree-07c7.kifira7062.workers.dev/?",
+        "https://myserver6.bafayi9378.workers.dev/?",
+        "https://myserver7.yiwaj21571.workers.dev/?"
       ],
       [
         "https://hello-world-broken-hill-2492.yoeazd.workers.dev/?",
         "https://proxykiri.awokawok.workers.dev/?",
         "https://proxykanan.awokawok.workers.dev/?",
         "https://myserver1.nehavef167.workers.dev/?",
-        "https://server2.holabaj699.workers.dev/?",
-        "https://myserver3.ceteg74201.workers.dev/?",
-        "https://myserver4.lamowa2709.workers.dev/?",
-        "https://myserver5.mohafe9330.workers.dev/?",
-        "https://myserver6.bafayi9378.workers.dev/?",
-        "https://myserver7.yiwaj21571.workers.dev/?"
       ],
-      [
-        "https://worker-winter-sound-52bd.pedig30998.workers.dev/?",
-        "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
-        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
-        "https://worker-weathered-forest-2a2e.fiwala7986.workers.dev/?",
-        "https://worker-still-tooth-553b.sewis68418.workers.dev/?",
-        "https://worker-solitary-waterfall-f039.fomev71287.workers.dev/?",
-        "https://server4.dajom23364.workers.dev/?",
-        "https://server3.hopevap663.workers.dev/?",
-        "https://worker-blue-mountain-bee9.hibes27870.workers.dev/?",
-        "https://worker-still-morning-642c.kehoc99044.workers.dev/?"
-      ],
-      [
-        "https://worker-young-bush-ce2e.micejiy771.workers.dev/?",
-        "https://worker-sparkling-silence-9d41.federi4672.workers.dev/?",
-        "https://worker-polished-cloud-77bd.renel72768.workers.dev/?",
-        "https://worker-sweet-darkness-d1c0.risiv74771.workers.dev/?",
-        "https://worker-jolly-wildflower-c305.kacito9688.workers.dev/?",
-        "https://worker-dawn-king-f162.kekam96808.workers.dev/?",
-        "https://worker-shrill-bonus-9ca6.wipihoh336.workers.dev/?",
-        "https://worker-tiny-bar-013f.gicot48223.workers.dev/?",
-        "https://worker-tight-violet-dbda.xemojos811.workers.dev/?",
-        "https://worker-tight-lab-9cc4.fetec22957.workers.dev/?"
-      ]
   ],
   "telegram": {
     "token": "6554422567:AAHn2KErUWyl_RIDChwv49mfHf9lHf_OTgQ",
