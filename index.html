@@ -18,6 +18,13 @@
             color: rgb(5, 125, 39);
             font-weight: bolder;
         }
+        .mdi{
+          color: blue;
+          font-size: 14px;
+        }
+        .merah{
+          color: #dc1023;
+        }
         body {
           font-family:sans-serif; 
           font-size: 14px;
@@ -133,7 +140,7 @@
     <div class="row">
         <div class="col-md-12">
             <h3 style="text-align: center; color:#120305;">
-              <img id="bukaKUNCI" onclick="$('#modalLogin').modal('show')" src="https://cdn-icons-png.flaticon.com/512/9350/9350726.png" width="22px" /> &nbsp;BSC :: MULTI SCAN V.1.4
+              <img id="bukaKUNCI" onclick="$('#modalLogin').modal('show')" src="https://cdn-icons-png.flaticon.com/512/9350/9350726.png" width="22px" /> &nbsp;BSC :: MULTI SCAN V.14
               <img id="syncDATA" src="https://cdn.icon-icons.com/icons2/2596/PNG/512/database_sync_icon_155524.png" width="26px" />
             </h3>
         </div>
@@ -253,11 +260,12 @@
                   </div>
                 </div>
                 <div class="col-md-2">
-                    <i class="mdi mdi-account"></i> <span class="username"></span> <br>
-                    <i class="mdi mdi-timer-outline"></i> <span class="sisawaktu"><i class="mdi mdi-loading mdi-spin"></i> Loading</span>
+                  <span class="mdi mdi-account">User : </span> <span class="username"></span> <br>
+                  <span class="mdi mdi-timer-outline">Limit Time : </span> <span class="merah sisawaktu">-<i class="mdi mdi-loading mdi-spin"></i> Loading</span>
                 </div>
                 <div class="col-md-2">
-                    <i class="mdi mdi-lock-clock"></i> <span class="active_until"><i class="mdi mdi-loading mdi-spin"></i> Loading</span>
+                  <span class="mdi mdi-calendar-remove">Date Expired : </span><br>
+                    <i class="mdi mdi-lock-clock"></i> <span class=" merah active_until"><i class="mdi mdi-loading mdi-spin"></i> Loading</span>
                 </div>
 
       
