@@ -1,34 +1,5 @@
 {
   "serverCORS": [      
-     
-      [
-        "https://worker-floral-river-e85c.tenimik318.workers.dev/?",
-        "https://worker-royal-sound-0576.koban78574.workers.dev/?",
-        "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
-        "https://worker-royal-haze-a135.lisolo3133.workers.dev/?",
-        "https://worker-shy-cloud-27ca.vanogo6423.workers.dev/?",
-        "https://worker-withered-sky-ed3e.vifeci7919.workers.dev/?",
-        "https://worker-sweet-sound-e261.jaxet60213.workers.dev/?",
-        "https://worker-shiny-sun-08f7.xabenic669.workers.dev/?",
-        "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
-        "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
-        "https://worker-round-star-6bf9.yalayo9082.workers.dev/?",
-        "https://worker-cool-dream-e973.gocon75635.workers.dev/?"
-      ],
-      [
-        "https://server11.jiser33752.workers.dev/?",
-        "https://server12.yitijex843.workers.dev/?",
-        "https://server13.lovah68689.workers.dev/?",
-        "https://server14.setopit195.workers.dev/?",
-        "https://server15.povaf41444.workers.dev/?",
-        "https://server16.niromaf426.workers.dev/?",
-        "https://server17.kasoda9624.workers.dev/?",
-        "https://server18.befim19137.workers.dev/?",
-        "https://server19.gafigaf751.workers.dev/?",
-        "https://server20.gayomep515.workers.dev/?",
-         "https://worker-plain-shape-e4c4.dilexid433.workers.dev/?",
-        "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?"
-      ],
       [
         "https://server21.becibov328.workers.dev/?",
         "https://server22.togid93865.workers.dev/?",
@@ -57,12 +28,7 @@
         "https://myserver6.bafayi9378.workers.dev/?",
         "https://myserver7.yiwaj21571.workers.dev/?"
       ],
-      [
-        "https://hello-world-broken-hill-2492.yoeazd.workers.dev/?",
-        "https://proxykiri.awokawok.workers.dev/?",
-        "https://proxykanan.awokawok.workers.dev/?",
-        "https://myserver1.nehavef167.workers.dev/?"
-      ], [
+     [
         "https://worker-winter-sound-52bd.pedig30998.workers.dev/?",
         "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
         "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
@@ -117,7 +83,41 @@
         "https://server10.samoker104.workers.dev/?",
          "https://worker-bold-meadow-ab0a.xaraho1024.workers.dev/?",
         "https://worker-cool-truth-c06e.nomege1872.workers.dev/?"
-      ]
+      ],
+      [
+        "https://worker-floral-river-e85c.tenimik318.workers.dev/?",
+        "https://worker-royal-sound-0576.koban78574.workers.dev/?",
+        "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
+        "https://worker-royal-haze-a135.lisolo3133.workers.dev/?",
+        "https://worker-shy-cloud-27ca.vanogo6423.workers.dev/?",
+        "https://worker-withered-sky-ed3e.vifeci7919.workers.dev/?",
+        "https://worker-sweet-sound-e261.jaxet60213.workers.dev/?",
+        "https://worker-shiny-sun-08f7.xabenic669.workers.dev/?",
+        "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
+        "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
+        "https://worker-round-star-6bf9.yalayo9082.workers.dev/?",
+        "https://worker-cool-dream-e973.gocon75635.workers.dev/?"
+      ],
+      [
+        "https://server11.jiser33752.workers.dev/?",
+        "https://server12.yitijex843.workers.dev/?",
+        "https://server13.lovah68689.workers.dev/?",
+        "https://server14.setopit195.workers.dev/?",
+        "https://server15.povaf41444.workers.dev/?",
+        "https://server16.niromaf426.workers.dev/?",
+        "https://server17.kasoda9624.workers.dev/?",
+        "https://server18.befim19137.workers.dev/?",
+        "https://server19.gafigaf751.workers.dev/?",
+        "https://server20.gayomep515.workers.dev/?",
+         "https://worker-plain-shape-e4c4.dilexid433.workers.dev/?",
+        "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?"
+      ],
+      [
+        "https://hello-world-broken-hill-2492.yoeazd.workers.dev/?",
+        "https://proxykiri.awokawok.workers.dev/?",
+        "https://proxykanan.awokawok.workers.dev/?",
+        "https://myserver1.nehavef167.workers.dev/?"
+      ],
   ],
   "telegram": {
     "token": "6554422567:AAHn2KErUWyl_RIDChwv49mfHf9lHf_OTgQ",
