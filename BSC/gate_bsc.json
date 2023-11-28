@@ -126,49 +126,49 @@
   },
   "token": [
     {
-      "symbol": "1INCHUSDT",
+      "symbol": "1INCH_USDT",
       "sc": "0x111111111117dc0aa78b770fa6a738034120c302",
       "desimal": 18,
       "wd": 0.81,
       "status": true
     },
     {
-      "symbol": "BAKEUSDT",
+      "symbol": "BAKE_USDT",
       "sc": "0xe02df9e3e622debdd69fb838bb799e3f168902c5",
       "desimal": 18,
       "wd": 2,
       "status": true
     },
     {
-      "symbol": "BEAMXUSDT",
+      "symbol": "BEAMX_USDT",
       "sc": "0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce",
       "desimal": 18,
       "wd": 32,
       "status": true
     },
     {
-      "symbol": "BELUSDT",
+      "symbol": "BEL_USDT",
       "sc": "0x8443f091997f06a61670b735ed92734f5628692f",
       "desimal": 18,
       "wd": 0.48,
       "status": true
     },
     {
-      "symbol": "BETAUSDT",
+      "symbol": "BETA_USDT",
       "sc": "0xbe1a001fe942f96eea22ba08783140b9dcc09d28",
       "desimal": 18,
       "wd": 4.36,
       "status": true
     },
     {
-      "symbol": "BNXUSDT",
+      "symbol": "BNX_USDT",
       "sc": "0x5b1f874d0b0c5ee17a495cbb70ab8bf64107a3bd",
       "desimal": 18,
       "wd": 1.01,
       "status": true
     },
     {
-      "symbol": "KNCUSDT",
+      "symbol": "KNC_USDT",
       "sc": "0xfe56d5892bdffc7bf58f2e84be1b2c32d21c308b",
       "desimal": 18,
       "wd": 0.38,
