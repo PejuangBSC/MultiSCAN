@@ -1,5 +1,33 @@
 {
-  "serverCORS": [      
+  "serverCORS": [  
+    [
+      "https://server1.ciwayeh967.workers.dev/?",
+      "https://yazid3.yazidcrypto7.workers.dev/?",
+      "https://yazid5.bustomi.workers.dev/?",
+      "https://yazid4.yazidcrypto3.workers.dev/?",
+      "https://yoeazd2.yoeaz2324.workers.dev/?",
+      "https://server6.hejij49077.workers.dev/?",
+      "https://server7.gejac16482.workers.dev/?",
+      "https://server8.xotolo5853.workers.dev/?",
+      "https://server9.dopacer193.workers.dev/?",
+      "https://server10.samoker104.workers.dev/?",
+       "https://worker-bold-meadow-ab0a.xaraho1024.workers.dev/?",
+      "https://worker-cool-truth-c06e.nomege1872.workers.dev/?"
+    ],
+    [
+      "https://worker-floral-river-e85c.tenimik318.workers.dev/?",
+      "https://worker-royal-sound-0576.koban78574.workers.dev/?",
+      "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
+      "https://worker-royal-haze-a135.lisolo3133.workers.dev/?",
+      "https://worker-shy-cloud-27ca.vanogo6423.workers.dev/?",
+      "https://worker-withered-sky-ed3e.vifeci7919.workers.dev/?",
+      "https://worker-sweet-sound-e261.jaxet60213.workers.dev/?",
+      "https://worker-shiny-sun-08f7.xabenic669.workers.dev/?",
+      "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
+      "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
+      "https://worker-round-star-6bf9.yalayo9082.workers.dev/?",
+      "https://worker-cool-dream-e973.gocon75635.workers.dev/?"
+    ],    
       [
         "https://server21.becibov328.workers.dev/?",
         "https://server22.togid93865.workers.dev/?",
@@ -70,34 +98,7 @@
          "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
         "https://worker-soft-dawn-b769.robiho8355.workers.dev/?"
       ],
-      [
-        "https://server1.ciwayeh967.workers.dev/?",
-        "https://yazid3.yazidcrypto7.workers.dev/?",
-        "https://yazid5.bustomi.workers.dev/?",
-        "https://yazid4.yazidcrypto3.workers.dev/?",
-        "https://yoeazd2.yoeaz2324.workers.dev/?",
-        "https://server6.hejij49077.workers.dev/?",
-        "https://server7.gejac16482.workers.dev/?",
-        "https://server8.xotolo5853.workers.dev/?",
-        "https://server9.dopacer193.workers.dev/?",
-        "https://server10.samoker104.workers.dev/?",
-         "https://worker-bold-meadow-ab0a.xaraho1024.workers.dev/?",
-        "https://worker-cool-truth-c06e.nomege1872.workers.dev/?"
-      ],
-      [
-        "https://worker-floral-river-e85c.tenimik318.workers.dev/?",
-        "https://worker-royal-sound-0576.koban78574.workers.dev/?",
-        "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
-        "https://worker-royal-haze-a135.lisolo3133.workers.dev/?",
-        "https://worker-shy-cloud-27ca.vanogo6423.workers.dev/?",
-        "https://worker-withered-sky-ed3e.vifeci7919.workers.dev/?",
-        "https://worker-sweet-sound-e261.jaxet60213.workers.dev/?",
-        "https://worker-shiny-sun-08f7.xabenic669.workers.dev/?",
-        "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
-        "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
-        "https://worker-round-star-6bf9.yalayo9082.workers.dev/?",
-        "https://worker-cool-dream-e973.gocon75635.workers.dev/?"
-      ],
+      
       [
         "https://server11.jiser33752.workers.dev/?",
         "https://server12.yitijex843.workers.dev/?",
@@ -202,24 +203,10 @@
       "status": true
     },
     {
-      "symbol": "ASRUSDT",
-      "sc": "0x80d5f92c2c8c682070c95495313ddb680b267320",
-      "desimal": 2,
-      "wd": 0.02,
-      "status": true
-    },
-    {
       "symbol": "ATAUSDT",
       "sc": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
       "desimal": 18,
       "wd": 3.27,
-      "status": true
-    },
-    {
-      "symbol": "ATMUSDT",
-      "sc": "0x25e9d05365c867e59c1904e7463af9f312296f9e",
-      "desimal": 2,
-      "wd": 0.02,
       "status": true
     },
     {
@@ -395,13 +382,6 @@
       "sc": "0xf9cec8d50f6c8ad3fb6dccec577e05aa32b224fe",
       "desimal": 6,
       "wd": 2.18,
-      "status": true
-    },
-    {
-      "symbol": "CITYUSDT",
-      "sc": "0x4e7e8579a9edc6283011be942537baf9284bebe1",
-      "desimal": 2,
-      "wd": 0.02,
       "status": true
     },
     {
@@ -789,13 +769,7 @@
       "wd": 9.04,
       "status": true
     },
-    {
-      "symbol": "JUVUSDT",
-      "sc": "0xc40c9a843e1c6d01b7578284a9028854f6683b1b",
-      "desimal": 2,
-      "wd": 0,
-      "status": true
-    },
+
     {
       "symbol": "KMDUSDT",
       "sc": "0x2003f7ba57ea956b05b85c60b4b2ceea9b111256",
@@ -971,13 +945,7 @@
       "wd": 0.63,
       "status": true
     },
-    {
-      "symbol": "OGUSDT",
-      "sc": "0xf05e45ad22150677a017fbd94b84fbb63dc9b44c",
-      "desimal": 2,
-      "wd": 0,
-      "status": true
-    },
+
     {
       "symbol": "OGNUSDT",
       "sc": "0x9c1962e0ac2a370ab4c4f4eecba6483d8764c4b2",
@@ -1018,13 +986,6 @@
       "sc": "0x2c44b726adf1963ca47af88b284c06f30380fc78",
       "desimal": 18,
       "wd": 24,
-      "status": true
-    },
-    {
-      "symbol": "PERLUSDT",
-      "sc": "0x0f9e4d49f25de22c2202af916b681fbb3790497b",
-      "desimal": 18,
-      "wd": 16,
       "status": true
     },
     {
@@ -1083,13 +1044,7 @@
       "wd": 1.02,
       "status": true
     },
-    {
-      "symbol": "PSGUSDT",
-      "sc": "0xbc5609612b7c44bef426de600b5fd1379db2ecf1",
-      "desimal": 2,
-      "wd": 0,
-      "status": true
-    },
+
     {
       "symbol": "QIUSDT",
       "sc": "0x8729438eb15e2c8b576fcc6aecda6a148776c0f5",
@@ -1214,13 +1169,6 @@
       "sc": "0x2222227e22102fe3322098e4cbfe18cfebd57c95",
       "desimal": 4,
       "wd": 22,
-      "status": true
-    },
-    {
-      "symbol": "TORNBUSD",
-      "sc": "0x1ba8d3c4c219b124d351f603060663bd1bcd9bbf",
-      "desimal": 18,
-      "wd": 0.079,
       "status": true
     },
     {
