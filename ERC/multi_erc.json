@@ -119,7 +119,7 @@
     "token": "6554422567:AAHn2KErUWyl_RIDChwv49mfHf9lHf_OTgQ",
     "id_grup": ""
   },
-  "token": [
+  "token": 
     [
       {
         "symbol": "1INCHUSDT",
@@ -1613,5 +1613,4 @@
         "wd": 21
       }
     ]
-  ]
 }
