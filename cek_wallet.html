@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CEK WALLET BINANCE</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3814/3814848.png" type="image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+      integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12" style="text-align: center;">
+            <br/>
+           <h4># CEK STATUS WALLET BINANCE
+            <img id="cek" title="STATUS WALLET" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" width="26px" />
+            </h4>
+           <br/>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table id="tokenTable" class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Coin</th>
+                <th>Contract Address</th>
+                <th>DEPO</th>
+                <th>WD</th>
+                <th>Fee WD</th>
+                <th>Trading</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+    </div>
+    </div>
+
+    <pre id="jsonview"></pre>
+    <script>
+      $(document).ready(async function () {
+        function calculateSignature(query_string) {
+          const secretKey =
+            "XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn";
+          const signature = CryptoJS.HmacSHA256(
+            query_string,
+            secretKey
+          ).toString(CryptoJS.enc.Hex);
+          return signature;
+        }
+
+        var jsonData = [];
+        var dataFilter = [];
+
+        async function callAPIALL() {
+          const apiKey =
+            "2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU";
+
+          const timestamp = Date.now().toString();
+          const queryString = `timestamp=${timestamp}`;
+          const signature = calculateSignature(queryString);
+
+          const apiUrl =
+            "https://api.binance.com/sapi/v1/capital/config/getall";
+          const headers = {
+            "X-MBX-APIKEY": apiKey,
+          };
+
+          $.ajax({
+            async: true,
+            url: `${apiUrl}?timestamp=${timestamp}&signature=${signature}`,
+            type: "GET",
+            headers: headers,
+            success: async function (data) {
+              jsonData = data;
+            },
+            error: function (xhr, status, error) {
+              console.error(error);
+            },
+          });
+        }
+        await callAPIALL();
+        $("#refresh").click(async function () {
+          await callAPIALL();
+        });
+
+        var tbody = $("#tokenTable tbody");
+        var no = 0;
+
+        // $('input[type="radio"]').change(function() {
+        $("#cek").click(function () {
+          if (no != 0) {
+            $("#tokenTable tbody").empty();
+            no = 0;
+            dataFilter = []
+          }
+          console.log(jsonData);
+       
+          $.each(jsonData, function (index, data) {
+            var ijo =
+              " style='color: #e60b0b;font-weight: bolder;background-color: #28f81f; font-size: 14px;' ";
+            var merah =
+              " style='color: red;font-weight: bolder;background-color: #28f81f; font-size: 14px;' ";
+            var trade = data.trading;
+            $.each(data.networkList, function (i, network) {
+              if (network.network === 'BSC' && trade === true) {
+                no++;
+
+                if (network.depositEnable === false) {
+                  var warnad = merah;
+                }
+
+                if (network.withdrawEnable === false) {
+                  var warnaw = merah;
+                }
+                if (trade === false) {
+                  var warnat = merah;
+                }
+
+                var row = $("<tr>");
+                $("<td>").text(no).appendTo(row);
+                $("<td>").text(network.coin).appendTo(row);
+                $("<td>").text(network.contractAddress).appendTo(row);
+                $("<td " + warnad + " >")
+                  .text(network.depositEnable)
+                  .appendTo(row);
+                $("<td " + warnaw + " >")
+                  .text(network.withdrawEnable)
+                  .appendTo(row);
+                $("<td>").text(network.withdrawFee).appendTo(row);
+                $("<td " + warnat + " >")
+                  .text(trade)
+                  .appendTo(row);
+                tbody.append(row);
+                dataFilter.push({
+                  symbol: network.coin,
+                  sc: network.contractAddress,
+                  wd: network.withdrawFee,
+                  status: true,
+                  withdrawenable: network.withdrawEnable,
+                  depositenable: network.depositEnable,
+                });
+              }
+            });
+            
+          });
+          //$('#jsonview').text(JSON.stringify(dataFilter, null, 2))
+         // console.log(dataFilter)
+        });
+      });
+    </script>
+  </body>
+</html>
