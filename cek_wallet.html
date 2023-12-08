@@ -54,8 +54,8 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
             # CEK STATUS WALLET BINANCE
             <img
               id="cek"
-              title="STATUS WALLET"
-              src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png"
+              title="CEK STATUS"
+              src="https://cdn.iconscout.com/icon/premium/png-256-thumb/receive-data-2134862-1797736.png"
               width="26px"
             />
           </h4>
@@ -99,7 +99,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
         var dataFilter = [];
 
         async function callAPIALL() {
-          $("#tokenTable").DataTable();
+          $("#tokenTable").DataTable({ "pageLength": 100});
           const apiKey =
             "2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU";
 
@@ -223,6 +223,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
           if (cek) {
             $("#dataTable").DataTable().destroy();
             $("#dataTable").DataTable({
+                "pageLength": 200,"paging": false,
               data: dataFilter,
               columns: [
                 { data: "no", title: "No", defaultContent: "" },
@@ -268,6 +269,7 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
             });
           } else {
             $("#dataTable").DataTable({
+                "pageLength": 200,"paging": false,
               columns: [
                 { title: "No" },
                 { title: "Coin" },
