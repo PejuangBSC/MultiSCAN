@@ -2,7 +2,11 @@
 <html>
   <head>
     <title>CEK WALLET BINANCE</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3814/3814848.png" type="image/x-icon">
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/3814/3814848.png"
+      type="image/x-icon"
+    />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
@@ -11,39 +15,71 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"
+    />
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js
+"></script>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <div class="row">
-          <div class="col-md-12" style="text-align: center;">
-            <br/>
-           <h4># CEK STATUS WALLET BINANCE
-            <img id="cek" title="STATUS WALLET" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" width="26px" />
-            </h4>
-           <br/>
-          </div>
+        <div class="col-md-12" style="text-align: center">
+          <br />
+          <h4>
+            # CEK STATUS WALLET BINANCE
+            <img
+              id="cek"
+              title="STATUS WALLET"
+              src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png"
+              width="26px"
+            />
+          </h4>
+          <br />
+        </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <table id="tokenTable" class="table table-striped table-hover">
+          <!-- <table id="tokenTable" class="table table-striped table-hover">
             <thead>
               <tr>
                 <th>No</th>
                 <th>Coin</th>
                 <th>Contract Address</th>
-                <th>DEPO</th>
-                <th>WD</th>
-                <th>Fee WD</th>
+                <th>DEPOSIT</th>
+                <th>WITHDRAW</th>
                 <th>Trading</th>
               </tr>
             </thead>
             <tbody></tbody>
-          </table>
+          </table> -->
+          <table id="dataTable" class="table table-striped table-hover"></table>
         </div>
-    </div>
+      </div>
     </div>
 
     <pre id="jsonview"></pre>
@@ -63,6 +99,7 @@
         var dataFilter = [];
 
         async function callAPIALL() {
+          $("#tokenTable").DataTable();
           const apiKey =
             "2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU";
 
@@ -70,11 +107,21 @@
           const queryString = `timestamp=${timestamp}`;
           const signature = calculateSignature(queryString);
 
-          const apiUrl =
-            "https://api.binance.com/sapi/v1/capital/config/getall";
+          const apiUrl = "https://api.binance.me/sapi/v1/capital/config/getall";
           const headers = {
             "X-MBX-APIKEY": apiKey,
           };
+
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 2500,
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
 
           $.ajax({
             async: true,
@@ -83,12 +130,23 @@
             headers: headers,
             success: async function (data) {
               jsonData = data;
+
+              Toast.fire({
+                icon: "success",
+                title: "BERHASIL TERHUBUNG BINANCE",
+              });
             },
             error: function (xhr, status, error) {
               console.error(error);
+
+              Toast.fire({
+                icon: "error",
+                title: "GAGAL TERHUBUNG BINANCE",
+              });
             },
           });
         }
+
         await callAPIALL();
         $("#refresh").click(async function () {
           await callAPIALL();
@@ -102,47 +160,48 @@
           if (no != 0) {
             $("#tokenTable tbody").empty();
             no = 0;
-            dataFilter = []
+            dataFilter = [];
           }
           console.log(jsonData);
-       
+
           $.each(jsonData, function (index, data) {
             var ijo =
               " style='color: #e60b0b;font-weight: bolder;background-color: #28f81f; font-size: 14px;' ";
             var merah =
-              " style='color: red;font-weight: bolder;background-color: #28f81f; font-size: 14px;' ";
+              " style='color: white; text-align=center; font-weight: bolder;background-color: red; font-size: 14px;' ";
             var trade = data.trading;
             $.each(data.networkList, function (i, network) {
-              if (network.network === 'BSC' && trade === true) {
+              if (network.network === "BSC" && trade === true) {
                 no++;
 
-                if (network.depositEnable === false) {
-                  var warnad = merah;
-                }
+                // if (network.depositEnable === false) {
+                //   var warnad = merah;
+                // }
 
-                if (network.withdrawEnable === false) {
-                  var warnaw = merah;
-                }
-                if (trade === false) {
-                  var warnat = merah;
-                }
+                // if (network.withdrawEnable === false) {
+                //   var warnaw = merah;
+                // }
+                // if (trade === false) {
+                //   var warnat = merah;
+                // }
 
-                var row = $("<tr>");
-                $("<td>").text(no).appendTo(row);
-                $("<td>").text(network.coin).appendTo(row);
-                $("<td>").text(network.contractAddress).appendTo(row);
-                $("<td " + warnad + " >")
-                  .text(network.depositEnable)
-                  .appendTo(row);
-                $("<td " + warnaw + " >")
-                  .text(network.withdrawEnable)
-                  .appendTo(row);
-                $("<td>").text(network.withdrawFee).appendTo(row);
-                $("<td " + warnat + " >")
-                  .text(trade)
-                  .appendTo(row);
-                tbody.append(row);
+                // var row = $("<tr>");
+                // $("<td>").text(no).appendTo(row);
+                // $("<td>").text(network.coin).appendTo(row);
+                // $("<td>").text(network.contractAddress).appendTo(row);
+                // $("<td " + warnad + " >")
+                //   .text(network.depositEnable)
+                //   .appendTo(row);
+                // $("<td " + warnaw + " >")
+                //   .text(network.withdrawEnable)
+                //   .appendTo(row);
+                // //       $("<td>").text(network.withdrawFee).appendTo(row);
+                // $("<td " + warnat + " >")
+                //   .text(trade)
+                //   .appendTo(row);
+                // tbody.append(row);
                 dataFilter.push({
+                  no: no,
                   symbol: network.coin,
                   sc: network.contractAddress,
                   wd: network.withdrawFee,
@@ -152,11 +211,74 @@
                 });
               }
             });
-            
           });
+          console.log(dataFilter);
+
           //$('#jsonview').text(JSON.stringify(dataFilter, null, 2))
-         // console.log(dataFilter)
+          // console.log(dataFilter)
+          showDataTable(true);
         });
+        showDataTable(false);
+        function showDataTable(cek) {
+          if (cek) {
+            $("#dataTable").DataTable().destroy();
+            $("#dataTable").DataTable({
+              data: dataFilter,
+              columns: [
+                { data: "no", title: "No", defaultContent: "" },
+                { data: "symbol", title: "Coin", defaultContent: "" },
+                { data: "sc", title: "Contract Address", defaultContent: "" },
+                { data: "depositenable", title: "DEPOSIT", defaultContent: "" },
+                {
+                  data: "withdrawenable",
+                  title: "WITHDRAW",
+                  defaultContent: "",
+                },
+                { data: "status", title: "Trading", defaultContent: "" },
+              ],
+              createdRow: function (row, data) {
+                if (data.withdrawenable === false) {
+                  $(row).find("td:eq(4)").css({
+                    "background-color": "red",
+                    color: "white",
+                    "text-align": "center",
+                    "font-weight": "bolder",
+                    "font-size": "14px",
+                  });
+                }
+                if (data.depositenable === false) {
+                  $(row).find("td:eq(3)").css({
+                    "background-color": "red",
+                    color: "white",
+                    "text-align": "center",
+                    "font-weight": "bolder",
+                    "font-size": "14px",
+                  });
+                }
+                if (data.status === false) {
+                  $(row).find("td:eq(5)").css({
+                    "background-color": "red",
+                    color: "white",
+                    "text-align": "center",
+                    "font-weight": "bolder",
+                    "font-size": "14px",
+                  });
+                }
+              },
+            });
+          } else {
+            $("#dataTable").DataTable({
+              columns: [
+                { title: "No" },
+                { title: "Coin" },
+                { title: "Contract Address" },
+                { title: "DEPOSIT" },
+                { title: "WITHDRAW" },
+                { title: "Trading" },
+              ],
+            });
+          }
+        }
       });
     </script>
   </body>
