@@ -140,6 +140,13 @@
       "status": true
     },
     {
+      "symbol": "ACEUSDT",
+      "sc": "0xc27A719105A987b4c34116223CAE8bd8F4B5def4",
+      "desimal": 18,
+      "wd": 0.01,
+      "status": true
+    },
+    {
       "symbol": "ADAUSDT",
       "sc": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
       "desimal": 18,
