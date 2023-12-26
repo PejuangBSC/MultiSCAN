@@ -1220,6 +1220,13 @@
       "status": true,
       "wd": 1.41
     },
+        {
+      "symbol": "RDNTUSDT",
+      "sc": "0x137dDB47Ee24EaA998a535Ab00378d6BFa84F893",
+      "desimal": 18,
+      "status": true,
+      "wd": 35
+    },
     {
       "symbol": "QKCUSDT",
       "sc": "0xea26c4ac16d4a5a106820bc8aee85fd0b7b2b664",
