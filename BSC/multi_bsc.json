@@ -930,6 +930,12 @@
       "desimal": 18,
       "wd": 0.16,
       "status": true
+    },{
+      "symbol": "NFPUSDT",
+      "sc": "0x75E8ddB518bB757b4282cd5b83bb70d4101D12FB",
+      "desimal": 18,
+      "wd": 0.16,
+      "status": true
     },
     {
       "symbol": "NULSUSDT",
