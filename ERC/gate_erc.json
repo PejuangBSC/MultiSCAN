@@ -1870,8 +1870,8 @@
     },
     {
       "symbol": "FEG_USDT",
-      "sc": "0x389999216860ab8e0175387a0c90e5c52522c945",
-      "desimal": 9,
+      "sc": "0xbededdf2ef49e87037c4fb2ca34d1ff3d3992a11",
+      "desimal": 18,
       "status": true,
       "wd":0.0000001
     },
