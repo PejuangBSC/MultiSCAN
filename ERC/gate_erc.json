@@ -129,1582 +129,1582 @@
       "symbol": "1EARTH_USDT",
       "sc": "0x9e04f519b094f5f8210441e285f603f4d2b50084",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "1INCH_USDT",
       "sc": "0x111111111117dc0aa78b770fa6a738034120c302",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "5IRE_USDT",
       "sc": "0x3bd7d4F524D09F4e331577247A048D56e4b67a7F",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AAG_USDT",
       "sc": "0x5ba19d656b65f1684cfea4af428c23b9f3628f97",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AAVE_USDT",
       "sc": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ABT_USDT",
       "sc": "0xb98d4c97425d9908e66e53a6fdf673acca0be986",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ACH_USDT",
       "sc": "0xed04915c23f00a313a544955524eb7dbd823143d",
       "desimal": 8,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ACX_USDT",
       "sc": "0x44108f0223A3C3028F5Fe7AEC7f9bb2E66beF82F",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AD_USDT",
       "sc": "0xe973e453977195422b48e1852a207b7ee9c913c7",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ADAPAD_USDT",
       "sc": "0xDB0170e2d0c1CC1b2E7a90313d9B9afA4f250289",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ADEL_USDT",
       "sc": "0x94d863173ee77439e4292284ff13fad54b3ba182",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ADP_USDT",
       "sc": "0xc314b0e758d5ff74f63e307a86ebfe183c95767b",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ADX_USDT",
       "sc": "0xADE00C28244d5CE17D72E40330B1c318cD12B7c3",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AERGO_USDT",
       "sc": "0x91Af0fBB28ABA7E31403Cb457106Ce79397FD4E6",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AG_USDT",
       "sc": "0xE276Bd40F5C3d58371Eb78b19FE7A149F1431Fb9",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AGB_USDT",
       "sc": "0xBddF903F43dC7d9801F3F0034bA306169074EF8e",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AGI_USDT",
       "sc": "0x7da2641000cbb407c329310c461b2cb9c70c3046",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AGLA_USDT",
       "sc": "0x1f7e5118521b550bb1a9b435727c003eb033fc51",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AGLD_USDT",
       "sc": "0x32353A6C91143bfd6C7d363B546e62a9A2489A20",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AGRS_USDT",
       "sc": "0x738865301a9b7dd80dc3666dd48cf034ec42bdda",
       "desimal": 8,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AGS_USDT",
       "sc": "0xdB2F2bCCe3efa95EDA95a233aF45F3e0d4f00e2A",
       "desimal": 8,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AIEPK_USDT",
       "sc": "0xac5b038058bcd0424c9c252c6487c25f032e5ddc",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AIOZ_USDT",
       "sc": "0x626e8036deb333b408be468f951bdb42433cbf18",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AIS_USDT",
       "sc": "0xC55292B9c883A8abAf91F3620944E8C7606fc715",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AKITA_USDT",
       "sc": "0x3301ee63fb29f863f2333bd4466acb46cd8323e6",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AKRO_USDT",
       "sc": "0x8ab7404063ec4dbcfd4598215992dc3f8ec853d7",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ALCX_USDT",
       "sc": "0xdbdb4d16eda451d0503b854cf79d55697f90c8df",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ALD_USDT",
       "sc": "0xb26C4B3Ca601136Daf98593feAeff9E0CA702a8D",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ALEPH_USDT",
       "sc": "0x27702a26126e0B3702af63Ee09aC4d1A084EF628",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ALI_USDT",
       "sc": "0x6b0b3a982b4634ac68dd83a4dbf02311ce324181",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ALICE_USDT",
       "sc": "0xac51066d7bec65dc4589368da368b212745d63e8",
       "desimal": 6,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ALN_USDT",
       "sc": "0x8185bc4757572da2a610f887561c32298f1a5748",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ALPA_USDT",
       "sc": "0x7cA4408137eb639570F8E647d9bD7B7E8717514A",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ALPHA_USDT",
       "sc": "0xa1faa113cbe53436df28ff0aee54275c13b40975",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ALPHR_USDT",
       "sc": "0xaa99199d1e9644b588796f3215089878440d58e0",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ALY_USDT",
       "sc": "0x9d5686eadea7327f5a0c4820dca90457a0e88763",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AMKT_USDT",
       "sc": "0xf17a3fe536f8f7847f1385ec1bc967b2ca9cae8d",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AMP_USDT",
       "sc": "0xff20817765cb7f73d4bde2e66e067e58d11095c2",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AMPL_USDT",
       "sc": "0xd46ba6d942050d489dbd938a2c909a5d5039a161",
       "desimal": 9,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ANC_USDT",
       "sc": "0x0f3adc247e91c3c50bc08721355a41037e89bc20",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ANGLE_USDT",
       "sc": "0x31429d1856ad1377a8a0079410b297e1a9e214c2",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ANKR_USDT",
       "sc": "0x8290333cef9e6d528dd5618fb97a76f268f3edd4",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ANT_USDT",
       "sc": "0xa117000000f279d81a1d3cc75430faa017fa5a2e",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "APE_USDT",
       "sc": "0x4d224452801aced8b2f0aebe155379bb5d594381",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "APED_USDT",
       "sc": "0xE0151763455A8a021e64880C238ba1cff3787fF0",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "API3_USDT",
       "sc": "0x0b38210ea11411557c13457D4dA7dC6ea731B88a",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "APN_USDT",
       "sc": "0xd4342a57ecf2fe7ffa37c33cb8f63b1500e575e6",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "APYS_USDT",
       "sc": "0xf7413489c474ca4399eee604716c72879eea3615",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AQT_USDT",
       "sc": "0x2a9bDCFF37aB68B95A53435ADFd8892e86084F93",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ARB_USDT",
       "sc": "0xB50721BCf8d664c30412Cfbc6cf7a15145234ad1",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ARES_USDT",
       "sc": "0x358AA737e033F34df7c54306960a38d09AaBd523",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ARKM_USDT",
       "sc": "0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ARPA_USDT",
       "sc": "0xba50933c268f567bdc86e1ac131be072c6b0b71a",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ARTEM_USDT",
       "sc": "0x9b83f827928abdf18cf1f7e67053572b9bceff3a",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ASD_USDT",
       "sc": "0xff742d05420b6aca4481f635ad8341f81a6300c2",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ASM_USDT",
       "sc": "0x2565ae0385659badcada1031db704442e1b69982",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AST_USDT",
       "sc": "0x27054b13b1b798b345b591a4d22e6562d47ea75a",
       "desimal": 4,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ASTO_USDT",
       "sc": "0x823556202e86763853b40e9cde725f412e294689",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ASTRA_USDT",
       "sc": "0x201332bd45c8628d814f870bfb584b385a7c351e",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ASW_USDT",
       "sc": "0x56694577564FdD577a0ABB20FE95C1E2756C2a11",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ATA_USDT",
       "sc": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ATD_USDT",
       "sc": "0x8052327f1baf94a9dc8b26b9100f211ee3774f54",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AUCTION_USDT",
       "sc": "0xa9b1eb5908cfc3cdf91f9b8b3a74108598009096",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AUDIO_USDT",
       "sc": "0x18aAA7115705e8be94bfFEBDE57Af9BFc265B998",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AURORA_USDT",
       "sc": "0xaaaaaa20d9e0e2461697782ef11675f668207961",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AVA_USDT",
       "sc": "0xa6C0c097741D55ECd9a3A7DeF3A8253fD022ceB9",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AVT_USDT",
       "sc": "0x0d88ed6e74bbfd96b831231638b66c05571e824f",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AXIS_USDT",
       "sc": "0xecC0F1F860a82aB3b442382D93853C02d6384389",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "AXS_USDT",
       "sc": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BAC_USDT",
       "sc": "0x3449fc1cd036255ba1eb19d65ff4ba2b8903a69a",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BACON_USDT",
       "sc": "0x34f797e7190c131cf630524655a618b5bd8738e7",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BADGER_USDT",
       "sc": "0x3472A5A71965499acd81997a54BBA8D852C6E53d",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BAKED_USDT",
       "sc": "0xa4cb0dce4849bdcad2d553e9e68644cf40e26cce",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BAL_USDT",
       "sc": "0xba100000625a3754423978a60c9317c58a424e3d",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BAMBOO_USDT",
       "sc": "0xf56842Af3B56Fd72d17cB103f92d027bBa912e89",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BANK_USDT",
       "sc": "0x24a6a37576377f63f194caa5f518a60f45b42921",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BAS_USDT",
       "sc": "0xa7ed29b253d8b4e3109ce07c80fc570f81b63696",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BAT_USDT",
       "sc": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BBF_USDT",
       "sc": "0xde075d9adbd0240b4462f124af926452ad0bac91",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BCDN_USDT",
       "sc": "0x1e797Ce986C3CFF4472F7D38d5C4aba55DfEFE40",
       "desimal": 15,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BCMC_USDT",
       "sc": "0x2BA8349123de45E931a8C8264c332E6e9CF593F9",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BCUG_USDT",
       "sc": "0x14da7b27b2e0fedefe0a664118b0c9bc68e2e9af",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BDP_USDT",
       "sc": "0xf3dcbc6d72a4e1892f7917b7c43b74131df8480e",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BDT_USDT",
       "sc": "0x054c816BBAD08b2D64De6B2cD38D9a89f04199A0",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BEAR_USDT",
       "sc": "0x016ee7373248a80bde1fd6baa001311d233b3cfa",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BEL_USDT",
       "sc": "0xa91ac63d040deb1b7a5e4d4134ad23eb0ba07e14",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BEPRO_USDT",
       "sc": "0xcf3c8be2e2c42331da80ef210e9b1b307c03d36a",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BERRY_USDT",
       "sc": "0x2d787D4f5005Bd66aC910c2E821241625c406ed5",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BFC_USDT",
       "sc": "0x0c7D5ae016f806603CB1782bEa29AC69471CAb9c",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BFT_USDT",
       "sc": "0x01ff50f8b7f74e4f00580d9596cd3d0d6d6e326f",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BICO_USDT",
       "sc": "0xf17e65822b568b3903685a7c9f496cf7656cc6c2",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BIGTIME_USDT",
       "sc": "0x64Bc2cA1Be492bE7185FAA2c8835d9b824c8a194",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BIRD_USDT",
       "sc": "0x70401dFD142A16dC7031c56E862Fc88Cb9537Ce0",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BLACK_USDT",
       "sc": "0xd714d91a169127e11d8fab3665d72e8b7ef9dbe2",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BLES_USDT",
       "sc": "0xe796d6ca1ceb1b022ece5296226bf784110031cd",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BLUR_USDT",
       "sc": "0x5283d291dbcf85356a21ba090e6db59121208b44",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BLY_USDT",
       "sc": "0xf8aD7dFe656188A23e89da09506Adf7ad9290D5d",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BLZ_USDT",
       "sc": "0x5732046a883704404f284ce41ffadd5b007fd668",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BMEX_USDT",
       "sc": "0xB113c6CF239F60D380359b762E95C13817275277",
       "desimal": 6,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BMI_USDT",
       "sc": "0x725c263e32c72ddc3a19bea12c5a0479a81ee688",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BNT_USDT",
       "sc": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BNTY_USDT",
       "sc": "0xd2d6158683aee4cc838067727209a0aaf4359de3",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BOA_USDT",
       "sc": "0x746dda2ea243400d5a63e0700f190ab79f06489e",
       "desimal": 7,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BOBA_USDT",
       "sc": "0x42bbfa2e77757c645eeaad1655e0911a7553efbc",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BOND_USDT",
       "sc": "0x0391D2021f89DC339F60Fff84546EA23E337750f",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BONDLY_USDT",
       "sc": "0xd2dda223b2617cb616c1580db421e4cfae6a8a85",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BONE_USDT",
       "sc": "0x9813037ee2218799597d83d4a5b6f3b6778218d9",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BORING_USDT",
       "sc": "0xbc19712feb3a26080ebf6f2f7849b417fdd792ca",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BOSON_USDT",
       "sc": "0xc477d038d5420c6a9e0b031712f61c5120090de9",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BRKL_USDT",
       "sc": "0x4674a4f24c5f63d53f22490fb3a08eaaad739ff8",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BRWL_USDT",
       "sc": "0x4086e77c5e993fdb90a406285d00111a974f877a",
       "desimal": 4,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BTM_USDT",
       "sc": "0xcb97e65f07da24d46bcdd078ebebd7c6e6e3d750",
       "desimal": 8,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BTRST_USDT",
       "sc": "0x799ebfabe77a6e34311eeee9825190b9ece32824",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BURP_USDT",
       "sc": "0x33f391f4c4fe802b70b77ae37670037a92114a7c",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BUSY_USDT",
       "sc": "0x5cb3ce6d081fb00d5f6677d196f2d70010ea3f4a",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BXC_USDT",
       "sc": "0xdeCF7Be29F8832E9C2Ddf0388c9778B8Ba76af43",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BYN_USDT",
       "sc": "0x4Bb3205bf648B7F59EF90Dee0F1B62F6116Bc7ca",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "BZZ_USDT",
       "sc": "0x19062190b1925b5b6689d7073fdfc8c2976ef8cb",
       "desimal": 16,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "C98_USDT",
       "sc": "0xae12c5930881c53715b369cec7606b70d8eb229f",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CAGA_USDT",
       "sc": "0xbddc20ed7978B7d59eF190962F441cD18C14e19f",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CARE_USDT",
       "sc": "0x329cf160f30d21006bcd24b67eade561e54cde4c",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CART_USDT",
       "sc": "0x5c8c8d560048f34e5f7f8ad71f2f81a89dbd273e",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CBK_USDT",
       "sc": "0xD85a6Ae55a7f33B0ee113C234d2EE308EdeAF7fD",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CEEK_USDT",
       "sc": "0xb056c38f6b7dc4064367403e26424cd2c60655e1",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CEL_USDT",
       "sc": "0xaaaebe6fe48e54f431b0c390cfaf0b017d09d42d",
       "desimal": 4,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CELL_USDT",
       "sc": "0x26c8afbbfe1ebaca03c2bb082e69d0476bffe099",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CELR_USDT",
       "sc": "0x4f9254c83eb525f9fcf346490bbb3ed28a81c667",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CERE_USDT",
       "sc": "0x2da719db753dfa10a62e140f436e1d67f2ddb0d6",
       "desimal": 10,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CFI_USDT",
       "sc": "0x63b4f3e3fa4e438698ce330e365e831f7ccd1ef4",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CGG_USDT",
       "sc": "0x1fe24f25b1cf609b9c4e7e12d802e3640dfa5e43",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CHAIN_USDT",
       "sc": "0xC4C2614E694cF534D407Ee49F8E44D125E4681c4",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CHO_USDT",
       "sc": "0xbba39fd2935d5769116ce38d46a71bde9cf03099",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CHR_USDT",
       "sc": "0x8A2279d4A90B6fe1C4B30fa660cC9f926797bAA2",
       "desimal": 6,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CIRUS_USDT",
       "sc": "0xa01199c61841fce3b3dafb83fefc1899715c8756",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CLH_USDT",
       "sc": "0xd7d8f3b8bc8bc48d3acc37879eaba7b85889fa52",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CLIPS_USDT",
       "sc": "0xecbee2fae67709f718426ddc3bf770b26b95ed20",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CNNS_USDT",
       "sc": "0x6c3BE406174349cfa4501654313d97e6a31072e1",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "COFI_USDT",
       "sc": "0x3136ef851592acf49ca4c825131e364170fa32b3",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "COMBO_USDT",
       "sc": "0xc03fbf20a586fa89c2a5f6f941458e1fbc40c661",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "COMP_USDT",
       "sc": "0xc00e94cb662c3520282e6f5717214004a7f26888",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CONV_USDT",
       "sc": "0xc834fa996fa3bec7aad3693af486ae53d8aa8b50",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "COOK_USDT",
       "sc": "0xff75ced57419bcaebe5f05254983b013b0646ef5",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "COPI_USDT",
       "sc": "0x42Baf1f659D765C65ADE5BB7E08eb2C680360d9d",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "COTI_USDT",
       "sc": "0xddb3422497e61e13543bea06989c0789117555c5",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "COVAL_USDT",
       "sc": "0x3d658390460295fb963f54dc0899cfb1c30776df",
       "desimal": 8,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CPOOL_USDT",
       "sc": "0x66761fa41377003622aee3c7675fc7b5c1c2fac5",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CQT_USDT",
       "sc": "0xd417144312dbf50465b1c641d016962017ef6240",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CRE_USDT",
       "sc": "0x115ec79f1de567ec68b7ae7eda501b406626478e",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CRE8_USDT",
       "sc": "0xc36b4311B21Fc0c2eAd46f1eA6ce97c9C4D98D3d",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CREAM_USDT",
       "sc": "0x2ba592F78dB6436527729929AAf6c908497cB200",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CREDIT_USDT",
       "sc": "0xC4cB5793BD58BaD06bF51FB37717b86B02CBe8A4",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CRF_USDT",
       "sc": "0x508dD9092b8a44353751989f3946f5e599a7219d",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CRPT_USDT",
       "sc": "0x08389495d7456e1951ddf7c3a1314a4bfb646d8b",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CRTS_USDT",
       "sc": "0x678e840c640f619e17848045d23072844224dd37",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CRV_USDT",
       "sc": "0xD533a949740bb3306d119CC777fa900bA034cd52",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CRVUSD_USDT",
       "sc": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CTI_USDT",
       "sc": "0xcB8fb2438A805664cD8c3e640b85AC473DA5BE87",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CTSI_USDT",
       "sc": "0x491604c0FDF08347Dd1fa4Ee062a822A5DD06B5D",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CUDOS_USDT",
       "sc": "0x817bbdbc3e8a1204f3691d14bb44992841e3db35",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CULT_USDT",
       "sc": "0xf0f9d895aca5c8678f706fb8216fa22957685a13",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CVC_USDT",
       "sc": "0x41e5560054824ea6b0732e656e3ad64e20e94e45",
       "desimal": 8,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CVP_USDT",
       "sc": "0x38e4adb44ef08f22f5b5b76a8f0c2d0dcbe7dca1",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CVX_USDT",
       "sc": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CWEB_USDT",
       "sc": "0x505b5eda5e25a67e1c24a2bf1a527ed9eb88bf04",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "CYBER_USDT",
       "sc": "0x14778860E937f509e651192a90589dE711Fb88a9",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "D2T_USDT",
       "sc": "0x4dd942baa75810a3c1e876e79d5cd35e09c97a76",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DAFI_USDT",
       "sc": "0xfc979087305a826c2b2a0056cfaba50aad3e6439",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DAI_USDT",
       "sc": "0x6b175474e89094c44da98b954eedeac495271d0f",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DAO_USDT",
       "sc": "0x0f51bb10119727a7e5ea3538074fb341f56b09ad",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DATA_USDT",
       "sc": "0x8f693ca8d21b157107184d29d398a8d082b38b76",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DDD_USDT",
       "sc": "0x9f5f3cfd7a32700c93f971637407ff17b91c7342",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DDOS_USDT",
       "sc": "0x7fbec0bb6a7152e77c30d005b5d49cbc08a602c3",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DEGO_USDT",
       "sc": "0x88ef27e69108b2633f8e1c184cc37940a075cc02",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DENT_USDT",
       "sc": "0x3597bfd533a99c9aa083587b074434e61eb0a258",
       "desimal": 8,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DEP_USDT",
       "sc": "0x1a3496c18d558bd9c6c8f609e1b129f67ab08163",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DERC_USDT",
       "sc": "0x9fa69536d1cda4a04cfb50688294de75b505a9ae",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DERI_USDT",
       "sc": "0xa487bf43cf3b10dffc97a9a744cbb7036965d3b9",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DERP_USDT",
       "sc": "0x5dfc78c4d073fd343bc6661668948178522a0de5",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DES_USDT",
       "sc": "0x634239cfa331df0291653139d1a6083b9cf705e3",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DEUS_USDT",
       "sc": "0xde5ed76e7c05ec5e4572cfc88d1acea165109e44",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DEXE_USDT",
       "sc": "0xde4EE8057785A7e8e800Db58F9784845A5C2Cbd6",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DF_USDT",
       "sc": "0x431ad2ff6a9c365805ebad47ee021148d6f7dbe0",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DFL_USDT",
       "sc": "0x6ded0F2c886568Fb4Bb6F04f179093D3D167c9D7",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DFND_USDT",
       "sc": "0xd2adc1c84443ad06f0017adca346bd9b6fc52cab",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DFYN_USDT",
       "sc": "0x9695e0114e12c0d3a3636fab5a18e6b737529023",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DG_USDT",
       "sc": "0x4b520c812e8430659fc9f12f6d0c39026c83588d",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DHV_USDT",
       "sc": "0x62dc4817588d53a056cbbd18231d91ffccd34b2a",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DIA_USDT",
       "sc": "0x84cA8bc7997272c7CfB4D0Cd3D55cd942B3c9419",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DIGG_USDT",
       "sc": "0x798d1be841a82a273720ce31c822c61a67a601c3",
       "desimal": 9,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DILI_USDT",
       "sc": "0x37f74e99794853777a10ea1dc08a64c86958f06a",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DINO_USDT",
       "sc": "0x49642110b712c1fd7261bc074105e9e44676c68f",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DIONE_USDT",
       "sc": "0x89b69f2d1adffa9a253d40840b6baa7fc903d697",
       "desimal": 9,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DIS_USDT",
       "sc": "0x220b71671b649c03714da9c621285943f3cbcdc6",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DIVER_USDT",
       "sc": "0xfb782396c9b20e564a64896181c7ac8d8979d5f4",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DKA_USDT",
       "sc": "0x5dc60C4D5e75D22588FA17fFEB90A63E535efCE0",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DMTR_USDT",
       "sc": "0x51cb253744189f11241becb29bedd3f1b5384fdb",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DNT_USDT",
       "sc": "0x0abdace70d3790235af448c88547603b945604ea",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DNXC_USDT",
       "sc": "0x20a8cec5fffea65be7122bcab2ffe32ed4ebf03a",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DODO_USDT",
       "sc": "0x43Dfc4159D86F3A37A5A4B3D4580b888ad7d4DDd",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DOMI_USDT",
       "sc": "0x45c2f8c9b4c0bdc76200448cc26c48ab6ffef83f",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DOP_USDT",
       "sc": "0x6bb61215298f296c55b19ad842d3df69021da2ef",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DORA_USDT",
       "sc": "0x70b790d0948a760e80bc3f892b142F7779b538B2",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DORKL_USDT",
       "sc": "0x94be6962be41377d5beda8dfe1b100f3bf0eacf3",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DOS_USDT",
       "sc": "0x0A913beaD80F321E7Ac35285Ee10d9d922659cB7",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DOSE_USDT",
       "sc": "0xb31ef9e52d94d4120eb44fe1ddfde5b4654a6515",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DPR_USDT",
       "sc": "0xf3ae5d769e153ef72b4e3591ac004e89f48107a1",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DPY_USDT",
       "sc": "0x6c2adc2073994fb2ccc5032cc2906fa221e9b391",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DREP_USDT",
       "sc": "0x3ab6ed69ef663bd986ee59205ccad8a20f98b4c2",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DRGN_USDT",
       "sc": "0x419c4db4b9e25d6db2ad9691ccb832c8d9fda05e",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DSLA_USDT",
       "sc": "0x3affcca64c2a6f4e3b6bd9c64cd2c969efd1ecbe",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DUCK_USDT",
       "sc": "0x92e187a03b6cd19cb6af293ba17f2745fd2357d5",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DUSK_USDT",
       "sc": "0x940a2db1b7008b6c776d4faaca729d6d4a4aa551",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DV_USDT",
       "sc": "0x2a03A891ADD2dc6d0F7b94419086630ba5cB65b6",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DVI_USDT",
       "sc": "0x10633216e7e8281e33c86f02bf8e565a635d9770",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DVP_USDT",
       "sc": "0x8e30ea2329d95802fd804f4291220b0e2f579812",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DX_USDT",
       "sc": "0x973e52691176d36453868d9d86572788d27041a9",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DXGM_USDT",
       "sc": "0x66f73d0fd4161cfad4302dc145ff994375c13475",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DYDX_USDT",
       "sc": "0x92d6c1e31e14520e676a687f0a93788b716beff5",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "DYP_USDT",
       "sc": "0x39b46B212bDF15b42B166779b9d1787A68b9D0c3",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "EARN_USDT",
       "sc": "0x12Ed0641242e4C6c220e3ca8F616E9d5470AC99a",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ECOX_USDT",
       "sc": "0xcccd1ba9f7acd6117834e0d28f25645decb1736a",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "EDEN_USDT",
       "sc": "0x1559fa1b8f28238fd5d76d9f434ad86fd20d1559",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "EGAME_USDT",
       "sc": "0x62d3c05b9c3d916fbc111819bbd3cee52906c1ae",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "EGS_USDT",
       "sc": "0xB009BFaAF85e53F55d8657781Eb69feAaed83672",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "EHASH_USDT",
       "sc": "0x2942e3b38e33123965bfbc21e802be943a76bbc6",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
       "symbol": "ELEC_USDT",
       "sc": "0xd49ff13661451313ca1553fd6954bd1d9b6e02b9",
       "desimal": 18,
-      "status": "TRUE",
+      "status": true,
       "wd":0.0000001
     },
     {
