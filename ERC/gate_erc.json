@@ -819,13 +819,6 @@
       "wd":0.0000001
     },
     {
-      "symbol": "BMI_USDT",
-      "sc": "0x725c263e32c72ddc3a19bea12c5a0479a81ee688",
-      "desimal": 18,
-      "status": true,
-      "wd":0.0000001
-    },
-    {
       "symbol": "BNT_USDT",
       "sc": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
       "desimal": 18,
@@ -4179,13 +4172,7 @@
       "status": true,
       "wd":0.0000001
     },
-    {
-      "symbol": "POOL_USDT",
-      "sc": "0x0cec1a9154ff802e7934fc916ed7ca50bde6844e",
-      "desimal": 18,
-      "status": true,
-      "wd":0.0000001
-    },
+
     {
       "symbol": "PORTX_USDT",
       "sc": "0x104f3152d8ebfc3f679392977356962ff36566ac",
@@ -4627,13 +4614,7 @@
       "status": true,
       "wd":0.0000001
     },
-    {
-      "symbol": "SAFEREUM_USDT",
-      "sc": "0xb504035a11E672e12a099F32B1672b9C4a78b22f",
-      "desimal": 18,
-      "status": true,
-      "wd":0.0000001
-    },
+
     {
       "symbol": "SAIL_USDT",
       "sc": "0xd8f1460044925d2d5c723c7054cd9247027415b7",
@@ -4641,13 +4622,7 @@
       "status": true,
       "wd":0.0000001
     },
-    {
-      "symbol": "SAITAMA_USDT",
-      "sc": "0xCE3f08e664693ca792caCE4af1364D5e220827B2",
-      "desimal": 9,
-      "status": true,
-      "wd":0.0000001
-    },
+
     {
       "symbol": "SAITO_USDT",
       "sc": "0xfa14fa6958401314851a17d6c5360ca29f74b57b",
@@ -4680,13 +4655,6 @@
       "symbol": "SAO_USDT",
       "sc": "0x3ef389f264e07fff3106a3926f2a166d1393086f",
       "desimal": 9,
-      "status": true,
-      "wd":0.0000001
-    },
-    {
-      "symbol": "SASHIMI_USDT",
-      "sc": "0xC28E27870558cF22ADD83540d2126da2e4b464c2",
-      "desimal": 18,
       "status": true,
       "wd":0.0000001
     },
@@ -4753,13 +4721,7 @@
       "status": true,
       "wd":0.0000001
     },
-    {
-      "symbol": "SHARE_USDT",
-      "sc": "0x39795344CBCc76cC3Fb94B9D1b15C23c2070C66D",
-      "desimal": 9,
-      "status": true,
-      "wd":0.0000001
-    },
+
     {
       "symbol": "SHIB_USDT",
       "sc": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
@@ -5411,13 +5373,7 @@
       "status": true,
       "wd":0.0000001
     },
-    {
-      "symbol": "ULU_USDT",
-      "sc": "0x035bfe6057e15ea692c0dfdcab3bb41a64dd2ad4",
-      "desimal": 18,
-      "status": true,
-      "wd":0.0000001
-    },
+
     {
       "symbol": "UMA_USDT",
       "sc": "0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828",
