@@ -2673,13 +2673,7 @@
       "status": true,
       "wd":0.0000001
     },
-    {
-      "symbol": "KIMCHI_USDT",
-      "sc": "0x1E18821E69B9FAA8e6e75DFFe54E7E25754beDa0",
-      "desimal": 18,
-      "status": true,
-      "wd":0.0000001
-    },
+
     {
       "symbol": "KINE_USDT",
       "sc": "0xcbfef8fdd706cde6f208460f2bf39aa9c785f05d",
@@ -4306,7 +4300,7 @@
     },
     {
       "symbol": "PYR_USDT",
-      "sc": "0x9534ad65fb398e27ac8f4251dae1780b989d136e",
+      "sc": "0x430EF9263E76DAE63c84292C3409D61c598E9682",
       "desimal": 18,
       "status": true,
       "wd":0.0000001
