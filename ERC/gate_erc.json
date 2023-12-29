@@ -288,7 +288,7 @@
     },
     {
       "symbol": "AIS_USDT",
-      "sc": "0xC55292B9c883A8abAf91F3620944E8C7606fc715",
+      "sc": "0x42A7797351dFd281A80807196c8508Eb70bb2af9",
       "desimal": 18,
       "status": true,
       "wd":0.0000001
@@ -659,7 +659,7 @@
     },
     {
       "symbol": "BAS_USDT",
-      "sc": "0xa7ed29b253d8b4e3109ce07c80fc570f81b63696",
+      "sc": "0x106538CC16F938776c7c180186975BCA23875287",
       "desimal": 18,
       "status": true,
       "wd":0.0000001
@@ -862,7 +862,7 @@
     },
     {
       "symbol": "BONDLY_USDT",
-      "sc": "0xd2dda223b2617cb616c1580db421e4cfae6a8a85",
+      "sc": "0x91dFbEE3965baAEE32784c2d546B7a0C62F268c9",
       "desimal": 18,
       "status": true,
       "wd":0.0000001
@@ -1331,7 +1331,7 @@
     },
     {
       "symbol": "DEGO_USDT",
-      "sc": "0x88ef27e69108b2633f8e1c184cc37940a075cc02",
+      "sc": "0x3Da932456D082CBa208FEB0B096d49b202Bf89c8",
       "desimal": 18,
       "status": true,
       "wd":0.0000001
@@ -1870,7 +1870,7 @@
     },
     {
       "symbol": "FEG_USDT",
-      "sc": "0xbededdf2ef49e87037c4fb2ca34d1ff3d3992a11",
+      "sc": "0xbededDf2eF49E87037c4fb2cA34d1FF3D3992A11",
       "desimal": 18,
       "status": true,
       "wd":0.0000001
@@ -3355,7 +3355,7 @@
     },
     {
       "symbol": "MPH_USDT",
-      "sc": "0x8888801af4d980682e47f1a9036e589479e835c5",
+      "sc": "0x6369c3DadfC00054A42BA8B2c09c48131dd4Aa38",
       "desimal": 18,
       "status": true,
       "wd":0.0000001
@@ -4489,7 +4489,7 @@
     },
     {
       "symbol": "REP_USDT",
-      "sc": "0x1985365e9f78359a9B6AD760e32412f4a445E862",
+      "sc": "0x221657776846890989a759BA2973e427DfF5C9bB",
       "desimal": 18,
       "status": true,
       "wd":0.0000001
@@ -4937,7 +4937,7 @@
     },
     {
       "symbol": "SOV_USDT",
-      "sc": "0x2C5BC2Ba3614fD27FCc7022eA71d9172E2632c16",
+      "sc": "0xbdab72602e9AD40FC6a6852CAf43258113B8F7a5",
       "desimal": 18,
       "status": true,
       "wd":0.0000001
@@ -5308,7 +5308,7 @@
     },
     {
       "symbol": "TRADE_USDT",
-      "sc": "0x6F87D756DAf0503d08Eb8993686c7Fc01Dc44fB1",
+      "sc": "0x6e5970DBd6fc7eb1f29C6D2eDF2bC4c36124C0C1",
       "desimal": 18,
       "status": true,
       "wd":0.0000001
@@ -5637,7 +5637,7 @@
     },
     {
       "symbol": "VOLT_USDT",
-      "sc": "0x7db5af2b9624e1b3b4bb69d6debd9ad1016a58ac",
+      "sc": "0x7f792db54B0e580Cdc755178443f0430Cf799aCa",
       "desimal": 9,
       "status": true,
       "wd":0.0000001
