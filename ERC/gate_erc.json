@@ -3208,13 +3208,6 @@
       "wd":0.0000001
     },
     {
-      "symbol": "MINI_USDT",
-      "sc": "0x4D953cf077c0C95Ba090226E59A18FcF97db44EC",
-      "desimal": 18,
-      "status": true,
-      "wd":0.0000001
-    },
-    {
       "symbol": "MIR_USDT",
       "sc": "0x09a3ecafa817268f77be1283176b946c4ff2e608",
       "desimal": 18,
@@ -3676,13 +3669,7 @@
       "status": true,
       "wd":0.0000001
     },
-    {
-      "symbol": "OCTO_USDT",
-      "sc": "0x7240aC91f01233BaAf8b064248E80feaA5912BA3",
-      "desimal": 18,
-      "status": true,
-      "wd":0.0000001
-    },
+   
     {
       "symbol": "ODDZ_USDT",
       "sc": "0xcd2828fc4d8e8a0ede91bb38cf64b1a81de65bf6",
