@@ -958,13 +958,7 @@
       "status": true,
       "wd":0.0000001
     },
-    {
-      "symbol": "CARE_USDT",
-      "sc": "0x329cf160f30d21006bcd24b67eade561e54cde4c",
-      "desimal": 18,
-      "status": true,
-      "wd":0.0000001
-    },
+
     {
       "symbol": "CART_USDT",
       "sc": "0x5c8c8d560048f34e5f7f8ad71f2f81a89dbd273e",
