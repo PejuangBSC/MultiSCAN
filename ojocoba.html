@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTI CHECKER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.0/css/uikit.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.7.0/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <link rel="icon" href="https://coin98.s3.ap-southeast-1.amazonaws.com/Coin/BNBVer2.png" type="image/x-icon">
+
+</head>
+<style>
+     #scanprogress {
+        font-size: 16px;
+        color: #0b0808;
+      }
+      #scanbar {
+        text-align: center;
+        width:100%;
+        height:21px;
+        border:1px solid #000;
+        margin:5px 0px;
+      }
+      #bar {
+        width:100%;
+        background-color:#00ff00;
+        height:100%;
+      }
+        .binance {
+            text-align: center;
+            background-color: rgb(250 189 36); /* Ganti dengan warna yang Anda inginkan */
+       }
+       img:hover {
+                transform: scale(1.5); /* You can adjust the scale factor as needed */
+            }
+        a{
+            color:black;
+        }
+        a:hover{
+            color:rgb(0, 4, 128);
+        }
+        .ijo {
+        color: black;
+        background-color:rgb(213, 246, 213);
+      }
+
+      .merah{
+        color: rgb(13, 12, 12);
+        background-color:#f2d3d3;
+      }
+      .error{
+        color: #353030;
+        background-color: #e68888;
+      }
+
+      .uk-table th{
+            font-weight: bold;
+            font-size: large;
+            text-align: center;
+        }
+        /* Menambahkan gaya khusus jika diperlukan */
+        .custom-thead {
+            background-color: #decbf2;
+            font-size: 16px;
+            height: 40px;
+        }
+
+        .uk-container {
+            width: 96%;
+            max-width: none;
+        }
+        .uk-table td, .uk-table th {
+            margin: 3px 0px; /* Ubah nilai margin sesuai kebutuhan */
+            padding: 6px 0px; /* Ubah nilai padding sesuai kebutuhan */
+            font-size: 13px;
+            vertical-align: middle;
+        }
+
+        .tableFixHead          { overflow: auto; height: 750px; }
+        .tableFixHead thead th { position: sticky; top: 0; z-index: 1;  background-color: #decbf2; }
+</style>
+<body>
+    <hr/>
+    <h3  style="color:red; margin:0px 0px; text-align: center;">BSC MULTI CHECKER v1.1 
+        [&nbsp;
+        <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn.icon-icons.com/icons2/2596/PNG/512/database_sync_icon_155524.png" width="26px" />
+        <img id="open-modal" title="SETTING DATA" src="https://cdn-icons-png.flaticon.com/512/7588/7588701.png" width="26px" />
+         <a href="modal.html" target="_blank"> <img title="APLIKASI MODAL" src="https://cdn-icons-png.flaticon.com/512/4021/4021642.png" width="26px" /></a>
+         <a href="cek_wallet.html" target="_blank"> <img title="STATUS WALLET" src="https://cdn-icons-png.flaticon.com/512/3757/3757881.png" width="26px" /></a>
+        &nbsp;]
+      </h3>
+    <!-- Modal UIKIT -->
+    <div id="modal-setting" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title">:: SETTING DEX CHECKER</h2>
+               
+            </div>
+            <div class="uk-modal-body">
+                <form>
+                    <label for="modal-kiri" class="uk-text-primary">MODAL KIRI : { Kecil | Besar }</label>
+                    <input type="number" id="mKiriKecil" class="uk-input" value="" required>
+                    <input type="number" id="mKiriBesar" class="uk-input" value="" required>
+
+                    <label for="modal-kanan" class="uk-text-success">MODAL KANAN : { Kecil | Besar }</label>
+                    <input type="number" id="mKananKecil" class="uk-input" value="" required>
+                    <input type="number" id="mKananBesar" class="uk-input" value="" required>
+
+
+                    <label for="jeda-time" class="uk-text-danger">SPEED SCAN:</label><br/>
+                    <!-- <input type="number" id="jeda-time" value="3000" class="uk-input" readonly> -->
+                    <label><input class="uk-radio" type="radio" value="2700" name="jeda-time" checked> STANDART</label><br/>
+                    <label><input class="uk-radio" type="radio" value="1700" name="jeda-time"> FAST</label><br/>
+                    <label><input class="uk-radio" type="radio" value="2200" name="jeda-time"> NORMAL</label>  <br/>
+
+                    <div style="display: none;">
+                        <label for="sc-address">SC Address:</label>
+                        <input type="text" id="sc-addresspair" value="0x55d398326f99059fF775485246999027B3197955" class="uk-input" readonly>
+    
+                        <label for="des-pair">Des Pair:</label>
+                        <input type="text" id="des-pair" value="18" class="uk-input" readonly>
+    
+                        <label for="symbo-pair">Symbol Pair:</label>
+                        <input type="text" id="symbol-pair" value="USDT" class="uk-input" readonly> 
+                    </div>
+
+                    <!-- <label for="pnl" class="uk-text-danger">PNL:</label>
+                    <input type="number" id="pnl" value="" class="uk-input" required> -->
+
+                    <button type="button" id="save-button" class="uk-button uk-button-primary">SIMPAN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-container uk-margin-top">
+        <form>
+        <div class="uk-margin">
+            <div class="uk-grid uk-child-width-1-6@s" uk-grid>
+        
+                <div>
+                    <div>
+                        <label class="uk-form-label uk-text-primary" >MODAL KIRI </label>
+                        <label class="uk-form-label uk-text-success" >
+                             <input type="checkbox" class="uk-checkbox" checked id="ls" disabled />KECIL
+                        </label>    
+                        <label class="uk-form-label uk-text-danger" > 
+                            <input type="checkbox" class="uk-checkbox" checked id="lb" />BESAR
+                        </label>   
+                    </div>
+                    <div>
+                        <input class="uk-input uk-form-width-medium uk-form-small" type="number" aria-label="disabled"  disabled id="LmKiriKecil" readonly>
+                        <input class="uk-input uk-form-width-medium uk-form-small" type="number" aria-label="disabled"  disabled  id="LmKiriBesar" readonly>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <label class="uk-form-label uk-text-primary" >MODAL KANAN </label>
+                        <label class="uk-form-label uk-text-success" > 
+                            <input type="checkbox" class="uk-checkbox" checked id="rs" disabled />KECIL 
+                        </label>    
+                        <label class="uk-form-label uk-text-danger" >  
+                            <input type="checkbox" class="uk-checkbox" checked id="rb" />BESAR
+                        </label>                       
+                    </div>
+                    <div>
+                        <input class="uk-input uk-form-width-medium uk-form-small" type="number" aria-label="disabled"  disabled  id="LmKananKecil" readonly>
+                        <input class="uk-input uk-form-width-medium uk-form-small" type="number" aria-label="disabled"  disabled id="LmKananBesar" readonly>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <label class="uk-form-label uk-text-secondary" >MARKET </label>
+                    </div>
+                    <label class="uk-form-label uk-text-primary" > 
+                        <input type="checkbox" class="uk-checkbox" checked id="D1INCH" disabled/><span id="modalLP1INCH">&nbsp;1INCH</span>
+                        <input type="checkbox" class="uk-checkbox" checked id="DODOS" /> <span id="modalLPODOS">&nbsp;ODOS</span>
+                        <input type="checkbox" class="uk-checkbox" checked id="DMATCHA" />&nbsp; MATCHA
+                    </label><br/>
+                    <label class="uk-form-label uk-text-warning" >SPEED SCAN : </label>
+                    <label class="uk-form-label uk-text-danger" id="SPEED_SCAN" ></label>
+                </div>
+
+                <div>
+                    <div>
+                        <label class="uk-form-label uk-text-warning" id="server" >PILIH SERVER : </label> 
+                    </div>                                       
+                    <div>
+                        <label class="uk-form-label uk-text-secondary"><input class="uk-radio" type="radio" value="0" checkbox  name="urlRadio"> SERVER01</label>
+                        <label class="uk-form-label uk-text-secondary"><input class="uk-radio" type="radio" value="1" name="urlRadio"> SERVER02</label><br/>
+                        <label class="uk-form-label uk-text-secondary"><input class="uk-radio" type="radio" value="2" name="urlRadio"> SERVER03</label>
+                        <label class="uk-form-label uk-text-secondary"><input class="uk-radio" type="radio" value="3" name="urlRadio"> SERVER04</label> <br/>
+                        <!-- <label class="uk-form-label uk-text-secondary"><input class="uk-radio" type="radio" value="4" name="urlRadio"> SERVER05</label>
+                        <label class="uk-form-label uk-text-secondary"><input class="uk-radio" type="radio" value="5" name="urlRadio"> SERVER06</label>         -->
+                    </div>
+                </div>
+
+                <div>
+                    <label class="uk-text uk-text-danger" id="ip">...</label>                   
+                    <div class="uk-margin uk-form-controls">                        
+                     <label class="uk-text uk-text-small uk-text-danger" id="cek"></label>
+                    </div>
+                </div>
+
+                <div> 
+                    <label class="uk-form-label uk-text-success" >
+                        <input type="checkbox" class="uk-checkbox"  id="Cautorun" /> <span id=autorun> AUTORUN</span>
+                    </label>                    
+                    <div class="uk-margin uk-form-controls">                        
+                        <!-- <img id="refresh" title="REFRESH" src="https://cdn-icons-png.flaticon.com/512/189/189687.png" width="26px" /> -->
+                        <button class="uk-button uk-button-danger" type="button" id="refresh">STOP</button>
+                        <button class="uk-button uk-button-primary" type="button" id="startSCAN">START</button>         
+                    </div>
+                </div>
+
+            </div>  
+        </div> 
+
+        </form>
+
+        <label class="uk-text uk-text-success" id="hasil"></label> <div id="scanprogress">Wait</div> 
+        <div id="scanbar">
+            <div id="bar"> </div>
+        </div>
+        
+    </div>
+ <!-- Modal LIST LP 1INCH -->
+    <div uk-modal id="myModalLP1INCH">
+        <div class="uk-modal-dialog">
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+          <div class="uk-modal-header">
+            <h5 class="uk-modal-title">LIVE :: DAFTAR LP 1INCH</h5>
+          </div>
+          <div class="uk-modal-body">
+            <div id="apiResult1INCH">
+              <span id="checkboxLP1INCH"></span>
+            </div>
+          </div>
+          <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-danger uk-modal-close" type="button">TUTUP</button>
+            <button id="simpanlp1inch" class="uk-button uk-button-primary">SIMPAN</button>
+          </div>
+        </div>
+      </div>
+
+       <!-- Modal LIST LP ODOS -->
+       <div uk-modal id="myModalLPODOS">
+        <div class="uk-modal-dialog">
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+          <div class="uk-modal-header">
+            <h5 class="uk-modal-title">LIVE :: DAFTAR LP ODOS</h5>
+          </div>
+          <div class="uk-modal-body">
+            <div id="apiResultODOS">
+              <span id="checkboxLPODOS"></span>
+            </div>
+          </div>
+          <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-danger uk-modal-close" type="button">TUTUP</button>
+            <button id="simpanlpODOS" class="uk-button uk-button-primary">SIMPAN</button>
+          </div>
+        </div>
+      </div>
+      
+   <!-- TABEL HASIL SCANNER -->
+    <div class="uk-container uk-flex-center uk-flex-middle uk-table-hover">
+        <div class="tableFixHead">
+            <table class="uk-table  uk-table-striped uk-sticky">
+                <thead class="custom-thead uk-overflow-auto">
+                    <tr>                            
+                        <th class="binance uk-text-warning"> BUY</th>
+                        <th colspan="2" class="uk-text-danger"> 1INCH [Kecil | Besar]</th>
+                        <th colspan="2" class="uk-text-secondary"> ODOS [Kecil | Besar]</th>
+                        <th colspan="2" class="uk-text-primary"> MATCHA[Kecil | Besar]</th>
+                        <th style="background-color: orange; color: aliceblue;">&nbsp;TOKEN&nbsp;</th>
+                        <th colspan="2" class="uk-text-danger"> 1INCH [Kecil | Besar]</th>
+                        <th colspan="2" class="uk-text-secondary"> ODOS [Kecil | Besar]</th>
+                        <th colspan="2" class="uk-text-primary"> MATCHA [Kecil | Besar]</th>
+                        <th class="binance uk-text-warning"> SELL</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="TabelBINANCE" style="text-align: center;"></tbody>
+            </table>
+        </div>
+    </div>    
+
+<script>
+function _0x2bb2(){var _0xd534d0=['#ls','insufficient\x20liquidity','\x22\x20value=\x22','val','603ZUdVDC','SINKRONISASI\x20BERHASIL,\x20LANJUTKAN\x20KE\x20SETTINGAN!!','-----------------------','GET','protocols','Error\x20fetching\x20data\x20from\x20the\x20API','detail','#checkboxLP1INCH\x20input:checked','</a>\x20<a\x20href=https://www.binance.me/en/my/wallet/account/main/withdrawal/crypto/','checked','show','#syncDATA','<td\x20class=binance>\x20<a\x20href=https://www.binance.me/en/trade/','SYNC\x20DATA\x20GAGAL','#mKiriBesar','BNBUSDT','responseText','MB_gasGWEI','https://bsc.api.0x.org/swap/v1/quote?buyToken=','length','\x20target=_blank>\x20[DP]\x20</a></td>','1124115DfyRJp','<td>--</td>','html','\x20\x20<a\x20href=https://app.odos.xyz/\x20target=_blank>','&nbsp;&nbsp;','#open-modal','</span>','<td\x20id=bk_odos_','#<span\x20class=\x27uk-text-secondary\x27>','\x20Menit]','https://api-unidex.1inch.io','\x20PERSEN\x20:\x20','OPEN','sk_1inch_','click','symbol','HTML','\x20BUY\x20CEX\x20:\x20','<td\x20id=sb_odos_','remove','STATUS\x20KOIN\x20\x27','#DMATCHA','ERROR\x20:\x20','reload','\x20value=','#myModalLPODOS','https://api4.my-ip.io/v2/ip.json','#Lsc-addresspair','css','buy','10eMDVzd','<td\x20id=bb_1inch_',':checked','push','gasEstimateValue','#Ldes-pair','#checkboxLP1INCH','input[name=\x22urlRadio\x22]','removeClass','TOKEN','append','<td\x20id=bk_1inch_','MB_startTime','>ERROR</a>','replace','endsWith','<td\x20id=sb_1inch_','\x20BUY\x20DEX\x20:\x20','symboPair','fail','stringify','keys','---\x20MATCHA\x20KANAN:\x20','text','MB_DATA_SETTING','1814748mlIvPx','/sendMessage','\x20TOKEN\x20-\x20','.uk-input','bk_1inch_','bk_matcha_','status','mKiriBesar','<td\x20id=bb_matcha_','error','forEach','https://worker-plain-shape-e4c4.dilexid433.workers.dev/?','application/json','sb_matcha_','\x20PNL\x20:\x20','&amount=','buyAmount','#myModalLP1INCH','MB_USDTGasBNB','\x20SELL\x20CEX\x20:\x20','POST','toFixed','bidPrice','#mKananBesar','get','#checkboxLPODOS','input[name=\x22urlRadio\x22][value=\x22','json','bb_matcha_','#<span\x20class=\x27uk-label\x20uk-label-success\x27>','---\x201INCH\x20KANAN:\x20','#startSCAN','https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?https://api.odos.xyz/info/liquidity-sources/56','setItem','children','span#modalLP1INCH','scAddressPair','input[name=\x22urlRadio\x22]:checked','bb_odos_','&dst=','1pjKeQh','CEK,\x20SERVER!<br/>','serverCORS','_USDT','CEK,\x20SETTING\x20DEX\x20!<br/>','\x20\x20<a\x20href=https://matcha.xyz/tokens/bsc/','sb_odos_','addClass','#sc-addresspair','#simpanlpODOS','\x20TOTAL\x20FEE\x20:\x20','https://worker-dawn-king-f162.kekam96808.workers.dev/?','\x20NO\x20PRICE','sources','chat_id','desPair','mKiriKecil','#bar','\x20[\x20<a\x20href=\x22https://bscscan.com/token/','disabled','\x20https://api-defillama.1inch.io','desimal','MB_LP1INCH','uk-form-danger','SETTING\x20LP\x201INCH\x20BERHASIL!!','#mKiriKecil','log','CEK,\x20SETTING\x20LP\x201NCH!<br/>','LPODOS','LIMITED','input[name=\x22jeda-time\x22][value=\x22','find','warn','MY\x20IP\x20:\x20???\x20','#LmKiriBesar','token','5303004xhmFQi','&nbsp;</label>','https://api.binance.me/api/v3/ticker/24hr','<td\x20id=sb_matcha_','<a\x20href=#\x20title=','getItem','bk_odos_','https://api-defillama.1inch.io','MB_PriceBNB','<label>&nbsp;\x20<input\x20type=checkbox\x20id=protokol_','MB_LPODOS','-------------------------\x20\x20','#D1INCH','#rb','\x20FEE\x20SWAP\x20:\x20','ijo','---\x20ODOS\x20KANAN:\x20','&includeGas=true&protocols=','https://multiscan-ruby.vercel.app/BSC/multi_bsc.json','change','#SPEED_SCAN','REFRESH\x20AKAN\x20DILAKUKAN...!!','removeItem','outAmounts','<td\x20class=binance>\x20\x20<a\x20href=https://www.binance.me/en/trade/','parse','each','jedaTime','18glcyeO','</td>','</tr>','success','ODOS','51928kNWkKb','21165881gfcmAx','Mengulangi\x20scanning\x20dalam\x207\x20detik.','#LmKananKecil','telegram','&sellAmount=','#des-pair','$\x20</label>\x20-\x20WD]\x20</a></td>','getTime','---\x20ODOS\x20KIRI\x20:\x20','.statusCheckbox','sell','round','blue','bb_1inch_','<td\x20id=sk_1inch_','askPrice','USDT','modal','\x20MODAL\x20:\x20','6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5','getJSON','CEK,\x20SETTING\x20LP\x20ODOS!<br/>','<td\x20id=bb_odos_','\x20WD\x20:\x20','<td\x20id=sk_matcha_','MB_DATA_MASTER','https://worker-cool-truth-c06e.nomege1872.workers.dev/?','hide','\x20---\x20\x20','input[name=\x22jeda-time\x22]:checked','https://api.telegram.org/bot','prop','?a=0x8894e0a0c962cb723c1976a4421c95949be2d4e3\x22\x20target=\x22_blank\x22>\x201\x20</a>\x20|\x20<a\x20href=\x22https://bscscan.com/token/','description','MY\x20IP\x20:\x20','sb_1inch_','<td\x20style=background-color:orange;>\x20<a\x20href=https://bscscan.com/token/','mKananBesar','\x20SELL\x20DEX\x20:\x20','#checkboxLPODOS\x20input:checked','---\x20MATCHA\x20KIRI\x20:\x20','data','#LmKananBesar','#cek','></td>','id_grup','MB_counter','#ip','SETTING\x20LP\x20ODOS\x20BERHASIL!!','result','outValues','estimatedGas','<td\x20id=sk_odos_','mKananKecil','\x20AMOUNT\x20:\x20','/v5.2/56/quote?src=','ID_GRUP','DODO','#DODOS','\x20target=_blank>','index','2269482SNkGbh','input#Cautorun','done','LIST_TOKEN','MATCHA','Error\x20calling\x20GAS\x20GWEI:','Checking\x20-\x20[\x20','</a></br>(','https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?','pow','join','#save-button','jml\x20anggota:','trim','#symbol-pair','https://api.binance.me/api/v3/ticker/bookTicker?symbol=','#Lsymbol-pair','color','611392cuAHIO','https://worker-frosty-star-71a8.cesaxem416.workers.dev/?','#scanprogress','MB_SERVERCORS','#lb','\x20:\x20','ajax'];_0x2bb2=function(){return _0xd534d0;};return _0x2bb2();}function _0xf12e(_0x4a54ff,_0x1cd898){var _0x2bb25a=_0x2bb2();return _0xf12e=function(_0xf12ea1,_0xec1d7b){_0xf12ea1=_0xf12ea1-0x12c;var _0x155dba=_0x2bb25a[_0xf12ea1];return _0x155dba;},_0xf12e(_0x4a54ff,_0x1cd898);}(function(_0x2549b9,_0x5696e5){var _0x5ca855=_0xf12e,_0x3b17b5=_0x2549b9();while(!![]){try{var _0x4a4f3c=parseInt(_0x5ca855(0x12e))/0x1*(-parseInt(_0x5ca855(0x21a))/0x2)+-parseInt(_0x5ca855(0x1b1))/0x3+-parseInt(_0x5ca855(0x1c3))/0x4+parseInt(_0x5ca855(0x1e3))/0x5*(parseInt(_0x5ca855(0x16e))/0x6)+-parseInt(_0x5ca855(0x152))/0x7+parseInt(_0x5ca855(0x173))/0x8*(parseInt(_0x5ca855(0x1ce))/0x9)+parseInt(_0x5ca855(0x201))/0xa*(parseInt(_0x5ca855(0x174))/0xb);if(_0x4a4f3c===_0x5696e5)break;else _0x3b17b5['push'](_0x3b17b5['shift']());}catch(_0x12e424){_0x3b17b5['push'](_0x3b17b5['shift']());}}}(_0x2bb2,0x701f1),$(document)['ready'](function(){var _0x4eab85=_0xf12e,_0x237fd5=JSON[_0x4eab85(0x16b)](localStorage[_0x4eab85(0x157)](_0x4eab85(0x219)))||{},_0x2648d0=_0x237fd5['LIST_TOKEN'],_0x52f553=0x3,_0x5c4979=_0x237fd5[_0x4eab85(0x16d)],_0x20c031=![];_0x52a10b();function _0x52a10b(){var _0x377d0b=_0x4eab85,_0x312dfe=JSON[_0x377d0b(0x16b)](localStorage['getItem'](_0x377d0b(0x144))),_0x1e84bd=JSON['parse'](localStorage['getItem'](_0x377d0b(0x15c))),_0x1c6ef7=JSON[_0x377d0b(0x16b)](localStorage[_0x377d0b(0x157)](_0x377d0b(0x1c6))),_0x5a59b8=JSON['parse'](localStorage[_0x377d0b(0x157)]('MB_DATA_SETTING'));(_0x312dfe===null||_0x312dfe===undefined||Object['keys'](_0x312dfe)['length']===0x0)&&$('#cek')[_0x377d0b(0x20b)](_0x377d0b(0x149)),(_0x1e84bd===null||_0x1e84bd===undefined||Object[_0x377d0b(0x216)](_0x1e84bd)['length']===0x0)&&$('#cek')['append'](_0x377d0b(0x189)),(_0x1c6ef7===null||_0x1c6ef7===undefined)&&$('#cek')[_0x377d0b(0x20b)](_0x377d0b(0x12f)),(_0x5a59b8===null||_0x5a59b8===undefined||Object[_0x377d0b(0x216)](_0x5a59b8)['length']===0x0)&&$(_0x377d0b(0x19f))['append'](_0x377d0b(0x132));}_0x4d9fbc();var _0x28b942=[_0x4eab85(0x139),'https://worker-shrill-bonus-9ca6.wipihoh336.workers.dev/?','https://worker-tiny-bar-013f.gicot48223.workers.dev/?','https://worker-tight-violet-dbda.xemojos811.workers.dev/?','https://worker-tight-lab-9cc4.fetec22957.workers.dev/?','https://worker-round-star-6bf9.yalayo9082.workers.dev/?','https://worker-cool-dream-e973.gocon75635.workers.dev/?','https://worker-bold-meadow-ab0a.xaraho1024.workers.dev/?',_0x4eab85(0x18e),_0x4eab85(0x1c4),'https://worker-sweet-dust-96ef.payat56154.workers.dev/?',_0x4eab85(0x225),_0x4eab85(0x1b9)];function _0x4d9fbc(){var _0x13c2e3=_0x4eab85;$(_0x13c2e3(0x208))['on'](_0x13c2e3(0x165),function(){var _0x5970bc=_0x13c2e3,_0x52bdaf=$(_0x5970bc(0x23f))['val']();localStorage['setItem'](_0x5970bc(0x1c6),_0x52bdaf);});var _0x3fa75a=localStorage[_0x13c2e3(0x157)](_0x13c2e3(0x1c6));_0x3fa75a&&$(_0x13c2e3(0x234)+_0x3fa75a+'\x22]')['prop']('checked',!![]);}$('#LmKiriKecil')[_0x4eab85(0x1cd)](_0x237fd5[_0x4eab85(0x13e)]||''),$(_0x4eab85(0x150))[_0x4eab85(0x1cd)](_0x237fd5[_0x4eab85(0x221)]||''),$(_0x4eab85(0x176))[_0x4eab85(0x1cd)](_0x237fd5[_0x4eab85(0x1a9)]||''),$(_0x4eab85(0x19e))[_0x4eab85(0x1cd)](_0x237fd5[_0x4eab85(0x199)]||''),$(_0x4eab85(0x1fe))['val'](_0x237fd5['scAddressPair']||''),$(_0x4eab85(0x206))['val'](_0x237fd5[_0x4eab85(0x13d)]||''),$(_0x4eab85(0x1c1))[_0x4eab85(0x1cd)](_0x237fd5[_0x4eab85(0x213)]||''),$(_0x4eab85(0x166))[_0x4eab85(0x218)](_0x237fd5[_0x4eab85(0x16d)]||''),$(_0x4eab85(0x147))[_0x4eab85(0x1cd)](_0x237fd5[_0x4eab85(0x13e)]||''),$(_0x4eab85(0x1dc))[_0x4eab85(0x1cd)](_0x237fd5[_0x4eab85(0x221)]||''),$('#mKananKecil')[_0x4eab85(0x1cd)](_0x237fd5[_0x4eab85(0x1a9)]||''),$(_0x4eab85(0x231))[_0x4eab85(0x1cd)](_0x237fd5['mKananBesar']||''),$[_0x4eab85(0x1c9)]({'url':_0x4eab85(0x1fd),'success':function(_0x28d77f){var _0xc761dc=_0x4eab85;$(_0xc761dc(0x1a3))[_0xc761dc(0x218)](_0xc761dc(0x196)+_0x28d77f['ip']);},'error':function(_0x2de274){var _0x3cae83=_0x4eab85;$(_0x3cae83(0x1a3))[_0x3cae83(0x218)](_0x3cae83(0x14f));}});function _0x41ef7f(){var _0x5c568e=_0x4eab85,_0x607ab0=JSON['parse'](localStorage['getItem'](_0x5c568e(0x18d)))||{};_0x607ab0[_0x5c568e(0x13e)]=$(_0x5c568e(0x147))[_0x5c568e(0x1cd)](),_0x607ab0['mKiriBesar']=$(_0x5c568e(0x1dc))[_0x5c568e(0x1cd)](),_0x607ab0[_0x5c568e(0x1a9)]=$('#mKananKecil')[_0x5c568e(0x1cd)](),_0x607ab0[_0x5c568e(0x199)]=$(_0x5c568e(0x231))['val'](),_0x607ab0[_0x5c568e(0x16d)]=$(_0x5c568e(0x191))[_0x5c568e(0x1cd)](),_0x607ab0[_0x5c568e(0x23e)]=$(_0x5c568e(0x136))[_0x5c568e(0x1cd)](),_0x607ab0[_0x5c568e(0x13d)]=$(_0x5c568e(0x179))[_0x5c568e(0x1cd)](),_0x607ab0[_0x5c568e(0x213)]=$(_0x5c568e(0x1bf))[_0x5c568e(0x1cd)](),localStorage[_0x5c568e(0x23b)](_0x5c568e(0x219),JSON[_0x5c568e(0x215)](_0x607ab0)),UIkit[_0x5c568e(0x185)]('#modal-setting')[_0x5c568e(0x18f)](),alert('SETTING\x20BERHASIL!!'),location[_0x5c568e(0x1fa)]();}function _0x5c7a18(){var _0x4b7965=_0x4eab85;$[_0x4b7965(0x188)](_0x4b7965(0x154),{'symbol':_0x4b7965(0x1dd)})[_0x4b7965(0x1b3)](function(_0x57d4f5){var _0x1cacda=_0x4b7965;localStorage[_0x1cacda(0x23b)](_0x1cacda(0x15a),_0x57d4f5['lastPrice']);})[_0x4b7965(0x214)](function(_0xc848f3){var _0x447439=_0x4b7965;console[_0x447439(0x148)]('Error\x20calling\x20BNBUSDT:',_0xc848f3);}),$[_0x4b7965(0x188)]('https://api.bscscan.com/api?module=gastracker&action=gasoracle&apikey=VTXAJJKJ7QUBPF8WYTQ36GD5UPM9W1J8CJ')[_0x4b7965(0x1b3)](function(_0x4383d3){var _0x3b5ae0=_0x4b7965;localStorage[_0x3b5ae0(0x23b)](_0x3b5ae0(0x1df),_0x4383d3[_0x3b5ae0(0x1a5)]['ProposeGasPrice']);var _0xd9c9b1=localStorage[_0x3b5ae0(0x157)](_0x3b5ae0(0x1df)),_0x3f0ce7=_0xd9c9b1/0x3b9aca00*0x3f7a0*localStorage[_0x3b5ae0(0x157)](_0x3b5ae0(0x15a));localStorage[_0x3b5ae0(0x23b)](_0x3b5ae0(0x22c),_0x3f0ce7);})[_0x4b7965(0x214)](function(_0x55a121){var _0x260d7a=_0x4b7965;console['log'](_0x260d7a(0x1b6),_0x55a121);});}function _0x2a24ca(){var _0x1650ae=_0x4eab85;localStorage[_0x1650ae(0x168)]('MB_DATA_MASTER'),localStorage[_0x1650ae(0x168)](_0x1650ae(0x219)),$[_0x1650ae(0x1c9)]({'url':_0x1650ae(0x164),'success':function(_0x3fdfc3){var _0x2c48c4=_0x1650ae;console[_0x2c48c4(0x14e)](_0x3fdfc3);var _0x4b44b6=_0x3fdfc3[_0x2c48c4(0x130)],_0x94c822=_0x3fdfc3[_0x2c48c4(0x151)],_0x4b3709=_0x3fdfc3[_0x2c48c4(0x177)]['token'],_0x5797d1=_0x3fdfc3['telegram'][_0x2c48c4(0x1a1)],_0x8154b8={'TOKEN':_0x4b3709,'ID_GRUP':_0x5797d1,'LIST_TOKEN':_0x94c822,'SERVERCORS':_0x4b44b6,'DEX':['1INCH',_0x2c48c4(0x1b5),_0x2c48c4(0x1ad),_0x2c48c4(0x1ef),_0x2c48c4(0x172)]};localStorage[_0x2c48c4(0x23b)](_0x2c48c4(0x18d),JSON[_0x2c48c4(0x215)](_0x8154b8));},'error':function(_0x1e87ad){var _0x5767a3=_0x1650ae;alert(_0x5767a3(0x1db));}});}$(_0x4eab85(0x1bc))['on'](_0x4eab85(0x1f1),_0x41ef7f),$(_0x4eab85(0x1e8))['on']('click',function(){var _0x32f78f=_0x4eab85,_0x512217=_0x237fd5[_0x32f78f(0x16d)];_0x512217&&$(_0x32f78f(0x14c)+_0x512217+'\x22]')[_0x32f78f(0x193)](_0x32f78f(0x1d7),!![]),UIkit['modal']('#modal-setting')['show']();}),$('#simpanlp1inch')[_0x4eab85(0x1f1)](function(){var _0x130020=_0x4eab85,_0x29cd7b=[];$(_0x130020(0x1d5))[_0x130020(0x16c)](function(){var _0x30cf5f=_0x130020;_0x29cd7b[_0x30cf5f(0x204)]($(this)[_0x30cf5f(0x1cd)]());}),console[_0x130020(0x148)](_0x29cd7b),localStorage[_0x130020(0x23b)]('MB_LP1INCH',JSON['stringify'](_0x29cd7b)),toastr['success'](_0x130020(0x146));}),$(_0x4eab85(0x23d))[_0x4eab85(0x1f1)](function(){var _0x38ed62=_0x4eab85;$('#checkboxLP1INCH')[_0x38ed62(0x23c)]()['remove'](),$[_0x38ed62(0x1c9)]({'url':'https://api-unidex.1inch.io/v5.2/56/liquidity-sources','type':_0x38ed62(0x1d1),'headers':{'Accept':_0x38ed62(0x226),'Content-Type':_0x38ed62(0x226)},'success':function(_0x5a9abf){var _0x3eddc7=_0x38ed62,_0x2ba50b=_0x5a9abf[_0x3eddc7(0x1d2)];_0x2ba50b['forEach'](_0x4a9546=>{var _0x284cf7=_0x3eddc7,_0x2092be=_0x284cf7(0x15b)+_0x4a9546['id']+_0x284cf7(0x1fb)+_0x4a9546['id']+'\x20checked>\x20'+_0x4a9546['title']+'</label>';$(_0x284cf7(0x207))['append'](_0x2092be,_0x284cf7(0x1e7));}),UIkit['modal'](_0x3eddc7(0x22b))[_0x3eddc7(0x1d8)]();},'error':function(_0x147c43){var _0x47cf4e=_0x38ed62;console['error'](_0x47cf4e(0x1d3),_0x147c43);}});}),$(_0x4eab85(0x137))[_0x4eab85(0x1f1)](function(){var _0x184cda=_0x4eab85,_0x653e10=[];$(_0x184cda(0x19b))['each'](function(){var _0x5a0ffc=_0x184cda;_0x653e10[_0x5a0ffc(0x204)]($(this)['val']());}),localStorage[_0x184cda(0x23b)](_0x184cda(0x15c),JSON['stringify'](_0x653e10)),toastr[_0x184cda(0x171)](_0x184cda(0x1a4));}),$('span#modalLPODOS')[_0x4eab85(0x1f1)](function(){var _0x2e9a47=_0x4eab85;$(_0x2e9a47(0x233))[_0x2e9a47(0x23c)]()[_0x2e9a47(0x1f6)](),$[_0x2e9a47(0x1c9)]({'url':_0x2e9a47(0x23a),'type':'GET','headers':{'Accept':_0x2e9a47(0x226),'Content-Type':_0x2e9a47(0x226)},'success':function(_0x1f0346){var _0x152a06=_0x2e9a47;console[_0x152a06(0x148)](_0x1f0346[_0x152a06(0x13b)]);var _0xac3bc1=_0x1f0346['sources'];_0x1f0346[_0x152a06(0x13b)][_0x152a06(0x224)](function(_0x81894c,_0x2e0c51){var _0x3893ee=_0x152a06;$(_0x3893ee(0x233))[_0x3893ee(0x20b)]('<label>\x20<input\x20type=\x22checkbox\x22\x20id=\x22checkbox'+_0x2e0c51+_0x3893ee(0x1cc)+_0x81894c+'\x22\x20checked>\x20'+_0x81894c+_0x3893ee(0x153));}),console[_0x152a06(0x148)](_0x1f0346[_0x152a06(0x13b)]),UIkit[_0x152a06(0x185)](_0x152a06(0x1fc))[_0x152a06(0x1d8)]();},'error':function(_0x882a9f){var _0x58fd5a=_0x2e9a47;console[_0x58fd5a(0x223)](_0x58fd5a(0x1d3),_0x882a9f);}});}),$(_0x4eab85(0x1d9))['on'](_0x4eab85(0x1f1),function(){var _0x4b7663=_0x4eab85;_0x2a24ca(),alert(_0x4b7663(0x1cf)),location['reload']();}),_0x4c7d96();function _0x4c7d96(){var _0x29ffbf=_0x4eab85;$(_0x29ffbf(0x21d))[_0x29ffbf(0x16c)](function(){var _0x3d1de9=_0x29ffbf;$(this)[_0x3d1de9(0x1cd)]()[_0x3d1de9(0x1be)]()===''?$(this)[_0x3d1de9(0x135)](_0x3d1de9(0x145)):$(this)[_0x3d1de9(0x209)](_0x3d1de9(0x145));});}$(_0x4eab85(0x239))['on'](_0x4eab85(0x1f1),function(){var _0x49dad9=_0x4eab85;$('tbody\x20tr')[_0x49dad9(0x1f6)](),$('input[type=\x22checkbox\x22]')[_0x49dad9(0x193)]('disabled',!![]),$('input[type=\x22radio\x22]')[_0x49dad9(0x193)](_0x49dad9(0x141),!![]);var _0x2a7956=new Date()[_0x49dad9(0x17b)]();localStorage['setItem'](_0x49dad9(0x20d),_0x2a7956),$(_0x49dad9(0x239))[_0x49dad9(0x18f)](),_0x188338(_0x2648d0,_0x52f553,_0x5c4979);}),$(_0x4eab85(0x1b2))[_0x4eab85(0x165)](function(){var _0x3b01ee=_0x4eab85;$(this)['is'](_0x3b01ee(0x203))?_0x20c031=!![]:_0x20c031=![];}),$(document)['on'](_0x4eab85(0x1f1),_0x4eab85(0x17d),function(){var _0x58fb16=_0x4eab85,_0x5d932f=_0x237fd5[_0x58fb16(0x1b4)],_0x4b939f=$(this)[_0x58fb16(0x19d)](_0x58fb16(0x1b0)),_0x4e7c61=$(this)[_0x58fb16(0x193)](_0x58fb16(0x1d7)),_0x37a00f=_0x4b939f;_0x5d932f[_0x58fb16(0x14d)](_0x5e6bdc=>{var _0x3c95b3=_0x58fb16;_0x5e6bdc['symbol']==_0x4b939f&&(console[_0x3c95b3(0x148)]('tes',_0x4b939f),_0x37a00f=_0x5e6bdc[_0x3c95b3(0x1f2)],_0x5e6bdc[_0x3c95b3(0x220)]=_0x4e7c61);}),alert(_0x58fb16(0x1f7)+_0x37a00f[_0x58fb16(0x20f)](_0x58fb16(0x184),'')+'\x27\x20BERUBAH!!'),_0x5d932f=_0x5d932f,localStorage[_0x58fb16(0x23b)](_0x58fb16(0x219),JSON['stringify']({..._0x237fd5,'LIST_TOKEN':_0x5d932f}));});function _0x87983a(_0x56a5d8){$['each'](_0x56a5d8,function(_0x3a8d2a,_0x346655){var _0x210c2d=_0xf12e;console[_0x210c2d(0x148)](_0x210c2d(0x21c)+_0x346655[_0x210c2d(0x1f2)]+_0x210c2d(0x1c8)+_0x346655[_0x210c2d(0x220)]);if(_0x346655[_0x210c2d(0x220)]==!![]){var _0x184c7e=parseInt(localStorage['getItem']('MB_counter')),_0x421624=_0x184c7e+_0x3a8d2a;localStorage[_0x210c2d(0x23b)](_0x210c2d(0x1a2),_0x421624),_0x7f3d46(_0x421624),_0x5971b5(_0x346655);}console['log'](_0x210c2d(0x1d0));});}function _0x188338(_0x1e0823,_0x459f7a,_0x22d6ee){var _0x325493=_0x4eab85,_0x5dde6a=0x0;$['each'](_0x1e0823,function(_0x546d89,_0x27a5a3){_0x27a5a3['status']===!![]&&_0x5dde6a++;}),localStorage['setItem'](_0x325493(0x1a2),0x0);for(var _0x20c99e=0x0;_0x20c99e<_0x5dde6a;_0x20c99e+=_0x459f7a){var _0x469e3d=_0x1e0823['slice'](_0x20c99e,_0x20c99e+_0x459f7a);console[_0x325493(0x14e)]('JUMLAH\x20ALL\x20:'+_0x5dde6a);var _0x2953ff=_0x20c99e/_0x459f7a*_0x22d6ee;setTimeout(function(_0x4e5e51){return function(){var _0x307100=_0xf12e;console['log'](_0x307100(0x1bd),_0x4e5e51[_0x307100(0x1e1)]),_0x87983a(_0x4e5e51);};}(_0x469e3d),_0x20c99e/_0x459f7a*_0x22d6ee);}}function _0x2386de(_0x4f4cc8,_0x4dbad3,_0x457873){var _0x57db36=_0x4eab85;if(_0x4f4cc8[_0x57db36(0x210)](_0x4dbad3)){var _0x2fa673=_0x4f4cc8[_0x57db36(0x20f)](_0x4dbad3,_0x457873);return _0x2fa673;}return _0x4f4cc8;}function _0x3ca29f(_0x2cea77,_0x529bdd,_0x4a13eb,_0x375fb7,_0x540a64,_0x340558,_0xc91df3,_0x4fa6a3,_0x5839c4,_0x1efbea,_0x332c7a,_0x593505){var _0x140d07=_0x4eab85,_0x3f08ef=JSON[_0x140d07(0x16b)](localStorage[_0x140d07(0x157)](_0x140d07(0x144)))[_0x140d07(0x1bb)](','),_0xfcf3ac=Math[_0x140d07(0x1ba)](0xa,_0x4a13eb)*_0x340558,_0xfcf3ac=BigInt(Math[_0x140d07(0x17f)](Number(_0xfcf3ac))),_0x5eeda5=localStorage[_0x140d07(0x157)]('MB_gasGWEI'),_0x3b229c=localStorage[_0x140d07(0x157)](_0x140d07(0x15a)),_0x11ae1f=''+_0x332c7a+_0x140d07(0x1ab)+_0x529bdd+_0x140d07(0x12d)+_0x375fb7+_0x140d07(0x229)+_0xfcf3ac+_0x140d07(0x163)+_0x3f08ef;$[_0x140d07(0x1c9)]({'url':_0x11ae1f,'method':_0x140d07(0x1d1),'success':function(_0x23c1ee){var _0x50bb85=_0x140d07,_0x5b62dd=parseFloat(_0x23c1ee['toAmount'])/Math['pow'](0xa,_0x540a64),_0x17e9d2=_0x23c1ee['gas']/Math[_0x50bb85(0x1ba)](0xa,0x9)*_0x5eeda5*_0x3b229c;if(_0x4fa6a3==_0x50bb85(0x17e)){var _0x445467=parseFloat(_0x5b62dd-_0x2cea77),_0x2a3c31=(_0x5b62dd/(_0x2cea77/_0xc91df3))['toFixed'](0x8),_0x1d850a=parseFloat(_0x2cea77*0.001)+parseFloat(_0x593505)+parseFloat(_0x17e9d2),_0x713a54=(_0x2a3c31-_0xc91df3)/_0xc91df3*0x64;console['log']('---\x201INCH\x20KIRI\x20:\x20'+_0x5839c4+_0x50bb85(0x190)),console[_0x50bb85(0x148)](_0x50bb85(0x186)+_0x2cea77),console[_0x50bb85(0x148)](_0x50bb85(0x1aa)+_0xfcf3ac),console[_0x50bb85(0x148)]('\x20BUY\x20CEX\x20:\x20'+_0xc91df3),console[_0x50bb85(0x148)](_0x50bb85(0x19a)+_0x2a3c31),console[_0x50bb85(0x148)]('\x20PNL\x20:\x20'+_0x445467),console[_0x50bb85(0x148)](_0x50bb85(0x138)+_0x1d850a),console[_0x50bb85(0x148)]('\x20WD\x20:\x20'+_0x593505),console[_0x50bb85(0x148)]('\x20FEE\x20SWAP\x20:\x20'+_0x17e9d2),console['log'](_0x50bb85(0x1ee)+_0x713a54),console[_0x50bb85(0x148)](_0x50bb85(0x15d));}if(_0x4fa6a3=='buy'){var _0x2a3c31=parseFloat(_0x2cea77/_0x5b62dd)['toFixed'](0x8),_0x445467=parseFloat(_0x2cea77/_0x2a3c31*_0xc91df3-_0x2cea77),_0x1d850a=parseFloat(_0x2cea77*0.001)+parseFloat(_0x17e9d2),_0x713a54=(_0xc91df3-_0x2a3c31)/_0x2a3c31*0x64;console[_0x50bb85(0x148)](_0x50bb85(0x238)+_0x5839c4+'\x20---\x20\x20'),console[_0x50bb85(0x148)](_0x50bb85(0x186)+_0x2cea77),console['log'](_0x50bb85(0x1aa)+_0xfcf3ac),console[_0x50bb85(0x148)]('\x20BUY\x20DEX\x20:\x20'+_0x2a3c31),console[_0x50bb85(0x148)](_0x50bb85(0x22d)+_0xc91df3),console[_0x50bb85(0x148)](_0x50bb85(0x228)+_0x445467),console['log']('\x20TOTAL\x20FEE\x20:\x20'+_0x1d850a),console[_0x50bb85(0x148)](_0x50bb85(0x1ee)+_0x713a54),console[_0x50bb85(0x148)](_0x50bb85(0x160)+_0x17e9d2),console['log'](_0x50bb85(0x15d));}if(_0x445467>_0x1d850a+0.3)var _0x5aadc0=_0x50bb85(0x161),_0x445467=''+_0x445467[_0x50bb85(0x22f)](0x2)+_0x50bb85(0x237)+(_0x445467-_0x1d850a)[_0x50bb85(0x22f)](0x2)+_0x50bb85(0x1e9);else var _0x5aadc0='',_0x445467=''+_0x445467[_0x50bb85(0x22f)](0x2)+'#<span\x20class=\x27uk-text-secondary\x27>'+(_0x445467-_0x1d850a)[_0x50bb85(0x22f)](0x2)+'</span>';var _0x306a57=$('#'+_0x1efbea)['html']('<a\x20href=https://app.1inch.io/#/56/advanced/swap/'+_0x529bdd+'/'+_0x375fb7+_0x50bb85(0x1af)+_0x2a3c31+_0x50bb85(0x1b8)+_0x445467+')')['addClass'](_0x5aadc0);_0x306a57['append']();},'error':function(_0x1bec9c,_0x4dae0d,_0x32a324){var _0x2c5bc5=_0x140d07;if(_0x332c7a==_0x2c5bc5(0x1ed)){_0x3ca29f(_0x2cea77,_0x529bdd,_0x4a13eb,_0x375fb7,_0x540a64,_0x340558,_0xc91df3,_0x4fa6a3,_0x5839c4,_0x1efbea,_0x2c5bc5(0x159));var _0x171d55='cekHarga1INCH('+_0x2cea77+'\x20'+_0x529bdd+'\x20'+_0x4a13eb+_0x2c5bc5(0x142);}if(_0x1bec9c[_0x2c5bc5(0x220)]==0x190){var _0x55c986=JSON[_0x2c5bc5(0x16b)](_0x1bec9c[_0x2c5bc5(0x1de)]);if(_0x55c986&&_0x55c986[_0x2c5bc5(0x195)]==_0x2c5bc5(0x1cb))var _0x48fb97='NO\x20LP';else var _0x48fb97=_0x55c986['error'];}else{if(_0x1bec9c[_0x2c5bc5(0x220)]==0x1ad)var _0x48fb97=_0x2c5bc5(0x14b);else{if(_0x1bec9c['status']==0xc8)var _0x48fb97=_0x2c5bc5(0x13a);else var _0x48fb97=_0x1bec9c[_0x2c5bc5(0x220)];}}var _0x332f5a=$('#'+_0x1efbea)[_0x2c5bc5(0x1e5)](_0x2c5bc5(0x1f9)+_0x48fb97)['addClass']('error');_0x332f5a['append']();}});}function _0x17ca91(_0x23646c,_0x48d8e7,_0x27710a,_0x22ceea,_0x2b8371,_0x5b8023,_0x1c0fa4,_0x433f54,_0x498f40,_0x3e5cce,_0xbdc3aa){var _0x34402d=_0x4eab85,_0x39e3d6=JSON[_0x34402d(0x16b)](localStorage[_0x34402d(0x157)](_0x34402d(0x14a))),_0x11c069=localStorage['getItem'](_0x34402d(0x1c6))||0x0,_0x11c069=parseInt(_0x11c069)+0x4,_0x49f127=Math['pow'](0xa,_0x27710a)*_0x5b8023,_0x49f127=BigInt(Math[_0x34402d(0x17f)](Number(_0x49f127))),_0xb0205c=localStorage[_0x34402d(0x157)]('MB_gasGWEI'),_0x4a48c9=localStorage[_0x34402d(0x157)](_0x34402d(0x15a)),_0x53989b=_0x28b942[_0x11c069]+'https://api.odos.xyz/sor/quote/v2',_0xf7b62={'chainId':0x38,'inputTokens':[{'amount':_0x49f127['toString'](),'tokenAddress':_0x48d8e7}],'outputTokens':[{'proportion':0x1,'tokenAddress':_0x22ceea}],'sourceWhitelist':_0x39e3d6,'referralCode':0x0,'slippageLimitPercent':0.2};$[_0x34402d(0x1c9)]({'url':_0x53989b,'type':_0x34402d(0x22e),'dataType':_0x34402d(0x235),'contentType':_0x34402d(0x226),'data':JSON[_0x34402d(0x215)](_0xf7b62),'success':function(_0x6d5c8c){var _0x1d2e87=_0x34402d,_0x59a24c=_0x6d5c8c[_0x1d2e87(0x1a6)],_0x66e959=_0x6d5c8c[_0x1d2e87(0x205)];if(_0x433f54==_0x1d2e87(0x17e)){var _0x57ea74=Number(_0x59a24c-_0x23646c),_0x574a04=((Number(_0x23646c)+_0x57ea74)/(_0x23646c/_0x1c0fa4))[_0x1d2e87(0x22f)](0x8),_0xfc95ba=parseFloat(_0x23646c*0.001)+parseFloat(_0xbdc3aa)+parseFloat(_0x66e959),_0x128292=(_0x574a04-_0x1c0fa4)/_0x1c0fa4*0x64;console[_0x1d2e87(0x148)](_0x1d2e87(0x17c)+_0x498f40+_0x1d2e87(0x190)),console['log'](_0x1d2e87(0x186)+_0x23646c),console['log'](_0x1d2e87(0x1aa)+_0x49f127),console[_0x1d2e87(0x148)](_0x1d2e87(0x1f4)+_0x1c0fa4),console[_0x1d2e87(0x148)](_0x1d2e87(0x19a)+_0x574a04),console['log'](_0x1d2e87(0x1aa)+_0x59a24c),console['log'](_0x1d2e87(0x228)+_0x57ea74),console['log'](_0x1d2e87(0x138)+_0xfc95ba),console[_0x1d2e87(0x148)](_0x1d2e87(0x1ee)+_0x128292),console[_0x1d2e87(0x148)]('\x20WD\x20:\x20'+_0xbdc3aa),console[_0x1d2e87(0x148)]('\x20FEE\x20SWAP\x20:\x20'+_0x66e959),console[_0x1d2e87(0x148)](_0x1d2e87(0x15d));}if(_0x433f54==_0x1d2e87(0x200)){var _0x59a24c=parseFloat(_0x6d5c8c[_0x1d2e87(0x169)])/Math['pow'](0xa,_0x2b8371),_0x574a04=parseFloat(_0x23646c/_0x59a24c)[_0x1d2e87(0x22f)](0x8),_0x57ea74=_0x23646c/_0x574a04*_0x1c0fa4-_0x23646c,_0x128292=(_0x1c0fa4-_0x574a04)/_0x574a04*0x64,_0xfc95ba=parseFloat(_0x23646c*0.001)+parseFloat(_0x66e959);console[_0x1d2e87(0x148)](_0x1d2e87(0x162)+_0x498f40+'\x20---\x20\x20'),console['log'](_0x1d2e87(0x186)+_0x23646c),console[_0x1d2e87(0x148)](_0x1d2e87(0x1aa)+_0x49f127),console['log'](_0x1d2e87(0x212)+_0x574a04),console[_0x1d2e87(0x148)](_0x1d2e87(0x22d)+_0x1c0fa4),console[_0x1d2e87(0x148)]('\x20PNL\x20:\x20'+_0x57ea74),console[_0x1d2e87(0x148)](_0x1d2e87(0x138)+_0xfc95ba),console['log'](_0x1d2e87(0x160)+_0x66e959),console['log'](_0x1d2e87(0x1ee)+_0x128292),console[_0x1d2e87(0x148)]('-------------------------\x20\x20');}if(_0x57ea74>_0xfc95ba+0.3)var _0x3b8585=_0x1d2e87(0x161),_0x57ea74=''+_0x57ea74[_0x1d2e87(0x22f)](0x2)+_0x1d2e87(0x237)+(_0x57ea74-_0xfc95ba)['toFixed'](0x2)+_0x1d2e87(0x1e9);else var _0x3b8585='',_0x57ea74=''+_0x57ea74[_0x1d2e87(0x22f)](0x2)+_0x1d2e87(0x1eb)+(_0x57ea74-_0xfc95ba)[_0x1d2e87(0x22f)](0x2)+_0x1d2e87(0x1e9);var _0x52ae98=$('#'+_0x3e5cce)[_0x1d2e87(0x1e5)](_0x1d2e87(0x1e6)+_0x574a04+_0x1d2e87(0x1b8)+_0x57ea74+')')[_0x1d2e87(0x135)](_0x3b8585);_0x52ae98[_0x1d2e87(0x20b)]();},'error':function(_0x5b7c91,_0x255158,_0x913a1c){var _0x19c6f8=_0x34402d;if(_0x5b7c91[_0x19c6f8(0x220)]==0x190)var _0x35f2ce=JSON['parse'](_0x5b7c91[_0x19c6f8(0x1de)]),_0x5a8ae9=_0x35f2ce[_0x19c6f8(0x1d4)];else{if(_0x5b7c91[_0x19c6f8(0x220)]==0x1ad)var _0x5a8ae9='LIMITED';else{if(_0x5b7c91[_0x19c6f8(0x220)]==0xc8)var _0x5a8ae9='\x20NO\x20PRICE';else var _0x5a8ae9=_0x5b7c91[_0x19c6f8(0x220)];}}var _0x5ab9ce=$('#'+_0x3e5cce)[_0x19c6f8(0x1e5)](_0x19c6f8(0x156)+_0x5a8ae9+_0x19c6f8(0x20e))['addClass'](_0x19c6f8(0x223));_0x5ab9ce[_0x19c6f8(0x20b)]();}});}function _0x4b6384(_0x4e27a6,_0x3b2103,_0x45d021,_0x5c8862,_0x44d9df,_0x466ec9,_0x4a587a,_0x475eb2,_0x401f71,_0x2d5a5f,_0x5d7166,_0x3e69fb){var _0x5287b8=_0x4eab85,_0x415c41=Math[_0x5287b8(0x1ba)](0xa,_0x45d021)*_0x466ec9,_0x415c41=BigInt(Math[_0x5287b8(0x17f)](Number(_0x415c41))),_0x41eee2=localStorage[_0x5287b8(0x157)]('MB_gasGWEI'),_0x377245=localStorage[_0x5287b8(0x157)]('MB_PriceBNB'),_0x30c34f=_0x5287b8(0x1e0)+_0x5c8862+'&sellToken='+_0x3b2103+_0x5287b8(0x178)+_0x415c41;$[_0x5287b8(0x1c9)]({'url':_0x30c34f,'method':_0x5287b8(0x1d1),'headers':{'0x-api-key':_0x5d7166},'success':function(_0x5a7e82){var _0x37b22c=_0x5287b8,_0x1a50f9=_0x5a7e82['buyAmount']/Math['pow'](0xa,_0x44d9df),_0x41e454=_0x5a7e82[_0x37b22c(0x1a7)]/Math[_0x37b22c(0x1ba)](0xa,0x9)*_0x41eee2*_0x377245;if(_0x475eb2==_0x37b22c(0x17e)){var _0x72a2e6=Number(_0x1a50f9-_0x4e27a6),_0x41d6c1=((Number(_0x4e27a6)+_0x72a2e6)/(_0x4e27a6/_0x4a587a))[_0x37b22c(0x22f)](0x8);;var _0x101fa8=parseFloat(_0x4e27a6*0.001)+parseFloat(_0x3e69fb)+parseFloat(_0x41e454),_0x40ff3f=(_0x41d6c1-_0x4a587a)/_0x4a587a*0x64;console[_0x37b22c(0x148)](_0x37b22c(0x19c)+_0x401f71+_0x37b22c(0x190)),console['log']('\x20MODAL\x20:\x20'+_0x4e27a6),console[_0x37b22c(0x148)]('\x20AMOUNT\x20:\x20'+_0x415c41),console[_0x37b22c(0x148)](_0x37b22c(0x1f4)+_0x4a587a),console['log'](_0x37b22c(0x19a)+_0x41d6c1),console[_0x37b22c(0x148)]('\x20AMOUNT\x20:\x20'+_0x1a50f9),console['log'](_0x37b22c(0x228)+_0x72a2e6),console[_0x37b22c(0x148)]('\x20TOTAL\x20FEE\x20:\x20'+_0x101fa8),console[_0x37b22c(0x148)]('\x20FEE\x20SWAP\x20:\x20'+_0x41e454),console['log'](_0x37b22c(0x1ee)+_0x40ff3f),console[_0x37b22c(0x148)](_0x37b22c(0x18b)+_0x3e69fb),console['log'](_0x37b22c(0x15d));}if(_0x475eb2==_0x37b22c(0x200)){var _0x1a50f9=parseFloat(_0x5a7e82[_0x37b22c(0x22a)])/Math[_0x37b22c(0x1ba)](0xa,_0x44d9df),_0x41d6c1=parseFloat(_0x4e27a6/_0x1a50f9)['toFixed'](0x8),_0x72a2e6=_0x4e27a6/_0x41d6c1*_0x4a587a-_0x4e27a6,_0x40ff3f=(_0x4a587a-_0x41d6c1)/_0x41d6c1*0x64,_0x101fa8=parseFloat(_0x4e27a6*0.001)+parseFloat(_0x41e454);console[_0x37b22c(0x148)](_0x37b22c(0x217)+_0x401f71+_0x37b22c(0x190)),console[_0x37b22c(0x148)](_0x37b22c(0x186)+_0x4e27a6),console[_0x37b22c(0x148)]('\x20AMOUNT\x20:\x20'+_0x415c41),console[_0x37b22c(0x148)](_0x37b22c(0x212)+_0x41d6c1),console[_0x37b22c(0x148)](_0x37b22c(0x22d)+_0x4a587a),console[_0x37b22c(0x148)](_0x37b22c(0x228)+_0x72a2e6),console['log'](_0x37b22c(0x138)+_0x101fa8),console[_0x37b22c(0x148)]('\x20FEE\x20SWAP\x20:\x20'+_0x41e454),console[_0x37b22c(0x148)](_0x37b22c(0x1ee)+_0x40ff3f),console[_0x37b22c(0x148)](_0x37b22c(0x15d));}if(_0x72a2e6>_0x101fa8+0.3)var _0x478776='ijo',_0x72a2e6=''+_0x72a2e6[_0x37b22c(0x22f)](0x2)+_0x37b22c(0x237)+(_0x72a2e6-_0x101fa8)[_0x37b22c(0x22f)](0x2)+'</span>';else var _0x478776='',_0x72a2e6=''+_0x72a2e6['toFixed'](0x2)+_0x37b22c(0x1eb)+(_0x72a2e6-_0x101fa8)['toFixed'](0x2)+_0x37b22c(0x1e9);var _0x2377e3=$('#'+_0x2d5a5f)[_0x37b22c(0x1e5)](_0x37b22c(0x133)+_0x3b2103+_0x37b22c(0x1af)+_0x41d6c1+'</a></br>('+_0x72a2e6+')')[_0x37b22c(0x135)](_0x478776);_0x2377e3[_0x37b22c(0x20b)]();},'error':function(_0x44bff0,_0x54233c,_0x1c8a0b){var _0x9e040a=_0x5287b8;if(_0x44bff0[_0x9e040a(0x220)]==0x190)var _0x3ac6ad=JSON[_0x9e040a(0x16b)](_0x44bff0[_0x9e040a(0x1de)]),_0x378e77=_0x3ac6ad;else{if(_0x44bff0[_0x9e040a(0x220)]==0x1ad)var _0x378e77=_0x9e040a(0x14b);else{if(_0x44bff0[_0x9e040a(0x220)]==0xc8)var _0x378e77=_0x9e040a(0x13a);else var _0x378e77=_0x44bff0[_0x9e040a(0x220)];}}var _0x4124a5=$('#'+_0x2d5a5f)[_0x9e040a(0x1e5)](_0x9e040a(0x1f9)+_0x378e77)[_0x9e040a(0x135)](_0x9e040a(0x223));_0x4124a5[_0x9e040a(0x20b)]();}});}function _0x5971b5(_0x153c11){var _0x29713f=_0x4eab85,_0x3c5763=localStorage[_0x29713f(0x157)](_0x29713f(0x1c6));_0x5c7a18();var _0x3d44ea=_0x153c11[_0x29713f(0x220)]?_0x29713f(0x1d7):'',_0x2e10be=_0x29713f(0x1c0)+_0x153c11['symbol'];$[_0x29713f(0x232)](_0x2e10be,function(_0x354bef){var _0x2d5fcf=_0x29713f,_0x1d6cce=_0x354bef[_0x2d5fcf(0x183)],_0x5a1792=_0x354bef[_0x2d5fcf(0x230)],_0x219041=_0x2386de(_0x153c11['symbol'],_0x2d5fcf(0x184),_0x2d5fcf(0x131)),_0x1ff74b=_0x2386de(_0x153c11[_0x2d5fcf(0x1f2)],_0x2d5fcf(0x184),''),_0x4859ce=parseFloat(_0x153c11['wd']*_0x1d6cce)[_0x2d5fcf(0x22f)](0x2),_0x1935d4=_0x2d5fcf(0x140)+_0x153c11['sc']+_0x2d5fcf(0x194)+_0x153c11['sc']+'?a=0xe2fc31F816A9b94326492132018C3aEcC4a93aE1\x22\x20target=\x22_blank\x22>\x202\x20</a>\x20]';if($(_0x2d5fcf(0x1ca))['is'](':checked')){var _0x838b80=_0x237fd5[_0x2d5fcf(0x13e)]/_0x1d6cce;$(_0x2d5fcf(0x15e))['is'](':checked')&&_0x3ca29f(_0x237fd5[_0x2d5fcf(0x13e)],_0x153c11['sc'],_0x153c11[_0x2d5fcf(0x143)],_0x237fd5[_0x2d5fcf(0x23e)],_0x237fd5[_0x2d5fcf(0x13d)],_0x838b80,_0x1d6cce,_0x2d5fcf(0x17e),_0x153c11[_0x2d5fcf(0x1f2)],_0x2d5fcf(0x1f0)+_0x1ff74b+'','https://api-unidex.1inch.io',_0x4859ce),$(_0x2d5fcf(0x1ae))['is'](_0x2d5fcf(0x203))&&_0x17ca91(_0x237fd5[_0x2d5fcf(0x13e)],_0x153c11['sc'],_0x153c11[_0x2d5fcf(0x143)],_0x237fd5['scAddressPair'],_0x237fd5['desPair'],_0x838b80,_0x1d6cce,_0x2d5fcf(0x17e),_0x153c11['symbol'],'sk_odos_'+_0x1ff74b+'',_0x4859ce),$('#DMATCHA')['is'](':checked')&&_0x4b6384(_0x237fd5[_0x2d5fcf(0x13e)],_0x153c11['sc'],_0x153c11[_0x2d5fcf(0x143)],_0x237fd5[_0x2d5fcf(0x23e)],_0x237fd5['desPair'],_0x838b80,_0x1d6cce,_0x2d5fcf(0x17e),_0x153c11[_0x2d5fcf(0x1f2)],'sk_matcha_'+_0x1ff74b+'',_0x2d5fcf(0x187),_0x4859ce);}if($(_0x2d5fcf(0x1c7))['is'](_0x2d5fcf(0x203))){var _0xa65c23=_0x237fd5['mKiriBesar']/_0x1d6cce;$(_0x2d5fcf(0x15e))['is'](_0x2d5fcf(0x203))&&_0x3ca29f(_0x237fd5[_0x2d5fcf(0x221)],_0x153c11['sc'],_0x153c11[_0x2d5fcf(0x143)],_0x237fd5[_0x2d5fcf(0x23e)],_0x237fd5['desPair'],_0xa65c23,_0x1d6cce,_0x2d5fcf(0x17e),_0x153c11[_0x2d5fcf(0x1f2)],_0x2d5fcf(0x197)+_0x1ff74b+'',_0x2d5fcf(0x1ed),_0x4859ce),$(_0x2d5fcf(0x1ae))['is'](_0x2d5fcf(0x203))&&_0x17ca91(_0x237fd5['mKiriBesar'],_0x153c11['sc'],_0x153c11['desimal'],_0x237fd5['scAddressPair'],_0x237fd5[_0x2d5fcf(0x13d)],_0xa65c23,_0x1d6cce,_0x2d5fcf(0x17e),_0x153c11['symbol'],'sb_odos_'+_0x1ff74b+'',_0x4859ce),$(_0x2d5fcf(0x1f8))['is'](_0x2d5fcf(0x203))&&_0x4b6384(_0x237fd5[_0x2d5fcf(0x221)],_0x153c11['sc'],_0x153c11[_0x2d5fcf(0x143)],_0x237fd5['scAddressPair'],_0x237fd5[_0x2d5fcf(0x13d)],_0xa65c23,_0x1d6cce,_0x2d5fcf(0x17e),_0x153c11['symbol'],_0x2d5fcf(0x227)+_0x1ff74b+'',_0x2d5fcf(0x187),_0x4859ce);}else{var _0x9cc39e=$('sb_1inch_'+_0x1ff74b+'')[_0x2d5fcf(0x1e5)]('<td>--</td>'),_0x9cc39e=$(_0x2d5fcf(0x134)+_0x1ff74b+'')[_0x2d5fcf(0x1e5)](_0x2d5fcf(0x1e4)),_0x9cc39e=$(_0x2d5fcf(0x227)+_0x1ff74b+'')['html']('<td>--</td>');_0x9cc39e[_0x2d5fcf(0x20b)]();}$('#rs')['is'](_0x2d5fcf(0x203))&&($(_0x2d5fcf(0x15e))['is'](':checked')&&_0x3ca29f(_0x237fd5[_0x2d5fcf(0x1a9)],_0x237fd5['scAddressPair'],_0x237fd5[_0x2d5fcf(0x13d)],_0x153c11['sc'],_0x153c11[_0x2d5fcf(0x143)],_0x237fd5[_0x2d5fcf(0x1a9)],_0x5a1792,_0x2d5fcf(0x200),_0x153c11[_0x2d5fcf(0x1f2)],_0x2d5fcf(0x21e)+_0x1ff74b+'',_0x2d5fcf(0x1ed),_0x4859ce),$(_0x2d5fcf(0x1ae))['is'](_0x2d5fcf(0x203))&&_0x17ca91(_0x237fd5['mKananKecil'],_0x237fd5['scAddressPair'],_0x237fd5[_0x2d5fcf(0x13d)],_0x153c11['sc'],_0x153c11[_0x2d5fcf(0x143)],_0x237fd5[_0x2d5fcf(0x1a9)],_0x5a1792,_0x2d5fcf(0x200),_0x153c11[_0x2d5fcf(0x1f2)],_0x2d5fcf(0x158)+_0x1ff74b+'',_0x4859ce),$('#DMATCHA')['is'](_0x2d5fcf(0x203))&&_0x4b6384(_0x237fd5[_0x2d5fcf(0x1a9)],_0x237fd5[_0x2d5fcf(0x23e)],_0x237fd5['desPair'],_0x153c11['sc'],_0x153c11[_0x2d5fcf(0x143)],_0x237fd5[_0x2d5fcf(0x1a9)],_0x5a1792,'buy',_0x153c11[_0x2d5fcf(0x1f2)],_0x2d5fcf(0x21f)+_0x1ff74b+'',_0x2d5fcf(0x187),_0x4859ce));if($(_0x2d5fcf(0x15f))['is'](_0x2d5fcf(0x203)))$('#D1INCH')['is'](_0x2d5fcf(0x203))&&_0x3ca29f(_0x237fd5[_0x2d5fcf(0x199)],_0x237fd5[_0x2d5fcf(0x23e)],_0x237fd5[_0x2d5fcf(0x13d)],_0x153c11['sc'],_0x153c11[_0x2d5fcf(0x143)],_0x237fd5[_0x2d5fcf(0x199)],_0x5a1792,_0x2d5fcf(0x200),_0x153c11[_0x2d5fcf(0x1f2)],_0x2d5fcf(0x181)+_0x1ff74b+'',_0x2d5fcf(0x1ed),_0x4859ce),$(_0x2d5fcf(0x1ae))['is'](_0x2d5fcf(0x203))&&_0x17ca91(_0x237fd5[_0x2d5fcf(0x199)],_0x237fd5['scAddressPair'],_0x237fd5['desPair'],_0x153c11['sc'],_0x153c11[_0x2d5fcf(0x143)],_0x237fd5[_0x2d5fcf(0x199)],_0x5a1792,_0x2d5fcf(0x200),_0x153c11['symbol'],_0x2d5fcf(0x12c)+_0x1ff74b+'',_0x4859ce),$(_0x2d5fcf(0x1f8))['is'](':checked')&&_0x4b6384(_0x237fd5['mKananBesar'],_0x237fd5[_0x2d5fcf(0x23e)],_0x237fd5[_0x2d5fcf(0x13d)],_0x153c11['sc'],_0x153c11['desimal'],_0x237fd5['mKananBesar'],_0x5a1792,'buy',_0x153c11[_0x2d5fcf(0x1f2)],_0x2d5fcf(0x236)+_0x1ff74b+'',_0x2d5fcf(0x187),_0x4859ce);else{var _0x9cc39e=$(_0x2d5fcf(0x181)+_0x1ff74b+'')[_0x2d5fcf(0x1e5)](_0x2d5fcf(0x1e4)),_0x9cc39e=$(_0x2d5fcf(0x12c)+_0x1ff74b+'')['html'](_0x2d5fcf(0x1e4)),_0x9cc39e=$('bb_matcha_'+_0x1ff74b+'')['html'](_0x2d5fcf(0x1e4));_0x9cc39e['append']();}$('#TabelBINANCE')[_0x2d5fcf(0x20b)]('<tr>'+_0x2d5fcf(0x16a)+_0x219041+'?type=spot\x20target=_blank>'+_0x1d6cce+_0x2d5fcf(0x1d6)+_0x1ff74b+'\x20target=_blank>\x20<br/>\x20[\x20<label\x20class=uk-text-danger>'+_0x4859ce+_0x2d5fcf(0x17a)+_0x2d5fcf(0x182)+_0x1ff74b+_0x2d5fcf(0x1a0)+_0x2d5fcf(0x211)+_0x1ff74b+_0x2d5fcf(0x1a0)+_0x2d5fcf(0x1a8)+_0x1ff74b+_0x2d5fcf(0x1a0)+_0x2d5fcf(0x1f5)+_0x1ff74b+_0x2d5fcf(0x1a0)+_0x2d5fcf(0x18c)+_0x1ff74b+_0x2d5fcf(0x1a0)+_0x2d5fcf(0x155)+_0x1ff74b+_0x2d5fcf(0x1a0)+_0x2d5fcf(0x198)+_0x153c11['sc']+_0x2d5fcf(0x1af)+_0x1ff74b+'</a>\x20<br/><input\x20type=checkbox\x20class=statusCheckbox\x20data-index='+_0x153c11[_0x2d5fcf(0x1f2)]+'\x20\x20'+_0x3d44ea+'>'+_0x1935d4+_0x2d5fcf(0x16f)+_0x2d5fcf(0x20c)+_0x1ff74b+_0x2d5fcf(0x1a0)+_0x2d5fcf(0x202)+_0x1ff74b+_0x2d5fcf(0x1a0)+_0x2d5fcf(0x1ea)+_0x1ff74b+_0x2d5fcf(0x1a0)+_0x2d5fcf(0x18a)+_0x1ff74b+_0x2d5fcf(0x1a0)+'<td\x20id=bk_matcha_'+_0x1ff74b+_0x2d5fcf(0x1a0)+_0x2d5fcf(0x222)+_0x1ff74b+'></td>'+_0x2d5fcf(0x1da)+_0x219041+'?type=spot\x20target=_blank>'+_0x5a1792+'</a>\x20<a\x20href=https://www.binance.me/en/my/wallet/account/main/deposit/crypto/'+_0x1ff74b+_0x2d5fcf(0x1e2)+_0x2d5fcf(0x170));});}function _0x7f3d46(_0x19b442){var _0x247f9d=_0x4eab85,_0xa25f4a=_0x237fd5[_0x247f9d(0x1b4)],_0x448c7f=0x0,_0x4f60cd=parseInt(localStorage[_0x247f9d(0x157)](_0x247f9d(0x20d))),_0x436eb2=new Date()['getTime'](),_0x50ee8a=(_0x436eb2-_0x4f60cd)/0x3e8;localStorage[_0x247f9d(0x23b)]('MB_duration',_0x50ee8a),$[_0x247f9d(0x16c)](_0xa25f4a,function(_0x480b8a,_0x42bd4b){var _0x8f6930=_0x247f9d;_0x42bd4b[_0x8f6930(0x220)]===!![]&&_0x448c7f++;});var _0x41ad6b=_0x19b442/_0x448c7f;$(_0x247f9d(0x1c5))[_0x247f9d(0x1e5)](_0x247f9d(0x1b7)+_0x19b442+'\x20dari\x20'+_0x448c7f+'\x20token\x20]\x20|\x20DURASI\x20['+parseFloat(_0x50ee8a/0x3c)[_0x247f9d(0x22f)](0x2)+_0x247f9d(0x1ec))[_0x247f9d(0x1ff)](_0x247f9d(0x1c2),_0x247f9d(0x180)),$(_0x247f9d(0x13f))[_0x247f9d(0x1ff)]('width',_0x19b442/_0x448c7f*0x64+'%'),_0x19b442>=_0x448c7f&&(_0x20c031==!![]?($(_0x247f9d(0x1c5))[_0x247f9d(0x1e5)](_0x247f9d(0x175)),setTimeout(function(){_0x188338(_0x2648d0,_0x52f553,_0x5c4979);},0x1b58)):$(_0x247f9d(0x239))['show']());}$('#refresh')[_0x4eab85(0x1f1)](function(){var _0x7a5521=_0x4eab85;location[_0x7a5521(0x1fa)](),alert(_0x7a5521(0x167)),$(_0x7a5521(0x239))[_0x7a5521(0x1d8)]();});function _0x5ae93d(_0x3f09f3){var _0x1ea4c1=_0x4eab85,_0x20771c=[{'chat_id':_0x237fd5[_0x1ea4c1(0x1ac)]}],_0x298955=_0x237fd5[_0x1ea4c1(0x20a)],_0x2c4dbf=_0x1ea4c1(0x192)+_0x298955+_0x1ea4c1(0x21b);for(var _0x157224=0x0;_0x157224<_0x20771c['length'];_0x157224++){var _0x104603=_0x20771c[_0x157224],_0x385797=_0x104603[_0x1ea4c1(0x13c)];$[_0x1ea4c1(0x1c9)]({'url':_0x2c4dbf,'method':'POST','data':{'chat_id':_0x385797,'text':_0x3f09f3,'parse_mode':_0x1ea4c1(0x1f3),'disable_web_page_preview':!![]},'success':function(_0x10085e){var _0x3b7882=_0x1ea4c1;console[_0x3b7882(0x148)]('Message\x20sent\x20successfully');},'error':function(_0x4a264e,_0x3c83d7,_0x1e1c3a){var _0x74dc95=_0x1ea4c1;console[_0x74dc95(0x148)]('Error\x20sending\x20message:',_0x1e1c3a);}});}}}));
+</script>
+
+</body>
+</html>
