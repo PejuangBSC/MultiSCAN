@@ -516,13 +516,6 @@
       "status": true
     },
     {
-      "symbol": "BTCUSDT",
-      "sc": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
-      "desimal": 18,
-      "wd": 0.0000076,
-      "status": true
-    },
-    {
       "symbol": "BTTCUSDT",
       "sc": "0x352cb5e19b12fc216548a2677bd0fce83bae434b",
       "desimal": 18,
@@ -758,20 +751,6 @@
       "sc": "0x3d6545b08693dae087e957cb1180ee38b9e3c25e",
       "desimal": 18,
       "wd": 0.015,
-      "status": true
-    },
-    {
-      "symbol": "ETHUSDT",
-      "sc": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
-      "desimal": 18,
-      "wd": 0.00014,
-      "status": true
-    },
-    {
-      "symbol": "FDUSDUSDT",
-      "sc": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
-      "desimal": 18,
-      "wd": 0.3,
       "status": true
     },
     {
@@ -1460,13 +1439,6 @@
       "sc": "0xfc3e14af0f0c2129a84cc013d48c70d682902874",
       "desimal": 18,
       "wd": 0.14,
-      "status": true
-    },
-    {
-      "symbol": "WBETHUSDT",
-      "sc": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
-      "desimal": 18,
-      "wd": 0.00014,
       "status": true
     },
     {
