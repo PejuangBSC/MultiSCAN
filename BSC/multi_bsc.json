@@ -1372,13 +1372,6 @@
       "status": true
     },
     {
-      "symbol": "TUSDUSDT",
-      "sc": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
-      "desimal": 18,
-      "wd": 0.3,
-      "status": true
-    },
-    {
       "symbol": "TWTUSDT",
       "sc": "0x4b0f1812e5df2a09796481ff14017e6005508003",
       "desimal": 18,
@@ -1404,13 +1397,6 @@
       "sc": "0xbf5140a22578168fd562dccf235e5d43a02ce9b1",
       "desimal": 18,
       "wd": 0.046,
-      "status": true
-    },
-    {
-      "symbol": "USDPUSDT",
-      "sc": "0xb3c11196a4f3b1da7c23d9fb0a3dde9c6340934f",
-      "desimal": 18,
-      "wd": 0.8,
       "status": true
     },
     {
