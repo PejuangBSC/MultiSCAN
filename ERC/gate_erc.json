@@ -1590,7 +1590,7 @@
   {
     "symbol": "DBC_USDT",
     "sc": "0x1F735f84b07cc20E9aC471C291a87b5A2428d518",
-    "desimal": 18,
+    "desimal": 15,
     "status": true,
     "wd":0
   },
