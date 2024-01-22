@@ -758,7 +758,7 @@
   {
     "symbol": "BASEPTL_USDT",
     "sc": "0x07150e919b4de5fd6a63de1f9384828396f25fdc",
-    "desimal": 18,
+    "desimal": 9,
     "status": true,
     "wd":0
   },
@@ -1150,7 +1150,7 @@
   {
     "symbol": "CATE_USDT",
     "sc": "0xf05897cfe3ce9bbbfe0751cbe6b1b2c686848dcb",
-    "desimal": 18,
+    "desimal": 9,
     "status": true,
     "wd":0
   },
@@ -1423,7 +1423,7 @@
   {
     "symbol": "CRO_USDT",
     "sc": "0xA0b73E1Ff0B80914AB6fe0444E65848C4C34450b",
-    "desimal": 18,
+    "desimal": 8,
     "status": true,
     "wd":0
   },
@@ -1731,7 +1731,7 @@
   {
     "symbol": "DFI_USDT",
     "sc": "0x8fc8f8269ebca376d046ce292dc7eac40c8d358a",
-    "desimal": 18,
+    "desimal": 8,
     "status": true,
     "wd":0
   },
@@ -1857,7 +1857,7 @@
   {
     "symbol": "DOGE2_USDT",
     "sc": "0xf2ec4a773ef90c58d98ea734c0ebdb538519b988",
-    "desimal": 18,
+    "desimal": 9,
     "status": true,
     "wd":0
   },
@@ -2368,7 +2368,7 @@
   {
     "symbol": "FLUX_USDT",
     "sc": "0x720CD16b011b987Da3518fbf38c3071d4F0D1495",
-    "desimal": 18,
+    "desimal": 8,
     "status": true,
     "wd":0
   },
@@ -2865,7 +2865,7 @@
   {
     "symbol": "HAI_USDT",
     "sc": "0x05Fb86775Fd5c16290f1E838F5caaa7342bD9a63",
-    "desimal": 18,
+    "desimal": 8,
     "status": true,
     "wd":0
   },
@@ -3684,7 +3684,7 @@
   {
     "symbol": "LOVELY_USDT",
     "sc": "0x9e24415d1e549ebc626a13a482bb117a2b43e9cf",
-    "desimal": 18,
+    "desimal": 8,
     "status": true,
     "wd":0
   },
@@ -4188,7 +4188,7 @@
   {
     "symbol": "MUSIC_USDT",
     "sc": "0xd8c0b13b551718b808fc97ead59499d5ef862775",
-    "desimal": 18,
+    "desimal": 8,
     "status": true,
     "wd":0
   },
@@ -4783,7 +4783,7 @@
   {
     "symbol": "PAAL_USDT",
     "sc": "0x14feE680690900BA0ccCfC76AD70Fd1b95D10e16",
-    "desimal": 18,
+    "desimal": 9,
     "status": true,
     "wd":0
   },
@@ -5483,7 +5483,7 @@
   {
     "symbol": "RENBTC_USDT",
     "sc": "0xeb4c2781e4eba804ce9a9803c67d0893436bb27d",
-    "desimal": 18,
+    "desimal": 8,
     "status": true,
     "wd":0
   },
@@ -5784,7 +5784,7 @@
   {
     "symbol": "SHARE_USDT",
     "sc": "0x39795344CBCc76cC3Fb94B9D1b15C23c2070C66D",
-    "desimal": 18,
+    "desimal": 9,
     "status": true,
     "wd":0
   },
@@ -5812,7 +5812,7 @@
   {
     "symbol": "SHIB2_USDT",
     "sc": "0xdfef6416ea3e6ce587ed42aa7cb2e586362cbbfa",
-    "desimal": 18,
+    "desimal": 9,
     "status": true,
     "wd":0
   },
@@ -6421,7 +6421,7 @@
   {
     "symbol": "TIMECHRONO_USDT",
     "sc": "0x485d17A6f1B8780392d53D64751824253011A260",
-    "desimal": 18,
+    "desimal": 8,
     "status": true,
     "wd":0
   },
@@ -6456,7 +6456,7 @@
   {
     "symbol": "TOKEN_USDT",
     "sc": "0x4507cef57c46789ef8d1a19ea45f4216bae2b528",
-    "desimal": 18,
+    "desimal": 9,
     "status": true,
     "wd":0
   },
@@ -6960,7 +6960,7 @@
   {
     "symbol": "WAXP_USDT",
     "sc": "0x2A79324c19Ef2B89Ea98b23BC669B7E7c9f8A517",
-    "desimal": 18,
+    "desimal": 8,
     "status": true,
     "wd":0
   },
@@ -7352,7 +7352,7 @@
   {
     "symbol": "ZIL_USDT",
     "sc": "0x05f4a42e251f2d52b8ed15E9FEdAacFcEF1FAD27",
-    "desimal": 18,
+    "desimal": 12,
     "status": true,
     "wd":0
   },
