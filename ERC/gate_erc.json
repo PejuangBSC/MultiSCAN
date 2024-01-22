@@ -146,13 +146,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "4TOKEN_USDT",
-    "sc": "0x8db4beaccd1698892821a9a0dc367792c0cb9940",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "5IRE_USDT",
     "sc": "0x3bd7d4f524d09f4e331577247a048d56e4b67a7f",
