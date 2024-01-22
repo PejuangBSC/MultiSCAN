@@ -3208,13 +3208,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "KAI_USDT",
-    "sc": "0xd9ec3ff1f8be459bb9369b4e79e9ebcf7141c093",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "KAP_USDT",
     "sc": "0x9625cE7753ace1fa1865A47aAe2c5C2Ce4418569",
@@ -5443,13 +5437,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "RENBTC_USDT",
-    "sc": "0xeb4c2781e4eba804ce9a9803c67d0893436bb27d",
-    "desimal": 8,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "REP_USDT",
     "sc": "0x221657776846890989a759ba2973e427dff5c9bb",
