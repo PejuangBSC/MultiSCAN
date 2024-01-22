@@ -3102,13 +3102,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "IOTX_USDT",
-    "sc": "0x6fb3e0a217407efff7ca062d46c26e5d60a14d69",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "IQT_USDT",
     "sc": "0x6dda263994aab33f5ed612294e26f2a13df0da05",
