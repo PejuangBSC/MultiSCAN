@@ -965,13 +965,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BNB_USDT",
-    "sc": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+
   {
     "symbol": "BNT_USDT",
     "sc": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
