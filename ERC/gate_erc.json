@@ -1594,13 +1594,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "DC_USDT",
-    "sc": "0x7b4328c127b85369d9f82ca0503b000d09cf9180",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "DDD_USDT",
     "sc": "0x9f5f3cfd7a32700c93f971637407ff17b91c7342",
