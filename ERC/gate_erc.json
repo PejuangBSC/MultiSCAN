@@ -5618,13 +5618,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "SAITAMA_USDT",
-    "sc": "0xce3f08e664693ca792cace4af1364d5e220827b2",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "SAITO_USDT",
     "sc": "0xFa14Fa6958401314851A17d6C5360cA29f74B57B",
@@ -7288,13 +7282,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "ZIL_USDT",
-    "sc": "0x05f4a42e251f2d52b8ed15E9FEdAacFcEF1FAD27",
-    "desimal": 12,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "ZKF_USDT",
     "sc": "0xa1a52E35BF516Edbd166d9A1b0097cbf11483a5D",
