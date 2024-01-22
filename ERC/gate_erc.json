@@ -5007,13 +5007,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "POOL_USDT",
-    "sc": "0x0cec1a9154ff802e7934fc916ed7ca50bde6844e",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "PORT3_USDT",
     "sc": "0xb4357054c3da8d46ed642383f03139ac7f090343",
