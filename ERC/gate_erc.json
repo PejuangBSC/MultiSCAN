@@ -2092,13 +2092,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "ENJ_USDT",
-    "sc": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "ENS_USDT",
     "sc": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
