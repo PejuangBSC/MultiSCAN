@@ -1109,13 +1109,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "CARE_USDT",
-    "sc": "0x329cf160F30D21006bCD24b67EAde561E54CDE4c",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "CART_USDT",
     "sc": "0x5c8c8d560048f34e5f7f8ad71f2f81a89dbd273e",
@@ -1347,13 +1341,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "CPOOL_USDT",
-    "sc": "0x66761fa41377003622aee3c7675fc7b5c1c2fac5",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "CQT_USDT",
     "sc": "0xD417144312DbF50465b1C641d016962017Ef6240",
