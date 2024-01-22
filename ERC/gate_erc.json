@@ -671,13 +671,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "AXL_USDT",
-    "sc": "0x25b24B3c47918b7962B3e49C4F468367F73CC0E0",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "AXS_USDT",
     "sc": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
