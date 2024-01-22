@@ -1963,7 +1963,7 @@
   {
     "symbol": "DUST_USDT",
     "sc": "0xB5b1b659dA79A2507C27AaD509f15B4874EDc0Cc",
-    "desimal": 18,
+    "desimal": 9,
     "status": true,
     "wd":0
   },
@@ -2765,13 +2765,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "GRAP_USDT",
-    "sc": "0xC8D2AB2a6FdEbC25432E54941cb85b55b9f152dB",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "GROK_USDT",
     "sc": "0x8390a1da07e376ef7add4be859ba74fb83aa02d5",
@@ -3290,20 +3284,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "KIF_USDT",
-    "sc": "0x177ba0cac51bfc7ea24bad39d81dcefd59d74faa",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
-  {
-    "symbol": "KIMCHI_USDT",
-    "sc": "0x1e18821e69b9faa8e6e75dffe54e7e25754beda0",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "KINE_USDT",
     "sc": "0xCbfef8fdd706cde6F208460f2Bf39Aa9c785F05D",
@@ -3948,13 +3929,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "MINI_USDT",
-    "sc": "0x4d953cf077c0c95ba090226e59a18fcf97db44ec",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+
   {
     "symbol": "MIR_USDT",
     "sc": "0x09a3EcAFa817268f77BE1283176B946C4ff2E608",
@@ -5635,13 +5610,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "SAFEREUM_USDT",
-    "sc": "0xb504035a11E672e12a099F32B1672b9C4a78b22f",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "SAIL_USDT",
     "sc": "0xd8f1460044925d2d5c723c7054cd9247027415b7",
@@ -5691,13 +5660,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "SASHIMI_USDT",
-    "sc": "0xC28E27870558cF22ADD83540d2126da2e4b464c2",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "SCLP_USDT",
     "sc": "0xF2c96E402c9199682d5dED26D3771c6B192c01af",
@@ -6293,13 +6256,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "SXP_USDT",
-    "sc": "0x8CE9137d39326AD0cD6491fb5CC0CbA0e089b6A9",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "SYLO_USDT",
     "sc": "0xf293d23bf2cdc05411ca0eddd588eb1977e8dcd4",
@@ -6629,13 +6586,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "ULU_USDT",
-    "sc": "0x035bfe6057e15ea692c0dfdcab3bb41a64dd2ad4",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "UMA_USDT",
     "sc": "0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828",
@@ -7175,13 +7126,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "XOR_USDT",
-    "sc": "0x40FD72257597aA14C7231A7B1aaa29Fce868F677",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "XPR_USDT",
     "sc": "0xd7efb00d12c2c13131fd319336fdf952525da2af",
