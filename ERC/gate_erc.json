@@ -532,13 +532,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "ARCX_USDT",
-    "sc": "0x1321f1f1aa541a56c31682c57b80ecfccd9bb288",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "ARES_USDT",
     "sc": "0x358AA737e033F34df7c54306960a38d09AaBd523",
