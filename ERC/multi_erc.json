@@ -991,13 +991,7 @@
       "status": true,
       "wd": 149
     },
-    {
-      "symbol": "MDXUSDT",
-      "sc": "0xc56725b6430132de775c4e5b48c9b0318ce2fc69",
-      "desimal": 18,
-      "status": true,
-      "wd": 143
-    },
+   
     {
       "symbol": "MEMEUSDT",
       "sc": "0xb131f4a55907b10d1f0a50d8ab8fa09ec342cd74",
