@@ -324,13 +324,7 @@
       "status": true,
       "wd": 41
     },
-    {
-      "symbol": "BCHUSDT",
-      "sc": "0x85c4edc43724e954e5849caaab61a26a9cb65f1b",
-      "desimal": 18,
-      "status": true,
-      "wd": 0.042
-    },
+   
     {
       "symbol": "BEAMXUSDT",
       "sc": "0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce",
