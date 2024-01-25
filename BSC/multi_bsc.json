@@ -594,6 +594,7 @@
     "id_grup": "-1002129760604"
   },
   "token": [
+    
   {
     "symbol": "1INCHUSDT",
     "sc": "0x111111111117dc0aa78b770fa6a738034120c302",
@@ -634,6 +635,12 @@
     "sc": "0xbda011d7f8ec00f66c1923b049b94c67d148d8b2",
     "desimal": 18,
     "wd": 0.34,
+    "status": true
+  },{
+    "symbol": "ALTUSDT",
+    "sc": "0x8457CA5040ad67fdebbCC8EdCE889A335Bc0fbFB",
+    "desimal": 18,
+    "wd": 0.91,
     "status": true
   },
   {
