@@ -666,6 +666,13 @@
       "wd": 8.52
     },
     {
+    "symbol": "ALTUSDT",
+    "sc": "0x8457CA5040ad67fdebbCC8EdCE889A335Bc0fbFB",
+    "desimal": 18,
+    "wd": 0.91,
+    "status": true
+  },
+    {
       "symbol": "ALPHAUSDT",
       "sc": "0xa1faa113cbe53436df28ff0aee54275c13b40975",
       "desimal": 18,
