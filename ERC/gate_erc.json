@@ -210,13 +210,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "ADAPAD_USDT",
-    "sc": "0xDB0170e2d0c1CC1b2E7a90313d9B9afA4f250289",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "ADEL_USDT",
     "sc": "0x94d863173ee77439e4292284ff13fad54b3ba182",
@@ -3350,13 +3344,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "LAMB_USDT",
-    "sc": "0x8971f9fd7196e5cEE2C1032B50F656855af7Dd26",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "LAYER_USDT",
     "sc": "0x0fF6ffcFDa92c53F615a4A75D982f399C989366b",
@@ -3665,13 +3653,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "LUFFY_USDT",
-    "sc": "0x54012cDF4119DE84218F7EB90eEB87e25aE6EBd7",
-    "desimal": 9,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "LUNCH_USDT",
     "sc": "0x71a28feAEe902966DC8D355e7B8Aa427D421e7e0",
