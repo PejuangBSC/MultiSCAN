@@ -6931,13 +6931,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "WSM_USDT",
-    "sc": "0xb62e45c3df611dce236a6ddc7a493d79f9dfadef",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "WWY_USDT",
     "sc": "0x9Ab70e92319f0b9127df78868Fd3655fB9f1E322",
@@ -6973,13 +6967,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "XCUR_USDT",
-    "sc": "0xE1c7E30C42C24582888C758984f6e382096786bd",
-    "desimal": 8,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "XDEFI_USDT",
     "sc": "0x72b886d09c117654ab7da13a14d603001de0b777",
