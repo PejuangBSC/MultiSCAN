@@ -218,13 +218,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "ADP_USDT",
-    "sc": "0xc314b0e758d5ff74f63e307a86ebfe183c95767b",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "ADS_USDT",
     "sc": "0x3106a0a076bedae847652f42ef07fd58589e001f",
@@ -281,13 +275,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "AGLA_USDT",
-    "sc": "0x1F7e5118521B550bB1A9B435727c003eB033FC51",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "AGLD_USDT",
     "sc": "0x32353a6c91143bfd6c7d363b546e62a9a2489a20",
@@ -323,13 +311,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "AIS_USDT",
-    "sc": "0x42a7797351dfd281a80807196c8508eb70bb2af9",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+
   {
     "symbol": "AKITA_USDT",
     "sc": "0x3301ee63fb29f863f2333bd4466acb46cd8323e6",
@@ -407,13 +389,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "ALY_USDT",
-    "sc": "0x9d5686EaDeA7327F5a0c4820dcA90457A0E88763",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "AMKT_USDT",
     "sc": "0xF17A3fE536F8F7847F1385ec1bC967b2Ca9caE8D",
@@ -435,13 +411,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "ANC_USDT",
-    "sc": "0x0F3ADC247E91c3c50bC08721355A41037E89Bc20",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "ANGLE_USDT",
     "sc": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
@@ -741,13 +711,6 @@
   {
     "symbol": "BAT_USDT",
     "sc": "0x0d8775f648430679a709e98d2b0cb6250d2887ef",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
-  {
-    "symbol": "BBF_USDT",
-    "sc": "0xde075d9adbd0240b4462f124af926452ad0bac91",
     "desimal": 18,
     "status": true,
     "wd":0
@@ -2647,13 +2610,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "GOV_USDT",
-    "sc": "0x274e7eb07b485cfde53d02270555213447570ac6",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+
   {
     "symbol": "GOVI_USDT",
     "sc": "0xeeaa40b28a2d1b0b08f6f97bb1dd4b75316c6107",
