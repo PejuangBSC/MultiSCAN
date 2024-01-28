@@ -752,13 +752,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BCDN_USDT",
-    "sc": "0x1e797Ce986C3CFF4472F7D38d5C4aba55DfEFE40",
-    "desimal": 15,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "BCMC_USDT",
     "sc": "0x2BA8349123de45E931a8C8264c332E6e9CF593F9",
@@ -780,13 +774,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BDT_USDT",
-    "sc": "0x216e9d8a521d93ec769635859c57938119fe5369",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "BEAMX_USDT",
     "sc": "0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce",
@@ -822,20 +810,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BERRY_USDT",
-    "sc": "0x2d787D4f5005Bd66aC910c2E821241625c406ed5",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
-  {
-    "symbol": "BEYOND_USDT",
-    "sc": "0xdF290B162a7D3E0A328cF198308D421954f08b94",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "BFC_USDT",
     "sc": "0x0c7d5ae016f806603cb1782bea29ac69471cab9c",
@@ -878,13 +853,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BKC_USDT",
-    "sc": "0x34bdf48A8F753de4822a6CFB1FEE275F9b4D662e",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "BLACK_USDT",
     "sc": "0xd714d91A169127e11D8FAb3665d72E8b7ef9Dbe2",
@@ -927,13 +896,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BMEX_USDT",
-    "sc": "0xb113c6cf239f60d380359b762e95c13817275277",
-    "desimal": 6,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "BMI_USDT",
     "sc": "0x725c263e32c72ddc3a19bea12c5a0479a81ee688",
@@ -1026,20 +989,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BTM_USDT",
-    "sc": "0x4951bec6f4dfc23935c0ec8af92f231f4c20ea03",
-    "desimal": 8,
-    "status": true,
-    "wd":0
-  },
-  {
-    "symbol": "BTO_USDT",
-    "sc": "0x36905Fc93280f52362A1CBAB151F25DC46742Fb5",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "BTRST_USDT",
     "sc": "0x799ebfabe77a6e34311eeee9825190b9ece32824",
@@ -1061,13 +1011,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BXC_USDT",
-    "sc": "0xdeCF7Be29F8832E9C2Ddf0388c9778B8Ba76af43",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "BYN_USDT",
     "sc": "0x4bb3205bf648b7f59ef90dee0f1b62f6116bc7ca",
