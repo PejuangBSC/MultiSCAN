@@ -1010,13 +1010,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "ASTRA_USDT",
-    "sc": "0x201332Bd45c8628D814F870bFb584B385A7C351e",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "ASW_USDT",
     "sc": "0x56694577564FdD577a0ABB20FE95C1E2756C2a11",
