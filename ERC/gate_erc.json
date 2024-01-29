@@ -2794,13 +2794,7 @@
     "status": true,
     "wd": 0
   },
-  {
-    "symbol": "HAI_USDT",
-    "desimal": 8,
-    "sc": "0x05Fb86775Fd5c16290f1E838F5caaa7342bD9a63",
-    "status": true,
-    "wd": 0
-  },
+ 
   {
     "symbol": "HAO_USDT",
     "desimal": 18,
