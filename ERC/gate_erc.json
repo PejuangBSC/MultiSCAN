@@ -1483,13 +1483,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "CDT_USDT",
-    "sc": "0x177d39AC676ED1C67A2b268AD7F1E58826E5B0af",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "CEEK_USDT",
     "sc": "0xb056c38f6b7dc4064367403e26424cd2c60655e1",
