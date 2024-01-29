@@ -247,13 +247,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "AGB_USDT",
-    "sc": "0xbddf903f43dc7d9801f3f0034ba306169074ef8e",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "AGI_USDT",
     "sc": "0x7dA2641000Cbb407C329310C461b2cB9c70C3046",
@@ -482,13 +476,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "AQT_USDT",
-    "sc": "0x2a9bdcff37ab68b95a53435adfd8892e86084f93",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "ARB_USDT",
     "sc": "0xb50721bcf8d664c30412cfbc6cf7a15145234ad1",
@@ -687,13 +675,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BAO_USDT",
-    "sc": "0xCe391315b414D4c7555956120461D21808A69F3A",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "BAS_USDT",
     "sc": "0x106538CC16F938776c7c180186975BCA23875287",
