@@ -2142,13 +2142,7 @@
     "status": true,
     "wd": 0
   },
-  {
-    "symbol": "EFI_USDT",
-    "desimal": 18,
-    "sc": "0x656C00e1BcD96f256F224AD9112FF426Ef053733",
-    "status": true,
-    "wd": 0
-  },
+ 
   {
     "symbol": "EGAME_USDT",
     "desimal": 18,
