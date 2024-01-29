@@ -1109,13 +1109,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BAKED_USDT",
-    "sc": "0xa4cb0dce4849bdcad2d553e9e68644cf40e26cce",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+  
   {
     "symbol": "BAL_USDT",
     "sc": "0xba100000625a3754423978a60c9317c58a424e3D",
@@ -1196,13 +1190,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BEAR_USDT",
-    "sc": "0x17837004eA685690b32dbEaD02a274Ec4333A26a",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "BEEFI_USDT",
     "sc": "0xb1f1ee126e9c96231cc3d3fad7c08b4cf873b1f1",
@@ -1268,13 +1256,7 @@
     "wd":0
   },
  
-  {
-    "symbol": "BLACK_USDT",
-    "sc": "0xd714d91A169127e11D8FAb3665d72E8b7ef9Dbe2",
-    "desimal": 18,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "BLANKV2_USDT",
     "sc": "0x41a3dba3d677e573636ba691a70ff2d606c29666",
@@ -1333,13 +1315,7 @@
     "status": true,
     "wd":0
   },
-  {
-    "symbol": "BOA_USDT",
-    "sc": "0x746dda2ea243400d5a63e0700f190ab79f06489e",
-    "desimal": 7,
-    "status": true,
-    "wd":0
-  },
+ 
   {
     "symbol": "BOBA_USDT",
     "sc": "0x42bbfa2e77757c645eeaad1655e0911a7553efbc",
