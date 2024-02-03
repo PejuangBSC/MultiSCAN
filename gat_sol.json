@@ -910,13 +910,6 @@
     "status":true
   },
   {
-    "symbol": "OXY_USDT",
-    "desimal": 6,
-    "sc": "z3dn17yLaGMKffVogeFHQ9zWVcXgqgf3PQnDsNs2g6M",
-    "wd": 0,
-    "status":true
-  },
-  {
     "symbol": "PIP_USDT",
     "desimal": 9,
     "sc": "HHjoYwUp5aU6pnrvN4s2pwEErwXNZKhxKGYjRJMoBjLw",
