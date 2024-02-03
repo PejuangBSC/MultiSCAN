@@ -1168,13 +1168,7 @@
     "wd": 0,
     "status":true
   },
-  {
-    "symbol": "USDC_USDT",
-    "desimal": 6,
-    "sc": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-    "wd": 0,
-    "status":true
-  },
+ 
   {
     "symbol": "WAG_USDT",
     "desimal": 9,
