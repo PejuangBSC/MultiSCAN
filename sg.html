@@ -181,8 +181,12 @@
               </div>
 
               <div>
-                <button class="uk-button-small uk-button-danger" type="button" style="display: none;" id="resetmodal" >RESET</button>
-                <button class="uk-button-small uk-button-primary" type="button" id="calculateButton" >CEK ASET</button>
+                   <div class="uk-button-group">
+                    <button class="uk-button-small uk-button-danger" type="button" style="display: none;" id="resetmodal" >RESET</button>
+                    <button class="uk-button-small uk-button-secondary" type="button" id="calculateButton" >CEK ASET</button>
+                  </div>
+             <!--   <button class="uk-button-small uk-button-danger" type="button" style="display: none;" id="resetmodal" >RESET</button>
+                <button class="uk-button-small uk-button-primary" type="button" id="calculateButton" >CEK ASET</button> -->
             </div>
               <div> 
                 <div style="display: none;">
@@ -225,7 +229,7 @@
           <div>
             <label class="uk-label uk-label-secondary" >  </label>
             <div class="uk-margin uk-form-controls"> 
-              <button class="uk-button uk-button-secondary" id="refresh">STOP</button>
+              <button class="uk-button uk-button-danger" id="refresh">STOP</button>
               <label><input class="uk-checkbox" checked type="checkbox" id="GATE"> GATE </label>
               <label><input class="uk-checkbox" type="checkbox"  id="BYBIT"> BYBIT</label> 
             </div>
@@ -234,7 +238,7 @@
             NICKNAME : <label class="uk-label uk-label-success" id="nickname">????</label>
             <div class="uk-margin uk-form-controls">
               &nbsp;<input type="checkbox" class="uk-checkbox"  id="Cautorun" /> <span class="uk-form-label uk-text-danger uk-text-small" id="autorun"> AUTORUN</span>
-              <button class="uk-button uk-button-primary uk-margin-left uk-flex-last" type="button" id="startSCAN">START</button>
+              <button class="uk-button uk-button-secondary uk-margin-left uk-flex-last" type="button" id="startSCAN">START</button>
             </div>
           </div>
         </div>
