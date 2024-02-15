@@ -146,7 +146,7 @@
         <div class="col-md-12">
             <h3 style="text-align: center; color:rgb(10, 10, 10);">
               
-             GATE ERC :: MULTI SCAN V.1.2
+             GATE ERC :: MULTI SCAN V.1.3
               <img id="syncDATA" src="https://cdn.icon-icons.com/icons2/2596/PNG/512/database_sync_icon_155524.png" width="30px" />
             </h3>
             <h5 style="text-align: center; color:rgb(8, 8, 9)" id="ip"></h5>
@@ -316,8 +316,8 @@
                         <label for="mkiri">SERVER</label>
                          <select id="serverdex" name="serverdex" ></select>
                         <select id="delay" name="delay" >
-                          <option value="1750" selected>MEDIUM</option>
-                          <option value="1500" >FAST</option>
+                          <option value="1950" selected>MEDIUM</option>
+                          <option value="1750" >FAST</option>
                           <option value="2500">STANDART</option>
                           <option value="3500">LOW</option>
                         </select>
@@ -364,9 +364,9 @@
                     <div class="form-group col-md-3">
                       <div><label for="input2">MARKET DEX</label></div>                      
                           <input  type="checkbox" id="1INCH" class="myCheckbox"> <label class="form-check-label" for="1inch">1INCH</label>
-                           <input type="checkbox" id="OPEN"  class="myCheckbox"> <label class="form-check-label" for="open">OPEN</label>
-                         <!-- <input type="checkbox" id="PARA"   class="myCheckbox"> <label class="form-check-label" for="PARA">PARA</label> 
-                          <input type="checkbox" id="KYBER"   class="myCheckbox"> <label class="form-check-label" for="KYBER">KYBER</label>-->                            
+                          <!-- <input type="checkbox" id="OPEN"  class="myCheckbox"> <label class="form-check-label" for="open">OPEN</label>
+                          <input type="checkbox" id="PARA"   class="myCheckbox"> <label class="form-check-label" for="PARA">PARA</label> -->   
+                          <input type="checkbox" id="KYBER"   class="myCheckbox"> <label class="form-check-label" for="KYBER">KYBER</label>                         
                           <input type="checkbox" id="matcha"  class="myCheckbox"> <label class="form-check-label" for="matcha">MATCHA</label>
                           <input type="checkbox" id="ODOS"   class="myCheckbox"> <label class="form-check-label" for="ODOS">ODOS</label> 
                          <!-- <input type="checkbox" id="OKEX"   class="myCheckbox"> <label class="form-check-label" for="OKEX">OKEX</label>                                                                                                                                                 
@@ -419,18 +419,18 @@
                     <th class="token">NO</th>
                     <th class="Gate">GATE</th>
                     <th  class="inch" colspan="2" id="1inchkiri" >1INCH <span id="lKiri1INCHSinyal" class="badge badge-success"> </span><span id="lKiri1INCHError" class="badge badge-danger"> </span></th>
-                     <th  class="open" colspan="2" id="openkiri" >OPEN <span id="lKiriOPENSinyal" class="badge badge-success"> </span><span id="lKiriOPENError" class="badge badge-danger"> </span></th>
-                    <!--<th  class="PARA" colspan="2" id="PARAkiri" >PARA <span id="lKiriPARASinyal" class="badge badge-success"> </span><span id="lKiriPARAError" class="badge badge-danger"> </span></th>
-                    <th  class="KYBER" colspan="2" id="KYBERkiri" >KYBER <span id="lKiriKYBERSinyal" class="badge badge-success"> </span><span id="lKiriKYBERError" class="badge badge-danger"> </span></th> -->
+                    <!-- <th  class="open" colspan="2" id="openkiri" >OPEN <span id="lKiriOPENSinyal" class="badge badge-success"> </span><span id="lKiriOPENError" class="badge badge-danger"> </span></th>
+                    <th  class="PARA" colspan="2" id="PARAkiri" >PARA <span id="lKiriPARASinyal" class="badge badge-success"> </span><span id="lKiriPARAError" class="badge badge-danger"> </span></th>-->
+                    <th  class="KYBER" colspan="2" id="KYBERkiri" >KYBER <span id="lKiriKYBERSinyal" class="badge badge-success"> </span><span id="lKiriKYBERError" class="badge badge-danger"> </span></th> 
                     <th  class="matcha" colspan="2" id="matchakiri" >MATCHA <span id="lKiriMATCHASinyal" class="badge badge-success"></span><span id="lKiriMATCHAError" class="badge badge-danger"></span></th>
                     <th  class="ODOS" colspan="2" id="ODOSkiri" >ODOS <span id="lKiriODOSSinyal" class="badge badge-success"> </span><span id="lKiriODOSError" class="badge badge-danger"> </span></th>
                   <!-- <th  class="OKEX" colspan="2" id="OKEXkiri" >OKEX <span id="lKiriOKEXSinyal" class="badge badge-success"> </span><span id="lKiriOKEXError" class="badge badge-danger"> </span></th> 
                       <th  class="dodo" colspan="2" id="dodokiri" >DODO <span id="lKiriDODOSinyal" class="badge badge-success"> </span><span id="lKiriDODOError" class="badge badge-danger"> </span></th>-->
                    <th class="token"> TOKEN</th>
                     <th  class="inch" colspan="2"  id="1inchkanan" >1INCH <span id="lKanan1INCHSinyal" class="badge badge-success"> </span><span id="lKanan1INCHError" class="badge badge-danger"></span></th>
-                     <th  class="open" colspan="2" id="openkanan" >OPEN <span id="lKananOPENSinyal" class="badge badge-success"> </span><span id="lKananOPENError" class="badge badge-danger"></span></th>
-                   <!-- <th  class="PARA" colspan="2" id="PARAkanan" >PARA <span id="lKananPARASinyal" class="badge badge-success"> </span><span id="lKananPARAError" class="badge badge-danger"></span></th>
-                    <th  class="KYBER" colspan="2" id="KYBERkanan" >KYBER <span id="lKananKYBERSinyal" class="badge badge-success"> </span><span id="lKananKYBERError" class="badge badge-danger"> </span></th> -->
+                     <!--  <th  class="open" colspan="2" id="openkanan" >OPEN <span id="lKananOPENSinyal" class="badge badge-success"> </span><span id="lKananOPENError" class="badge badge-danger"></span></th>
+                  <th  class="PARA" colspan="2" id="PARAkanan" >PARA <span id="lKananPARASinyal" class="badge badge-success"> </span><span id="lKananPARAError" class="badge badge-danger"></span></th>-->
+                    <th  class="KYBER" colspan="2" id="KYBERkanan" >KYBER <span id="lKananKYBERSinyal" class="badge badge-success"> </span><span id="lKananKYBERError" class="badge badge-danger"> </span></th> 
                     <th  class="matcha" colspan="2" id="matchakanan" >MATCHA <span id="lKananMATCHASinyal" class="badge badge-success"></span><span id="lKananMATCHAError" class="badge badge-danger"></span></th>
                     <th  class="ODOS" colspan="2" id="ODOSKanan" >ODOS <span id="lKananODOSSinyal" class="badge badge-success"> </span><span id="lKananODOSError" class="badge badge-danger"> </span></th>
                    <!-- <th  class="OKEX" colspan="2" id="OKEXKanan" >OKEX <span id="lKananOKEXSinyal" class="badge badge-success"> </span><span id="lKananOKEXError" class="badge badge-danger"> </span></th> 
