@@ -728,6 +728,13 @@
     "status": true,
     "wd": 0.012
   },
+    {
+    "symbol": "AXLUSDT",
+    "sc": "0x8b1f4432F943c465A973FeDC6d7aa50Fc96f1f65",
+    "desimal": 0.2,
+    "status": true,
+    "wd": 0.06
+  }
   {
     "symbol": "AXSUSDT",
     "sc": "0x715d400f88c167884bbcc41c5fea407ed4d2f8a0",
