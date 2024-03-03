@@ -763,6 +763,13 @@
     "status": true,
     "wd": 22
   },
+    {
+    "symbol": "AXLUSDT",
+    "sc": "0x467719aD09025FcC6cF6F8311755809d45a5E5f3",
+    "desimal": 6,
+    "status": true,
+    "wd": 9.17
+  },
   {
     "symbol": "AXSUSDT",
     "sc": "0xbb0e17ef65f82ab018d8edd776e8dd940327b28b",
@@ -1625,11 +1632,11 @@
     "wd": 25
   },
   {
-    "symbol": "PLAUSDT",
-    "sc": "0x3a4f40631a4f906c2bad353ed06de7a5d3fcb430",
+    "symbol": "PDAUSDT",
+    "sc": "0x0D3CbED3f69EE050668ADF3D9Ea57241cBa33A2B",
     "desimal": 18,
     "status": true,
-    "wd": 67
+    "wd": 85
   },
   {
     "symbol": "PNTUSDT",
