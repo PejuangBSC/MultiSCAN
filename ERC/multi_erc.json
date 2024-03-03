@@ -861,13 +861,7 @@
     "wd": 48,
     "status": true
   },
-  {
-    "symbol": "BNBUSDT",
-    "sc": "0xb8c77482e45f1f44de1745f52c74426c631bdd52",
-    "desimal": "#N/A",
-    "wd": 0.0014,
-    "status": true
-  },
+  
   {
     "symbol": "BNTUSDT",
     "sc": "0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c",
