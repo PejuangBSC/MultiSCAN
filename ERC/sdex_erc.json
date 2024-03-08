@@ -594,13 +594,7 @@
     "id_grup": "-1002079288809"
   },
   "token": [
-  {
-    "symbol": "ALPH_USDT",
-    "sc": "0x590f820444fa3638e022776752c5eef34e2f89a6",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+
   {
     "symbol": "ASM_USDT",
     "sc": "0x2565ae0385659badCada1031DB704442E1b69982",
