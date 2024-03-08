@@ -685,13 +685,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "PROM_USDT",
-    "sc": "0xfc82bb4ba86045af6f327323a46e80412b91b27d",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "RLC_USDT",
     "sc": "0x607f4c5bb672230e8672085532f7e901544a7375",
