@@ -658,13 +658,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "ONDO_USDT",
-    "sc": "0xfAbA6f8e4a5E8Ab82F62fe7C39859FA577269BE3",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "PEPE_USDT",
     "sc": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
