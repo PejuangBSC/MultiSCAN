@@ -699,13 +699,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SDEX_USDT",
-    "sc": "0x5de8ab7e27f6e7a1fff3e5b337584aa43961beef",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "TRB_USDT",
     "sc": "0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0",
@@ -713,13 +707,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "TRIAS_USDT",
-    "sc": "0x3a856d4effa670c54585a5d523e96513e148e95d",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "USDC_USDT",
     "sc": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
