@@ -867,13 +867,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "GMEE_USDT",
-    "desimal": 18,
-    "sc": "0xcf32822ff397Ef82425153a9dcb726E5fF61DCA7",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "GNS_USDT",
     "desimal": 18,
