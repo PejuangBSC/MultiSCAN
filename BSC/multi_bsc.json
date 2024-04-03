@@ -1506,13 +1506,7 @@
     "status": true,
     "wd": 0.23
   },
-  {
-    "symbol": "PNTUSDT",
-    "sc": "0xdaacb0ab6fb34d24e8a67bfa14bf4d95d4c7af92",
-    "desimal": 18,
-    "status": true,
-    "wd": 3.33
-  },
+ 
   {
     "symbol": "PONDUSDT",
     "sc": "0xa1428370f540b4c4e319224165ecae513a391f77",
