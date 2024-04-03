@@ -1022,13 +1022,7 @@
     "status": true,
     "wd": 0.063
   },
-  {
-    "symbol": "DREPUSDT",
-    "sc": "0xec583f25a049cc145da9a256cdbe9b6201a705ff",
-    "desimal": 18,
-    "status": true,
-    "wd": 1.69
-  },
+  
   {
     "symbol": "DUSKUSDT",
     "sc": "0xb2bd0749dbe21f623d9baba856d3b0f0e1bfec9c",
