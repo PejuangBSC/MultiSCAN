@@ -1435,13 +1435,7 @@
     "wd": 0.59,
     "status": true
   },
-  {
-    "symbol": "OGUSDT",
-    "sc": "0xf05e45ad22150677a017fbd94b84fbb63dc9b44c",
-    "desimal": "#N/A",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "OGNUSDT",
     "sc": "0x9c1962e0ac2a370ab4c4f4eecba6483d8764c4b2",
