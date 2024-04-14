@@ -657,13 +657,7 @@
     "status": true,
     "wd": 0
   },
-  {
-    "symbol": "BGT_USDT",
-    "sc": "0x45F6A3e1FCdb24C3E5097324872A8F5cf4602d48",
-    "desimal": 18,
-    "status": true,
-    "wd": 0
-  },
+  
   {
     "symbol": "BONUS_USDT",
     "sc": "0x7f7d7806F4EB90D63B0b278DAf32a2dB2C2001bD",
