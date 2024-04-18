@@ -757,7 +757,7 @@
   },
   {
     "symbol": "AGS_USDT",
-    "desimal": 18,
+    "desimal": 8,
     "sc": "0xdb2f2bcce3efa95eda95a233af45f3e0d4f00e2a",
     "wd": 0,
     "status": true
