@@ -616,13 +616,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "4TOKEN_USDT",
-    "desimal": 18,
-    "sc": "0x8db4beaccd1698892821a9a0dc367792c0cb9940",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "5IRE_USDT",
     "desimal": 18,
@@ -694,13 +688,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "ADP_USDT",
-    "desimal": 18,
-    "sc": "0xc314b0e758d5ff74f63e307a86ebfe183c95767b",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "ADS_USDT",
     "desimal": 18,
@@ -873,13 +861,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "ALY_USDT",
-    "desimal": 18,
-    "sc": "0x9d5686EaDeA7327F5a0c4820dcA90457A0E88763",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "AMKT_USDT",
     "desimal": 18,
@@ -1023,13 +1005,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "ASD_USDT",
-    "desimal": 18,
-    "sc": "0xff742d05420b6aca4481f635ad8341f81a6300c2",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "ASM_USDT",
     "desimal": 18,
@@ -1051,13 +1027,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "ASTRA_USDT",
-    "desimal": 18,
-    "sc": "0x201332Bd45c8628D814F870bFb584B385A7C351e",
-    "wd": 0,
-    "status": true
-  },
+
   {
     "symbol": "ASW_USDT",
     "desimal": 18,
@@ -1171,13 +1141,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "BAKED_USDT",
-    "desimal": 18,
-    "sc": "0xa4cb0dce4849bdcad2d553e9e68644cf40e26cce",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "BAL_USDT",
     "desimal": 18,
@@ -1565,13 +1529,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "CARE_USDT",
-    "desimal": 18,
-    "sc": "0x329cf160F30D21006bCD24b67EAde561E54CDE4c",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "CART_USDT",
     "desimal": 18,
@@ -1721,13 +1679,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "CNNS_USDT",
-    "desimal": 18,
-    "sc": "0x6c3be406174349cfa4501654313d97e6a31072e1",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "COBE_USDT",
     "desimal": 18,
@@ -7663,4 +7615,5 @@
     "status": true
   }
 ]
+
 }
