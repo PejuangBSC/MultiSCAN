@@ -1310,13 +1310,6 @@
   },
  
   {
-    "symbol": "BLACK_USDT",
-    "desimal": 18,
-    "sc": "0xd714d91A169127e11D8FAb3665d72E8b7ef9Dbe2",
-    "wd": 0,
-    "status": true
-  },
-  {
     "symbol": "BLANKV2_USDT",
     "desimal": 18,
     "sc": "0x41a3dba3d677e573636ba691a70ff2d606c29666",
@@ -2185,13 +2178,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "DNXC_USDT",
-    "desimal": 18,
-    "sc": "0x20a8cec5fffea65be7122bcab2ffe32ed4ebf03a",
-    "wd": 0,
-    "status": true
-  },
+
   
   {
     "symbol": "DODO_USDT",
@@ -2450,13 +2437,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "ENV_USDT",
-    "desimal": 18,
-    "sc": "0xf1d1a5306daae314af6c5d027a492b313e07e1a0",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "EPIK_USDT",
     "desimal": 18,
@@ -7578,4 +7559,5 @@
     "status": true
   }
 ]
+
 }
