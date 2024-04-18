@@ -2282,7 +2282,7 @@
   },
   {
     "symbol": "DUSK_USDT",
-    "desimal": 18,
+    "desimal": 9,
     "sc": "0x940a2db1b7008b6c776d4faaca729d6d4a4aa551",
     "wd": 0,
     "status": true
@@ -7528,4 +7528,5 @@
     "status": true
   }
 ]
+
 }
