@@ -686,13 +686,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "ADAPAD_USDT",
-    "desimal": 18,
-    "sc": "0xDB0170e2d0c1CC1b2E7a90313d9B9afA4f250289",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "ADEL_USDT",
     "desimal": 18,
@@ -1890,13 +1884,7 @@
     "status": true
   },
  
-  {
-    "symbol": "CS_USDT",
-    "desimal": 18,
-    "sc": "0x46b9ad944d1059450da1163511069c718f699d31",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "CSAS_USDT",
     "desimal": 18,
@@ -2583,13 +2571,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "ESG_USDT",
-    "desimal": 18,
-    "sc": "0x20cD2E7Ec8F5d8b337fe46a4F565Ccef1561b9a9",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "ESS_USDT",
     "desimal": 18,
@@ -2889,13 +2871,7 @@
     "status": true
   },
   
-  {
-    "symbol": "FTI_USDT",
-    "desimal": 18,
-    "sc": "0x943ed852dadb5c3938ecdc6883718df8142de4c8",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "FTM_USDT",
     "desimal": 18,
@@ -3122,13 +3098,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "GNX_USDT",
-    "desimal": 18,
-    "sc": "0x6ec8a24cabdc339a06a172f8223ea557055adaa5",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "GOF_USDT",
     "desimal": 18,
@@ -3157,13 +3127,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "GOV_USDT",
-    "desimal": 18,
-    "sc": "0x274e7eb07b485cfde53d02270555213447570ac6",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "GOVI_USDT",
     "desimal": 18,
@@ -3380,13 +3344,6 @@
     "status": true
   },
  
-  {
-    "symbol": "ICX_USDT",
-    "desimal": 18,
-    "sc": "0xb5A5F22694352C15B00323844aD545ABb2B11028",
-    "wd": 0,
-    "status": true
-  },
   {
     "symbol": "ID_USDT",
     "desimal": 18,
@@ -7706,5 +7663,4 @@
     "status": true
   }
 ]
-
 }
