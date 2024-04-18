@@ -2276,14 +2276,14 @@
   },
   {
     "symbol": "DUSK_USDT",
-    "desimal": 9,
+    "desimal": 18,
     "sc": "0x940a2db1b7008b6c776d4faaca729d6d4a4aa551",
     "wd": 0,
     "status": true
   },
   {
     "symbol": "DUST_USDT",
-    "desimal": 18,
+    "desimal": 9,
     "sc": "0xB5b1b659dA79A2507C27AaD509f15B4874EDc0Cc",
     "wd": 0,
     "status": true
@@ -2930,7 +2930,7 @@
   },
   {
     "symbol": "GM_USDT",
-    "desimal": 18,
+    "desimal": 9,
     "sc": "0xbc7250c8c3eca1dfc1728620af835fca489bfdf3",
     "wd": 0,
     "status": true
@@ -7522,5 +7522,5 @@
     "status": true
   }
 ]
-
+ 
 }
