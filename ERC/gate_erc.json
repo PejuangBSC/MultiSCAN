@@ -2541,13 +2541,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "FARMLAND_USDT",
-    "desimal": 18,
-    "sc": "0xaae3cf9968d26925bdb73ce3864e0084a20f4687",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "FBX_USDT",
     "desimal": 18,
@@ -5472,13 +5466,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "RUFF_USDT",
-    "desimal": 18,
-    "sc": "0xf278c1CA969095ffddDED020290cf8B5C424AcE2",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "SAIL_USDT",
     "desimal": 18,
@@ -5528,13 +5516,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SAVM_USDT",
-    "desimal": 18,
-    "sc": "0x15e6e0d4ebeac120f9a97e71faa6a0235b85ed12",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "SCLP_USDT",
     "desimal": 18,
@@ -5591,13 +5573,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SFG_USDT",
-    "desimal": 18,
-    "sc": "0x8a6ACA71A218301c7081d4e96D64292D3B275ce0",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "SFI_USDT",
     "desimal": 18,
@@ -5605,13 +5581,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SFIL_USDT",
-    "desimal": 18,
-    "sc": "0x965b85d4674f64422c4898c8f8083187f02b32c0",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "SGR_USDT",
     "desimal": 8,
@@ -5719,13 +5689,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SKU_USDT",
-    "desimal": 18,
-    "sc": "0xab7d26316f5c0add393c2dda2e6da43d750dd399",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "SKYRIM_USDT",
     "desimal": 18,
@@ -5733,13 +5697,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SLG_USDT",
-    "desimal": 18,
-    "sc": "0xfc0b60e0df5dc9d4b72d957ca2d251cee308019a",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "SLICE_USDT",
     "desimal": 18,
@@ -5761,20 +5719,8 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SMARTGAME_USDT",
-    "desimal": 18,
-    "sc": "0xce20BB92CCF9BbF5091ef85649E71E552819AD8c",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "SMT_USDT",
-    "desimal": 18,
-    "sc": "0x21f15966E07a10554C364b988e91DaB01D32794A",
-    "wd": 0,
-    "status": true
-  },
+  
+
   {
     "symbol": "SMTX_USDT",
     "desimal": 18,
@@ -6143,13 +6089,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "TAPROOT_USDT",
-    "desimal": 18,
-    "sc": "0x07b701ac44aacb03d8bed42eb85ec38210bdf513",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "TARA_USDT",
     "desimal": 18,
@@ -6157,13 +6097,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "TAUR_USDT",
-    "desimal": 18,
-    "sc": "0xf71288618f919ff0a779c757489a8b2e45925ddd",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "TCP_USDT",
     "desimal": 18,
@@ -6276,13 +6210,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "TOKO_USDT",
-    "desimal": 18,
-    "sc": "0xa0f0546eb5e3ee7e8cfc5da12e5949f3ae622675",
-    "wd": 0,
-    "status": true
-  },
+
   {
     "symbol": "TOMI_USDT",
     "desimal": 18,
@@ -7131,5 +7059,4 @@
     "status": true
   }
 ]
-
 }
