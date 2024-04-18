@@ -1191,13 +1191,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "BBF_USDT",
-    "desimal": 18,
-    "sc": "0xde075d9adbd0240b4462f124af926452ad0bac91",
-    "wd": 0,
-    "status": true
-  },
+
  
   {
     "symbol": "BCMC_USDT",
@@ -1687,13 +1681,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "COFI_USDT",
-    "desimal": 18,
-    "sc": "0x3136eF851592aCf49CA4C825131E364170FA32b3",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "COFIX_USDT",
     "desimal": 18,
@@ -1973,7 +1961,7 @@
   },
   {
     "symbol": "DBC_USDT",
-    "desimal": 18,
+    "desimal": 15,
     "sc": "0x1F735f84b07cc20E9aC471C291a87b5A2428d518",
     "wd": 0,
     "status": true
@@ -2146,13 +2134,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "DILI_USDT",
-    "desimal": 18,
-    "sc": "0x37F74e99794853777a10ea1dc08a64C86958F06a",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "DIMO_USDT",
     "desimal": 18,
@@ -2210,13 +2192,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "DOCK_USDT",
-    "desimal": 18,
-    "sc": "0xE5Dada80Aa6477e85d09747f2842f7993D0Df71C",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "DODO_USDT",
     "desimal": 18,
@@ -2331,13 +2307,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "DV_USDT",
-    "desimal": 18,
-    "sc": "0x2a03a891add2dc6d0f7b94419086630ba5cb65b6",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "DVI_USDT",
     "desimal": 18,
@@ -2402,13 +2372,6 @@
     "status": true
   },
  
-  {
-    "symbol": "EHASH_USDT",
-    "desimal": 18,
-    "sc": "0x2942e3b38e33123965bfbc21e802be943a76bbc6",
-    "wd": 0,
-    "status": true
-  },
   {
     "symbol": "EJS_USDT",
     "desimal": 18,
@@ -7615,5 +7578,4 @@
     "status": true
   }
 ]
-
 }
