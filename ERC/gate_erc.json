@@ -2682,20 +2682,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "FOREX_USDT",
-    "desimal": 18,
-    "sc": "0xDb298285FE4C5410B05390cA80e8Fbe9DE1F259B",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "FORM_USDT",
-    "desimal": 18,
-    "sc": "0x21381e026Ad6d8266244f2A583b35F9E4413FA2a",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "FORT_USDT",
     "desimal": 18,
@@ -2745,13 +2732,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "FROG_USDT",
-    "desimal": 18,
-    "sc": "0x4fEe21439F2b95b72da2F9f901b3956f27fE91D5",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "FRONT_USDT",
     "desimal": 18,
@@ -2860,13 +2841,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "GARD_USDT",
-    "desimal": 18,
-    "sc": "0x5c64031C62061865E5FD0F53d3CDaeF80f72E99D",
-    "wd": 0,
-    "status": true
-  },
+
   {
     "symbol": "GASDAO_USDT",
     "desimal": 18,
@@ -2909,13 +2884,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "GEM_USDT",
-    "desimal": 18,
-    "sc": "0xc7BbA5b765581eFb2Cdd2679DB5Bea9eE79b201f",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "GEMAI_USDT",
     "desimal": 18,
@@ -2967,7 +2936,7 @@
   },
   {
     "symbol": "GM_USDT",
-    "desimal": 9,
+    "desimal": 18,
     "sc": "0xbc7250c8c3eca1dfc1728620af835fca489bfdf3",
     "wd": 0,
     "status": true
@@ -7559,5 +7528,4 @@
     "status": true
   }
 ]
-
 }
