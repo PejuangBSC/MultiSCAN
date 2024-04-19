@@ -6643,13 +6643,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "WSB_USDT",
-    "desimal": 18,
-    "sc": "0x15f20f9dfdf96ccf6ac96653b7c0abfe4a9c9f0f",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "WSIENNA_USDT",
     "desimal": 18,
