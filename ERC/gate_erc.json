@@ -5003,14 +5003,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "PORTX_USDT",
-    "desimal": 18,
-    "sc": "0x104F3152D8ebFC3f679392977356962Ff36566aC",
-    "wd": 0,
-    "status": true
-  },
-  
+ 
   {
     "symbol": "POWR_USDT",
     "desimal": 6,
@@ -5755,13 +5748,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SOS_USDT",
-    "desimal": 18,
-    "sc": "0x3b484b82567a09e2588a13d54d032153f0c0aee0",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "SOV_USDT",
     "desimal": 18,
@@ -6081,13 +6068,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "TCT_USDT",
-    "desimal": 18,
-    "sc": "0x4824A7b64E3966B0133f4f4FFB1b9D6bEb75FFF7",
-    "wd": 0,
-    "status": true
-  },
+  
   
   {
     "symbol": "TET_USDT",
@@ -6096,13 +6077,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "THALES_USDT",
-    "desimal": 18,
-    "sc": "0x8947da500Eb47F82df21143D0C01A29862a8C3c5",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "THE_USDT",
     "desimal": 18,
@@ -6118,13 +6093,7 @@
     "status": true
   },
   
-  {
-    "symbol": "THN_USDT",
-    "desimal": 18,
-    "sc": "0x2e95cea14dd384429eb3c4331b776c4cfbb6fcd9",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "TIDAL_USDT",
     "desimal": 18,
@@ -6219,13 +6188,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "TROLL_USDT",
-    "desimal": 18,
-    "sc": "0xf8ebf4849F1Fa4FaF0DFF2106A173D3A6CB2eB3A",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "TROY_USDT",
     "desimal": 18,
@@ -6290,13 +6253,7 @@
     "status": true
   },
  
-  {
-    "symbol": "TXT_USDT",
-    "desimal": 18,
-    "sc": "0x547b2f82cecfab9c2b1d36fdda96ef9f58c63b8c",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "UDO_USDT",
     "desimal": 18,
@@ -6476,13 +6433,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "VENT_USDT",
-    "desimal": 18,
-    "sc": "0x5F0bc16D50F72d10b719dBF6845DE2E599eb5624",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "VERA_USDT",
     "desimal": 18,
@@ -6968,5 +6919,5 @@
     "status": true
   }
 ]
-
+ 
 }
