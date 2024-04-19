@@ -724,13 +724,6 @@
   },
  
   {
-    "symbol": "GOB_USDT",
-    "sc": "0xa2F9ECf83a48b86265ff5fD36cDBAAa1F349916C",
-    "desimal": 18,
-    "status": true,
-    "wd": 0
-  },
-  {
     "symbol": "GRAIL_USDT",
     "sc": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8",
     "desimal": 18,
