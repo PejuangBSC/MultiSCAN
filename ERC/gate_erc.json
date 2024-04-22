@@ -5735,7 +5735,7 @@
   },
   {
     "symbol": "SOMM_USDT",
-    "desimal": 18,
+    "desimal": 6,
     "sc": "0xa670d7237398238DE01267472C6f13e5B8010FD1",
     "wd": 0,
     "status": true
