@@ -985,13 +985,7 @@
     "wd": 0.0000001,
     "status": true
   },
-  {
-    "symbol": "RLC_USDT",
-    "desimal": 9,
-    "sc": "0x607f4c5bb672230e8672085532f7e901544a7375",
-    "wd": 0.0000001,
-    "status": true
-  },
+
   {
     "symbol": "RPL_USDT",
     "desimal": 18,
