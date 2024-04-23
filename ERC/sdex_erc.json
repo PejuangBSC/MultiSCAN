@@ -679,20 +679,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "BMI_USDT",
-    "sc": "0x725c263e32c72ddc3a19bea12c5a0479a81ee688",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "BNB_USDT",
-    "sc": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+
   {
     "symbol": "BOND_USDT",
     "sc": "0x0391d2021f89dc339f60fff84546ea23e337750f",
@@ -1162,13 +1149,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SXP_USDT",
-    "sc": "0x8CE9137d39326AD0cD6491fb5CC0CbA0e089b6A9",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+
   {
     "symbol": "TRIBE_USDT",
     "sc": "0xc7283b66Eb1EB5FB86327f08e1B5816b0720212B",
@@ -1260,6 +1241,4 @@
     "wd": 0,
     "status": true
   }
-]
-
-}
+]}
