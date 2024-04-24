@@ -594,7 +594,7 @@
     "id_grup": "-1002079288809"
   },
   "token": 
-    [
+       [
       {
         "symbol": "AART_USDT",
         "desimal": 6,
@@ -623,13 +623,7 @@
         "wd": 1,
         "status": true
       },
-      // {
-      //   "symbol": "APRT_USDT",
-      //   "desimal": 6,
-      //   "sc": "APTtJyaRX5yGTsJU522N4VYWg3vCvSb65eam5GrPT5Rt",
-      //   "wd": 1,
-      //   "status": true
-      // },
+      
       {
         "symbol": "ATLAS_USDT",
         "desimal": 8,
@@ -714,13 +708,6 @@
         "wd": 1,
         "status": true
       },
-      // {
-      //   "symbol": "CHICKS_USDT",
-      //   "desimal": 8,
-      //   "sc": "cxxShYRVcepDudXhe7U62QHvw8uBJoKFifmzggGKVC2",
-      //   "wd": 1,
-      //   "status": true
-      // },
       {
         "symbol": "CORGIAI_USDT",
         "desimal": 9,
@@ -861,13 +848,6 @@
         "wd": 1,
         "status": true
       },
-      // {
-      //   "symbol": "GST_USDT",
-      //   "desimal": 8,
-      //   "sc": "AFbX8oGjGpmVFywbVouvhQSRmiW2aR1mohfahi4Y2AdB",
-      //   "wd": 1,
-      //   "status": true
-      // },
       {
         "symbol": "HADES_USDT",
         "desimal": 9,
@@ -987,13 +967,7 @@
         "wd": 1,
         "status": true
       },
-      // {
-      //   "symbol": "MER_USDT",
-      //   "desimal": 6,
-      //   "sc": "MERt85fc5boKw3BW1eYdxonEuJNvXbiMbs6hvheau5K",
-      //   "wd": 1,
-      //   "status": true
-      // },
+
       {
         "symbol": "MEW_USDT",
         "desimal": 5,
@@ -1246,13 +1220,7 @@
         "wd": 1,
         "status": true
       },
-      // {
-      //   "symbol": "SHARK_USDT",
-      //   "desimal": 6,
-      //   "sc": "SHARKSYJjqaNyxVfrpnBN9pjgkhwDhatnMyicWPnr1s",
-      //   "wd": 1,
-      //   "status": true
-      // },
+
       {
         "symbol": "SHDW_USDT",
         "desimal": 9,
@@ -1393,13 +1361,6 @@
         "wd": 1,
         "status": true
       },
-      // {
-      //   "symbol": "SVT_USDT",
-      //   "desimal": 6,
-      //   "sc": "svtMpL5eQzdmB3uqK9NXaQkq8prGZoKQFNVJghdWCkV",
-      //   "wd": 1,
-      //   "status": true
-      // },
       {
         "symbol": "TAKI_USDT",
         "desimal": 9,
@@ -1498,13 +1459,7 @@
         "wd": 1,
         "status": true
       },
-      // {
-      //   "symbol": "ZBC_USDT",
-      //   "desimal": 8,
-      //   "sc": "oldzebeczgi5fSEtbpfQKVZKCJ3WgYXxjkMUkNNx7fLKAFold",
-      //   "wd": 1,
-      //   "status": true
-      // },
+    
       {
         "symbol": "ZBCN_USDT",
         "desimal": 6,
@@ -1534,4 +1489,5 @@
         "status": true
       }
     ]
+
 }
