@@ -593,637 +593,945 @@
     "token": "6554422567:AAHn2KErUWyl_RIDChwv49mfHf9lHf_OTgQ",
     "id_grup": "-1002079288809"
   },
-  "token": [
-  {
-    "symbol": "AART_USDT",
-    "desimal": 6,
-    "sc": "F3nefJBcejYbtdREjui1T9DPh5dBgpkKq7u2GAAMXs5B",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "ACS_USDT",
-    "desimal": 6,
-    "sc": "5MAYDfq5yxtudAhtfyuMBuHZjgAbaS9tbEyEQYAhDS5y",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "AMU_USDT",
-    "desimal": 9,
-    "sc": "AMUwxPsqWSd1fbCGzWsrRKDcNoduuWMkdR38qPdit8G8",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "ATLAS_USDT",
-    "desimal": 8,
-    "sc": "ATLASXmbPQxBUYbxPsV97usA3fPQYEqzQBUHgiFCUsXx",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "ATS_USDT",
-    "desimal": 9,
-    "sc": "HJbNXx2YMRxgfUJ6K4qeWtjatMK5KYQT1QnsCdDWywNv",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "BLOCK_USDT",
-    "desimal": 6,
-    "sc": "NFTUkR4u7wKxy9QLaX2TGvd9oZSWoMo4jqSJqdMb7Nk",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "BLT_USDT",
-    "desimal": 9,
-    "sc": "BLT1noyNr3GttckEVrtcfC6oyK6yV1DpPgSyXbncMwef",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "BONK_USDT",
-    "desimal": 5,
-    "sc": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "CORGIAI_USDT",
-    "desimal": 9,
-    "sc": "79F32BvHBE49gPsvypYTGzcpWGvt66mgvenQow3mJjXu",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "CRP_USDT",
-    "desimal": 9,
-    "sc": "DubwWZNWiNGMMeeQHPnMATNj77YZPZSAz2WVR5WjLJqz",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "CSTR_USDT",
-    "desimal": 9,
-    "sc": "G7uYedVqFy97mzjygebnmmaMUVxWHFhNZotY6Zzsprvf",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "CWAR_USDT",
-    "desimal": 9,
-    "sc": "HfYFjMKNZygfMC8LsQ8LtpPsPxEJoXJx4M6tqi75Hajo",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "CYS_USDT",
-    "desimal": 6,
-    "sc": "BRLsMczKuaR5w9vSubF4j8HwEGGprVAyyVgS4EX7DKEg",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "DEFILAND_USDT",
-    "desimal": 9,
-    "sc": "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "DELFI_USDT",
-    "desimal": 6,
-    "sc": "de1QJkP1qDCk5JYCCXCeq27bQQUdCaiv7xVKFrhPSzF",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "DIO_USDT",
-    "desimal": 9,
-    "sc": "BiDB55p4G3n1fGhwKFpxsokBMqgctL4qnZpDH1bVQxMD",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "DOGGO_USDT",
-    "desimal": 5,
-    "sc": "Doggoyb1uHFJGFdHhJf8FKEBUMv58qo98CisWgeD7Ftk",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "DUST_USDT",
-    "desimal": 9,
-    "sc": "DUSTawucrTsGU8hcqRdHDCbuYhCPADMLM2VcCb8VnFnQ",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "ELU_USDT",
-    "desimal": 9,
-    "sc": "4tJZhSdGePuMEfZQ3h5LaHjTPsw1iWTRFTojnZcwsAU6",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "FCON_USDT",
-    "desimal": 4,
-    "sc": "HovGjrBGTfna4dvg6exkMxXuexB3tUfEZKcut8AWowXj",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "FIDA_USDT",
-    "desimal": 6,
-    "sc": "EchesyfXePKdLtoiZSL8pBe8Myagyy8ZRqsACNCFGnvp",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "GARI_USDT",
-    "desimal": 9,
-    "sc": "CKaKtYvz6dKPyMvYq9Rh3UBrnNqYZAyd7iF4hJtjUvks",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "GMT_USDT",
-    "desimal": 9,
-    "sc": "7i5KKsX2weiTkry7jA4ZwSuXGhs5eJBEjY8vVxR4pfRx",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "GOFX_USDT",
-    "desimal": 9,
-    "sc": "GFX1ZjR2P15tmrSwow6FjyDYcEkoFb4p4gJCpLBjaxHD",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "HADES_USDT",
-    "desimal": 9,
-    "sc": "BWXrrYFhT7bMHmNBFoQFWdsSgA3yXoAnMhDK6Fn1eSEn",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "HER_USDT",
-    "desimal": 6,
-    "sc": "5WieRrJ5oFthgxaH4nCEkwJiBTxuRpEn9qmFRkVzkc98",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "HNT_USDT",
-    "desimal": 8,
-    "sc": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "JTO_USDT",
-    "desimal": 9,
-    "sc": "jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "JUP_USDT",
-    "desimal": 6,
-    "sc": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "KIN_USDT",
-    "desimal": 5,
-    "sc": "kinXdEcpDQeHPEuQnqmUgtYykqKGVFq6CeVX5iAHJq6",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "KZEN_USDT",
-    "desimal": 9,
-    "sc": "kZEn3aDxEzcFADPe2VQ6WcJRbS1hVGjUcgCw4HiuYSU",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "LARIX_USDT",
-    "desimal": 6,
-    "sc": "Lrxqnh6ZHKbGy3dcrCED43nsoLkM1LTzU2jRfWe8qUC",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "LIKE_USDT",
-    "desimal": 9,
-    "sc": "3bRTivrVsitbmCTGtqwp7hxXPsybkjn4XLNtPsHqa3zR",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "LIQ_USDT",
-    "desimal": 6,
-    "sc": "4wjPQJ6PrkC4dHhYghwJzGBVP78DkBzA2U3kHoFNBuhj",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "MAPS_USDT",
-    "desimal": 6,
-    "sc": "MAPS41MDahZ9QdKXhVa4dWB9RuyfV4XqhyAZ8XcYepb",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "MBS_USDT",
-    "desimal": 6,
-    "sc": "Fm9rHUTF5v3hwMLbStjZXqNBBoZyGriQaFM6sTFz3K8A",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "MDF_USDT",
-    "desimal": 6,
-    "sc": "ALQ9KMWjFmxVbew3vMkJj3ypbAKuorSgGst6svCHEe2z",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "MEAN_USDT",
-    "desimal": 6,
-    "sc": "MEANeD3XDdUmNMsRGjASkSWdC8prLYsoRJ61pPeHctD",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "MNDE_USDT",
-    "desimal": 9,
-    "sc": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "MNGO_USDT",
-    "desimal": 6,
-    "sc": "MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "MPLX_USDT",
-    "desimal": 6,
-    "sc": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "MSOL_USDT",
-    "desimal": 9,
-    "sc": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "NEON_USDT",
-    "desimal": 9,
-    "sc": "NeonTjSjsuo3rexg9o6vHuMXw62f9V7zvmu8M8Zut44",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "NOS_USDT",
-    "desimal": 6,
-    "sc": "nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "ORCA_USDT",
-    "desimal": 6,
-    "sc": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "PIP_USDT",
-    "desimal": 9,
-    "sc": "HHjoYwUp5aU6pnrvN4s2pwEErwXNZKhxKGYjRJMoBjLw",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "POLIS_USDT",
-    "desimal": 8,
-    "sc": "poLisWXnNRwC6oBu1vHiuKQzFjGL4XDSu4g9qjz9qVk",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "PORT_USDT",
-    "desimal": 6,
-    "sc": "PoRTjZMPXb9T7dyU7tpLEZRQj7e6ssfAE62j2oQuc6y",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "PRISM_USDT",
-    "desimal": 6,
-    "sc": "PRSMNsEPqhGVCH1TtWiJqPjJyh2cKrLostPZTNy1o5x",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "PRT_USDT",
-    "desimal": 6,
-    "sc": "PRT88RkA4Kg5z7pKnezeNH4mafTvtQdfFgpQTGRjz44",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "PSY_USDT",
-    "desimal": 6,
-    "sc": "PsyFiqqjiv41G7o5SMRzDJCu4psptThNR2GtfeGHfSq",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "PYTH_USDT",
-    "desimal": 6,
-    "sc": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "RATIO_USDT",
-    "desimal": 6,
-    "sc": "ratioMVg27rSZbSvBopUvsdrGUzeALUfFma61mpxc8J",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "RAY_USDT",
-    "desimal": 6,
-    "sc": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "RIN_USDT",
-    "desimal": 9,
-    "sc": "E5ndSkaB17Dm7CsD22dvcjfrYSDLCxFcMd6z8ddCk5wp",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "ROA_USDT",
-    "desimal": 9,
-    "sc": "5tB5D6DGJMxxHYmNkfJNG237x6pZGEwTzGpUUh62yQJ7",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SAMO_USDT",
-    "desimal": 9,
-    "sc": "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SAO_USDT",
-    "desimal": 9,
-    "sc": "2HeykdKjzHKGm2LKHw8pDYwjKPiFEoXAz74dirhUgQvq",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SAROS_USDT",
-    "desimal": 6,
-    "sc": "SarosY6Vscao718M4A778z4CGtvcwcGef5M9MEH1LGL",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SBR_USDT",
-    "desimal": 6,
-    "sc": "Saber2gLauYim4Mvftnrasomsv6NvAuncvMEZwcLpD1",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SCNSOL_USDT",
-    "desimal": 9,
-    "sc": "5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SCY_USDT",
-    "desimal": 9,
-    "sc": "SCYfrGCw8aDiqdgcpdGjV6jp4UVVQLuphxTDLNWu36f",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SHILL_USDT",
-    "desimal": 6,
-    "sc": "6cVgJUqo4nmvQpbgrDZwyfd6RwWw5bfnCamS3M9N1fd",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SLC_USDT",
-    "desimal": 6,
-    "sc": "METAmTMXwdb8gYzyCPfXXFmZZw4rUsXX58PNsDg7zjL",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SLIM_USDT",
-    "desimal": 6,
-    "sc": "xxxxa1sKNGwFtw2kFn8XauW9xq8hBZ5kVtcSesTT9fW",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SLND_USDT",
-    "desimal": 6,
-    "sc": "SLNDpmoWTVADgEdndyvWzroNL7zSi1dF9PC3xHGtPwp",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SLRS_USDT",
-    "desimal": 6,
-    "sc": "SLRSSpSLUTP7okbCUBYStWCo1vUgyt775faPqz8HUMr",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SNTR_USDT",
-    "desimal": 9,
-    "sc": "SENBBKVCM7homnf5RX9zqpf1GFe935hnbU4uVzY1Y6M",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SNY_USDT",
-    "desimal": 6,
-    "sc": "4dmKkXNHdgYsXqBHCuMikNQWwVomZURhYvkkX5c4pQ7y",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SOLR_USDT",
-    "desimal": 6,
-    "sc": "7j7H7sgsnNDeCngAPjpaCN4aaaru4HS7NAFYSEUyzJ3k",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SOLS_USDT",
-    "desimal": 9,
-    "sc": "2wme8EVkw8qsfSk2B3QeX4S64ac6wxHPXb3GrdckEkio",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SONAR_USDT",
-    "desimal": 9,
-    "sc": "sonarX4VtVkQemriJeLm6CKeW3GDMyiBnnAEMw1MRAE",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SRM_USDT",
-    "desimal": 6,
-    "sc": "SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SS20_USDT",
-    "desimal": 8,
-    "sc": "6YsbefsCddFqUGyMxd788LQHbCGsGgmzjr5cowpYqRhk",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "STEP_USDT",
-    "desimal": 9,
-    "sc": "StepAscQoEioFxxWGnh2sLBDFp9d8rvKz2Yp39iDpyT",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "STIK_USDT",
-    "desimal": 9,
-    "sc": "8BMzMi2XxZn9afRaMx5Z6fauk9foHXqV5cLTCYWRcVje",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "STSOL_USDT",
-    "desimal": 9,
-    "sc": "7dHbWXmci3dT8UFYWYZweBLXgycu7Y3iL6trKn1Y7ARj",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "SUNNY_USDT",
-    "desimal": 6,
-    "sc": "SUNNYWgPQmFxe9wTZzNK7iPnJ3vYDrkgnxJRJm1s3ag",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "TAKI_USDT",
-    "desimal": 9,
-    "sc": "Taki7fi3Zicv7Du1xNAWLaf6mRK7ikdn77HeGzgwvo4",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "TTT_USDT",
-    "desimal": 6,
-    "sc": "FNFKRV3V8DtA3gVJN6UshMiLGYA8izxFwkNWmJbFjmRj",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "TULIP_USDT",
-    "desimal": 6,
-    "sc": "TuLipcqtGVXP9XR62wM8WWCm6a9vhLs7T1uoWBk6FDs",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "UNQ_USDT",
-    "desimal": 6,
-    "sc": "UNQtEecZ5Zb4gSSVHCAWUQEoNnSVEbWiKCi1v9kdUJJ",
-    "wd": 0,
-    "status":true
-  },
- 
-  {
-    "symbol": "WAG_USDT",
-    "desimal": 9,
-    "sc": "5tN42n9vMi6ubp67Uy4NnmM5DMZYN8aS8GeB3bEDHr6E",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "WEN_USDT",
-    "desimal": 5,
-    "sc": "WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "WIF_USDT",
-    "desimal": 6,
-    "sc": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "WLKN_USDT",
-    "desimal": 9,
-    "sc": "EcQCUYv57C4V6RoPxkVUiDwtX1SP8y8FP5AEToYL8Az",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "WNZ_USDT",
-    "desimal": 4,
-    "sc": "WNZzxM1WqWFH8DpDZSqr6EoHKWXeMx9NLLd2R5RzGPA",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "XTAG_USDT",
-    "desimal": 6,
-    "sc": "5gs8nf4wojB5EXgDUWNLwXpknzgV2YWDhveAeBZpVLbp",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "ZBC_USDT",
-    "desimal": 9,
-    "sc": "zebeczgi5fSEtbpfQKVZKCJ3WgYXxjkMUkNNx7fLKAF",
-    "wd": 0,
-    "status":true
-  },
-  {
-    "symbol": "ZERO_USDT",
-    "desimal": 9,
-    "sc": "93RC484oMK5T9H89rzT5qiAXKHGP9jscXfFfrihNbe57",
-    "wd": 0,
-    "status":true
-  }
-]
+  "token": 
+    [
+      {
+        "symbol": "AART_USDT",
+        "desimal": 6,
+        "sc": "F3nefJBcejYbtdREjui1T9DPh5dBgpkKq7u2GAAMXs5B",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "ACS_USDT",
+        "desimal": 6,
+        "sc": "5MAYDfq5yxtudAhtfyuMBuHZjgAbaS9tbEyEQYAhDS5y",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "AMU_USDT",
+        "desimal": 9,
+        "sc": "AMUwxPsqWSd1fbCGzWsrRKDcNoduuWMkdR38qPdit8G8",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "ANDY_USDT",
+        "desimal": 6,
+        "sc": "667w6y7eH5tQucYQXfJ2KmiuGBE8HfYnqqbjLNSw7yww",
+        "wd": 1,
+        "status": true
+      },
+      // {
+      //   "symbol": "APRT_USDT",
+      //   "desimal": 6,
+      //   "sc": "APTtJyaRX5yGTsJU522N4VYWg3vCvSb65eam5GrPT5Rt",
+      //   "wd": 1,
+      //   "status": true
+      // },
+      {
+        "symbol": "ATLAS_USDT",
+        "desimal": 8,
+        "sc": "ATLASXmbPQxBUYbxPsV97usA3fPQYEqzQBUHgiFCUsXx",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "ATLASDEX_USDT",
+        "desimal": 9,
+        "sc": "HJbNXx2YMRxgfUJ6K4qeWtjatMK5KYQT1QnsCdDWywNv",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "ATR_USDT",
+        "desimal": 9,
+        "sc": "ATRLuHph8dxnPny4WSNW7fxkhbeivBrtWbY6BfB4xpLj",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "BENDOG_USDT",
+        "desimal": 9,
+        "sc": "AHW5N8iqZobTcBepkSJzZ61XtAuSzBDcpxtrLG6KUKPk",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "BLOCKASSET_USDT",
+        "desimal": 6,
+        "sc": "NFTUkR4u7wKxy9QLaX2TGvd9oZSWoMo4jqSJqdMb7Nk",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "BLT_USDT",
+        "desimal": 9,
+        "sc": "BLT1noyNr3GttckEVrtcfC6oyK6yV1DpPgSyXbncMwef",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "BOME_USDT",
+        "desimal": 6,
+        "sc": "ukHH6c7mMyiWCf1b9pnWe25TSpkDDt3H5pQZgZ74J82",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "BONK_USDT",
+        "desimal": 5,
+        "sc": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "BRAWL_USDT",
+        "desimal": 9,
+        "sc": "5mdBkZ4dTP94SE7PyiuWseTDAd1kYxSk6oYaWB7186s7",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "CATCOIN_USDT",
+        "desimal": 3,
+        "sc": "7hWcHohzwtLddDUG81H2PkWq6KEkMtSDNkYXsso18Fy3",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "CHAT_USDT",
+        "desimal": 9,
+        "sc": "947tEoG318GUmyjVYhraNRvWpMX7fpBTDQFBoJvSkSG3",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "CHATAI_USDT",
+        "desimal": 8,
+        "sc": "DpfVseMtcwUMuMaNUgVoshxQ7Uo4Brtna3k5NaN44U1g",
+        "wd": 1,
+        "status": true
+      },
+      // {
+      //   "symbol": "CHICKS_USDT",
+      //   "desimal": 8,
+      //   "sc": "cxxShYRVcepDudXhe7U62QHvw8uBJoKFifmzggGKVC2",
+      //   "wd": 1,
+      //   "status": true
+      // },
+      {
+        "symbol": "CORGIAI_USDT",
+        "desimal": 9,
+        "sc": "79F32BvHBE49gPsvypYTGzcpWGvt66mgvenQow3mJjXu",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "CRP_USDT",
+        "desimal": 9,
+        "sc": "DubwWZNWiNGMMeeQHPnMATNj77YZPZSAz2WVR5WjLJqz",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "CSTR_USDT",
+        "desimal": 9,
+        "sc": "G7uYedVqFy97mzjygebnmmaMUVxWHFhNZotY6Zzsprvf",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "CWAR_USDT",
+        "desimal": 9,
+        "sc": "HfYFjMKNZygfMC8LsQ8LtpPsPxEJoXJx4M6tqi75Hajo",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "CYS_USDT",
+        "desimal": 6,
+        "sc": "BRLsMczKuaR5w9vSubF4j8HwEGGprVAyyVgS4EX7DKEg",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "DEFILAND_USDT",
+        "desimal": 9,
+        "sc": "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "DELFI_USDT",
+        "desimal": 6,
+        "sc": "de1QJkP1qDCk5JYCCXCeq27bQQUdCaiv7xVKFrhPSzF",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "DIO_USDT",
+        "desimal": 9,
+        "sc": "BiDB55p4G3n1fGhwKFpxsokBMqgctL4qnZpDH1bVQxMD",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "DMR_USDT",
+        "desimal": 6,
+        "sc": "4n7AbgC6WWBMBqLa92vC3FmFQti6am17KS9jHEKgirPF",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "DOGGO_USDT",
+        "desimal": 5,
+        "sc": "Doggoyb1uHFJGFdHhJf8FKEBUMv58qo98CisWgeD7Ftk",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "DOPE_USDT",
+        "desimal": 8,
+        "sc": "8Kqmghm1mkXbKYqt2wGnHxwnRdEjD9nayNKD3EanWkcD",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "DUKO_USDT",
+        "desimal": 6,
+        "sc": "HLptm5e6rTgh4EKgDpYFrnRHbjpkMyVdEeREEa2G7rf9",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "DUST_USDT",
+        "desimal": 9,
+        "sc": "DUSTawucrTsGU8hcqRdHDCbuYhCPADMLM2VcCb8VnFnQ",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "ELU_USDT",
+        "desimal": 9,
+        "sc": "4tJZhSdGePuMEfZQ3h5LaHjTPsw1iWTRFTojnZcwsAU6",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "FCON_USDT",
+        "desimal": 4,
+        "sc": "HovGjrBGTfna4dvg6exkMxXuexB3tUfEZKcut8AWowXj",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "FIDA_USDT",
+        "desimal": 6,
+        "sc": "EchesyfXePKdLtoiZSL8pBe8Myagyy8ZRqsACNCFGnvp",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "GARI_USDT",
+        "desimal": 9,
+        "sc": "CKaKtYvz6dKPyMvYq9Rh3UBrnNqYZAyd7iF4hJtjUvks",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "GMT_USDT",
+        "desimal": 9,
+        "sc": "7i5KKsX2weiTkry7jA4ZwSuXGhs5eJBEjY8vVxR4pfRx",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "GOFX_USDT",
+        "desimal": 9,
+        "sc": "GFX1ZjR2P15tmrSwow6FjyDYcEkoFb4p4gJCpLBjaxHD",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "GPT_USDT",
+        "desimal": 8,
+        "sc": "kzyC6U8E8uWwuKHHLkFE5kGiG7qwupKtX31cQo9Y5nv",
+        "wd": 1,
+        "status": true
+      },
+      // {
+      //   "symbol": "GST_USDT",
+      //   "desimal": 8,
+      //   "sc": "AFbX8oGjGpmVFywbVouvhQSRmiW2aR1mohfahi4Y2AdB",
+      //   "wd": 1,
+      //   "status": true
+      // },
+      {
+        "symbol": "HADES_USDT",
+        "desimal": 9,
+        "sc": "BWXrrYFhT7bMHmNBFoQFWdsSgA3yXoAnMhDK6Fn1eSEn",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "HER_USDT",
+        "desimal": 6,
+        "sc": "5WieRrJ5oFthgxaH4nCEkwJiBTxuRpEn9qmFRkVzkc98",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "HNT_USDT",
+        "desimal": 8,
+        "sc": "hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "HXD_USDT",
+        "desimal": 9,
+        "sc": "3dgCCb15HMQSA4Pn3Tfii5vRk7aRqTH95LJjxzsG2Mug",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "IQ50_USDT",
+        "desimal": 6,
+        "sc": "21rweMLGYeMNonHW7H3xa5py17X6ZFRcHirCp9inRBQA",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "JTO_USDT",
+        "desimal": 9,
+        "sc": "jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "JUP_USDT",
+        "desimal": 6,
+        "sc": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "KIN_USDT",
+        "desimal": 5,
+        "sc": "kinXdEcpDQeHPEuQnqmUgtYykqKGVFq6CeVX5iAHJq6",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "KZEN_USDT",
+        "desimal": 9,
+        "sc": "kZEn3aDxEzcFADPe2VQ6WcJRbS1hVGjUcgCw4HiuYSU",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "LADYF_USDT",
+        "desimal": 6,
+        "sc": "3X8GcLiH2HttjyqePg7MazpMbwbgq5URUMTyDz5tkmdE",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "LARIX_USDT",
+        "desimal": 6,
+        "sc": "Lrxqnh6ZHKbGy3dcrCED43nsoLkM1LTzU2jRfWe8qUC",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "LIKE_USDT",
+        "desimal": 9,
+        "sc": "3bRTivrVsitbmCTGtqwp7hxXPsybkjn4XLNtPsHqa3zR",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "LIQ_USDT",
+        "desimal": 6,
+        "sc": "4wjPQJ6PrkC4dHhYghwJzGBVP78DkBzA2U3kHoFNBuhj",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "MAPS_USDT",
+        "desimal": 6,
+        "sc": "MAPS41MDahZ9QdKXhVa4dWB9RuyfV4XqhyAZ8XcYepb",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "MBS_USDT",
+        "desimal": 6,
+        "sc": "Fm9rHUTF5v3hwMLbStjZXqNBBoZyGriQaFM6sTFz3K8A",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "MDF_USDT",
+        "desimal": 6,
+        "sc": "ALQ9KMWjFmxVbew3vMkJj3ypbAKuorSgGst6svCHEe2z",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "MEAN_USDT",
+        "desimal": 6,
+        "sc": "MEANeD3XDdUmNMsRGjASkSWdC8prLYsoRJ61pPeHctD",
+        "wd": 1,
+        "status": true
+      },
+      // {
+      //   "symbol": "MER_USDT",
+      //   "desimal": 6,
+      //   "sc": "MERt85fc5boKw3BW1eYdxonEuJNvXbiMbs6hvheau5K",
+      //   "wd": 1,
+      //   "status": true
+      // },
+      {
+        "symbol": "MEW_USDT",
+        "desimal": 5,
+        "sc": "MEW1gQWJ3nEXg2qgERiKu7FAFj79PHvQVREQUzScPP5",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "MNDE_USDT",
+        "desimal": 9,
+        "sc": "MNDEFzGvMt87ueuHvVU9VcTqsAP5b3fTGPsHuuPA5ey",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "MNGO_USDT",
+        "desimal": 6,
+        "sc": "MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "MOBILE_USDT",
+        "desimal": 6,
+        "sc": "mb1eu7TzEc71KxDpsmsKoucSSuuoGLv1drys1oP2jh6",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "MPLX_USDT",
+        "desimal": 6,
+        "sc": "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "MSOL_USDT",
+        "desimal": 9,
+        "sc": "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "MYRO_USDT",
+        "desimal": 9,
+        "sc": "HhJpBhRRn4g56VsyLuT8DL5Bv31HkXqsrahTTUCZeZg4",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "NEON_USDT",
+        "desimal": 9,
+        "sc": "NeonTjSjsuo3rexg9o6vHuMXw62f9V7zvmu8M8Zut44",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "NEVER_USDT",
+        "desimal": 6,
+        "sc": "CxrhHSqyW8YTDWc4csJMMgo7uBUJSXzNzrWhtw9ULdru",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "NOS_USDT",
+        "desimal": 6,
+        "sc": "nosXBVoaCTtYdLvKY6Csb4AC8JCdQKKAaWYtx2ZMoo7",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "NUB_USDT",
+        "desimal": 9,
+        "sc": "GtDZKAqvMZMnti46ZewMiXCa4oXF4bZxwQPoKzXPFxZn",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "ORCA_USDT",
+        "desimal": 6,
+        "sc": "orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "OXY_USDT",
+        "desimal": 6,
+        "sc": "z3dn17yLaGMKffVogeFHQ9zWVcXgqgf3PQnDsNs2g6M",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "PENG_USDT",
+        "desimal": 6,
+        "sc": "A3eME5CetyZPBoWbRUwY3tSe25S6tb18ba9ZPbWk9eFJ",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "PIP_USDT",
+        "desimal": 9,
+        "sc": "HHjoYwUp5aU6pnrvN4s2pwEErwXNZKhxKGYjRJMoBjLw",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "POLIS_USDT",
+        "desimal": 8,
+        "sc": "poLisWXnNRwC6oBu1vHiuKQzFjGL4XDSu4g9qjz9qVk",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "PONKE_USDT",
+        "desimal": 9,
+        "sc": "5z3EqYQo9HiCEs3R84RCDMu2n7anpDMxRhdK8PSWmrRC",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "POPCAT_USDT",
+        "desimal": 9,
+        "sc": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "PORT_USDT",
+        "desimal": 6,
+        "sc": "PoRTjZMPXb9T7dyU7tpLEZRQj7e6ssfAE62j2oQuc6y",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "PRCL_USDT",
+        "desimal": 6,
+        "sc": "4LLbsb5ReP3yEtYzmXewyGjcir5uXtKFURtaEUVC2AHs",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "PRISM_USDT",
+        "desimal": 6,
+        "sc": "PRSMNsEPqhGVCH1TtWiJqPjJyh2cKrLostPZTNy1o5x",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "PRT_USDT",
+        "desimal": 6,
+        "sc": "PRT88RkA4Kg5z7pKnezeNH4mafTvtQdfFgpQTGRjz44",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "PSY_USDT",
+        "desimal": 6,
+        "sc": "PsyFiqqjiv41G7o5SMRzDJCu4psptThNR2GtfeGHfSq",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "PUNDU_USDT",
+        "desimal": 9,
+        "sc": "WskzsKqEW3ZsmrhPAevfVZb6PuuLzWov9mJWZsfDePC",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "PUNKAI_USDT",
+        "desimal": 6,
+        "sc": "12UP9cSwe1tDzQg3KSEx1BpSS9nkpT5VkmDe4fSz4Hso",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "PYTH_USDT",
+        "desimal": 6,
+        "sc": "HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "RATIO_USDT",
+        "desimal": 6,
+        "sc": "ratioMVg27rSZbSvBopUvsdrGUzeALUfFma61mpxc8J",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "RAY_USDT",
+        "desimal": 6,
+        "sc": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "RIN_USDT",
+        "desimal": 9,
+        "sc": "E5ndSkaB17Dm7CsD22dvcjfrYSDLCxFcMd6z8ddCk5wp",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "ROA_USDT",
+        "desimal": 9,
+        "sc": "5tB5D6DGJMxxHYmNkfJNG237x6pZGEwTzGpUUh62yQJ7",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SAMO_USDT",
+        "desimal": 9,
+        "sc": "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SAO_USDT",
+        "desimal": 9,
+        "sc": "2HeykdKjzHKGm2LKHw8pDYwjKPiFEoXAz74dirhUgQvq",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SAROS_USDT",
+        "desimal": 6,
+        "sc": "SarosY6Vscao718M4A778z4CGtvcwcGef5M9MEH1LGL",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SBR_USDT",
+        "desimal": 6,
+        "sc": "Saber2gLauYim4Mvftnrasomsv6NvAuncvMEZwcLpD1",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SCNSOL_USDT",
+        "desimal": 9,
+        "sc": "5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SCY_USDT",
+        "desimal": 9,
+        "sc": "SCYfrGCw8aDiqdgcpdGjV6jp4UVVQLuphxTDLNWu36f",
+        "wd": 1,
+        "status": true
+      },
+      // {
+      //   "symbol": "SHARK_USDT",
+      //   "desimal": 6,
+      //   "sc": "SHARKSYJjqaNyxVfrpnBN9pjgkhwDhatnMyicWPnr1s",
+      //   "wd": 1,
+      //   "status": true
+      // },
+      {
+        "symbol": "SHDW_USDT",
+        "desimal": 9,
+        "sc": "SHDWyBxihqiCj6YekG2GUr7wqKLeLAMK1gHZck9pL6y",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SHILL_USDT",
+        "desimal": 6,
+        "sc": "6cVgJUqo4nmvQpbgrDZwyfd6RwWw5bfnCamS3M9N1fd",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SLC_USDT",
+        "desimal": 6,
+        "sc": "METAmTMXwdb8gYzyCPfXXFmZZw4rUsXX58PNsDg7zjL",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SLERF_USDT",
+        "desimal": 9,
+        "sc": "7BgBvyjrZX1YKz4oh9mjb8ZScatkkwb8DzFx7LoiVkM3",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SLIM_USDT",
+        "desimal": 6,
+        "sc": "xxxxa1sKNGwFtw2kFn8XauW9xq8hBZ5kVtcSesTT9fW",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SLND_USDT",
+        "desimal": 6,
+        "sc": "SLNDpmoWTVADgEdndyvWzroNL7zSi1dF9PC3xHGtPwp",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SLRS_USDT",
+        "desimal": 6,
+        "sc": "SLRSSpSLUTP7okbCUBYStWCo1vUgyt775faPqz8HUMr",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SMOLE_USDT",
+        "desimal": 6,
+        "sc": "9Ttyez3xiruyj6cqaR495hbBkJU6SUWdV6AmQ9MvbyyS",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SNAP_USDT",
+        "desimal": 6,
+        "sc": "4G86CMxGsMdLETrYnavMFKPhQzKTvDBYGMRAdVtr72nu",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SNTR_USDT",
+        "desimal": 9,
+        "sc": "SENBBKVCM7homnf5RX9zqpf1GFe935hnbU4uVzY1Y6M",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SNY_USDT",
+        "desimal": 6,
+        "sc": "4dmKkXNHdgYsXqBHCuMikNQWwVomZURhYvkkX5c4pQ7y",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SOLR_USDT",
+        "desimal": 6,
+        "sc": "7j7H7sgsnNDeCngAPjpaCN4aaaru4HS7NAFYSEUyzJ3k",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SOLS_USDT",
+        "desimal": 9,
+        "sc": "2wme8EVkw8qsfSk2B3QeX4S64ac6wxHPXb3GrdckEkio",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SONAR_USDT",
+        "desimal": 9,
+        "sc": "sonarX4VtVkQemriJeLm6CKeW3GDMyiBnnAEMw1MRAE",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SRM_USDT",
+        "desimal": 6,
+        "sc": "SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SS20_USDT",
+        "desimal": 8,
+        "sc": "6YsbefsCddFqUGyMxd788LQHbCGsGgmzjr5cowpYqRhk",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "STEP_USDT",
+        "desimal": 9,
+        "sc": "StepAscQoEioFxxWGnh2sLBDFp9d8rvKz2Yp39iDpyT",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "STIK_USDT",
+        "desimal": 9,
+        "sc": "8BMzMi2XxZn9afRaMx5Z6fauk9foHXqV5cLTCYWRcVje",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "STSOL_USDT",
+        "desimal": 9,
+        "sc": "7dHbWXmci3dT8UFYWYZweBLXgycu7Y3iL6trKn1Y7ARj",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "SUNNY_USDT",
+        "desimal": 6,
+        "sc": "SUNNYWgPQmFxe9wTZzNK7iPnJ3vYDrkgnxJRJm1s3ag",
+        "wd": 1,
+        "status": true
+      },
+      // {
+      //   "symbol": "SVT_USDT",
+      //   "desimal": 6,
+      //   "sc": "svtMpL5eQzdmB3uqK9NXaQkq8prGZoKQFNVJghdWCkV",
+      //   "wd": 1,
+      //   "status": true
+      // },
+      {
+        "symbol": "TAKI_USDT",
+        "desimal": 9,
+        "sc": "Taki7fi3Zicv7Du1xNAWLaf6mRK7ikdn77HeGzgwvo4",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "TNSR_USDT",
+        "desimal": 9,
+        "sc": "TNSRxcUxoT9xBG3de7PiJyTDYu7kskLqcpddxnEJAS6",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "TTT_USDT",
+        "desimal": 6,
+        "sc": "FNFKRV3V8DtA3gVJN6UshMiLGYA8izxFwkNWmJbFjmRj",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "TULIP_USDT",
+        "desimal": 6,
+        "sc": "TuLipcqtGVXP9XR62wM8WWCm6a9vhLs7T1uoWBk6FDs",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "UNQ_USDT",
+        "desimal": 6,
+        "sc": "UNQtEecZ5Zb4gSSVHCAWUQEoNnSVEbWiKCi1v9kdUJJ",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "W_USDT",
+        "desimal": 6,
+        "sc": "85VBFQZC9TZkfaptBWjvUw7YbZjy52A6mjtPGjstQAmQ",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "WAG_USDT",
+        "desimal": 9,
+        "sc": "5tN42n9vMi6ubp67Uy4NnmM5DMZYN8aS8GeB3bEDHr6E",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "WEN_USDT",
+        "desimal": 5,
+        "sc": "WENWENvqqNya429ubCdR81ZmD69brwQaaBYY6p3LCpk",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "WIF_USDT",
+        "desimal": 6,
+        "sc": "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "WLKN_USDT",
+        "desimal": 9,
+        "sc": "EcQCUYv57C4V6RoPxkVUiDwtX1SP8y8FP5AEToYL8Az",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "WNZ_USDT",
+        "desimal": 4,
+        "sc": "WNZzxM1WqWFH8DpDZSqr6EoHKWXeMx9NLLd2R5RzGPA",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "WUF_USDT",
+        "desimal": 4,
+        "sc": "73xsLcBnLnc9bh81cqVKqj8uEyiarXng5ZwJuTbnVebG",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "XTAG_USDT",
+        "desimal": 6,
+        "sc": "5gs8nf4wojB5EXgDUWNLwXpknzgV2YWDhveAeBZpVLbp",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "YOURAI_USDT",
+        "desimal": 8,
+        "sc": "FjK6rqU6QzUeNtmK6QQ78cCuS5AHAhcm4HgJkdsvXaep",
+        "wd": 1,
+        "status": true
+      },
+      // {
+      //   "symbol": "ZBC_USDT",
+      //   "desimal": 8,
+      //   "sc": "oldzebeczgi5fSEtbpfQKVZKCJ3WgYXxjkMUkNNx7fLKAFold",
+      //   "wd": 1,
+      //   "status": true
+      // },
+      {
+        "symbol": "ZBCN_USDT",
+        "desimal": 6,
+        "sc": "ZBCNpuD7YMXzTHB2fhGkGi78MNsHGLRXUhRewNRm9RU",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "ZEEP_USDT",
+        "desimal": 6,
+        "sc": "FHAeF63cELMnm9HAHPLEWJGrGpBEYkdcvN3cLQGTCA6j",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "ZERO_USDT",
+        "desimal": 9,
+        "sc": "93RC484oMK5T9H89rzT5qiAXKHGP9jscXfFfrihNbe57",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "ZEUS_USDT",
+        "desimal": 6,
+        "sc": "ZEUS1aR7aX8DFFJf5QjWj2ftDDdNTroMNGo8YoQm3Gq",
+        "wd": 1,
+        "status": true
+      }
+    ]
 }
