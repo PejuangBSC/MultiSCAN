@@ -750,6 +750,12 @@
     "desimal": 18,
     "status": true,
     "wd": 0
+  },{
+    "symbol": "IPOR_USDT",
+    "sc": "0x34229B3f16fBCDfA8d8d9d17C0852F9496f4C7BB",
+    "desimal": 18,
+    "status": true,
+    "wd": 0
   },
   {
     "symbol": "KNJ_USDT",
