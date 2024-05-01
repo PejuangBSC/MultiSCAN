@@ -1150,23 +1150,9 @@
     "status": true
   },
   {
-    "symbol": "renBTC_USDT",
-    "sc": "0xeb4c2781e4eba804ce9a9803c67d0893436bb27d",
-    "desimal": 8,
-    "wd": 0,
-    "status": true
-  },
-  {
     "symbol": "REQ_USDT",
     "sc": "0x8f8221afbb33998d8584a2b05749ba73c37a938a",
     "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "RLC_USDT",
-    "sc": "0x607f4c5bb672230e8672085532f7e901544a7375",
-    "desimal": 9,
     "wd": 0,
     "status": true
   },
