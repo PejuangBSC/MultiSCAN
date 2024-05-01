@@ -594,7 +594,7 @@
     "id_grup": "-1002079288809"
   },
   "token": 
-       [
+      [
       {
         "symbol": "AART_USDT",
         "desimal": 6,
@@ -747,13 +747,6 @@
         "symbol": "DEFILAND_USDT",
         "desimal": 9,
         "sc": "DFL1zNkaGPWm1BqAVqRjCZvHmwTFrEaJtbzJWgseoNJh",
-        "wd": 1,
-        "status": true
-      },
-      {
-        "symbol": "DELFI_USDT",
-        "desimal": 6,
-        "sc": "de1QJkP1qDCk5JYCCXCeq27bQQUdCaiv7xVKFrhPSzF",
         "wd": 1,
         "status": true
       },
@@ -936,6 +929,13 @@
         "symbol": "LIQ_USDT",
         "desimal": 6,
         "sc": "4wjPQJ6PrkC4dHhYghwJzGBVP78DkBzA2U3kHoFNBuhj",
+        "wd": 1,
+        "status": true
+      },
+      {
+        "symbol": "MANEKI_USDT",
+        "desimal": 5,
+        "sc": "25hAyBQfoDhfWx9ay6rarbgvWGwDdNqcHsXS3jQ3mTDJ",
         "wd": 1,
         "status": true
       },
@@ -1459,7 +1459,6 @@
         "wd": 1,
         "status": true
       },
-    
       {
         "symbol": "ZBCN_USDT",
         "desimal": 6,
@@ -1489,5 +1488,4 @@
         "status": true
       }
     ]
-
 }
