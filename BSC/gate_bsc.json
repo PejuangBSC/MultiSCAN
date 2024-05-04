@@ -1,6 +1,6 @@
 {
-  "serverCORS": [  
-    [
+ "serverCORS": [  
+   [
       "https://server1.ciwayeh967.workers.dev/?",
       "https://yazid3.yazidcrypto7.workers.dev/?",
       "https://yazid5.bustomi.workers.dev/?",
@@ -12,9 +12,7 @@
       "https://server9.dopacer193.workers.dev/?",
       "https://server10.samoker104.workers.dev/?",
        "https://worker-bold-meadow-ab0a.xaraho1024.workers.dev/?",
-      "https://worker-cool-truth-c06e.nomege1872.workers.dev/?"
-    ],
-    [
+      "https://worker-cool-truth-c06e.nomege1872.workers.dev/?",
       "https://worker-floral-river-e85c.tenimik318.workers.dev/?",
       "https://worker-royal-sound-0576.koban78574.workers.dev/?",
       "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
@@ -26,7 +24,79 @@
       "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
       "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
       "https://worker-round-star-6bf9.yalayo9082.workers.dev/?",
-      "https://worker-cool-dream-e973.gocon75635.workers.dev/?"
+      "https://worker-cool-dream-e973.gocon75635.workers.dev/?",
+      "https://worker-winter-sound-52bd.pedig30998.workers.dev/?",
+        "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+        "https://worker-weathered-forest-2a2e.fiwala7986.workers.dev/?",
+        "https://worker-still-tooth-553b.sewis68418.workers.dev/?",
+        "https://worker-solitary-waterfall-f039.fomev71287.workers.dev/?",
+        "https://server4.dajom23364.workers.dev/?",
+        "https://server3.hopevap663.workers.dev/?",
+        "https://worker-blue-mountain-bee9.hibes27870.workers.dev/?",
+        "https://worker-still-morning-642c.kehoc99044.workers.dev/?",
+        "https://myserver4.lamowa2709.workers.dev/?",
+        "https://myserver5.mohafe9330.workers.dev/?",
+        "https://worker-young-bush-ce2e.micejiy771.workers.dev/?",
+        "https://worker-sparkling-silence-9d41.federi4672.workers.dev/?",
+        "https://worker-polished-cloud-77bd.renel72768.workers.dev/?",
+        "https://worker-sweet-darkness-d1c0.risiv74771.workers.dev/?",
+        "https://worker-jolly-wildflower-c305.kacito9688.workers.dev/?",
+        "https://worker-dawn-king-f162.kekam96808.workers.dev/?",
+        "https://worker-shrill-bonus-9ca6.wipihoh336.workers.dev/?",
+        "https://worker-tiny-bar-013f.gicot48223.workers.dev/?",
+        "https://worker-tight-violet-dbda.xemojos811.workers.dev/?",
+        "https://worker-tight-lab-9cc4.fetec22957.workers.dev/?",
+        "https://server2.holabaj699.workers.dev/?",
+        "https://myserver3.ceteg74201.workers.dev/?",
+     "https://1.iiknrbtxoz.workers.dev/?",
+        "https://2.5iz3h20guj.workers.dev/?",
+        "https://3.g5l3krmasa-bda.workers.dev/?",
+        "https://4.7gggrv7tyo.workers.dev/?",
+        "https://5.1mynz671ti.workers.dev/?",
+        "https://6.6dn6rtqjng.workers.dev/?",
+        "https://7.zk3dvkv4pp.workers.dev/?",
+        "https://8.c58qvb11ew.workers.dev/?",
+        "https://9.n9zkqpbdpb.workers.dev/?",
+        "https://10.tximoyq5se.workers.dev/?",
+         "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+        "https://server11.jiser33752.workers.dev/?",
+        "https://server12.yitijex843.workers.dev/?",
+        "https://server13.lovah68689.workers.dev/?",
+        "https://server14.setopit195.workers.dev/?",
+        "https://server15.povaf41444.workers.dev/?",
+        "https://server16.niromaf426.workers.dev/?",
+        "https://server17.kasoda9624.workers.dev/?",
+        "https://server18.befim19137.workers.dev/?",
+        "https://server19.gafigaf751.workers.dev/?",
+        "https://server20.gayomep515.workers.dev/?",
+         "https://worker-plain-shape-e4c4.dilexid433.workers.dev/?",
+        "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?",
+        "https://server1.ciwayeh967.workers.dev/?",
+        "https://yazid3.yazidcrypto7.workers.dev/?",
+        "https://yazid5.bustomi.workers.dev/?",
+        "https://yazid4.yazidcrypto3.workers.dev/?",
+        "https://yoeazd2.yoeaz2324.workers.dev/?",
+        "https://server6.hejij49077.workers.dev/?",
+        "https://server7.gejac16482.workers.dev/?",
+        "https://server8.xotolo5853.workers.dev/?",
+        "https://server9.dopacer193.workers.dev/?",
+        "https://server10.samoker104.workers.dev/?",
+         "https://worker-bold-meadow-ab0a.xaraho1024.workers.dev/?",
+        "https://worker-cool-truth-c06e.nomege1872.workers.dev/?",
+       "https://worker-young-bush-ce2e.micejiy771.workers.dev/?",
+          "https://worker-sparkling-silence-9d41.federi4672.workers.dev/?",
+          "https://worker-polished-cloud-77bd.renel72768.workers.dev/?",
+          "https://worker-sweet-darkness-d1c0.risiv74771.workers.dev/?",
+          "https://worker-jolly-wildflower-c305.kacito9688.workers.dev/?",
+          "https://worker-dawn-king-f162.kekam96808.workers.dev/?",
+          "https://worker-shrill-bonus-9ca6.wipihoh336.workers.dev/?",
+          "https://worker-tiny-bar-013f.gicot48223.workers.dev/?",
+          "https://worker-tight-violet-dbda.xemojos811.workers.dev/?",
+          "https://worker-tight-lab-9cc4.fetec22957.workers.dev/?",
+          "https://server2.holabaj699.workers.dev/?",
+          "https://myserver3.ceteg74201.workers.dev/?"
     ],    
       [
         "https://server21.becibov328.workers.dev/?",
@@ -40,9 +110,79 @@
         "https://new4.xebidi4752.workers.dev/?",
         "https://new5.cibiyec145.workers.dev/?",
         "https://worker-frosty-star-71a8.cesaxem416.workers.dev/?",
-        "https://worker-sweet-dust-96ef.payat56154.workers.dev/?"
-      ],
-      [
+        "https://worker-sweet-dust-96ef.payat56154.workers.dev/?",
+        "https://new5.nafeyis928.workers.dev/?",
+        "https://worker-broad-tree-49bb.cekah58754.workers.dev/?",
+        "https://worker-ancient-hill-fad1.xejab72348.workers.dev/?",
+        "https://cors.gemul-putra.workers.dev/?",
+        "https://worker-damp-glitter-db50.gameco3780.workers.dev/?",
+        "https://worker-blue-hall-1d14.xinevo2786.workers.dev/?",
+        "https://worker-tiny-dust-22f2.capaji8287.workers.dev/?",
+        "https://worker-old-disk-8a9a.kehaxa7686.workers.dev/?",
+        "https://worker-yellow-wood-677d.lanafi2429.workers.dev/?",
+        "https://worker-cool-tree-07c7.kifira7062.workers.dev/?",
+        "https://myserver6.bafayi9378.workers.dev/?",
+        "https://myserver7.yiwaj21571.workers.dev/?",
+        "https://1.iiknrbtxoz.workers.dev/?",
+        "https://2.5iz3h20guj.workers.dev/?",
+        "https://3.g5l3krmasa-bda.workers.dev/?",
+        "https://4.7gggrv7tyo.workers.dev/?",
+        "https://5.1mynz671ti.workers.dev/?",
+        "https://6.6dn6rtqjng.workers.dev/?",
+        "https://7.zk3dvkv4pp.workers.dev/?",
+        "https://8.c58qvb11ew.workers.dev/?",
+        "https://9.n9zkqpbdpb.workers.dev/?",
+        "https://10.tximoyq5se.workers.dev/?",
+         "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+        "https://server11.jiser33752.workers.dev/?",
+        "https://server12.yitijex843.workers.dev/?",
+        "https://server13.lovah68689.workers.dev/?",
+        "https://server14.setopit195.workers.dev/?",
+        "https://server15.povaf41444.workers.dev/?",
+        "https://server16.niromaf426.workers.dev/?",
+        "https://server17.kasoda9624.workers.dev/?",
+        "https://server18.befim19137.workers.dev/?",
+        "https://server19.gafigaf751.workers.dev/?",
+        "https://server20.gayomep515.workers.dev/?",
+         "https://worker-plain-shape-e4c4.dilexid433.workers.dev/?",
+        "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?",
+        "https://1.iiknrbtxoz.workers.dev/?",
+        "https://2.5iz3h20guj.workers.dev/?",
+        "https://3.g5l3krmasa-bda.workers.dev/?",
+        "https://4.7gggrv7tyo.workers.dev/?",
+        "https://5.1mynz671ti.workers.dev/?",
+        "https://6.6dn6rtqjng.workers.dev/?",
+        "https://7.zk3dvkv4pp.workers.dev/?",
+        "https://8.c58qvb11ew.workers.dev/?",
+        "https://9.n9zkqpbdpb.workers.dev/?",
+        "https://10.tximoyq5se.workers.dev/?",
+         "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+        "https://server11.jiser33752.workers.dev/?",
+        "https://server12.yitijex843.workers.dev/?",
+        "https://server13.lovah68689.workers.dev/?",
+        "https://server14.setopit195.workers.dev/?",
+        "https://server15.povaf41444.workers.dev/?",
+        "https://server16.niromaf426.workers.dev/?",
+        "https://server17.kasoda9624.workers.dev/?",
+        "https://server18.befim19137.workers.dev/?",
+        "https://server19.gafigaf751.workers.dev/?",
+        "https://server20.gayomep515.workers.dev/?",
+         "https://worker-plain-shape-e4c4.dilexid433.workers.dev/?",
+        "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?",
+        "https://server21.becibov328.workers.dev/?",
+        "https://server22.togid93865.workers.dev/?",
+        "https://server24.yaleve6056.workers.dev/?",
+        "https://server23.bagotof270.workers.dev/?",
+        "https://new1.gisot33558.workers.dev/?",
+        "https://new2.sober27867.workers.dev/?",
+        "https://new3.micipiy438.workers.dev/?",
+        "https://new3.rayepar467.workers.dev/?",
+        "https://new4.xebidi4752.workers.dev/?",
+        "https://new5.cibiyec145.workers.dev/?",
+        "https://worker-frosty-star-71a8.cesaxem416.workers.dev/?",
+        "https://worker-sweet-dust-96ef.payat56154.workers.dev/?",
         "https://new5.nafeyis928.workers.dev/?",
         "https://worker-broad-tree-49bb.cekah58754.workers.dev/?",
         "https://worker-ancient-hill-fad1.xejab72348.workers.dev/?",
@@ -68,9 +208,7 @@
         "https://worker-blue-mountain-bee9.hibes27870.workers.dev/?",
         "https://worker-still-morning-642c.kehoc99044.workers.dev/?",
         "https://myserver4.lamowa2709.workers.dev/?",
-        "https://myserver5.mohafe9330.workers.dev/?"
-      ],
-      [
+        "https://myserver5.mohafe9330.workers.dev/?",
         "https://worker-young-bush-ce2e.micejiy771.workers.dev/?",
         "https://worker-sparkling-silence-9d41.federi4672.workers.dev/?",
         "https://worker-polished-cloud-77bd.renel72768.workers.dev/?",
@@ -82,7 +220,79 @@
         "https://worker-tight-violet-dbda.xemojos811.workers.dev/?",
         "https://worker-tight-lab-9cc4.fetec22957.workers.dev/?",
         "https://server2.holabaj699.workers.dev/?",
-        "https://myserver3.ceteg74201.workers.dev/?"
+        "https://myserver3.ceteg74201.workers.dev/?",
+        "https://server1.ciwayeh967.workers.dev/?",
+      "https://yazid3.yazidcrypto7.workers.dev/?",
+      "https://yazid5.bustomi.workers.dev/?",
+      "https://yazid4.yazidcrypto3.workers.dev/?",
+      "https://yoeazd2.yoeaz2324.workers.dev/?",
+      "https://server6.hejij49077.workers.dev/?",
+      "https://server7.gejac16482.workers.dev/?",
+      "https://server8.xotolo5853.workers.dev/?",
+      "https://server9.dopacer193.workers.dev/?",
+      "https://server10.samoker104.workers.dev/?",
+       "https://worker-bold-meadow-ab0a.xaraho1024.workers.dev/?",
+      "https://worker-cool-truth-c06e.nomege1872.workers.dev/?",
+      "https://worker-floral-river-e85c.tenimik318.workers.dev/?",
+      "https://worker-royal-sound-0576.koban78574.workers.dev/?",
+      "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
+      "https://worker-royal-haze-a135.lisolo3133.workers.dev/?",
+      "https://worker-shy-cloud-27ca.vanogo6423.workers.dev/?",
+      "https://worker-withered-sky-ed3e.vifeci7919.workers.dev/?",
+      "https://worker-sweet-sound-e261.jaxet60213.workers.dev/?",
+      "https://worker-shiny-sun-08f7.xabenic669.workers.dev/?",
+      "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
+      "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
+      "https://worker-round-star-6bf9.yalayo9082.workers.dev/?",
+      "https://worker-cool-dream-e973.gocon75635.workers.dev/?",
+        "https://1.iiknrbtxoz.workers.dev/?",
+        "https://2.5iz3h20guj.workers.dev/?",
+        "https://3.g5l3krmasa-bda.workers.dev/?",
+        "https://4.7gggrv7tyo.workers.dev/?",
+        "https://5.1mynz671ti.workers.dev/?",
+        "https://6.6dn6rtqjng.workers.dev/?",
+        "https://7.zk3dvkv4pp.workers.dev/?",
+        "https://8.c58qvb11ew.workers.dev/?",
+        "https://9.n9zkqpbdpb.workers.dev/?",
+        "https://10.tximoyq5se.workers.dev/?",
+         "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+        "https://server11.jiser33752.workers.dev/?",
+        "https://server12.yitijex843.workers.dev/?",
+        "https://server13.lovah68689.workers.dev/?",
+        "https://server14.setopit195.workers.dev/?",
+        "https://server15.povaf41444.workers.dev/?",
+        "https://server16.niromaf426.workers.dev/?",
+        "https://server17.kasoda9624.workers.dev/?",
+        "https://server18.befim19137.workers.dev/?",
+        "https://server19.gafigaf751.workers.dev/?",
+        "https://server20.gayomep515.workers.dev/?",
+         "https://worker-plain-shape-e4c4.dilexid433.workers.dev/?",
+        "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?",
+        "https://server21.becibov328.workers.dev/?",
+        "https://server22.togid93865.workers.dev/?",
+        "https://server24.yaleve6056.workers.dev/?",
+        "https://server23.bagotof270.workers.dev/?",
+        "https://new1.gisot33558.workers.dev/?",
+        "https://new2.sober27867.workers.dev/?",
+        "https://new3.micipiy438.workers.dev/?",
+        "https://new3.rayepar467.workers.dev/?",
+        "https://new4.xebidi4752.workers.dev/?",
+        "https://new5.cibiyec145.workers.dev/?",
+        "https://worker-frosty-star-71a8.cesaxem416.workers.dev/?",
+        "https://worker-sweet-dust-96ef.payat56154.workers.dev/?",
+        "https://new5.nafeyis928.workers.dev/?",
+        "https://worker-broad-tree-49bb.cekah58754.workers.dev/?",
+        "https://worker-ancient-hill-fad1.xejab72348.workers.dev/?",
+        "https://cors.gemul-putra.workers.dev/?",
+        "https://worker-damp-glitter-db50.gameco3780.workers.dev/?",
+        "https://worker-blue-hall-1d14.xinevo2786.workers.dev/?",
+        "https://worker-tiny-dust-22f2.capaji8287.workers.dev/?",
+        "https://worker-old-disk-8a9a.kehaxa7686.workers.dev/?",
+        "https://worker-yellow-wood-677d.lanafi2429.workers.dev/?",
+        "https://worker-cool-tree-07c7.kifira7062.workers.dev/?",
+        "https://myserver6.bafayi9378.workers.dev/?",
+        "https://myserver7.yiwaj21571.workers.dev/?"
       ],
       [  
         "https://1.iiknrbtxoz.workers.dev/?",
@@ -96,10 +306,177 @@
         "https://9.n9zkqpbdpb.workers.dev/?",
         "https://10.tximoyq5se.workers.dev/?",
          "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
-        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?"
+        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+        "https://server11.jiser33752.workers.dev/?",
+        "https://server12.yitijex843.workers.dev/?",
+        "https://server13.lovah68689.workers.dev/?",
+        "https://server14.setopit195.workers.dev/?",
+        "https://server15.povaf41444.workers.dev/?",
+        "https://server16.niromaf426.workers.dev/?",
+        "https://server17.kasoda9624.workers.dev/?",
+        "https://server18.befim19137.workers.dev/?",
+        "https://server19.gafigaf751.workers.dev/?",
+        "https://server20.gayomep515.workers.dev/?",
+         "https://worker-plain-shape-e4c4.dilexid433.workers.dev/?",
+        "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?",
+        "https://server21.becibov328.workers.dev/?",
+        "https://server22.togid93865.workers.dev/?",
+        "https://server24.yaleve6056.workers.dev/?",
+        "https://server23.bagotof270.workers.dev/?",
+        "https://new1.gisot33558.workers.dev/?",
+        "https://new2.sober27867.workers.dev/?",
+        "https://new3.micipiy438.workers.dev/?",
+        "https://new3.rayepar467.workers.dev/?",
+        "https://new4.xebidi4752.workers.dev/?",
+        "https://new5.cibiyec145.workers.dev/?",
+        "https://worker-frosty-star-71a8.cesaxem416.workers.dev/?",
+        "https://worker-sweet-dust-96ef.payat56154.workers.dev/?",
+        "https://new5.nafeyis928.workers.dev/?",
+        "https://worker-broad-tree-49bb.cekah58754.workers.dev/?",
+        "https://worker-ancient-hill-fad1.xejab72348.workers.dev/?",
+        "https://cors.gemul-putra.workers.dev/?",
+        "https://worker-damp-glitter-db50.gameco3780.workers.dev/?",
+        "https://worker-blue-hall-1d14.xinevo2786.workers.dev/?",
+        "https://worker-tiny-dust-22f2.capaji8287.workers.dev/?",
+        "https://worker-old-disk-8a9a.kehaxa7686.workers.dev/?",
+        "https://worker-yellow-wood-677d.lanafi2429.workers.dev/?",
+        "https://worker-cool-tree-07c7.kifira7062.workers.dev/?",
+        "https://myserver6.bafayi9378.workers.dev/?",
+        "https://myserver7.yiwaj21571.workers.dev/?",
+        "https://worker-floral-river-e85c.tenimik318.workers.dev/?",
+        "https://worker-royal-sound-0576.koban78574.workers.dev/?",
+        "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
+        "https://worker-royal-haze-a135.lisolo3133.workers.dev/?",
+        "https://worker-shy-cloud-27ca.vanogo6423.workers.dev/?",
+        "https://worker-withered-sky-ed3e.vifeci7919.workers.dev/?",
+        "https://worker-sweet-sound-e261.jaxet60213.workers.dev/?",
+        "https://worker-shiny-sun-08f7.xabenic669.workers.dev/?",
+        "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
+        "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
+        "https://worker-round-star-6bf9.yalayo9082.workers.dev/?",
+        "https://worker-cool-dream-e973.gocon75635.workers.dev/?",
+          "https://server21.becibov328.workers.dev/?",
+          "https://server22.togid93865.workers.dev/?",
+          "https://server24.yaleve6056.workers.dev/?",
+          "https://server23.bagotof270.workers.dev/?",
+          "https://new1.gisot33558.workers.dev/?",
+          "https://new2.sober27867.workers.dev/?",
+          "https://new3.micipiy438.workers.dev/?",
+          "https://new3.rayepar467.workers.dev/?",
+          "https://new4.xebidi4752.workers.dev/?",
+          "https://new5.cibiyec145.workers.dev/?",
+          "https://worker-frosty-star-71a8.cesaxem416.workers.dev/?",
+          "https://worker-sweet-dust-96ef.payat56154.workers.dev/?",
+          "https://new5.nafeyis928.workers.dev/?",
+          "https://worker-broad-tree-49bb.cekah58754.workers.dev/?",
+          "https://worker-ancient-hill-fad1.xejab72348.workers.dev/?",
+          "https://cors.gemul-putra.workers.dev/?",
+          "https://worker-damp-glitter-db50.gameco3780.workers.dev/?",
+          "https://worker-blue-hall-1d14.xinevo2786.workers.dev/?",
+          "https://worker-tiny-dust-22f2.capaji8287.workers.dev/?",
+          "https://worker-old-disk-8a9a.kehaxa7686.workers.dev/?",
+          "https://worker-yellow-wood-677d.lanafi2429.workers.dev/?",
+          "https://worker-cool-tree-07c7.kifira7062.workers.dev/?",
+          "https://myserver6.bafayi9378.workers.dev/?",
+          "https://myserver7.yiwaj21571.workers.dev/?",
+          "https://worker-winter-sound-52bd.pedig30998.workers.dev/?",
+          "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+          "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+          "https://worker-weathered-forest-2a2e.fiwala7986.workers.dev/?",
+          "https://worker-still-tooth-553b.sewis68418.workers.dev/?",
+          "https://worker-solitary-waterfall-f039.fomev71287.workers.dev/?",
+          "https://server4.dajom23364.workers.dev/?",
+          "https://server3.hopevap663.workers.dev/?",
+          "https://worker-blue-mountain-bee9.hibes27870.workers.dev/?",
+          "https://worker-still-morning-642c.kehoc99044.workers.dev/?",
+          "https://myserver4.lamowa2709.workers.dev/?",
+          "https://myserver5.mohafe9330.workers.dev/?"
       ],
-      
-      [
+    [  
+        "https://1.iiknrbtxoz.workers.dev/?",
+        "https://2.5iz3h20guj.workers.dev/?",
+        "https://3.g5l3krmasa-bda.workers.dev/?",
+        "https://4.7gggrv7tyo.workers.dev/?",
+        "https://5.1mynz671ti.workers.dev/?",
+        "https://6.6dn6rtqjng.workers.dev/?",
+        "https://7.zk3dvkv4pp.workers.dev/?",
+        "https://8.c58qvb11ew.workers.dev/?",
+        "https://9.n9zkqpbdpb.workers.dev/?",
+        "https://10.tximoyq5se.workers.dev/?",
+         "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+        "https://server11.jiser33752.workers.dev/?",
+        "https://server12.yitijex843.workers.dev/?",
+        "https://server13.lovah68689.workers.dev/?",
+        "https://server14.setopit195.workers.dev/?",
+        "https://server15.povaf41444.workers.dev/?",
+        "https://server16.niromaf426.workers.dev/?",
+        "https://server17.kasoda9624.workers.dev/?",
+        "https://server18.befim19137.workers.dev/?",
+        "https://server19.gafigaf751.workers.dev/?",
+        "https://server20.gayomep515.workers.dev/?",
+         "https://worker-plain-shape-e4c4.dilexid433.workers.dev/?",
+        "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?",
+        "https://server1.ciwayeh967.workers.dev/?",
+        "https://yazid3.yazidcrypto7.workers.dev/?",
+        "https://yazid5.bustomi.workers.dev/?",
+        "https://yazid4.yazidcrypto3.workers.dev/?",
+        "https://yoeazd2.yoeaz2324.workers.dev/?",
+        "https://server6.hejij49077.workers.dev/?",
+        "https://server7.gejac16482.workers.dev/?",
+        "https://server8.xotolo5853.workers.dev/?",
+        "https://server9.dopacer193.workers.dev/?",
+        "https://server10.samoker104.workers.dev/?",
+         "https://worker-bold-meadow-ab0a.xaraho1024.workers.dev/?",
+        "https://worker-cool-truth-c06e.nomege1872.workers.dev/?",
+       "https://worker-young-bush-ce2e.micejiy771.workers.dev/?",
+          "https://worker-sparkling-silence-9d41.federi4672.workers.dev/?",
+          "https://worker-polished-cloud-77bd.renel72768.workers.dev/?",
+          "https://worker-sweet-darkness-d1c0.risiv74771.workers.dev/?",
+          "https://worker-jolly-wildflower-c305.kacito9688.workers.dev/?",
+          "https://worker-dawn-king-f162.kekam96808.workers.dev/?",
+          "https://worker-shrill-bonus-9ca6.wipihoh336.workers.dev/?",
+          "https://worker-tiny-bar-013f.gicot48223.workers.dev/?",
+          "https://worker-tight-violet-dbda.xemojos811.workers.dev/?",
+          "https://worker-tight-lab-9cc4.fetec22957.workers.dev/?",
+          "https://server2.holabaj699.workers.dev/?",
+          "https://myserver3.ceteg74201.workers.dev/?",
+       "https://server21.becibov328.workers.dev/?",
+        "https://server22.togid93865.workers.dev/?",
+        "https://server24.yaleve6056.workers.dev/?",
+        "https://server23.bagotof270.workers.dev/?",
+        "https://new1.gisot33558.workers.dev/?",
+        "https://new2.sober27867.workers.dev/?",
+        "https://new3.micipiy438.workers.dev/?",
+        "https://new3.rayepar467.workers.dev/?",
+        "https://new4.xebidi4752.workers.dev/?",
+        "https://new5.cibiyec145.workers.dev/?",
+        "https://worker-frosty-star-71a8.cesaxem416.workers.dev/?",
+        "https://worker-sweet-dust-96ef.payat56154.workers.dev/?",
+        "https://new5.nafeyis928.workers.dev/?",
+        "https://worker-broad-tree-49bb.cekah58754.workers.dev/?",
+        "https://worker-ancient-hill-fad1.xejab72348.workers.dev/?",
+        "https://cors.gemul-putra.workers.dev/?",
+        "https://worker-damp-glitter-db50.gameco3780.workers.dev/?",
+        "https://worker-blue-hall-1d14.xinevo2786.workers.dev/?",
+        "https://worker-tiny-dust-22f2.capaji8287.workers.dev/?",
+        "https://worker-old-disk-8a9a.kehaxa7686.workers.dev/?",
+        "https://worker-yellow-wood-677d.lanafi2429.workers.dev/?",
+        "https://worker-cool-tree-07c7.kifira7062.workers.dev/?",
+        "https://myserver6.bafayi9378.workers.dev/?",
+        "https://myserver7.yiwaj21571.workers.dev/?",
+        "https://1.iiknrbtxoz.workers.dev/?",
+        "https://2.5iz3h20guj.workers.dev/?",
+        "https://3.g5l3krmasa-bda.workers.dev/?",
+        "https://4.7gggrv7tyo.workers.dev/?",
+        "https://5.1mynz671ti.workers.dev/?",
+        "https://6.6dn6rtqjng.workers.dev/?",
+        "https://7.zk3dvkv4pp.workers.dev/?",
+        "https://8.c58qvb11ew.workers.dev/?",
+        "https://9.n9zkqpbdpb.workers.dev/?",
+        "https://10.tximoyq5se.workers.dev/?",
+         "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
         "https://server11.jiser33752.workers.dev/?",
         "https://server12.yitijex843.workers.dev/?",
         "https://server13.lovah68689.workers.dev/?",
@@ -114,1598 +491,3904 @@
         "https://worker-weathered-bar-d4fa.dadiyo8115.workers.dev/?"
       ],
       [
-        "https://hello-world-broken-hill-2492.yoeazd.workers.dev/?",
-        "https://proxykiri.awokawok.workers.dev/?",
-        "https://proxykanan.awokawok.workers.dev/?",
-        "https://myserver1.nehavef167.workers.dev/?"
-      ]
+        "https://worker-floral-river-e85c.tenimik318.workers.dev/?",
+        "https://worker-royal-sound-0576.koban78574.workers.dev/?",
+        "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
+        "https://worker-royal-haze-a135.lisolo3133.workers.dev/?",
+        "https://worker-shy-cloud-27ca.vanogo6423.workers.dev/?",
+        "https://worker-withered-sky-ed3e.vifeci7919.workers.dev/?",
+        "https://worker-sweet-sound-e261.jaxet60213.workers.dev/?",
+        "https://worker-shiny-sun-08f7.xabenic669.workers.dev/?",
+        "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
+        "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
+        "https://worker-round-star-6bf9.yalayo9082.workers.dev/?",
+        "https://worker-cool-dream-e973.gocon75635.workers.dev/?",
+          "https://server21.becibov328.workers.dev/?",
+          "https://server22.togid93865.workers.dev/?",
+          "https://server24.yaleve6056.workers.dev/?",
+          "https://server23.bagotof270.workers.dev/?",
+          "https://new1.gisot33558.workers.dev/?",
+          "https://new2.sober27867.workers.dev/?",
+          "https://new3.micipiy438.workers.dev/?",
+          "https://new3.rayepar467.workers.dev/?",
+          "https://new4.xebidi4752.workers.dev/?",
+          "https://new5.cibiyec145.workers.dev/?",
+          "https://worker-frosty-star-71a8.cesaxem416.workers.dev/?",
+          "https://worker-sweet-dust-96ef.payat56154.workers.dev/?",
+          "https://new5.nafeyis928.workers.dev/?",
+          "https://worker-broad-tree-49bb.cekah58754.workers.dev/?",
+          "https://worker-ancient-hill-fad1.xejab72348.workers.dev/?",
+          "https://cors.gemul-putra.workers.dev/?",
+          "https://worker-damp-glitter-db50.gameco3780.workers.dev/?",
+          "https://worker-blue-hall-1d14.xinevo2786.workers.dev/?",
+          "https://worker-tiny-dust-22f2.capaji8287.workers.dev/?",
+          "https://worker-old-disk-8a9a.kehaxa7686.workers.dev/?",
+          "https://worker-yellow-wood-677d.lanafi2429.workers.dev/?",
+          "https://worker-cool-tree-07c7.kifira7062.workers.dev/?",
+          "https://myserver6.bafayi9378.workers.dev/?",
+          "https://myserver7.yiwaj21571.workers.dev/?",
+          "https://worker-winter-sound-52bd.pedig30998.workers.dev/?",
+          "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+          "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+          "https://worker-weathered-forest-2a2e.fiwala7986.workers.dev/?",
+          "https://worker-still-tooth-553b.sewis68418.workers.dev/?",
+          "https://worker-solitary-waterfall-f039.fomev71287.workers.dev/?",
+          "https://server4.dajom23364.workers.dev/?",
+          "https://server3.hopevap663.workers.dev/?",
+          "https://worker-blue-mountain-bee9.hibes27870.workers.dev/?",
+          "https://worker-still-morning-642c.kehoc99044.workers.dev/?",
+          "https://myserver4.lamowa2709.workers.dev/?",
+          "https://myserver5.mohafe9330.workers.dev/?",
+        "https://server1.ciwayeh967.workers.dev/?",
+      "https://yazid3.yazidcrypto7.workers.dev/?",
+      "https://yazid5.bustomi.workers.dev/?",
+      "https://yazid4.yazidcrypto3.workers.dev/?",
+      "https://yoeazd2.yoeaz2324.workers.dev/?",
+      "https://server6.hejij49077.workers.dev/?",
+      "https://server7.gejac16482.workers.dev/?",
+      "https://server8.xotolo5853.workers.dev/?",
+      "https://server9.dopacer193.workers.dev/?",
+      "https://server10.samoker104.workers.dev/?",
+       "https://worker-bold-meadow-ab0a.xaraho1024.workers.dev/?",
+      "https://worker-cool-truth-c06e.nomege1872.workers.dev/?",
+      "https://worker-floral-river-e85c.tenimik318.workers.dev/?",
+      "https://worker-royal-sound-0576.koban78574.workers.dev/?",
+      "https://worker-curly-credit-2c73.viyeva7164.workers.dev/?",
+      "https://worker-royal-haze-a135.lisolo3133.workers.dev/?",
+      "https://worker-shy-cloud-27ca.vanogo6423.workers.dev/?",
+      "https://worker-withered-sky-ed3e.vifeci7919.workers.dev/?",
+      "https://worker-sweet-sound-e261.jaxet60213.workers.dev/?",
+      "https://worker-shiny-sun-08f7.xabenic669.workers.dev/?",
+      "https://worker-frosty-darkness-4f91.lobowev486.workers.dev/?",
+      "https://worker-silent-boat-3c2e.celov42704.workers.dev/?",
+      "https://worker-round-star-6bf9.yalayo9082.workers.dev/?",
+      "https://worker-cool-dream-e973.gocon75635.workers.dev/?",
+      "https://worker-winter-sound-52bd.pedig30998.workers.dev/?",
+        "https://worker-super-lake-198e.kevaraj359.workers.dev/?",
+        "https://worker-soft-dawn-b769.robiho8355.workers.dev/?",
+        "https://worker-weathered-forest-2a2e.fiwala7986.workers.dev/?",
+        "https://worker-still-tooth-553b.sewis68418.workers.dev/?",
+        "https://worker-solitary-waterfall-f039.fomev71287.workers.dev/?",
+        "https://server4.dajom23364.workers.dev/?",
+        "https://server3.hopevap663.workers.dev/?",
+        "https://worker-blue-mountain-bee9.hibes27870.workers.dev/?",
+        "https://worker-still-morning-642c.kehoc99044.workers.dev/?",
+        "https://myserver4.lamowa2709.workers.dev/?",
+        "https://myserver5.mohafe9330.workers.dev/?",
+        "https://worker-young-bush-ce2e.micejiy771.workers.dev/?",
+        "https://worker-sparkling-silence-9d41.federi4672.workers.dev/?",
+        "https://worker-polished-cloud-77bd.renel72768.workers.dev/?",
+        "https://worker-sweet-darkness-d1c0.risiv74771.workers.dev/?",
+        "https://worker-jolly-wildflower-c305.kacito9688.workers.dev/?",
+        "https://worker-dawn-king-f162.kekam96808.workers.dev/?",
+        "https://worker-shrill-bonus-9ca6.wipihoh336.workers.dev/?",
+        "https://worker-tiny-bar-013f.gicot48223.workers.dev/?",
+        "https://worker-tight-violet-dbda.xemojos811.workers.dev/?",
+        "https://worker-tight-lab-9cc4.fetec22957.workers.dev/?",
+        "https://server2.holabaj699.workers.dev/?",
+        "https://myserver3.ceteg74201.workers.dev/?"
+        ]
   ],
   "telegram": {
     "token": "6554422567:AAHn2KErUWyl_RIDChwv49mfHf9lHf_OTgQ",
-    "id_grup": "-1002129760604"
-  },
-  "token": [
-  {
-    "symbol": "10SET_USDT",
-    "sc": "0x1ae369a6ab222aff166325b7b87eb9af06c86e57",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "1ART_USDT",
-    "sc": "0xD3c325848D7c6E29b574Cb0789998b2ff901f17E",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ACE_USDT",
-    "sc": "0xc27A719105A987b4c34116223CAE8bd8F4B5def4",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "AITECH_USDT",
-    "sc": "0x2d060ef4d6bf7f9e5edde373ab735513c0e4f944",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ALPACA_USDT",
-    "sc": "0x8f0528ce5ef7b51152a59745befdd91d97091d2f",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ALTB_USDT",
-    "sc": "0x9B3a01F8b4aBD2E2a74597B21b7C269ABf4E9f41",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ALU_USDT",
-    "sc": "0x8263cd1601fe73c066bf49cc09841f35348e3be0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "AOG_USDT",
-    "sc": "0x40c8225329bd3e28a043b029e0d07a5344d2c27c",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ARGON_USDT",
-    "sc": "0x851f7a700c5d67db59612b871338a85526752c25",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ARV_USDT",
-    "sc": "0x6679eb24f59dfe111864aec72b443d1da666b360",
-    "desimal": 8,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ASS_USDT",
-    "sc": "0x7c63f96feafacd84e75a594c00fac3693386fbf0",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ASTRO_USDT",
-    "sc": "0x72eB7CA07399Ec402c5b7aa6A65752B6A1Dc0C27",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ATOZ_USDT",
-    "sc": "0x3606F220daeaEb3d47aC1923A8Ce2A61205C88cD",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "AUTO_USDT",
-    "sc": "0xa184088a740c695e156f91f5cc086a06bb78b827",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "AZY_USDT",
-    "sc": "0x7b665B2F633d9363b89A98b094B1F9E732Bd8F86",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BABI_USDT",
-    "sc": "0xec15a508a187e8ddfe572a5423faa82bbdd65120",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BABY_USDT",
-    "sc": "0x53e562b9b7e5e94b81f10e96ee70ad06df3d2657",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BABYDOGE_USDT",
-    "sc": "0xc748673057861a797275CD8A068AbB95A902e8de",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BABYGROK_USDT",
-    "sc": "0x88DA9901B3A02fE24E498e1eD683D2310383E295",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BAKE_USDT",
-    "sc": "0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BIN_USDT",
-    "sc": "0xe56842ed550ff2794f010738554db45e60730371",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BLIN_USDT",
-    "sc": "0x811b279463a89e4b6e35805174c9190763f72614",
-    "desimal": 8,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BLOCK_USDT",
-    "sc": "0xbc7a566b85ef73f935e640a06b5a8b031cd975df",
-    "desimal": 6,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BMON_USDT",
-    "sc": "0x08ba0619b1e7a582e0bce5bbe9843322c954c340",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BP_USDT",
-    "sc": "0xacb8f52dc63bb752a51186d1c55868adbffee9c1",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BRT_USDT",
-    "sc": "0xfc9f81b107f51f2383fce56650fedb59c5fd59bd",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BRY_USDT",
-    "sc": "0xf859Bf77cBe8699013d6Dbc7C2b926Aaf307F830",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BSCPAD_USDT",
-    "sc": "0x5a3010d4d8d3b5fb49f8b6e57fb9e48063f16700",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BSCS_USDT",
-    "sc": "0xbcb24afb019be7e93ea9c43b7e22bb55d5b7f45d",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BSW_USDT",
-    "sc": "0x965f527d9159dce6288a2219db51fc6eef120dd1",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BTCST_USDT",
-    "sc": "0x78650b139471520656b9e7aa7a5e9276814a38e9",
-    "desimal": 17,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "BTL_USDT",
-    "sc": "0x51e7b598c9155b9dccb04eb42519f6eec9c841e9",
-    "desimal": 6,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CAKE_USDT",
-    "sc": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CAL_USDT",
-    "sc": "0x859c940f080b197659b3effc804fd622df66f0a1",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CATE_USDT",
-    "sc": "0xe4fae3faa8300810c835970b9187c268f55d998f",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CATGIRL_USDT",
-    "sc": "0x79ebc9a2ce02277a4b5b3a768b1c0a4ed75bd936",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CGPT_USDT",
-    "sc": "0x9840652DC04fb9db2C43853633f0F62BE6f00f98",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CHEEL_USDT",
-    "sc": "0x1f1c90aeb2fd13ea972f0a71e35c0753848e3db0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CHER_USDT",
-    "sc": "0x8f36cc333f55b09bb71091409a3d7ade399e3b1c",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CHESS_USDT",
-    "sc": "0x20de22029ab63cf9a7cf5feb2b737ca1ee4c82a6",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CSIX_USDT",
-    "sc": "0x04756126f044634c9a0f0e985e60c88a51acc206",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CTT_USDT",
-    "sc": "0x464863745ed3af8b9f8871f1082211c55f8f884d",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CUMMIES_USDT",
-    "sc": "0x27ae27110350b98d564b9a3eed31baebc82d878d",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "CWS_USDT",
-    "sc": "0x99aa29ac023057951781dc5d1784e9a4c362ce23",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DAL_USDT",
-    "sc": "0x53e4b7Aa6cACcb9576548Be3259e62dE4Ddd4417",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DAR_USDT",
-    "sc": "0x23ce9e926048273ef83be0a3a8ba9cb6d45cd978",
-    "desimal": 6,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DARK_USDT",
-    "sc": "0x12fc07081fab7de60987cad8e8dc407b606fb2f8",
-    "desimal": 8,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DCK_USDT",
-    "sc": "0x16faf9daa401aa42506af503aa3d80b871c467a3",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DEK_USDT",
-    "sc": "0xe52c5a3590952f3ed6fccf89a0bd7f38e11c5b98",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DFY_USDT",
-    "sc": "0xd98560689c6e748dc37bc410b4d3096b1aa3d8c2",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DKS_USDT",
-    "sc": "0x121235cff4c59eec80b14c1d38b44e7de3a18287",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DMLG_USDT",
-    "sc": "0x1c796c140de269e255372ea687ef7644bab87935",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DOGGY_USDT",
-    "sc": "0x74926b3d118a63f6958922d3dc05eb9c6e6e00c6",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DOME_USDT",
-    "sc": "0x475bfaa1848591ae0e6ab69600f48d828f61a80e",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DPET_USDT",
-    "sc": "0xfb62ae373aca027177d1c18ee0862817f9080d08",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "DXCT_USDT",
-    "sc": "0x5b1baec64af6dc54e6e04349315919129a6d3c23",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "EGG_USDT",
-    "sc": "0xf952fc3ca7325cc27d15885d37117676d25bfda6",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ETERNAL_USDT",
-    "sc": "0xd44fd09d74cd13838f137b590497595d6b3feea4",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "F2C_USDT",
-    "sc": "0x657b632714e08ac66b79444ad3f3875526ee6689",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "F3_USDT",
-    "sc": "0x9e57e83ad79ac5312ba82940ba037ed30600e167",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "FALCONS_USDT",
-    "sc": "0xb139ed26b743c7254a246cf91eb594d097238524",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "FDT_USDT",
-    "sc": "0x3a599e584075065eaaac768d75eaef85c2f2ff64",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "FEVR_USDT",
-    "sc": "0xa6fcfb1ea518863a8a949e70527fe258421c9a22",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "FINE_USDT",
-    "sc": "0x4e6415a5727ea08aae4580057187923aec331227",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "FIWA_USDT",
-    "sc": "0xc8e4368ce595cf5bc6f0794fb3fdb7b359fbf12b",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "FLOKICEO_USDT",
-    "sc": "0x45289007706E7Ee7B42b1fA506661d97740Edfb4",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "FRM_USDT",
-    "sc": "0xA719b8aB7EA7AF0DDb4358719a34631bb79d15Dc",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GAFI_USDT",
-    "sc": "0x89af13a10b32f1b2f8d1588f93027f69b6f4e27e",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GAN_USDT",
-    "sc": "0xb9e22250bc7e9217d24a56c1f4c2b212ca705361",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GFT_USDT",
-    "sc": "0x72fF5742319eF07061836F5C924aC6D72c919080",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GGG_USDT",
-    "sc": "0xd8047afecb86e44eff3add991b9f063ed4ca716b",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GGM_USDT",
-    "sc": "0x4301a638fcb45c4bb65230b87f3797c213f832b8",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GHNY_USDT",
-    "sc": "0xa045e37a0d1dd3a45fefb8803d22457abc0a728a",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GMM_USDT",
-    "sc": "0x5b6bf0c7f989de824677cfbd507d9635965e9cd3",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GMPD_USDT",
-    "sc": "0x9720ca160bbd4e7f3dd4bb3f8bd4227ca0342e63",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GOLD_USDT",
-    "sc": "0xaa91de8399722a5ab34af38ace9b323d4f379c9d",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GQ_USDT",
-    "sc": "0xf700d4c708c2be1463e355f337603183d20e0808",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GRBE_USDT",
-    "sc": "0x5ca4e7294b14ea5745ee2a688990e0cb68503219",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GST_USDT",
-    "sc": "0x4a2c860cEC6471b9F5F5a336eB4F38bb21683c98",
-    "desimal": 8,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "GZONE_USDT",
-    "sc": "0xb6ADB74efb5801160Ff749b1985Fd3bD5000e938",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "HAM_USDT",
-    "sc": "0x679d5b2d94f454c950d683d159b87aa8eae37c9e",
-    "desimal": 7,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "HDV_USDT",
-    "sc": "0x8cd0d76c0ad377378ab6ce878a7be686223497ee",
-    "desimal": 5,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "HE_USDT",
-    "sc": "0x20d39a5130f799b95b55a930e5b7ebc589ea9ed8",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "HELLO_USDT",
-    "sc": "0x0f1cbed8efa0e012adbccb1638d0ab0147d5ac00",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "HERA_USDT",
-    "sc": "0x49c7295ff86eabf5bf58c6ebc858db4805738c01",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "HERO_USDT",
-    "sc": "0xd40bedb44c081d2935eeba6ef5a3c8a31a1bbe13",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "HOD_USDT",
-    "sc": "0x19a4866a85c652eb4a2ed44c42e4cb2863a62d51",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "HOOK_USDT",
-    "sc": "0xa260e12d2b924cb899ae80bb58123ac3fee1e2f0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "IGU_USDT",
-    "sc": "0x201bc9f242f74c47bbd898a5dc99cdcd81a21943",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "IHC_USDT",
-    "sc": "0x86a53fcd199212FEa44FA7e16EB1f28812be911D",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ITEM_USDT",
-    "sc": "0x517396bd11d750e4417b82f2b0fcfa62a4f2bb96",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "JULD_USDT",
-    "sc": "0xf5D8015D625be6F59b8073C8189BD51bA28792e1",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "KABY_USDT",
-    "sc": "0x02a40c048ee2607b5f5606e445cfc3633fb20b58",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "KALM_USDT",
-    "sc": "0x4ba0057f784858a48fe351445c672ff2a3d43515",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "KBD_USDT",
-    "sc": "0x09c7cfe3923c959875f5bc80b17e04f256589063",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "KBOX_USDT",
-    "sc": "0x3523d58d8036B1C5C9A13493143c97aEfC5Ad422",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "KICKS_USDT",
-    "sc": "0xfeb4e9b932ef708c498cc997abe51d0ee39300cf",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "KINGSHIB_USDT",
-    "sc": "0x84F4f7cdb4574C9556A494DaB18ffc1D1D22316C",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "KMON_USDT",
-    "sc": "0xc732b6586a93b6b7cf5fed3470808bc74998224d",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "KPAD_USDT",
-    "sc": "0xcfefa64b0ddd611b125157c41cd3827f2e8e8615",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "KT_USDT",
-    "sc": "0x52da44b5e584f730005dac8d2d2acbdee44d4ba3",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "KWS_USDT",
-    "sc": "0x5D0E95C15cA50F13fB86938433269D03112409Fe",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "LAND_USDT",
-    "sc": "0xa73164db271931cf952cbaeff9e8f5817b42fa5c",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "LAZIO_USDT",
-    "sc": "0x77d547256a2cd95f32f67ae0313e450ac200648d",
-    "desimal": 8,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "LFW_USDT",
-    "sc": "0xd71239a33c8542bd42130c1b4aca0673b4e4f48b",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "LGX_USDT",
-    "sc": "0x9096b4309224d751fcb43d7eb178dcffc122ad15",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "LOA_USDT",
-    "sc": "0x94b69263fca20119ae817b6f783fc0f13b02ad50",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "LOOP_USDT",
-    "sc": "0xce186ad6430e2fe494a22c9edbd4c68794a28b35",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "LOVELY_USDT",
-    "sc": "0x9e24415d1e549ebc626a13a482bb117a2b43e9cf",
-    "desimal": 8,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "LUS_USDT",
-    "sc": "0xde301d6a2569aefcfe271b9d98f318baee1d30a4",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MAT_USDT",
-    "sc": "0xf3147987a00d35eecc10c731269003ca093740ca",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MBOX_USDT",
-    "sc": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MCRN_USDT",
-    "sc": "0xacb2d47827c9813ae26de80965845d80935afd0b",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MCRT_USDT",
-    "sc": "0x4b8285ab433d8f69cb48d5ad62b415ed1a221e4f",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MDAO_USDT",
-    "sc": "0x60322971a672b81bcce5947706d22c19daecf6fb",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MELI_USDT",
-    "sc": "0xad04ac36791d923deb082da4f91ab71675dd18fb",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MEPAD_USDT",
-    "sc": "0x9d70a3ee3079a6fa2bb16591414678b7ad91f0b5",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "METAX_USDT",
-    "sc": "0x03f8fdc10d5bcf7508375585b04e93d656d36954",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "METFI_USDT",
-    "sc": "0x3e7f1039896454b9cb27c53cc7383e1ab9d9512a",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "METO_USDT",
-    "sc": "0xa78775bba7a542f291e5ef7f13c6204e704a90ba",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MGA_USDT",
-    "sc": "0xb0f6371086c1f28cd13daa2daf3a678e03834158",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MGKL_USDT",
-    "sc": "0x8aBfa6a4F4B9865b0e7ACfDCe1839A2584636d06",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MILO_USDT",
-    "sc": "0xd9dE2B1973E57Dc9DBA90c35d6Cd940ae4A3CBe1",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MINE_USDT",
-    "sc": "0x93713de5e0be3b7fcbd34257b6cadfb4d96e12b1",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MINT_USDT",
-    "sc": "0x1f3Af095CDa17d63cad238358837321e95FC5915",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MIST_USDT",
-    "sc": "0x68e374f856bf25468d365e539b700b648bf94b67",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MMPRO_USDT",
-    "sc": "0x6067490d05f3cf2fdffc0e353b1f5fd6e5ccdf70",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MNZ_USDT",
-    "sc": "0x861f1E1397daD68289e8f6a09a2ebb567f1B895C",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MONI_USDT",
-    "sc": "0x9573c88ae3e37508f87649f87c4dd5373c9f31e0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MOO_USDT",
-    "sc": "0x76869e6a5548542a3f4e0525610b23fc5e14b42a",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MOOO_USDT",
-    "sc": "0xa0b9bb05da11e3b19ffd64554400f59d4a378515",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MOVEZ_USDT",
-    "sc": "0x039cD22cb49084142d55FCD4B6096A4F51ffb3B4",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MPI_USDT",
-    "sc": "0x82555cc48a532fa4e2194ab883eb6d465149f80e",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MSWAP_USDT",
-    "sc": "0xdd5a149740c055bdcdc5c066888f739dbe0bf2d0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MTG_USDT",
-    "sc": "0xf1b602fc211e3e2976ef44e4017b764a778197e0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MTS_USDT",
-    "sc": "0x496cC0b4ee12Aa2AC4c42E93067484e7Ff50294b",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MURATIAI_USDT",
-    "sc": "0x69c2fcae7e30b429166bd616a322e32bec036bcf",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "MYRA_USDT",
-    "sc": "0x6ef238e9e8cd2a96740897761c18894fc086b9d0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "NAFT_USDT",
-    "sc": "0xa78e7d056daea0d8b7b2d28caed0fca3d9575870",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "NBP_USDT",
-    "sc": "0x74c22834744e8d5e36c79420ff7b057964aba8a7",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "NFTB_USDT",
-    "sc": "0xde3dbbe30cfa9f437b293294d1fd64b26045c71a",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "NFTL_USDT",
-    "sc": "0xe5904e9816b309d3ed4d061c922f5aa8f3b24c92",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "NRV_USDT",
-    "sc": "0x42F6f551ae042cBe50C739158b4f0CAC0Edb9096",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "OOE_USDT",
-    "sc": "0x8ea5219a16c2dbf1d6335a6aa0c6bd45c50347c5",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "OPA_USDT",
-    "sc": "0xa2f89a3be1bada5eb9d58d23edc2e2fe0f82f4b0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "OPS_USDT",
-    "sc": "0xdf0121a3ba5c10816ea2943c722650c4a4b0dbe6",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ORION_USDT",
-    "sc": "0x5530ec23f4ee1521182bd158c09f4ca7efec1ef0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ORO_USDT",
-    "sc": "0xfc4f5a4d1452b8dc6c3cb745db15b29c00812b19",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PIG_USDT",
-    "sc": "0x8850d2c68c632e3b258e612abaa8fada7e6958e5",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PIT_USDT",
-    "sc": "0xa57ac35ce91ee92caefaa8dc04140c8e232c2e50",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PLACE_USDT",
-    "sc": "0xdf259f0e1d27ae9c13eeca7e8560b5019202bcd1",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PLAY_USDT",
-    "sc": "0xD069599E718f963bD84502b49ba8F8657fAF5B3a",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PLSPAD_USDT",
-    "sc": "0x8a74bc8c372bc7f0e9ca3f6ac0df51be15aec47a",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PMG_USDT",
-    "sc": "0x0733618ab62eeec815f2d1739b7a50bf9e74d8a2",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "POOLX_USDT",
-    "sc": "0xbAeA9aBA1454DF334943951d51116aE342eAB255",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "POP_USDT",
-    "sc": "0xe50eb08064ec1758fdcbaf5b9ea7781b4032abe5",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PORTO_USDT",
-    "sc": "0xA9ebb7E68068FA1328E1e2aE4dEb585cff737042",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "POSI_USDT",
-    "sc": "0x5ca42204cdaa70d5c773946e69de942b85ca6706",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "POT_USDT",
-    "sc": "0xDAD13A9928af8fE38156A599312594bE2Ae56c88",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PPAD_USDT",
-    "sc": "0x93bb13e90678ccd8bbab07d1daef15086746dc9b",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PPT_USDT",
-    "sc": "0xd0d7ba893abff67c7f488e531f288a3872846f43",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PRIDE_USDT",
-    "sc": "0x085D15DB9c7Cd3Df188422f88Ec41ec573D691b9",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PRX_USDT",
-    "sc": "0x90e3414e00e231b962666bd94adb811d5bcd0c2a",
-    "desimal": 8,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PSB_USDT",
-    "sc": "0x36bfbb1d5b3c9b336f3d64976599b6020ca805f1",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PSG_USDT",
-    "sc": "0xbc5609612b7c44bef426de600b5fd1379db2ecf1",
-    "desimal": 2,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PVU_USDT",
-    "sc": "0x31471e0791fcdbe82fbf4c44943255e923f1b794",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PWAR_USDT",
-    "sc": "0x16153214e683018d5aa318864c8e692b66e16778",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "PZP_USDT",
-    "sc": "0x6ad9e9c098a45b2b41b519119c31c3dcb02accb2",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "QUACK_USDT",
-    "sc": "0xd74b782e05aa25c50e7330af541d46e18f36661c",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "RACA_USDT",
-    "sc": "0x12bb890508c125661e03b09ec06e404bc9289040",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "RAM_USDT",
-    "sc": "0x63290fc683d11ea077aba09596ff7387d49df912",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "REAL_USDT",
-    "sc": "0xe91cd52bd65fe23a3eae40e3eb87180e8306399f",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "RENA_USDT",
-    "sc": "0xa9d75cc3405f0450955050c520843f99aff8749d",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "RITE_USDT",
-    "sc": "0x0f5d54b27bdb556823f96f2536496550f8816dc5",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ROOM_USDT",
-    "sc": "0x3c45a24d36ab6fc1925533c1f57bc7e1b6fba8a4",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SAFEMARS_USDT",
-    "sc": "0x3aD9594151886Ce8538C1ff615EFa2385a8C3A88",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SANTOS_USDT",
-    "sc": "0xa64455a4553c9034236734faddaddbb64ace4cc7",
-    "desimal": 8,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SFM_USDT",
-    "sc": "0x42981d0bfbAf196529376EE702F2a9Eb9092fcB5",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SFP_USDT",
-    "sc": "0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SFTY_USDT",
-    "sc": "0xE9d6d6D7CDE5C7d45927F8c37460d932E612C902",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SFUND_USDT",
-    "sc": "0x477bc8d23c634c154061869478bce96be6045d12",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SHI_USDT",
-    "sc": "0x7269d98af4aa705e0b1a5d8512fadb4d45817d5a",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SHILL_USDT",
-    "sc": "0xfb9c339b4bace4fe63ccc1dd9a3c3c531441d5fe",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SIN_USDT",
-    "sc": "0x6397de0f9aedc0f7a8fa8b438dde883b9c201010",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SKILL_USDT",
-    "sc": "0x154a9f9cbd3449ad22fdae23044319d6ef2a1fab",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SNFT_USDT",
-    "sc": "0x16859624971a4eb894e9838e32bdaec0f8d9337a",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SPS_USDT",
-    "sc": "0x1633b7157e7638c4d6593436111bf125ee74703f",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SQUID_USDT",
-    "sc": "0xab71fef2659d3277228276a5690141be44186365",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SRG_USDT",
-    "sc": "0x722f41f6511ff7cda73a1cb0a9ea2f731738c4a0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "SRP_USDT",
-    "sc": "0xcb2b25e783a414f0d20a65afa741c51b1ad84c49",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "STRM_USDT",
-    "sc": "0xc598275452fa319d75ee5f176fd3b8384925b425",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "TABOO_USDT",
-    "sc": "0x9abdba20edfba06b782126b4d8d72a5853918fd0",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "TAP_USDT",
-    "sc": "0x35bedbf9291b22218a0da863170dcc9329ef2563",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "THG_USDT",
-    "sc": "0x9fd87aefe02441b123c3c32466cd9db4c578618f",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "TIFI_USDT",
-    "sc": "0x17E65E6b9B166Fb8e7c59432F0db126711246BC0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "TITA_USDT",
-    "sc": "0x0c1253a30da9580472064a91946c5ce0c58acf7f",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "TKO_USDT",
-    "sc": "0x9f589e3eabe42ebc94a44727b3f3531c0c877809",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "TOKEN_USDT",
-    "sc": "0x4507cEf57C46789eF8d1a19EA45f4216bae2B528",
-    "desimal": 9,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "TOOLS_USDT",
-    "sc": "0x1311b352467d2b5c296881badea82850bcd8f886",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "TPT_USDT",
-    "sc": "0xeca41281c24451168a37211f0bc2b8645af45092",
-    "desimal": 4,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "TRIAS_USDT",
-    "sc": "0xa4838122c683f732289805fc3c207febd55babdd",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "UBXS_USDT",
-    "sc": "0x4f1960e29b2ca581a38c5c474e123f420f8092db",
-    "desimal": 6,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "UFI_USDT",
-    "sc": "0xe2a59d5e33c6540e18aaa46bf98917ac3158db0d",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "VINU_USDT",
-    "sc": "0xfebe8c1ed424dbf688551d4e2267e7a53698f0aa",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "VLXPAD_USDT",
-    "sc": "0xb8e3bB633F7276cc17735D86154E0ad5ec9928C0",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "VMT_USDT",
-    "sc": "0xE615C5e7219f9801C3b75bc76E45a4dab3c38e51",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "VRT_USDT",
-    "sc": "0x5f84ce30dc3cf7909101c69086c50de191895883",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "WALV_USDT",
-    "sc": "0x256d1fce1b1221e8398f65f9b36033ce50b2d497",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "WAM_USDT",
-    "sc": "0xebbaeff6217d22e7744394061d874015709b8141",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "WKC_USDT",
-    "sc": "0x6ec90334d89dbdc89e08a133271be3d104128edb",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "WNDR_USDT",
-    "sc": "0xdfd7b0dd7bf1012dfdf3307a964c36b972300ac8",
-    "desimal": 8,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "WOOP_USDT",
-    "sc": "0x8b303d5bbfbbf46f1a4d9741e491e06986894e18",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "WSG_USDT",
-    "sc": "0xA58950F05FeA2277d2608748412bf9F802eA4901",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "WSI_USDT",
-    "sc": "0x837a130aed114300bab4f9f1f4f500682f7efd48",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "WWY_USDT",
-    "sc": "0x9Ab70e92319f0b9127df78868Fd3655fB9f1E322",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "XCV_USDT",
-    "sc": "0x4be63a9b26EE89b9a3a13fd0aA1D0b2427C135f8",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "XIL_USDT",
-    "sc": "0x1bd42f9bcff5d8b9c42e7b3f7497ec4cfd3a90d2",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "XPNET_USDT",
-    "sc": "0x8cf8238abf7b933bf8bb5ea2c7e4be101c11de2a",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "XPRESS_USDT",
-    "sc": "0x52386e6b75d97fa9fa322979b52a78e79ae5be92",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "XVS_USDT",
-    "sc": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "XWG_USDT",
-    "sc": "0x4e9f9721e6ea40c0e5422f6ebdb39fcb17f3544f",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "YCT_USDT",
-    "sc": "0x23e3981052d5280c658e5e18d814fa9582bfbc9e",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "YOOSHI_USDT",
-    "sc": "0xf25f1a032b5de0cf55255f523c905a1b606681b9",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ZBU_USDT",
-    "sc": "0x4D3dc895a9EDb234DfA3e303A196c009dC918f84",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ZODI_USDT",
-    "sc": "0x2062b037b671110b79883139f1cd63a7ea977a18",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  },
-  {
-    "symbol": "ZOON_USDT",
-    "sc": "0x9d173e6c594f479b4d47001f8e6a95a7adda42bc",
-    "desimal": 18,
-    "status":true,
-    "wd": 0.0000001
-  }
-]
+    "id_grup": "-1002079288809"
+  },
+  "token": 
+  [
+    {
+      "symbol": "100XUSDT",
+      "desimal": 18,
+      "sc": "0x016c285d5b918b92aa85ef1e147498badfe30d69",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "10SETUSDT",
+      "desimal": 18,
+      "sc": "0x1AE369A6AB222aFF166325B7b87Eb9aF06C86E57",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "1ARTUSDT",
+      "desimal": 18,
+      "sc": "0xD3c325848D7c6E29b574Cb0789998b2ff901f17E",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "1INCHUSDT",
+      "desimal": 18,
+      "sc": "0x111111111117dc0aa78b770fa6a738034120c302",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "4TOKENUSDT",
+      "desimal": 18,
+      "sc": "0x61b83edf87ea662c695439a807c386455c9e797c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ACEUSDT",
+      "desimal": 18,
+      "sc": "0xc27A719105A987b4c34116223CAE8bd8F4B5def4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ACHUSDT",
+      "desimal": 8,
+      "sc": "0xBc7d6B50616989655AfD682fb42743507003056D",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ADAPADUSDT",
+      "desimal": 18,
+      "sc": "0xDB0170e2d0c1CC1b2E7a90313d9B9afA4f250289",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AGIUSDT",
+      "desimal": 18,
+      "sc": "0x818835503F55283cd51A4399f595e295A9338753",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AIUSDT",
+      "desimal": 18,
+      "sc": "0xBDA011D7F8EC00F66C1923B049B94c67d148d8b2",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AIEUSDT",
+      "desimal": 18,
+      "sc": "0x1e30bbee322b3b11c60cb434a47f1605c2a99483",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AIMXUSDT",
+      "desimal": 18,
+      "sc": "0x75d6bd84de4cbcb92495204de959f7fea6a3f89a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AIOZUSDT",
+      "desimal": 18,
+      "sc": "0x33d08d8c7a168333a85285a68c0042b39fc3741d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AISCUSDT",
+      "desimal": 18,
+      "sc": "0xC3438D410e9a1B3096CAa4424c0d7b7257AB08Ba",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AISWAPUSDT",
+      "desimal": 18,
+      "sc": "0x8974769bcfc2715fcabcfe4341ba4fcc804abcd8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AITECHUSDT",
+      "desimal": 18,
+      "sc": "0x2D060Ef4d6BF7f9e5edDe373Ab735513c0e4F944",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ALICEUSDT",
+      "desimal": 6,
+      "sc": "0xAC51066d7bEC65Dc4589368da368b212745d63E8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ALITAUSDT",
+      "desimal": 18,
+      "sc": "0x33679898CEb9DC930024dE84E7339d403191d8f6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ALNUSDT",
+      "desimal": 18,
+      "sc": "0xf44fb887334fa17d2c5c0f970b5d320ab53ed557",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ALPACAUSDT",
+      "desimal": 18,
+      "sc": "0x8f0528ce5ef7b51152a59745befdd91d97091d2f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ALPHAUSDT",
+      "desimal": 18,
+      "sc": "0xa1faa113cbe53436df28ff0aee54275c13b40975",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ALPINEUSDT",
+      "desimal": 18,
+      "sc": "0x287880Ea252b52b63Cc5f40a2d3E5A44aa665a76",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ALTUSDT",
+      "desimal": 18,
+      "sc": "0x8457CA5040ad67fdebbCC8EdCE889A335Bc0fbFB",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ALTBUSDT",
+      "desimal": 18,
+      "sc": "0x9b3a01f8b4abd2e2a74597b21b7c269abf4e9f41",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ALUUSDT",
+      "desimal": 18,
+      "sc": "0x8263CD1601FE73C066bf49cc09841f35348e3be0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ANMLUSDT",
+      "desimal": 18,
+      "sc": "0x06FDA0758c17416726f77Cb11305EAC94C074Ec0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AOGUSDT",
+      "desimal": 18,
+      "sc": "0x40c8225329bd3e28a043b029e0d07a5344d2c27c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "APPUSDT",
+      "desimal": 18,
+      "sc": "0xC5d27F27F08D1FD1E3EbBAa50b3442e6c0D50439",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "APXUSDT",
+      "desimal": 18,
+      "sc": "0x78f5d389f5cdccfc41594abab4b0ed02f31398b3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AQDCUSDT",
+      "desimal": 18,
+      "sc": "0x840AcA956c06F340083FBdC6d919BDF2368FCA0e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ARBIUSDT",
+      "desimal": 18,
+      "sc": "0xa7bd657c5838472ddf85ff0797a2e6fce8fd4833",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ARGONUSDT",
+      "desimal": 18,
+      "sc": "0x851f7a700c5d67db59612b871338a85526752c25",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ARPAUSDT",
+      "desimal": 18,
+      "sc": "0x6f769e65c14ebd1f68817f5f1dcdb61cfa2d6f7e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ARTEMUSDT",
+      "desimal": 18,
+      "sc": "0x9b83f827928abdf18cf1f7e67053572b9bceff3a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ARTYUSDT",
+      "desimal": 6,
+      "sc": "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ARVUSDT",
+      "desimal": 8,
+      "sc": "0x6679eb24f59dfe111864aec72b443d1da666b360",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ASSUSDT",
+      "desimal": 9,
+      "sc": "0x7c63f96feafacd84e75a594c00fac3693386fbf0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ASTROUSDT",
+      "desimal": 18,
+      "sc": "0x72eb7ca07399ec402c5b7aa6a65752b6a1dc0c27",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ATAUSDT",
+      "desimal": 18,
+      "sc": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ATDUSDT",
+      "desimal": 18,
+      "sc": "0x1ce440d1a64eea6aa1db2a5aa51c9b326930957c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ATEAMUSDT",
+      "desimal": 18,
+      "sc": "0x44Ece1031e5b5e2D9169546cC10EA5C95BA96237",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ATEMUSDT",
+      "desimal": 18,
+      "sc": "0x21665851d13f3b5622b178b00ab1ba6ec43cfc06",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ATOZUSDT",
+      "desimal": 18,
+      "sc": "0x3606F220daeaEb3d47aC1923A8Ce2A61205C88cD",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ATSUSDT",
+      "desimal": 18,
+      "sc": "0x75d8bb7fbd4782a134211dc350ba5c715197b81d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AUTOUSDT",
+      "desimal": 18,
+      "sc": "0xa184088a740c695e156f91f5cc086a06bb78b827",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AVAUSDT",
+      "desimal": 18,
+      "sc": "0xd9483EA7214FCfd89B4Fb8f513B544920E315A52",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AXLUSDT",
+      "desimal": 18,
+      "sc": "0x25b24B3c47918b7962B3e49C4F468367F73CC0E0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "AZYUSDT",
+      "desimal": 18,
+      "sc": "0x7b665B2F633d9363b89A98b094B1F9E732Bd8F86",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BABIUSDT",
+      "desimal": 18,
+      "sc": "0xec15a508a187e8DDfe572A5423Faa82Bbdd65120",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BABYUSDT",
+      "desimal": 18,
+      "sc": "0x53e562b9b7e5e94b81f10e96ee70ad06df3d2657",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BABYBONKUSDT",
+      "desimal": 9,
+      "sc": "0xbb2826ab03b6321e170f0558804f2b6488c98775",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BABYDOGEUSDT",
+      "desimal": 9,
+      "sc": "0xc748673057861a797275CD8A068AbB95A902e8de",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BABYELONUSDT",
+      "desimal": 9,
+      "sc": "0x258903a8e68d5248de85cf8a0a173d9e046edd98",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BABYGROKUSDT",
+      "desimal": 9,
+      "sc": "0x88da9901b3a02fe24e498e1ed683d2310383e295",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BAKEUSDT",
+      "desimal": 18,
+      "sc": "0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BAMBOOUSDT",
+      "desimal": 18,
+      "sc": "0x198abb2d13faa2e52e577d59209b5c23c20cd6b3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BBCUSDT",
+      "desimal": 18,
+      "sc": "0x37e5da11b6A4DC6d2f7Abe232cDd30B0B8Fc63B1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BCMCUSDT",
+      "desimal": 18,
+      "sc": "0xc10358f062663448a3489fC258139944534592ac",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BD20USDT",
+      "desimal": 18,
+      "sc": "0x312d43881860807fa04b193d69744d087fc3308a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BEAMXUSDT",
+      "desimal": 18,
+      "sc": "0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BEFEUSDT",
+      "desimal": 18,
+      "sc": "0x57185189118c7e786cafd5c71f35b16012fa95ad",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BETUUSDT",
+      "desimal": 18,
+      "sc": "0x0df1b3f30865c5b324797f8db9d339514cac4e94",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BINUSDT",
+      "desimal": 18,
+      "sc": "0xe56842ed550ff2794f010738554db45e60730371",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BLINUSDT",
+      "desimal": 18,
+      "sc": "0x811b279463a89E4B6E35805174C9190763f72614",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BLOCKASSETUSDT",
+      "desimal": 6,
+      "sc": "0xbc7a566b85ef73f935e640a06b5a8b031cd975df",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BLTUSDT",
+      "desimal": 8,
+      "sc": "0x02bdf640fba368e7ba5c6429ccaf251512273865",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BMONUSDT",
+      "desimal": 18,
+      "sc": "0x08ba0619b1e7a582e0bce5bbe9843322c954c340",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BNXUSDT",
+      "desimal": 18,
+      "sc": "0x5b1f874d0b0C5ee17a495CbB70AB8bf64107A3BD",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BONDLYUSDT",
+      "desimal": 18,
+      "sc": "0x5d0158a5c3ddf47d4ea4517d8db0d76aa2e87563",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BPUSDT",
+      "desimal": 18,
+      "sc": "0xacb8f52dc63bb752a51186d1c55868adbffee9c1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BRCSTUSDT",
+      "desimal": 18,
+      "sc": "0x22830be0954ff3bf7929405c488b1bba54a7e0d3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BRCTUSDT",
+      "desimal": 18,
+      "sc": "0x455ad1Bc4E18fD4e369234b6e11D88acBC416758",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BRISEUSDT",
+      "desimal": 9,
+      "sc": "0x8fff93e810a2edaafc326edee51071da9d398e83",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BRKLUSDT",
+      "desimal": 18,
+      "sc": "0x66cafcf6c32315623c7ffd3f2ff690aa36ebed38",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BRNUSDT",
+      "desimal": 18,
+      "sc": "0x926ecC7687fCFB296E97a2b4501F41A6f5F8C214",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BRTUSDT",
+      "desimal": 18,
+      "sc": "0xfc9F81B107F51F2383fCE56650fEDB59C5fd59bD",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BRYUSDT",
+      "desimal": 18,
+      "sc": "0xf859Bf77cBe8699013d6Dbc7C2b926Aaf307F830",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BSCPADUSDT",
+      "desimal": 18,
+      "sc": "0x5a3010d4d8d3b5fb49f8b6e57fb9e48063f16700",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BSCSUSDT",
+      "desimal": 18,
+      "sc": "0xbcb24afb019be7e93ea9c43b7e22bb55d5b7f45d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BSWUSDT",
+      "desimal": 18,
+      "sc": "0x965F527D9159dCe6288a2219DB51fc6Eef120dD1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "desimal": 18,
+      "sc": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BTCSTUSDT",
+      "desimal": 17,
+      "sc": "0x78650b139471520656b9e7aa7a5e9276814a38e9",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BTLUSDT",
+      "desimal": 18,
+      "sc": "0x51e7b598c9155b9dccb04eb42519f6eec9c841e9",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BVTUSDT",
+      "desimal": 18,
+      "sc": "0x1DaCbcD9B3fc2d6A341Dca3634439D12bC71cA4d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BWLDUSDT",
+      "desimal": 18,
+      "sc": "0x067BD9825C92a4384f55B4Cb8FcAeaEfFfcD490e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "BXHUSDT",
+      "desimal": 18,
+      "sc": "0x6d1b7b59e3fab85b7d3a3d86e505dd8e349ea7f3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "C98USDT",
+      "desimal": 18,
+      "sc": "0xaec945e04baf28b135fa7c640f624f8d90f1c3a6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CAFUSDT",
+      "desimal": 18,
+      "sc": "0x096985703f584b9444ce9730b600fc39de29ccc8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "desimal": 18,
+      "sc": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CALUSDT",
+      "desimal": 18,
+      "sc": "0x859c940f080b197659b3effc804fd622df66f0a1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CARATUSDT",
+      "desimal": 18,
+      "sc": "0x426c1c971fb00caaf1883bd801323a8becb0c919",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CARBONUSDT",
+      "desimal": 18,
+      "sc": "0xeFb5dF8eB84055026018030E71bC2cdFA2F138B9",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CARTUSDT",
+      "desimal": 18,
+      "sc": "0x5c8c8d560048f34e5f7f8ad71f2f81a89dbd273e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CATUSDT",
+      "desimal": 18,
+      "sc": "0x7e3784220740e61dc700501bd6771226e11d8897",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CATCOINUSDT",
+      "desimal": 18,
+      "sc": "0x59f4f336bf3d0c49dbfba4a74ebd2a6ace40539a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CATEUSDT",
+      "desimal": 9,
+      "sc": "0xe4fae3faa8300810c835970b9187c268f55d998f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CATGIRLUSDT",
+      "desimal": 9,
+      "sc": "0x79ebc9a2ce02277a4b5b3a768b1c0a4ed75bd936",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CEEKUSDT",
+      "desimal": 18,
+      "sc": "0xe0f94ac5462997d2bc57287ac3a3ae4c31345d66",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CELLUSDT",
+      "desimal": 18,
+      "sc": "0xd98438889Ae7364c7E2A3540547Fad042FB24642",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CFXUSDT",
+      "desimal": 18,
+      "sc": "0x045c4324039da91c52c55df5d785385aab073dcf",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CGPTUSDT",
+      "desimal": 18,
+      "sc": "0x9840652DC04fb9db2C43853633f0F62BE6f00f98",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CGVUSDT",
+      "desimal": 6,
+      "sc": "0x1bdaf9ddd7658d8049391971d1fd48c0484f66ec",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CHAPZUSDT",
+      "desimal": 10,
+      "sc": "0x7b56748a3ef9970a5bae99c58ad8bc67b26c525f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CHEELUSDT",
+      "desimal": 18,
+      "sc": "0x1f1c90aeb2fd13ea972f0a71e35c0753848e3db0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CHERUSDT",
+      "desimal": 18,
+      "sc": "0x8f36cc333f55b09bb71091409a3d7ade399e3b1c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CHESSUSDT",
+      "desimal": 18,
+      "sc": "0x20de22029ab63cf9a7cf5feb2b737ca1ee4c82a6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CLVUSDT",
+      "desimal": 18,
+      "sc": "0x09E889BB4D5b474f561db0491C38702F367A4e4d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CNAMEUSDT",
+      "desimal": 18,
+      "sc": "0xFC3514474306e2D4aa8350fD8FA9c46c165fe8cD",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "COMBOUSDT",
+      "desimal": 18,
+      "sc": "0xc03fbf20a586fa89c2a5f6f941458e1fbc40c661",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "COPIUSDT",
+      "desimal": 18,
+      "sc": "0xfea292e5ea4510881bdb840e3cec63abd43f936f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "COSUSDT",
+      "desimal": 18,
+      "sc": "0x96dd399f9c3afda1f194182f71600f1b65946501",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CREOUSDT",
+      "desimal": 18,
+      "sc": "0x9521728bf66a867bc65a93ece4a543d817871eb7",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CRHUSDT",
+      "desimal": 18,
+      "sc": "0xa236fd48f30ad4dee145652a71912189855dd575",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CSIXUSDT",
+      "desimal": 18,
+      "sc": "0x04756126F044634C9a0f0E985e60c88a51ACC206",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CTGUSDT",
+      "desimal": 18,
+      "sc": "0xb3ba14f6a482dfdebc3c2fb726ac10df91ee504c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CTKUSDT",
+      "desimal": 6,
+      "sc": "0xa8c2b8eec3d368c0253ad3dae65a5f2bbb89c929",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CTRCUSDT",
+      "desimal": 18,
+      "sc": "0xd6cce248263ea1e2b8cb765178c944fc16ed0727",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CTTUSDT",
+      "desimal": 18,
+      "sc": "0x464863745ed3af8b9f8871f1082211c55f8f884d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CTYUSDT",
+      "desimal": 18,
+      "sc": "0xBa08Da6b46E3dd153DD8b66A6E4cfd37A6359559",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CUMMIESUSDT",
+      "desimal": 18,
+      "sc": "0x27ae27110350b98d564b9a3eed31baebc82d878d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CWSUSDT",
+      "desimal": 18,
+      "sc": "0x99aa29ac023057951781dc5d1784e9a4c362ce23",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CYBERUSDT",
+      "desimal": 18,
+      "sc": "0x14778860E937f509e651192a90589dE711Fb88a9",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "CZZUSDT",
+      "desimal": 18,
+      "sc": "0x2Fb9376cFf6fb7f5fe99665aE1Ec2FdDD5099134",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DALUSDT",
+      "desimal": 18,
+      "sc": "0x53e4b7Aa6cACcb9576548Be3259e62dE4Ddd4417",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DAOUSDT",
+      "desimal": 18,
+      "sc": "0x4d2d32d8652058bf98c772953e1df5c5c85d9f45",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DARUSDT",
+      "desimal": 6,
+      "sc": "0x23ce9e926048273ef83be0a3a8ba9cb6d45cd978",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DARKUSDT",
+      "desimal": 8,
+      "sc": "0x12fc07081fab7de60987cad8e8dc407b606fb2f8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DBCUSDT",
+      "desimal": 18,
+      "sc": "0x1F735f84b07cc20E9aC471C291a87b5A2428d518",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DCBUSDT",
+      "desimal": 18,
+      "sc": "0xeac9873291ddaca754ea5642114151f3035c67a2",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DCKUSDT",
+      "desimal": 18,
+      "sc": "0x16faf9daa401aa42506af503aa3d80b871c467a3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DEBTUSDT",
+      "desimal": 8,
+      "sc": "0xC632F90affeC7121120275610BF17Df9963F181c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DECHATUSDT",
+      "desimal": 18,
+      "sc": "0xd69ee2e508363fed57f89917d5ca03e715ee5519",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DEGOUSDT",
+      "desimal": 18,
+      "sc": "0x3da932456d082cba208feb0b096d49b202bf89c8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DEKUSDT",
+      "desimal": 18,
+      "sc": "0xe52c5a3590952f3ed6fccf89a0bd7f38e11c5b98",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DEPUSDT",
+      "desimal": 18,
+      "sc": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DERIUSDT",
+      "desimal": 18,
+      "sc": "0xe60eaf5a997dfae83739e035b005a33afdcc6df5",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DESUSDT",
+      "desimal": 18,
+      "sc": "0xb38b3c34e4bb6144c1e5283af720e046ee833a2a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DFLUSDT",
+      "desimal": 18,
+      "sc": "0x6ded0F2c886568Fb4Bb6F04f179093D3D167c9D7",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DFYUSDT",
+      "desimal": 18,
+      "sc": "0xd98560689c6e748dc37bc410b4d3096b1aa3d8c2",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DHBUSDT",
+      "desimal": 18,
+      "sc": "0x680D3113caf77B61b510f332D5Ef4cf5b41A761D",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DHVUSDT",
+      "desimal": 18,
+      "sc": "0x58759dd469ae5631c42cf8a473992335575b58d7",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DHXUSDT",
+      "desimal": 18,
+      "sc": "0x11d9f5d36BA3996962142c1c32467AcEBb697009",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DKSUSDT",
+      "desimal": 18,
+      "sc": "0x121235cfF4c59EEC80b14c1d38B44e7de3A18287",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DLCUSDT",
+      "desimal": 18,
+      "sc": "0xdE83180dD1166D4f8E5c2b7De14A2163b1Bb4a87",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DMAILUSDT",
+      "desimal": 18,
+      "sc": "0xcC6f1e1B87cfCbe9221808d2d85C501aab0B5192",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DMLGUSDT",
+      "desimal": 18,
+      "sc": "0x1c796c140de269e255372ea687ef7644bab87935",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DMSUSDT",
+      "desimal": 18,
+      "sc": "0x9a26e6D24Df036B0b015016D1b55011c19E76C87",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DODOUSDT",
+      "desimal": 18,
+      "sc": "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DOGGYUSDT",
+      "desimal": 18,
+      "sc": "0x74926b3d118a63f6958922d3dc05eb9c6e6e00c6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DOMEUSDT",
+      "desimal": 18,
+      "sc": "0x475bfaa1848591ae0e6ab69600f48d828f61a80e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DOMIUSDT",
+      "desimal": 18,
+      "sc": "0xBBCA42c60b5290F2c48871A596492F93fF0Ddc82",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DPETUSDT",
+      "desimal": 18,
+      "sc": "0xfb62ae373aca027177d1c18ee0862817f9080d08",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DPRUSDT",
+      "desimal": 18,
+      "sc": "0xa0a2ee912caf7921eaabc866c6ef6fec8f7e90a4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DVUSDT",
+      "desimal": 18,
+      "sc": "0x90B3605fC31883f47221788862771CC08db20eb5",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DVIUSDT",
+      "desimal": 18,
+      "sc": "0x758fb037a375f17c7e195cc634d77da4f554255b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DXUSDT",
+      "desimal": 18,
+      "sc": "0xcA7bBEC6839965aC8dfe077b52EBB6519fFFe155",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DXCTUSDT",
+      "desimal": 18,
+      "sc": "0x5b1baec64af6dc54e6e04349315919129a6d3c23",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "DZOOUSDT",
+      "desimal": 18,
+      "sc": "0x56d06a78ef8e95d6043341f24759e2834be6f97b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "EDUUSDT",
+      "desimal": 18,
+      "sc": "0xbdeae1ca48894a1759a8374d63925f21f2ee2639",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "EEGUSDT",
+      "desimal": 18,
+      "sc": "0x663c51ff62632b72aa794b14e4ad452bf1847a57",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "EGGUSDT",
+      "desimal": 18,
+      "sc": "0xF952Fc3ca7325Cc27D15885d37117676d25BfdA6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "EJSUSDT",
+      "desimal": 18,
+      "sc": "0x09f423ac3c9babbff6f94d372b16e4206e71439f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "EPXUSDT",
+      "desimal": 18,
+      "sc": "0xAf41054C1487b0e5E2B9250C0332eCBCe6CE9d71",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ETERNALUSDT",
+      "desimal": 18,
+      "sc": "0xD44FD09d74cd13838F137B590497595d6b3FEeA4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "desimal": 18,
+      "sc": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "EVOUSDT",
+      "desimal": 18,
+      "sc": "0xF2B688b2201979d44FdF18d1d8C641305Cf560Ba",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "EVRYUSDT",
+      "desimal": 18,
+      "sc": "0xC2d4A3709e076A7A3487816362994a78ddaeabB6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "EXVGUSDT",
+      "desimal": 18,
+      "sc": "0xBb7D61D2511fD2e63F02178ca9B663458Af9FC63",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "F2CUSDT",
+      "desimal": 18,
+      "sc": "0x657b632714e08ac66b79444ad3f3875526ee6689",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "F3USDT",
+      "desimal": 18,
+      "sc": "0x9e57e83ad79ac5312ba82940ba037ed30600e167",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FALCONSUSDT",
+      "desimal": 18,
+      "sc": "0x87e2414093632a3b9a1afea7083e5dab59b5dc4f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FANUSDT",
+      "desimal": 18,
+      "sc": "0xb6d48fcef36e19681ee29896b19c1b6cbd1eab1b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FARMLANDUSDT",
+      "desimal": 18,
+      "sc": "0x49236832a3f75D3B13cBA687dA952AEA5042E2Aa",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FDCUSDT",
+      "desimal": 18,
+      "sc": "0x6d1A4650E83708b583C35d5E0952A0B46354Ca9b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FDTUSDT",
+      "desimal": 18,
+      "sc": "0x3a599e584075065eAAAc768D75EaEf85c2f2fF64",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FDUSDUSDT",
+      "desimal": 18,
+      "sc": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FEGUSDT",
+      "desimal": 18,
+      "sc": "0xbededdf2ef49e87037c4fb2ca34d1ff3d3992a11",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FEVRUSDT",
+      "desimal": 18,
+      "sc": "0x82030CDBD9e4B7c5bb0b811A61DA6360D69449cc",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FINEUSDT",
+      "desimal": 18,
+      "sc": "0x4e6415a5727ea08aae4580057187923aec331227",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FIUUSDT",
+      "desimal": 18,
+      "sc": "0xEF7d50069406A2F5A53806f7250A6c0f17AD9dCD",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FIWAUSDT",
+      "desimal": 18,
+      "sc": "0x633237C6FA30FAe46Cc5bB22014DA30e50a718cC",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FLOKIUSDT",
+      "desimal": 9,
+      "sc": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FLOKICEOUSDT",
+      "desimal": 9,
+      "sc": "0x45289007706E7Ee7B42b1fA506661d97740Edfb4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FLURRYUSDT",
+      "desimal": 18,
+      "sc": "0x47c9BcEf4fE2dBcdf3Abf508f147f1bBE8d4fEf2",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FLYUSDT",
+      "desimal": 4,
+      "sc": "0x681fd3e49a6188Fc526784eE70AA1C269ee2B887",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FPSUSDT",
+      "desimal": 12,
+      "sc": "0x351dA1E7500aBA1d168b9435DCE73415718d212F",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FRBKUSDT",
+      "desimal": 8,
+      "sc": "0x6d96c6c401423a23945c03bc8c42e7f82d24b9e0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FREEUSDT",
+      "desimal": 18,
+      "sc": "0x12e34cDf6A031a10FE241864c32fB03a4FDaD739",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FRMUSDT",
+      "desimal": 18,
+      "sc": "0xa719b8ab7ea7af0ddb4358719a34631bb79d15dc",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FROGUSDT",
+      "desimal": 18,
+      "sc": "0xb1f287d26ced12f2c4a81c141a51e347942f35b3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "FRONTUSDT",
+      "desimal": 18,
+      "sc": "0x928e55daB735aa8260AF3cEDadA18B5f70C72f1b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GAFIUSDT",
+      "desimal": 18,
+      "sc": "0x89af13a10b32f1b2f8d1588f93027f69b6f4e27e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GANUSDT",
+      "desimal": 18,
+      "sc": "0x8F1408171EAe06AEC4549fD0a5808A42cee6DD84",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GAYPEPEUSDT",
+      "desimal": 18,
+      "sc": "0x0158d3817c1391b4736be724b1e8e8553d615c57",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GENSUSDT",
+      "desimal": 18,
+      "sc": "0x2CD14cbA3F26254beeD1d78158cd2B6F91809600",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GETAUSDT",
+      "desimal": 18,
+      "sc": "0xb2192a2829a5220bafd5b0a67f3328e209887bee",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GFTUSDT",
+      "desimal": 18,
+      "sc": "0x72fF5742319eF07061836F5C924aC6D72c919080",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GGGUSDT",
+      "desimal": 18,
+      "sc": "0xd8047afecb86e44eff3add991b9f063ed4ca716b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GGMUSDT",
+      "desimal": 18,
+      "sc": "0x4301a638FCB45C4bb65230B87F3797C213f832B8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GHNYUSDT",
+      "desimal": 18,
+      "sc": "0xa045E37a0D1dd3A45fefb8803D22457abc0A728a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GINUXUSDT",
+      "desimal": 18,
+      "sc": "0xc9ad37e9baf41377540df5a77831db98c1915128",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GMMUSDT",
+      "desimal": 18,
+      "sc": "0x5B6bf0c7f989dE824677cFBD507D9635965e9cD3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GMPDUSDT",
+      "desimal": 18,
+      "sc": "0x9720ca160bbd4e7f3dd4bb3f8bd4227ca0342e63",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GMRXUSDT",
+      "desimal": 18,
+      "sc": "0x998305efdc264b9674178899fffbb44a47134a76",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GMTUSDT",
+      "desimal": 8,
+      "sc": "0x3019BF2a2eF8040C242C9a4c5c4BD4C81678b2A1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GOALUSDT",
+      "desimal": 18,
+      "sc": "0xc4736F2611A62d545DC2D0d8f0766283617e6FcB",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GOFUSDT",
+      "desimal": 18,
+      "sc": "0x2bcf9c1861fae2d5a7d2b3242b71e2a8d461f61e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GOLDUSDT",
+      "desimal": 18,
+      "sc": "0xb3a6381070b1a15169dea646166ec0699fdaea79",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GOLDMINERUSDT",
+      "desimal": 18,
+      "sc": "0xe2604c9561d490624aa35e156e65e590eb749519",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GOMDUSDT",
+      "desimal": 18,
+      "sc": "0xf29bf05de3dd6a5f7496841f81f96a3a130c3420",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GOMININGUSDT",
+      "desimal": 18,
+      "sc": "0x7Ddc52c4De30e94Be3A6A0A2b259b2850f421989",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GPTUSDT",
+      "desimal": 18,
+      "sc": "0x30842a9c941d9DE3AF582c41ad12b11D776ba69e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GQUSDT",
+      "desimal": 18,
+      "sc": "0xF700D4c708C2be1463E355F337603183D20E0808",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GRBEUSDT",
+      "desimal": 18,
+      "sc": "0x5Ca4e7294B14EA5745EE2A688990e0cb68503219",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GROKCEOUSDT",
+      "desimal": 9,
+      "sc": "0x6294deb10817e47a4ee6869db59c85f3ef4bee29",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GROWUSDT",
+      "desimal": 18,
+      "sc": "0x0C9aD20802E89BeA858ae2E8594843fAfA887CB3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GRVUSDT",
+      "desimal": 8,
+      "sc": "0xF33893DE6eB6aE9A67442E066aE9aBd228f5290c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GSTUSDT",
+      "desimal": 8,
+      "sc": "0x4a2c860cEC6471b9F5F5a336eB4F38bb21683c98",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GTAIUSDT",
+      "desimal": 18,
+      "sc": "0x003d87d02A2A01E9E8a20f507C83E15DD83A33d1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GTCUSDT",
+      "desimal": 18,
+      "sc": "0xb7ef0c0036ccc7a770372e46944f230881cfb0b9",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GXEUSDT",
+      "desimal": 18,
+      "sc": "0x510975edA48A97E0cA228dD04d1217292487bea6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "GZONEUSDT",
+      "desimal": 18,
+      "sc": "0xb6adb74efb5801160ff749b1985fd3bd5000e938",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HAMUSDT",
+      "desimal": 7,
+      "sc": "0x679D5b2d94f454c950d683D159b87aa8eae37C9e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HAOUSDT",
+      "desimal": 18,
+      "sc": "0x22d224CE83103A8D218B1E6cc2A38Bd94f60f066",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HAPIUSDT",
+      "desimal": 18,
+      "sc": "0xd9c2d319cd7e6177336b0a9c93c21cb48d84fb54",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HDVUSDT",
+      "desimal": 5,
+      "sc": "0x8cd0d76c0ad377378ab6ce878a7be686223497ee",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HEUSDT",
+      "desimal": 18,
+      "sc": "0x20d39a5130f799b95b55a930e5b7ebc589ea9ed8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HELLOUSDT",
+      "desimal": 18,
+      "sc": "0x0F1cBEd8EFa0E012AdbCCB1638D0aB0147D5Ac00",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HERAUSDT",
+      "desimal": 18,
+      "sc": "0x49c7295ff86eabf5bf58c6ebc858db4805738c01",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HEROUSDT",
+      "desimal": 18,
+      "sc": "0xD40bEDb44C081D2935eebA6eF5a3c8A31A1bBE13",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HFTUSDT",
+      "desimal": 18,
+      "sc": "0x44Ec807ce2F4a6F2737A92e985f318d035883e47",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HGPTUSDT",
+      "desimal": 18,
+      "sc": "0x529c79f6918665ebe250f32eeeaa1d410a0798c6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HIPUSDT",
+      "desimal": 18,
+      "sc": "0x7e4C1D51ace44E26c5924d590995dEA3eB8aD505",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HMTTUSDT",
+      "desimal": 18,
+      "sc": "0x7f68528A0464eCf3eb7F0C16Bf77Bbbb466c0288",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HODUSDT",
+      "desimal": 18,
+      "sc": "0x19a4866a85c652eb4a2ed44c42e4cb2863a62d51",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HOOKUSDT",
+      "desimal": 18,
+      "sc": "0xa260E12d2B924cb899AE80BB58123ac3fEE1E2F0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HOTCROSSUSDT",
+      "desimal": 18,
+      "sc": "0x4fa7163e153419e0e1064e418dd7a99314ed27b6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "HSFUSDT",
+      "desimal": 18,
+      "sc": "0xda8929a6338F408CC78c1845FB4F71BfFd2cFCfb",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ICEUSDT",
+      "desimal": 18,
+      "sc": "0xc335df7c25b72eec661d5aa32a7c2b7b2a1d1874",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "IDUSDT",
+      "desimal": 18,
+      "sc": "0x2dff88a56767223a5529ea5960da7a3f5f766406",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "IGUUSDT",
+      "desimal": 18,
+      "sc": "0x201bC9F242f74C47Bbd898a5DC99cDCD81A21943",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "IHCUSDT",
+      "desimal": 18,
+      "sc": "0x86a53fcd199212FEa44FA7e16EB1f28812be911D",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "INGUSDT",
+      "desimal": 18,
+      "sc": "0xAe7c682Ba26AD6835B6150FfB35F22Db9987f509",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "IOTAUSDT",
+      "desimal": 6,
+      "sc": "0xd944f1D1e9d5f9Bb90b62f9D45e447D989580782",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ISPUSDT",
+      "desimal": 18,
+      "sc": "0xd2e7b964770fcf51df088a5f0bb2d33a3c60cccf",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ITEMUSDT",
+      "desimal": 18,
+      "sc": "0x517396bD11d750E4417B82F2b0FcFa62a4f2bB96",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "IVPAYUSDT",
+      "desimal": 18,
+      "sc": "0xde5bdcbd4d7dfa86e527fef9971bd6ca6a76eefb",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "JGNUSDT",
+      "desimal": 18,
+      "sc": "0xc13b7a43223bb9bf4b69bd68ab20ca1b79d81c75",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "JOBUSDT",
+      "desimal": 18,
+      "sc": "0xB5489d935Be23f1e6Acc02766971936045F05b57",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "JULDUSDT",
+      "desimal": 18,
+      "sc": "0xf5d8015d625be6f59b8073c8189bd51ba28792e1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KABYUSDT",
+      "desimal": 18,
+      "sc": "0x02a40c048ee2607b5f5606e445cfc3633fb20b58",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KALMUSDT",
+      "desimal": 18,
+      "sc": "0x4ba0057f784858a48fe351445c672ff2a3d43515",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KBDUSDT",
+      "desimal": 18,
+      "sc": "0xe3e3f8218562a7c9b594bef2946ec72f1b043ae8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KBOXUSDT",
+      "desimal": 18,
+      "sc": "0x3523d58d8036B1C5C9A13493143c97aEfC5Ad422",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KIBAUSDT",
+      "desimal": 18,
+      "sc": "0xC3afDe95B6Eb9ba8553cDAea6645D45fB3a7FAF5",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KICKSUSDT",
+      "desimal": 18,
+      "sc": "0xfEB4e9B932eF708c498Cc997ABe51D0EE39300cf",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KINGSHIBUSDT",
+      "desimal": 9,
+      "sc": "0x84f4f7cdb4574c9556a494dab18ffc1d1d22316c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KMONUSDT",
+      "desimal": 18,
+      "sc": "0xc732b6586a93b6b7cf5fed3470808bc74998224d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KNFTUSDT",
+      "desimal": 18,
+      "sc": "0x46e83fbcc5623172ee61935c96b7276ab92562de",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KPADUSDT",
+      "desimal": 18,
+      "sc": "0xcfefa64b0ddd611b125157c41cd3827f2e8e8615",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KTUSDT",
+      "desimal": 18,
+      "sc": "0x52da44b5e584f730005dac8d2d2acbdee44d4ba3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KTNUSDT",
+      "desimal": 18,
+      "sc": "0xdae6c2a48bfaa66b43815c5548b10800919c993e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KWSUSDT",
+      "desimal": 18,
+      "sc": "0x5D0E95C15cA50F13fB86938433269D03112409Fe",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "KZENUSDT",
+      "desimal": 18,
+      "sc": "0x4550003152F12014558e5CE025707E4DD841100F",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LABSUSDT",
+      "desimal": 18,
+      "sc": "0x510Ca7D22A84599e7d0f15F09E674056a6255389",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LAIUSDT",
+      "desimal": 18,
+      "sc": "0x776f9987d9deed90eed791cbd824d971fd5ccf09",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LANDSHAREUSDT",
+      "desimal": 18,
+      "sc": "0xA73164DB271931CF952cBaEfF9E8F5817b42fA5C",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LAVASWAPUSDT",
+      "desimal": 18,
+      "sc": "0x6e59913074cd836c2904ddd5b81e85ec11bd0e02",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LAZIOUSDT",
+      "desimal": 8,
+      "sc": "0x77d547256a2cd95f32f67ae0313e450ac200648d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LBLUSDT",
+      "desimal": 18,
+      "sc": "0x77edFaE59a7948d66E9911A30cC787d2172343d4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LEVUSDT",
+      "desimal": 18,
+      "sc": "0xbc194e6f748a222754c3e8b9946922c09e7d4e91",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LFWUSDT",
+      "desimal": 18,
+      "sc": "0xD71239a33C8542Bd42130c1B4ACA0673B4e4f48B",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LGXUSDT",
+      "desimal": 18,
+      "sc": "0x9096B4309224d751FCB43d7eB178dcFFc122aD15",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LIFEUSDT",
+      "desimal": 18,
+      "sc": "0x82190d28E710ea9C029D009FaD951c6F1d803BB3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LIMEUSDT",
+      "desimal": 18,
+      "sc": "0x7bc75e291e656e8658d66be1cc8154a3769a35dd",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LIONUSDT",
+      "desimal": 18,
+      "sc": "0x7969dc3c6e925bccbea9f7fc466a63c74f0115b8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LITUSDT",
+      "desimal": 18,
+      "sc": "0xb59490aB09A0f526Cc7305822aC65f2Ab12f9723",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LOAUSDT",
+      "desimal": 18,
+      "sc": "0x94b69263FCA20119Ae817b6f783Fc0F13B02ad50",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LOOPUSDT",
+      "desimal": 18,
+      "sc": "0xcE186ad6430E2Fe494a22C9eDbD4c68794a28B35",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LOOTUSDT",
+      "desimal": 18,
+      "sc": "0x14a9a94e555fdd54c21d7f7e328e61d7ebece54b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LOVELYUSDT",
+      "desimal": 8,
+      "sc": "0x9E24415d1e549EBc626a13a482Bb117a2B43e9CF",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LSD7USDT",
+      "desimal": 18,
+      "sc": "0xcd1b51b87a8a7137d6421ba5a976225187a26777",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LUNRUSDT",
+      "desimal": 4,
+      "sc": "0x37807D4fbEB84124347B8899Dd99616090D3e304",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "LUSUSDT",
+      "desimal": 18,
+      "sc": "0xde301D6a2569aEfcFe271B9d98f318BAee1D30a4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MAPEUSDT",
+      "desimal": 18,
+      "sc": "0xCa044F16AfA434C0C17c0478D8A6cE4FEEf46504",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MATUSDT",
+      "desimal": 18,
+      "sc": "0xf3147987a00d35eecc10c731269003ca093740ca",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MBOXUSDT",
+      "desimal": 18,
+      "sc": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MCRNUSDT",
+      "desimal": 18,
+      "sc": "0xacb2d47827c9813ae26de80965845d80935afd0b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MCRTUSDT",
+      "desimal": 9,
+      "sc": "0x4b8285aB433D8f69CB48d5Ad62b415ed1a221e4f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MDAOUSDT",
+      "desimal": 18,
+      "sc": "0x60322971a672B81BccE5947706D22c19dAeCf6Fb",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MDXUSDT",
+      "desimal": 18,
+      "sc": "0x9c65ab58d8d978db963e63f2bfb7121627e3a739",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MELIUSDT",
+      "desimal": 18,
+      "sc": "0xaD04AC36791d923DeB082dA4f91Ab71675dD18fB",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MEMETOONUSDT",
+      "desimal": 18,
+      "sc": "0x193397bb76868c6873e733ad60d5953843ebc84e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MEPADUSDT",
+      "desimal": 18,
+      "sc": "0x9d70a3ee3079a6fa2bb16591414678b7ad91f0b5",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "METANUSDT",
+      "desimal": 18,
+      "sc": "0x879D239BCC0356Cf9df8c90442488bCe99554c66",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "METAXUSDT",
+      "desimal": 18,
+      "sc": "0x03f8fdc10d5bcf7508375585b04e93d656d36954",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "METFIUSDT",
+      "desimal": 18,
+      "sc": "0x3e7f1039896454b9cb27c53cc7383e1ab9d9512a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "METOUSDT",
+      "desimal": 18,
+      "sc": "0xa78775bba7a542F291e5ef7f13C6204E704A90Ba",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MGAUSDT",
+      "desimal": 18,
+      "sc": "0x03aC6AB6A9a91a0fcdec7D85b38bDFBb719ec02f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MGGUSDT",
+      "desimal": 18,
+      "sc": "0x6125adcab2f171bc70cfe2caecfec5509273a86a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MGKLUSDT",
+      "desimal": 18,
+      "sc": "0x8aBfa6a4F4B9865b0e7ACfDCe1839A2584636d06",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MHUNTUSDT",
+      "desimal": 18,
+      "sc": "0x2C717059b366714d267039aF8F59125CAdce6D8c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MILOUSDT",
+      "desimal": 9,
+      "sc": "0xd9dE2B1973E57Dc9DBA90c35d6Cd940ae4A3CBe1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MINEUSDT",
+      "desimal": 18,
+      "sc": "0x93713de5e0be3b7FcbD34257b6cadFb4d96e12b1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MINTUSDT",
+      "desimal": 18,
+      "sc": "0x1f3af095cda17d63cad238358837321e95fc5915",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MISTUSDT",
+      "desimal": 18,
+      "sc": "0x68e374f856bf25468d365e539b700b648bf94b67",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MLSUSDT",
+      "desimal": 18,
+      "sc": "0x5F2F6c4C491B690216E0f8Ea753fF49eF4E36ba6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MLTUSDT",
+      "desimal": 18,
+      "sc": "0xb72a20c7b8bd666f80ac053b0f4de20a787080f5",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MMPROUSDT",
+      "desimal": 18,
+      "sc": "0x6067490d05f3cf2fdffc0e353b1f5fd6e5ccdf70",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MMTUSDT",
+      "desimal": 18,
+      "sc": "0xB34966A2A66cb116ebe87b9554c020DcC950E917",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MNZUSDT",
+      "desimal": 18,
+      "sc": "0x861f1E1397daD68289e8f6a09a2ebb567f1B895C",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MOMAUSDT",
+      "desimal": 18,
+      "sc": "0xb72842d6f5fedf91d22d56202802bb9a79c6322e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MONIUSDT",
+      "desimal": 18,
+      "sc": "0x9573c88aE3e37508f87649f87c4dd5373C9F31e0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MOOOUSDT",
+      "desimal": 18,
+      "sc": "0xa0b9bb05da11e3b19ffd64554400f59d4a378515",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MOVEZUSDT",
+      "desimal": 18,
+      "sc": "0x039cD22cb49084142d55FCD4B6096A4F51ffb3B4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MSWAPUSDT",
+      "desimal": 18,
+      "sc": "0xdD5a149740c055bdcdC5C066888f739DBe0bf2d0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MTGUSDT",
+      "desimal": 18,
+      "sc": "0xF1B602fC211e3E2976eF44E4017b764a778197E0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MTRGUSDT",
+      "desimal": 18,
+      "sc": "0xbd2949f67dcdc549c6ebe98696449fa79d988a9f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MTSUSDT",
+      "desimal": 18,
+      "sc": "0x496cC0b4ee12Aa2AC4c42E93067484e7Ff50294b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MURATIAIUSDT",
+      "desimal": 18,
+      "sc": "0x69c2fcae7e30b429166bd616a322e32bec036bcf",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "MYRAUSDT",
+      "desimal": 18,
+      "sc": "0x6ef238E9E8CD2A96740897761C18894Fc086B9d0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NAFTUSDT",
+      "desimal": 18,
+      "sc": "0xd7730681b1dc8f6f969166b29d8a5ea8568616a3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NAOSUSDT",
+      "desimal": 18,
+      "sc": "0x758d08864fb6cce3062667225ca10b8f00496cc2",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NBLUUSDT",
+      "desimal": 18,
+      "sc": "0x6bA5657BBFf83cb579503847C6bAa47295Ef79a8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NBPUSDT",
+      "desimal": 18,
+      "sc": "0x74C22834744E8D5e36c79420Ff7b057964Aba8a7",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NBTUSDT",
+      "desimal": 18,
+      "sc": "0x1d3437e570e93581bd94b2fd8fbf202d4a65654a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NEBLUSDT",
+      "desimal": 18,
+      "sc": "0x5CeaE8dFad98327412C43d6BC767F20bf884D635",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NFEUSDT",
+      "desimal": 18,
+      "sc": "0xf03ca04dd56d695a410f46f14fef4028b22fb79a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NFPUSDT",
+      "desimal": 18,
+      "sc": "0x551897f8203bd131b350601d3ac0679ba0fc0136",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NFTBUSDT",
+      "desimal": 18,
+      "sc": "0xde3dbbe30cfa9f437b293294d1fd64b26045c71a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NFTDUSDT",
+      "desimal": 18,
+      "sc": "0xac83271abb4ec95386f08ad2b904a46c61777cef",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NFTLUSDT",
+      "desimal": 18,
+      "sc": "0xe7f72bc0252ca7b16dbb72eeee1afcdb2429f2dd",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NFTYUSDT",
+      "desimal": 18,
+      "sc": "0x5774B2fc3e91aF89f89141EacF76545e74265982",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NLCUSDT",
+      "desimal": 9,
+      "sc": "0x5f320c3b8f82acfe8f2bb1c85d63aa66a7ff524f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NRVUSDT",
+      "desimal": 18,
+      "sc": "0x42F6f551ae042cBe50C739158b4f0CAC0Edb9096",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NSDXUSDT",
+      "desimal": 18,
+      "sc": "0x417871f0682db63924b931fc16ba3ff40343cdcb",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "NUMUSDT",
+      "desimal": 18,
+      "sc": "0xeceb87cf00dcbf2d4e2880223743ff087a995ad9",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "O3USDT",
+      "desimal": 18,
+      "sc": "0xee9801669c6138e84bd50deb500827b776777d28",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "O4DXUSDT",
+      "desimal": 18,
+      "sc": "0x062ca2d2F1aF8C203FA3Ad5298FD6fAa4E44E897",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "OBIUSDT",
+      "desimal": 18,
+      "sc": "0x69a87c8788d4a48c1362b3b357d0e6b59c11d93f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "OLANDUSDT",
+      "desimal": 18,
+      "sc": "0xB0461d7E8212D311b842A58e9989edE849ac6816",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "OLEUSDT",
+      "desimal": 18,
+      "sc": "0xB7E2713CF55cf4b469B5a8421Ae6Fc0ED18F1467",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "OOEUSDT",
+      "desimal": 18,
+      "sc": "0x8ea5219a16c2dbf1d6335a6aa0c6bd45c50347c5",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "OPAUSDT",
+      "desimal": 18,
+      "sc": "0xA2F89a3be1bAda5Eb9D58D23EDc2E2FE0F82F4b0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "OPNUSDT",
+      "desimal": 18,
+      "sc": "0x53bba8f1d143b8ab80653dc2c1c4ddd49b6c7d8d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "OPSUSDT",
+      "desimal": 18,
+      "sc": "0xDf0121a3bA5C10816eA2943C722650C4A4B0dbE6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "OPULUSDT",
+      "desimal": 18,
+      "sc": "0x686318000d982bc8dcc1cdcf8ffd22322f0960ed",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ORFYUSDT",
+      "desimal": 18,
+      "sc": "0x39f0F4c64c7Ad1Ebb25cfEaFdd221cDEe3084441",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ORIONUSDT",
+      "desimal": 18,
+      "sc": "0x3dcb18569425930954feb191122e574b87f66abd",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "OROUSDT",
+      "desimal": 18,
+      "sc": "0xfc4f5a4d1452b8dc6c3cb745db15b29c00812b19",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ORTBUSDT",
+      "desimal": 8,
+      "sc": "0x9E711221B34A2d4B8F552BD5f4A6C4e7934920f7",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PARAUSDT",
+      "desimal": 18,
+      "sc": "0x076DDcE096C93dcF5D51FE346062bF0Ba9523493",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PATEXUSDT",
+      "desimal": 18,
+      "sc": "0xFD4f2Caf941B6d737382DCe420b368DE3FC7f2D4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PBRUSDT",
+      "desimal": 18,
+      "sc": "0x1D1cB8997570e73949930c01Fe5796C88d7336c6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PBUXUSDT",
+      "desimal": 18,
+      "sc": "0x9d1d4de9cd93203147fac3bc0262a78e3a0e96bb",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PERIUSDT",
+      "desimal": 18,
+      "sc": "0xb49B7e0742EcB4240ffE91661d2A580677460b6A",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PHBUSDT",
+      "desimal": 18,
+      "sc": "0x0409633a72d846fc5bbe2f98d88564d35987904d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PHMUSDT",
+      "desimal": 18,
+      "sc": "0x4399AE7538c33cA24edD4C28C5dd7Ce9a80acF81",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PIGUSDT",
+      "desimal": 9,
+      "sc": "0x8850d2c68c632e3b258e612abaa8fada7e6958e5",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PITUSDT",
+      "desimal": 9,
+      "sc": "0xA57ac35CE91Ee92CaEfAA8dc04140C8e232c2E50",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PIXELVERSEUSDT",
+      "desimal": 18,
+      "sc": "0x47db24e17c0c4622523449a239b3de746e2b0b23",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PIZAUSDT",
+      "desimal": 18,
+      "sc": "0xfc646d0b564bf191b3d3adf2b620a792e485e6da",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PLACEUSDT",
+      "desimal": 18,
+      "sc": "0x07728696eE70A28c9C032926577AF1D524Df30f9",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PLANETUSDT",
+      "desimal": 18,
+      "sc": "0xca6d678e74f553f0e59cccc03ae644a3c2c5ee7d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PLAYUSDT",
+      "desimal": 18,
+      "sc": "0xD069599E718f963bD84502b49ba8F8657fAF5B3a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PLSPADUSDT",
+      "desimal": 18,
+      "sc": "0x8a74bc8c372bc7f0e9ca3f6ac0df51be15aec47a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PMGUSDT",
+      "desimal": 18,
+      "sc": "0x0733618ab62eeec815f2d1739b7a50bf9e74d8a2",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PNLUSDT",
+      "desimal": 18,
+      "sc": "0xB346c52874c7023dF183068c39478C3b7B2515bC",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "POLCUSDT",
+      "desimal": 18,
+      "sc": "0x6ae9701b9c423f40d54556c9a443409d79ce170a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "POOLXUSDT",
+      "desimal": 18,
+      "sc": "0xbAeA9aBA1454DF334943951d51116aE342eAB255",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "POPUSDT",
+      "desimal": 18,
+      "sc": "0x63bc9770ea9a2f21df6cc1224d64d8dec9c61a74",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PORT3USDT",
+      "desimal": 18,
+      "sc": "0xb4357054c3dA8D46eD642383F03139aC7f090343",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PORTOUSDT",
+      "desimal": 8,
+      "sc": "0x49f2145d6366099e13B10FbF80646C0F377eE7f6",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "POSIUSDT",
+      "desimal": 18,
+      "sc": "0x5ca42204cdaa70d5c773946e69de942b85ca6706",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "POTUSDT",
+      "desimal": 18,
+      "sc": "0x4c7b04d50e070848E3c7757995A57624563e0245",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PPADUSDT",
+      "desimal": 18,
+      "sc": "0x93Bb13E90678cCd8BBab07D1dAEF15086746dc9B",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PPTUSDT",
+      "desimal": 18,
+      "sc": "0xdf061250302e5ccae091b18ca2b45914d785f214",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PRIDEUSDT",
+      "desimal": 18,
+      "sc": "0x085D15DB9c7Cd3Df188422f88Ec41ec573D691b9",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PRIMALUSDT",
+      "desimal": 18,
+      "sc": "0xcb5327ed4649548e0d73e70b633cdfd99af6da87",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PRXUSDT",
+      "desimal": 8,
+      "sc": "0x90E3414e00E231B962666Bd94ADB811D5bcD0c2a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PSBUSDT",
+      "desimal": 18,
+      "sc": "0x36bfBb1d5B3C9b336f3D64976599B6020cA805F1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PSGUSDT",
+      "desimal": 18,
+      "sc": "0xbc5609612b7c44bef426de600b5fd1379db2ecf1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PTSUSDT",
+      "desimal": 18,
+      "sc": "0xFA53a4778431712af31a11621eDee4D0926dF1aC",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "desimal": 18,
+      "sc": "0x22b4fa9a13a0d303ad258ee6d62a6ac60364b0c9",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PVUUSDT",
+      "desimal": 18,
+      "sc": "0x31471e0791fcdbe82fbf4c44943255e923f1b794",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PWARUSDT",
+      "desimal": 18,
+      "sc": "0x16153214e683018d5aa318864c8e692b66e16778",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "PZPUSDT",
+      "desimal": 18,
+      "sc": "0x6ad9E9c098a45B2B41b519119C31c3DcB02ACcB2",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "QANXUSDT",
+      "desimal": 18,
+      "sc": "0xaaa9214f675316182eaa21c85f0ca99160cc3aaa",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "QUACKUSDT",
+      "desimal": 9,
+      "sc": "0xd74b782e05aa25c50e7330af541d46e18f36661c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "RACAUSDT",
+      "desimal": 18,
+      "sc": "0x12bb890508c125661e03b09ec06e404bc9289040",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "RAMUSDT",
+      "desimal": 9,
+      "sc": "0x63290fc683d11ea077aba09596ff7387d49df912",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "RANKERUSDT",
+      "desimal": 18,
+      "sc": "0xdE4512Db1a7a7519818dA38DB86eC1363d70A711",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "RDFUSDT",
+      "desimal": 18,
+      "sc": "0xf29CCcC3460506e8F9bc038D4716C05b76b0441e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "RDNTUSDT",
+      "desimal": 18,
+      "sc": "0xf7DE7E8A6bd59ED41a4b5fe50278b3B7f31384dF",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "REALUSDT",
+      "desimal": 18,
+      "sc": "0xE91cd52Bd65fe23A3EAE40E3eB87180E8306399F",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "REALMUSDT",
+      "desimal": 18,
+      "sc": "0x464fdb8affc9bac185a7393fd4298137866dcfb8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "REIGNUSDT",
+      "desimal": 18,
+      "sc": "0xaa88fd757fa81ebbbce0eb1f324172d0e446093e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "RENAUSDT",
+      "desimal": 18,
+      "sc": "0xa9D75Cc3405F0450955050C520843f99Aff8749D",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "REVOUSDT",
+      "desimal": 18,
+      "sc": "0xAab09b5cd1694d12c8c980306f5E2f5d65b00E1C",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "RGAMEUSDT",
+      "desimal": 18,
+      "sc": "0xcbd9f6d748Dd3D19416f8914528A65c7838E27D8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "RITEUSDT",
+      "desimal": 18,
+      "sc": "0x0808bf94d57c905f1236212654268ef82e1e594e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "RJVUSDT",
+      "desimal": 6,
+      "sc": "0x602B6C6ccE5F95c00603bd07D8fA7EbAF3747D44",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ROOMUSDT",
+      "desimal": 18,
+      "sc": "0x3C45A24d36Ab6fc1925533C1F57bC7e1b6fbA8a4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "RTFUSDT",
+      "desimal": 18,
+      "sc": "0xa89e2871A850E0e6fD8F0018eC1fc62FA75440d4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SAFEMARSUSDT",
+      "desimal": 9,
+      "sc": "0x3ad9594151886ce8538c1ff615efa2385a8c3a88",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SAKAIUSDT",
+      "desimal": 18,
+      "sc": "0x43b35e89d15b91162dea1c51133c4c93bdd1c4af",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SANTOSUSDT",
+      "desimal": 8,
+      "sc": "0xA64455a4553C9034236734FadDAddbb64aCE4Cc7",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SAVGUSDT",
+      "desimal": 18,
+      "sc": "0x8c4daef64d4246d0274fe68243fd32bb8d5707e5",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SCLPUSDT",
+      "desimal": 18,
+      "sc": "0xF2c96E402c9199682d5dED26D3771c6B192c01af",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SCTUSDT",
+      "desimal": 18,
+      "sc": "0x405e7454E71AEfe8897438ADc08E3f3e6d49Dfc1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SDAOUSDT",
+      "desimal": 18,
+      "sc": "0x90Ed8F1dc86388f14b64ba8fb4bbd23099f18240",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SEILORUSDT",
+      "desimal": 18,
+      "sc": "0xe29142e14e52bdfbb8108076f66f49661f10ec10",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SEROUSDT",
+      "desimal": 18,
+      "sc": "0x1702EC380e924B0E12d5C2e838B6b91A1fB3A052",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SERSHUSDT",
+      "desimal": 18,
+      "sc": "0x84affeef925cdce87f8a99b7b2e540da5140fc09",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SFMUSDT",
+      "desimal": 9,
+      "sc": "0x42981d0bfbaf196529376ee702f2a9eb9092fcb5",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SFPUSDT",
+      "desimal": 18,
+      "sc": "0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SFTYUSDT",
+      "desimal": 18,
+      "sc": "0xE9d6d6D7CDE5C7d45927F8c37460d932E612C902",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SFUNDUSDT",
+      "desimal": 18,
+      "sc": "0x477bc8d23c634c154061869478bce96be6045d12",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SHIUSDT",
+      "desimal": 18,
+      "sc": "0x7269d98af4aa705e0b1a5d8512fadb4d45817d5a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SHILLUSDT",
+      "desimal": 18,
+      "sc": "0xfb9C339b4BacE4Fe63ccc1dd9a3c3C531441D5fE",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SHOPNEXTUSDT",
+      "desimal": 18,
+      "sc": "0xa6C59dE838F1eeb82d86F5AF0750f5F656439999",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SINUSDT",
+      "desimal": 18,
+      "sc": "0x6397de0F9aEDc0F7A8Fa8B438DDE883B9c201010",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SISUSDT",
+      "desimal": 18,
+      "sc": "0xF98b660AdF2ed7d9d9D9dAACC2fb0CAce4F21835",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SKILLUSDT",
+      "desimal": 18,
+      "sc": "0x154a9f9cbd3449ad22fdae23044319d6ef2a1fab",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SLKUSDT",
+      "desimal": 18,
+      "sc": "0x3dbf8bAbF260Be2A6221dc6Fb1c4074a44B58562",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SMILEUSDT",
+      "desimal": 18,
+      "sc": "0xeba6a22ba57994b6600671ec9ec8389272cbe71d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SMTYUSDT",
+      "desimal": 18,
+      "sc": "0xbF776e4FCa664D791C4Ee3A71e2722990E003283",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SMXUSDT",
+      "desimal": 8,
+      "sc": "0x8c6149aaea8161e2015fa563040a916e90d16dca",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SNUSDT",
+      "desimal": 18,
+      "sc": "0x939Dd9E433552e325D78C33a16EF4cD8004D2F9C",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SNFTUSDT",
+      "desimal": 18,
+      "sc": "0x4F8C689f2E17bA5ff0bAf4A7dd1C7493902DaC37",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SNMUSDT",
+      "desimal": 18,
+      "sc": "0x46d0DAc0926fa16707042CAdC23F1EB4141fe86B",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SOPHUSDT",
+      "desimal": 18,
+      "sc": "0x73fbd93bfda83b111ddc092aa3a4ca77fd30d380",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SPAYUSDT",
+      "desimal": 18,
+      "sc": "0x13A637026dF26F846D55ACC52775377717345c06",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SPELLFIREUSDT",
+      "desimal": 18,
+      "sc": "0xd6f28f15a5cafc8d29556393c08177124b88de0d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SPHRIUSDT",
+      "desimal": 18,
+      "sc": "0x8ea93d00cc6252e2bd02a34782487eed65738152",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SPOUSDT",
+      "desimal": 18,
+      "sc": "0x8357c604c5533fa0053beaaa1494da552cea38f7",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SPSUSDT",
+      "desimal": 18,
+      "sc": "0x1633b7157e7638C4d6593436111Bf125Ee74703F",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SQRUSDT",
+      "desimal": 18,
+      "sc": "0x2b72867c32cf673f7b02d208b26889fed353b1f8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SQUADUSDT",
+      "desimal": 18,
+      "sc": "0x724A32dFFF9769A0a0e1F0515c0012d1fB14c3bd",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SQUIDUSDT",
+      "desimal": 18,
+      "sc": "0x87230146E138d3F296a9a77e497A2A83012e9Bc5",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SQUIDGROWUSDT",
+      "desimal": 18,
+      "sc": "0x88479186BAC914E4313389a64881F5ed0153C765",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SRGUSDT",
+      "desimal": 18,
+      "sc": "0x722f41f6511ff7cda73a1cb0a9ea2f731738c4a0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SRKUSDT",
+      "desimal": 18,
+      "sc": "0xc3440c10c4f36f354eb591b19fafb4906d449b75",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SRPUSDT",
+      "desimal": 18,
+      "sc": "0xcb2B25e783A414f0d20A65aFa741C51b1Ad84c49",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "STBUUSDT",
+      "desimal": 18,
+      "sc": "0xb0c4080a8Fa7afa11a09473f3be14d44AF3f8743",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "STCHAINUSDT",
+      "desimal": 18,
+      "sc": "0x19ae49b9f38dd836317363839a5f6bfbfa7e319a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "STIUSDT",
+      "desimal": 10,
+      "sc": "0x4f5f7a7dca8ba0a7983381d23dfc5eaf4be9c79a",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "STOREUSDT",
+      "desimal": 18,
+      "sc": "0x65d9033cff96782394dab5dbef17fa771bbe1732",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "STRMUSDT",
+      "desimal": 18,
+      "sc": "0xC598275452fA319d75ee5f176FD3B8384925b425",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SUGARBUSDT",
+      "desimal": 18,
+      "sc": "0x40f906e19b14100d5247686e08053c4873c66192",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SUPEUSDT",
+      "desimal": 18,
+      "sc": "0xb972c4027818223bb7b9399b3ca3ca58186e1590",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SWOUSDT",
+      "desimal": 18,
+      "sc": "0xfab178ec82e29761f79565f260c1b1e8fead566e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "SXPUSDT",
+      "desimal": 18,
+      "sc": "0x47BEAd2563dCBf3bF2c9407fEa4dC236fAbA485A",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "T23USDT",
+      "desimal": 18,
+      "sc": "0x897f2be515373cf1f899d864b5be2bd5efd4e653",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TABOOUSDT",
+      "desimal": 9,
+      "sc": "0x9abdba20edfba06b782126b4d8d72a5853918fd0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TAPUSDT",
+      "desimal": 18,
+      "sc": "0x35bEdBF9291b22218a0dA863170dcC9329Ef2563",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TEDDYUSDT",
+      "desimal": 18,
+      "sc": "0xDB79c12d1d0670988A39B0E48b96e955eF922d24",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "THGUSDT",
+      "desimal": 18,
+      "sc": "0x9fd87aefe02441b123c3c32466cd9db4c578618f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TIFIUSDT",
+      "desimal": 18,
+      "sc": "0x17E65E6b9B166Fb8e7c59432F0db126711246BC0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TIMECHRONOUSDT",
+      "desimal": 8,
+      "sc": "0x3b198e26E473b8faB2085b37978e36c9DE5D7f68",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TITAUSDT",
+      "desimal": 18,
+      "sc": "0x0c1253a30da9580472064a91946c5ce0C58aCf7f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TKOUSDT",
+      "desimal": 18,
+      "sc": "0x9f589e3eabe42ebc94a44727b3f3531c0c877809",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TLOSUSDT",
+      "desimal": 18,
+      "sc": "0xb6c53431608e626ac81a9776ac3e999c5556717c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TOKENUSDT",
+      "desimal": 9,
+      "sc": "0x4507cef57c46789ef8d1a19ea45f4216bae2b528",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TOOLSUSDT",
+      "desimal": 18,
+      "sc": "0x1311b352467d2B5c296881BaDEA82850bcd8f886",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TOXUSDT",
+      "desimal": 18,
+      "sc": "0x837656c3f5858692ccdce13ba66e09d2685073df",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TPTUSDT",
+      "desimal": 4,
+      "sc": "0xeca41281c24451168a37211f0bc2b8645af45092",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TRADEUSDT",
+      "desimal": 18,
+      "sc": "0x6ba7a8f9063c712c1c8cabc776b1da7126805f3b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TRIASUSDT",
+      "desimal": 18,
+      "sc": "0xa4838122c683f732289805fc3c207febd55babdd",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TROSSUSDT",
+      "desimal": 18,
+      "sc": "0xb88bb087144c1bacbfd585ad1fca832964f04526",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TRRUSDT",
+      "desimal": 18,
+      "sc": "0xbB95cc1c662D89822bda29D2e147B124406e6e42",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TRVLUSDT",
+      "desimal": 18,
+      "sc": "0x6a8Fd46F88dBD7bdC2D536C604f811C63052ce0F",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TTKUSDT",
+      "desimal": 18,
+      "sc": "0x39703A67bAC0E39f9244d97f4c842D15Fbad9C1f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TWTUSDT",
+      "desimal": 18,
+      "sc": "0x4b0f1812e5df2a09796481ff14017e6005508003",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TX20USDT",
+      "desimal": 18,
+      "sc": "0x29838b8c8b7cd6f0698c2fd6feaf0363d2cb6da1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "TYPEUSDT",
+      "desimal": 18,
+      "sc": "0xd9a44c40584288505931880c9915C6a5eB5f2fB1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "UBXSUSDT",
+      "desimal": 6,
+      "sc": "0x4f1960E29b2cA581a38c5c474e123f420F8092db",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "UFIUSDT",
+      "desimal": 18,
+      "sc": "0xe2a59d5e33c6540e18aaa46bf98917ac3158db0d",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "UNOUSDT",
+      "desimal": 18,
+      "sc": "0x474021845c4643113458ea4414bdb7fb74a01a77",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "UNTUSDT",
+      "desimal": 18,
+      "sc": "0x0f6d3353914caafe18ab0c835a789afc886e7039",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "URUSUSDT",
+      "desimal": 18,
+      "sc": "0xc6DdDB5bc6E61e0841C54f3e723Ae1f3A807260b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "USDDUSDT",
+      "desimal": 18,
+      "sc": "0xd17479997f34dd9156deef8f95a52d81d265be9c",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VCUSDT",
+      "desimal": 18,
+      "sc": "0x2bf83d080d8bc4715984e75e5b3d149805d11751",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VENTUSDT",
+      "desimal": 18,
+      "sc": "0x872d068c25511be88c1f5990c53eeffcdf46c9b4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VERAUSDT",
+      "desimal": 18,
+      "sc": "0x4a0a3902e091cdb3aec4279a6bfac50297f0a79e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VIAUSDT",
+      "desimal": 18,
+      "sc": "0x21ac3bB914f90A2Bb1a16088E673a9fdDa641434",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VIDYXUSDT",
+      "desimal": 18,
+      "sc": "0x7a16175098Fbb7E5Eb304DfD29Fe232eFe54F8fC",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VINUUSDT",
+      "desimal": 18,
+      "sc": "0xfEbe8C1eD424DbF688551D4E2267e7A53698F0aa",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VIZUSDT",
+      "desimal": 18,
+      "sc": "0xce237db5a3458f1250a553cf395c9c3cf658b3d1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VLXUSDT",
+      "desimal": 18,
+      "sc": "0xe9c803f48dffe50180bd5b01dc04da939e3445fc",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VLXPADUSDT",
+      "desimal": 18,
+      "sc": "0xb8e3bb633f7276cc17735d86154e0ad5ec9928c0",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VMTUSDT",
+      "desimal": 18,
+      "sc": "0xE615C5e7219f9801C3b75bc76E45a4dab3c38e51",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VOLTUSDT",
+      "desimal": 9,
+      "sc": "0x7f792db54B0e580Cdc755178443f0430Cf799aCa",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VPRUSDT",
+      "desimal": 18,
+      "sc": "0xb96d0f29a0ac9af4a32835e90ec6531389765089",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VRTUSDT",
+      "desimal": 18,
+      "sc": "0x5F84ce30DC3cF7909101C69086c50De191895883",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "VTGUSDT",
+      "desimal": 18,
+      "sc": "0x8de5aA37a7C40A53062EAD382b8EEAD3B08a7A46",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WAGYUUSDT",
+      "desimal": 18,
+      "sc": "0x7fa7df4996ac59f398476892cfb195ed38543520",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WALVUSDT",
+      "desimal": 18,
+      "sc": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WAMUSDT",
+      "desimal": 18,
+      "sc": "0xebbaeff6217d22e7744394061d874015709b8141",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WAXLUSDT",
+      "desimal": 6,
+      "sc": "0x8b1f4432f943c465a973fedc6d7aa50fc96f1f65",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WBIRDUSDT",
+      "desimal": 18,
+      "sc": "0x9f7277778c798ef0bc1debf28994eaec1af7ba24",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WEARUSDT",
+      "desimal": 18,
+      "sc": "0x9d39eF3bbCA5927909dde44476656B81BBe4eE75",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WEXUSDT",
+      "desimal": 18,
+      "sc": "0xa9c41a46a6b3531d28d5c32f6633dd2ff05dfb90",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WKCUSDT",
+      "desimal": 18,
+      "sc": "0x6ec90334d89dbdc89e08a133271be3d104128edb",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WNDRUSDT",
+      "desimal": 8,
+      "sc": "0xDfd7b0dD7Bf1012DfDf3307a964c36b972300Ac8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WOOUSDT",
+      "desimal": 18,
+      "sc": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WOOPUSDT",
+      "desimal": 18,
+      "sc": "0x8b303d5bbfbbf46f1a4d9741e491e06986894e18",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WORKUSDT",
+      "desimal": 18,
+      "sc": "0x8888888837f84a7a82668e0320ac454f5945d0b9",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WRTUSDT",
+      "desimal": 18,
+      "sc": "0x5f0555c465634c5311cB2313Ff891E5A2A29fFf1",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WRXUSDT",
+      "desimal": 8,
+      "sc": "0x8e17ed70334c87ece574c9d537bc153d8609e2a3",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WSGUSDT",
+      "desimal": 18,
+      "sc": "0xa58950f05fea2277d2608748412bf9f802ea4901",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WSIUSDT",
+      "desimal": 18,
+      "sc": "0x837A130aED114300Bab4f9f1F4f500682f7efd48",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WWYUSDT",
+      "desimal": 18,
+      "sc": "0x9ab70e92319f0b9127df78868fd3655fb9f1e322",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WZMUSDT",
+      "desimal": 18,
+      "sc": "0x15A73d61C015a3c6d3f2187F4A316ae1eCEFd41f",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "WZRDUSDT",
+      "desimal": 18,
+      "sc": "0xFa40d8FC324bcdD6Bbae0e086De886c571C225d4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XCADUSDT",
+      "desimal": 18,
+      "sc": "0xa026Ad2ceDa16Ca5FC28fd3C72f99e2C332c8a26",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XCNUSDT",
+      "desimal": 18,
+      "sc": "0x7324c7C0d95CEBC73eEa7E85CbAac0dBdf88a05b",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XCURUSDT",
+      "desimal": 18,
+      "sc": "0xd52669712f253CD6b2Fe8A8638F66ed726cb770C",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XCVUSDT",
+      "desimal": 18,
+      "sc": "0x4be63a9b26ee89b9a3a13fd0aa1d0b2427c135f8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XILUSDT",
+      "desimal": 18,
+      "sc": "0xf3bE1A4a47576208C1592Cc027087CE154B00672",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XMARKUSDT",
+      "desimal": 18,
+      "sc": "0x26a5dfab467d4f58fb266648cae769503cec9580",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XNFTUSDT",
+      "desimal": 18,
+      "sc": "0xe7f04e0fbde4b16feb4a67747133f251e4dbccd7",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XNLUSDT",
+      "desimal": 18,
+      "sc": "0x5f26fa0c2ee5d3c0323d861d0c503f31ac212662",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XPNETUSDT",
+      "desimal": 18,
+      "sc": "0x8cf8238abf7b933Bf8BB5Ea2C7E4Be101c11de2A",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XPRUSDT",
+      "desimal": 18,
+      "sc": "0x5de3939b2f811a61d830e6f52d13b066881412ab",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XPRESSUSDT",
+      "desimal": 18,
+      "sc": "0xaa9826732f3a4973ff8b384b3f4e3c70c2984651",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XVSUSDT",
+      "desimal": 18,
+      "sc": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "XWGUSDT",
+      "desimal": 18,
+      "sc": "0x6b23c89196deb721e6fd9726e6c76e4810a464bc",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "Y8UUSDT",
+      "desimal": 18,
+      "sc": "0x991b4ce57864060115700d6fc05c7780346a15ac",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "YCTUSDT",
+      "desimal": 18,
+      "sc": "0x23e3981052d5280c658e5e18d814fa9582bfbc9e",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "YINUSDT",
+      "desimal": 18,
+      "sc": "0x794Baab6b878467F93EF17e2f2851ce04E3E34C8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "YOOSHIUSDT",
+      "desimal": 9,
+      "sc": "0x02ff5065692783374947393723dba9599e59f591",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "YOURAIUSDT",
+      "desimal": 18,
+      "sc": "0x27f16d9a5095b763baeadd7dd78e83288af29cf4",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ZAMUSDT",
+      "desimal": 18,
+      "sc": "0xBbcF57177D8752B21d080bf30a06CE20aD6333F8",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ZBUUSDT",
+      "desimal": 18,
+      "sc": "0x4d3dc895a9edb234dfa3e303a196c009dc918f84",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ZIGUSDT",
+      "desimal": 18,
+      "sc": "0x8C907e0a72C3d55627E853f4ec6a96b0C8771145",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ZIXUSDT",
+      "desimal": 18,
+      "sc": "0x48077400faf11183c043feb5184a13ea628bb0db",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ZKUSDT",
+      "desimal": 18,
+      "sc": "0xC71B5F631354BE6853eFe9C3Ab6b9590F8302e81",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ZLWUSDT",
+      "desimal": 18,
+      "sc": "0x5dd1E31E1a0e2E077aC98d2a4b781F418ca50387",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ZODIUSDT",
+      "desimal": 18,
+      "sc": "0x0cca2f5561bb0fca88e5b9b48b7fbf000349c357",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ZOONUSDT",
+      "desimal": 18,
+      "sc": "0x9d173e6c594f479b4d47001f8e6a95a7adda42bc",
+      "wd": 0,
+     "status": true
+    },
+    {
+      "symbol": "ZOONUSDT",
+      "desimal": 18,
+      "sc": "0x9d173e6c594f479b4d47001f8e6a95a7adda42bc",
+      "wd": 0,
+     "status": true
+    }
+  ]
+ 
 }
