@@ -632,13 +632,7 @@
     "wd": 0,
    "status": true
   },
-  {
-    "symbol": "ADAPAD_USDT",
-    "desimal": 18,
-    "sc": "0xDB0170e2d0c1CC1b2E7a90313d9B9afA4f250289",
-    "wd": 0,
-   "status": true
-  },
+
   {
     "symbol": "AGI_USDT",
     "desimal": 18,
@@ -824,13 +818,7 @@
    "status": true
   },
   
-  {
-    "symbol": "ASTRO_USDT",
-    "desimal": 18,
-    "sc": "0x72eb7ca07399ec402c5b7aa6a65752b6a1dc0c27",
-    "wd": 0,
-   "status": true
-  },
+
   {
     "symbol": "ATA_USDT",
     "desimal": 18,
@@ -845,13 +833,7 @@
     "wd": 0,
    "status": true
   },
-  {
-    "symbol": "ATEAM_USDT",
-    "desimal": 18,
-    "sc": "0x44Ece1031e5b5e2D9169546cC10EA5C95BA96237",
-    "wd": 0,
-   "status": true
-  },
+
   {
     "symbol": "ATEM_USDT",
     "desimal": 18,
@@ -958,14 +940,7 @@
     "wd": 0,
    "status": true
   },
- 
-  {
-    "symbol": "BIN_USDT",
-    "desimal": 18,
-    "sc": "0xe56842ed550ff2794f010738554db45e60730371",
-    "wd": 0,
-   "status": true
-  },
+
   {
     "symbol": "BLIN_USDT",
     "desimal": 8,
@@ -1310,13 +1285,7 @@
     "wd": 0,
    "status": true
   },
-  {
-    "symbol": "CSIX_USDT",
-    "desimal": 18,
-    "sc": "0x04756126F044634C9a0f0E985e60c88a51ACC206",
-    "wd": 0,
-   "status": true
-  },
+ 
   {
     "symbol": "CTG_USDT",
     "desimal": 18,
@@ -1895,13 +1864,7 @@
     "wd": 0,
    "status": true
   },
-  {
-    "symbol": "GINUX_USDT",
-    "desimal": 18,
-    "sc": "0xc9ad37e9baf41377540df5a77831db98c1915128",
-    "wd": 0,
-   "status": true
-  },
+
   {
     "symbol": "GMM_USDT",
     "desimal": 18,
@@ -2030,13 +1993,7 @@
     "wd": 0,
    "status": true
   },
-  {
-    "symbol": "GZONE_USDT",
-    "desimal": 18,
-    "sc": "0xb6adb74efb5801160ff749b1985fd3bd5000e938",
-    "wd": 0,
-   "status": true
-  },
+
   
   {
     "symbol": "HAPI_USDT",
@@ -2745,13 +2702,7 @@
     "wd": 0,
    "status": true
   },
-  {
-    "symbol": "NFTL_USDT",
-    "desimal": 18,
-    "sc": "0xe7f72bc0252ca7b16dbb72eeee1afcdb2429f2dd",
-    "wd": 0,
-   "status": true
-  },
+
   {
     "symbol": "NFTY_USDT",
     "desimal": 18,
