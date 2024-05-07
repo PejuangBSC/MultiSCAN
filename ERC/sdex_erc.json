@@ -665,6 +665,13 @@
     "wd": 0,
     "status": true
   },
+ {
+    "symbol": "STOX_USDT",
+    "sc": "0x006BeA43Baa3f7A6f765F14f10A1a1b08334EF45",
+    "desimal": 18,
+    "wd": 0,
+    "status": true
+  },
   {
     "symbol": "ASM_USDT",
     "sc": "0x2565ae0385659badCada1031DB704442E1b69982",
