@@ -714,7 +714,7 @@
   },
   {
     "symbol": "ALPINE_USDT",
-    "desimal": 18,
+    "desimal": 8,
     "sc": "0x287880Ea252b52b63Cc5f40a2d3E5A44aa665a76",
     "wd": 0,
    "status": true
