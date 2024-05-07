@@ -3839,7 +3839,7 @@
   },
   {
     "symbol": "XCUR_USDT",
-    "desimal": 18,
+    "desimal": 8,
     "sc": "0xd52669712f253CD6b2Fe8A8638F66ed726cb770C",
     "wd": 0,
    "status": true
