@@ -3991,13 +3991,7 @@
     "wd": 0,
    "status": true
   },
-  {
-    "symbol": "ZODI_USDT",
-    "desimal": 18,
-    "sc": "0x0cca2f5561bb0fca88e5b9b48b7fbf000349c357",
-    "wd": 0,
-   "status": true
-  },
+ 
   {
     "symbol": "ZOON_USDT",
     "desimal": 18,
