@@ -1010,13 +1010,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "ASTRA_USDT",
-    "desimal": 18,
-    "sc": "0x201332Bd45c8628D814F870bFb584B385A7C351e",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "ASW_USDT",
     "desimal": 18,
@@ -1347,13 +1341,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "BOA_USDT",
-    "desimal": 7,
-    "sc": "0x746dda2ea243400d5a63e0700f190ab79f06489e",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "BRCT_USDT",
     "desimal": 18,
@@ -1690,13 +1678,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "CS_USDT",
-    "desimal": 6,
-    "sc": "0x46b9ad944d1059450da1163511069c718f699d31",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "CTC_USDT",
     "desimal": 18,
@@ -2147,13 +2129,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "EMPIRE_USDT",
-    "desimal": 9,
-    "sc": "0x9A2Af0AbB12bee5369B180976Be01E8c80D0e7B6",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "ENA_USDT",
     "desimal": 18,
@@ -2161,13 +2137,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "ENJ_USDT",
-    "desimal": 18,
-    "sc": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "ENS_USDT",
     "desimal": 18,
@@ -2482,13 +2452,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "FTI_USDT",
-    "desimal": 18,
-    "sc": "0x943ed852dadb5c3938ecdc6883718df8142de4c8",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "FTM_USDT",
     "desimal": 18,
@@ -2948,13 +2912,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "INK_USDT",
-    "desimal": 9,
-    "sc": "0xf4c90e18727C5C76499eA6369C856A6d61D3E92E",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "INSP_USDT",
     "desimal": 18,
@@ -3138,13 +3096,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "KISHU_USDT",
-    "desimal": 9,
-    "sc": "0xa2b4c0af19cc16a6cfacce81f192b024d625817d",
-    "star": 0,
-    "status": true
-  },
+  
   
   {
     "symbol": "KOK_USDT",
@@ -3454,13 +3406,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "MAN_USDT",
-    "desimal": 18,
-    "sc": "0xe25bCec5D3801cE3a794079BF94adF1B8cCD802D",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "MANA_USDT",
     "desimal": 18,
@@ -3806,13 +3752,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "NBOT_USDT",
-    "desimal": 18,
-    "sc": "0x09Ccd2DA5dCDd0510268d4979e792381337138b8",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "NBT_USDT",
     "desimal": 18,
@@ -4018,13 +3958,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "OCN_USDT",
-    "desimal": 18,
-    "sc": "0x4092678e4E78230F46A1534C0fbc8fA39780892B",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "ODDZ_USDT",
     "desimal": 18,
@@ -4216,13 +4150,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "ORT_USDT",
-    "desimal": 18,
-    "sc": "0x5c59a5B139B0538CB106D775a022caD98Dd14b5a",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "OSKY_USDT",
     "desimal": 18,
@@ -4414,13 +4342,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "PHM_USDT",
-    "desimal": 18,
-    "sc": "0x3F9BEC82c776c47405BcB38070d2395Fd18F89d3",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "PHTR_USDT",
     "desimal": 18,
@@ -4627,13 +4549,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "PST_USDT",
-    "desimal": 18,
-    "sc": "0x5d4abc77b8405ad177d8ac6682d584ecbfd46cec",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "PSTAKE_USDT",
     "desimal": 18,
@@ -4850,13 +4766,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "RENBTC_USDT",
-    "desimal": 8,
-    "sc": "0xeb4c2781e4eba804ce9a9803c67d0893436bb27d",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "REQ_USDT",
     "desimal": 18,
