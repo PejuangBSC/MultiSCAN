@@ -1767,13 +1767,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "DC_USDT",
-    "desimal": 18,
-    "sc": "0x7b4328c127b85369d9f82ca0503b000d09cf9180",
-    "star": 0,
-    "status": true
-  },
+
   {
     "symbol": "DDOS_USDT",
     "desimal": 18,
@@ -4571,13 +4565,6 @@
   },
  
   {
-    "symbol": "QWAN_USDT",
-    "desimal": 18,
-    "sc": "0xeee0fe52299f2de8e2ed5111cd521ab67dcf0faf",
-    "star": 0,
-    "status": true
-  },
-  {
     "symbol": "RAD_USDT",
     "desimal": 18,
     "sc": "0x31c8eacbffdd875c74b94b077895bd78cf1e64a3",
@@ -5371,13 +5358,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "TCT_USDT",
-    "desimal": 18,
-    "sc": "0x4824A7b64E3966B0133f4f4FFB1b9D6bEb75FFF7",
-    "star": 0,
-    "status": true
-  },
+
   {
     "symbol": "TET_USDT",
     "desimal": 8,
@@ -5912,13 +5893,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "WSM_USDT",
-    "desimal": 18,
-    "sc": "0xb62e45c3df611dce236a6ddc7a493d79f9dfadef",
-    "star": 0,
-    "status": true
-  },
+
   {
     "symbol": "WWY_USDT",
     "desimal": 18,
@@ -6057,21 +6032,8 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "YIN_USDT",
-    "desimal": 18,
-    "sc": "0x794Baab6b878467F93EF17e2f2851ce04E3E34C8",
-    "star": 0,
-    "status": true
-  },
 
-  {
-    "symbol": "ZBU_USDT",
-    "desimal": 18,
-    "sc": "0x8f9b4525681F3Ea6E43b8E0a57BFfF86c0A1dd2e",
-    "star": 0,
-    "status": true
-  },
+
   {
     "symbol": "ZCN_USDT",
     "desimal": 10,
@@ -6145,4 +6107,5 @@
     "status": true
   }
 ]
+
 }
