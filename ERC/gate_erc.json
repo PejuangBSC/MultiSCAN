@@ -1320,13 +1320,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "BNB_USDT",
-    "desimal": 18,
-    "sc": "0xB8c77482e45F1F44dE1745F52C74426C631bDD52",
-    "star": 0,
-    "status": true
-  },
+
   {
     "symbol": "BNT_USDT",
     "desimal": 18,
@@ -1948,13 +1942,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "DOCK_USDT",
-    "desimal": 18,
-    "sc": "0xE5Dada80Aa6477e85d09747f2842f7993D0Df71C",
-    "star": 0,
-    "status": true
-  },
+
   {
     "symbol": "DOGE2_USDT",
     "desimal": 9,
@@ -5625,13 +5613,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "TUNE_USDT",
-    "desimal": 18,
-    "sc": "0x1Fac00CceE478eCeD6A120a50Ed2Ab28EE7FE32b",
-    "star": 0,
-    "status": true
-  },
+
   {
     "symbol": "TURBO_USDT",
     "desimal": 18,
@@ -6106,13 +6088,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "XCHNG_USDT",
-    "desimal": 18,
-    "sc": "0xb712d62fe84258292d1961b5150a19bc4ab49026",
-    "star": 0,
-    "status": true
-  },
+\
   {
     "symbol": "XCN_USDT",
     "desimal": 18,
