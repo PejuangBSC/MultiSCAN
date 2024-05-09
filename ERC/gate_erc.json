@@ -761,13 +761,7 @@
     "status": true
   },
 
-  {
-    "symbol": "AIT_USDT",
-    "desimal": 18,
-    "sc": "0x89d584a1edb3a70b3b07963f9a3ea5399e38b136",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "AKITA_USDT",
     "desimal": 18,
@@ -4060,13 +4054,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "OPTIMUS_USDT",
-    "desimal": 9,
-    "sc": "0x562e362876c8aee4744fc2c6aac8394c312d215d",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "OPUL_USDT",
     "desimal": 18,
@@ -4360,13 +4348,7 @@
     "status": true
   },
   
-  {
-    "symbol": "PIZA_USDT",
-    "desimal": 18,
-    "sc": "0x350ca33E2c75269A220c75D337E9B9AB177FA269",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "PKF_USDT",
     "desimal": 18,
@@ -4374,13 +4356,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "PLA_USDT",
-    "desimal": 18,
-    "sc": "0x3a4f40631a4f906c2BaD353Ed06De7A5D3fCb430",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "PLANET_USDT",
     "desimal": 18,
@@ -5275,13 +5251,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "STORE_USDT",
-    "desimal": 18,
-    "sc": "0x31ea0de8119307aA264Bb4b38727aAb4E36b074f",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "STORJ_USDT",
     "desimal": 8,
@@ -5408,13 +5378,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "SYNC_USDT",
-    "desimal": 9,
-    "sc": "0xa41d2f8ee4f47d3b860a149765a7df8c3287b7f0",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "T_USDT",
     "desimal": 18,
@@ -5451,13 +5415,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "THALES_USDT",
-    "desimal": 18,
-    "sc": "0x8947da500Eb47F82df21143D0C01A29862a8C3c5",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "THE_USDT",
     "desimal": 18,
@@ -5472,20 +5430,8 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "THETA_USDT",
-    "desimal": 18,
-    "sc": "0x3883f5e181fccaF8410FA61e12b59BAd963fb645",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "THN_USDT",
-    "desimal": 18,
-    "sc": "0x2e95cea14dd384429eb3c4331b776c4cfbb6fcd9",
-    "star": 0,
-    "status": true
-  },
+ 
+  
   {
     "symbol": "TIDAL_USDT",
     "desimal": 18,
@@ -5523,9 +5469,9 @@
   },
   
   {
-    "symbol": "TOMS_USDT",
+    "symbol": "TRACE_USDT",
     "desimal": 18,
-    "sc": "0xbe9ab37a414c517b2be2bfa5945665bb07379054",
+    "sc": "0x9F7fC686CfD64aA5Ae15b351d03071e91533094b",
     "star": 0,
     "status": true
   },
@@ -5536,13 +5482,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "TRACE_USDT",
-    "desimal": 18,
-    "sc": "0x9F7fC686CfD64aA5Ae15b351d03071e91533094b",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "TRADE_USDT",
     "desimal": 18,
@@ -5642,13 +5582,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "UDS_USDT",
-    "desimal": 18,
-    "sc": "0x712bd4beb54c6b958267d9db0259abdbb0bff606",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "UFO_USDT",
     "desimal": 18,
@@ -5747,13 +5681,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "UPC_USDT",
-    "desimal": 5,
-    "sc": "0x487d62468282bd04ddf976631c23128a425555ee",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "UPI_USDT",
     "desimal": 18,
@@ -5813,13 +5741,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "VENT_USDT",
-    "desimal": 18,
-    "sc": "0x5F0bc16D50F72d10b719dBF6845DE2E599eb5624",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "VERA_USDT",
     "desimal": 18,
@@ -5906,13 +5828,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "WATT_USDT",
-    "desimal": 4,
-    "sc": "0xE67F943af5Eb6051ef56f05979cc30B732717fa6",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "WAVES_USDT",
     "desimal": 18,
@@ -5990,13 +5906,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "WOM_USDT",
-    "desimal": 18,
-    "sc": "0xbd356a39bff2cada8e9248532dd879147221cf76",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "WOO_USDT",
     "desimal": 18,
@@ -6060,20 +5970,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "WZM_USDT",
-    "desimal": 18,
-    "sc": "0xD15A1A2A3211b58113e45809f05934252E34e2F8",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "XAR_USDT",
-    "desimal": 18,
-    "sc": "0x5027fc44a7ba114b8f494b1e4970900c6652fedf",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "XAUT_USDT",
     "desimal": 6,
@@ -6285,5 +6182,5 @@
     "status": true
   }
 ]
-
+ 
 }
