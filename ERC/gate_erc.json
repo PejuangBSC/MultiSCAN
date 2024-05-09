@@ -1264,13 +1264,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "BLENDR_USDT",
-    "desimal": 18,
-    "sc": "0x84018071282d4b2996272659d9c01cb08dd7327f",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "BLES_USDT",
     "desimal": 18,
@@ -3737,13 +3731,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "NERD_USDT",
-    "desimal": 18,
-    "sc": "0xed1273928ba97eed7b49e82c2f39d512d7591112",
-    "star": 0,
-    "status": true
-  },
+  
   
   {
     "symbol": "NEXO_USDT",
@@ -4165,13 +4153,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "PAAL_USDT",
-    "desimal": 9,
-    "sc": "0x14feE680690900BA0ccCfC76AD70Fd1b95D10e16",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "PACE_USDT",
     "desimal": 18,
@@ -5456,13 +5438,6 @@
     "status": true
   },
   
-  {
-    "symbol": "TRACE_USDT",
-    "desimal": 18,
-    "sc": "0x9F7fC686CfD64aA5Ae15b351d03071e91533094b",
-    "star": 0,
-    "status": true
-  },
   {
     "symbol": "TRACAI_USDT",
     "desimal": 18,
