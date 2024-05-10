@@ -1527,13 +1527,6 @@
   },
  
   {
-    "symbol": "COFIX_USDT",
-    "desimal": 18,
-    "sc": "0x1a23a6bfbadb59fa563008c0fb7cf96dfcf34ea1",
-    "star": 0,
-    "status": true
-  },
-  {
     "symbol": "COMBO_USDT",
     "desimal": 18,
     "sc": "0xc03fbf20a586fa89c2a5f6f941458e1fbc40c661",
@@ -2697,13 +2690,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "HAI_USDT",
-    "desimal": 8,
-    "sc": "0x05Fb86775Fd5c16290f1E838F5caaa7342bD9a63",
-    "star": 0,
-    "status": true
-  },
+  
   
   {
     "symbol": "HEART_USDT",
@@ -5541,13 +5528,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "ULU_USDT",
-    "desimal": 18,
-    "sc": "0x035bfe6057e15ea692c0dfdcab3bb41a64dd2ad4",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "UMA_USDT",
     "desimal": 18,
@@ -5794,20 +5775,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "WBTC_USDT",
-    "desimal": 8,
-    "sc": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WEETH_USDT",
-    "desimal": 18,
-    "sc": "0xCd5fE23C85820F7B72D0926FC9b05b43E359b7ee",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "WFAI_USDT",
     "desimal": 18,
@@ -5946,13 +5914,6 @@
     "status": true
   },
 
-  {
-    "symbol": "XMARK_USDT",
-    "desimal": 18,
-    "sc": "0x36b679bd64ed73dbfd88909cdcb892cb66bd4cbb",
-    "star": 0,
-    "status": true
-  },
   {
     "symbol": "XMON_USDT",
     "desimal": 18,
@@ -6107,5 +6068,4 @@
     "status": true
   }
 ]
-
 }
