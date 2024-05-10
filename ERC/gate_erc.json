@@ -1983,13 +1983,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "DUSK_USDT",
-    "desimal": 18,
-    "sc": "0x940a2db1b7008b6c776d4faaca729d6d4a4aa551",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "DUST_USDT",
     "desimal": 9,
@@ -6068,4 +6062,5 @@
     "status": true
   }
 ]
+
 }
