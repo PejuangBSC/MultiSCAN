@@ -1675,14 +1675,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "GAN_USDT",
-    "desimal": 18,
-    "sc": "0x8F1408171EAe06AEC4549fD0a5808A42cee6DD84",
-    "wd": 0,
-    "status": true
-  },
- 
+  
   {
     "symbol": "GFT_USDT",
     "desimal": 18,
@@ -2576,13 +2569,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "PBR_USDT",
-    "desimal": 18,
-    "sc": "0x1D1cB8997570e73949930c01Fe5796C88d7336c6",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "PBUX_USDT",
     "desimal": 18,
@@ -2861,13 +2848,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SAKAI_USDT",
-    "desimal": 18,
-    "sc": "0x43b35e89d15b91162dea1c51133c4c93bdd1c4af",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "SANTOS_USDT",
     "desimal": 8,
@@ -3511,13 +3492,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "YOOSHI_USDT",
-    "desimal": 9,
-    "sc": "0x02ff5065692783374947393723dba9599e59f591",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "YOURAI_USDT",
     "desimal": 18,
@@ -3562,5 +3537,4 @@
     "status": true
   }
 ]
-
 }
