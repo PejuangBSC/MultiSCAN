@@ -645,13 +645,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "AISWAP_USDT",
-    "desimal": 18,
-    "sc": "0x8974769bcfc2715fcabcfe4341ba4fcc804abcd8",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "AITECH_USDT",
     "desimal": 18,
@@ -820,13 +814,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "ATS_USDT",
-    "desimal": 18,
-    "sc": "0x75d8bb7fbd4782a134211dc350ba5c715197b81d",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "AUTO_USDT",
     "desimal": 18,
@@ -1052,13 +1040,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "BXH_USDT",
-    "desimal": 18,
-    "sc": "0x6d1b7b59e3fab85b7d3a3d86e505dd8e349ea7f3",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "C98_USDT",
     "desimal": 18,
@@ -1298,13 +1280,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "DBC_USDT",
-    "desimal": 18,
-    "sc": "0x1F735f84b07cc20E9aC471C291a87b5A2428d518",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "DCB_USDT",
     "desimal": 18,
@@ -2437,13 +2413,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "NEBL_USDT",
-    "desimal": 18,
-    "sc": "0x5CeaE8dFad98327412C43d6BC767F20bf884D635",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "NFE_USDT",
     "desimal": 18,
@@ -2812,13 +2782,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "RANKER_USDT",
-    "desimal": 18,
-    "sc": "0xdE4512Db1a7a7519818dA38DB86eC1363d70A711",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "RDF_USDT",
     "desimal": 18,
@@ -3086,13 +3050,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SRK_USDT",
-    "desimal": 18,
-    "sc": "0xc3440c10c4f36f354eb591b19fafb4906d449b75",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "STBU_USDT",
     "desimal": 18,
@@ -3604,4 +3562,5 @@
     "status": true
   }
 ]
+
 }
