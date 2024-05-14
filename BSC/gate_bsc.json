@@ -594,7 +594,7 @@
     "id_grup": "-1002079288809"
   },
   "token": 
- [
+[
   {
     "symbol": "1ART_USDT",
     "desimal": 18,
@@ -801,13 +801,6 @@
     "status": true
   },
  
-  {
-    "symbol": "ATOZ_USDT",
-    "desimal": 18,
-    "sc": "0x3606F220daeaEb3d47aC1923A8Ce2A61205C88cD",
-    "wd": 0,
-    "status": true
-  },
  
   {
     "symbol": "AUTO_USDT",
@@ -1546,13 +1539,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "FEG_USDT",
-    "desimal": 18,
-    "sc": "0xbededdf2ef49e87037c4fb2ca34d1ff3d3992a11",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "FEVR_USDT",
     "desimal": 18,
@@ -2922,13 +2909,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SPHRI_USDT",
-    "desimal": 18,
-    "sc": "0x8ea93d00cc6252e2bd02a34782487eed65738152",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "SPO_USDT",
     "desimal": 18,
@@ -3336,20 +3317,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "XMARK_USDT",
-    "desimal": 18,
-    "sc": "0x26a5dfab467d4f58fb266648cae769503cec9580",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "XNFT_USDT",
-    "desimal": 18,
-    "sc": "0xe7f04e0fbde4b16feb4a67747133f251e4dbccd7",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "XNL_USDT",
     "desimal": 18,
@@ -3457,5 +3425,6 @@
     "wd": 0,
     "status": true
   }
-] 
+]
+
 }
