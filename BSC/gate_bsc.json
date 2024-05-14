@@ -594,7 +594,7 @@
     "id_grup": "-1002079288809"
   },
   "token": 
-[
+ [
   {
     "symbol": "1ART_USDT",
     "desimal": 18,
@@ -2555,13 +2555,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "PARA_USDT",
-    "desimal": 18,
-    "sc": "0x076DDcE096C93dcF5D51FE346062bF0Ba9523493",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "PATEX_USDT",
     "desimal": 18,
@@ -3316,13 +3310,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "WKC_USDT",
-    "desimal": 18,
-    "sc": "0x6ec90334d89dbdc89e08a133271be3d104128edb",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "WNDR_USDT",
     "desimal": 8,
@@ -3537,4 +3525,5 @@
     "status": true
   }
 ]
+ 
 }
