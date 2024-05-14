@@ -679,6 +679,13 @@
     "status": true,
     "wd": 0
   },
+    {
+    "symbol": "CTOK_USDT",
+    "sc": "0xA586B3B80D7e3e8d439e25fBC16Bc5bcEE3E2c85",
+    "desimal": 18,
+    "status": true,
+    "wd": 0
+  },
  
   {
     "symbol": "ECLIP_USDT",
@@ -760,6 +767,13 @@
   {
     "symbol": "KNJ_USDT",
     "sc": "0xfbbb21d8e7A461f06e5E27efD69703aCB5C732A8",
+    "desimal": 18,
+    "status": true,
+    "wd": 0
+  },
+    {
+    "symbol": "LPOOL_USDT",
+    "sc": "0xf6dAE0D2be4993b00a2673360820AF6BAfD53887",
     "desimal": 18,
     "status": true,
     "wd": 0
