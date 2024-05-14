@@ -3332,13 +3332,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "XPR_USDT",
-    "desimal": 18,
-    "sc": "0x5de3939b2f811a61d830e6f52d13b066881412ab",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "XPRESS_USDT",
     "desimal": 18,
