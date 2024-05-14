@@ -833,13 +833,7 @@
     "wd": 8.1,
     "status": true
   },
-  {
-    "symbol": "BTCUSDT",
-    "sc": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
-    "desimal": 18,
-    "wd": 0.000011,
-    "status": true
-  },
+ 
   {
     "symbol": "BTTCUSDT",
     "sc": "0x352cb5e19b12fc216548a2677bd0fce83bae434b",
@@ -852,6 +846,13 @@
     "sc": "0xae9269f27437f0fcbc232d39ec814844a51d6b8f",
     "desimal": 18,
     "wd": 1.32,
+    "status": true
+  },
+   {
+    "symbol": "BONKUSDT",
+    "sc": "0xa697e272a73744b343528c3bc4702f2565b2f422",
+    "desimal": 5,
+    "wd": 0.000011,
     "status": true
   },
   {
@@ -1631,13 +1632,7 @@
     "wd": 49,
     "status": true
   },
-  {
-    "symbol": "SUPERUSDT",
-    "sc": "0x51ba0b044d96c3abfca52b64d733603ccc4f0d4d",
-    "desimal": 18,
-    "wd": 0.61,
-    "status": true
-  },
+ 
   {
     "symbol": "SUSHIUSDT",
     "sc": "0x947950bcc74888a40ffa2593c5798f11fc9124c4",
