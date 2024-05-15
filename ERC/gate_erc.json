@@ -596,5395 +596,2809 @@
   "token": 
 [
   {
-    "symbol": "1CAT_USDT",
+    "symbol": "1ART_USDT",
     "desimal": 18,
-    "sc": "0x508e00d5cef397b02d260d035e5ee80775e4c821",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "1EARTH_USDT",
-    "desimal": 18,
-    "sc": "0x9e04F519b094F5F8210441e285f603f4d2b50084",
-    "star": 0,
+    "sc": "0xD3c325848D7c6E29b574Cb0789998b2ff901f17E",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "1INCH_USDT",
     "desimal": 18,
     "sc": "0x111111111117dc0aa78b770fa6a738034120c302",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "4TOKEN_USDT",
+    "symbol": "ACE_USDT",
     "desimal": 18,
-    "sc": "0x8db4beaccd1698892821a9a0dc367792c0cb9940",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "5IRE_USDT",
-    "desimal": 18,
-    "sc": "0x3bd7d4f524d09f4e331577247a048d56e4b67a7f",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AAVE_USDT",
-    "desimal": 18,
-    "sc": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ABT_USDT",
-    "desimal": 18,
-    "sc": "0xB98d4C97425d9908E66E53A6fDf673ACcA0BE986",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ACENT_USDT",
-    "desimal": 18,
-    "sc": "0xec5483804e637d45cde22fa0869656b64b5ab1ab",
-    "star": 0,
+    "sc": "0xc27A719105A987b4c34116223CAE8bd8F4B5def4",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "ACH_USDT",
     "desimal": 8,
-    "sc": "0xed04915c23f00a313a544955524eb7dbd823143d",
-    "star": 0,
+    "sc": "0xBc7d6B50616989655AfD682fb42743507003056D",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "ACX_USDT",
+    "symbol": "AGI_USDT",
     "desimal": 18,
-    "sc": "0x44108f0223A3C3028F5Fe7AEC7f9bb2E66beF82F",
-    "star": 0,
+    "sc": "0x818835503F55283cd51A4399f595e295A9338753",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "AD_USDT",
+    "symbol": "AI_USDT",
     "desimal": 18,
-    "sc": "0xe973E453977195422B48e1852A207b7eE9C913C7",
-    "star": 0,
+    "sc": "0xBDA011D7F8EC00F66C1923B049B94c67d148d8b2",
+    "wd": 0,
+    "status": true
+  },
+  
+  {
+    "symbol": "AIOZ_USDT",
+    "desimal": 18,
+    "sc": "0x33d08d8c7a168333a85285a68c0042b39fc3741d",
+    "wd": 0,
     "status": true
   },
  
   {
-    "symbol": "ADEL_USDT",
+    "symbol": "AITECH_USDT",
     "desimal": 18,
-    "sc": "0x94d863173ee77439e4292284ff13fad54b3ba182",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "ADS_USDT",
-    "desimal": 18,
-    "sc": "0x3106a0a076bedae847652f42ef07fd58589e001f",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ADX_USDT",
-    "desimal": 18,
-    "sc": "0xADE00C28244d5CE17D72E40330B1c318cD12B7c3",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AERGO_USDT",
-    "desimal": 18,
-    "sc": "0x91af0fbb28aba7e31403cb457106ce79397fd4e6",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "AGI_USDT",
-    "desimal": 18,
-    "sc": "0x7dA2641000Cbb407C329310C461b2cB9c70C3046",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AGILITY_USDT",
-    "desimal": 18,
-    "sc": "0x5F18ea482ad5cc6BC65803817C99f477043DcE85",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AGIX_USDT",
-    "desimal": 8,
-    "sc": "0x5B7533812759B45C2B44C19e320ba2cD2681b542",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "AGLD_USDT",
-    "desimal": 18,
-    "sc": "0x32353a6c91143bfd6c7d363b546e62a9a2489a20",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AGRS_USDT",
-    "desimal": 8,
-    "sc": "0x738865301a9b7dd80dc3666dd48cf034ec42bdda",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AGS_USDT",
-    "desimal": 8,
-    "sc": "0xdb2f2bcce3efa95eda95a233af45f3e0d4f00e2a",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AIEPK_USDT",
-    "desimal": 18,
-    "sc": "0xac5B038058bcD0424C9c252c6487C25F032E5dDc",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AIOZ_USDT",
-    "desimal": 18,
-    "sc": "0x626e8036deb333b408be468f951bdb42433cbf18",
-    "star": 0,
-    "status": true
-  },
-
-  
-  {
-    "symbol": "AKITA_USDT",
-    "desimal": 18,
-    "sc": "0x3301ee63fb29f863f2333bd4466acb46cd8323e6",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AKRO_USDT",
-    "desimal": 18,
-    "sc": "0x8ab7404063ec4dbcfd4598215992dc3f8ec853d7",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ALCX_USDT",
-    "desimal": 18,
-    "sc": "0xdbdb4d16eda451d0503b854cf79d55697f90c8df",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ALD_USDT",
-    "desimal": 18,
-    "sc": "0xb26c4b3ca601136daf98593feaeff9e0ca702a8d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ALEPH_USDT",
-    "desimal": 18,
-    "sc": "0x27702a26126e0b3702af63ee09ac4d1a084ef628",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ALI_USDT",
-    "desimal": 18,
-    "sc": "0x6B0b3a982b4634aC68dD83a4DBF02311cE324181",
-    "star": 0,
+    "sc": "0x2D060Ef4d6BF7f9e5edDe373Ab735513c0e4F944",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "ALICE_USDT",
     "desimal": 6,
-    "sc": "0xac51066d7bec65dc4589368da368b212745d63e8",
-    "star": 0,
+    "sc": "0xAC51066d7bEC65Dc4589368da368b212745d63E8",
+    "wd": 0,
     "status": true
   },
+  
   {
-    "symbol": "ALN_USDT",
+    "symbol": "ALPACA_USDT",
     "desimal": 18,
-    "sc": "0x8185bc4757572da2a610f887561c32298f1a5748",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ALPA_USDT",
-    "desimal": 18,
-    "sc": "0x7cA4408137eb639570F8E647d9bD7B7E8717514A",
-    "star": 0,
+    "sc": "0x8f0528ce5ef7b51152a59745befdd91d97091d2f",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "ALPHA_USDT",
     "desimal": 18,
     "sc": "0xa1faa113cbe53436df28ff0aee54275c13b40975",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "ALPHR_USDT",
-    "desimal": 18,
-    "sc": "0xaa99199d1e9644b588796F3215089878440D58e0",
-    "star": 0,
+    "symbol": "ALPINE_USDT",
+    "desimal": 8,
+    "sc": "0x287880Ea252b52b63Cc5f40a2d3E5A44aa665a76",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "ALT_USDT",
     "desimal": 18,
     "sc": "0x8457CA5040ad67fdebbCC8EdCE889A335Bc0fbFB",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "AMKT_USDT",
+    "symbol": "ALU_USDT",
     "desimal": 18,
-    "sc": "0xF17A3fE536F8F7847F1385ec1bC967b2Ca9caE8D",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AMP_USDT",
-    "desimal": 18,
-    "sc": "0xff20817765cb7f73d4bde2e66e067e58d11095c2",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AMPL_USDT",
-    "desimal": 9,
-    "sc": "0xD46bA6D942050d489DBd938a2C909A5d5039A161",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ANAVI_USDT",
-    "desimal": 18,
-    "sc": "0xfc1c93a2507975e98b9d0e9260ded61a00152bf1",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "ANDYETH_USDT",
-    "desimal": 18,
-    "sc": "0x68bbed6a47194eff1cf514b50ea91895597fc91e",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ANGLE_USDT",
-    "desimal": 18,
-    "sc": "0x31429d1856aD1377A8A0079410B297e1a9e214c2",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ANKR_USDT",
-    "desimal": 18,
-    "sc": "0x8290333ceF9e6D528dD5618Fb97a76f268f3EDD4",
-    "star": 0,
+    "sc": "0x8263CD1601FE73C066bf49cc09841f35348e3be0",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "ANML_USDT",
     "desimal": 18,
-    "sc": "0x38b0e3a59183814957d83df2a97492aed1f003e2",
-    "star": 0,
+    "sc": "0x06FDA0758c17416726f77Cb11305EAC94C074Ec0",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "APE_USDT",
+    "symbol": "AOG_USDT",
     "desimal": 18,
-    "sc": "0x4d224452801ACEd8B2F0aebE155379bb5D594381",
-    "star": 0,
+    "sc": "0x40c8225329bd3e28a043b029e0d07a5344d2c27c",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "APED_USDT",
-    "desimal": 18,
-    "sc": "0xE0151763455A8a021e64880C238ba1cff3787fF0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "API3_USDT",
-    "desimal": 18,
-    "sc": "0x0b38210ea11411557c13457D4dA7dC6ea731B88a",
-    "star": 0,
-    "status": true
-  },
- 
   {
     "symbol": "APP_USDT",
     "desimal": 18,
     "sc": "0xC5d27F27F08D1FD1E3EbBAa50b3442e6c0D50439",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "APU_USDT",
-    "desimal": 18,
-    "sc": "0x594daad7d77592a2b97b725a7ad59d7e188b5bfa",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "APYS_USDT",
+    "symbol": "APX_USDT",
     "desimal": 18,
-    "sc": "0xf7413489c474ca4399eee604716c72879eea3615",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "ARB_USDT",
-    "desimal": 18,
-    "sc": "0xb50721bcf8d664c30412cfbc6cf7a15145234ad1",
-    "star": 0,
+    "sc": "0x78f5d389f5cdccfc41594abab4b0ed02f31398b3",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "ARES_USDT",
+    "symbol": "AQDC_USDT",
     "desimal": 18,
-    "sc": "0x358AA737e033F34df7c54306960a38d09AaBd523",
-    "star": 0,
+    "sc": "0x840AcA956c06F340083FBdC6d919BDF2368FCA0e",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ARBI_USDT",
+    "desimal": 18,
+    "sc": "0xa7bd657c5838472ddf85ff0797a2e6fce8fd4833",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ARGON_USDT",
+    "desimal": 18,
+    "sc": "0x851f7a700c5d67db59612b871338a85526752c25",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "ARPA_USDT",
     "desimal": 18,
-    "sc": "0xBA50933C268F567BDC86E1aC131BE072C6B0b71a",
-    "star": 0,
+    "sc": "0x6f769e65c14ebd1f68817f5f1dcdb61cfa2d6f7e",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "ARTEM_USDT",
     "desimal": 18,
     "sc": "0x9b83f827928abdf18cf1f7e67053572b9bceff3a",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "ASM_USDT",
-    "desimal": 18,
-    "sc": "0x2565ae0385659badcada1031db704442e1b69982",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "AST_USDT",
-    "desimal": 4,
-    "sc": "0x27054b13b1B798B345b591a4d22e6562d47eA75a",
-    "star": 0,
+    "symbol": "ARTY_USDT",
+    "desimal": 6,
+    "sc": "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "ASTO_USDT",
-    "desimal": 18,
-    "sc": "0x823556202e86763853b40e9cde725f412e294689",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "ASW_USDT",
-    "desimal": 18,
-    "sc": "0x56694577564FdD577a0ABB20FE95C1E2756C2a11",
-    "star": 0,
+    "symbol": "ARV_USDT",
+    "desimal": 8,
+    "sc": "0x6679eb24f59dfe111864aec72b443d1da666b360",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "ATA_USDT",
     "desimal": 18,
-    "sc": "0xA2120b9e674d3fC3875f415A7DF52e382F141225",
-    "star": 0,
+    "sc": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "ATD_USDT",
     "desimal": 18,
-    "sc": "0x8052327f1baf94a9dc8b26b9100f211ee3774f54",
-    "star": 0,
+    "sc": "0x1ce440d1a64eea6aa1db2a5aa51c9b326930957c",
+    "wd": 0,
     "status": true
   },
+ 
+ 
   {
-    "symbol": "AUCTION_USDT",
+    "symbol": "AUTO_USDT",
     "desimal": 18,
-    "sc": "0xa9b1eb5908cfc3cdf91f9b8b3a74108598009096",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AUDIO_USDT",
-    "desimal": 18,
-    "sc": "0x18aaa7115705e8be94bffebde57af9bfc265b998",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AURORA_USDT",
-    "desimal": 18,
-    "sc": "0xAaAAAA20D9E0e2461697782ef11675f668207961",
-    "star": 0,
+    "sc": "0xa184088a740c695e156f91f5cc086a06bb78b827",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "AVA_USDT",
     "desimal": 18,
-    "sc": "0xa6c0c097741d55ecd9a3a7def3a8253fd022ceb9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AVT_USDT",
-    "desimal": 18,
-    "sc": "0x0d88eD6E74bbFD96B831231638b66C05571e824F",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "AXIS_USDT",
-    "desimal": 18,
-    "sc": "0xecC0F1F860a82aB3b442382D93853C02d6384389",
-    "star": 0,
+    "sc": "0xd9483EA7214FCfd89B4Fb8f513B544920E315A52",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "AXL_USDT",
     "desimal": 18,
     "sc": "0x25b24B3c47918b7962B3e49C4F468367F73CC0E0",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "BAC_USDT",
-    "desimal": 18,
-    "sc": "0x3449FC1Cd036255BA1EB19d65fF4BA2b8903A69a",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BACON_USDT",
+    "symbol": "AZY_USDT",
     "desimal": 18,
-    "sc": "0x34f797e7190c131cf630524655a618b5bd8738e7",
-    "star": 0,
+    "sc": "0x7b665B2F633d9363b89A98b094B1F9E732Bd8F86",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BAD_USDT",
+    "symbol": "BABI_USDT",
     "desimal": 18,
-    "sc": "0x32b86b99441480a7e5bd3a26c124ec2373e3f015",
-    "star": 0,
+    "sc": "0xec15a508a187e8DDfe572A5423Faa82Bbdd65120",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BADGER_USDT",
+    "symbol": "BAKE_USDT",
     "desimal": 18,
-    "sc": "0x3472a5a71965499acd81997a54bba8d852c6e53d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "BAG_USDT",
-    "desimal": 18,
-    "sc": "0x808688c820ab080a6ff1019f03e5ec227d9b522b",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "BAL_USDT",
-    "desimal": 18,
-    "sc": "0xba100000625a3754423978a60c9317c58a424e3D",
-    "star": 0,
+    "sc": "0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "BAMBOO_USDT",
     "desimal": 18,
-    "sc": "0xf56842af3b56fd72d17cb103f92d027bba912e89",
-    "star": 0,
+    "sc": "0x198abb2d13faa2e52e577d59209b5c23c20cd6b3",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BAND_USDT",
+    "symbol": "BBC_USDT",
     "desimal": 18,
-    "sc": "0xBA11D00c5f74255f56a5E366F4F77f5A186d7f55",
-    "star": 0,
+    "sc": "0x37e5da11b6A4DC6d2f7Abe232cDd30B0B8Fc63B1",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "BANK_USDT",
-    "desimal": 18,
-    "sc": "0x24a6a37576377f63f194caa5f518a60f45b42921",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "BAS_USDT",
-    "desimal": 18,
-    "sc": "0x106538CC16F938776c7c180186975BCA23875287",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "BBL_USDT",
-    "desimal": 18,
-    "sc": "0xd979c468a68062e7bdff4ba6df7842dfd3492e0f",
-    "star": 0,
-    "status": true
-  },
-
   {
     "symbol": "BCMC_USDT",
     "desimal": 18,
-    "sc": "0x2BA8349123de45E931a8C8264c332E6e9CF593F9",
-    "star": 0,
+    "sc": "0xc10358f062663448a3489fC258139944534592ac",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BCUG_USDT",
+    "symbol": "BD20_USDT",
     "desimal": 18,
-    "sc": "0x14Da7b27b2E0FedEfe0a664118b0c9bc68e2E9AF",
-    "star": 0,
+    "sc": "0x312d43881860807fa04b193d69744d087fc3308a",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "BCUT_USDT",
-    "desimal": 18,
-    "sc": "0xbef26bd568e421d6708cca55ad6e35f8bfa0c406",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "BDP_USDT",
-    "desimal": 18,
-    "sc": "0xf3dcbc6D72a4E1892f7917b7C43b74131Df8480e",
-    "star": 0,
-    "status": true
-  },
-
   {
     "symbol": "BEAMX_USDT",
     "desimal": 18,
     "sc": "0x62d0a8458ed7719fdaf978fe5929c6d342b0bfce",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "BEEFI_USDT",
-    "desimal": 18,
-    "sc": "0xb1f1ee126e9c96231cc3d3fad7c08b4cf873b1f1",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BEFI_USDT",
+    "symbol": "BEFE_USDT",
     "desimal": 18,
-    "sc": "0x8b9b95292f890df47fff5ac9cbe93d5fc242bd51",
-    "star": 0,
+    "sc": "0x57185189118c7e786cafd5c71f35b16012fa95ad",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BEL_USDT",
-    "desimal": 18,
-    "sc": "0xa91ac63d040deb1b7a5e4d4134ad23eb0ba07e14",
-    "star": 0,
+    "symbol": "BLIN_USDT",
+    "desimal": 8,
+    "sc": "0x811b279463a89E4B6E35805174C9190763f72614",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BEPRO_USDT",
-    "desimal": 18,
-    "sc": "0xcf3c8be2e2c42331da80ef210e9b1b307c03d36a",
-    "star": 0,
+    "symbol": "BLOCKASSET_USDT",
+    "desimal": 6,
+    "sc": "0xbc7a566b85ef73f935e640a06b5a8b031cd975df",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BEYOND_USDT",
-    "desimal": 18,
-    "sc": "0xdF290B162a7D3E0A328cF198308D421954f08b94",
-    "star": 0,
+    "symbol": "BLT_USDT",
+    "desimal": 8,
+    "sc": "0x02bdf640fba368e7ba5c6429ccaf251512273865",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BFT_USDT",
+    "symbol": "BMON_USDT",
     "desimal": 18,
-    "sc": "0x01fF50f8b7f74E4f00580d9596cd3D0d6d6E326f",
-    "star": 0,
+    "sc": "0x08ba0619b1e7a582e0bce5bbe9843322c954c340",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BICO_USDT",
+    "symbol": "BNX_USDT",
     "desimal": 18,
-    "sc": "0xf17e65822b568b3903685a7c9f496cf7656cc6c2",
-    "star": 0,
+    "sc": "0x5b1f874d0b0C5ee17a495CbB70AB8bf64107A3BD",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BIFIF_USDT",
+    "symbol": "BONDLY_USDT",
     "desimal": 18,
-    "sc": "0x2791bfd60d232150bff86b39b7146c0eaaa2ba81",
-    "star": 0,
+    "sc": "0x5d0158a5c3ddf47d4ea4517d8db0d76aa2e87563",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BIGTIME_USDT",
+    "symbol": "BP_USDT",
     "desimal": 18,
-    "sc": "0x64bc2ca1be492be7185faa2c8835d9b824c8a194",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "BLANKV2_USDT",
-    "desimal": 18,
-    "sc": "0x41a3dba3d677e573636ba691a70ff2d606c29666",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "BLES_USDT",
-    "desimal": 18,
-    "sc": "0xe796d6ca1ceb1b022ece5296226bf784110031cd",
-    "star": 0,
+    "sc": "0xacb8f52dc63bb752a51186d1c55868adbffee9c1",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BLOCK_USDT",
+    "symbol": "BRCST_USDT",
     "desimal": 18,
-    "sc": "0x8fc17671D853341D9e8B001F5Fc3C892d09CB53A",
-    "star": 0,
+    "sc": "0x22830be0954ff3bf7929405c488b1bba54a7e0d3",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "BLUR_USDT",
-    "desimal": 18,
-    "sc": "0x5283D291DBCF85356A21bA090E6db59121208b44",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "BLY_USDT",
-    "desimal": 18,
-    "sc": "0xf8ad7dfe656188a23e89da09506adf7ad9290d5d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "BLZ_USDT",
-    "desimal": 18,
-    "sc": "0x5732046A883704404F284Ce41FfADd5b007FD668",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "BMI_USDT",
-    "desimal": 18,
-    "sc": "0x725c263e32c72ddc3a19bea12c5a0479a81ee688",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "BNT_USDT",
-    "desimal": 18,
-    "sc": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "BNTY_USDT",
-    "desimal": 18,
-    "sc": "0xd2d6158683aeE4Cc838067727209a0aAF4359de3",
-    "star": 0,
-    "status": true
-  },
- 
   {
     "symbol": "BRCT_USDT",
     "desimal": 18,
     "sc": "0x455ad1Bc4E18fD4e369234b6e11D88acBC416758",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BREED_USDT",
-    "desimal": 18,
-    "sc": "0x94e9eb8b5ab9fd6b9ea3169d55ffade62a01702e",
-    "star": 0,
+    "symbol": "BRISE_USDT",
+    "desimal": 9,
+    "sc": "0x8fff93e810a2edaafc326edee51071da9d398e83",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "BRKL_USDT",
     "desimal": 18,
-    "sc": "0x4674a4F24C5f63D53F22490Fb3A08eAAAD739ff8",
-    "star": 0,
+    "sc": "0x66cafcf6c32315623c7ffd3f2ff690aa36ebed38",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BRWL_USDT",
-    "desimal": 4,
-    "sc": "0x4086E77C5E993FDB90a406285d00111a974F877a",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "BTRST_USDT",
+    "symbol": "BRN_USDT",
     "desimal": 18,
-    "sc": "0x799ebfabe77a6e34311eeee9825190b9ece32824",
-    "star": 0,
+    "sc": "0x926ecC7687fCFB296E97a2b4501F41A6f5F8C214",
+    "wd": 0,
     "status": true
   },
+  
   {
-    "symbol": "BUSY_USDT",
+    "symbol": "BRY_USDT",
     "desimal": 18,
-    "sc": "0x5CB3ce6D081fB00d5f6677d196f2d70010EA3f4a",
-    "star": 0,
+    "sc": "0xf859Bf77cBe8699013d6Dbc7C2b926Aaf307F830",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "BVM_USDT",
+    "symbol": "BSCPAD_USDT",
     "desimal": 18,
-    "sc": "0x069d89974f4edabde69450f9cf5cf7d8cbd2568d",
-    "star": 0,
+    "sc": "0x5a3010d4d8d3b5fb49f8b6e57fb9e48063f16700",
+    "wd": 0,
     "status": true
   },
-
   {
-    "symbol": "BZZ_USDT",
-    "desimal": 16,
-    "sc": "0x19062190b1925b5b6689d7073fdfc8c2976ef8cb",
-    "star": 0,
+    "symbol": "BSCS_USDT",
+    "desimal": 18,
+    "sc": "0xbcb24afb019be7e93ea9c43b7e22bb55d5b7f45d",
+    "wd": 0,
     "status": true
   },
+  {
+    "symbol": "BSW_USDT",
+    "desimal": 18,
+    "sc": "0x965F527D9159dCe6288a2219DB51fc6Eef120dD1",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "BTCST_USDT",
+    "desimal": 17,
+    "sc": "0x78650b139471520656b9e7aa7a5e9276814a38e9",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "BTL_USDT",
+    "desimal": 6,
+    "sc": "0x51e7b598c9155b9dccb04eb42519f6eec9c841e9",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "BVT_USDT",
+    "desimal": 18,
+    "sc": "0x1DaCbcD9B3fc2d6A341Dca3634439D12bC71cA4d",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "BWLD_USDT",
+    "desimal": 18,
+    "sc": "0x067BD9825C92a4384f55B4Cb8FcAeaEfFfcD490e",
+    "wd": 0,
+    "status": true
+  },
+  
   {
     "symbol": "C98_USDT",
     "desimal": 18,
-    "sc": "0xae12c5930881c53715b369cec7606b70d8eb229f",
-    "star": 0,
+    "sc": "0xaec945e04baf28b135fa7c640f624f8d90f1c3a6",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CAGA_USDT",
+    "symbol": "CAKE_USDT",
     "desimal": 18,
-    "sc": "0xbddc20ed7978b7d59ef190962f441cd18c14e19f",
-    "star": 0,
+    "sc": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+    "wd": 0,
     "status": true
   },
-
+  {
+    "symbol": "CAL_USDT",
+    "desimal": 18,
+    "sc": "0x859c940f080b197659b3effc804fd622df66f0a1",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "CARAT_USDT",
+    "desimal": 18,
+    "sc": "0x426c1c971fb00caaf1883bd801323a8becb0c919",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "CARBON_USDT",
+    "desimal": 18,
+    "sc": "0xeFb5dF8eB84055026018030E71bC2cdFA2F138B9",
+    "wd": 0,
+    "status": true
+  },
   {
     "symbol": "CART_USDT",
     "desimal": 18,
     "sc": "0x5c8c8d560048f34e5f7f8ad71f2f81a89dbd273e",
-    "star": 0,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "CAT_USDT",
+    "desimal": 18,
+    "sc": "0x7e3784220740e61dc700501bd6771226e11d8897",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "CATCOIN_USDT",
+    "desimal": 9,
+    "sc": "0x59f4f336bf3d0c49dbfba4a74ebd2a6ace40539a",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "CATE_USDT",
     "desimal": 9,
-    "sc": "0xf05897cfe3ce9bbbfe0751cbe6b1b2c686848dcb",
-    "star": 0,
+    "sc": "0xe4fae3faa8300810c835970b9187c268f55d998f",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "CEEK_USDT",
     "desimal": 18,
-    "sc": "0xb056c38f6b7dc4064367403e26424cd2c60655e1",
-    "star": 0,
+    "sc": "0xe0f94ac5462997d2bc57287ac3a3ae4c31345d66",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CEL_USDT",
-    "desimal": 4,
-    "sc": "0xaaaebe6fe48e54f431b0c390cfaf0b017d09d42d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CELL_USDT",
+    "symbol": "CFX_USDT",
     "desimal": 18,
-    "sc": "0x26c8afbbfe1ebaca03c2bb082e69d0476bffe099",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CELR_USDT",
-    "desimal": 18,
-    "sc": "0x4F9254C83EB525f9FCf346490bbb3ed28a81C667",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "CERE_USDT",
-    "desimal": 10,
-    "sc": "0x2da719db753dfa10a62e140f436e1d67f2ddb0d6",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CFG_USDT",
-    "desimal": 18,
-    "sc": "0xc221b7e65ffc80de234bbb6667abdd46593d34f0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CFI_USDT",
-    "desimal": 18,
-    "sc": "0x63b4f3e3fa4e438698ce330e365e831f7ccd1ef4",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CGG_USDT",
-    "desimal": 18,
-    "sc": "0x1fe24f25b1cf609b9c4e7e12d802e3640dfa5e43",
-    "star": 0,
+    "sc": "0x045c4324039da91c52c55df5d785385aab073dcf",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "CGPT_USDT",
     "desimal": 18,
-    "sc": "0x25931894a86d47441213199621f1f2994e1c39aa",
-    "star": 0,
+    "sc": "0x9840652DC04fb9db2C43853633f0F62BE6f00f98",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CHAIN_USDT",
-    "desimal": 18,
-    "sc": "0xC4C2614E694cF534D407Ee49F8E44D125E4681c4",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "CHKN_USDT",
-    "desimal": 18,
-    "sc": "0xd55210bb6898c021a19de1f58d27b71f095921ee",
-    "star": 0,
+    "symbol": "CGV_USDT",
+    "desimal": 6,
+    "sc": "0x1bdaf9ddd7658d8049391971d1fd48c0484f66ec",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CHO_USDT",
-    "desimal": 18,
-    "sc": "0xBBa39Fd2935d5769116ce38d46a71bde9cf03099",
-    "star": 0,
+    "symbol": "CHAPZ_USDT",
+    "desimal": 10,
+    "sc": "0x7b56748a3ef9970a5bae99c58ad8bc67b26c525f",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CHZ_USDT",
+    "symbol": "CHEEL_USDT",
     "desimal": 18,
-    "sc": "0x3506424f91fd33084466f402d5d97f05f8e3b4af",
-    "star": 0,
+    "sc": "0x1f1c90aeb2fd13ea972f0a71e35c0753848e3db0",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CIRUS_USDT",
+    "symbol": "CHER_USDT",
     "desimal": 18,
-    "sc": "0xa01199c61841fce3b3dafb83fefc1899715c8756",
-    "star": 0,
+    "sc": "0x8f36cc333f55b09bb71091409a3d7ade399e3b1c",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CLH_USDT",
+    "symbol": "CHESS_USDT",
     "desimal": 18,
-    "sc": "0xd7d8f3b8bc8bc48d3acc37879eaba7b85889fa52",
-    "star": 0,
+    "sc": "0x20de22029ab63cf9a7cf5feb2b737ca1ee4c82a6",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "CLV_USDT",
     "desimal": 18,
-    "sc": "0x80C62FE4487E1351b47Ba49809EBD60ED085bf52",
-    "star": 0,
+    "sc": "0x09E889BB4D5b474f561db0491C38702F367A4e4d",
+    "wd": 0,
     "status": true
   },
- 
+  {
+    "symbol": "CNAME_USDT",
+    "desimal": 18,
+    "sc": "0xFC3514474306e2D4aa8350fD8FA9c46c165fe8cD",
+    "wd": 0,
+    "status": true
+  },
   {
     "symbol": "COMBO_USDT",
     "desimal": 18,
     "sc": "0xc03fbf20a586fa89c2a5f6f941458e1fbc40c661",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "COMP_USDT",
-    "desimal": 18,
-    "sc": "0xc00e94Cb662C3520282E6f5717214004A7f26888",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CONV_USDT",
-    "desimal": 18,
-    "sc": "0xc834fa996fa3bec7aad3693af486ae53d8aa8b50",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "COOK_USDT",
-    "desimal": 18,
-    "sc": "0xff75ced57419bcaebe5f05254983b013b0646ef5",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "COPI_USDT",
     "desimal": 18,
-    "sc": "0x42Baf1f659D765C65ADE5BB7E08eb2C680360d9d",
-    "star": 0,
+    "sc": "0xfea292e5ea4510881bdb840e3cec63abd43f936f",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "COTI_USDT",
+    "symbol": "COS_USDT",
     "desimal": 18,
-    "sc": "0xDDB3422497E61e13543BeA06989C0789117555c5",
-    "star": 0,
+    "sc": "0x96dd399f9c3afda1f194182f71600f1b65946501",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CPOOL_USDT",
+    "symbol": "CREO_USDT",
     "desimal": 18,
-    "sc": "0x66761fa41377003622aee3c7675fc7b5c1c2fac5",
-    "star": 0,
+    "sc": "0x9521728bf66a867bc65a93ece4a543d817871eb7",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CRE_USDT",
+    "symbol": "CRH_USDT",
     "desimal": 18,
-    "sc": "0x115ec79f1de567ec68b7ae7eda501b406626478e",
-    "star": 0,
+    "sc": "0xa236fd48f30ad4dee145652a71912189855dd575",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CRE8_USDT",
+    "symbol": "CTG_USDT",
     "desimal": 18,
-    "sc": "0xc36b4311b21fc0c2ead46f1ea6ce97c9c4d98d3d",
-    "star": 0,
+    "sc": "0xb3ba14f6a482dfdebc3c2fb726ac10df91ee504c",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CREAM_USDT",
-    "desimal": 18,
-    "sc": "0x2ba592f78db6436527729929aaf6c908497cb200",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CREDI_USDT",
-    "desimal": 18,
-    "sc": "0xae6e307c3fe9e922e5674dbd7f830ed49c014c6b",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CREDIT_USDT",
-    "desimal": 18,
-    "sc": "0xC4cB5793BD58BaD06bF51FB37717b86B02CBe8A4",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CRF_USDT",
-    "desimal": 18,
-    "sc": "0x508df5aa4746be37b5b6a69684dfd8bdc322219d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CRO_USDT",
-    "desimal": 8,
-    "sc": "0xA0b73E1Ff0B80914AB6fe0444E65848C4C34450b",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "CRPT_USDT",
-    "desimal": 18,
-    "sc": "0x08389495d7456e1951ddf7c3a1314a4bfb646d8b",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CRU_USDT",
-    "desimal": 18,
-    "sc": "0x32a7C02e79c4ea1008dD6564b35F131428673c41",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CRV_USDT",
-    "desimal": 18,
-    "sc": "0xD533a949740bb3306d119CC777fa900bA034cd52",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CRVUSD_USDT",
-    "desimal": 18,
-    "sc": "0xf939e0a03fb07f59a73314e73794be0e57ac1b4e",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "CTC_USDT",
-    "desimal": 18,
-    "sc": "0xa3ee21c306a700e682abcdfe9baa6a08f3820419",
-    "star": 0,
+    "symbol": "CTK_USDT",
+    "desimal": 6,
+    "sc": "0xa8c2b8eec3d368c0253ad3dae65a5f2bbb89c929",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "CTRC_USDT",
     "desimal": 18,
-    "sc": "0x923b83c26B3809d960fF80332Ed00aA46D7Ed375",
-    "star": 0,
+    "sc": "0xd6cce248263ea1e2b8cb765178c944fc16ed0727",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CUDOS_USDT",
+    "symbol": "CUMMIES_USDT",
     "desimal": 18,
-    "sc": "0x817bbdbc3e8a1204f3691d14bb44992841e3db35",
-    "star": 0,
+    "sc": "0x27ae27110350b98d564b9a3eed31baebc82d878d",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "CULT_USDT",
+    "symbol": "CWS_USDT",
     "desimal": 18,
-    "sc": "0xf0f9D895aCa5c8678f706FB8216fa22957685A13",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CUP_USDT",
-    "desimal": 18,
-    "sc": "0x3209d14Ff61766359E64aceFf91877cEC2AD968E",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CVAULTCORE_USDT",
-    "desimal": 18,
-    "sc": "0x62359ed7505efc61ff1d56fef82158ccaffa23d7",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CVC_USDT",
-    "desimal": 8,
-    "sc": "0x41e5560054824eA6B0732E656E3Ad64E20e94E45",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CVP_USDT",
-    "desimal": 18,
-    "sc": "0x38e4adb44ef08f22f5b5b76a8f0c2d0dcbe7dca1",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "CVX_USDT",
-    "desimal": 18,
-    "sc": "0x4e3fbd56cd56c3e72c1403e103b45db9da5b9d2b",
-    "star": 0,
+    "sc": "0x99aa29ac023057951781dc5d1784e9a4c362ce23",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "CYBER_USDT",
     "desimal": 18,
-    "sc": "0x14778860e937f509e651192a90589de711fb88a9",
-    "star": 0,
+    "sc": "0x14778860E937f509e651192a90589dE711Fb88a9",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "DAFI_USDT",
+    "symbol": "DAL_USDT",
     "desimal": 18,
-    "sc": "0xfc979087305a826c2b2a0056cfaba50aad3e6439",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "DAI_USDT",
-    "desimal": 18,
-    "sc": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-    "star": 0,
+    "sc": "0x53e4b7Aa6cACcb9576548Be3259e62dE4Ddd4417",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "DAO_USDT",
     "desimal": 18,
-    "sc": "0x0f51bb10119727a7e5ea3538074fb341f56b09ad",
-    "star": 0,
+    "sc": "0x4d2d32d8652058bf98c772953e1df5c5c85d9f45",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DATA_USDT",
-    "desimal": 18,
-    "sc": "0x8f693ca8d21b157107184d29d398a8d082b38b76",
-    "star": 0,
+    "symbol": "DAR_USDT",
+    "desimal": 6,
+    "sc": "0x23ce9e926048273ef83be0a3a8ba9cb6d45cd978",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DBC_USDT",
-    "desimal": 15,
-    "sc": "0x1F735f84b07cc20E9aC471C291a87b5A2428d518",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "DDOS_USDT",
-    "desimal": 18,
-    "sc": "0x7fbec0bb6a7152e77c30d005b5d49cbc08a602c3",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "DEFI_USDT",
-    "desimal": 18,
-    "sc": "0x6b0faca7ba905a86f221ceb5ca404f605e5b3131",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "DENT_USDT",
+    "symbol": "DARK_USDT",
     "desimal": 8,
-    "sc": "0x3597bfd533a99c9aa083587b074434e61eb0a258",
-    "star": 0,
+    "sc": "0x12fc07081fab7de60987cad8e8dc407b606fb2f8",
+    "wd": 0,
+    "status": true
+  },
+ 
+  {
+    "symbol": "DCB_USDT",
+    "desimal": 18,
+    "sc": "0xeac9873291ddaca754ea5642114151f3035c67a2",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DERC_USDT",
+    "symbol": "DCK_USDT",
     "desimal": 18,
-    "sc": "0x9fa69536d1cda4a04cfb50688294de75b505a9ae",
-    "star": 0,
+    "sc": "0x16faf9daa401aa42506af503aa3d80b871c467a3",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "DEBT_USDT",
+    "desimal": 8,
+    "sc": "0xC632F90affeC7121120275610BF17Df9963F181c",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "DECHAT_USDT",
+    "desimal": 18,
+    "sc": "0xd69ee2e508363fed57f89917d5ca03e715ee5519",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "DEGO_USDT",
+    "desimal": 18,
+    "sc": "0x3da932456d082cba208feb0b096d49b202bf89c8",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "DEK_USDT",
+    "desimal": 18,
+    "sc": "0xe52c5a3590952f3ed6fccf89a0bd7f38e11c5b98",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "DEP_USDT",
+    "desimal": 18,
+    "sc": "0xcaF5191fc480F43e4DF80106c7695ECA56E48B18",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "DERI_USDT",
     "desimal": 18,
-    "sc": "0xa487bf43cf3b10dffc97a9a744cbb7036965d3b9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "DERP_USDT",
-    "desimal": 18,
-    "sc": "0x5dfc78c4d073fd343bc6661668948178522a0de5",
-    "star": 0,
+    "sc": "0xe60eaf5a997dfae83739e035b005a33afdcc6df5",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "DES_USDT",
     "desimal": 18,
-    "sc": "0x634239cfa331df0291653139d1a6083b9cf705e3",
-    "star": 0,
+    "sc": "0xb38b3c34e4bb6144c1e5283af720e046ee833a2a",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DEVVE_USDT",
+    "symbol": "DFL_USDT",
     "desimal": 18,
-    "sc": "0x8248270620aa532e4d64316017be5e873e37cc09",
-    "star": 0,
+    "sc": "0x6ded0F2c886568Fb4Bb6F04f179093D3D167c9D7",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DEXE_USDT",
+    "symbol": "DFY_USDT",
     "desimal": 18,
-    "sc": "0xde4EE8057785A7e8e800Db58F9784845A5C2Cbd6",
-    "star": 0,
+    "sc": "0xd98560689c6e748dc37bc410b4d3096b1aa3d8c2",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "DF_USDT",
-    "desimal": 18,
-    "sc": "0x431ad2ff6a9c365805ebad47ee021148d6f7dbe0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "DFA_USDT",
-    "desimal": 18,
-    "sc": "0x62959c699a52ec647622c91e79ce73344e4099f5",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "DFI_USDT",
-    "desimal": 8,
-    "sc": "0x8fc8f8269ebca376d046ce292dc7eac40c8d358a",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "DFND_USDT",
-    "desimal": 18,
-    "sc": "0xd2adc1c84443ad06f0017adca346bd9b6fc52cab",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "DHV_USDT",
     "desimal": 18,
-    "sc": "0x62Dc4817588d53a056cBbD18231d91ffCcd34b2A",
-    "star": 0,
+    "sc": "0x58759dd469ae5631c42cf8a473992335575b58d7",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DIA_USDT",
+    "symbol": "DHX_USDT",
     "desimal": 18,
-    "sc": "0x84cA8bc7997272c7CfB4D0Cd3D55cd942B3c9419",
-    "star": 0,
+    "sc": "0x11d9f5d36BA3996962142c1c32467AcEBb697009",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DIGG_USDT",
-    "desimal": 9,
-    "sc": "0x798D1bE841a82a273720CE31c822C61a67a601C3",
-    "star": 0,
+    "symbol": "DKS_USDT",
+    "desimal": 18,
+    "sc": "0x121235cfF4c59EEC80b14c1d38B44e7de3A18287",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "DIMO_USDT",
+    "symbol": "DMAIL_USDT",
     "desimal": 18,
-    "sc": "0x5fab9761d60419c9eeebe3915a8fa1ed7e8d2e1b",
-    "star": 0,
+    "sc": "0xcC6f1e1B87cfCbe9221808d2d85C501aab0B5192",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DINO_USDT",
+    "symbol": "DMLG_USDT",
     "desimal": 18,
-    "sc": "0x49642110b712c1fd7261bc074105e9e44676c68f",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "DIONE_USDT",
-    "desimal": 9,
-    "sc": "0x89B69F2d1adffA9A253d40840B6Baa7fC903D697",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "DIS_USDT",
-    "desimal": 18,
-    "sc": "0x220B71671b649c03714dA9c621285943f3cbcDC6",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "DIVER_USDT",
-    "desimal": 18,
-    "sc": "0xfb782396c9b20e564a64896181c7ac8d8979d5f4",
-    "star": 0,
+    "sc": "0x1c796c140de269e255372ea687ef7644bab87935",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "DNXC_USDT",
+    "symbol": "DODO_USDT",
     "desimal": 18,
-    "sc": "0x20a8cec5fffea65be7122bcab2ffe32ed4ebf03a",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "DOGE2_USDT",
-    "desimal": 9,
-    "sc": "0xf2ec4a773ef90c58d98ea734c0ebdb538519b988",
-    "star": 0,
+    "sc": "0x67ee3cb086f8a16f34bee3ca72fad36f7db929e2",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DOGNFT_USDT",
+    "symbol": "DOGGY_USDT",
     "desimal": 18,
-    "sc": "0xbaac2b4491727d78d2b78815144570b9f2fe8899",
-    "star": 0,
+    "sc": "0x74926b3d118a63f6958922d3dc05eb9c6e6e00c6",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "DOME_USDT",
+    "desimal": 18,
+    "sc": "0x475bfaa1848591ae0e6ab69600f48d828f61a80e",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "DOMI_USDT",
     "desimal": 18,
-    "sc": "0x45C2F8c9B4c0bDC76200448cc26C48ab6ffef83F",
-    "star": 0,
+    "sc": "0xBBCA42c60b5290F2c48871A596492F93fF0Ddc82",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DOP_USDT",
+    "symbol": "DPET_USDT",
     "desimal": 18,
-    "sc": "0x6bb61215298f296c55b19ad842d3df69021da2ef",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "DORKL_USDT",
-    "desimal": 18,
-    "sc": "0x94be6962be41377d5beda8dfe1b100f3bf0eacf3",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "DOS_USDT",
-    "desimal": 18,
-    "sc": "0x0A913beaD80F321E7Ac35285Ee10d9d922659cB7",
-    "star": 0,
+    "sc": "0xfb62ae373aca027177d1c18ee0862817f9080d08",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "DPR_USDT",
     "desimal": 18,
-    "sc": "0xf3ae5d769e153ef72b4e3591ac004e89f48107a1",
-    "star": 0,
+    "sc": "0xa0a2ee912caf7921eaabc866c6ef6fec8f7e90a4",
+    "wd": 0,
     "status": true
   },
-  
-  {
-    "symbol": "DSLA_USDT",
-    "desimal": 18,
-    "sc": "0x3affcca64c2a6f4e3b6bd9c64cd2c969efd1ecbe",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "DUST_USDT",
-    "desimal": 9,
-    "sc": "0xB5b1b659dA79A2507C27AaD509f15B4874EDc0Cc",
-    "star": 0,
-    "status": true
-  },
-  
   {
     "symbol": "DVI_USDT",
     "desimal": 18,
-    "sc": "0x10633216e7e8281e33c86f02bf8e565a635d9770",
-    "star": 0,
+    "sc": "0x758fb037a375f17c7e195cc634d77da4f554255b",
+    "wd": 0,
     "status": true
   },
-  
   {
     "symbol": "DX_USDT",
     "desimal": 18,
-    "sc": "0x973e52691176d36453868D9d86572788d27041A9",
-    "star": 0,
+    "sc": "0xcA7bBEC6839965aC8dfe077b52EBB6519fFFe155",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DXGM_USDT",
+    "symbol": "DXCT_USDT",
     "desimal": 18,
-    "sc": "0x66f73d0fd4161cfad4302dc145ff994375c13475",
-    "star": 0,
+    "sc": "0x5b1baec64af6dc54e6e04349315919129a6d3c23",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "DYDX_USDT",
+    "symbol": "DZOO_USDT",
     "desimal": 18,
-    "sc": "0x92D6C1e31e14520e676a687F0a93788B716BEff5",
-    "star": 0,
+    "sc": "0x56d06a78ef8e95d6043341f24759e2834be6f97b",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "ECOX_USDT",
+    "symbol": "EDU_USDT",
     "desimal": 18,
-    "sc": "0xcccD1Ba9f7acD6117834E0D28F25645dECb1736a",
-    "star": 0,
+    "sc": "0xbdeae1ca48894a1759a8374d63925f21f2ee2639",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "EDEN_USDT",
+    "symbol": "EGG_USDT",
     "desimal": 18,
-    "sc": "0x1559fa1b8f28238fd5d76d9f434ad86fd20d1559",
-    "star": 0,
+    "sc": "0xF952Fc3ca7325Cc27D15885d37117676d25BfdA6",
+    "wd": 0,
     "status": true
   },
-  
   {
     "symbol": "EJS_USDT",
     "desimal": 18,
-    "sc": "0x96610186f3ab8d73ebee1cf950c750f3b1fb79c2",
-    "star": 0,
+    "sc": "0x09f423ac3c9babbff6f94d372b16e4206e71439f",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "EL_USDT",
+    "symbol": "EPX_USDT",
     "desimal": 18,
-    "sc": "0x2781246fe707bb15cee3e5ea354e2154a2877b16",
-    "star": 0,
+    "sc": "0xAf41054C1487b0e5E2B9250C0332eCBCe6CE9d71",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "ELA_USDT",
+    "symbol": "ETERNAL_USDT",
     "desimal": 18,
-    "sc": "0xe6fd75ff38Adca4B97FBCD938c86b98772431867",
-    "star": 0,
+    "sc": "0xD44FD09d74cd13838F137B590497595d6b3FEeA4",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "ELEC_USDT",
+    "symbol": "ETH_USDT",
     "desimal": 18,
-    "sc": "0xD49ff13661451313cA1553fd6954BD1d9b6E02b9",
-    "star": 0,
+    "sc": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+    "wd": 0,
     "status": true
   },
-  
   {
-    "symbol": "ELON_USDT",
+    "symbol": "EVO_USDT",
     "desimal": 18,
-    "sc": "0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "EMON_USDT",
-    "desimal": 18,
-    "sc": "0xd6a5ab46ead26f49b03bbb1f9eb1ad5c1767974a",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "ENA_USDT",
-    "desimal": 18,
-    "sc": "0x57e114B691Db790C35207b2e685D4A43181e6061",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "ENS_USDT",
-    "desimal": 18,
-    "sc": "0xc18360217d8f7ab5e7c516566761ea12ce7f9d72",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "EQX_USDT",
-    "desimal": 18,
-    "sc": "0xbd3de9a069648c84d27d74d701c9fa3253098b15",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ERN_USDT",
-    "desimal": 18,
-    "sc": "0xbbc2ae13b23d715c30720f079fcd9b4a74093505",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ESE_USDT",
-    "desimal": 18,
-    "sc": "0x908dDb096BFb3AcB19e2280aAD858186ea4935C4",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "ETHFI_USDT",
-    "desimal": 18,
-    "sc": "0xfe0c30065b384f05761f15d0cc899d4f9f9cc0eb",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "EUL_USDT",
-    "desimal": 18,
-    "sc": "0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "EURT_USDT",
-    "desimal": 6,
-    "sc": "0xc581b735a1688071a1746c968e0798d642ede491",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "EVA_USDT",
-    "desimal": 18,
-    "sc": "0xd6caf5bd23cf057f5fccce295dcc50c01c198707",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "EVERY_USDT",
-    "desimal": 18,
-    "sc": "0x9aFa9999e45484Adf5d8EED8D9Dfe0693BACd838",
-    "star": 0,
+    "sc": "0xF2B688b2201979d44FdF18d1d8C641305Cf560Ba",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "EVRY_USDT",
     "desimal": 18,
-    "sc": "0xd7dcd9b99787c619b4d57979521258d1a7267ad7",
-    "star": 0,
+    "sc": "0xC2d4A3709e076A7A3487816362994a78ddaeabB6",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "EZ_USDT",
+    "symbol": "EXVG_USDT",
     "desimal": 18,
-    "sc": "0x00aba6fe5557de1a1d565658cbddddf7c710a1eb",
-    "star": 0,
+    "sc": "0xBb7D61D2511fD2e63F02178ca9B663458Af9FC63",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FACTR_USDT",
+    "symbol": "F2C_USDT",
     "desimal": 18,
-    "sc": "0xe0bCEEF36F3a6eFDd5EEBFACD591423f8549B9D5",
-    "star": 0,
+    "sc": "0x657b632714e08ac66b79444ad3f3875526ee6689",
+    "wd": 0,
     "status": true
   },
- 
   {
-    "symbol": "FARM_USDT",
+    "symbol": "F3_USDT",
     "desimal": 18,
-    "sc": "0xa0246c9032bC3A600820415aE600c6388619A14D",
-    "star": 0,
+    "sc": "0x9e57e83ad79ac5312ba82940ba037ed30600e167",
+    "wd": 0,
+    "status": true
+  },
+  
+  
+  {
+    "symbol": "FDT_USDT",
+    "desimal": 18,
+    "sc": "0x3a599e584075065eAAAc768D75EaEf85c2f2fF64",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "FBX_USDT",
+    "symbol": "FEVR_USDT",
     "desimal": 18,
-    "sc": "0x5de597849cf72c72f073e9085bdd0dadd8e6c199",
-    "star": 0,
+    "sc": "0x82030CDBD9e4B7c5bb0b811A61DA6360D69449cc",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FDUSD_USDT",
+    "symbol": "FINE_USDT",
     "desimal": 18,
-    "sc": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
-    "star": 0,
+    "sc": "0x4e6415a5727ea08aae4580057187923aec331227",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FEAR_USDT",
+    "symbol": "FIU_USDT",
     "desimal": 18,
-    "sc": "0x88a9a52f944315d5b4e917b9689e65445c401e83",
-    "star": 0,
+    "sc": "0xEF7d50069406A2F5A53806f7250A6c0f17AD9dCD",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FEI_USDT",
+    "symbol": "FIWA_USDT",
     "desimal": 18,
-    "sc": "0x956F47F50A910163D8BF957Cf5846D573E7f87CA",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FERC_USDT",
-    "desimal": 18,
-    "sc": "0x2ecba91da63c29ea80fbe7b52632ca2d1f8e5be0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FET_USDT",
-    "desimal": 18,
-    "sc": "0xaea46A60368A7bD060eec7DF8CBa43b7EF41Ad85",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FIN_USDT",
-    "desimal": 18,
-    "sc": "0x054f76beed60ab6dbeb23502178c52d6c5debe40",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FIRE_USDT",
-    "desimal": 8,
-    "sc": "0xf921ae2dac5fa128dc0f6168bf153ea0943d2d43",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FIS_USDT",
-    "desimal": 18,
-    "sc": "0xef3a930e1ffffacd2fc13434ac81bd278b0ecc8d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FLASH_USDT",
-    "desimal": 18,
-    "sc": "0xca95a6b21a8101d8e34c153d31dc563ff897ebef",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FLIP_USDT",
-    "desimal": 18,
-    "sc": "0x826180541412d574cf1336d22c0c0a287822678a",
-    "star": 0,
+    "sc": "0x633237C6FA30FAe46Cc5bB22014DA30e50a718cC",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "FLOKI_USDT",
     "desimal": 9,
-    "sc": "0xcf0c122c6b73ff809c693db761e7baebe62b6a2e",
-    "star": 0,
+    "sc": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FLT_USDT",
+    "symbol": "FLURRY_USDT",
     "desimal": 18,
-    "sc": "0x236501327e701692a281934230af0b6be8df3353",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "FLUX_USDT",
-    "desimal": 8,
-    "sc": "0x720CD16b011b987Da3518fbf38c3071d4F0D1495",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FLX_USDT",
-    "desimal": 18,
-    "sc": "0x6243d8cea23066d098a15582d81a598b4e8391f4",
-    "star": 0,
+    "sc": "0x47c9BcEf4fE2dBcdf3Abf508f147f1bBE8d4fEf2",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "FLY_USDT",
     "desimal": 4,
-    "sc": "0x85f6eb2bd5a062f5f8560be93fb7147e16c81472",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "FODL_USDT",
-    "desimal": 18,
-    "sc": "0x4c2e59d098df7b6cbae0848d66de2f8a4889b9c3",
-    "star": 0,
+    "sc": "0x681fd3e49a6188Fc526784eE70AA1C269ee2B887",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FOR_USDT",
-    "desimal": 18,
-    "sc": "0x1fcdce58959f536621d76f5b7ffb955baa5a672f",
-    "star": 0,
+    "symbol": "FPS_USDT",
+    "desimal": 12,
+    "sc": "0x351dA1E7500aBA1d168b9435DCE73415718d212F",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FOREX_USDT",
-    "desimal": 18,
-    "sc": "0xDb298285FE4C5410B05390cA80e8Fbe9DE1F259B",
-    "star": 0,
+    "symbol": "FRBK_USDT",
+    "desimal": 8,
+    "sc": "0x6d96c6c401423a23945c03bc8c42e7f82d24b9e0",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FORM_USDT",
+    "symbol": "FRM_USDT",
     "desimal": 18,
-    "sc": "0x21381e026Ad6d8266244f2A583b35F9E4413FA2a",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FORT_USDT",
-    "desimal": 18,
-    "sc": "0x41545f8b9472D758bB669ed8EaEEEcD7a9C4Ec29",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FORTH_USDT",
-    "desimal": 18,
-    "sc": "0x77fba179c79de5b7653f68b5039af940ada60ce0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FOUR_USDT",
-    "desimal": 18,
-    "sc": "0x244b797d622d4dee8b188b03546acaabd0cf91a0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FOX_USDT",
-    "desimal": 18,
-    "sc": "0xc770eefad204b5180df6a14ee197d99d808ee52d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FRAX_USDT",
-    "desimal": 18,
-    "sc": "0x853d955acef822db058eb8505911ed77f175b99e",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FREE_USDT",
-    "desimal": 18,
-    "sc": "0x2f141ce366a2462f02cea3d12cf93e4dca49e4fd",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FRIN_USDT",
-    "desimal": 18,
-    "sc": "0xC9fE6E1C76210bE83DC1B5b20ec7FD010B0b1D15",
-    "star": 0,
+    "sc": "0xa719b8ab7ea7af0ddb4358719a34631bb79d15dc",
+    "wd": 0,
     "status": true
   },
   
   {
     "symbol": "FRONT_USDT",
     "desimal": 18,
-    "sc": "0xf8C3527CC04340b208C854E985240c02F7B7793f",
-    "star": 0,
+    "sc": "0x928e55daB735aa8260AF3cEDadA18B5f70C72f1b",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FRR_USDT",
+    "symbol": "GAFI_USDT",
     "desimal": 18,
-    "sc": "0xe6602b34d8510b033e000975b3322537c7172441",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FST_USDT",
-    "desimal": 18,
-    "sc": "0x0e192d382a36de7011f795acc4391cd302003606",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "FTM_USDT",
-    "desimal": 18,
-    "sc": "0x4E15361FD6b4BB609Fa63C81A2be19d873717870",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FTRB_USDT",
-    "desimal": 18,
-    "sc": "0x2596825a84888e8f24b747df29e11b5dd03c81d7",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FTT_USDT",
-    "desimal": 18,
-    "sc": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9",
-    "star": 0,
+    "sc": "0x89af13a10b32f1b2f8d1588f93027f69b6f4e27e",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "FUN_USDT",
-    "desimal": 8,
-    "sc": "0x419D0d8BdD9aF5e606Ae2232ed285Aff190E711b",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "FURUCOMBO_USDT",
+    "symbol": "GFT_USDT",
     "desimal": 18,
-    "sc": "0xfFffFffF2ba8F66D4e51811C5190992176930278",
-    "star": 0,
+    "sc": "0x72fF5742319eF07061836F5C924aC6D72c919080",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FUSE_USDT",
+    "symbol": "GGG_USDT",
     "desimal": 18,
-    "sc": "0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d",
-    "star": 0,
+    "sc": "0xd8047afecb86e44eff3add991b9f063ed4ca716b",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FX_USDT",
+    "symbol": "GGM_USDT",
     "desimal": 18,
-    "sc": "0x8c15ef5b4b21951d50e53e4fbda8298ffad25057",
-    "star": 0,
+    "sc": "0x4301a638FCB45C4bb65230B87F3797C213f832B8",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "FXF_USDT",
+    "symbol": "GHNY_USDT",
     "desimal": 18,
-    "sc": "0x8a40c222996f9f3431f63bf80244c36822060f12",
-    "star": 0,
+    "sc": "0xa045E37a0D1dd3A45fefb8803D22457abc0A728a",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "FXS_USDT",
-    "desimal": 18,
-    "sc": "0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "G3_USDT",
-    "desimal": 18,
-    "sc": "0xCF67815ccE72E682Eb4429eCa46843bed81Ca739",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GAL_USDT",
-    "desimal": 18,
-    "sc": "0x5fAa989Af96Af85384b8a938c2EdE4A7378D9875",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "GASDAO_USDT",
-    "desimal": 18,
-    "sc": "0x6bba316c48b49bd1eac44573c5c871ff02958469",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GBPT_USDT",
-    "desimal": 18,
-    "sc": "0x86B4dBE5D203e634a12364C0e428fa242A3FbA98",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GDT_USDT",
-    "desimal": 8,
-    "sc": "0xc67b12049c2d0cf6e476bc64c7f82fc6c63cffc5",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GEAR_USDT",
-    "desimal": 18,
-    "sc": "0xba3335588d9403515223f109edc4eb7269a9ab5d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GEL_USDT",
-    "desimal": 18,
-    "sc": "0x15b7c0c907e4c6b9adaaaabc300c08991d6cea05",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "GEMAI_USDT",
-    "desimal": 18,
-    "sc": "0xfbe44cae91d7df8382208fcdc1fe80e40fbc7e9a",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GFI_USDT",
-    "desimal": 18,
-    "sc": "0xdab396ccf3d84cf2d07c4454e10c8a6f5b008d2b",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GHST_USDT",
-    "desimal": 18,
-    "sc": "0x3F382DbD960E3a9bbCeaE22651E88158d2791550",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GHX_USDT",
-    "desimal": 18,
-    "sc": "0x728f30fa2f100742c7949d1961804fa8e0b1387d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GITCOIN_USDT",
-    "desimal": 18,
-    "sc": "0xde30da39c46104798bb5aa3fe8b9e0e1f348163f",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GLM_USDT",
-    "desimal": 18,
-    "sc": "0x7DD9c5Cba05E151C895FDe1CF355C9A1D5DA6429",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GLQ_USDT",
-    "desimal": 18,
-    "sc": "0x9f9c8ec3534c3ce16f928381372bfbfbfb9f4d24",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GM_USDT",
-    "desimal": 9,
-    "sc": "0xbc7250c8c3eca1dfc1728620af835fca489bfdf3",
-    "star": 0,
-    "status": true
-  },
- 
   {
     "symbol": "GMM_USDT",
     "desimal": 18,
-    "sc": "0x4B19C70Da4c6fA4bAa0660825e889d2F7eaBc279",
-    "star": 0,
+    "sc": "0x5B6bf0c7f989dE824677cFBD507D9635965e9cD3",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "GNGL_USDT",
+    "symbol": "GMPD_USDT",
     "desimal": 18,
-    "sc": "0x12652C6d93FDB6F4f37d48A8687783C782BB0d10",
-    "star": 0,
+    "sc": "0x9720ca160bbd4e7f3dd4bb3f8bd4227ca0342e63",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "GMRX_USDT",
+    "desimal": 18,
+    "sc": "0x998305efdc264b9674178899fffbb44a47134a76",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "GMT_USDT",
+    "desimal": 8,
+    "sc": "0x3019BF2a2eF8040C242C9a4c5c4BD4C81678b2A1",
+    "wd": 0,
     "status": true
   },
   
   {
     "symbol": "GOF_USDT",
     "desimal": 18,
-    "sc": "0x488E0369f9BC5C40C002eA7c1fe4fd01A198801c",
-    "star": 0,
+    "sc": "0x2bcf9c1861fae2d5a7d2b3242b71e2a8d461f61e",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "GOG_USDT",
+    "symbol": "GOLD_USDT",
     "desimal": 18,
-    "sc": "0x9ab7bb7fdc60f4357ecfef43986818a2a3569c62",
-    "star": 0,
+    "sc": "0xb3a6381070b1a15169dea646166ec0699fdaea79",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "GOMINING_USDT",
+    "symbol": "GOLDMINER_USDT",
     "desimal": 18,
-    "sc": "0x7Ddc52c4De30e94Be3A6A0A2b259b2850f421989",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "GORILLA_USDT",
-    "desimal": 9,
-    "sc": "0x33c04bed4533e31f2afb8ac4a61a48eda38c4fa0",
-    "star": 0,
+    "sc": "0xe2604c9561d490624aa35e156e65e590eb749519",
+    "wd": 0,
     "status": true
   },
  
   {
-    "symbol": "GOVI_USDT",
+    "symbol": "GOMINING_USDT",
     "desimal": 18,
-    "sc": "0xeeaa40b28a2d1b0b08f6f97bb1dd4b75316c6107",
-    "star": 0,
+    "sc": "0x7Ddc52c4De30e94Be3A6A0A2b259b2850f421989",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "GROK_USDT",
-    "desimal": 9,
-    "sc": "0x8390a1da07e376ef7add4be859ba74fb83aa02d5",
-    "star": 0,
+    "symbol": "GPT_USDT",
+    "desimal": 18,
+    "sc": "0x30842a9c941d9DE3AF582c41ad12b11D776ba69e",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "GRT_USDT",
+    "symbol": "GQ_USDT",
     "desimal": 18,
-    "sc": "0xc944e90c64b2c07662a292be6244bdf05cda44a7",
-    "star": 0,
+    "sc": "0xF700D4c708C2be1463E355F337603183D20E0808",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "GRBE_USDT",
+    "desimal": 18,
+    "sc": "0x5Ca4e7294B14EA5745EE2A688990e0cb68503219",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "GROW_USDT",
+    "desimal": 18,
+    "sc": "0x0C9aD20802E89BeA858ae2E8594843fAfA887CB3",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "GRV_USDT",
     "desimal": 8,
     "sc": "0xF33893DE6eB6aE9A67442E066aE9aBd228f5290c",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "GS_USDT",
-    "desimal": 18,
-    "sc": "0xe0b9a2c3e9f40cf74b2c7f591b2b0cca055c3112",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "GT_USDT",
-    "desimal": 18,
-    "sc": "0xE66747a101bFF2dBA3697199DCcE5b743b454759",
-    "star": 0,
+    "symbol": "GST_USDT",
+    "desimal": 8,
+    "sc": "0x4a2c860cEC6471b9F5F5a336eB4F38bb21683c98",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "GTC_USDT",
+    "symbol": "GTAI_USDT",
     "desimal": 18,
-    "sc": "0xB70835D7822eBB9426B56543E391846C107bd32C",
-    "star": 0,
+    "sc": "0x003d87d02A2A01E9E8a20f507C83E15DD83A33d1",
+    "wd": 0,
     "status": true
   },
-  
+ 
   {
-    "symbol": "HAHA_USDT",
+    "symbol": "HAPI_USDT",
     "desimal": 18,
-    "sc": "0xd87d72248093597df8d56d2a53c1ab7c1a0cc8da",
-    "star": 0,
-    "status": true
-  },
-  
-  
-  {
-    "symbol": "HEART_USDT",
-    "desimal": 18,
-    "sc": "0x8FAc8031e079F409135766C7d5De29cf22EF897C",
-    "star": 0,
+    "sc": "0xd9c2d319cd7e6177336b0a9c93c21cb48d84fb54",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "HEGIC_USDT",
+    "symbol": "HDV_USDT",
+    "desimal": 5,
+    "sc": "0x8cd0d76c0ad377378ab6ce878a7be686223497ee",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "HE_USDT",
     "desimal": 18,
-    "sc": "0x584bC13c7D411c00c01A62e8019472dE68768430",
-    "star": 0,
+    "sc": "0x20d39a5130f799b95b55a930e5b7ebc589ea9ed8",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "HELLO_USDT",
+    "desimal": 18,
+    "sc": "0x0F1cBEd8EFa0E012AdbCCB1638D0aB0147D5Ac00",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "HERA_USDT",
+    "desimal": 18,
+    "sc": "0x49c7295ff86eabf5bf58c6ebc858db4805738c01",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "HERO_USDT",
+    "desimal": 18,
+    "sc": "0xD40bEDb44C081D2935eebA6eF5a3c8A31A1bBE13",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "HFT_USDT",
     "desimal": 18,
-    "sc": "0xb3999F658C0391d94A37f7FF328F3feC942BcADC",
-    "star": 0,
+    "sc": "0x44Ec807ce2F4a6F2737A92e985f318d035883e47",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "HGET_USDT",
-    "desimal": 6,
-    "sc": "0x7968bc6a03017ea2de509aaa816f163db0f35148",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "HID_USDT",
+    "symbol": "HGPT_USDT",
     "desimal": 18,
-    "sc": "0xb14ebf566511b9e6002bb286016ab2497b9b9c9d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "HIFI_USDT",
-    "desimal": 18,
-    "sc": "0x4b9278b94a1112cAD404048903b8d343a810B07e",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "HIGH_USDT",
-    "desimal": 18,
-    "sc": "0x71Ab77b7dbB4fa7e017BC15090b2163221420282",
-    "star": 0,
+    "sc": "0x529c79f6918665ebe250f32eeeaa1d410a0798c6",
+    "wd": 0,
     "status": true
   },
   
+  
   {
-    "symbol": "HMT_USDT",
+    "symbol": "HOD_USDT",
     "desimal": 18,
-    "sc": "0xd1ba9bac957322d6e8c07a160a3a8da11a0d2867",
-    "star": 0,
+    "sc": "0x19a4866a85c652eb4a2ed44c42e4cb2863a62d51",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "HOGE_USDT",
-    "desimal": 9,
-    "sc": "0xfad45e47083e4607302aa43c65fb3106f1cd7607",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "HOPR_USDT",
+    "symbol": "HOOK_USDT",
     "desimal": 18,
-    "sc": "0xf5581dfefd8fb0e4aec526be659cfab1f8c781da",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "HORD_USDT",
-    "desimal": 18,
-    "sc": "0x43A96962254855F16b925556f9e97BE436A43448",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "HOT_USDT",
-    "desimal": 18,
-    "sc": "0x6c6ee5e31d828de241282b9606c8e98ea48526e2",
-    "star": 0,
+    "sc": "0xa260E12d2B924cb899AE80BB58123ac3fEE1E2F0",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "HOTCROSS_USDT",
     "desimal": 18,
-    "sc": "0x4297394c20800e8a38a619a243e9bbe7681ff24e",
-    "star": 0,
+    "sc": "0x4fa7163e153419e0e1064e418dd7a99314ed27b6",
+    "wd": 0,
     "status": true
   },
- 
   {
-    "symbol": "HSF_USDT",
+    "symbol": "ICE_USDT",
     "desimal": 18,
-    "sc": "0xba6b0dbb2ba8daa8f5d6817946393aef8d3a4487",
-    "star": 0,
+    "sc": "0xc335df7c25b72eec661d5aa32a7c2b7b2a1d1874",
+    "wd": 0,
     "status": true
   },
-  
   {
     "symbol": "ID_USDT",
     "desimal": 18,
     "sc": "0x2dff88a56767223a5529ea5960da7a3f5f766406",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "IDEX_USDT",
+    "symbol": "IGU_USDT",
     "desimal": 18,
-    "sc": "0xb705268213d593b8fd88d3fdeff93aff5cbdcfae",
-    "star": 0,
+    "sc": "0x201bC9F242f74C47Bbd898a5DC99cDCD81A21943",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "IHT_USDT",
+    "symbol": "IHC_USDT",
     "desimal": 18,
-    "sc": "0xEda8B016efA8b1161208Cf041cD86972eeE0F31E",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ILV_USDT",
-    "desimal": 18,
-    "sc": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "IMPT_USDT",
-    "desimal": 18,
-    "sc": "0x04C17b9D3b29A78F7Bd062a57CF44FC633e71f85",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "IMX_USDT",
-    "desimal": 18,
-    "sc": "0xf57e7e7c23978c3caec3c3548e3d615c346e79ff",
-    "star": 0,
+    "sc": "0x86a53fcd199212FEa44FA7e16EB1f28812be911D",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "INFRA_USDT",
-    "desimal": 18,
-    "sc": "0x013062189dc3dcc99e9Cee714c513033b8d99e3c",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "INJ_USDT",
-    "desimal": 18,
-    "sc": "0xe28b3b32b6c345a34ff64674606124dd5aceca30",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "INSP_USDT",
-    "desimal": 18,
-    "sc": "0x186eF81fd8E77EEC8BfFC3039e7eC41D5FC0b457",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "INV_USDT",
-    "desimal": 18,
-    "sc": "0x41d5d79431a913c4ae7d69a668ecdfe5ff9dfb68",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "IOEN_USDT",
-    "desimal": 18,
-    "sc": "0x1e4E46b7BF03ECE908c88FF7cC4975560010893A",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "IOI_USDT",
+    "symbol": "IOTA_USDT",
     "desimal": 6,
-    "sc": "0x8b3870df408ff4d7c3a26df852d41034eda11d81",
-    "star": 0,
+    "sc": "0xd944f1D1e9d5f9Bb90b62f9D45e447D989580782",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "IONX_USDT",
-    "desimal": 18,
-    "sc": "0x02d3a27ac3f55d5d91fb0f52759842696a864217",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "IOST_USDT",
-    "desimal": 18,
-    "sc": "0xfa1a856cfa3409cfa145fa4e20eb270df3eb21ab",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "IPOR_USDT",
-    "desimal": 18,
-    "sc": "0x1e4746dc744503b53b4a082cb3607b169a289090",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "IQ_USDT",
-    "desimal": 18,
-    "sc": "0x579cea1889991f68acc35ff5c3dd0621ff29b0c9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "IQT_USDT",
-    "desimal": 18,
-    "sc": "0x6dda263994aab33f5ed612294e26f2a13df0da05",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ISK_USDT",
-    "desimal": 18,
-    "sc": "0x17d2628D30F8e9E966c9Ba831c9B9b01ea8Ea75C",
-    "star": 0,
-    "status": true
-  },
-  
   {
     "symbol": "ISP_USDT",
     "desimal": 18,
-    "sc": "0xc8807f0f5ba3fa45ffbdc66928d71c5289249014",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ITGR_USDT",
-    "desimal": 18,
-    "sc": "0xd502f487e1841fdc805130e13eae80c61186bc98",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "IZI_USDT",
-    "desimal": 18,
-    "sc": "0x9ad37205d608B8b219e6a2573f922094CEc5c200",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "JAM_USDT",
-    "desimal": 18,
-    "sc": "0x23894DC9da6c94ECb439911cAF7d337746575A72",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "JASMY_USDT",
-    "desimal": 18,
-    "sc": "0x7420B4b9a0110cdC71fB720908340C03F9Bc03EC",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "K21_USDT",
-    "desimal": 18,
-    "sc": "0xb9d99c33ea2d86ec5ec6b8a4dd816ebba64404af",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KAP_USDT",
-    "desimal": 18,
-    "sc": "0x9625cE7753ace1fa1865A47aAe2c5C2Ce4418569",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KARATE_USDT",
-    "desimal": 18,
-    "sc": "0x80008bcd713c38af90a9930288d446bc3bd2e684",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KARRAT_USDT",
-    "desimal": 18,
-    "sc": "0xacd2c239012d17beb128b0944d49015104113650",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KEX_USDT",
-    "desimal": 6,
-    "sc": "0x16980b3b4a3f9d89e33311b5aa8f80303e5ca4f8",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KFC_USDT",
-    "desimal": 18,
-    "sc": "0xe63684bcf2987892cefb4caa79bd21b34e98a291",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KFT_USDT",
-    "desimal": 18,
-    "sc": "0xef53462838000184f35f7d991452e5f25110b207",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "KIF_USDT",
-    "desimal": 18,
-    "sc": "0x177ba0cac51bfc7ea24bad39d81dcefd59d74faa",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KINE_USDT",
-    "desimal": 18,
-    "sc": "0xCbfef8fdd706cde6F208460f2Bf39Aa9c785F05D",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KING_USDT",
-    "desimal": 18,
-    "sc": "0x149D8290F653dEB8e34c037D239d3d8EeE9de5aD",
-    "star": 0,
-    "status": true
-  },
-  
-  
-  {
-    "symbol": "KOK_USDT",
-    "desimal": 18,
-    "sc": "0x9B9647431632AF44be02ddd22477Ed94d14AacAa",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KONO_USDT",
-    "desimal": 18,
-    "sc": "0x850aAB69f0e0171A9a49dB8BE3E71351c8247Df4",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KP3R_USDT",
-    "desimal": 18,
-    "sc": "0x1ceb5cb57c4d4e2b2433641b95dd330a33185a44",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KTN_USDT",
-    "desimal": 18,
-    "sc": "0x491e136ff7ff03e6ab097e54734697bb5802fc1c",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "KTON_USDT",
-    "desimal": 18,
-    "sc": "0x9f284e1337a815fe77d2ff4ae46544645b20c5ff",
-    "star": 0,
+    "sc": "0xd2e7b964770fcf51df088a5f0bb2d33a3c60cccf",
+    "wd": 0,
     "status": true
   },
  
   {
+    "symbol": "JGN_USDT",
+    "desimal": 18,
+    "sc": "0xc13b7a43223bb9bf4b69bd68ab20ca1b79d81c75",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "JOB_USDT",
+    "desimal": 18,
+    "sc": "0xB5489d935Be23f1e6Acc02766971936045F05b57",
+    "wd": 0,
+    "status": true
+  },
+  
+  {
+    "symbol": "KABY_USDT",
+    "desimal": 18,
+    "sc": "0x02a40c048ee2607b5f5606e445cfc3633fb20b58",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KALM_USDT",
+    "desimal": 18,
+    "sc": "0x4ba0057f784858a48fe351445c672ff2a3d43515",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KBOX_USDT",
+    "desimal": 18,
+    "sc": "0x3523d58d8036B1C5C9A13493143c97aEfC5Ad422",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KICKS_USDT",
+    "desimal": 18,
+    "sc": "0xfEB4e9B932eF708c498Cc997ABe51D0EE39300cf",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KMON_USDT",
+    "desimal": 18,
+    "sc": "0xc732b6586a93b6b7cf5fed3470808bc74998224d",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KPAD_USDT",
+    "desimal": 18,
+    "sc": "0xcfefa64b0ddd611b125157c41cd3827f2e8e8615",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KT_USDT",
+    "desimal": 18,
+    "sc": "0x52da44b5e584f730005dac8d2d2acbdee44d4ba3",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KWS_USDT",
+    "desimal": 18,
+    "sc": "0x5D0E95C15cA50F13fB86938433269D03112409Fe",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "KZEN_USDT",
+    "desimal": 18,
+    "sc": "0x4550003152F12014558e5CE025707E4DD841100F",
+    "wd": 0,
+    "status": true
+  },
+  {
     "symbol": "LABS_USDT",
     "desimal": 18,
-    "sc": "0x8b0e42f366ba502d787bb134478adfae966c8798",
-    "star": 0,
+    "sc": "0x510Ca7D22A84599e7d0f15F09E674056a6255389",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "LADYS_USDT",
+    "symbol": "LAI_USDT",
     "desimal": 18,
-    "sc": "0x12970e6868f88f6557b76120662c1b3e50a646bf",
-    "star": 0,
+    "sc": "0x776f9987d9deed90eed791cbd824d971fd5ccf09",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "LAMB_USDT",
+    "symbol": "LANDSHARE_USDT",
     "desimal": 18,
-    "sc": "0x8971f9fd7196e5cEE2C1032B50F656855af7Dd26",
-    "star": 0,
+    "sc": "0xA73164DB271931CF952cBaEfF9E8F5817b42fA5C",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "LAYER_USDT",
+    "symbol": "LAZIO_USDT",
+    "desimal": 8,
+    "sc": "0x77d547256a2cd95f32f67ae0313e450ac200648d",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "LBL_USDT",
     "desimal": 18,
-    "sc": "0x0fF6ffcFDa92c53F615a4A75D982f399C989366b",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "LBLOCK_USDT",
-    "desimal": 9,
-    "sc": "0x2b867efD2dE4Ad2B583Ca0CB3dF9C4040Ef4D329",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LDO_USDT",
-    "desimal": 18,
-    "sc": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "LENDS_USDT",
-    "desimal": 18,
-    "sc": "0x2c06ba9e7f0daccbc1f6a33ea67e85bb68fbee3a",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LEO_USDT",
-    "desimal": 18,
-    "sc": "0x2AF5D2aD76741191D15Dfe7bF6aC92d4Bd912Ca3",
-    "star": 0,
+    "sc": "0x77edFaE59a7948d66E9911A30cC787d2172343d4",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "LEV_USDT",
     "desimal": 18,
-    "sc": "0xbc194e6f748a222754C3E8b9946922c09E7d4e91",
-    "star": 0,
+    "sc": "0xbc194e6f748a222754c3e8b9946922c09e7d4e91",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "LEVER_USDT",
+    "symbol": "LFW_USDT",
     "desimal": 18,
-    "sc": "0x4B5f49487ea7B3609b1aD05459BE420548789f1f",
-    "star": 0,
+    "sc": "0xD71239a33C8542Bd42130c1B4ACA0673B4e4f48B",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "LIEN_USDT",
-    "desimal": 8,
-    "sc": "0xab37e1358b639fd877f015027bb62d3ddaa7557e",
-    "star": 0,
+    "symbol": "LGX_USDT",
+    "desimal": 18,
+    "sc": "0x9096B4309224d751FCB43d7eB178dcFFc122aD15",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "LIFE_USDT",
     "desimal": 18,
-    "sc": "0x6c936d4ae98e6d2172db18c16c4b601c99918ee6",
-    "star": 0,
+    "sc": "0x82190d28E710ea9C029D009FaD951c6F1d803BB3",
+    "wd": 0,
     "status": true
   },
-  
   {
-    "symbol": "LINA_USDT",
+    "symbol": "LIME_USDT",
     "desimal": 18,
-    "sc": "0x3e9bc21c9b189c09df3ef1b824798658d5011937",
-    "star": 0,
+    "sc": "0x7bc75e291e656e8658d66be1cc8154a3769a35dd",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "LION_USDT",
     "desimal": 18,
-    "sc": "0xc8ff6772f605a139c40b32d5d87d54994c705c6b",
-    "star": 0,
+    "sc": "0x7969dc3c6e925bccbea9f7fc466a63c74f0115b8",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "LIT_USDT",
     "desimal": 18,
-    "sc": "0xb59490ab09a0f526cc7305822ac65f2ab12f9723",
-    "star": 0,
+    "sc": "0xb59490aB09A0f526Cc7305822aC65f2Ab12f9723",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "LITH_USDT",
+    "symbol": "LOA_USDT",
     "desimal": 18,
-    "sc": "0x188e817b02e635d482ae4d81e25dda98a97c4a42",
-    "star": 0,
+    "sc": "0x94b69263FCA20119Ae817b6f783Fc0F13B02ad50",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "LKR_USDT",
-    "desimal": 18,
-    "sc": "0x80ce3027a70e0a928d9268994e9b85d03bd4cdcf",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "LMR_USDT",
-    "desimal": 8,
-    "sc": "0x4b1D0b9F081468D780Ca1d5d79132b64301085d1",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LMWR_USDT",
-    "desimal": 18,
-    "sc": "0x628a3b2e302c7e896acc432d2d0dd22b6cb9bc88",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LNDX_USDT",
-    "desimal": 6,
-    "sc": "0x08A1C30BBB26425c1031ee9E43FA0B9960742539",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LOCG_USDT",
-    "desimal": 18,
-    "sc": "0x60eb57d085c59932d5faa6c6026268a4386927d0",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "LOKA_USDT",
-    "desimal": 18,
-    "sc": "0x61e90a50137e1f645c9ef4a0d3a4f01477738406",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LON_USDT",
-    "desimal": 18,
-    "sc": "0x0000000000095413afc295d19edeb1ad7b71c952",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LOOKS_USDT",
-    "desimal": 18,
-    "sc": "0xf4d2888d29d722226fafa5d9b24f9164c092421e",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LOOM_USDT",
-    "desimal": 18,
-    "sc": "0x42476f744292107e34519f9c357927074ea3f75d",
-    "star": 0,
-    "status": true
-  },
-  
   {
     "symbol": "LOOT_USDT",
     "desimal": 18,
-    "sc": "0x721A1B990699eE9D90b6327FaaD0A3E840aE8335",
-    "star": 0,
+    "sc": "0x14a9a94e555fdd54c21d7f7e328e61d7ebece54b",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "LOVELY_USDT",
     "desimal": 8,
-    "sc": "0x9e24415d1e549ebc626a13a482bb117a2b43e9cf",
-    "star": 0,
+    "sc": "0x9E24415d1e549EBc626a13a482Bb117a2B43e9CF",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "LOWB_USDT",
+    "symbol": "LSD7_USDT",
     "desimal": 18,
-    "sc": "0x69e5C11a7C30f0bf84A9faECBd5161AA7a94decA",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LPT_USDT",
-    "desimal": 18,
-    "sc": "0x58b6a8a3302369daec383334672404ee733ab239",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LQTY_USDT",
-    "desimal": 18,
-    "sc": "0x6DEA81C8171D0bA574754EF6F8b412F2Ed88c54D",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LRC_USDT",
-    "desimal": 18,
-    "sc": "0xBBbbCA6A901c926F240b89EacB641d8Aec7AEafD",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LSD_USDT",
-    "desimal": 9,
-    "sc": "0x97D4F49eEb0E2c96d5EbAA71AB8418e563ecd9fd",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LSS_USDT",
-    "desimal": 18,
-    "sc": "0x3b9be07d622accaed78f479bc0edabfd6397e320",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LUNCH_USDT",
-    "desimal": 18,
-    "sc": "0x71a28feAEe902966DC8D355e7B8Aa427D421e7e0",
-    "star": 0,
+    "sc": "0xcd1b51b87a8a7137d6421ba5a976225187a26777",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "LUNR_USDT",
     "desimal": 4,
-    "sc": "0xA87135285Ae208e22068AcDBFf64B11Ec73EAa5A",
-    "star": 0,
+    "sc": "0x37807D4fbEB84124347B8899Dd99616090D3e304",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "LYM_USDT",
+    "symbol": "LUS_USDT",
     "desimal": 18,
-    "sc": "0xc690F7C7FcfFA6a82b79faB7508c466FEfdfc8c5",
-    "star": 0,
+    "sc": "0xde301D6a2569aEfcFe271B9d98f318BAee1D30a4",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MAHA_USDT",
+    "symbol": "MAPE_USDT",
     "desimal": 18,
-    "sc": "0x745407c86DF8DB893011912d3aB28e68B62E49B0",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "MANA_USDT",
-    "desimal": 18,
-    "sc": "0x0F5D2fB29fb7d3CFeE444a200298f468908cC942",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "MARSH_USDT",
-    "desimal": 18,
-    "sc": "0x5a666c7d92E5fA7Edcb6390E4efD6d0CDd69cF37",
-    "star": 0,
+    "sc": "0xCa044F16AfA434C0C17c0478D8A6cE4FEEf46504",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MASA_USDT",
+    "symbol": "MAT_USDT",
     "desimal": 18,
-    "sc": "0x944824290cc12f31ae18ef51216a223ba4063092",
-    "star": 0,
+    "sc": "0xf3147987a00d35eecc10c731269003ca093740ca",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MASK_USDT",
+    "symbol": "MBOX_USDT",
     "desimal": 18,
-    "sc": "0x69af81e73a73b40adf4f3d4223cd9b1ece623074",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "MATH_USDT",
-    "desimal": 18,
-    "sc": "0x08d967bb0134f2d07f7cfb6e246680c53927dd30",
-    "star": 0,
+    "sc": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MAV_USDT",
+    "symbol": "MCRN_USDT",
     "desimal": 18,
-    "sc": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
-    "star": 0,
+    "sc": "0xacb2d47827c9813ae26de80965845d80935afd0b",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MAVIA_USDT",
-    "desimal": 18,
-    "sc": "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
-    "star": 0,
+    "symbol": "MCRT_USDT",
+    "desimal": 9,
+    "sc": "0x4b8285aB433D8f69CB48d5Ad62b415ed1a221e4f",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MBLK_USDT",
+    "symbol": "MDAO_USDT",
     "desimal": 18,
-    "sc": "0xF47245e9A3Ba3dCa8B004E34afc1290B1d435a52",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "MCO2_USDT",
-    "desimal": 18,
-    "sc": "0xfc98e825a2264d890f9a1e68ed50e1526abccacd",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "MDF_USDT",
-    "desimal": 18,
-    "sc": "0x1a57367c6194199e5d9aea1ce027431682dfb411",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "MDS_USDT",
-    "desimal": 18,
-    "sc": "0x66186008C1050627F979d464eABb258860563dbE",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "MEME_USDT",
-    "desimal": 18,
-    "sc": "0xb131f4a55907b10d1f0a50d8ab8fa09ec342cd74",
-    "star": 0,
+    "sc": "0x60322971a672B81BccE5947706D22c19dAeCf6Fb",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "MET_USDT",
+    "symbol": "MELI_USDT",
     "desimal": 18,
-    "sc": "0x2Ebd53d035150f328bd754D6DC66B99B0eDB89aa",
-    "star": 0,
+    "sc": "0xaD04AC36791d923DeB082dA4f91Ab71675dD18fB",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MEPAD_USDT",
+    "desimal": 18,
+    "sc": "0x9d70a3ee3079a6fa2bb16591414678b7ad91f0b5",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "METAN_USDT",
+    "desimal": 18,
+    "sc": "0x879D239BCC0356Cf9df8c90442488bCe99554c66",
+    "wd": 0,
+    "status": true
+  },
+  
+  {
+    "symbol": "METFI_USDT",
+    "desimal": 18,
+    "sc": "0x3e7f1039896454b9cb27c53cc7383e1ab9d9512a",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "METO_USDT",
+    "desimal": 18,
+    "sc": "0xa78775bba7a542F291e5ef7f13C6204E704A90Ba",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "MGA_USDT",
+    "desimal": 18,
+    "sc": "0x03aC6AB6A9a91a0fcdec7D85b38bDFBb719ec02f",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "MGG_USDT",
     "desimal": 18,
-    "sc": "0x7237C0B30B1355f1B76355582f182F6f04B08740",
-    "star": 0,
+    "sc": "0x6125adcab2f171bc70cfe2caecfec5509273a86a",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MIMIR_USDT",
+    "symbol": "MHUNT_USDT",
     "desimal": 18,
-    "sc": "0x71dc40668682a124231301414167e4cf7f55383c",
-    "star": 0,
+    "sc": "0x2C717059b366714d267039aF8F59125CAdce6D8c",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MINI_USDT",
-    "desimal": 18,
-    "sc": "0x4d953cf077c0c95ba090226e59a18fcf97db44ec",
-    "star": 0,
+    "symbol": "MILO_USDT",
+    "desimal": 9,
+    "sc": "0xd9dE2B1973E57Dc9DBA90c35d6Cd940ae4A3CBe1",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MIR_USDT",
+    "symbol": "MINE_USDT",
     "desimal": 18,
-    "sc": "0x09a3EcAFa817268f77BE1283176B946C4ff2E608",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "MIX_USDT",
-    "desimal": 18,
-    "sc": "0x5d285f735998f36631f678ff41fb56a10a4d0429",
-    "star": 0,
+    "sc": "0x93713de5e0be3b7FcbD34257b6cadFb4d96e12b1",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MKR_USDT",
+    "symbol": "MINT_USDT",
     "desimal": 18,
-    "sc": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
-    "star": 0,
+    "sc": "0x1f3af095cda17d63cad238358837321e95fc5915",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "ML_USDT",
+    "symbol": "MIST_USDT",
     "desimal": 18,
-    "sc": "0x059956483753947536204e89bfaD909E1a434Cc6",
-    "star": 0,
+    "sc": "0x68e374f856bf25468d365e539b700b648bf94b67",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MLN_USDT",
+    "symbol": "MLS_USDT",
     "desimal": 18,
-    "sc": "0xec67005c4e498ec7f55e092bd1d35cbc47c91892",
-    "star": 0,
+    "sc": "0x5F2F6c4C491B690216E0f8Ea753fF49eF4E36ba6",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "MLT_USDT",
     "desimal": 18,
-    "sc": "0x9506d37f70eb4c3d79c398d326c871abbf10521d",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "MNT_USDT",
-    "desimal": 18,
-    "sc": "0x3c3a81e81dc49a522a592e7622a7e711c06bf354",
-    "star": 0,
+    "sc": "0xb72a20c7b8bd666f80ac053b0f4de20a787080f5",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MODA_USDT",
+    "symbol": "MMPRO_USDT",
     "desimal": 18,
-    "sc": "0x1117ac6ad6cdf1a3bc543bad3b133724620522d5",
-    "star": 0,
+    "sc": "0x6067490d05f3cf2fdffc0e353b1f5fd6e5ccdf70",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MOFI_USDT",
+    "symbol": "MMT_USDT",
     "desimal": 18,
-    "sc": "0xb2dbf14d0b47ed3ba02bdb7c954e05a72deb7544",
-    "star": 0,
+    "sc": "0xB34966A2A66cb116ebe87b9554c020DcC950E917",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MOG_USDT",
+    "symbol": "MNZ_USDT",
     "desimal": 18,
-    "sc": "0xaaee1a9723aadb7afa2810263653a34ba2c21c7a",
-    "star": 0,
+    "sc": "0x861f1E1397daD68289e8f6a09a2ebb567f1B895C",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "MOMA_USDT",
     "desimal": 18,
-    "sc": "0xbd1848e1491d4308ad18287a745dd4db2a4bd55b",
-    "star": 0,
+    "sc": "0xb72842d6f5fedf91d22d56202802bb9a79c6322e",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MONG_USDT",
+    "symbol": "MONI_USDT",
     "desimal": 18,
-    "sc": "0x1ce270557c1f68cfb577b856766310bf8b47fd9c",
-    "star": 0,
+    "sc": "0x9573c88aE3e37508f87649f87c4dd5373C9F31e0",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MOONEY_USDT",
+    "symbol": "MOOO_USDT",
     "desimal": 18,
-    "sc": "0x20d4DB1946859E2Adb0e5ACC2eac58047aD41395",
-    "star": 0,
+    "sc": "0xa0b9bb05da11e3b19ffd64554400f59d4a378515",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MOOV_USDT",
+    "symbol": "MOVEZ_USDT",
     "desimal": 18,
-    "sc": "0x4116f14b6d462b32a1c10f98049e4b1765e34fa9",
-    "star": 0,
+    "sc": "0x039cD22cb49084142d55FCD4B6096A4F51ffb3B4",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MOT_USDT",
+    "symbol": "MSWAP_USDT",
     "desimal": 18,
-    "sc": "0x1E02cdbbA6729B6470de81Ad4D2cCA4c514521b9",
-    "star": 0,
+    "sc": "0xdD5a149740c055bdcdC5C066888f739DBe0bf2d0",
+    "wd": 0,
     "status": true
   },
- 
-  {
-    "symbol": "MPH_USDT",
-    "desimal": 18,
-    "sc": "0x6369c3dadfc00054a42ba8b2c09c48131dd4aa38",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "MPL_USDT",
-    "desimal": 18,
-    "sc": "0x33349b282065b0284d756f0577fb39c158f935e6",
-    "star": 0,
-    "status": true
-  },
- 
   
-  {
-    "symbol": "MTA_USDT",
-    "desimal": 18,
-    "sc": "0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "MTL_USDT",
-    "desimal": 8,
-    "sc": "0xF433089366899D83a9f26A773D59ec7eCF30355e",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "MTN_USDT",
-    "desimal": 18,
-    "sc": "0x41dBECc1cdC5517C6f76f6a6E836aDbEe2754DE3",
-    "star": 0,
-    "status": true
-  },
   {
     "symbol": "MTRG_USDT",
     "desimal": 18,
-    "sc": "0xBd2949F67DcdC549c6Ebe98696449Fa79D988A9F",
-    "star": 0,
+    "sc": "0xbd2949f67dcdc549c6ebe98696449fa79d988a9f",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MTV_USDT",
+    "symbol": "MTS_USDT",
     "desimal": 18,
-    "sc": "0x6226e00bCAc68b0Fe55583B90A1d727C14fAB77f",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "MUBI_USDT",
-    "desimal": 18,
-    "sc": "0x38e382f74dfb84608f3c1f10187f6bef5951de93",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "MULTI_USDT",
-    "desimal": 18,
-    "sc": "0x65ef703f5594d2573eb71aaf55bc0cb548492df4",
-    "star": 0,
+    "sc": "0x496cC0b4ee12Aa2AC4c42E93067484e7Ff50294b",
+    "wd": 0,
     "status": true
   },
  
-  
   {
-    "symbol": "MUSE_USDT",
+    "symbol": "MYRA_USDT",
     "desimal": 18,
-    "sc": "0xb6ca7399b4f9ca56fc27cbff44f4d2e4eef1fc81",
-    "star": 0,
+    "sc": "0x6ef238E9E8CD2A96740897761C18894Fc086B9d0",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "MUSIC_USDT",
-    "desimal": 8,
-    "sc": "0xd8c0b13b551718b808fc97ead59499d5ef862775",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "MV_USDT",
+    "symbol": "NAFT_USDT",
     "desimal": 18,
-    "sc": "0xAE788F80F2756A86aa2F410C651F2aF83639B95b",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "MYRIA_USDT",
-    "desimal": 18,
-    "sc": "0xA0Ef786Bf476fE0810408CaBA05E536aC800ff86",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "MYTH_USDT",
-    "desimal": 18,
-    "sc": "0xba41ddf06b7ffd89d1267b5a93bfef2424eb2003",
-    "star": 0,
+    "sc": "0xd7730681b1dc8f6f969166b29d8a5ea8568616a3",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "NAOS_USDT",
     "desimal": 18,
-    "sc": "0x4a615bb7166210cce20e6642a6f8fb5d4d044496",
-    "star": 0,
+    "sc": "0x758d08864fb6cce3062667225ca10b8f00496cc2",
+    "wd": 0,
     "status": true
   },
   
   {
     "symbol": "NBT_USDT",
     "desimal": 18,
-    "sc": "0x446f2a8a39cc730ef378be759a3c57f1a3fe824c",
-    "star": 0,
+    "sc": "0x1d3437e570e93581bd94b2fd8fbf202d4a65654a",
+    "wd": 0,
+    "status": true
+  },
+ 
+  {
+    "symbol": "NFE_USDT",
+    "desimal": 18,
+    "sc": "0xf03ca04dd56d695a410f46f14fef4028b22fb79a",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "NCT_USDT",
+    "symbol": "NFP_USDT",
     "desimal": 18,
-    "sc": "0x9e46a38f5daabe8683e10793b06749eef7d733d1",
-    "star": 0,
-    "status": true
-  },
-  
-  
-  {
-    "symbol": "NEXO_USDT",
-    "desimal": 18,
-    "sc": "0xB62132e35a6c13ee1EE0f84dC5d40bad8d815206",
-    "star": 0,
+    "sc": "0x551897f8203bd131b350601d3ac0679ba0fc0136",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "NEXT_USDT",
+    "symbol": "NFTB_USDT",
     "desimal": 18,
-    "sc": "0xfe67a4450907459c3e1fff623aa927dd4e28c67a",
-    "star": 0,
+    "sc": "0xde3dbbe30cfa9f437b293294d1fd64b26045c71a",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "NFTD_USDT",
     "desimal": 18,
-    "sc": "0x8E0fE2947752BE0d5ACF73aaE77362Daf79cB379",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "NFTL_USDT",
-    "desimal": 18,
-    "sc": "0xe7f72bc0252ca7b16dbb72eeee1afcdb2429f2dd",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "NFTX_USDT",
-    "desimal": 18,
-    "sc": "0x87d73E916D7057945c9BcD8cdd94e42A6F47f776",
-    "star": 0,
+    "sc": "0xac83271abb4ec95386f08ad2b904a46c61777cef",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "NFTY_USDT",
     "desimal": 18,
-    "sc": "0xE1D7C7a4596B038CEd2A84bF65B8647271C53208",
-    "star": 0,
+    "sc": "0x5774B2fc3e91aF89f89141EacF76545e74265982",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "NII_USDT",
-    "desimal": 15,
-    "sc": "0x7c8155909cd385F120A56eF90728dD50F9CcbE52",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "NIIFI_USDT",
-    "desimal": 15,
-    "sc": "0x852e5427c86A3b46DD25e5FE027bb15f53c4BCb8",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "NIZA_USDT",
-    "desimal": 9,
-    "sc": "0xb58e26ac9cc14c0422c2b419b0ca555ee4dcb7cb",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "NKN_USDT",
+    "symbol": "NRV_USDT",
     "desimal": 18,
-    "sc": "0x5Cf04716BA20127F1E2297AdDCf4B5035000c9eb",
-    "star": 0,
+    "sc": "0x42F6f551ae042cBe50C739158b4f0CAC0Edb9096",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "NMR_USDT",
-    "desimal": 18,
-    "sc": "0x1776e1F26f98b1A5dF9cD347953a26dd3Cb46671",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "NOIA_USDT",
-    "desimal": 18,
-    "sc": "0xa8c8CfB141A3bB59FEA1E2ea6B79b5ECBCD7b6ca",
-    "star": 0,
-    "status": true
-  },
-  
   {
     "symbol": "NSDX_USDT",
     "desimal": 18,
-    "sc": "0xe069Af87450fB51Fc0d0E044617f1C134163e591",
-    "star": 0,
+    "sc": "0x417871f0682db63924b931fc16ba3ff40343cdcb",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "NUM_USDT",
     "desimal": 18,
-    "sc": "0x3496b523e5c00a4b4150d6721320cddb234c3079",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "NUX_USDT",
-    "desimal": 18,
-    "sc": "0x89bd2e7e388fab44ae88bef4e1ad12b4f1e0911c",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "NVIR_USDT",
-    "desimal": 18,
-    "sc": "0x9d71CE49ab8A0E6D2a1e7BFB89374C9392FD6804",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "NWC_USDT",
-    "desimal": 18,
-    "sc": "0x968f6f898a6df937fc1859b323ac2f14643e3fed",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "NYM_USDT",
-    "desimal": 6,
-    "sc": "0x525A8F6F3Ba4752868cde25164382BfbaE3990e1",
-    "star": 0,
+    "sc": "0xeceb87cf00dcbf2d4e2880223743ff087a995ad9",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "O3_USDT",
     "desimal": 18,
-    "sc": "0xEe9801669C6138E84bD50dEB500827b776777d28",
-    "star": 0,
+    "sc": "0xee9801669c6138e84bd50deb500827b776777d28",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "OAX_USDT",
+    "symbol": "O4DX_USDT",
     "desimal": 18,
-    "sc": "0x701C244b988a513c945973dEFA05de933b23Fe1D",
-    "star": 0,
+    "sc": "0x062ca2d2F1aF8C203FA3Ad5298FD6fAa4E44E897",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "OBI_USDT",
     "desimal": 18,
-    "sc": "0xBb3A8FD6Ec4bF0FDc6Cd2739b1e41192D12B1873",
-    "star": 0,
+    "sc": "0x69a87c8788d4a48c1362b3b357d0e6b59c11d93f",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "OBT_USDT",
+    "symbol": "OLAND_USDT",
     "desimal": 18,
-    "sc": "0x07f9702ce093db82dfdc92c2c6e578d6ea8d5e22",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OCC_USDT",
-    "desimal": 18,
-    "sc": "0x2f109021afe75b949429fe30523ee7c0d5b27207",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OCEAN_USDT",
-    "desimal": 18,
-    "sc": "0x967da4048cD07aB37855c090aAF366e4ce1b9F48",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "ODDZ_USDT",
-    "desimal": 18,
-    "sc": "0xcd2828fc4d8e8a0ede91bb38cf64b1a81de65bf6",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OGN_USDT",
-    "desimal": 18,
-    "sc": "0x8207c1ffc5b6804f6024322ccf34f29c3541ae26",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OIN_USDT",
-    "desimal": 8,
-    "sc": "0x9aeB50f542050172359A0e1a25a9933Bc8c01259",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OKB_USDT",
-    "desimal": 18,
-    "sc": "0x75231F58b43240C9718Dd58B4967c5114342a86c",
-    "star": 0,
+    "sc": "0xB0461d7E8212D311b842A58e9989edE849ac6816",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "OLE_USDT",
     "desimal": 18,
-    "sc": "0x1b6e9c73bee68102d9dd4a2627f97bff4183ab0a",
-    "star": 0,
+    "sc": "0xB7E2713CF55cf4b469B5a8421Ae6Fc0ED18F1467",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "OLY_USDT",
+    "symbol": "OOE_USDT",
     "desimal": 18,
-    "sc": "0x6595b8fd9c920c81500dca94e53cdc712513fb1f",
-    "star": 0,
+    "sc": "0x8ea5219a16c2dbf1d6335a6aa0c6bd45c50347c5",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "OM_USDT",
+    "symbol": "OPA_USDT",
     "desimal": 18,
-    "sc": "0x3593D125a4f7849a1B059E64F4517A86Dd60c95d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OMG_USDT",
-    "desimal": 18,
-    "sc": "0xd26114cd6EE289AccF82350c8d8487fedB8A0C07",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OMI_USDT",
-    "desimal": 18,
-    "sc": "0xeD35af169aF46a02eE13b9d79Eb57d6D68C1749e",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ONC_USDT",
-    "desimal": 18,
-    "sc": "0xd90e69f67203ebe02c917b5128629e77b4cd92dc",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ONDO_USDT",
-    "desimal": 18,
-    "sc": "0xfaba6f8e4a5e8ab82f62fe7c39859fa577269be3",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ONIT_USDT",
-    "desimal": 18,
-    "sc": "0x410e731c2970dce3add351064acf5ce9e33fdbf0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OOKI_USDT",
-    "desimal": 18,
-    "sc": "0x0De05F6447ab4D22c8827449EE4bA2D5C288379B",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OPEN_USDT",
-    "desimal": 8,
-    "sc": "0x4123a133ae3c521fd134d7b13a2dec35b56c2463",
-    "star": 0,
+    "sc": "0xA2F89a3be1bAda5Eb9D58D23EDc2E2FE0F82F4b0",
+    "wd": 0,
     "status": true
   },
  
   {
-    "symbol": "OPIUM_USDT",
+    "symbol": "OPS_USDT",
     "desimal": 18,
-    "sc": "0x888888888889c00c67689029d7856aac1065ec11",
-    "star": 0,
+    "sc": "0xDf0121a3bA5C10816eA2943C722650C4A4B0dbE6",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "OPN1_USDT",
-    "desimal": 18,
-    "sc": "0xc28eb2250d1ae32c7e74cfb6d6b86afc9beb6509",
-    "star": 0,
-    "status": true
-  },
-  
   {
     "symbol": "OPUL_USDT",
     "desimal": 18,
-    "sc": "0x80d55c03180349fff4a229102f62328220a96444",
-    "star": 0,
+    "sc": "0x686318000d982bc8dcc1cdcf8ffd22322f0960ed",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "ORAI_USDT",
+    "symbol": "ORFY_USDT",
     "desimal": 18,
-    "sc": "0x4c11249814f11b9346808179cf06e71ac328c1b5",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ORAO_USDT",
-    "desimal": 18,
-    "sc": "0xee1cea7665ba7aa97e982edeaecb26b59a04d035",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ORB_USDT",
-    "desimal": 18,
-    "sc": "0x3C917054e03485808137EB306eAFA8DA0Ab695cd",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ORBK_USDT",
-    "desimal": 18,
-    "sc": "0xce6e54daa1ea95fb3530859d69d4bdb978dd821b",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "ORBS_USDT",
-    "desimal": 18,
-    "sc": "0xff56cc6b1e6ded347aa0b7676c85ab0b3d08b0fa",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ORC_USDT",
-    "desimal": 18,
-    "sc": "0x662b67d00a13faf93254714dd601f5ed49ef2f51",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ORDS_USDT",
-    "desimal": 18,
-    "sc": "0x8AB2ff0116A279a99950C66A12298962D152B83c",
-    "star": 0,
+    "sc": "0x39f0F4c64c7Ad1Ebb25cfEaFdd221cDEe3084441",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "ORION_USDT",
     "desimal": 18,
-    "sc": "0x727f064a78dc734d33eec18d5370aef32ffd46e4",
-    "star": 0,
+    "sc": "0x3dcb18569425930954feb191122e574b87f66abd",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "ORN_USDT",
+    "symbol": "ORO_USDT",
+    "desimal": 18,
+    "sc": "0xfc4f5a4d1452b8dc6c3cb745db15b29c00812b19",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ORTB_USDT",
     "desimal": 8,
-    "sc": "0x0258F474786DdFd37ABCE6df6BBb1Dd5dfC4434a",
-    "star": 0,
+    "sc": "0x9E711221B34A2d4B8F552BD5f4A6C4e7934920f7",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "OSKY_USDT",
+    "symbol": "PATEX_USDT",
     "desimal": 18,
-    "sc": "0xb185004c836695b9102eebf1779e5a46b89248fe",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OST_USDT",
-    "desimal": 18,
-    "sc": "0x2C4e8f2D746113d0696cE89B35F0d8bF88E0AEcA",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OUSD_USDT",
-    "desimal": 18,
-    "sc": "0x2A8e1E676Ec238d8A992307B495b45B3fEAa5e86",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "OVR_USDT",
-    "desimal": 18,
-    "sc": "0x21bfbda47a0b4b5b1248c767ee49f7caa9b23697",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OX_USDT",
-    "desimal": 18,
-    "sc": "0xba0Dda8762C24dA9487f5FA026a9B64b695A07Ea",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "OXT_USDT",
-    "desimal": 18,
-    "sc": "0x4575f41308EC1483f3d399aa9a2826d74Da13Deb",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "P00LS_USDT",
-    "desimal": 18,
-    "sc": "0x881Ba05de1E78f549cC63a8f6Cabb1d4AD32250D",
-    "star": 0,
+    "sc": "0xFD4f2Caf941B6d737382DCe420b368DE3FC7f2D4",
+    "wd": 0,
     "status": true
   },
  
   {
-    "symbol": "PACE_USDT",
+    "symbol": "PBUX_USDT",
     "desimal": 18,
-    "sc": "0x8bc2bcb1b1896291942c36f3cca3c1afa0aaa7fd",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PALM_USDT",
-    "desimal": 9,
-    "sc": "0xf1df7305e4bab3885cab5b1e4dfc338452a67891",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PANDO_USDT",
-    "desimal": 18,
-    "sc": "0x252b9F56359901a0BDE52d0675b1f1130d86F471",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PANDORA_USDT",
-    "desimal": 18,
-    "sc": "0x9e9fbde7c7a83c43913bddc8779158f1368f0413",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PARA_USDT",
-    "desimal": 18,
-    "sc": "0x3a8d5BC8A8948b68DfC0Ce9C14aC4150e083518c",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PAW_USDT",
-    "desimal": 18,
-    "sc": "0xdc63269ea166b70d4780b3a11f5c825c2b761b01",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PAY_USDT",
-    "desimal": 18,
-    "sc": "0xB97048628DB6B661D4C2aA833e95Dbe1A905B280",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PBTC35A_USDT",
-    "desimal": 18,
-    "sc": "0xA8b12Cc90AbF65191532a12bb5394A714A46d358",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PBX_USDT",
-    "desimal": 18,
-    "sc": "0xd528cf2e081f72908e086f8800977df826b5a483",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PCNT_USDT",
-    "desimal": 18,
-    "sc": "0x657B83A0336561C8f64389a6f5aDE675C04b0C3b",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PDEX_USDT",
-    "desimal": 18,
-    "sc": "0xf59ae934f6fe444afc309586cc60a84a0f89aaea",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PENDLE_USDT",
-    "desimal": 18,
-    "sc": "0x808507121b80c02388fad14726482e061b8da827",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PEOPLE_USDT",
-    "desimal": 18,
-    "sc": "0x7A58c0Be72BE218B41C608b7Fe7C5bB630736C71",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PEPE_USDT",
-    "desimal": 18,
-    "sc": "0x6982508145454Ce325dDbE47a25d4ec3d2311933",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PERC_USDT",
-    "desimal": 18,
-    "sc": "0x60bE1e1fE41c1370ADaF5d8e66f07Cf1C2Df2268",
-    "star": 0,
+    "sc": "0x9d1d4de9cd93203147fac3bc0262a78e3a0e96bb",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "PERI_USDT",
     "desimal": 18,
-    "sc": "0x5d30aD9C6374Bf925D0A75454fa327AACf778492",
-    "star": 0,
+    "sc": "0xb49B7e0742EcB4240ffE91661d2A580677460b6A",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PERL_USDT",
+    "symbol": "PHB_USDT",
     "desimal": 18,
-    "sc": "0xeca82185adCE47f39c684352B0439f030f860318",
-    "star": 0,
+    "sc": "0x0409633a72d846fc5bbe2f98d88564d35987904d",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PERP_USDT",
+    "symbol": "PHM_USDT",
     "desimal": 18,
-    "sc": "0xbc396689893d065f41bc2c6ecbee5e0085233447",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "PHA_USDT",
-    "desimal": 18,
-    "sc": "0x6c5ba91642f10282b576d91922ae6448c9d52f4e",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "PHTR_USDT",
-    "desimal": 18,
-    "sc": "0xE1Fc4455f62a6E89476f1072530C20CF1A0622dA",
-    "star": 0,
+    "sc": "0x4399AE7538c33cA24edD4C28C5dd7Ce9a80acF81",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PICKLE_USDT",
+    "symbol": "PIXELVERSE_USDT",
     "desimal": 18,
-    "sc": "0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5",
-    "star": 0,
+    "sc": "0x47db24e17c0c4622523449a239b3de746e2b0b23",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PINE_USDT",
+    "symbol": "PLACE_USDT",
     "desimal": 18,
-    "sc": "0x569424c5EE13884A193773fDC5d1c5f79C443a51",
-    "star": 0,
+    "sc": "0x07728696eE70A28c9C032926577AF1D524Df30f9",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "PIXEL_USDT",
-    "desimal": 18,
-    "sc": "0x3429d03c6F7521AeC737a0BBF2E5ddcef2C3Ae31",
-    "star": 0,
-    "status": true
-  },
-  
-  
-  {
-    "symbol": "PKF_USDT",
-    "desimal": 18,
-    "sc": "0x8b39b70e39aa811b69365398e0aace9bee238aeb",
-    "star": 0,
-    "status": true
-  },
-  
   {
     "symbol": "PLANET_USDT",
     "desimal": 18,
-    "sc": "0x2ad9addd0d97ec3cdba27f92bf6077893b76ab0b",
-    "star": 0,
+    "sc": "0xca6d678e74f553f0e59cccc03ae644a3c2c5ee7d",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PMON_USDT",
+    "symbol": "PLAY_USDT",
     "desimal": 18,
-    "sc": "0x1796ae0b0fa4862485106a0de9b654eFE301D0b2",
-    "star": 0,
+    "sc": "0xD069599E718f963bD84502b49ba8F8657fAF5B3a",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PNK_USDT",
+    "symbol": "PLSPAD_USDT",
     "desimal": 18,
-    "sc": "0x93ed3fbe21207ec2e8f2d3c3de6e058cb73bc04d",
-    "star": 0,
+    "sc": "0x8a74bc8c372bc7f0e9ca3f6ac0df51be15aec47a",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "PMG_USDT",
+    "desimal": 18,
+    "sc": "0x0733618ab62eeec815f2d1739b7a50bf9e74d8a2",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "PNL_USDT",
     "desimal": 18,
-    "sc": "0x9fc8f0ca1668e87294941b7f627e9c15ea06b459",
-    "star": 0,
+    "sc": "0xB346c52874c7023dF183068c39478C3b7B2515bC",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "POL_USDT",
+    "symbol": "POLC_USDT",
     "desimal": 18,
-    "sc": "0x455e53cbb86018ac2b8092fdcd39d8444affc3f6",
-    "star": 0,
+    "sc": "0x6ae9701b9c423f40d54556c9a443409d79ce170a",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "POOLX_USDT",
+    "desimal": 18,
+    "sc": "0xbAeA9aBA1454DF334943951d51116aE342eAB255",
+    "wd": 0,
     "status": true
   },
  
   {
-    "symbol": "POLI_USDT",
-    "desimal": 18,
-    "sc": "0xa1a36d3537bbe375cc9694795f663ddc8d516db9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "POLK_USDT",
-    "desimal": 18,
-    "sc": "0xd478161c952357f05f0292b56012cd8457f1cfbf",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "POND_USDT",
-    "desimal": 18,
-    "sc": "0x57b946008913b82e4df85f501cbaed910e58d26c",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "POOH_USDT",
-    "desimal": 18,
-    "sc": "0xb69753c06bb5c366be51e73bfc0cc2e3dc07e371",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PORK_USDT",
-    "desimal": 18,
-    "sc": "0xb9f599ce614feb2e1bbe58f180f370d05b39344e",
-    "star": 0,
-    "status": true
-  },
-  {
     "symbol": "PORT3_USDT",
     "desimal": 18,
-    "sc": "0xb4357054c3da8d46ed642383f03139ac7f090343",
-    "star": 0,
+    "sc": "0xb4357054c3dA8D46eD642383F03139aC7f090343",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PORTAL_USDT",
+    "symbol": "PORTO_USDT",
+    "desimal": 8,
+    "sc": "0x49f2145d6366099e13B10FbF80646C0F377eE7f6",
+    "wd": 0,
+    "status": true
+  },
+ 
+  {
+    "symbol": "PPAD_USDT",
     "desimal": 18,
-    "sc": "0x1Bbe973BeF3a977Fc51CbED703E8ffDEfE001Fed",
-    "star": 0,
+    "sc": "0x93Bb13E90678cCd8BBab07D1dAEF15086746dc9B",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PORTX_USDT",
+    "symbol": "PPT_USDT",
     "desimal": 18,
-    "sc": "0x104F3152D8ebFC3f679392977356962Ff36566aC",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "PRARE_USDT",
-    "desimal": 18,
-    "sc": "0x2C2f7e7C5604D162d75641256b80F1Bf6f4dC796",
-    "star": 0,
+    "sc": "0xdf061250302e5ccae091b18ca2b45914d785f214",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PRIME_USDT",
+    "symbol": "PRIDE_USDT",
     "desimal": 18,
-    "sc": "0xb23d80f5fefcddaa212212f028021b41ded428cf",
-    "star": 0,
+    "sc": "0x085D15DB9c7Cd3Df188422f88Ec41ec573D691b9",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PRMX_USDT",
+    "symbol": "PRIMAL_USDT",
     "desimal": 18,
-    "sc": "0xe4dae00bc1c46ea2F44ae71B1BEb8b171C15d812",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PROM_USDT",
-    "desimal": 18,
-    "sc": "0xfc82bb4ba86045af6f327323a46e80412b91b27d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PROPSTOKEN_USDT",
-    "desimal": 18,
-    "sc": "0x6fe56c0bcdd471359019fcbc48863d6c3e9d4f41",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PROS_USDT",
-    "desimal": 18,
-    "sc": "0x8642a849d0dcb7a15a974794668adcfbe4794b56",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "PRQ_USDT",
-    "desimal": 18,
-    "sc": "0x362bc847A3a9637d3af6624EeC853618a43ed7D2",
-    "star": 0,
+    "sc": "0xcb5327ed4649548e0d73e70b633cdfd99af6da87",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "PRX_USDT",
     "desimal": 8,
-    "sc": "0xADfb28426864c0fF169f5DceAd2EfDd09e0DeEC9",
-    "star": 0,
+    "sc": "0x90E3414e00E231B962666Bd94ADB811D5bcD0c2a",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PSP_USDT",
+    "symbol": "PSB_USDT",
     "desimal": 18,
-    "sc": "0xcafe001067cdef266afb7eb5a286dcfd277f3de5",
-    "star": 0,
+    "sc": "0x36bfBb1d5B3C9b336f3D64976599B6020cA805F1",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "PSTAKE_USDT",
+    "symbol": "PUMP_USDT",
     "desimal": 18,
-    "sc": "0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006",
-    "star": 0,
+    "sc": "0x22b4fa9a13a0d303ad258ee6d62a6ac60364b0c9",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PUMLX_USDT",
+    "symbol": "PVU_USDT",
     "desimal": 18,
-    "sc": "0x8c088775e4139af116Ac1FA6f281Bbf71E8c1c73",
-    "star": 0,
+    "sc": "0x31471e0791fcdbe82fbf4c44943255e923f1b794",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PUNDIX_USDT",
+    "symbol": "PWAR_USDT",
     "desimal": 18,
-    "sc": "0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38",
-    "star": 0,
+    "sc": "0x16153214e683018d5aa318864c8e692b66e16778",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PUSH_USDT",
+    "symbol": "PZP_USDT",
     "desimal": 18,
-    "sc": "0xf418588522d5dd018b425e472991e52ebbeeeeee",
-    "star": 0,
+    "sc": "0x6ad9E9c098a45B2B41b519119C31c3DcB02ACcB2",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PYME_USDT",
+    "symbol": "QANX_USDT",
     "desimal": 18,
-    "sc": "0x3408636a7825e894ac5521ca55494f89f96df240",
-    "star": 0,
+    "sc": "0xaaa9214f675316182eaa21c85f0ca99160cc3aaa",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PYR_USDT",
+    "symbol": "RACA_USDT",
     "desimal": 18,
-    "sc": "0x430ef9263e76dae63c84292c3409d61c598e9682",
-    "star": 0,
+    "sc": "0x12bb890508c125661e03b09ec06e404bc9289040",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "PYUSD_USDT",
-    "desimal": 6,
-    "sc": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "QASH_USDT",
-    "desimal": 6,
-    "sc": "0x618E75Ac90b12c6049Ba3b27f5d5F8651b0037F6",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "QKC_USDT",
-    "desimal": 18,
-    "sc": "0xea26c4ac16d4a5a106820bc8aee85fd0b7b2b664",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "QNT_USDT",
-    "desimal": 18,
-    "sc": "0x4a220e6096b25eadb88358cb44068a3248254675",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "QORPO_USDT",
-    "desimal": 18,
-    "sc": "0x22514ffb0d7232a56f0c24090e7b68f179faa940",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "QSP_USDT",
-    "desimal": 18,
-    "sc": "0x99ea4dB9EE77ACD40B119BD1dC4E33e1C070b80d",
-    "star": 0,
+    "symbol": "RAM_USDT",
+    "desimal": 9,
+    "sc": "0x63290fc683d11ea077aba09596ff7387d49df912",
+    "wd": 0,
     "status": true
   },
  
   {
-    "symbol": "RAD_USDT",
+    "symbol": "RDF_USDT",
     "desimal": 18,
-    "sc": "0x31c8eacbffdd875c74b94b077895bd78cf1e64a3",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RADAR_USDT",
-    "desimal": 18,
-    "sc": "0x44709a920fCcF795fbC57BAA433cc3dd53C44DbE",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "RAGE_USDT",
-    "desimal": 18,
-    "sc": "0x94804dc4948184ffd7355f62ccbb221c9765886f",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RANKER_USDT",
-    "desimal": 18,
-    "sc": "0x6431FA4B812a2DCC062A38CB55cc7D18135AdEAd",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RARE_USDT",
-    "desimal": 18,
-    "sc": "0xba5BDe662c17e2aDFF1075610382B9B691296350",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RARI_USDT",
-    "desimal": 18,
-    "sc": "0xfca59cd816ab1ead66534d82bc21e7515ce441cf",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "RAZE_USDT",
-    "desimal": 18,
-    "sc": "0x5Eaa69B29f99C84Fe5dE8200340b4e9b4Ab38EaC",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RAZOR_USDT",
-    "desimal": 18,
-    "sc": "0x50de6856358cc35f3a9a57eaaa34bd4cb707d2cd",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RBN_USDT",
-    "desimal": 18,
-    "sc": "0x6123b0049f904d730db3c36a31167d9d4121fa6b",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "RCN_USDT",
-    "desimal": 18,
-    "sc": "0xF970b8E36e23F7fC3FD752EeA86f8Be8D83375A6",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RDN_USDT",
-    "desimal": 18,
-    "sc": "0x255Aa6DF07540Cb5d3d297f0D0D4D84cb52bc8e6",
-    "star": 0,
+    "sc": "0xf29CCcC3460506e8F9bc038D4716C05b76b0441e",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "RDNT_USDT",
     "desimal": 18,
-    "sc": "0x137dDB47Ee24EaA998a535Ab00378d6BFa84F893",
-    "star": 0,
+    "sc": "0xf7DE7E8A6bd59ED41a4b5fe50278b3B7f31384dF",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "REACH_USDT",
+    "symbol": "REAL_USDT",
     "desimal": 18,
-    "sc": "0x8b12bd54ca9b2311960057c8f3c88013e79316e3",
-    "star": 0,
+    "sc": "0xE91cd52Bd65fe23A3EAE40E3eB87180E8306399F",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "REALM_USDT",
     "desimal": 18,
     "sc": "0x464fdb8affc9bac185a7393fd4298137866dcfb8",
-    "star": 0,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "REIGN_USDT",
+    "desimal": 18,
+    "sc": "0xaa88fd757fa81ebbbce0eb1f324172d0e446093e",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RENA_USDT",
+    "desimal": 18,
+    "sc": "0xa9D75Cc3405F0450955050C520843f99Aff8749D",
+    "wd": 0,
+    "status": true
+  },
+  
+  {
+    "symbol": "RGAME_USDT",
+    "desimal": 18,
+    "sc": "0xcbd9f6d748Dd3D19416f8914528A65c7838E27D8",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RITE_USDT",
+    "desimal": 18,
+    "sc": "0x0808bf94d57c905f1236212654268ef82e1e594e",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RJV_USDT",
+    "desimal": 6,
+    "sc": "0x602B6C6ccE5F95c00603bd07D8fA7EbAF3747D44",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ROOM_USDT",
+    "desimal": 18,
+    "sc": "0x3C45A24d36Ab6fc1925533C1F57bC7e1b6fbA8a4",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "RTF_USDT",
+    "desimal": 18,
+    "sc": "0xa89e2871A850E0e6fD8F0018eC1fc62FA75440d4",
+    "wd": 0,
     "status": true
   },
  
   {
-    "symbol": "REEF_USDT",
-    "desimal": 18,
-    "sc": "0xfe3e6a25e6b192a42a44ecddcd13796471735acf",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "REM_USDT",
-    "desimal": 4,
-    "sc": "0x83984d6142934bb535793A82ADB0a46EF0F66B6d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "REN_USDT",
-    "desimal": 18,
-    "sc": "0x408e41876cCCDC0F92210600ef50372656052a38",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "REQ_USDT",
-    "desimal": 18,
-    "sc": "0x8f8221aFbB33998d8584A2B05749bA73c37a938a",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "REVV_USDT",
-    "desimal": 18,
-    "sc": "0x557b933a7c2c45672b610f8954a3deb39a51a8ca",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "REZ_USDT",
-    "desimal": 18,
-    "sc": "0x3B50805453023a91a8bf641e279401a0b23FA6F9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RFD_USDT",
-    "desimal": 18,
-    "sc": "0x955d5c14c8d4944da1ea7836bd44d54a8ec35ba1",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RFOX_USDT",
-    "desimal": 18,
-    "sc": "0xa1d6df714f91debf4e0802a542e13067f31b8262",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RFR_USDT",
-    "desimal": 4,
-    "sc": "0xd0929d411954c47438dc1d871dd6081F5C5e149c",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RFUEL_USDT",
-    "desimal": 18,
-    "sc": "0xaf9f549774ecedbd0966c52f250acc548d3f36e5",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RICE_USDT",
-    "desimal": 18,
-    "sc": "0xbd9908b0cdd50386f92efcc8e1d71766c2782df0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RING_USDT",
-    "desimal": 18,
-    "sc": "0x9469d013805bffb7d3debe5e7839237e535ec483",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RINGAI_USDT",
-    "desimal": 18,
-    "sc": "0xc092a137df3cf2b9e5971ba1874d26487c12626d",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RLC_USDT",
-    "desimal": 9,
-    "sc": "0x607F4C5BB672230e8672085532f7e901544a7375",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RNDR_USDT",
-    "desimal": 18,
-    "sc": "0x6de037ef9ad2725eb40118bb1702ebb27e4aeb24",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ROUTE_USDT",
-    "desimal": 18,
-    "sc": "0x16eccfdbb4ee1a85a33f3a9b21175cd7ae753db4",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RPK_USDT",
-    "desimal": 18,
-    "sc": "0x313cae7ad4454aac7b208c1f089da2b0e5825e46",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RPL_USDT",
-    "desimal": 18,
-    "sc": "0xD33526068D116cE69F19A9ee46F0bd304F21A51f",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "RSR_USDT",
-    "desimal": 18,
-    "sc": "0x320623b8e4ff03373931769a31fc52a4e78b5d70",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "SAFE_USDT",
-    "desimal": 18,
-    "sc": "0x5aFE3855358E112B5647B952709E6165e1c1eEEe",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SAIL_USDT",
-    "desimal": 18,
-    "sc": "0xd8f1460044925d2d5c723c7054cd9247027415b7",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SAITO_USDT",
-    "desimal": 18,
-    "sc": "0xFa14Fa6958401314851A17d6C5360cA29f74B57B",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SAKE_USDT",
-    "desimal": 18,
-    "sc": "0x066798d9ef0833ccc719076dab77199ecbd178b0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SALT_USDT",
+    "symbol": "SANTOS_USDT",
     "desimal": 8,
-    "sc": "0x4156D3342D5c385a87D264F90653733592000581",
-    "star": 0,
+    "sc": "0xA64455a4553C9034236734FadDAddbb64aCE4Cc7",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SAND_USDT",
+    "symbol": "SCLP_USDT",
     "desimal": 18,
-    "sc": "0x3845badAde8e6dFF049820680d1F14bD3903a5d0",
-    "star": 0,
+    "sc": "0xF2c96E402c9199682d5dED26D3771c6B192c01af",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SAO_USDT",
-    "desimal": 9,
-    "sc": "0x3ef389f264e07fff3106a3926f2a166d1393086f",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "SD_USDT",
+    "symbol": "SCT_USDT",
     "desimal": 18,
-    "sc": "0x30D20208d987713f46DFD34EF128Bb16C404D10f",
-    "star": 0,
+    "sc": "0x405e7454E71AEfe8897438ADc08E3f3e6d49Dfc1",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "SDAO_USDT",
     "desimal": 18,
-    "sc": "0x993864e43caa7f7f12953ad6feb1d1ca635b875f",
-    "star": 0,
+    "sc": "0x90Ed8F1dc86388f14b64ba8fb4bbd23099f18240",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SDEX_USDT",
+    "symbol": "SERO_USDT",
     "desimal": 18,
-    "sc": "0x5de8ab7e27f6e7a1fff3e5b337584aa43961beef",
-    "star": 0,
+    "sc": "0x1702EC380e924B0E12d5C2e838B6b91A1fB3A052",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SENATE_USDT",
+    "symbol": "SERSH_USDT",
     "desimal": 18,
-    "sc": "0x34Be5b8C30eE4fDe069DC878989686aBE9884470",
-    "star": 0,
+    "sc": "0x84affeef925cdce87f8a99b7b2e540da5140fc09",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SENC_USDT",
+    "symbol": "SFP_USDT",
     "desimal": 18,
-    "sc": "0xA13f0743951B4f6E3e3AA039f682E17279f52bc3",
-    "star": 0,
+    "sc": "0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb",
+    "wd": 0,
     "status": true
   },
-  
   {
-    "symbol": "SFI_USDT",
+    "symbol": "SFTY_USDT",
     "desimal": 18,
-    "sc": "0xb753428af26e81097e7fd17f40c88aaa3e04902c",
-    "star": 0,
+    "sc": "0xE9d6d6D7CDE5C7d45927F8c37460d932E612C902",
+    "wd": 0,
     "status": true
   },
- 
   {
-    "symbol": "SHARE_USDT",
-    "desimal": 9,
-    "sc": "0x39795344CBCc76cC3Fb94B9D1b15C23c2070C66D",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "SHIB_USDT",
+    "symbol": "SFUND_USDT",
     "desimal": 18,
-    "sc": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
-    "star": 0,
+    "sc": "0x477bc8d23c634c154061869478bce96be6045d12",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SHIB2_USDT",
-    "desimal": 9,
-    "sc": "0xdfef6416ea3e6ce587ed42aa7cb2e586362cbbfa",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SHOE_USDT",
+    "symbol": "SHI_USDT",
     "desimal": 18,
-    "sc": "0x0fD67B4ceb9b607Ef206904eC73459c4880132c9",
-    "star": 0,
+    "sc": "0x7269d98af4aa705e0b1a5d8512fadb4d45817d5a",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SHOPX_USDT",
+    "symbol": "SHILL_USDT",
     "desimal": 18,
-    "sc": "0x7bef710a5759d197ec0bf621c3df802c2d60d848",
-    "star": 0,
+    "sc": "0xfb9C339b4BacE4Fe63ccc1dd9a3c3C531441D5fE",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SHPING_USDT",
+    "symbol": "SHOPNEXT_USDT",
     "desimal": 18,
-    "sc": "0x7C84e62859D0715eb77d1b1C4154Ecd6aBB21BEC",
-    "star": 0,
+    "sc": "0xa6C59dE838F1eeb82d86F5AF0750f5F656439999",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SHR_USDT",
-    "desimal": 2,
-    "sc": "0xd98f75b1a3261dab9eed4956c93f33749027a964",
-    "star": 0,
+    "symbol": "SIN_USDT",
+    "desimal": 18,
+    "sc": "0x6397de0F9aEDc0F7A8Fa8B438DDE883B9c201010",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "SIS_USDT",
     "desimal": 18,
-    "sc": "0xd38bb40815d2b0c2d2c866e0c72c5728ffc76dd9",
-    "star": 0,
+    "sc": "0xF98b660AdF2ed7d9d9D9dAACC2fb0CAce4F21835",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SKEB_USDT",
+    "symbol": "SKILL_USDT",
     "desimal": 18,
-    "sc": "0x6D614686550B9E1c1DF4b2cD8f91C9D4df66C810",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SKL_USDT",
-    "desimal": 18,
-    "sc": "0x00c83aecc790e8a4453e5dd3b0b4b3680501a7a7",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SKM_USDT",
-    "desimal": 18,
-    "sc": "0x048Fe49BE32adfC9ED68C37D32B5ec9Df17b3603",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SKRT_USDT",
-    "desimal": 18,
-    "sc": "0x887168120cb89Fb06F3E74Dc4AF20D67dF0977f6",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SKT_USDT",
-    "desimal": 8,
-    "sc": "0x012e0e6342308b247f36ee500ecb14dc77a7a8c1",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "SKYRIM_USDT",
-    "desimal": 18,
-    "sc": "0x2610f0bfc21ef389fe4d03cfb7de9ac1e6c99d6e",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "SLICE_USDT",
-    "desimal": 18,
-    "sc": "0x0AeE8703D34DD9aE107386d3eFF22AE75Dd616D1",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SLN_USDT",
-    "desimal": 18,
-    "sc": "0xdb82c0d91e057e05600c8f8dc836beb41da6df14",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SLP_USDT",
-    "desimal": 0,
-    "sc": "0xCC8Fa225D80b9c7D42F96e9570156c65D6cAAa25",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SMARTGAME_USDT",
-    "desimal": 18,
-    "sc": "0xce20BB92CCF9BbF5091ef85649E71E552819AD8c",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SMTX_USDT",
-    "desimal": 18,
-    "sc": "0xB17548c7B510427baAc4e267BEa62e800b247173",
-    "star": 0,
+    "sc": "0x154a9f9cbd3449ad22fdae23044319d6ef2a1fab",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "SMTY_USDT",
     "desimal": 18,
     "sc": "0xbF776e4FCa664D791C4Ee3A71e2722990E003283",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SMURFCAT_USDT",
-    "desimal": 18,
-    "sc": "0xff836a5821e69066c87e268bc51b849fab94240c",
-    "star": 0,
+    "symbol": "SMX_USDT",
+    "desimal": 8,
+    "sc": "0x8c6149aaea8161e2015fa563040a916e90d16dca",
+    "wd": 0,
     "status": true
   },
- 
-  {
-    "symbol": "SNOW_USDT",
-    "desimal": 18,
-    "sc": "0xfe9a29ab92522d14fc65880d817214261d8479ae",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SNT_USDT",
-    "desimal": 18,
-    "sc": "0x744d70FDBE2Ba4CF95131626614a1763DF805B9E",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SNX_USDT",
-    "desimal": 18,
-    "sc": "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SOMM_USDT",
-    "desimal": 6,
-    "sc": "0xa670d7237398238DE01267472C6f13e5B8010FD1",
-    "star": 0,
-    "status": true
-  },
- 
   {
     "symbol": "SOPH_USDT",
     "desimal": 18,
     "sc": "0x73fbd93bfda83b111ddc092aa3a4ca77fd30d380",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "SOS_USDT",
+    "symbol": "SPAY_USDT",
     "desimal": 18,
-    "sc": "0x3b484b82567a09e2588a13d54d032153f0c0aee0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SOV_USDT",
-    "desimal": 18,
-    "sc": "0xbdab72602e9ad40fc6a6852caf43258113b8f7a5",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SPA_USDT",
-    "desimal": 18,
-    "sc": "0xB4A3B0Faf0Ab53df58001804DdA5Bfc6a3D59008",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SPEC_USDT",
-    "desimal": 18,
-    "sc": "0xAdF7C35560035944e805D98fF17d58CDe2449389",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SPELL_USDT",
-    "desimal": 18,
-    "sc": "0x090185f2135308bad17527004364ebcc2d37e5f6",
-    "star": 0,
+    "sc": "0x13A637026dF26F846D55ACC52775377717345c06",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "SPELLFIRE_USDT",
     "desimal": 18,
-    "sc": "0x3a0b022f32b3191d44e5847da12dc0b63fb07c91",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SPHRI_USDT",
-    "desimal": 18,
-    "sc": "0x8a0cdfab62ed35b836dc0633482798421c81b3ec",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SPOT_USDT",
-    "desimal": 18,
-    "sc": "0xe635efcfac44c5f44508f4d17c3a96cb4ce421dd",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SPUME_USDT",
-    "desimal": 18,
-    "sc": "0xa16a609fF4e1A15b6cCb469E7a5dD14E89305283",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SQT_USDT",
-    "desimal": 18,
-    "sc": "0x09395a2A58DB45db0da254c7EAa5AC469D8bDc85",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SRK_USDT",
-    "desimal": 18,
-    "sc": "0x0488401c3f535193fa8df029d9ffe615a06e74e6",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SRM_USDT",
-    "desimal": 6,
-    "sc": "0x476c5E26a75bd202a9683ffD34359C0CC15be0fF",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "SSNC_USDT",
-    "desimal": 18,
-    "sc": "0x6715515f5aa98e8bd3624922e1ba91e6f5fc4402",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SSV_USDT",
-    "desimal": 18,
-    "sc": "0x9D65fF81a3c488d585bBfb0Bfe3c7707c7917f54",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "STARL_USDT",
-    "desimal": 18,
-    "sc": "0x8e6cd950ad6ba651f6dd608dc70e5886b1aa6b24",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "STETH_USDT",
-    "desimal": 18,
-    "sc": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "STND_USDT",
-    "desimal": 18,
-    "sc": "0x9040e237c3bf18347bb00957dc22167d0f2b999d",
-    "star": 0,
+    "sc": "0xd6f28f15a5cafc8d29556393c08177124b88de0d",
+    "wd": 0,
     "status": true
   },
  
   {
-    "symbol": "STORJ_USDT",
+    "symbol": "SPO_USDT",
+    "desimal": 18,
+    "sc": "0x8357c604c5533fa0053beaaa1494da552cea38f7",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SPS_USDT",
+    "desimal": 18,
+    "sc": "0x1633b7157e7638C4d6593436111Bf125Ee74703F",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SQUAD_USDT",
+    "desimal": 18,
+    "sc": "0x724A32dFFF9769A0a0e1F0515c0012d1fB14c3bd",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SQUID_USDT",
+    "desimal": 18,
+    "sc": "0x87230146E138d3F296a9a77e497A2A83012e9Bc5",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SRG_USDT",
+    "desimal": 18,
+    "sc": "0x722f41f6511ff7cda73a1cb0a9ea2f731738c4a0",
+    "wd": 0,
+    "status": true
+  },
+ 
+ 
+  {
+    "symbol": "STCHAIN_USDT",
+    "desimal": 9,
+    "sc": "0x19ae49b9f38dd836317363839a5f6bfbfa7e319a",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "STI_USDT",
+    "desimal": 10,
+    "sc": "0x4f5f7a7dca8ba0a7983381d23dfc5eaf4be9c79a",
+    "wd": 0,
+    "status": true
+  },
+  
+  {
+    "symbol": "STRM_USDT",
+    "desimal": 18,
+    "sc": "0xC598275452fA319d75ee5f176FD3B8384925b425",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SUGARB_USDT",
+    "desimal": 18,
+    "sc": "0x40f906e19b14100d5247686e08053c4873c66192",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "SUPE_USDT",
+    "desimal": 18,
+    "sc": "0xb972c4027818223bb7b9399b3ca3ca58186e1590",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "TAP_USDT",
+    "desimal": 18,
+    "sc": "0x35bEdBF9291b22218a0dA863170dcC9329Ef2563",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "THG_USDT",
+    "desimal": 18,
+    "sc": "0x9fd87aefe02441b123c3c32466cd9db4c578618f",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "TIMECHRONO_USDT",
     "desimal": 8,
-    "sc": "0xB64ef51C888972c908CFacf59B47C1AfBC0Ab8aC",
-    "star": 0,
+    "sc": "0x3b198e26E473b8faB2085b37978e36c9DE5D7f68",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "STOS_USDT",
+    "symbol": "TITA_USDT",
     "desimal": 18,
-    "sc": "0x08c32b0726c5684024ea6e141c50ade9690bbdcc",
-    "star": 0,
+    "sc": "0x0c1253a30da9580472064a91946c5ce0C58aCf7f",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "STOX_USDT",
+    "symbol": "TKO_USDT",
     "desimal": 18,
-    "sc": "0x006BeA43Baa3f7A6f765F14f10A1a1b08334EF45",
-    "star": 0,
+    "sc": "0x9f589e3eabe42ebc94a44727b3f3531c0c877809",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "STRONG_USDT",
+    "symbol": "TLOS_USDT",
     "desimal": 18,
-    "sc": "0x990f341946a3fdb507ae7e52d17851b87168017c",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "STRP_USDT",
-    "desimal": 18,
-    "sc": "0x97872EAfd79940C7b24f7BCc1EADb1457347ADc9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "STZ_USDT",
-    "desimal": 18,
-    "sc": "0x3f5294df68f871241c4b18fcf78ebd8ac18ab654",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SUDO_USDT",
-    "desimal": 18,
-    "sc": "0x3446dd70b2d52a6bf4a5a192d9b0a161295ab7f9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SUPER_USDT",
-    "desimal": 18,
-    "sc": "0xe53EC727dbDEB9E2d5456c3be40cFF031AB40A55",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SUSD_USDT",
-    "desimal": 18,
-    "sc": "0x57Ab1ec28D129707052df4dF418D58a2D46d5f51",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SUSHI_USDT",
-    "desimal": 18,
-    "sc": "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SUTER_USDT",
-    "desimal": 18,
-    "sc": "0xAA2ce7Ae64066175E0B90497CE7d9c190c315DB4",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SWAP_USDT",
-    "desimal": 18,
-    "sc": "0xCC4304A31d09258b0029eA7FE63d032f52e44EFe",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SWASH_USDT",
-    "desimal": 18,
-    "sc": "0xa130e3a33a4d84b04c3918c4e5762223ae252f80",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SWEAT_USDT",
-    "desimal": 18,
-    "sc": "0xB4b9DC1C77bdbb135eA907fd5a08094d98883A35",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SWRV_USDT",
-    "desimal": 18,
-    "sc": "0xb8baa0e4287890a5f79863ab62b7f175cecbd433",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SXP_USDT",
-    "desimal": 18,
-    "sc": "0x8CE9137d39326AD0cD6491fb5CC0CbA0e089b6A9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SYLO_USDT",
-    "desimal": 18,
-    "sc": "0xf293d23bf2cdc05411ca0eddd588eb1977e8dcd4",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "SYN_USDT",
-    "desimal": 18,
-    "sc": "0x0f2d719407fdbeff09d87557abb7232601fd9f29",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "T_USDT",
-    "desimal": 18,
-    "sc": "0xcdf7028ceab81fa0c6971208e83fa7872994bee5",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "TARA_USDT",
-    "desimal": 18,
-    "sc": "0xf001937650bb4f62b57521824b2c20f5b91bea05",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "TCP_USDT",
-    "desimal": 18,
-    "sc": "0x06576eB3B212d605B797dC15523d9Dc9F4F66DB4",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "TET_USDT",
-    "desimal": 8,
-    "sc": "0x68a47fe1cf42eba4a030a10cd4d6a1031ca3ca0a",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "THE_USDT",
-    "desimal": 18,
-    "sc": "0x0cbA60Ca5eF4D42f92A5070A8fEDD13BE93E2861",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "THEOS_USDT",
-    "desimal": 18,
-    "sc": "0x9e10f61749c4952c320412a6b26901605ff6da1d",
-    "star": 0,
-    "status": true
-  },
- 
-  
-  {
-    "symbol": "TIDAL_USDT",
-    "desimal": 18,
-    "sc": "0x29cbd0510eec0327992cd6006e63f9fa8e7f33b7",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "TIP_USDT",
-    "desimal": 18,
-    "sc": "0x0176b898e92e814c06cc379e508ceb571f70bd40",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "TLM_USDT",
-    "desimal": 4,
-    "sc": "0x888888848B652B3E3a0f34c96E00EEC0F3a23F72",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "TOKE_USDT",
-    "desimal": 18,
-    "sc": "0x2e9d63788249371f1DFC918a52f8d799F4a38C94",
-    "star": 0,
+    "sc": "0xb6c53431608e626ac81a9776ac3e999c5556717c",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "TOKEN_USDT",
     "desimal": 9,
     "sc": "0x4507cef57c46789ef8d1a19ea45f4216bae2b528",
-    "star": 0,
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "TOOLS_USDT",
+    "desimal": 18,
+    "sc": "0x1311b352467d2B5c296881BaDEA82850bcd8f886",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "TRACAI_USDT",
-    "desimal": 18,
-    "sc": "0xaa7a9ca87d3694b5755f213b5d04094b8d0f0a6f",
-    "star": 0,
+    "symbol": "TPT_USDT",
+    "desimal": 4,
+    "sc": "0xeca41281c24451168a37211f0bc2b8645af45092",
+    "wd": 0,
     "status": true
   },
- 
   {
     "symbol": "TRADE_USDT",
     "desimal": 18,
-    "sc": "0x6e5970dbd6fc7eb1f29c6d2edf2bc4c36124c0c1",
-    "star": 0,
+    "sc": "0x6ba7a8f9063c712c1c8cabc776b1da7126805f3b",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "TRB_USDT",
+    "symbol": "TRIAS_USDT",
     "desimal": 18,
-    "sc": "0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "TRG_USDT",
-    "desimal": 18,
-    "sc": "0x93eEB426782BD88fCD4B48D7b0368CF061044928",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "TRIBE_USDT",
-    "desimal": 18,
-    "sc": "0xc7283b66Eb1EB5FB86327f08e1B5816b0720212B",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "TROLL_USDT",
-    "desimal": 18,
-    "sc": "0xf8ebf4849F1Fa4FaF0DFF2106A173D3A6CB2eB3A",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "TROY_USDT",
-    "desimal": 18,
-    "sc": "0x4574562E9310a94F9Ca962bd23168d8a06875b1A",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "TRU_USDT",
-    "desimal": 8,
-    "sc": "0x4c19596f5aaff459fa38b0f7ed92f11ae6543784",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "TRUF_USDT",
-    "desimal": 18,
-    "sc": "0x38c2a4a7330b22788374b8ff70bba513c8d848ca",
-    "star": 0,
+    "sc": "0xa4838122c683f732289805fc3c207febd55babdd",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "TRVL_USDT",
     "desimal": 18,
-    "sc": "0xd47bdf574b4f76210ed503e0efe81b58aa061f3d",
-    "star": 0,
+    "sc": "0x6a8Fd46F88dBD7bdC2D536C604f811C63052ce0F",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "TSUKA_USDT",
-    "desimal": 9,
-    "sc": "0xc5fb36dd2fb59d3b98deff88425a3f425ee469ed",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "TURBO_USDT",
+    "symbol": "TWT_USDT",
     "desimal": 18,
-    "sc": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
-    "star": 0,
+    "sc": "0x4b0f1812e5df2a09796481ff14017e6005508003",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "TURT_USDT",
+    "symbol": "TX20_USDT",
     "desimal": 18,
-    "sc": "0x0800394f6E23dD539929c8B77a3d45c96F76AEFC",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "TXT_USDT",
-    "desimal": 18,
-    "sc": "0x547b2f82cecfab9c2b1d36fdda96ef9f58c63b8c",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "UDO_USDT",
-    "desimal": 18,
-    "sc": "0xea3983fc6d0fbbc41fb6f6091f68f3e08894dc06",
-    "star": 0,
+    "sc": "0x29838b8c8b7cd6f0698c2fd6feaf0363d2cb6da1",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "UFO_USDT",
-    "desimal": 18,
-    "sc": "0x249e38ea4102d0cf8264d3701f1a0e39c4f2dc3b",
-    "star": 0,
+    "symbol": "UBXS_USDT",
+    "desimal": 6,
+    "sc": "0x4f1960E29b2cA581a38c5c474e123f420F8092db",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "UFT_USDT",
+    "symbol": "UFI_USDT",
     "desimal": 18,
-    "sc": "0x0202Be363B8a4820f3F4DE7FaF5224fF05943AB1",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "UMA_USDT",
-    "desimal": 18,
-    "sc": "0x04Fa0d235C4abf4BcF4787aF4CF447DE572eF828",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "UMB_USDT",
-    "desimal": 18,
-    "sc": "0x6fC13EACE26590B80cCCAB1ba5d51890577D83B2",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "UNCX_USDT",
-    "desimal": 18,
-    "sc": "0xaDB2437e6F65682B85F814fBc12FeC0508A7B1D0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "UNDEAD_USDT",
-    "desimal": 18,
-    "sc": "0x310C8F00b9dE3c31Ab95ea68feb6C877538f7947",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "UNFI_USDT",
-    "desimal": 18,
-    "sc": "0x441761326490cacf7af299725b6292597ee822c2",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "UNI_USDT",
-    "desimal": 18,
-    "sc": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "UNIBOT_USDT",
-    "desimal": 18,
-    "sc": "0xf819d9cb1c2a819fd991781a822de3ca8607c3c9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "UNISTAKE_USDT",
-    "desimal": 18,
-    "sc": "0x9Ed8e7C9604790F7Ec589F99b94361d8AAB64E5E",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "UNN_USDT",
-    "desimal": 18,
-    "sc": "0x226f7b842e0f0120b7e194d05432b3fd14773a9d",
-    "star": 0,
+    "sc": "0xe2a59d5e33c6540e18aaa46bf98917ac3158db0d",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "UNO_USDT",
     "desimal": 18,
     "sc": "0x474021845c4643113458ea4414bdb7fb74a01a77",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "UOS_USDT",
-    "desimal": 4,
-    "sc": "0xd13c7342e1ef687c5ad21b27c2b65d772cab5c8c",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "UPI_USDT",
-    "desimal": 18,
-    "sc": "0x70d2b7c19352bb76e4409858ff5746e500f2b67c",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "URUS_USDT",
     "desimal": 18,
     "sc": "0xc6DdDB5bc6E61e0841C54f3e723Ae1f3A807260b",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
-  
   {
-    "symbol": "UTK_USDT",
+    "symbol": "VC_USDT",
     "desimal": 18,
-    "sc": "0xdc9Ac3C20D1ed0B540dF9b1feDC10039Df13F99c",
-    "star": 0,
+    "sc": "0x2bf83d080d8bc4715984e75e5b3d149805d11751",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "VADER_USDT",
+    "symbol": "VENT_USDT",
     "desimal": 18,
-    "sc": "0x2602278ee1882889b946eb11dc0e810075650983",
-    "star": 0,
+    "sc": "0x872d068c25511be88c1f5990c53eeffcdf46c9b4",
+    "wd": 0,
     "status": true
   },
-  {
-    "symbol": "VAI_USDT",
-    "desimal": 18,
-    "sc": "0xD13cfD3133239a3c73a9E535A5c4DadEE36b395c",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "VANRY_USDT",
-    "desimal": 18,
-    "sc": "0x8de5b80a0c1b02fe4976851d030b36122dbb8624",
-    "star": 0,
-    "status": true
-  },
-  
-  
-  {
-    "symbol": "VEGA_USDT",
-    "desimal": 18,
-    "sc": "0xcb84d72e61e383767c4dfeb2d8ff7f4fb89abc6e",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "VELAR_USDT",
-    "desimal": 6,
-    "sc": "0x033bbde722ea3cdcec73cffea6581df9f9c257de",
-    "star": 0,
-    "status": true
-  },
-  
   {
     "symbol": "VERA_USDT",
     "desimal": 18,
-    "sc": "0xd7f0cc50ad69408ae58be033f4f85d2367c2e468",
-    "star": 0,
+    "sc": "0x4a0a3902e091cdb3aec4279a6bfac50297f0a79e",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "VEXT_USDT",
+    "symbol": "VIA_USDT",
     "desimal": 18,
-    "sc": "0xb2492e97a68a6e4b9e9a11b99f6c42e5accd38c7",
-    "star": 0,
+    "sc": "0x21ac3bB914f90A2Bb1a16088E673a9fdDa641434",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "VGX_USDT",
-    "desimal": 8,
-    "sc": "0x3c4b6e6e1ea3d4863700d7f76b36b7f3d3f13e3d",
-    "star": 0,
+    "symbol": "VIDYX_USDT",
+    "desimal": 6,
+    "sc": "0x7a16175098Fbb7E5Eb304DfD29Fe232eFe54F8fC",
+    "wd": 0,
     "status": true
   },
- 
   {
     "symbol": "VINU_USDT",
     "desimal": 18,
-    "sc": "0xAFCdd4f666c84Fed1d8BD825aA762e3714F652c9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "VLX_USDT",
-    "desimal": 18,
-    "sc": "0x8c543aed163909142695f2d2acd0d55791a9edb9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "VR_USDT",
-    "desimal": 18,
-    "sc": "0x7d5121505149065b562c789a0145ed750e6e8cdd",
-    "star": 0,
-    "status": true
-  },
-  
-  {
-    "symbol": "VRX_USDT",
-    "desimal": 18,
-    "sc": "0x87de305311d5788e8da38d19bb427645b09cb4e5",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "VSP_USDT",
-    "desimal": 18,
-    "sc": "0x1b40183efb4dd766f11bda7a7c3ad8982e998421",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "VV_USDT",
-    "desimal": 18,
-    "sc": "0x1f7e7a030aef0a0f600de1350c23d30b73fc7270",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WAGMIGAMES_USDT",
-    "desimal": 18,
-    "sc": "0x3b604747ad1720c01ded0455728b62c0d2f100f0",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WALLET_USDT",
-    "desimal": 18,
-    "sc": "0x88800092ff476844f74dc2fc427974bbee2794ae",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WAS_USDT",
-    "desimal": 18,
-    "sc": "0x0c572544a4Ee47904d54aaA6A970AF96B6f00E1b",
-    "star": 0,
+    "sc": "0xfEbe8C1eD424DbF688551D4E2267e7A53698F0aa",
+    "wd": 0,
     "status": true
   },
  
   {
-    "symbol": "WAVES_USDT",
+    "symbol": "VLX_USDT",
     "desimal": 18,
-    "sc": "0x1cf4592ebffd730c7dc92c1bdffdfc3b9efcf29a",
-    "star": 0,
+    "sc": "0xe9c803f48dffe50180bd5b01dc04da939e3445fc",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "VMT_USDT",
+    "desimal": 18,
+    "sc": "0xE615C5e7219f9801C3b75bc76E45a4dab3c38e51",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "VOLT_USDT",
+    "desimal": 9,
+    "sc": "0x7f792db54B0e580Cdc755178443f0430Cf799aCa",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "VPR_USDT",
+    "desimal": 18,
+    "sc": "0xb96d0f29a0ac9af4a32835e90ec6531389765089",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "VRT_USDT",
+    "desimal": 18,
+    "sc": "0x5F84ce30DC3cF7909101C69086c50De191895883",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "VTG_USDT",
+    "desimal": 18,
+    "sc": "0x8de5aA37a7C40A53062EAD382b8EEAD3B08a7A46",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "WALV_USDT",
+    "desimal": 18,
+    "sc": "0x256D1fCE1b1221e8398f65F9B36033CE50B2D497",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "WAM_USDT",
+    "desimal": 18,
+    "sc": "0xebbaeff6217d22e7744394061d874015709b8141",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "WAXL_USDT",
     "desimal": 6,
-    "sc": "0x467719aD09025FcC6cF6F8311755809d45a5E5f3",
-    "star": 0,
+    "sc": "0x8b1f4432f943c465a973fedc6d7aa50fc96f1f65",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "WBT_USDT",
-    "desimal": 8,
-    "sc": "0x925206b8a707096Ed26ae47C84747fE0bb734F59",
-    "star": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "WFAI_USDT",
+    "symbol": "WEAR_USDT",
     "desimal": 18,
-    "sc": "0x8a001303158670e284950565164933372807cd48",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WILD_USDT",
-    "desimal": 18,
-    "sc": "0x2a3bff78b79a009976eea096a51a948a3dc00e34",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WLD_USDT",
-    "desimal": 18,
-    "sc": "0x163f8c2467924be0ae7b5347228cabf260318753",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WNCG_USDT",
-    "desimal": 18,
-    "sc": "0xf203ca1769ca8e9e8fe1da9d147db68b6c919817",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WNXM_USDT",
-    "desimal": 18,
-    "sc": "0x0d438f3b5175bebc262bf23753c1e53d03432bde",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WOJAK_USDT",
-    "desimal": 18,
-    "sc": "0x5026F006B85729a8b14553FAE6af249aD16c9aaB",
-    "star": 0,
+    "sc": "0x9d39eF3bbCA5927909dde44476656B81BBe4eE75",
+    "wd": 0,
     "status": true
   },
   
   {
-    "symbol": "WOO_USDT",
-    "desimal": 18,
-    "sc": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
-    "star": 0,
+    "symbol": "WNDR_USDT",
+    "desimal": 8,
+    "sc": "0xDfd7b0dD7Bf1012DfDf3307a964c36b972300Ac8",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "WOOF_USDT",
+    "symbol": "WOO_USDT",
     "desimal": 18,
-    "sc": "0x6BC08509B36A98E829dFfAD49Fde5e412645d0a3",
-    "star": 0,
+    "sc": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "WOOP_USDT",
+    "desimal": 18,
+    "sc": "0x8b303d5bbfbbf46f1a4d9741e491e06986894e18",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "WORK_USDT",
     "desimal": 18,
     "sc": "0x8888888837f84a7a82668e0320ac454f5945d0b9",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WOZX_USDT",
-    "desimal": 18,
-    "sc": "0x34950ff2b487d9e5282c5ab342d08a2f712eb79f",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WSB_USDT",
-    "desimal": 18,
-    "sc": "0x15f20f9dfdf96ccf6ac96653b7c0abfe4a9c9f0f",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WSIENNA_USDT",
-    "desimal": 18,
-    "sc": "0x9b00e6E8D787b13756eb919786c9745054DB64f9",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "WWY_USDT",
-    "desimal": 18,
-    "sc": "0x9Ab70e92319f0b9127df78868Fd3655fB9f1E322",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "WX_USDT",
-    "desimal": 18,
-    "sc": "0x2817CECf94465a9F7beCF43d9b7c8025e88A4213",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
  
   {
-    "symbol": "XAUT_USDT",
-    "desimal": 6,
-    "sc": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
-    "star": 0,
+    "symbol": "WRX_USDT",
+    "desimal": 8,
+    "sc": "0x8e17ed70334c87ece574c9d537bc153d8609e2a3",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "WSI_USDT",
+    "desimal": 18,
+    "sc": "0x837A130aED114300Bab4f9f1F4f500682f7efd48",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "WWY_USDT",
+    "desimal": 18,
+    "sc": "0x9ab70e92319f0b9127df78868fd3655fb9f1e322",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "WZRD_USDT",
+    "desimal": 18,
+    "sc": "0xFa40d8FC324bcdD6Bbae0e086De886c571C225d4",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "XCAD_USDT",
     "desimal": 18,
-    "sc": "0x7659ce147d0e714454073a5dd7003544234b6aa0",
-    "star": 0,
+    "sc": "0xa026Ad2ceDa16Ca5FC28fd3C72f99e2C332c8a26",
+    "wd": 0,
     "status": true
   },
-
   {
     "symbol": "XCN_USDT",
     "desimal": 18,
-    "sc": "0xA2cd3D43c775978A96BdBf12d733D5A1ED94fb18",
-    "star": 0,
+    "sc": "0x7324c7C0d95CEBC73eEa7E85CbAac0dBdf88a05b",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "XDEFI_USDT",
-    "desimal": 18,
-    "sc": "0x72b886d09c117654ab7da13a14d603001de0b777",
-    "star": 0,
+    "symbol": "XCUR_USDT",
+    "desimal": 8,
+    "sc": "0xd52669712f253CD6b2Fe8A8638F66ed726cb770C",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "XED_USDT",
+    "symbol": "XCV_USDT",
     "desimal": 18,
-    "sc": "0xee573a945b01b788b9287ce062a0cfc15be9fd86",
-    "star": 0,
+    "sc": "0x4be63a9b26ee89b9a3a13fd0aa1d0b2427c135f8",
+    "wd": 0,
     "status": true
   },
-
   {
-    "symbol": "XMON_USDT",
+    "symbol": "XIL_USDT",
     "desimal": 18,
-    "sc": "0x3aaDA3e213aBf8529606924d8D1c55CbDc70Bf74",
-    "star": 0,
+    "sc": "0xf3bE1A4a47576208C1592Cc027087CE154B00672",
+    "wd": 0,
     "status": true
   },
+ 
   {
     "symbol": "XNL_USDT",
     "desimal": 18,
-    "sc": "0x06a00715e6f92210af9d7680b584931faf71a833",
-    "star": 0,
+    "sc": "0x5f26fa0c2ee5d3c0323d861d0c503f31ac212662",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "XPR_USDT",
-    "desimal": 4,
-    "sc": "0xd7efb00d12c2c13131fd319336fdf952525da2af",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "XRUNE_USDT",
+    "symbol": "XPNET_USDT",
     "desimal": 18,
-    "sc": "0x69fa0fee221ad11012bab0fdb45d444d3d2ce71c",
-    "star": 0,
+    "sc": "0x8cf8238abf7b933Bf8BB5Ea2C7E4Be101c11de2A",
+    "wd": 0,
     "status": true
   },
+  
   {
-    "symbol": "XSWAP_USDT",
+    "symbol": "XPRESS_USDT",
     "desimal": 18,
-    "sc": "0x8fe815417913a93ea99049fc0718ee1647a2a07c",
-    "star": 0,
+    "sc": "0xaa9826732f3a4973ff8b384b3f4e3c70c2984651",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "XY_USDT",
+    "symbol": "XVS_USDT",
     "desimal": 18,
-    "sc": "0x77777777772cf0455fb38ee0e75f38034dfa50de",
-    "star": 0,
+    "sc": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "XYO_USDT",
+    "symbol": "XWG_USDT",
     "desimal": 18,
-    "sc": "0x55296f69f40ea6d20e478533c15a6b08b654e758",
-    "star": 0,
+    "sc": "0x6b23c89196deb721e6fd9726e6c76e4810a464bc",
+    "wd": 0,
     "status": true
   },
-
   {
-    "symbol": "YFDAI_USDT",
+    "symbol": "Y8U_USDT",
     "desimal": 18,
-    "sc": "0xf4cd3d3fda8d7fd6c5a500203e38640a70bf9577",
-    "star": 0,
+    "sc": "0x991b4ce57864060115700d6fc05c7780346a15ac",
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "YFI_USDT",
+    "symbol": "YCT_USDT",
     "desimal": 18,
-    "sc": "0x0bc529c00C6401aEF6D220BE8C6Ea1667F6Ad93e",
-    "star": 0,
+    "sc": "0x23e3981052d5280c658e5e18d814fa9582bfbc9e",
+    "wd": 0,
     "status": true
   },
-
   {
-    "symbol": "YGG_USDT",
+    "symbol": "YIN_USDT",
     "desimal": 18,
-    "sc": "0x25f8087EAD173b73D6e8B84329989A8eEA16CF73",
-    "star": 0,
+    "sc": "0x794Baab6b878467F93EF17e2f2851ce04E3E34C8",
+    "wd": 0,
     "status": true
   },
+ 
   {
-    "symbol": "YIELD_USDT",
+    "symbol": "ZAM_USDT",
     "desimal": 18,
-    "sc": "0xa8B61CfF52564758A204F841E636265bEBC8db9B",
-    "star": 0,
+    "sc": "0xBbcF57177D8752B21d080bf30a06CE20aD6333F8",
+    "wd": 0,
     "status": true
   },
-
-
-  {
-    "symbol": "ZCN_USDT",
-    "desimal": 10,
-    "sc": "0xb9ef770b6a5e12e45983c5d80545258aa38f3b78",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ZCX_USDT",
-    "desimal": 18,
-    "sc": "0xc52c326331e9ce41f04484d3b5e5648158028804",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ZEE_USDT",
-    "desimal": 18,
-    "sc": "0x2edf094db69d6dcd487f1b3db9febe2eec0dd4c5",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "ZENT_USDT",
-    "desimal": 18,
-    "sc": "0xdbb7a34bf10169d6d2d0d02a6cbb436cf4381bfa",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ZETA_USDT",
-    "desimal": 18,
-    "sc": "0xf091867ec603a6628ed83d274e835539d82e9cc8",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "ZEUM_USDT",
-    "desimal": 18,
-    "sc": "0x436dA116249044E8B4464F0Cf21Dd93311d88190",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "ZIG_USDT",
     "desimal": 18,
-    "sc": "0xb2617246d0c6c0087f18703d576831899ca94f01",
-    "star": 0,
+    "sc": "0x8C907e0a72C3d55627E853f4ec6a96b0C8771145",
+    "wd": 0,
+    "status": true
+  },
+  {
+    "symbol": "ZIX_USDT",
+    "desimal": 18,
+    "sc": "0x48077400faf11183c043feb5184a13ea628bb0db",
+    "wd": 0,
     "status": true
   },
   {
     "symbol": "ZK_USDT",
     "desimal": 18,
     "sc": "0xC71B5F631354BE6853eFe9C3Ab6b9590F8302e81",
-    "star": 0,
+    "wd": 0,
     "status": true
   },
   {
-    "symbol": "ZKB_USDT",
+    "symbol": "ZLW_USDT",
     "desimal": 18,
-    "sc": "0xBBBbbBBB46A1dA0F0C3F64522c275BAA4C332636",
-    "star": 0,
-    "status": true
-  },
-
-  {
-    "symbol": "ZRX_USDT",
-    "desimal": 18,
-    "sc": "0xE41d2489571d322189246DaFA5ebDe1F4699F498",
-    "star": 0,
+    "sc": "0x5dd1E31E1a0e2E077aC98d2a4b781F418ca50387",
+    "wd": 0,
     "status": true
   }
 ]
+
 }
