@@ -2763,13 +2763,6 @@
   },
   
   {
-    "symbol": "ICONS_USDT",
-    "desimal": 18,
-    "sc": "0x3F68e7B44e9bCB486C2FeAdB7A2289D9cdFC9088",
-    "star": 0,
-    "status": true
-  },
-  {
     "symbol": "ID_USDT",
     "desimal": 18,
     "sc": "0x2dff88a56767223a5529ea5960da7a3f5f766406",
@@ -2982,13 +2975,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "KGC_USDT",
-    "desimal": 18,
-    "sc": "0xa8262Eb913FccEa4C3f77fc95b8b4043B384cFbB",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "KIF_USDT",
     "desimal": 18,
@@ -3073,13 +3060,6 @@
     "symbol": "LAYER_USDT",
     "desimal": 18,
     "sc": "0x0fF6ffcFDa92c53F615a4A75D982f399C989366b",
-    "star": 0,
-    "status": true
-  },
-  {
-    "symbol": "LBA_USDT",
-    "desimal": 18,
-    "sc": "0xfe5F141Bf94fE84bC28deD0AB966c16B17490657",
     "star": 0,
     "status": true
   },
@@ -3350,13 +3330,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "MATCH_USDT",
-    "desimal": 18,
-    "sc": "0x7f78A88d77FA03F3cE4a94b14A0e1abB5eEEEDD7",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "MATH_USDT",
     "desimal": 18,
@@ -3754,13 +3728,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "NMT_USDT",
-    "desimal": 18,
-    "sc": "0xd81b71cbb89b2800cdb000aa277dc1491dc923c3",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "NOIA_USDT",
     "desimal": 18,
@@ -3768,13 +3736,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "NRFB_USDT",
-    "desimal": 18,
-    "sc": "0x00281dfce4cfd72c0b6fda2aaaf077258743f9e8",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "NSDX_USDT",
     "desimal": 18,
@@ -4836,13 +4798,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "SFG_USDT",
-    "desimal": 18,
-    "sc": "0x8a6ACA71A218301c7081d4e96D64292D3B275ce0",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "SFI_USDT",
     "desimal": 18,
