@@ -1520,14 +1520,6 @@
   
   
   {
-    "symbol": "FDT_USDT",
-    "desimal": 18,
-    "sc": "0x3a599e584075065eAAAc768D75EaEf85c2f2fF64",
-    "wd": 0,
-    "status": true
-  },
-  
-  {
     "symbol": "FEVR_USDT",
     "desimal": 18,
     "sc": "0x82030CDBD9e4B7c5bb0b811A61DA6360D69449cc",
@@ -2770,13 +2762,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SCT_USDT",
-    "desimal": 18,
-    "sc": "0x405e7454E71AEfe8897438ADc08E3f3e6d49Dfc1",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "SDAO_USDT",
     "desimal": 18,
