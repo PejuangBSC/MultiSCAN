@@ -616,13 +616,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "4TOKEN_USDT",
-    "desimal": 18,
-    "sc": "0x8db4beaccd1698892821a9a0dc367792c0cb9940",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "5IRE_USDT",
     "desimal": 18,
@@ -1569,13 +1563,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "CRE_USDT",
-    "desimal": 18,
-    "sc": "0x115ec79f1de567ec68b7ae7eda501b406626478e",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "CRE8_USDT",
     "desimal": 18,
@@ -1776,13 +1764,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "DERC_USDT",
-    "desimal": 18,
-    "sc": "0x9fa69536d1cda4a04cfb50688294de75b505a9ae",
-    "star": 0,
-    "status": true
-  },
+
   {
     "symbol": "DERI_USDT",
     "desimal": 18,
@@ -4391,13 +4373,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "PYME_USDT",
-    "desimal": 18,
-    "sc": "0x3408636a7825e894ac5521ca55494f89f96df240",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "PYR_USDT",
     "desimal": 18,
@@ -5452,13 +5428,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "UNISTAKE_USDT",
-    "desimal": 18,
-    "sc": "0x9Ed8e7C9604790F7Ec589F99b94361d8AAB64E5E",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "UNN_USDT",
     "desimal": 18,
