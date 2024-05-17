@@ -1056,13 +1056,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "AXL_USDT",
-    "desimal": 18,
-    "sc": "0x25b24B3c47918b7962B3e49C4F468367F73CC0E0",
-    "star": 0,
-    "status": true
-  },
+ 
 
   {
     "symbol": "BAC_USDT",
