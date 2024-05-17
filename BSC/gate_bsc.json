@@ -3134,13 +3134,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "VMT_USDT",
-    "desimal": 18,
-    "sc": "0xE615C5e7219f9801C3b75bc76E45a4dab3c38e51",
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "VOLT_USDT",
     "desimal": 9,
@@ -3386,4 +3380,5 @@
     "status": true
   }
 ]
+
 }
