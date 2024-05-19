@@ -4575,13 +4575,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "RINGAI_USDT",
-    "desimal": 18,
-    "sc": "0xc092a137df3cf2b9e5971ba1874d26487c12626d",
-    "star": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "RLC_USDT",
     "desimal": 9,
@@ -5368,13 +5362,7 @@
     "star": 0,
     "status": true
   },
-  {
-    "symbol": "UNCX_USDT",
-    "desimal": 18,
-    "sc": "0xaDB2437e6F65682B85F814fBc12FeC0508A7B1D0",
-    "star": 0,
-    "status": true
-  },
+  
   {
     "symbol": "UNDEAD_USDT",
     "desimal": 18,
