@@ -665,13 +665,7 @@
     "status": true,
     "wd": 0
   },
-  {
-    "symbol": "BGT_USDT",
-    "sc": "0x45F6A3e1FCdb24C3E5097324872A8F5cf4602d48",
-    "desimal": 18,
-    "status": true,
-    "wd": 0
-  },
+  
   {
     "symbol": "BRI_USDT",
     "sc": "0x51F6EE60108CBCB3b613093BD3F224cB49Aa1610",
@@ -686,13 +680,7 @@
     "status": true,
     "wd": 0
   },
-  {
-    "symbol": "COMA_USDT",
-    "sc": "0x47812e739089B1AA9879F9262463d933b8bf176F",
-    "desimal": 18,
-    "status": true,
-    "wd": 0
-  },
+
   {
     "symbol": "CTOK_USDT",
     "sc": "0xA586B3B80D7e3e8d439e25fBC16Bc5bcEE3E2c85",
@@ -749,13 +737,7 @@
     "status": true,
     "wd": 0
   },
-  {
-    "symbol": "GOB_USDT",
-    "sc": "0xa2F9ECf83a48b86265ff5fD36cDBAAa1F349916C",
-    "desimal": 18,
-    "status": true,
-    "wd": 0
-  },
+  
   {
     "symbol": "GRAIL_USDT",
     "sc": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8",
