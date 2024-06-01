@@ -593,7 +593,7 @@
     "token": "6554422567:AAHn2KErUWyl_RIDChwv49mfHf9lHf_OTgQ",
     "id_grup": "-1002079288809"
   },
-  "token": 
+  "token": [
     {
       "symbol": "1EARTH_USDT",
       "sc": "0x9e04F519b094F5F8210441e285f603f4d2b50084",
@@ -6489,5 +6489,5 @@
       "wd": 1,
       "status": true
     }
- 
+  ]
 }
