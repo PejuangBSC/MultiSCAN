@@ -5725,13 +5725,7 @@
       "wd": 1,
       "status": true
     },
-    {
-      "symbol": "SYNC_USDT",
-      "sc": "0xa41d2f8ee4f47d3b860a149765a7df8c3287b7f0",
-      "desimal": 9,
-      "wd": 1,
-      "status": true
-    },
+   
     {
       "symbol": "T_USDT",
       "sc": "0xcdf7028ceab81fa0c6971208e83fa7872994bee5",
