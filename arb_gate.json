@@ -595,20 +595,7 @@
   },
   "token":
 [
-    {
-      "symbol": "AARK_USDT",
-      "desimal": 18,
-      "sc": "0xCa4e51F6AD4AFd9d1068E5899De9dd7d73F3463D",
-      "status": true,
-      "wd": 0
-    },
-    {
-      "symbol": "ACX_USDT",
-      "desimal": 18,
-      "sc": "0x53691596d1BCe8CEa565b84d4915e69e03d9C99d",
-      "status": true,
-      "wd": 0
-    },
+  
     {
       "symbol": "AIBB_USDT",
       "desimal": 18,
@@ -627,20 +614,6 @@
       "symbol": "AIDOGE_USDT",
       "desimal": 6,
       "sc": "0x09E18590E8f76b6Cf471b3cd75fE1A1a9D2B2c2b",
-      "status": true,
-      "wd": 0
-    },
-    {
-      "symbol": "AMC_USDT",
-      "desimal": 18,
-      "sc": "0x299142a6370e1912156E53fBD4f25D7ba49DdcC5",
-      "status": true,
-      "wd": 0
-    },
-    {
-      "symbol": "AMS_USDT",
-      "desimal": 18,
-      "sc": "0x41e7D39DD8D1De42EfA6e9B98402e05F5C2D12f8",
       "status": true,
       "wd": 0
     },
@@ -673,13 +646,6 @@
       "wd": 0
     },
     {
-      "symbol": "BGT_USDT",
-      "desimal": 18,
-      "sc": "0x45F6A3e1FCdb24C3E5097324872A8F5cf4602d48",
-      "status": true,
-      "wd": 0
-    },
-    {
       "symbol": "BRI_USDT",
       "desimal": 9,
       "sc": "0x51F6EE60108CBCB3b613093BD3F224cB49Aa1610",
@@ -690,13 +656,6 @@
       "symbol": "CATCH_USDT",
       "desimal": 18,
       "sc": "0xf0a479C9c3378638EC603b8B6B0d75903902550B",
-      "status": true,
-      "wd": 0
-    },
-    {
-      "symbol": "COMA_USDT",
-      "desimal": 18,
-      "sc": "0x47812e739089B1AA9879F9262463d933b8bf176F",
       "status": true,
       "wd": 0
     },
@@ -760,13 +719,6 @@
       "symbol": "GNS_USDT",
       "desimal": 18,
       "sc": "0x18c11FD286C5EC11c3b683Caa813B77f5163A122",
-      "status": true,
-      "wd": 0
-    },
-    {
-      "symbol": "GOB_USDT",
-      "desimal": 18,
-      "sc": "0xa2F9ECf83a48b86265ff5fD36cDBAAa1F349916C",
       "status": true,
       "wd": 0
     },
