@@ -994,13 +994,7 @@
     "wd": 1,
     "status": true
   },
-  {
-    "symbol": "DAIUSDT",
-    "sc": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
-    "desimal": 18,
-    "wd": 1,
-    "status": true
-  },
+ 
   {
     "symbol": "DARUSDT",
     "sc": "0x23ce9e926048273ef83be0a3a8ba9cb6d45cd978",
@@ -1267,13 +1261,7 @@
     "wd": 1,
     "status": true
   },
-  {
-    "symbol": "IDRTUSDT",
-    "sc": "0x66207e39bb77e6b99aab56795c7c340c08520d83",
-    "desimal": 2,
-    "wd": 1,
-    "status": true
-  },
+  
   {
     "symbol": "ILVUSDT",
     "sc": "0x4d5ac5cc4f8abdf2ec2cb986c00c382369f787d4",
@@ -1715,13 +1703,7 @@
     "wd": 1,
     "status": true
   },
-  {
-    "symbol": "SUPERUSDT",
-    "sc": "0x51ba0b044d96c3abfca52b64d733603ccc4f0d4d",
-    "desimal": 18,
-    "wd": 1,
-    "status": true
-  },
+ 
   {
     "symbol": "SUSHIUSDT",
     "sc": "0x947950bcc74888a40ffa2593c5798f11fc9124c4",
@@ -1729,13 +1711,7 @@
     "wd": 1,
     "status": true
   },
-  {
-    "symbol": "SXPUSDT",
-    "sc": "0x47bead2563dcbf3bf2c9407fea4dc236faba485a",
-    "desimal": 18,
-    "wd": 1,
-    "status": true
-  },
+  
   {
     "symbol": "SYNUSDT",
     "sc": "0xa4080f1778e69467e905b8d6f72f6e441f9e9484",
@@ -1862,13 +1838,7 @@
     "wd": 1,
     "status": true
   },
-  {
-    "symbol": "WRXUSDT",
-    "sc": "0x2a459dd33f05ed8ea9584505cf04698be5654e6d",
-    "desimal": 18,
-    "wd": 1,
-    "status": true
-  },
+  
   {
     "symbol": "XECUSDT",
     "sc": "0x0ef2e7602add1733bfdb17ac3094d0421b502ca3",
