@@ -701,9 +701,23 @@
     "status": true
   },
   {
+    "symbol": "ASRUSDT",
+    "sc": "0x80d5f92c2c8c682070c95495313ddb680b267320",
+    "desimal": 2,
+    "wd": 1,
+    "status": true
+  },
+  {
     "symbol": "ATAUSDT",
     "sc": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
     "desimal": 18,
+    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "ATMUSDT",
+    "sc": "0x25e9d05365c867e59c1904e7463af9f312296f9e",
+    "desimal": 2,
     "wd": 1,
     "status": true
   },
@@ -904,6 +918,13 @@
     "status": true
   },
   {
+    "symbol": "CITYUSDT",
+    "sc": "0x4e7e8579a9edc6283011be942537baf9284bebe1",
+    "desimal": 2,
+    "wd": 1,
+    "status": true
+  },
+  {
     "symbol": "CLVUSDT",
     "sc": "0x09e889bb4d5b474f561db0491c38702f367a4e4d",
     "desimal": 18,
@@ -969,6 +990,13 @@
   {
     "symbol": "CYBERUSDT",
     "sc": "0x14778860e937f509e651192a90589de711fb88a9",
+    "desimal": 18,
+    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "DAIUSDT",
+    "sc": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
     "desimal": 18,
     "wd": 1,
     "status": true
@@ -1074,6 +1102,20 @@
   {
     "symbol": "ETCUSDT",
     "sc": "0x3d6545b08693dae087e957cb1180ee38b9e3c25e",
+    "desimal": 18,
+    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "ETHUSDT",
+    "sc": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+    "desimal": 18,
+    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "FDUSDUSDT",
+    "sc": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
     "desimal": 18,
     "wd": 1,
     "status": true
@@ -1226,6 +1268,13 @@
     "status": true
   },
   {
+    "symbol": "IDRTUSDT",
+    "sc": "0x66207e39bb77e6b99aab56795c7c340c08520d83",
+    "desimal": 2,
+    "wd": 1,
+    "status": true
+  },
+  {
     "symbol": "ILVUSDT",
     "sc": "0x4d5ac5cc4f8abdf2ec2cb986c00c382369f787d4",
     "desimal": 18,
@@ -1271,6 +1320,13 @@
     "symbol": "JSTUSDT",
     "sc": "0xea998d307aca04d4f0a3b3036aba84ae2e409c0a",
     "desimal": 18,
+    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "JUVUSDT",
+    "sc": "0xc40c9a843e1c6d01b7578284a9028854f6683b1b",
+    "desimal": 2,
     "wd": 1,
     "status": true
   },
@@ -1450,6 +1506,13 @@
     "status": true
   },
   {
+    "symbol": "OGUSDT",
+    "sc": "0xf05e45ad22150677a017fbd94b84fbb63dc9b44c",
+    "desimal": 2,
+    "wd": 1,
+    "status": true
+  },
+  {
     "symbol": "OGNUSDT",
     "sc": "0x9c1962e0ac2a370ab4c4f4eecba6483d8764c4b2",
     "desimal": 18,
@@ -1544,6 +1607,13 @@
     "symbol": "PROSUSDT",
     "sc": "0xed8c8aa8299c10f067496bb66f8cc7fb338a3405",
     "desimal": 18,
+    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "PSGUSDT",
+    "sc": "0xbc5609612b7c44bef426de600b5fd1379db2ecf1",
+    "desimal": 2,
     "wd": 1,
     "status": true
   },
@@ -1646,6 +1716,13 @@
     "status": true
   },
   {
+    "symbol": "SUPERUSDT",
+    "sc": "0x51ba0b044d96c3abfca52b64d733603ccc4f0d4d",
+    "desimal": 18,
+    "wd": 1,
+    "status": true
+  },
+  {
     "symbol": "SUSHIUSDT",
     "sc": "0x947950bcc74888a40ffa2593c5798f11fc9124c4",
     "desimal": 18,
@@ -1702,6 +1779,13 @@
     "status": true
   },
   {
+    "symbol": "TUSDUSDT",
+    "sc": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
+    "desimal": 18,
+    "wd": 1,
+    "status": true
+  },
+  {
     "symbol": "TWTUSDT",
     "sc": "0x4b0f1812e5df2a09796481ff14017e6005508003",
     "desimal": 18,
@@ -1751,6 +1835,20 @@
     "status": true
   },
   {
+    "symbol": "WAVESUSDT",
+    "sc": "0xfc3e14af0f0c2129a84cc013d48c70d682902874",
+    "desimal": 18,
+    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "WBETHUSDT",
+    "sc": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
+    "desimal": 18,
+    "wd": 1,
+    "status": true
+  },
+  {
     "symbol": "WINUSDT",
     "sc": "0xaef0d72a118ce24fee3cd1d43d383897d05b4e99",
     "desimal": 18,
@@ -1766,8 +1864,8 @@
   },
   {
     "symbol": "WRXUSDT",
-    "sc": "0x8e17ed70334c87ece574c9d537bc153d8609e2a3",
-    "desimal": 8,
+    "sc": "0x2a459dd33f05ed8ea9584505cf04698be5654e6d",
+    "desimal": 18,
     "wd": 1,
     "status": true
   },
