@@ -994,13 +994,7 @@
     "wd": 0.68
   ,"status": true
 },
-  {
-    "symbol": "DAIUSDT",
-    "desimal": 18,
-    "sc": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
-    "wd": 0
-  ,"status": true
-},
+
   {
     "symbol": "DARUSDT",
     "desimal": 6,
