@@ -1917,6 +1917,13 @@
       "sc": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
       "wd": 0.7,
       "status": true
+    },
+    {
+      "symbol": "GUSDT",
+      "desimal": 18,
+      "sc": "0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649",
+      "status": true,
+      "wd": 0.0011
     }
   ]
 }
