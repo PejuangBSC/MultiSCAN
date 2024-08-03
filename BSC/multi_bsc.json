@@ -736,7 +736,7 @@
   {
     "symbol": "AXLUSDT",
     "sc": "0x8b1f4432f943c465a973fedc6d7aa50fc96f1f65",
-    "desimal": 18,
+    "desimal": 6,
     "wd": 0.68
   ,"status":true },
   {
@@ -943,12 +943,7 @@
     "desimal": 18,
     "wd": 0
   ,"status":true },
-  {
-    "symbol": "DAIUSDT",
-    "sc": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
-    "desimal": 18,
-    "wd": 0.69
-  ,"status":true },
+
   {
     "symbol": "DARUSDT",
     "sc": "0x23ce9e926048273ef83be0a3a8ba9cb6d45cd978",
