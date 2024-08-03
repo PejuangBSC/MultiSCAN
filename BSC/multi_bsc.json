@@ -616,7 +616,7 @@
   {
     "symbol": "ACHUSDT",
     "sc": "0xbc7d6b50616989655afd682fb42743507003056d",
-    "desimal": 18,
+    "desimal": 8,
     "wd": 0.68
   ,"status":true },
   {
@@ -631,12 +631,7 @@
     "desimal": 18,
     "wd": 0.68
   ,"status":true },
-  {
-    "symbol": "AEURUSDT",
-    "sc": "0xa40640458fbc27b6eefedea1e9c9e17d4cee7a21",
-    "desimal": 18,
-    "wd": 0.68
-  ,"status":true },
+ 
   {
     "symbol": "AIUSDT",
     "sc": "0xbda011d7f8ec00f66c1923b049b94c67d148d8b2",
@@ -691,24 +686,14 @@
     "desimal": 18,
     "wd": 0.05
   ,"status":true },
-  {
-    "symbol": "ASRUSDT",
-    "sc": "0x80d5f92c2c8c682070c95495313ddb680b267320",
-    "desimal": 18,
-    "wd": 0.69
-  ,"status":true },
+
   {
     "symbol": "ATAUSDT",
     "sc": "0xa2120b9e674d3fc3875f415a7df52e382f141225",
     "desimal": 18,
     "wd": 0.04
   ,"status":true },
-  {
-    "symbol": "ATMUSDT",
-    "sc": "0x25e9d05365c867e59c1904e7463af9f312296f9e",
-    "desimal": 18,
-    "wd": 0.69
-  ,"status":true },
+  
   {
     "symbol": "ATOMUSDT",
     "sc": "0x0eb3a705fc54725037cc9e008bdede697f62f335",
@@ -814,7 +799,7 @@
   {
     "symbol": "BONKUSDT",
     "sc": "0xa697e272a73744b343528c3bc4702f2565b2f422",
-    "desimal": 18,
+    "desimal": 5,
     "wd": 0.69
   ,"status":true },
   {
@@ -823,12 +808,7 @@
     "desimal": 18,
     "wd": 0.7
   ,"status":true },
-  {
-    "symbol": "BTCUSDT",
-    "sc": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
-    "desimal": 18,
-    "wd": 0.71
-  ,"status":true },
+
   {
     "symbol": "BTTCUSDT",
     "sc": "0x352cb5e19b12fc216548a2677bd0fce83bae434b",
@@ -1046,12 +1026,7 @@
     "desimal": 18,
     "wd": 0.68
   ,"status":true },
-  {
-    "symbol": "FDUSDUSDT",
-    "sc": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
-    "desimal": 18,
-    "wd": 0.69
-  ,"status":true },
+
   {
     "symbol": "FETUSDT",
     "sc": "0x031b41e504677879370e9dbcf937283a8691fa7f",
@@ -1220,12 +1195,7 @@
     "desimal": 18,
     "wd": 0.68
   ,"status":true },
-  {
-    "symbol": "JUVUSDT",
-    "sc": "0xc40c9a843e1c6d01b7578284a9028854f6683b1b",
-    "desimal": 18,
-    "wd": 0.69
-  ,"status":true },
+
   {
     "symbol": "KMDUSDT",
     "sc": "0x2003f7ba57ea956b05b85c60b4b2ceea9b111256",
@@ -1244,12 +1214,7 @@
     "desimal": 18,
     "wd": 0.69
   ,"status":true },
-  {
-    "symbol": "LAZIOUSDT",
-    "sc": "0x77d547256a2cd95f32f67ae0313e450ac200648d",
-    "desimal": 18,
-    "wd": 0.68
-  ,"status":true },
+
   {
     "symbol": "LINAUSDT",
     "sc": "0x762539b45a1dcce3d36d080f74d1aed37844b878",
@@ -1370,12 +1335,7 @@
     "desimal": 18,
     "wd": 0
   ,"status":true },
-  {
-    "symbol": "OGUSDT",
-    "sc": "0xf05e45ad22150677a017fbd94b84fbb63dc9b44c",
-    "desimal": 18,
-    "wd": 0.69
-  ,"status":true },
+ 
   {
     "symbol": "OGNUSDT",
     "sc": "0x9c1962e0ac2a370ab4c4f4eecba6483d8764c4b2",
@@ -1490,12 +1450,7 @@
     "desimal": 18,
     "wd": 0.7
   ,"status":true },
-  {
-    "symbol": "SANTOSUSDT",
-    "sc": "0xa64455a4553c9034236734faddaddbb64ace4cc7",
-    "desimal": 18,
-    "wd": 0.7
-  ,"status":true },
+
   {
     "symbol": "SCRTUSDT",
     "sc": "0x02dd18e4981da3fc7363fe56f3b81d1860b44ea7",
@@ -1598,12 +1553,7 @@
     "desimal": 18,
     "wd": 0.69
   ,"status":true },
-  {
-    "symbol": "TUSDUSDT",
-    "sc": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
-    "desimal": 18,
-    "wd": 0.68
-  ,"status":true },
+
   {
     "symbol": "TWTUSDT",
     "sc": "0x4b0f1812e5df2a09796481ff14017e6005508003",
@@ -1646,12 +1596,7 @@
     "desimal": 18,
     "wd": 0.67
   ,"status":true },
-  {
-    "symbol": "WBETHUSDT",
-    "sc": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
-    "desimal": 18,
-    "wd": 0.68
-  ,"status":true },
+ 
   {
     "symbol": "WINUSDT",
     "sc": "0xaef0d72a118ce24fee3cd1d43d383897d05b4e99",
