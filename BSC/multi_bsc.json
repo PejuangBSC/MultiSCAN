@@ -1009,12 +1009,7 @@
     "sc": "0x3d6545b08693dae087e957cb1180ee38b9e3c25e",
     "status": true
   },
-  {
-    "symbol": "FDUSDUSDT",
-    "desimal": 18,
-    "sc": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
-    "status": true
-  },
+  
   {
     "symbol": "FETUSDT",
     "desimal": 18,
@@ -1057,12 +1052,7 @@
     "sc": "0xaff9084f2374585879e8b434c399e29e80cce635",
     "status": true
   },
-  {
-    "symbol": "FRONTUSDT",
-    "desimal": 18,
-    "sc": "0x928e55dab735aa8260af3cedada18b5f70c72f1b",
-    "status": true
-  },
+ 
   {
     "symbol": "FTMUSDT",
     "desimal": 18,
