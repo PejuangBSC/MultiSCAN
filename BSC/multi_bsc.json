@@ -859,12 +859,7 @@
     "sc": "0xf9cec8d50f6c8ad3fb6dccec577e05aa32b224fe",
     "status": true
   },
-  {
-    "symbol": "CITYUSDT",
-    "desimal": 18,
-    "sc": "0x4e7e8579a9edc6283011be942537baf9284bebe1",
-    "status": true
-  },
+ 
   {
     "symbol": "CLVUSDT",
     "desimal": 18,
