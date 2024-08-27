@@ -1454,12 +1454,6 @@
     "status": true
   },
   {
-    "symbol": "SUPERUSDT",
-    "desimal": 18,
-    "sc": "0x51ba0b044d96c3abfca52b64d733603ccc4f0d4d",
-    "status": true
-  },
-  {
     "symbol": "SUSHIUSDT",
     "desimal": 18,
     "sc": "0x947950bcc74888a40ffa2593c5798f11fc9124c4",
@@ -1479,7 +1473,7 @@
   },
   {
     "symbol": "TLMUSDT",
-    "desimal": 18,
+    "desimal": 4,
     "sc": "0x2222227e22102fe3322098e4cbfe18cfebd57c95",
     "status": true
   },
@@ -1617,7 +1611,7 @@
   },
   {
     "symbol": "ZILUSDT",
-    "desimal": 18,
+    "desimal": 12,
     "sc": "0xb86abcb37c3a4b64f74f59301aff131a1becc787",
     "status": true
   },
@@ -1628,5 +1622,4 @@
     "status": true
   }
 ]
-
 }
