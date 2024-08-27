@@ -1545,12 +1545,7 @@
     "sc": "0x4691937a7508860f876c9c0a2a617e7d9e945d4b",
     "status": true
   },
-  {
-    "symbol": "WRXUSDT",
-    "desimal": 18,
-    "sc": "0x2a459dd33f05ed8ea9584505cf04698be5654e6d",
-    "status": true
-  },
+ 
   {
     "symbol": "XECUSDT",
     "desimal": 18,
