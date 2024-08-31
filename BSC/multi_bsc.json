@@ -631,12 +631,7 @@
     "sc": "0x6bff4fb161347ad7de4a625ae5aa3a1ca7077819",
     "status": true
   },
-  {
-    "symbol": "AEURUSDT",
-    "desimal": 18,
-    "sc": "0xa40640458fbc27b6eefedea1e9c9e17d4cee7a21",
-    "status": true
-  },
+ 
   {
     "symbol": "AIUSDT",
     "desimal": 18,
