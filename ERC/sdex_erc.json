@@ -871,12 +871,7 @@
     "sc": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
     "status": true
   },
-  {
-    "symbol": "ETH_USDT",
-    "desimal": 18,
-    "sc": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
-    "status": true
-  },
+ 
   {
     "symbol": "FARM_USDT",
     "desimal": 18,
@@ -1405,18 +1400,7 @@
     "sc": "0x6369c3dadfc00054a42ba8b2c09c48131dd4aa38",
     "status": true
   },
-  {
-    "symbol": "NOIA_USDT",
-    "desimal": 18,
-    "sc": "0xa8c8CfB141A3bB59FEA1E2ea6B79b5ECBCD7b6ca",
-    "status": true
-  },
-  {
-    "symbol": "OCEAN_USDT",
-    "desimal": 18,
-    "sc": "0x967da4048cd07ab37855c090aaf366e4ce1b9f48",
-    "status": true
-  },
+ 
   {
     "symbol": "ONDO_USDT",
     "desimal": 18,
@@ -1439,12 +1423,6 @@
     "symbol": "SAO_USDT",
     "desimal": 9,
     "sc": "0x3ef389f264e07fff3106a3926f2a166d1393086f",
-    "status": true
-  },
-  {
-    "symbol": "USDC_USDT",
-    "desimal": 6,
-    "sc": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
     "status": true
   },
   {
