@@ -597,7 +597,7 @@
   {
     "symbol": "ABYS_USDT",
     "sc": "0x23001ae6cd2f0644c5846e156565998334fc2be3",
-    "desimal": 18,
+    "desimal": 8,
     "wd": 0,
     "status": true
   },
@@ -1444,7 +1444,7 @@
   {
     "symbol": "WSDM_USDT",
     "sc": "0x5F2F8818002dc64753daeDF4A6CB2CcB757CD220",
-    "desimal": 18,
+    "desimal": 6,
     "wd": 0,
     "status": true
   },
