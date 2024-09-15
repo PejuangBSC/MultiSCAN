@@ -593,9 +593,7 @@
     "token": "6955514081:AAFChpIajQ8Sp1Vz1Ks54qk6H1-sMHX8M24",
     "id_grup": "-1002079288809"
   },
-  "token": 
-{
-  "LIST_TOKEN": [
+  "token":  [
     {
       "symbol": "1INCHUSDT",
       "desimal": 18,
@@ -1875,5 +1873,5 @@
       "status": true
     }
   ]
-}
+
 }
