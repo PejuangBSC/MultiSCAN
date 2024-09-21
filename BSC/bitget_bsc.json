@@ -613,12 +613,7 @@
     "desimal": 18,
     "status": true
   },
-  {
-    "symbol": "LSD7USDT",
-    "sc": "0x055D5C0D7c7c07E3E443d09f7016f5f73978008b",
-    "desimal": 18,
-    "status": true
-  },
+ 
   {
     "symbol": "PMGUSDT",
     "sc": "0x0733618ab62eeec815f2d1739b7a50bf9e74d8a2",
@@ -661,12 +656,7 @@
     "desimal": 18,
     "status": true
   },
-  {
-    "symbol": "DAIUSDT",
-    "sc": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
-    "desimal": 18,
-    "status": true
-  },
+  
   {
     "symbol": "VVUSDT",
     "sc": "0x1f7e7a030aef0a0f600de1350c23d30b73fc7270",
@@ -1009,12 +999,7 @@
     "desimal": 18,
     "status": true
   },
-  {
-    "symbol": "QUACKUSDT",
-    "sc": "0xd74b782e05aa25c50e7330af541d46e18f36661c",
-    "desimal": 9,
-    "status": true
-  },
+  
   {
     "symbol": "IVPAYUSDT",
     "sc": "0xde5bdcbd4d7dfa86e527fef9971bd6ca6a76eefb",
@@ -1033,27 +1018,17 @@
     "desimal": 18,
     "status": true
   },
-  {
-    "symbol": "CATEUSDT",
-    "sc": "0xe4fae3faa8300810c835970b9187c268f55d998f",
-    "desimal": 9,
-    "status": true
-  },
+  
   {
     "symbol": "DCBUSDT",
     "sc": "0xeac9873291ddaca754ea5642114151f3035c67a2",
     "desimal": 18,
     "status": true
   },
-  {
-    "symbol": "BNBUSDT",
-    "sc": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-    "desimal": 18,
-    "status": true
-  },
+ 
   {
     "symbol": "ICEUSDT",
-    "sc": "0xf16e81dce15b08f326220742020379b855b87df9",
+    "sc": "0xc335df7c25b72eec661d5aa32a7c2b7b2a1d1874",
     "desimal": 18,
     "status": true
   },
