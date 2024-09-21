@@ -595,223 +595,222 @@
   },
   "token":
 [
-  {
-    "symbol": "ADFUSDT",
-    "desimal": 18,
-    "sc": "0x6bd10299f4f1d31b3489dc369ea958712d27c81b",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "BLOKUSDT",
-    "desimal": 18,
-    "sc": "0x229b1b6c23ff8953d663c4cbb519717e323a0a84",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "CBKUSDT",
-    "desimal": 18,
-    "sc": "0x4ec203dd0699fac6adaf483cdd2519bc05d2c573",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "CREUSDT",
-    "desimal": 18,
-    "sc": "0xe81432473290F4ffCFc5E823F8069Db83e8A677B",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "CRETAUSDT",
-    "desimal": 18,
-    "sc": "0x202655af326dE310491Cb54f120E02eE0da92b55",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "CVTXUSDT",
-    "desimal": 18,
-    "sc": "0x40F97Ec376aC1c503E755433BF57f21e3a49f440",
-    "wd": 0,
-    "status": true
-  },
- 
-  {
-    "symbol": "DIMOUSDT",
-    "desimal": 18,
-    "sc": "0xE261D618a959aFfFd53168Cd07D12E37B26761db",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "DTECUSDT",
-    "desimal": 18,
-    "sc": "0xd87aF7B418d64FF2cdE48d890285bA64fc6E115F",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "FIREUSDT",
-    "desimal": 18,
-    "sc": "0x838C9634dE6590B96aEadC4Bc6DB5c28Fd17E3C2",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "GCAKEUSDT",
-    "desimal": 18,
-    "sc": "0x61d5822dd7b3ed495108733e6550d4529480c8f6",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "GMTUSDT",
-    "desimal": 8,
-    "sc": "0x714db550b574b3e927af3d93e26127d15721d4c2",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "GNSUSDT",
-    "desimal": 18,
-    "sc": "0xe5417af564e4bfda1c483642db72007871397896",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "LOEUSDT",
-    "desimal": 18,
-    "sc": "0x8b78927048de67b9e8c8F834359F15C3822eD871",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "MVUSDT",
-    "desimal": 18,
-    "sc": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "NAKAUSDT",
-    "desimal": 18,
-    "sc": "0x311434160d7537be358930def317afb606c0d737",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "NESSUSDT",
-    "desimal": 18,
-    "sc": "0x6eaEA1ED457E06F8CF6eE7Adf34e621844c3b0Fc",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "OVL3USDT",
-    "desimal": 18,
-    "sc": "0x61D5822DD7b3Ed495108733e6550d4529480C8F6",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "QUICKUSDT",
-    "desimal": 18,
-    "sc": "0xb5c064f955d8e7f38fe0460c556a72987494ee17",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "RMVUSDT",
-    "desimal": 18,
-    "sc": "0xf0949Dd87D2531D665010d6274F06a357669457a",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "SMLUSDT",
-    "desimal": 8,
-    "sc": "0xfCB54Da3F4193435184F3F647467e12b50754575",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "SWCHUSDT",
-    "desimal": 18,
-    "sc": "0x3ce1327867077B551ae9A6987bF10C9fd08edCE1",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "TELUSDT",
-    "desimal": 2,
-    "sc": "0xdF7837DE1F2Fa4631D716CF2502f8b230F1dcc32",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "TRCUSDT",
-    "desimal": 2,
-    "sc": "0x40d9fc77027A281d85de1fa660C887E645AE26C3",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "TRIASUSDT",
-    "desimal": 18,
-    "sc": "0x0D5eA33C2540a3071d8770F8ffee9817D0624E7d",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "TSUGTUSDT",
-    "desimal": 8,
-    "sc": "0x70e29b7e036b14d496431b77e0b6eb0008be6165",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "USDCUSDT",
-    "desimal": 6,
-    "sc": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "VEXTUSDT",
-    "desimal": 18,
-    "sc": "0x27842334c55c01ddfe81bf687425f906816c5141",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "VOXELUSDT",
-    "desimal": 18,
-    "sc": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "WSDMUSDT",
-    "desimal": 6,
-    "sc": "0x5F2F8818002dc64753daeDF4A6CB2CcB757CD220",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "WUSDUSDT",
-    "desimal": 6,
-    "sc": "0xA04C86c411320444d4A99d44082e057772E8cF96",
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "ZROUSDT",
-    "desimal": 18,
-    "sc": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
-    "wd": 0,
-    "status": true
-  }
-]
+    {
+      "symbol": "ADFUSDT",
+      "desimal": 18,
+      "sc": "0x6bd10299f4f1d31b3489dc369ea958712d27c81b",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "BLOKUSDT",
+      "desimal": 18,
+      "sc": "0x229b1b6c23ff8953d663c4cbb519717e323a0a84",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "CBKUSDT",
+      "desimal": 18,
+      "sc": "0x4ec203dd0699fac6adaf483cdd2519bc05d2c573",
+      "wd": 0,
+      "status": false
+    },
+    {
+      "symbol": "CREUSDT",
+      "desimal": 18,
+      "sc": "0xe81432473290F4ffCFc5E823F8069Db83e8A677B",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "CRETAUSDT",
+      "desimal": 18,
+      "sc": "0x202655af326dE310491Cb54f120E02eE0da92b55",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "CVTXUSDT",
+      "desimal": 18,
+      "sc": "0x40F97Ec376aC1c503E755433BF57f21e3a49f440",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "DIMOUSDT",
+      "desimal": 18,
+      "sc": "0xE261D618a959aFfFd53168Cd07D12E37B26761db",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "DTECUSDT",
+      "desimal": 18,
+      "sc": "0xd87aF7B418d64FF2cdE48d890285bA64fc6E115F",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "FIREUSDT",
+      "desimal": 18,
+      "sc": "0x838C9634dE6590B96aEadC4Bc6DB5c28Fd17E3C2",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "GCAKEUSDT",
+      "desimal": 18,
+      "sc": "0x61d5822dd7b3ed495108733e6550d4529480c8f6",
+      "wd": 0,
+      "status": false
+    },
+    {
+      "symbol": "GMTUSDT",
+      "desimal": 8,
+      "sc": "0x714db550b574b3e927af3d93e26127d15721d4c2",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "GNSUSDT",
+      "desimal": 18,
+      "sc": "0xe5417af564e4bfda1c483642db72007871397896",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "LOEUSDT",
+      "desimal": 18,
+      "sc": "0x8b78927048de67b9e8c8F834359F15C3822eD871",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "MVUSDT",
+      "desimal": 18,
+      "sc": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "NAKAUSDT",
+      "desimal": 18,
+      "sc": "0x311434160d7537be358930def317afb606c0d737",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "NESSUSDT",
+      "desimal": 18,
+      "sc": "0x6eaEA1ED457E06F8CF6eE7Adf34e621844c3b0Fc",
+      "wd": 0,
+      "status": false
+    },
+    {
+      "symbol": "OVL3USDT",
+      "desimal": 18,
+      "sc": "0x61D5822DD7b3Ed495108733e6550d4529480C8F6",
+      "wd": 0,
+      "status": false
+    },
+    {
+      "symbol": "QUICKUSDT",
+      "desimal": 18,
+      "sc": "0xb5c064f955d8e7f38fe0460c556a72987494ee17",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "RMVUSDT",
+      "desimal": 18,
+      "sc": "0xf0949Dd87D2531D665010d6274F06a357669457a",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "SMLUSDT",
+      "desimal": 8,
+      "sc": "0xfCB54Da3F4193435184F3F647467e12b50754575",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "SWCHUSDT",
+      "desimal": 18,
+      "sc": "0x3ce1327867077B551ae9A6987bF10C9fd08edCE1",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "TELUSDT",
+      "desimal": 2,
+      "sc": "0xdF7837DE1F2Fa4631D716CF2502f8b230F1dcc32",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "TRCUSDT",
+      "desimal": 2,
+      "sc": "0x40d9fc77027A281d85de1fa660C887E645AE26C3",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "TRIASUSDT",
+      "desimal": 18,
+      "sc": "0x0D5eA33C2540a3071d8770F8ffee9817D0624E7d",
+      "wd": 0,
+      "status": false
+    },
+    {
+      "symbol": "TSUGTUSDT",
+      "desimal": 8,
+      "sc": "0x70e29b7e036b14d496431b77e0b6eb0008be6165",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "USDCUSDT",
+      "desimal": 6,
+      "sc": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "VEXTUSDT",
+      "desimal": 18,
+      "sc": "0x27842334c55c01ddfe81bf687425f906816c5141",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "VOXELUSDT",
+      "desimal": 18,
+      "sc": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "WSDMUSDT",
+      "desimal": 6,
+      "sc": "0x5F2F8818002dc64753daeDF4A6CB2CcB757CD220",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "WUSDUSDT",
+      "desimal": 6,
+      "sc": "0xA04C86c411320444d4A99d44082e057772E8cF96",
+      "wd": 0,
+      "status": true
+    },
+    {
+      "symbol": "ZROUSDT",
+      "desimal": 18,
+      "sc": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+      "wd": 0,
+      "status": true
+    }
+  ]
 }
