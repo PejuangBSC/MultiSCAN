@@ -596,89 +596,15 @@
   "token":
 [
   {
-    "symbol": "GTAIUSDT",
-    "sc": "0x003d87d02A2A01E9E8a20f507C83E15DD83A33d1",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "FURYUSDT",
-    "sc": "0x0203d275d2a65030889af45ed91d472be3948b92",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "CSIXUSDT",
-    "sc": "0x04756126F044634C9a0f0E985e60c88a51ACC206",
-    "desimal": 18,
-    "status": true
-  },
- 
-  {
-    "symbol": "PMGUSDT",
-    "sc": "0x0733618ab62eeec815f2d1739b7a50bf9e74d8a2",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "ULTIUSDT",
-    "sc": "0x0E7779e698052f8fe56C415C3818FCf89de9aC6D",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "HELLOUSDT",
-    "sc": "0x0F1cBEd8EFa0E012AdbCCB1638D0aB0147D5Ac00",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "CECUSDT",
-    "sc": "0x111111267109489dc6f350608d5113b10c0c5cd7",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "RACAUSDT",
-    "sc": "0x12bb890508c125661e03b09ec06e404bc9289040",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "DCKUSDT",
-    "sc": "0x16faf9daa401aa42506af503aa3d80b871c467a3",
-    "desimal": 18,
-    "status": true
-  },
-  {
     "symbol": "10SETUSDT",
     "sc": "0x1AE369A6AB222aFF166325B7b87Eb9aF06C86E57",
     "desimal": 18,
     "status": true
   },
-  
   {
-    "symbol": "VVUSDT",
-    "sc": "0x1f7e7a030aef0a0f600de1350c23d30b73fc7270",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "VIAUSDT",
-    "sc": "0x21ac3bB914f90A2Bb1a16088E673a9fdDa641434",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "WALVUSDT",
-    "sc": "0x256d1fce1b1221e8398f65f9b36033ce50b2d497",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "BABYELONUSDT",
-    "sc": "0x258903a8e68d5248de85cf8a0a173d9e046edd98",
-    "desimal": 9,
+    "symbol": "ACHUSDT",
+    "sc": "0xBc7d6B50616989655AfD682fb42743507003056D",
+    "desimal": 8,
     "status": true
   },
   {
@@ -688,171 +614,9 @@
     "status": true
   },
   {
-    "symbol": "GPTUSDT",
-    "sc": "0x30842a9c941d9DE3AF582c41ad12b11D776ba69e",
+    "symbol": "ALEUSDT",
+    "sc": "0x9dCE13E71B11eb5Df66ca269bD657696587Fd4E2",
     "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "XCADUSDT",
-    "sc": "0x431e0cd023a32532bf3969cddfc002c00e98429d",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "SAKAIUSDT",
-    "sc": "0x43b35e89d15b91162dea1c51133c4c93bdd1c4af",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "BCCOINUSDT",
-    "sc": "0x450593bf7f2d7e559e38496cfb06bdce5e963795",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "DOMEUSDT",
-    "sc": "0x475bfaa1848591ae0e6ab69600f48d828f61a80e",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "MCRTUSDT",
-    "sc": "0x4b8285ab433d8f69cb48d5ad62b415ed1a221e4f",
-    "desimal": 9,
-    "status": true
-  },
-  {
-    "symbol": "ZBUUSDT",
-    "sc": "0x4d3dc895a9edb234dfa3e303a196c009dc918f84",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "UBXSUSDT",
-    "sc": "0x4f1960E29b2cA581a38c5c474e123f420F8092db",
-    "desimal": 6,
-    "status": true
-  },
-  {
-    "symbol": "GXEUSDT",
-    "sc": "0x510975edA48A97E0cA228dD04d1217292487bea6",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "HGPTUSDT",
-    "sc": "0x529c79f6918665ebe250f32eeeaa1d410a0798c6",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "DZOOUSDT",
-    "sc": "0x56d06a78ef8e95d6043341f24759e2834be6f97b",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "XPRUSDT",
-    "sc": "0x5de3939b2f811a61d830e6f52d13b066881412ab",
-    "desimal": 4,
-    "status": true
-  },
-  {
-    "symbol": "RJVUSDT",
-    "sc": "0x602B6C6ccE5F95c00603bd07D8fA7EbAF3747D44",
-    "desimal": 6,
-    "status": true
-  },
-  {
-    "symbol": "ARTYUSDT",
-    "sc": "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324",
-    "desimal": 6,
-    "status": true
-  },
-  {
-    "symbol": "SINUSDT",
-    "sc": "0x6397de0F9aEDc0F7A8Fa8B438DDE883B9c201010",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "HAMUSDT",
-    "sc": "0x679D5b2d94f454c950d683D159b87aa8eae37C9e",
-    "desimal": 7,
-    "status": true
-  },
-  {
-    "symbol": "OPULUSDT",
-    "sc": "0x686318000d982bc8dcc1cdcf8ffd22322f0960ed",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "PZPUSDT",
-    "sc": "0x6ad9E9c098a45B2B41b519119C31c3DcB02ACcB2",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "DEFIUSDT",
-    "sc": "0x6d106c0b8d2f47c5465bdbd58d1be253762cbbc1",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "BICITYUSDT",
-    "sc": "0x6fa9c0ee8a1f237466bb9cac8466bfa2aa63a978",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "XCNUSDT",
-    "sc": "0x7324c7C0d95CEBC73eEa7E85CbAac0dBdf88a05b",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "SOPHUSDT",
-    "sc": "0x73fbd93bfda83b111ddc092aa3a4ca77fd30d380",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "ATSUSDT",
-    "sc": "0x75d8bb7fbd4782a134211dc350ba5c715197b81d",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "LAIUSDT",
-    "sc": "0x776f9987d9deed90eed791cbd824d971fd5ccf09",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "CHAPZUSDT",
-    "sc": "0x7b56748a3ef9970a5bae99c58ad8bc67b26c525f",
-    "desimal": 10,
-    "status": true
-  },
-  {
-    "symbol": "LIMEUSDT",
-    "sc": "0x7bc75e291e656e8658d66be1cc8154a3769a35dd",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "GOMININGUSDT",
-    "sc": "0x7Ddc52c4De30e94Be3A6A0A2b259b2850f421989",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "VOLTUSDT",
-    "sc": "0x7f792db54B0e580Cdc755178443f0430Cf799aCa",
-    "desimal": 9,
     "status": true
   },
   {
@@ -862,26 +626,38 @@
     "status": true
   },
   {
-    "symbol": "SERSHUSDT",
-    "sc": "0x84affeef925cdce87f8a99b7b2e540da5140fc09",
+    "symbol": "APPAUSDT",
+    "sc": "0x78b5DF8973762B5cCA08c8820E1a4Ca3F7Af0b6c",
     "desimal": 18,
     "status": true
   },
   {
-    "symbol": "CALUSDT",
-    "sc": "0x859c940f080b197659b3effc804fd622df66f0a1",
+    "symbol": "ARTYUSDT",
+    "sc": "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324",
+    "desimal": 6,
+    "status": true
+  },
+  {
+    "symbol": "ATSUSDT",
+    "sc": "0x75d8bb7fbd4782a134211dc350ba5c715197b81d",
     "desimal": 18,
     "status": true
   },
   {
-    "symbol": "BABYGROKUSDT",
-    "sc": "0x88da9901b3a02fe24e498e1ed683d2310383e295",
+    "symbol": "BABYDOGEUSDT",
+    "sc": "0xc748673057861a797275cd8a068abb95a902e8de",
     "desimal": 9,
     "status": true
   },
   {
-    "symbol": "USDCUSDT",
-    "sc": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+    "symbol": "BCCOINUSDT",
+    "sc": "0x450593bf7f2d7e559e38496cfb06bdce5e963795",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "BICITYUSDT",
+    "sc": "0x6fa9c0ee8a1f237466bb9cac8466bfa2aa63a978",
     "desimal": 18,
     "status": true
   },
@@ -898,8 +674,32 @@
     "status": true
   },
   {
-    "symbol": "CREOUSDT",
-    "sc": "0x9521728bf66a867bc65a93ece4a543d817871eb7",
+    "symbol": "CALUSDT",
+    "sc": "0x859c940f080b197659b3effc804fd622df66f0a1",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "CAPSUSDT",
+    "sc": "0xffba7529ac181c2ee1844548e6d7061c9a597df4",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "CATAUSDT",
+    "sc": "0xBDf5bAfEE1291EEc45Ae3aadAc89BE8152D4E673",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "CATBOYUSDT",
+    "sc": "0x0DceE5F694E492F0DD842a7FBE5BEd4C6E4665a6",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "CEEKUSDT",
+    "sc": "0xe0f94ac5462997d2bc57287ac3a3ae4c31345d66",
     "desimal": 18,
     "status": true
   },
@@ -910,62 +710,50 @@
     "status": true
   },
   {
-    "symbol": "PBUXUSDT",
-    "sc": "0x9d1d4de9cd93203147fac3bc0262a78e3a0e96bb",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "F3USDT",
-    "sc": "0x9e57e83ad79ac5312ba82940ba037ed30600e167",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "WHYUSDT",
-    "sc": "0x9ec02756a559700d8d9e79ece56809f7bcc5dc27",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "TRIASUSDT",
-    "sc": "0xa4838122c683f732289805fc3c207febd55babdd",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "RTFUSDT",
-    "sc": "0xa89e2871A850E0e6fD8F0018eC1fc62FA75440d4",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "WOMUSDT",
-    "sc": "0xad6742a35fb341a9cc6ad674738dd8da98b94fb1",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "TLOSUSDT",
-    "sc": "0xb6c53431608e626ac81a9776ac3e999c5556717c",
-    "desimal": 18,
-    "status": true
-  },
-  {
-    "symbol": "BABYBONKUSDT",
-    "sc": "0xbb2826ab03b6321e170f0558804f2b6488c98775",
-    "desimal": 9,
-    "status": true
-  },
-  {
-    "symbol": "ACHUSDT",
-    "sc": "0xBc7d6B50616989655AfD682fb42743507003056D",
-    "desimal": 8,
+    "symbol": "CHAPZUSDT",
+    "sc": "0x7b56748a3ef9970a5bae99c58ad8bc67b26c525f",
+    "desimal": 10,
     "status": true
   },
   {
     "symbol": "COOKIEUSDT",
     "sc": "0xc0041ef357b183448b235a8ea73ce4e4ec8c265f",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "CREOUSDT",
+    "sc": "0x9521728bf66a867bc65a93ece4a543d817871eb7",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "D3DUSDT",
+    "sc": "0xd3c7e51CAaB1089002eC05569A04D14bCC478bC4",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "DCBUSDT",
+    "sc": "0xeac9873291ddaca754ea5642114151f3035c67a2",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "DCKUSDT",
+    "sc": "0x16faf9daa401aa42506af503aa3d80b871c467a3",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "DEFIUSDT",
+    "sc": "0x6d106c0b8d2f47c5465bdbd58d1be253762cbbc1",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "DMAILUSDT",
+    "sc": "0xcC6f1e1B87cfCbe9221808d2d85C501aab0B5192",
     "desimal": 18,
     "status": true
   },
@@ -976,59 +764,56 @@
     "status": true
   },
   {
-    "symbol": "STRMUSDT",
-    "sc": "0xC598275452fA319d75ee5f176FD3B8384925b425",
+    "symbol": "DOMEUSDT",
+    "sc": "0x475bfaa1848591ae0e6ab69600f48d828f61a80e",
     "desimal": 18,
     "status": true
   },
   {
-    "symbol": "FDUSDUSDT",
-    "sc": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
+    "symbol": "DUELUSDT",
+    "sc": "0xa1ED0bD9A4776830c5b7bA004F26427b71152CA5",
     "desimal": 18,
     "status": true
   },
   {
-    "symbol": "BABYDOGEUSDT",
-    "sc": "0xc748673057861a797275cd8a068abb95a902e8de",
-    "desimal": 9,
-    "status": true
-  },
-  {
-    "symbol": "DMAILUSDT",
-    "sc": "0xcC6f1e1B87cfCbe9221808d2d85C501aab0B5192",
-    "desimal": 18,
-    "status": true
-  },
-  
-  {
-    "symbol": "IVPAYUSDT",
-    "sc": "0xde5bdcbd4d7dfa86e527fef9971bd6ca6a76eefb",
+    "symbol": "DZOOUSDT",
+    "sc": "0x56d06a78ef8e95d6043341f24759e2834be6f97b",
     "desimal": 18,
     "status": true
   },
   {
-    "symbol": "PPTUSDT",
-    "sc": "0xdf061250302e5ccae091b18ca2b45914d785f214",
+    "symbol": "EGOUSDT",
+    "sc": "0x44a21B3577924DCD2e9C81A3347D204C36a55466",
     "desimal": 18,
     "status": true
   },
   {
-    "symbol": "CEEKUSDT",
-    "sc": "0xe0f94ac5462997d2bc57287ac3a3ae4c31345d66",
+    "symbol": "F3USDT",
+    "sc": "0x9e57e83ad79ac5312ba82940ba037ed30600e167",
     "desimal": 18,
     "status": true
   },
-  
   {
-    "symbol": "DCBUSDT",
-    "sc": "0xeac9873291ddaca754ea5642114151f3035c67a2",
+    "symbol": "FMBUSDT",
+    "sc": "0x6B3C58BFC74a41C1F7e6C0516471fDB8e42868Ad",
     "desimal": 18,
     "status": true
   },
- 
   {
-    "symbol": "ICEUSDT",
-    "sc": "0xc335df7c25b72eec661d5aa32a7c2b7b2a1d1874",
+    "symbol": "FURYUSDT",
+    "sc": "0x0203d275d2a65030889af45ed91d472be3948b92",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "GFALUSDT",
+    "sc": "0x47c454cA6be2f6DEf6f32b638C80F91c9c3c5949",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "GINOAUSDT",
+    "sc": "0x2fF90B0c29ededDAF11c847925ea4a17789e88c3",
     "desimal": 18,
     "status": true
   },
@@ -1039,8 +824,326 @@
     "status": true
   },
   {
+    "symbol": "GOMININGUSDT",
+    "sc": "0x7Ddc52c4De30e94Be3A6A0A2b259b2850f421989",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "GPTUSDT",
+    "sc": "0x30842a9c941d9DE3AF582c41ad12b11D776ba69e",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "GPTVUSDT",
+    "sc": "0x1F56eFffEe38EEeAE36cD38225b66c56E4D095a7",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "GRAPEUSDT",
+    "sc": "0x555296de6A86E72752e5C5DC091FE49713Aa145C",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "GTAIUSDT",
+    "sc": "0x003d87d02A2A01E9E8a20f507C83E15DD83A33d1",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "GXEUSDT",
+    "sc": "0x510975edA48A97E0cA228dD04d1217292487bea6",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "HALOUSDT",
+    "sc": "0xB6b8CCD230Bb4235C7b87986274E7aB550b72261",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "HAMUSDT",
+    "sc": "0x679D5b2d94f454c950d683D159b87aa8eae37C9e",
+    "desimal": 7,
+    "status": true
+  },
+  {
+    "symbol": "HELLOUSDT",
+    "sc": "0x0F1cBEd8EFa0E012AdbCCB1638D0aB0147D5Ac00",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "HGPTUSDT",
+    "sc": "0x529c79f6918665ebe250f32eeeaa1d410a0798c6",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "HODLUSDT",
+    "sc": "0x137fFd84025C582482E03D3A0B9f74c26dDDFBad",
+    "desimal": 6,
+    "status": true
+  },
+  {
+    "symbol": "ICEUSDT",
+    "sc": "0xc335df7c25b72eec661d5aa32a7c2b7b2a1d1874",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "IVPAYUSDT",
+    "sc": "0xde5bdcbd4d7dfa86e527fef9971bd6ca6a76eefb",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "KATAUSDT",
+    "sc": "0x6D6bA21E4C4b29CA7Bfa1c344Ba1E35B8DaE7205",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "LAIUSDT",
+    "sc": "0x776f9987d9deed90eed791cbd824d971fd5ccf09",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "LIFEFORMUSDT",
+    "sc": "0xA9f978c02915246E435c0BdA9785aAAad3cC46d2",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "LIMEUSDT",
+    "sc": "0x7bc75e291e656e8658d66be1cc8154a3769a35dd",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "LITTUSDT",
+    "sc": "0xCEbEf3DF1F3C5Bfd90FDE603E71F31a53B11944D",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "MCRTUSDT",
+    "sc": "0x4b8285ab433d8f69cb48d5ad62b415ed1a221e4f",
+    "desimal": 9,
+    "status": true
+  },
+  {
+    "symbol": "MMITUSDT",
+    "sc": "0x9767c8E438Aa18f550208e6d1fDf5f43541cC2c8",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "MNTCUSDT",
+    "sc": "0xe4e11e02AA14c7f24DB749421986EAEc1369e8C9",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "MSTRUSDT",
+    "sc": "0x2290C6bD9560E6498dFDf10F9eCB17997CA131f2",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "NMTUSDT",
+    "sc": "0x03AA6298F1370642642415EDC0db8b957783e8D6",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "OFNUSDT",
+    "sc": "0x8899eC96ed8C96b5C86C23c3f069c3dEf75b6d97",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "OPULUSDT",
+    "sc": "0x686318000d982bc8dcc1cdcf8ffd22322f0960ed",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "PBUXUSDT",
+    "sc": "0x9d1d4de9cd93203147fac3bc0262a78e3a0e96bb",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "PGPTUSDT",
+    "sc": "0x33a64943a0eaeCC2b06B10F89686B797bA75FFAD",
+    "desimal": 6,
+    "status": true
+  },
+  {
+    "symbol": "PGTUSDT",
+    "sc": "0x2D230f311F1f663EB5d0aafD58800CF6f2097c85",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "PMGUSDT",
+    "sc": "0x0733618ab62eeec815f2d1739b7a50bf9e74d8a2",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "PORTUMAUSDT",
+    "sc": "0x9000Cac49C3841926Baac5b2E13c87D43e51B6a4",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "PPTUSDT",
+    "sc": "0xdf061250302e5ccae091b18ca2b45914d785f214",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "PZPUSDT",
+    "sc": "0x6ad9E9c098a45B2B41b519119C31c3DcB02ACcB2",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "RACAUSDT",
+    "sc": "0x12bb890508c125661e03b09ec06e404bc9289040",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "RJVUSDT",
+    "sc": "0x602B6C6ccE5F95c00603bd07D8fA7EbAF3747D44",
+    "desimal": 6,
+    "status": true
+  },
+  {
+    "symbol": "RTFUSDT",
+    "sc": "0xa89e2871A850E0e6fD8F0018eC1fc62FA75440d4",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "SAKAIUSDT",
+    "sc": "0x43b35e89d15b91162dea1c51133c4c93bdd1c4af",
+    "desimal": 18,
+    "status": true
+  },
+  {
     "symbol": "SCLPUSDT",
     "sc": "0xf2c96e402c9199682d5ded26d3771c6b192c01af",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "SCPTUSDT",
+    "sc": "0x0669538FcdeF9A73CD37938eBa8c79E652BB93AA",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "SERSHUSDT",
+    "sc": "0x84affeef925cdce87f8a99b7b2e540da5140fc09",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "SINUSDT",
+    "sc": "0x6397de0F9aEDc0F7A8Fa8B438DDE883B9c201010",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "SIXUSDT",
+    "sc": "0x070a9867Ea49CE7AFc4505817204860e823489fE",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "SKRUSDT",
+    "sc": "0xe2dCA969624795985F2f083BcD0b674337ba130a",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "SLTUSDT",
+    "sc": "0x39E8AaaAF4b642f9C4FD57A9BeE3f337665678d0",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "SOPHUSDT",
+    "sc": "0x73fbd93bfda83b111ddc092aa3a4ca77fd30d380",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "STRMUSDT",
+    "sc": "0xC598275452fA319d75ee5f176FD3B8384925b425",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "SXCHUSDT",
+    "sc": "0xE58C3A44B74362048e202cb7C8036D4b0B28Af50",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "TIMEUSDT",
+    "sc": "0x3b198e26E473b8faB2085b37978e36c9DE5D7f68",
+    "desimal": 8,
+    "status": true
+  },
+  {
+    "symbol": "TLOSUSDT",
+    "sc": "0x193f4A4a6ea24102F49b931DEeeb931f6E32405d",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "TRIASUSDT",
+    "sc": "0xa4838122c683f732289805fc3c207febd55babdd",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "UBXSUSDT",
+    "sc": "0x4f1960E29b2cA581a38c5c474e123f420F8092db",
+    "desimal": 6,
+    "status": true
+  },
+  {
+    "symbol": "ULTIUSDT",
+    "sc": "0x0E7779e698052f8fe56C415C3818FCf89de9aC6D",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "UNICEUSDT",
+    "sc": "0xA0CF89eE581313D84d28409Eb6BB1D1F9B55d410",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "VELO1USDT",
+    "sc": "0xf486ad071f3bEE968384D2E39e2D8aF0fCf6fd46",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "VIAUSDT",
+    "sc": "0x21ac3bB914f90A2Bb1a16088E673a9fdDa641434",
     "desimal": 18,
     "status": true
   },
@@ -1051,8 +1154,68 @@
     "status": true
   },
   {
-    "symbol": "CAPSUSDT",
-    "sc": "0xffba7529ac181c2ee1844548e6d7061c9a597df4",
+    "symbol": "VISIONUSDT",
+    "sc": "0x332e78C687C3Fcd91494c6B13F0Fc685b2A57434",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "VSCUSDT",
+    "sc": "0xcDf937995A55a9AB551D81b463AC0f7F02795368",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "VTUSDT",
+    "sc": "0xEd66eC1acb7Dbd0C01cCCfF33E3fF1F423057C21",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "VVUSDT",
+    "sc": "0x1f7e7a030aef0a0f600de1350c23d30b73fc7270",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "WALVUSDT",
+    "sc": "0x256d1fce1b1221e8398f65f9b36033ce50b2d497",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "WHYUSDT",
+    "sc": "0x9ec02756a559700d8d9e79ece56809f7bcc5dc27",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "WOMUSDT",
+    "sc": "0xad6742a35fb341a9cc6ad674738dd8da98b94fb1",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "XCADUSDT",
+    "sc": "0x431e0cd023a32532bf3969cddfc002c00e98429d",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "XCNUSDT",
+    "sc": "0x7324c7C0d95CEBC73eEa7E85CbAac0dBdf88a05b",
+    "desimal": 18,
+    "status": true
+  },
+  {
+    "symbol": "XPRUSDT",
+    "sc": "0x5de3939b2f811a61d830e6f52d13b066881412ab",
+    "desimal": 4,
+    "status": true
+  },
+  {
+    "symbol": "ZAIUSDT",
+    "sc": "0x68449870EEa84453044Bd430822827E21Fd8F101",
     "desimal": 18,
     "status": true
   }
