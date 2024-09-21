@@ -637,13 +637,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "DAIUSDT",
-    "desimal": 18,
-    "sc": "0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063",
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "DIMOUSDT",
     "desimal": 18,
