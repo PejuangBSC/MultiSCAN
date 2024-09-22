@@ -877,8 +877,8 @@
     },
     {
       "symbol": "EVERUSDT",
-      "desimal": 18,
-      "sc": "0x29d578cec46b50fa5c88a99c6a4b70184c062953",
+      "desimal": 9,
+      "sc": "0x1ffEFD8036409Cb6d652bd610DE465933b226917",
       "wd": 0,
       "status": true
     },
@@ -1431,9 +1431,9 @@
     {
       "symbol": "ROUTEUSDT",
       "desimal": 18,
-      "sc": "0x60f67e1015b3f069dd4358a78c38f83fe3a667a9",
+      "sc": "0x16ECCfDbb4eE1A85A33f3A9B21175Cd7Ae753dB4",
       "wd": 0,
-      "status": false
+      "status": true
     },
     {
       "symbol": "RPKUSDT",
