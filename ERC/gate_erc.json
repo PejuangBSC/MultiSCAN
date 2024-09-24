@@ -789,7 +789,7 @@
       "desimal": 18,
       "sc": "0x89d584a1edb3a70b3b07963f9a3ea5399e38b136",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "AKITA_USDT",
@@ -845,7 +845,7 @@
       "desimal": 18,
       "sc": "0x9d5686EaDeA7327F5a0c4820dcA90457A0E88763",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "AMKT_USDT",
@@ -908,7 +908,7 @@
       "desimal": 18,
       "sc": "0xd4342a57ecf2fe7ffa37c33cb8f63b1500e575e6",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "APP_USDT",
@@ -1090,7 +1090,7 @@
       "desimal": 18,
       "sc": "0xa4cb0dce4849bdcad2d553e9e68644cf40e26cce",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "BANK_USDT",
@@ -1265,7 +1265,7 @@
       "desimal": 18,
       "sc": "0xd714d91A169127e11D8FAb3665d72E8b7ef9Dbe2",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "BLANKV2_USDT",
@@ -1475,14 +1475,14 @@
       "desimal": 18,
       "sc": "0xdeCF7Be29F8832E9C2Ddf0388c9778B8Ba76af43",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "BYN_USDT",
       "desimal": 18,
       "sc": "0x4bb3205bf648b7f59ef90dee0f1b62f6116bc7ca",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "BZZ_USDT",
@@ -1664,7 +1664,7 @@
       "desimal": 18,
       "sc": "0x6c3be406174349cfa4501654313d97e6a31072e1",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "COBE_USDT",
@@ -1678,14 +1678,14 @@
       "desimal": 18,
       "sc": "0x3136eF851592aCf49CA4C825131E364170FA32b3",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "COFIX_USDT",
       "desimal": 18,
       "sc": "0x1a23a6bfbadb59fa563008c0fb7cf96dfcf34ea1",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "CONV_USDT",
@@ -1881,7 +1881,7 @@
       "desimal": 8,
       "sc": "0x150bbcff6b1b4d528b48f1a300585dea0b6490b6",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "D2T_USDT",
@@ -1916,7 +1916,7 @@
       "desimal": 18,
       "sc": "0x7b4328c127b85369d9f82ca0503b000d09cf9180",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "DDD_USDT",
@@ -2035,7 +2035,7 @@
       "desimal": 18,
       "sc": "0x37F74e99794853777a10ea1dc08a64C86958F06a",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "DIMO_USDT",
@@ -2252,7 +2252,7 @@
       "desimal": 18,
       "sc": "0x8e30ea2329d95802fd804f4291220b0e2f579812",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "DX_USDT",
@@ -2301,7 +2301,7 @@
       "desimal": 18,
       "sc": "0x62d3c05b9c3d916fbc111819bbd3cee52906c1ae",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "EGS_USDT",
@@ -2637,7 +2637,7 @@
       "desimal": 18,
       "sc": "0xDb298285FE4C5410B05390cA80e8Fbe9DE1F259B",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "FORT_USDT",
@@ -3365,7 +3365,7 @@
       "desimal": 18,
       "sc": "0x005d1123878fc55fbd56b54c73963b234a64af3c",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "KIF_USDT",
@@ -3512,7 +3512,7 @@
       "desimal": 18,
       "sc": "0xfe5F141Bf94fE84bC28deD0AB966c16B17490657",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "LBK_USDT",
@@ -3757,7 +3757,7 @@
       "desimal": 9,
       "sc": "0x54012cDF4119DE84218F7EB90eEB87e25aE6EBd7",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "LUNCH_USDT",
@@ -3799,7 +3799,7 @@
       "desimal": 6,
       "sc": "0x2b915b505c017ABb1547aA5Ab355FbE69865cC6D",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "MARSH_USDT",
@@ -3820,7 +3820,7 @@
       "desimal": 18,
       "sc": "0x7f78A88d77FA03F3cE4a94b14A0e1abB5eEEEDD7",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "MATH_USDT",
@@ -3869,7 +3869,7 @@
       "desimal": 18,
       "sc": "0x51DB5Ad35C671a87207d88fC11d593AC0C8415bd",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "MDF_USDT",
@@ -4093,7 +4093,7 @@
       "desimal": 18,
       "sc": "0xaA247c0D81B83812e1ABf8bAB078E4540D87e3fB",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "MTA_USDT",
@@ -4240,7 +4240,7 @@
       "desimal": 18,
       "sc": "0xcd6926193308d3b371fdd6a6219067e550000000",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "NEXT_USDT",
@@ -4345,7 +4345,7 @@
       "desimal": 0,
       "sc": "0x00281dfce4cfd72c0b6fda2aaaf077258743f9e8",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "NSDX_USDT",
@@ -4450,7 +4450,7 @@
       "desimal": 18,
       "sc": "0x4092678e4E78230F46A1534C0fbc8fA39780892B",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "OCT_USDT",
@@ -4583,7 +4583,7 @@
       "desimal": 9,
       "sc": "0x562e362876c8aee4744fc2c6aac8394c312d215d",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "OPUL_USDT",
@@ -4898,7 +4898,7 @@
       "desimal": 18,
       "sc": "0x3F9BEC82c776c47405BcB38070d2395Fd18F89d3",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "PHTR_USDT",
@@ -5080,7 +5080,7 @@
       "desimal": 18,
       "sc": "0xe4dae00bc1c46ea2F44ae71B1BEb8b171C15d812",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "PRO_USDT",
@@ -5164,7 +5164,7 @@
       "desimal": 6,
       "sc": "0x618E75Ac90b12c6049Ba3b27f5d5F8651b0037F6",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "QORPO_USDT",
@@ -5234,7 +5234,7 @@
       "desimal": 18,
       "sc": "0x6431FA4B812a2DCC062A38CB55cc7D18135AdEAd",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "RARI_USDT",
@@ -5626,7 +5626,7 @@
       "desimal": 9,
       "sc": "0xdfef6416ea3e6ce587ed42aa7cb2e586362cbbfa",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "SHOE_USDT",
@@ -5724,7 +5724,7 @@
       "desimal": 18,
       "sc": "0x2610f0bfc21ef389fe4d03cfb7de9ac1e6c99d6e",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "SLICE_USDT",
@@ -5815,7 +5815,7 @@
       "desimal": 18,
       "sc": "0xbdab72602e9ad40fc6a6852caf43258113b8f7a5",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "SPA_USDT",
@@ -5857,7 +5857,7 @@
       "desimal": 18,
       "sc": "0x8a0cdfab62ed35b836dc0633482798421c81b3ec",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "SPO_USDT",
@@ -5983,7 +5983,7 @@
       "desimal": 9,
       "sc": "0x7039cd6d7966672f194e8139074c3d5c4e6dcf65",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "STZ_USDT",
@@ -6172,7 +6172,7 @@
       "desimal": 18,
       "sc": "0x9e10f61749c4952c320412a6b26901605ff6da1d",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "THN_USDT",
@@ -6543,7 +6543,7 @@
       "desimal": 18,
       "sc": "0x5F0bc16D50F72d10b719dBF6845DE2E599eb5624",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "VEXT_USDT",
@@ -6641,7 +6641,7 @@
       "desimal": 18,
       "sc": "0x1f7e7a030aef0a0f600de1350c23d30b73fc7270",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "VXT_USDT",
@@ -6683,7 +6683,7 @@
       "desimal": 4,
       "sc": "0xE67F943af5Eb6051ef56f05979cc30B732717fa6",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "WAVES_USDT",
@@ -6809,7 +6809,7 @@
       "desimal": 18,
       "sc": "0x15f20f9dfdf96ccf6ac96653b7c0abfe4a9c9f0f",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "WSIENNA_USDT",
@@ -6886,7 +6886,7 @@
       "desimal": 8,
       "sc": "0xE1c7E30C42C24582888C758984f6e382096786bd",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "XDEFI_USDT",
@@ -7019,7 +7019,7 @@
       "desimal": 18,
       "sc": "0xf55a93b613d172b86c2ba3981a849dae2aecde2f",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "YIELD_USDT",
@@ -7145,7 +7145,7 @@
       "desimal": 18,
       "sc": "0x5319e86f0e41a06e49eb37046b8c11d78bcad68c",
       "wd": 1,
-      "status": true
+      "status": false
     },
     {
       "symbol": "ZSC_USDT",
