@@ -596,7 +596,7 @@
   "token":
   [
   {
-    "symbol": "$REKTUSDT",
+    "symbol": "REKTUSDT",
     "sc": "0x4f8b986ecffe7bed5dbeb2b49310fb00ca85a539",
     "desimal": 18,
     "status": true
