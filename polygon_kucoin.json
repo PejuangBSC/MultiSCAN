@@ -596,109 +596,109 @@
   "token":
 [
   {
-    "symbol": "BEATUSDT",
+    "symbol": "BEAT-USDT",
     "desimal": 18,
     "sc": "0xb78cf9ac0f47f1d69cba861deda29814d285c834",
     "status": true
   },
   {
-    "symbol": "BLOKUSDT",
+    "symbol": "BLOK-USDT",
     "desimal": 18,
     "sc": "0x229b1b6c23ff8953d663c4cbb519717e323a0a84",
     "status": true
   },
   {
-    "symbol": "BULLUSDT",
+    "symbol": "BULL-USDT",
     "desimal": 18,
     "sc": "0x9f95e17b2668afe01f8fbd157068b0a4405cc08d",
     "status": true
   },
   {
-    "symbol": "CANDYUSDT",
+    "symbol": "CANDY-USDT",
     "desimal": 18,
     "sc": "0x32043520205367a68b527881fa594bbc714f80ec",
     "status": true
   },
   {
-    "symbol": "FIREUSDT",
+    "symbol": "FIRE-USDT",
     "desimal": 18,
     "sc": "0x838c9634de6590b96aeadc4bc6db5c28fd17e3c2",
     "status": true
   },
   {
-    "symbol": "FLAMEUSDT",
+    "symbol": "FLAME-USDT",
     "desimal": 18,
     "sc": "0x22e3f02f86bc8ea0d73718a2ae8851854e62adc5",
     "status": true
   },
   {
-    "symbol": "GNSUSDT",
+    "symbol": "GNS-USDT",
     "desimal": 18,
     "sc": "0xe5417af564e4bfda1c483642db72007871397896",
     "status": true
   },
   {
-    "symbol": "IDEAUSDT",
+    "symbol": "IDEA-USDT",
     "desimal": 18,
     "sc": "0xa26df7f21d752bcd3a413ba496485d87d65eef8f",
     "status": true
   },
   {
-    "symbol": "MVUSDT",
+    "symbol": "MV-USDT",
     "desimal": 18,
     "sc": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
     "status": true
   },
   {
-    "symbol": "NAKAUSDT",
+    "symbol": "NAKA-USDT",
     "desimal": 18,
     "sc": "0x311434160d7537be358930def317afb606c0d737",
     "status": true
   },
   {
-    "symbol": "NEXGUSDT",
+    "symbol": "NEXG-USDT",
     "desimal": 18,
     "sc": "0xaf0dc42725db75ae54f5e8945e71017bc7acd27d",
     "status": true
   },
   {
-    "symbol": "QUICKUSDT",
+    "symbol": "QUICK-USDT",
     "desimal": 18,
     "sc": "0xb5c064f955d8e7f38fe0460c556a72987494ee17",
     "status": true
   },
   {
-    "symbol": "TELUSDT",
+    "symbol": "TEL-USDT",
     "desimal": 2,
     "sc": "0xdf7837de1f2fa4631d716cf2502f8b230f1dcc32",
     "status": true
   },
   {
-    "symbol": "TRADEUSDT",
+    "symbol": "TRADE-USDT",
     "desimal": 18,
     "sc": "0x692ac1e363ae34b6b489148152b12e2785a3d8d6",
     "status": true
   },
   {
-    "symbol": "TSUGTUSDT",
+    "symbol": "TSUGT-USDT",
     "desimal": 18,
     "sc": "0x70e29b7e036b14d496431b77e0b6eb0008be6165",
     "status": true
   },
   {
-    "symbol": "UPOUSDT",
+    "symbol": "UPO-USDT",
     "desimal": 18,
     "sc": "0x9dbfc1cbf7a1e711503a29b4b5f9130ebeccac96",
     "status": true
   },
   {
-    "symbol": "VOXELUSDT",
+    "symbol": "VOXEL-USDT",
     "desimal": 18,
     "sc": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
     "status": true
   },
   {
-    "symbol": "WSDMUSDT",
+    "symbol": "WSDM-USDT",
     "desimal": 6,
     "sc": "0x5f2f8818002dc64753daedf4a6cb2ccb757cd220",
     "status": true
