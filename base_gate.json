@@ -609,13 +609,7 @@
     "wd": 1,
     "status": true
   },
-  {
-    "symbol": "ANS_USDT",
-    "desimal": 18,
-    "sc": "0xa8C2E771288585229eEa8DBe072EDfA7bcB388bb",
-    "wd": 1,
-    "status": true
-  },
+ 
 
   {
     "symbol": "BASEX_USDT",
@@ -674,13 +668,7 @@
     "wd": 1,
     "status": true
   },
-  {
-    "symbol": "FROKAI_USDT",
-    "desimal": 18,
-    "sc": "0xcbfe8E065534D0cc117Bd71A11B0249a63E247F7",
-    "wd": 1,
-    "status": true
-  },
+ 
   {
     "symbol": "ISK_USDT",
     "desimal": 18,
