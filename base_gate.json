@@ -644,13 +644,7 @@
     "wd": 1,
     "status": true
   },
-  {
-    "symbol": "BONUS_USDT",
-    "desimal": 18,
-    "sc": "0xFe7c0AF60e52dDf05C0F5F89CBf89758a45F6928",
-    "wd": 1,
-    "status": true
-  },
+  
   {
     "symbol": "BRETT_USDT",
     "desimal": 18,
@@ -660,7 +654,7 @@
   },
   {
     "symbol": "BUZ_USDT",
-    "desimal": 18,
+    "desimal": 4,
     "sc": "0xc73dC7aE7A4fa40517aAfa941AE1ee436B91a12c",
     "wd": 1,
     "status": true
@@ -749,13 +743,7 @@
     "wd": 1,
     "status": true
   },
-  {
-    "symbol": "PI_USDT",
-    "desimal": 18,
-    "sc": "0x31d1154E9fD9607E6F95B4efb6FC3d868426fC30",
-    "wd": 1,
-    "status": true
-  },
+ 
   {
     "symbol": "RMRK_USDT",
     "desimal": 18,
