@@ -613,12 +613,7 @@
     "sc": "0xa8C2E771288585229eEa8DBe072EDfA7bcB388bb",
     "status": true
   },
-  {
-    "symbol": "BABY_USDT",
-    "desimal": 18,
-    "sc": "0x53E562b9B7E5E94b81f10e96Ee70Ad06df3D2657",
-    "status": true
-  },
+ 
   {
     "symbol": "BASEX_USDT",
     "desimal": 18,
