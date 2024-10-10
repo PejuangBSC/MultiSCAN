@@ -599,215 +599,252 @@
     "symbol": "AERO_USDT",
     "desimal": 18,
     "sc": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "AGENT_USDT",
     "desimal": 18,
     "sc": "0xF5Bc3439f53A45607cCaD667AbC7DAF5A583633F",
-    "wd": 1,
     "status": true
   },
- 
-
+  {
+    "symbol": "ANS_USDT",
+    "desimal": 18,
+    "sc": "0xa8C2E771288585229eEa8DBe072EDfA7bcB388bb",
+    "status": true
+  },
+  {
+    "symbol": "BABY_USDT",
+    "desimal": 18,
+    "sc": "0x53E562b9B7E5E94b81f10e96Ee70Ad06df3D2657",
+    "status": true
+  },
   {
     "symbol": "BASEX_USDT",
     "desimal": 18,
     "sc": "0xb8E564B206032bBcDa2C3978Bc371Da52152f72e",
-    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "BBQ_USDT",
+    "desimal": 18,
+    "sc": "0x41a22eb30df65D6Ab0CE0B4cfE8F4e0Eb306D471",
     "status": true
   },
   {
     "symbol": "BCP_USDT",
     "desimal": 18,
     "sc": "0x87c211144b1D9bDAA5A791B8099EA4123dC31D21",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "BENJI_USDT",
     "desimal": 18,
     "sc": "0xBC45647eA894030a4E9801Ec03479739FA2485F0",
-    "wd": 1,
     "status": true
   },
-  
+  {
+    "symbol": "BONUS_USDT",
+    "desimal": 18,
+    "sc": "0xFe7c0AF60e52dDf05C0F5F89CBf89758a45F6928",
+    "status": true
+  },
   {
     "symbol": "BRETT_USDT",
     "desimal": 18,
     "sc": "0x532f27101965dd16442E59d40670FaF5eBB142E4",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "BUZ_USDT",
-    "desimal": 4,
+    "desimal": 18,
     "sc": "0xc73dC7aE7A4fa40517aAfa941AE1ee436B91a12c",
-    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "CARV_USDT",
+    "desimal": 18,
+    "sc": "0xc08Cd26474722cE93F4D0c34D16201461c10AA8C",
     "status": true
   },
   {
     "symbol": "DEGEN_USDT",
     "desimal": 18,
     "sc": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
-    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "DRINK_USDT",
+    "desimal": 18,
+    "sc": "0x2dc90Fa3a0f178ba4beE16CAc5D6c9A5a7B4C6cB",
     "status": true
   },
   {
     "symbol": "EMT_USDT",
     "desimal": 18,
     "sc": "0xe2c86869216aC578bd62a4b8313770d9EE359A05",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "FRIEND_USDT",
     "desimal": 18,
     "sc": "0x0bD4887f7D41B35CD75DFF9FfeE2856106f86670",
-    "wd": 1,
     "status": true
   },
- 
+  {
+    "symbol": "FROKAI_USDT",
+    "desimal": 18,
+    "sc": "0xcbfe8E065534D0cc117Bd71A11B0249a63E247F7",
+    "status": true
+  },
   {
     "symbol": "ISK_USDT",
     "desimal": 18,
     "sc": "0xd85EFF20288ca72eA9eEcFFb428F89EE5066CA5C",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "LAZYCAT_USDT",
     "desimal": 18,
     "sc": "0x41eD891897117450adBd710006855B12F98cb86b",
-    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "LUNARLENS_USDT",
+    "desimal": 18,
+    "sc": "0xF95E1C0a67492720CA22842122fe7fA63D5519E5",
+    "status": true
+  },
+  {
+    "symbol": "LVLY_USDT",
+    "desimal": 18,
+    "sc": "0xc734635CD30E882037C3f3De1EbCCF9fA9D27D9F",
     "status": true
   },
   {
     "symbol": "MAV_USDT",
     "desimal": 18,
     "sc": "0x64b88c73A5DfA78D1713fE1b4c69a22d7E0faAa7",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "MAVIA_USDT",
     "desimal": 18,
     "sc": "0x24fcFC492C1393274B6bcd568ac9e225BEc93584",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "MFER_USDT",
     "desimal": 18,
     "sc": "0xE3086852A4B125803C815a158249ae468A3254Ca",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "MIGGLES_USDT",
     "desimal": 18,
     "sc": "0xB1a03EdA10342529bBF8EB700a06C60441fEf25d",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "MOJO_USDT",
     "desimal": 18,
     "sc": "0xeD2d13A70acbD61074fC56bd0d0845e35f793e5E",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "MOXIE_USDT",
     "desimal": 18,
     "sc": "0x8C9037D1Ef5c6D1f6816278C7AAF5491d24CD527",
-    "wd": 1,
     "status": true
   },
- 
+  {
+    "symbol": "PI_USDT",
+    "desimal": 18,
+    "sc": "0x31d1154E9fD9607E6F95B4efb6FC3d868426fC30",
+    "status": true
+  },
   {
     "symbol": "RMRK_USDT",
     "desimal": 18,
     "sc": "0x524d524B4c9366be706D3A90dcf70076ca037aE3",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "ROOST_USDT",
     "desimal": 18,
     "sc": "0xeD899bfDB28c8ad65307Fa40f4acAB113AE2E14c",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "SEAM_USDT",
     "desimal": 18,
     "sc": "0x1C7a460413dD4e964f96D8dFC56E7223cE88CD85",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "SKOP_USDT",
     "desimal": 18,
     "sc": "0x6d3B8C76c5396642960243Febf736C6BE8b60562",
-    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "SOCIAL_USDT",
+    "desimal": 18,
+    "sc": "0xD3C68968137317a57a9bAbeacC7707Ec433548B4",
     "status": true
   },
   {
     "symbol": "SQT_USDT",
     "desimal": 18,
     "sc": "0x858c50C3AF1913b0E849aFDB74617388a1a5340d",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "TOSHI_USDT",
     "desimal": 18,
     "sc": "0xAC1Bd2486aAf3B5C0fc3Fd868558b082a531B2B4",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "UNA_USDT",
     "desimal": 18,
     "sc": "0x24569d33653c404f90aF10A2b98d6E0030D3d267",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "VIRTUAL_USDT",
     "desimal": 18,
     "sc": "0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "WAXL_USDT",
     "desimal": 6,
     "sc": "0x23ee2343B892b1BB63503a4FAbc840E0e2C6810f",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "WLTH_USDT",
     "desimal": 18,
     "sc": "0x99b2B1A2aDB02B38222ADcD057783D7e5D1FCC7D",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "XCN_USDT",
     "desimal": 18,
     "sc": "0x9c632E6Aaa3eA73f91554f8A3cB2ED2F29605e0C",
-    "wd": 1,
     "status": true
   },
   {
     "symbol": "XSWAP_USDT",
     "desimal": 18,
     "sc": "0x8Fe815417913a93Ea99049FC0718ee1647A2a07c",
-    "wd": 1,
+    "status": true
+  },
+  {
+    "symbol": "ZAP_USDT",
+    "desimal": 18,
+    "sc": "0xF56B3b3972F2f154555a0b62FF5A22b7b2A3C90B",
     "status": true
   }
 ]
