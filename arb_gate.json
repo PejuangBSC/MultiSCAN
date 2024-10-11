@@ -681,7 +681,7 @@
     },
     {
       "symbol": "BRI_USDT",
-      "desimal": 18,
+      "desimal": 8,
       "sc": "0x51F6EE60108CBCB3b613093BD3F224cB49Aa1610",
       "status": true
     },
