@@ -605,7 +605,7 @@
       "symbol": "AXLUSDT",
       "desimal": 6,
       "sc": "0x6e4e624106cb12e168e6533f8ec7c82263358940",
-      "status": "FALSE"
+     "status": true
     },
     {
       "symbol": "BLOKUSDT",
@@ -623,7 +623,7 @@
       "symbol": "CREUSDT",
       "desimal": 18,
       "sc": "0xe81432473290f4ffcfc5e823f8069db83e8a677b",
-      "status": "FALSE"
+     "status": true
     },
     {
       "symbol": "CRETAUSDT",
@@ -641,7 +641,7 @@
       "symbol": "DIMOUSDT",
       "desimal": 18,
       "sc": "0xe261d618a959afffd53168cd07d12e37b26761db",
-      "status": "FALSE"
+     "status": true
     },
     {
       "symbol": "DTECUSDT",
