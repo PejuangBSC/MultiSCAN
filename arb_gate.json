@@ -681,7 +681,7 @@
     },
     {
       "symbol": "BRI_USDT",
-      "desimal": 9,
+      "desimal": 18,
       "sc": "0x51F6EE60108CBCB3b613093BD3F224cB49Aa1610",
       "status": true
     },
@@ -701,7 +701,7 @@
       "symbol": "CTOK_USDT",
       "desimal": 18,
       "sc": "0xA586B3B80D7e3e8d439e25fBC16Bc5bcEE3E2c85",
-      "status": true
+      "status": false
     },
     {
       "symbol": "CU_USDT",
@@ -998,5 +998,4 @@
       "status": false
     }
   ]
-
 }
