@@ -699,7 +699,7 @@
   },
   {
     "symbol": "SMLUSDT",
-    "desimal": 18,
+    "desimal": 8,
     "sc": "0xfcb54da3f4193435184f3f647467e12b50754575",
     "status": true
   },
