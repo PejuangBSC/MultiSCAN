@@ -597,7 +597,7 @@
 [
   {
     "symbol": "ABYS_USDT",
-    "desimal": 8,
+    "desimal": 18,
     "sc": "0x23001ae6cd2f0644c5846e156565998334fc2be3",
     "status": true
   },
@@ -605,7 +605,7 @@
     "symbol": "ACX_USDT",
     "desimal": 18,
     "sc": "0xF328b73B6c685831F238c30a23Fc19140CB4D8FC",
-    "status": false
+    "status": true
   },
   {
     "symbol": "ADF_USDT",
@@ -623,7 +623,7 @@
     "symbol": "AGLA_USDT",
     "desimal": 18,
     "sc": "0xD6A33F67b733d422c821C36F0f79ca145B930d01",
-    "status": false
+    "status": true
   },
   {
     "symbol": "AIRTNT_USDT",
@@ -641,7 +641,7 @@
     "symbol": "AKV_USDT",
     "desimal": 18,
     "sc": "0x659e79849ed57fa5b2a336cdd03a4d9586a0e36a",
-    "status": false
+    "status": true
   },
   {
     "symbol": "ALN_USDT",
@@ -737,12 +737,18 @@
     "symbol": "CBK_USDT",
     "desimal": 18,
     "sc": "0x4ec203dd0699fac6adaf483cdd2519bc05d2c573",
-    "status": false
+    "status": true
   },
   {
     "symbol": "CHAMP_USDT",
     "desimal": 8,
     "sc": "0x8f9e8e833a69aa467e42c46cca640da84dd4585f",
+    "status": true
+  },
+  {
+    "symbol": "CROS_USDT",
+    "desimal": 18,
+    "sc": "0x70E05a930baB8c3Bf24b2B182aF3f857D19377ef",
     "status": true
   },
   {
@@ -752,28 +758,16 @@
     "status": true
   },
   {
-    "symbol": "DES_USDT",
+    "symbol": "CYRUS_USDT",
     "desimal": 18,
-    "sc": "0xa062fc09cA6bdeb2f6E3b77E1d4e09C42C964742",
-    "status": false
+    "sc": "0xb853f7852Aa780831F165899ccbAF5DB0882B0d6",
+    "status": true
   },
   {
     "symbol": "DEUS_USDT",
     "desimal": 18,
     "sc": "0xDE5ed76E7c05eC5e4572CfC88d1ACEA165109E44",
     "status": true
-  },
-  {
-    "symbol": "DEVT_USDT",
-    "desimal": 18,
-    "sc": "0x17D9dd3F1f1E2E5F723edd26Ebc14d042A4125b0",
-    "status": false
-  },
-  {
-    "symbol": "DG_USDT",
-    "desimal": 18,
-    "sc": "0xef938b6da8576a896f6e0321ef80996f4890f9c4",
-    "status": false
   },
   {
     "symbol": "DHV_USDT",
@@ -807,15 +801,9 @@
   },
   {
     "symbol": "FAST_USDT",
-    "desimal": 24,
+    "desimal": 18,
     "sc": "0xffBF21632d4AD2B1F85031B418a8f69638118364",
     "status": true
-  },
-  {
-    "symbol": "FCD_USDT",
-    "desimal": 18,
-    "sc": "0xf78610D0a197842bF98ca45254897edd13c5D182",
-    "status": false
   },
   {
     "symbol": "FEAR_USDT",
@@ -827,13 +815,13 @@
     "symbol": "FORA_USDT",
     "desimal": 18,
     "sc": "0x081c280cD5C1c934DbAfc97A2aB2e596FfE7DFC4",
-    "status": false
+    "status": true
   },
   {
     "symbol": "FOREX_USDT",
     "desimal": 18,
     "sc": "0xDb298285FE4C5410B05390cA80e8Fbe9DE1F259B",
-    "status": false
+    "status": true
   },
   {
     "symbol": "FORT_USDT",
@@ -875,7 +863,7 @@
     "symbol": "IDEA_USDT",
     "desimal": 18,
     "sc": "0xa26df7f21d752bcd3a413ba496485d87d65eef8f",
-    "status": false
+    "status": true
   },
   {
     "symbol": "IQT_USDT",
@@ -932,12 +920,6 @@
     "status": true
   },
   {
-    "symbol": "LEP_USDT",
-    "desimal": 18,
-    "sc": "0x76Bba8c6D70690514e642cb68C93AF9a2ac826A4",
-    "status": true
-  },
-  {
     "symbol": "LIME_USDT",
     "desimal": 18,
     "sc": "0x7f67639Ffc8C93dD558d452b8920b28815638c44",
@@ -947,7 +929,7 @@
     "symbol": "LLT_USDT",
     "desimal": 18,
     "sc": "0x0DdE4811C4DD68Dc740A1D7997F33fF46CD186a9",
-    "status": false
+    "status": true
   },
   {
     "symbol": "LOE_USDT",
@@ -1019,7 +1001,7 @@
     "symbol": "MSU_USDT",
     "desimal": 18,
     "sc": "0xe8377a076adabb3f9838afb77bee96eac101ffb1",
-    "status": false
+    "status": true
   },
   {
     "symbol": "MUC_USDT",
@@ -1046,12 +1028,6 @@
     "status": true
   },
   {
-    "symbol": "NIFT_USDT",
-    "desimal": 18,
-    "sc": "0x4a1d542b52a95ad01ddc70c2e7df0c7bbaadc56f",
-    "status": false
-  },
-  {
     "symbol": "NPT_USDT",
     "desimal": 18,
     "sc": "0x306ee01a6bA3b4a8e993fA2C1ADC7ea24462000c",
@@ -1070,22 +1046,10 @@
     "status": true
   },
   {
-    "symbol": "OKLP_USDT",
-    "desimal": 18,
-    "sc": "0x5D48a5E5a3e737322Ae27e25897F1c9E19EcC941",
-    "status": true
-  },
-  {
     "symbol": "OME_USDT",
     "desimal": 18,
     "sc": "0x8e0232183fda2932a04601eaddaf90191e2bdfcd",
     "status": true
-  },
-  {
-    "symbol": "ONSTON_USDT",
-    "desimal": 18,
-    "sc": "0xa4ce4a467e51aefec683a649c3f14427f104667f",
-    "status": false
   },
   {
     "symbol": "ORB_USDT",
@@ -1097,7 +1061,7 @@
     "symbol": "ORION_USDT",
     "desimal": 18,
     "sc": "0x5E0294Af1732498C77F8dB015a2d52a76298542B",
-    "status": false
+    "status": true
   },
   {
     "symbol": "OSHI_USDT",
@@ -1184,18 +1148,6 @@
     "status": true
   },
   {
-    "symbol": "REELT_USDT",
-    "desimal": 18,
-    "sc": "0x19ccfe396006ffe7a92ab667b0ef90ce61b66f9f",
-    "status": true
-  },
-  {
-    "symbol": "RVLT_USDT",
-    "desimal": 18,
-    "sc": "0xf0f9D895aCa5c8678f706FB8216fa22957685A13",
-    "status": false
-  },
-  {
     "symbol": "SAVG_USDT",
     "desimal": 18,
     "sc": "0x981aecc6eb4d382b96a02b75e931900705e95a31",
@@ -1232,12 +1184,6 @@
     "status": true
   },
   {
-    "symbol": "SPONGE_USDT",
-    "desimal": 18,
-    "sc": "0x53dF32548214f51821CF1Fe4368109ac5DdeA1Ff",
-    "status": false
-  },
-  {
     "symbol": "STBU_USDT",
     "desimal": 18,
     "sc": "0xcf403036bc139d30080D2Cf0F5b48066F98191bB",
@@ -1268,12 +1214,6 @@
     "status": true
   },
   {
-    "symbol": "SWP_USDT",
-    "desimal": 18,
-    "sc": "0xabEDe05598760E399ed7EB24900b30C51788f00F",
-    "status": false
-  },
-  {
     "symbol": "TAMA_USDT",
     "desimal": 18,
     "sc": "0xc61f39418cd27820b5D4E9Ba4a7197eefAEB8b05",
@@ -1283,7 +1223,7 @@
     "symbol": "TEDDY_USDT",
     "desimal": 18,
     "sc": "0x10f6f2b97F3aB29583D9D38BaBF2994dF7220C21",
-    "status": false
+    "status": true
   },
   {
     "symbol": "TIMECHRONO_USDT",
@@ -1307,7 +1247,13 @@
     "symbol": "TRIAS_USDT",
     "desimal": 18,
     "sc": "0x0D5eA33C2540a3071d8770F8ffee9817D0624E7d",
-    "status": false
+    "status": true
+  },
+  {
+    "symbol": "TRKX_USDT",
+    "desimal": 18,
+    "sc": "0x61bf130d973D59c69d3227f1668d534d83119860",
+    "status": true
   },
   {
     "symbol": "TSUGT_USDT",
@@ -1370,12 +1316,6 @@
     "status": true
   },
   {
-    "symbol": "VRJAM_USDT",
-    "desimal": 18,
-    "sc": "0xe84c2Edca71fC3cc570c70665178d90C8721623b",
-    "status": true
-  },
-  {
     "symbol": "VSX_USDT",
     "desimal": 18,
     "sc": "0xB8d5f5f236C24e09c7f55EEc313818742aC4cF79",
@@ -1409,19 +1349,13 @@
     "symbol": "WPAY_USDT",
     "desimal": 18,
     "sc": "0x7ABE9Edf5C544A04dA83e9110CF46DBC4759170c",
-    "status": false
-  },
-  {
-    "symbol": "WSDM_USDT",
-    "desimal": 6,
-    "sc": "0x5F2F8818002dc64753daeDF4A6CB2CcB757CD220",
     "status": true
   },
   {
-    "symbol": "YIN_USDT",
+    "symbol": "WSDM_USDT",
     "desimal": 18,
-    "sc": "0x794Baab6b878467F93EF17e2f2851ce04E3E34C8",
-    "status": false
+    "sc": "0x5F2F8818002dc64753daeDF4A6CB2CcB757CD220",
+    "status": true
   },
   {
     "symbol": "ZIG_USDT",
