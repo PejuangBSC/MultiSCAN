@@ -1267,12 +1267,7 @@
     "sc": "0x433cCeBC95ad458E74d81837Db0D4aa27e30E117",
     "status": true
   },
-  {
-    "symbol": "VAI_USDT",
-    "desimal": 18,
-    "sc": "0xD13cfD3133239a3c73a9E535A5c4DadEE36b395c",
-    "status": true
-  },
+ 
   {
     "symbol": "VATRENI_USDT",
     "desimal": 18,
@@ -1353,7 +1348,7 @@
   },
   {
     "symbol": "WSDM_USDT",
-    "desimal": 18,
+    "desimal": 6,
     "sc": "0x5F2F8818002dc64753daeDF4A6CB2CcB757CD220",
     "status": true
   },
