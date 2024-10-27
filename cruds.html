@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERC20 MASTER DATA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/css/uikit.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.6.22/js/uikit.min.js"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/16770/16770026.png" type="image/x-icon">
+
+    <style>
+        .uk-container {
+            width: 94%;
+            max-width: none;
+        }
+        .cex-group, .dex-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .input-group .uk-input {
+            flex: 1;
+        }
+        .table-header {
+            background-color: #9ceeaf;
+        }
+        .table-header th {
+            color: black;
+            font-size: medium;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+        .status-active {
+            color: green;
+        }
+        .status-inactive {
+            color: red;
+        }
+        .import-export-buttons {
+            margin-bottom: 15px;
+        }
+        .token-count {
+            cursor: pointer;
+            text-decoration: underline;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="uk-container uk-margin-top">
+        <h3 class="uk-heading-line"><span>FORM DATA TOKEN ERC v2.1</span></h3>
+
+        <form id="cryptoForm" class="uk-form-stacked">
+            <fieldset class="uk-fieldset">
+                <div class="uk-margin cex-group" style="display: flex; align-items: center; gap: 10px;">
+                    <span class="uk-text-primary uk-text-medium">PILIHAN CEX : </span>
+                    <div class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">
+                        <label><input class="uk-checkbox" type="checkbox" name="cex" value="BINANCE"> BINANCE</label>
+                        <label><input class="uk-checkbox" type="checkbox" name="cex" value="GATE"> GATE</label>
+                        <label><input class="uk-checkbox" type="checkbox" name="cex" value="KUCOIN"> KUCOIN</label>
+                        <label><input class="uk-checkbox" type="checkbox" name="cex" value="BYBIT" disabled> BYBIT</label>
+                        
+                        <label><input class="uk-checkbox" type="checkbox" name="cex" value="INDODAX" disabled> INDODAX</label>
+                        <label><input class="uk-checkbox" type="checkbox" name="cex" value="COINEX" disabled> COINEX</label>
+                        <label><input class="uk-checkbox" type="checkbox" name="cex" value="BITGET" disabled> BITGET</label>
+                        <label><input class="uk-checkbox" type="checkbox" name="cex" value="HUOBI" disabled> HUOBI</label>
+                        <label><input class="uk-checkbox" type="checkbox" name="cex" value="OKEX" disabled> OKEX</label>
+                        <label><input class="uk-checkbox" type="checkbox" name="cex" value="MEXC" disabled> MEXC</label>
+                    </div>
+                </div>
+        
+                <div class="uk-margin" style="display: flex; align-items: center; gap: 10px;">
+                    <span class="uk-text-primary uk-text-medium">DETAILS TOKEN : </span>
+                    <div class="uk-form-controls" style="flex: 1;">
+                        <input class="uk-input" type="text" id="tokenName" placeholder="Nama Token" required>
+                    </div>
+                    <div class="uk-form-controls" style="flex: 3;">
+                        <input class="uk-input" type="text" id="sc" placeholder="Smart Contract" required>
+                    </div>
+                    <div class="uk-form-controls" style="flex: 1;">
+                        <input class="uk-input" type="number" id="desimal" placeholder="Desimal" required min="0">
+                    </div>                    
+                </div>
+        
+                <div class="uk-margin dex-group" style="display: flex; align-items: center; gap: 10px;">
+                    <span class="uk-text-danger uk-text-medium">STATUS : </span>
+                    <div class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">                        
+                        <label><input class="uk-checkbox uk-text-danger" type="checkbox" id="status" checked> AKTIF | </label>
+                    </div>
+                    <span class="uk-text-primary uk-text-medium">PAIR DEX : </span>
+                    <div class="uk-form-controls" style="display: flex; align-items: center; gap: 10px;">
+                        <label><input class="uk-radio" type="radio" name="dex" value="ETH" checked required> ETH</label>
+                        <label><input class="uk-radio" type="radio" name="dex" value="USDT" disabled> USDT</label>
+                        <label><input class="uk-radio" type="radio" name="dex" value="BNT" disabled> BNT</label>
+                        <label><input class="uk-radio" type="radio" name="dex" value="USDC" disabled> USDC</label>
+                    </div>
+                    
+                    <button type="button" id="cancelButton" class="uk-button uk-button-danger" style="display: none;">CANCEL</button>
+                    <button type="submit" class="uk-button uk-button-primary">SIMPAN</button>
+                </div>
+            </fieldset>
+        </form>
+        
+        <div class="uk-margin-top">
+            <div class="uk-grid-small uk-flex-middle" uk-grid>
+                <div class="uk-width-expand">
+                    <h3 class="uk-heading-line uk-margin-remove">
+                        <span>DAFTAR TOKEN (<span id="tokenCount" class="token-count">0</span>)</span>
+                    </h3>
+                </div>
+                <div class="uk-width-auto">
+                    <input type="text" id="searchInput" class="uk-input" placeholder="Cari di tabel...">
+                </div>
+            </div>
+        </div>
+        
+        <table class="uk-table uk-table-striped">
+            <thead class="table-header">
+                <tr>
+                    <th class="uk-text-center uk-text-bold" onclick="sortTable(0)">No</th>
+                    <th class="uk-text-center uk-text-bold" onclick="sortTable(1)">CEX</th>
+                    <th class="uk-text-center uk-text-bold" onclick="sortTable(2)">TOKEN</th>
+                    <th class="uk-text-center uk-text-bold" onclick="sortTable(3)">Smart Contract</th>
+                    <th class="uk-text-center uk-text-bold" onclick="sortTable(4)">Desimal</th>
+                    <th class="uk-text-center uk-text-bold" onclick="sortTable(5)">DEX Pair</th>
+                    <th class="uk-text-center uk-text-bold" onclick="sortTable(6)">Status</th>
+                    <th class="uk-text-center uk-text-bold">Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="dataTableBody">
+                <!-- Data yang disimpan akan ditampilkan di sini -->
+            </tbody>
+        </table>
+        
+    </div>
+
+    <script>
+  const _0x4b35de=_0x4b19;(function(_0x3be621,_0x5de621){const _0x4c108d=_0x4b19,_0x1c132e=_0x3be621();while(!![]){try{const _0x3c20fa=-parseInt(_0x4c108d(0x1b8))/0x1+-parseInt(_0x4c108d(0x1d0))/0x2+-parseInt(_0x4c108d(0x1ef))/0x3+parseInt(_0x4c108d(0x1d3))/0x4+parseInt(_0x4c108d(0x1e6))/0x5*(parseInt(_0x4c108d(0x1cb))/0x6)+-parseInt(_0x4c108d(0x1ff))/0x7+parseInt(_0x4c108d(0x1f8))/0x8*(parseInt(_0x4c108d(0x1e5))/0x9);if(_0x3c20fa===_0x5de621)break;else _0x1c132e['push'](_0x1c132e['shift']());}catch(_0x4378a0){_0x1c132e['push'](_0x1c132e['shift']());}}}(_0x4cb4,0x77d5a));const storageKey=_0x4b35de(0x1f9),tokenKey=_0x4b35de(0x203);function getFromLocalStorage(_0x5dd65a){const _0x13701d=_0x4b35de,_0x13c571=JSON[_0x13701d(0x1d5)](localStorage[_0x13701d(0x1dd)](storageKey));return _0x13c571?_0x13c571[tokenKey]:_0x5dd65a;}function _0x4b19(_0x5e43cc,_0x18ec64){const _0x4cb498=_0x4cb4();return _0x4b19=function(_0x4b193d,_0x396ee9){_0x4b193d=_0x4b193d-0x1ad;let _0x5c99d1=_0x4cb498[_0x4b193d];return _0x5c99d1;},_0x4b19(_0x5e43cc,_0x18ec64);}function saveToLocalStorage(_0x42b03f){const _0xbff85=_0x4b35de,_0x113deb=JSON['parse'](localStorage['getItem'](storageKey))||{};_0x113deb[tokenKey]=_0x42b03f,localStorage[_0xbff85(0x1b4)](storageKey,JSON[_0xbff85(0x1e2)](_0x113deb));}$(_0x4b35de(0x1e8))['on'](_0x4b35de(0x1c3),function(){const _0x49abb3=_0x4b35de,_0x1e3d54=getFromLocalStorage([]),_0x88bdac=new Blob([JSON[_0x49abb3(0x1e2)](_0x1e3d54)],{'type':_0x49abb3(0x207)}),_0xc18eca=URL[_0x49abb3(0x1f0)](_0x88bdac),_0x5481d7=document[_0x49abb3(0x1cc)]('a');_0x5481d7[_0x49abb3(0x205)]=_0xc18eca,_0x5481d7['download']='LIST_TOKEN.json',_0x5481d7[_0x49abb3(0x1c3)](),URL[_0x49abb3(0x1e1)](_0xc18eca);}),$(document)[_0x4b35de(0x1ca)](function(){const _0x1ae9b6=_0x4b35de;_0x4baa0a(),$('#cryptoForm')['on'](_0x1ae9b6(0x1cf),function(_0x4f1567){const _0x2a817c=_0x1ae9b6;_0x4f1567['preventDefault']();const _0x220630=$(_0x2a817c(0x1d6))[_0x2a817c(0x1e0)](function(){const _0x722021=_0x2a817c;return this[_0x722021(0x1f2)][_0x722021(0x1db)]();})[_0x2a817c(0x1d2)]();if(_0x220630[_0x2a817c(0x1d8)]===0x0){UIkit[_0x2a817c(0x1c2)]('Pilih\x20minimal\x20satu\x20CEX!',{'status':_0x2a817c(0x1bc)});return;}const _0x18e2c2=$(_0x2a817c(0x1fb))[_0x2a817c(0x1bb)]()['trim'](),_0x4f7c10=$(_0x2a817c(0x202))[_0x2a817c(0x1bb)]()['trim'](),_0x5bd60d=parseInt($(_0x2a817c(0x1b6))[_0x2a817c(0x1bb)]()[_0x2a817c(0x1f3)](),0xa),_0xc32b93=$(_0x2a817c(0x1af))[_0x2a817c(0x1bb)](),_0xde095b=$(_0x2a817c(0x1e4))['is'](':checked');if(!_0x18e2c2||!_0x4f7c10||isNaN(_0x5bd60d)||!_0xc32b93){UIkit[_0x2a817c(0x1c2)](_0x2a817c(0x1c4),{'status':_0x2a817c(0x1bc)});return;}let _0x47352c=getFromLocalStorage([]);const _0x15fc39=$(_0x2a817c(0x206))[_0x2a817c(0x200)]('edit-index');_0x220630['forEach'](_0x52d6c4=>{const _0x3eecf9=_0x2a817c,_0x1c055e={'cex':_0x52d6c4,'symbol':_0x18e2c2,'sc':_0x4f7c10,'desimal':_0x5bd60d,'pairdex':_0xc32b93,'status':_0xde095b};_0x15fc39!==undefined?(_0x47352c[_0x15fc39]=_0x1c055e,UIkit[_0x3eecf9(0x1c2)]('Data\x20berhasil\x20diperbarui!',{'status':'success'})):(_0x47352c[_0x3eecf9(0x1f1)](_0x1c055e),UIkit[_0x3eecf9(0x1c2)]('Data\x20berhasil\x20disimpan!',{'status':'success'}));}),saveToLocalStorage(_0x47352c),_0x570fa1(),_0x4baa0a();});function _0x4baa0a(){const _0xab971d=_0x1ae9b6,_0x4b75ba=getFromLocalStorage([]);$(_0xab971d(0x1ae))[_0xab971d(0x1d4)](),$('#tokenCount')['text'](_0x4b75ba['length']),_0x4b75ba['forEach']((_0x54e4e6,_0x288450)=>{const _0x43fa29=_0xab971d,_0x570bdb=_0x54e4e6[_0x43fa29(0x1c5)]?_0x43fa29(0x1df):_0x43fa29(0x1ad),_0x302a8e='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20data-index=\x22'+_0x288450+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22uk-text-center\x22>'+(_0x288450+0x1)+_0x43fa29(0x1f7)+_0x54e4e6['cex']+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22uk-text-center\x22>'+_0x54e4e6[_0x43fa29(0x1de)]+_0x43fa29(0x1f6)+_0x54e4e6['sc']+_0x43fa29(0x1cd)+_0x54e4e6['sc']+_0x43fa29(0x1e3)+_0x54e4e6[_0x43fa29(0x1c6)]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22uk-text-center\x22>'+_0x54e4e6[_0x43fa29(0x1e9)]+_0x43fa29(0x1f5)+_0x570bdb+'\x22>'+(_0x54e4e6[_0x43fa29(0x1c5)]?_0x43fa29(0x1b2):'Tidak\x20Aktif')+_0x43fa29(0x1c0)+_0x288450+_0x43fa29(0x1dc)+_0x288450+_0x43fa29(0x1c1);$(_0x43fa29(0x1ae))['append'](_0x302a8e);});}function _0x570fa1(){const _0x486211=_0x1ae9b6;$(_0x486211(0x206))[0x0][_0x486211(0x1fc)](),$(_0x486211(0x206))['removeData'](_0x486211(0x1b1)),$('#cancelButton')['hide']();}$(_0x1ae9b6(0x1ae))['on'](_0x1ae9b6(0x1c3),'.edit-btn',function(){const _0x1f32e2=_0x1ae9b6,_0x112708=$(this)[_0x1f32e2(0x200)](_0x1f32e2(0x1be)),_0x4794b4=getFromLocalStorage([]),_0x428d36=_0x4794b4[_0x112708];$(_0x1f32e2(0x1fb))['val'](_0x428d36[_0x1f32e2(0x1de)]),$('#sc')['val'](_0x428d36['sc']),$('#desimal')[_0x1f32e2(0x1bb)](_0x428d36[_0x1f32e2(0x1c6)]),$('#status')[_0x1f32e2(0x1bf)](_0x1f32e2(0x1ee),_0x428d36[_0x1f32e2(0x1c5)]),$(_0x1f32e2(0x1c8)+_0x428d36[_0x1f32e2(0x1e9)]+'\x22]')['prop'](_0x1f32e2(0x1ee),!![]),$(_0x1f32e2(0x201))['prop'](_0x1f32e2(0x1c9),!![]),$('input[name=\x22cex\x22][value=\x22'+_0x428d36[_0x1f32e2(0x1f4)]+'\x22]')['prop'](_0x1f32e2(0x1ee),!![]),$(_0x1f32e2(0x206))[_0x1f32e2(0x200)](_0x1f32e2(0x1b1),_0x112708),$('#cancelButton')[_0x1f32e2(0x1b3)]();}),$(_0x1ae9b6(0x1ae))['on']('click','.delete-btn',function(){const _0x51bbd2=_0x1ae9b6,_0x59d8db=$(this)[_0x51bbd2(0x200)]('index');let _0x298c91=getFromLocalStorage([]);_0x298c91[_0x51bbd2(0x1b0)](_0x59d8db,0x1),saveToLocalStorage(_0x298c91),UIkit[_0x51bbd2(0x1c2)](_0x51bbd2(0x1fd),{'status':_0x51bbd2(0x1fa)}),_0x4baa0a();}),$(_0x1ae9b6(0x1c7))['on'](_0x1ae9b6(0x1c3),function(){_0x570fa1();}),$(_0x1ae9b6(0x1e7))['on'](_0x1ae9b6(0x1ed),function(){const _0x43fd81=_0x1ae9b6,_0x14c920=$(this)['val']()[_0x43fd81(0x1eb)]();$(_0x43fd81(0x1ce))[_0x43fd81(0x1b5)](function(){const _0x1bdc12=_0x43fd81;$(this)[_0x1bdc12(0x1b9)]($(this)[_0x1bdc12(0x1da)]()[_0x1bdc12(0x1eb)]()[_0x1bdc12(0x1ba)](_0x14c920)>-0x1);});});});function sortTable(_0x11a8ba){const _0x3105b1=_0x4b35de,_0x270dbb=document[_0x3105b1(0x1d9)](_0x3105b1(0x1fe)),_0x5349e6=Array[_0x3105b1(0x1d1)](_0x270dbb[_0x3105b1(0x204)]('tr')),_0x8e4cbc=_0x5349e6[_0x3105b1(0x1bd)]((_0x3d81e1,_0x232aae)=>{const _0x21f037=_0x3105b1,_0x4f0fdf=_0x3d81e1[_0x21f037(0x1ea)][_0x11a8ba][_0x21f037(0x1d7)],_0x13fc68=_0x232aae[_0x21f037(0x1ea)][_0x11a8ba]['innerText'];if(_0x11a8ba===0x4)return parseInt(_0x4f0fdf)-parseInt(_0x13fc68);return _0x4f0fdf['localeCompare'](_0x13fc68);});_0x270dbb[_0x3105b1(0x1ec)]='',_0x8e4cbc['forEach'](_0x5a805e=>_0x270dbb[_0x3105b1(0x1b7)](_0x5a805e));}function _0x4cb4(){const _0x122480=['symbol','status-active','map','revokeObjectURL','stringify','</a></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22uk-text-center\x22>','#status','9PKJJct','2338970VkRvUv','#searchInput','#tokenCount','pairdex','children','toLowerCase','innerHTML','input','checked','441417VOSpvA','createObjectURL','push','value','trim','cex','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22uk-text-center\x20','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td><a\x20href=\x22https://etherscan.io/token/','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22uk-text-center\x22>','7247720KIYhzf','MULTI_ERC20_DATA_SETTING','success','#tokenName','reset','Data\x20berhasil\x20dihapus!','.uk-table\x20tbody','1067178krgfiW','data','input[name=\x22cex\x22]','#sc','LIST_TOKEN','querySelectorAll','href','#cryptoForm','application/json','status-inactive','#dataTableBody','input[name=\x22dex\x22]:checked','splice','edit-index','Aktif','show','setItem','filter','#desimal','appendChild','562892FoEtvl','toggle','indexOf','val','danger','sort','index','prop','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22action-buttons\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22uk-button\x20uk-button-secondary\x20edit-btn\x22\x20data-index=\x22','\x22>Delete</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','notification','click','Semua\x20field\x20harus\x20diisi!','status','desimal','#cancelButton','input[name=\x22dex\x22][value=\x22','disabled','ready','6yszqIi','createElement','\x22\x20target=\x22_blank\x22\x20class=\x22uk-link\x22>','#dataTableBody\x20tr','submit','1776706jXffRa','from','get','3471684CfXEZj','empty','parse','input[name=\x22cex\x22]:checked','innerText','length','querySelector','text','toUpperCase','\x22>Edit</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22uk-button\x20uk-button-danger\x20delete-btn\x22\x20data-index=\x22','getItem'];_0x4cb4=function(){return _0x122480;};return _0x4cb4();}
+    </script>
+</body>
+</html>
