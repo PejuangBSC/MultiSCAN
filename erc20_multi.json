@@ -595,60 +595,109 @@
   },
 "token":
 [
-    {   "cex" : "GATE",
-      "symbol": "STORJ",
-      "desimal": 8,
-      "sc": "0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac",
-      "status": true,
-"pairdex":"ETH"
-    },
-    {   "cex" : "BINANCE",
-      "symbol": "ALICE",
-      "desimal": 6,
-      "sc": "0xac51066d7bec65dc4589368da368b212745d63e8",
-      "status": true,
-"pairdex":"ETH"
-    },
-    {"cex" : "GATE",
-      "symbol": "ARTEM",
-      "desimal": 18,
-      "sc": "0x9b83f827928abdf18cf1f7e67053572b9bceff3a",
-       "status": true,
-"pairdex":"ETH"
-    },
-    {"cex" : "GATE",
-      "symbol": "ASD",
-      "desimal": 18,
-      "sc": "0xff742d05420b6aca4481f635ad8341f81a6300c2",
-      "status": false
-    },
-    {"cex" : "GATE",
-      "symbol": "ASM",
-      "desimal": 18,
-      "sc": "0x2565ae0385659badcada1031db704442e1b69982",
-       "status": true,
-"pairdex":"ETH"
-    },
-    {"cex" : "BINANCE",
-      "symbol": "ADX",
-      "desimal": 18,
-      "sc": "0xade00c28244d5ce17d72e40330b1c318cd12b7c3",
-       "status": true,
-"pairdex":"ETH"
-    },
-    {"cex" : "BINANCE",
-      "symbol": "AERGO",
-      "desimal": 18,
-      "sc": "0x91af0fbb28aba7e31403cb457106ce79397fd4e6",
-       "status": true,
-"pairdex":"ETH"
-    },
-    {"cex" : "BINANCE",
-      "symbol": "AEVO",
-      "desimal": 18,
-      "sc": "0xb528edbef013aff855ac3c50b381f253af13b997",
-       "status": true,
-"pairdex":"ETH"
-    }
+  {
+    "cex": "GATE",
+    "symbol": "ASM",
+    "desimal": 18,
+    "sc": "0x2565ae0385659badcada1031db704442e1b69982",
+    "status": true,
+    "pairdex": "ETH"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "PACE",
+    "sc": "0x8Bc2bCb1b1896291942C36F3Cca3C1afA0Aaa7fd",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol": "HSF",
+    "sc": "0xbA6B0dbb2bA8dAA8F5D6817946393Aef8D3A4487",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "VIC",
+    "sc": "0x05D3606d5c81EB9b7B18530995eC9B29da05FaBa",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol": "KTN",
+    "sc": "0x491E136FF7FF03E6aB097E54734697Bb5802FC1C",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol": "OXY",
+    "sc": "0x965697b4ef02f0de01384d0d4f9f782b1670c163",
+    "desimal": 6,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol": "FARM",
+    "sc": "0xa0246c9032bc3a600820415ae600c6388619a14d",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol": "XNL",
+    "sc": "0x06a00715e6f92210af9d7680b584931faf71a833",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol": "MDT",
+    "sc": "0x814e0908b12a99fecf5bc101bb5d0b8b5cdf7d26",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "FARM",
+    "sc": "0xa0246c9032bc3a600820415ae600c6388619a14d",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "MDT",
+    "sc": "0x814e0908b12a99fecf5bc101bb5d0b8b5cdf7d26",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "BAT",
+    "sc": "0x0D8775F648430679A709E98d2b0Cb6250d2887EF",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol": "BAT",
+    "sc": "0x0D8775F648430679A709E98d2b0Cb6250d2887EF",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  }
 ]
 }
