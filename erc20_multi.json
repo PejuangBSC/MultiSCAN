@@ -698,6 +698,38 @@
     "desimal": 18,
     "pairdex": "ETH",
     "status": true
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "XNL",
+    "sc": "0x06a00715e6f92210af9d7680b584931faf71a833",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "ACE",
+    "sc": "0xeC5483804e637D45cDe22Fa0869656B64b5AB1ab",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "BAT",
+    "sc": "0x0D8775F648430679A709E98d2b0Cb6250d2887EF",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "BAX",
+    "sc": "0xf920e4f3fbef5b3ad0a25017514b769bdc4ac135",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
   }
 ]
 }
