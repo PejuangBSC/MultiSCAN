@@ -730,6 +730,22 @@
     "desimal": 18,
     "pairdex": "ETH",
     "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol": "VALUE",
+    "sc": "0x49e833337ece7afe375e44f4e3e8481029218e5c",
+    "desimal": 18,
+    "pairdex": "ETH",
+    "status": true
+  },
+  {
+    "cex": "GATE",
+    "symbol": "VGX",
+    "sc": "0x3c4b6e6e1ea3d4863700d7f76b36b7f3d3f13e3d",
+    "desimal": 8,
+    "pairdex": "ETH",
+    "status": true
   }
 ]
 }
