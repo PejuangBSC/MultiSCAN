@@ -135,21 +135,40 @@
 
 </head>
 <body data-token="base">
-    <hr/>
-    <h2  style="color:rgb(56, 91, 219); margin:0px 0px; text-align: center;"> <label id="namachain"></label> MULTIMARKET v2.2
-        [&nbsp;
-        <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn3.iconfinder.com/data/icons/mixed-vol-12/256/futuro_icons_229-512.png" width="26px" />
-        <img id="set-modal" title="SETTING DATA" src="https://cdn-icons-png.flaticon.com/512/7588/7588701.png" width="26px" />
-        <img id="cek_wallet" title="UPDATE WALLET CEX" src="https://cdn-icons-png.flaticon.com/512/3757/3757881.png"  width="26px" />
-        <a href="homeCRUDS.html" target="_blank"> <img title="MASTER DATA" src="https://cdn.icon-icons.com/icons2/2596/PNG/512/database_sync_icon_155524.png" width="26px" /></a>
-        <a href="manajemen_aset.html" target="_blank"> <img title="MANAJEMEN ASET" src="https://cdn-icons-png.flaticon.com/512/4021/4021642.png" width="26px" /></a>
+   
+    <div class="uk-text-center" style="margin-top: 20px;"> <!-- Mengurangi margin-top -->
+        <h3 class="uk-margin-remove">
+            <span class="uk-text-primary"><label id="namachain"></label> MULTIMARKET v7.1</span>
+            <span class="uk-margin-small-left">
+                <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn3.iconfinder.com/data/icons/mixed-vol-12/256/futuro_icons_229-512.png" width="25px" />
+                <img id="set-modal" title="SETTING DATA" src="https://cdn-icons-png.flaticon.com/512/7588/7588701.png" width="25px" />
+                <img id="cek_wallet" title="UPDATE WALLET CEX" src="https://cdn-icons-png.flaticon.com/512/3757/3757881.png" width="25px" />
+                <a href="homeCRUDS.html" target="_blank">
+                    <img title="MASTER DATA" src="https://cdn.icon-icons.com/icons2/2596/PNG/512/database_sync_icon_155524.png" width="25px" />
+                </a>
+                <a href="manajemen_aset.html" target="_blank">
+                    <img title="MANAJEMEN ASET" src="https://cdn-icons-png.flaticon.com/512/4021/4021642.png" width="25px" />
+                </a>
+            </span>
+        </h3>
+    
+        <div class="uk-flex uk-flex-center uk-flex-wrap uk-margin-small-top"> 
+           
+            <span class="uk-button uk-button-link uk-margin-small-left"> <!-- Menggunakan span untuk menghindari kotak di sekelilingnya -->
+               
+                <a href="https://multichecker.vercel.app/ethereum.html" target="_blank"><img src="https://seeklogo.com/images/B/binance-smart-chain-bsc-logo-9C34053D61-seeklogo.com.png" width="25px" alt="BINANCE" /></a>
+                <a href="https://multiscan-ruby.vercel.app/ethereum.html" target="_blank"><img src="https://www.aimeta.club/assets/images/avt/gate.png" width="25px" alt="GATE" /></a>
+                <a href="https://multichecker.vercel.app/bitget_erc.html" target="_blank"><img src="https://cryptologos.cc/logos/bitget-token-new-bgb-logo.png" width="25px" alt="BITGET" /></a>
+                <a href="https://multiscan-ruby.vercel.app/erc_kucoin.html" target="_blank"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/kucoin-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--cryptocurrency-symbol-crypto-trading-crptocurrency-logo-coins-pack-science-technology-illustrations-4713523.png" width="25px" alt="KUCOIN" /></a>
+                <b>[ UPDATE WALLET : </b>
+                <span id="lastUpdateTime" class="uk-text uk-text-success"></span>
+                <b>]</b>
+            </span>
+        </div>
+    </div>
+    
 
-        &nbsp;]
-      </h2>                        
-
-    <div class="uk-text-center">
-        <b>[ UPDATE WALLET : </b> <span id="lastUpdateTime" class="uk-text uk-text-success"></span> ]
-    </div>     
+    
     <!-- Modal UIKIT -->
     <div id="modal-setting" class="uk-modal-full" uk-modal>
         <div class="uk-modal-dialog">
@@ -254,9 +273,9 @@
                                         </div>
                                        <div>
                                             <label for="SPEEDSCAN" class="uk-text-danger">SPEED SCAN</label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="6"  name="waktu-tunggu"> NORMAL </label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="5" checkbox name="waktu-tunggu"> MEDIUM </label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4" name="waktu-tunggu"> FAST </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="5"  name="waktu-tunggu"> NORMAL </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4" checkbox name="waktu-tunggu"> MEDIUM </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="3" name="waktu-tunggu"> FAST </label>
                                         </div>
                                    </div>
                                 <div>
@@ -350,10 +369,11 @@
 
                 <div  class="uk-width-auto@m">
                     <div>
-                        <label class="uk-form-label uk-text-secondary"><b>PILIHAN DEX [ <label
-                                    class="uk-form-label uk-text-danger" id="JmlKoin"></label> KOIN ] </b></label>
+                        <label class="uk-form-label uk-text-secondary"><b>PILIHAN DEX [ 
+                            <label class="uk-form-label uk-text-danger" id="JmlKoin"></label> KOIN ] </b>
+                        </label>
                     </div>
-                <label class="uk-form-label uk-text-primary" > 
+                     <label class="uk-form-label uk-text-primary" > 
                         <input type="checkbox" class="uk-checkbox cdx_1inch" checked id="D1INCH" /> 1INCH
                         <input type="checkbox" class="uk-checkbox cdx_0x" checked  id="D0X" /> MATCHA 
                         <input type="checkbox" class="uk-checkbox cdx_paraswap"  id="DPARASWAP" /> PARA<br/>
@@ -379,18 +399,35 @@
                 </div>
 
                 <div class="uk-width-auto@m uk-width-expand@m">                        
-                        <label class="uk-text uk-text-small uk-text-danger" id="cek"></label>      
-   
-                        <div class="uk-text uk-text-small uk-text-secondary ">                        
-                            <b>1INCH</b>  [ <label class="uk-text uk-text-small uk-text-primary" id="sinyal1inch"> </label> ]<br/> 
-                            <b>MATCHA</b>  [ <label class="uk-text uk-text-small uk-text-primary" id="sinyal0x"> </label> ]<br/> 
-                            <b>ODOS</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalodos">  </label> ]<br/>
-                            <b>PARA</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalparaswap"> </label> ]<br/> 
-                            <b>KYBER</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalkyberswap"> </label> ]<br/> 
-                        </div>
+                    <label class="uk-text uk-text-small uk-text-danger" id="cek"></label>      
+                
+                    <div class="uk-text uk-text-small uk-text-secondary ">                        
+                        <b>1INCH</b>  [ <label class="uk-text uk-text-small uk-text-primary" id="sinyal1inch"> </label> ]<br/> 
+                        <b>MATCHA</b>  [ <label class="uk-text uk-text-small uk-text-primary" id="sinyal0x"> </label> ]<br/> 
+                        <b>ODOS</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalodos">  </label> ]<br/>
+                        <b>PARA</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalparaswap"> </label> ]<br/> 
+                        <b>KYBER</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalkyberswap"> </label> ]<br/> 
+                    </div>
+                
+                    <!-- Form Checkbox untuk CEX dan DEX Pair -->
+                    <form id="cexDexForm" >                        
+                        <label class="uk-form-label uk-text-danger"><b>PILIHAN CEX (<label class="uk-form-label uk-text-danger" id="JmlFilterKoin"></label>): </b></label>
+                        <label class="uk-form-label uk-text-primary" > 
+                            <input type="checkbox" value="BINANCE" class="cex-checkbox"> BINANCE
+                            <input type="checkbox" value="GATE" checked class="cex-checkbox"> GATE
+                            <input type="checkbox" value="KUCOIN" class="cex-checkbox"> KUCOIN
+                            <input type="checkbox" value="BITGET" class="cex-checkbox"> BITGET
+                        </label>
+                        | <label class="uk-form-label uk-text-danger"><b>PAIR DEX: </b></label>
+                        <label class="uk-form-label uk-text-primary" > 
+                            <input type="checkbox" value="USDT" class="dexpair-checkbox"> USDT
+                            <input type="checkbox" value="ETH" checked class="dexpair-checkbox"> ETH
+                            <input type="checkbox" value="BNT" class="dexpair-checkbox"> BNT
+                            <input type="checkbox" value="USDC" class="dexpair-checkbox"> USDC
+                        </label>
+                    </form>
                 </div>
-
-
+                
             </div>  
         </div> 
 
@@ -466,7 +503,8 @@
         </div>
     </div>    
     <script>
-     function _0x3e05(){const _0x15a167=['651e1c4379c8be0001bab637','ETH','71056bGXYwS','1909584mfxUpe','0x5DE8ab7E27f6E7A1fFf3E5B337584Aa43961BEeF','Arekpinter123','ETHUSDT','BNT','e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d','595pOMxfZ','0x51971c86b04516062c1e708CDC048CB04fbe959f','12016LPwDRU','0xD6216fC19DB775Df9774a6E33526131dA7D19a2c','210010cvZHYk','2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU','0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2','305xQgmag','USDC','0x290275e3db66394C52272398959845170E4DCb88','https://multiscan-ruby.vercel.app/erc20_multi.json','d04cdb7f01e598b3493bda6aa913092b','1576194WApaeZ','0xdAC17F958D2ee523a2206206994597C13D831ec7','87472LnXzqn','823896QxYnfk','0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C','171GAEKin','a184c3c1-65f2-4042-a043-c5c23c6ba258','ERC20','0x0639556F03714A74a5fEEaF5736a4A64fF70D206','ethereum'];_0x3e05=function(){return _0x15a167;};return _0x3e05();}const _0x95dffc=_0x40d2;(function(_0x4d388b,_0x15d63f){const _0x19f17f=_0x40d2,_0x5a8f73=_0x4d388b();while(!![]){try{const _0x41ac5f=-parseInt(_0x19f17f(0x15b))/0x1+-parseInt(_0x19f17f(0x159))/0x2+parseInt(_0x19f17f(0x15c))/0x3+-parseInt(_0x19f17f(0x14f))/0x4*(-parseInt(_0x19f17f(0x154))/0x5)+-parseInt(_0x19f17f(0x166))/0x6+parseInt(_0x19f17f(0x14d))/0x7*(parseInt(_0x19f17f(0x165))/0x8)+parseInt(_0x19f17f(0x15e))/0x9*(parseInt(_0x19f17f(0x151))/0xa);if(_0x41ac5f===_0x15d63f)break;else _0x5a8f73['push'](_0x5a8f73['shift']());}catch(_0x4b6178){_0x5a8f73['push'](_0x5a8f73['shift']());}}}(_0x3e05,0x660f0));function _0x40d2(_0x30eacb,_0x5d6328){const _0x3e0584=_0x3e05();return _0x40d2=function(_0x40d28b,_0x4a2701){_0x40d28b=_0x40d28b-0x149;let _0xf98f28=_0x3e0584[_0x40d28b];return _0xf98f28;},_0x40d2(_0x30eacb,_0x5d6328);}const Kode_Chain=0x1,Nama_Chain=_0x95dffc(0x162),URL_Chain='https://etherscan.io',DATAJSON=_0x95dffc(0x157),PAIRDEX=_0x95dffc(0x164),SCPAIRDEX=_0x95dffc(0x153),DESPAIRDEX=0x12,BaseFEEDEX=_0x95dffc(0x14a),CEX_CONFIG={'GATE':{'wallet':'0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','wallet2':'#','chainCEX':_0x95dffc(0x164),'ApiKey':_0x95dffc(0x158),'ApiSecret':_0x95dffc(0x14c)},'BINANCE':{'wallet':_0x95dffc(0x156),'wallet2':'0xe7804c37c13166fF0b37F5aE0BB07A3aEbb6e245','chainCEX':_0x95dffc(0x164),'ApiKey':_0x95dffc(0x152),'ApiSecret':'XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn'},'KUCOIN':{'wallet':'0x58edF78281334335EfFa23101bBe3371b6a36A51','wallet2':_0x95dffc(0x150),'chainCEX':_0x95dffc(0x160),'ApiKey':_0x95dffc(0x163),'ApiSecret':_0x95dffc(0x15f),'ApiPassphrase':_0x95dffc(0x149)},'BITGET':{'wallet':_0x95dffc(0x161),'wallet2':_0x95dffc(0x14e),'chainCEX':_0x95dffc(0x160)}},DEX_CONFIG={'ETH':{'scAddressPair':_0x95dffc(0x153),'desPair':'18','symbolPair':_0x95dffc(0x164)},'USDT':{'scAddressPair':_0x95dffc(0x15a),'desPair':'6','symbolPair':'USDT'},'SDEX':{'scAddressPair':_0x95dffc(0x167),'desPair':'18','symbolPair':'SDEX'},'BNT':{'scAddressPair':_0x95dffc(0x15d),'desPair':'18','symbolPair':_0x95dffc(0x14b)},'USDC':{'scAddressPair':'0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48','desPair':'6','symbolPair':_0x95dffc(0x155)}};
+      const _0xbda690=_0x5e50;(function(_0x147227,_0x3d8316){const _0x424485=_0x5e50,_0x2c5ff9=_0x147227();while(!![]){try{const _0x563386=parseInt(_0x424485(0x180))/0x1*(-parseInt(_0x424485(0x190))/0x2)+-parseInt(_0x424485(0x17b))/0x3*(-parseInt(_0x424485(0x19b))/0x4)+parseInt(_0x424485(0x194))/0x5*(parseInt(_0x424485(0x197))/0x6)+parseInt(_0x424485(0x17e))/0x7*(-parseInt(_0x424485(0x183))/0x8)+parseInt(_0x424485(0x184))/0x9+parseInt(_0x424485(0x192))/0xa*(parseInt(_0x424485(0x18e))/0xb)+-parseInt(_0x424485(0x185))/0xc;if(_0x563386===_0x3d8316)break;else _0x2c5ff9['push'](_0x2c5ff9['shift']());}catch(_0x4b4151){_0x2c5ff9['push'](_0x2c5ff9['shift']());}}}(_0x1c5c,0x63703));const Kode_Chain=0x1,Nama_Chain=_0xbda690(0x17a),URL_Chain=_0xbda690(0x18c),DATAJSON=_0xbda690(0x17c),PAIRDEX='ETH',SCPAIRDEX=_0xbda690(0x188),DESPAIRDEX=0x12,BaseFEEDEX=_0xbda690(0x195),CEX_CONFIG={'GATE':{'wallet':_0xbda690(0x18a),'wallet2':'#','chainCEX':'ETH','ApiKey':_0xbda690(0x18d),'ApiSecret':'e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d'},'BINANCE':{'wallet':_0xbda690(0x189),'wallet2':'0xe7804c37c13166fF0b37F5aE0BB07A3aEbb6e245','chainCEX':'ETH','ApiKey':_0xbda690(0x198),'ApiSecret':'XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn'},'KUCOIN':{'wallet':_0xbda690(0x179),'wallet2':_0xbda690(0x187),'chainCEX':'ERC20','ApiKey':'651e1c4379c8be0001bab637','ApiSecret':_0xbda690(0x182),'ApiPassphrase':_0xbda690(0x186)},'BITGET':{'wallet':_0xbda690(0x18b),'wallet2':_0xbda690(0x19c),'chainCEX':_0xbda690(0x17f)}},DEX_CONFIG={'ETH':{'scAddressPair':_0xbda690(0x188),'desPair':'18','symbolPair':_0xbda690(0x196)},'USDT':{'scAddressPair':_0xbda690(0x181),'desPair':'6','symbolPair':_0xbda690(0x199)},'SDEX':{'scAddressPair':_0xbda690(0x19a),'desPair':'18','symbolPair':_0xbda690(0x17d)},'BNT':{'scAddressPair':_0xbda690(0x18f),'desPair':'18','symbolPair':_0xbda690(0x193)},'USDC':{'scAddressPair':_0xbda690(0x191),'desPair':'6','symbolPair':'USDC'}};function _0x5e50(_0x30ec53,_0x11bf64){const _0x1c5c6f=_0x1c5c();return _0x5e50=function(_0x5e509a,_0x40b722){_0x5e509a=_0x5e509a-0x179;let _0x23376a=_0x1c5c6f[_0x5e509a];return _0x23376a;},_0x5e50(_0x30ec53,_0x11bf64);}function _0x1c5c(){const _0x110ce0=['0x51971c86b04516062c1e708CDC048CB04fbe959f','0x58edF78281334335EfFa23101bBe3371b6a36A51','ethereum','176067JKOTNT','https://multiscan-ruby.vercel.app/erc20_multi.json','SDEX','175jfHuPs','ERC20','117574tSuYJB','0xdAC17F958D2ee523a2206206994597C13D831ec7','a184c3c1-65f2-4042-a043-c5c23c6ba258','87272niPVPl','3472893USIzBx','10484280NwZXqj','Arekpinter123','0xD6216fC19DB775Df9774a6E33526131dA7D19a2c','0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2','0x290275e3db66394C52272398959845170E4DCb88','0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','0x0639556F03714A74a5fEEaF5736a4A64fF70D206','https://etherscan.io','d04cdb7f01e598b3493bda6aa913092b','174229nIDGjY','0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C','2VqMAfY','0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48','30XILQHf','BNT','5ILuiDp','ETHUSDT','ETH','2849622YJEGsg','2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU','USDT','0x5DE8ab7E27f6E7A1fFf3E5B337584Aa43961BEeF','52mTHfry'];_0x1c5c=function(){return _0x110ce0;};return _0x1c5c();}
+
     </script>
     <script src="932058222ff67b2c661837a3f08b071da614c031e0bd4b68a1dfa65526b18b9f.js"></script>
 </body>
