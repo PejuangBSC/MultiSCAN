@@ -137,7 +137,7 @@
 <body data-token="base">
    
     <div class="uk-text-center" style="margin-top: 20px;"> <!-- Mengurangi margin-top -->
-        <h3 class="uk-margin-remove">
+        <h3 class="uk-margin-remove" style="font-size: 30px;">
             <span class="uk-text-primary"><label id="namachain"></label> MULTIMARKET v7.1</span>
             <span class="uk-margin-small-left">
                 <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn3.iconfinder.com/data/icons/mixed-vol-12/256/futuro_icons_229-512.png" width="25px" />
@@ -152,22 +152,20 @@
             </span>
         </h3>
     
-        <div class="uk-flex uk-flex-center uk-flex-wrap uk-margin-small-top"> 
+        <!-- <div class="uk-flex uk-flex-center uk-flex-wrap uk-margin-small-top">  -->
            
             <span class="uk-button uk-button-link uk-margin-small-left"> <!-- Menggunakan span untuk menghindari kotak di sekelilingnya -->
                
                 <a href="https://multichecker.vercel.app/ethereum.html" target="_blank"><img src="https://seeklogo.com/images/B/binance-smart-chain-bsc-logo-9C34053D61-seeklogo.com.png" width="25px" alt="BINANCE" /></a>
                 <a href="https://multiscan-ruby.vercel.app/ethereum.html" target="_blank"><img src="https://www.aimeta.club/assets/images/avt/gate.png" width="25px" alt="GATE" /></a>
-                <a href="https://multichecker.vercel.app/bitget_erc.html" target="_blank"><img src="https://cryptologos.cc/logos/bitget-token-new-bgb-logo.png" width="25px" alt="BITGET" /></a>
-                <a href="https://multiscan-ruby.vercel.app/erc_kucoin.html" target="_blank"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/kucoin-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--cryptocurrency-symbol-crypto-trading-crptocurrency-logo-coins-pack-science-technology-illustrations-4713523.png" width="25px" alt="KUCOIN" /></a>
-                <b>[ UPDATE WALLET : </b>
-                <span id="lastUpdateTime" class="uk-text uk-text-success"></span>
-                <b>]</b>
+                <a href="https://multichecker.vercel.app/bitget_erc.html" target="_blank"><img src="https://img.cryptorank.io/exchanges/150x150.bitget1702996260873.png" width="25px" alt="BITGET" /></a>
+                <a href="https://multiscan-ruby.vercel.app/erc_kucoin.html" target="_blank"><img src="https://www.svgrepo.com/show/331460/kucoin.svg" width="25px" alt="KUCOIN" /></a>
+                <b>[ UPDATE WALLET :
+                <label id="lastUpdateTime" class="uk-text uk-text-danger uk-text-small" style="font-size: 15px;"></label>
+                ]</b>
             </span>
-        </div>
+        <!-- </div> -->
     </div>
-    
-
     
     <!-- Modal UIKIT -->
     <div id="modal-setting" class="uk-modal-full" uk-modal>
@@ -332,7 +330,7 @@
         </div>
     </div>
 
-    <div class="uk-container uk-margin-top">
+    <div class="uk-container" style="margin-top: 10px;">
         <form>
         <div class="uk-margin">
              <div class="uk-grid uk-child-width-1-5@s " uk-grid>
@@ -411,20 +409,22 @@
                 
                     <!-- Form Checkbox untuk CEX dan DEX Pair -->
                     <form id="cexDexForm" >                        
-                        <label class="uk-form-label uk-text-primary"><b>PILIHAN CEX (<label class="uk-form-label uk-text-danger" id="JmlFilterKoin"></label>): </b></label>
-                        <label class="uk-form-label uk-text-warning" > 
+                        <label class="uk-form-label uk-text-warning"><b>PILIHAN CEX (<label class="uk-form-label uk-text-danger" id="JmlFilterKoin"></label>): </b></label>
+                       <b> <label class="uk-form-label uk-text-primary" > 
                             <input type="checkbox" value="BINANCE" class="cex-checkbox"> BINANCE
                             <input type="checkbox" value="GATE" checked class="cex-checkbox"> GATE
                             <input type="checkbox" value="KUCOIN" class="cex-checkbox"> KUCOIN
                             <input type="checkbox" value="BITGET" class="cex-checkbox"> BITGET
                         </label>
-                        | <label class="uk-form-label uk-text-primary"><b>PAIR DEX: </b></label>
-                        <label class="uk-form-label uk-text-warning" > 
+                        </b>
+                        | <label class="uk-form-label uk-text-warning"><b>PAIR DEX: </b></label>
+                        <b> <label class="uk-form-label uk-text-primary" > 
                             <input type="checkbox" value="USDT" class="dexpair-checkbox"> USDT
                             <input type="checkbox" value="ETH" checked class="dexpair-checkbox"> ETH
                             <input type="checkbox" value="BNT" class="dexpair-checkbox"> BNT
                             <input type="checkbox" value="USDC" class="dexpair-checkbox"> USDC
                         </label>
+                        </b>
                     </form>
                 </div>
                 
@@ -432,8 +432,6 @@
         </div> 
 
         </form>
-
-        <label class="uk-text uk-text-success" id="hasil"></label> <div id="scanprogress">Wait</div> 
         <div id="scanbar">
             <div id="bar" style="text-align: center;"> </div>
         </div>
@@ -460,7 +458,7 @@
     </div>
       
    <!-- TABEL HASIL SCANNER -->
-    <div class="uk-container uk-flex-center uk-flex-middle uk-table-hover">
+    <div class="uk-container uk-flex-center uk-flex-middle uk-table-hover" style="margin-top: 10px;">
         <div class="tableFixHead table-content">
             <table class="uk-table  uk-sticky uk-table-striped-custom ">
                 <thead class="custom-thead uk-overflow-auto sticky-header">
@@ -503,9 +501,8 @@
         </div>
     </div>    
     <script>
-      const _0xbda690=_0x5e50;(function(_0x147227,_0x3d8316){const _0x424485=_0x5e50,_0x2c5ff9=_0x147227();while(!![]){try{const _0x563386=parseInt(_0x424485(0x180))/0x1*(-parseInt(_0x424485(0x190))/0x2)+-parseInt(_0x424485(0x17b))/0x3*(-parseInt(_0x424485(0x19b))/0x4)+parseInt(_0x424485(0x194))/0x5*(parseInt(_0x424485(0x197))/0x6)+parseInt(_0x424485(0x17e))/0x7*(-parseInt(_0x424485(0x183))/0x8)+parseInt(_0x424485(0x184))/0x9+parseInt(_0x424485(0x192))/0xa*(parseInt(_0x424485(0x18e))/0xb)+-parseInt(_0x424485(0x185))/0xc;if(_0x563386===_0x3d8316)break;else _0x2c5ff9['push'](_0x2c5ff9['shift']());}catch(_0x4b4151){_0x2c5ff9['push'](_0x2c5ff9['shift']());}}}(_0x1c5c,0x63703));const Kode_Chain=0x1,Nama_Chain=_0xbda690(0x17a),URL_Chain=_0xbda690(0x18c),DATAJSON=_0xbda690(0x17c),PAIRDEX='ETH',SCPAIRDEX=_0xbda690(0x188),DESPAIRDEX=0x12,BaseFEEDEX=_0xbda690(0x195),CEX_CONFIG={'GATE':{'wallet':_0xbda690(0x18a),'wallet2':'#','chainCEX':'ETH','ApiKey':_0xbda690(0x18d),'ApiSecret':'e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d'},'BINANCE':{'wallet':_0xbda690(0x189),'wallet2':'0xe7804c37c13166fF0b37F5aE0BB07A3aEbb6e245','chainCEX':'ETH','ApiKey':_0xbda690(0x198),'ApiSecret':'XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn'},'KUCOIN':{'wallet':_0xbda690(0x179),'wallet2':_0xbda690(0x187),'chainCEX':'ERC20','ApiKey':'651e1c4379c8be0001bab637','ApiSecret':_0xbda690(0x182),'ApiPassphrase':_0xbda690(0x186)},'BITGET':{'wallet':_0xbda690(0x18b),'wallet2':_0xbda690(0x19c),'chainCEX':_0xbda690(0x17f)}},DEX_CONFIG={'ETH':{'scAddressPair':_0xbda690(0x188),'desPair':'18','symbolPair':_0xbda690(0x196)},'USDT':{'scAddressPair':_0xbda690(0x181),'desPair':'6','symbolPair':_0xbda690(0x199)},'SDEX':{'scAddressPair':_0xbda690(0x19a),'desPair':'18','symbolPair':_0xbda690(0x17d)},'BNT':{'scAddressPair':_0xbda690(0x18f),'desPair':'18','symbolPair':_0xbda690(0x193)},'USDC':{'scAddressPair':_0xbda690(0x191),'desPair':'6','symbolPair':'USDC'}};function _0x5e50(_0x30ec53,_0x11bf64){const _0x1c5c6f=_0x1c5c();return _0x5e50=function(_0x5e509a,_0x40b722){_0x5e509a=_0x5e509a-0x179;let _0x23376a=_0x1c5c6f[_0x5e509a];return _0x23376a;},_0x5e50(_0x30ec53,_0x11bf64);}function _0x1c5c(){const _0x110ce0=['0x51971c86b04516062c1e708CDC048CB04fbe959f','0x58edF78281334335EfFa23101bBe3371b6a36A51','ethereum','176067JKOTNT','https://multiscan-ruby.vercel.app/erc20_multi.json','SDEX','175jfHuPs','ERC20','117574tSuYJB','0xdAC17F958D2ee523a2206206994597C13D831ec7','a184c3c1-65f2-4042-a043-c5c23c6ba258','87272niPVPl','3472893USIzBx','10484280NwZXqj','Arekpinter123','0xD6216fC19DB775Df9774a6E33526131dA7D19a2c','0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2','0x290275e3db66394C52272398959845170E4DCb88','0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','0x0639556F03714A74a5fEEaF5736a4A64fF70D206','https://etherscan.io','d04cdb7f01e598b3493bda6aa913092b','174229nIDGjY','0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C','2VqMAfY','0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48','30XILQHf','BNT','5ILuiDp','ETHUSDT','ETH','2849622YJEGsg','2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU','USDT','0x5DE8ab7E27f6E7A1fFf3E5B337584Aa43961BEeF','52mTHfry'];_0x1c5c=function(){return _0x110ce0;};return _0x1c5c();}
-
+const _0x49fc8e=_0x4617;function _0x4617(_0x50cc91,_0x376ed6){const _0x2165a7=_0x2165();return _0x4617=function(_0x46179c,_0xfd297f){_0x46179c=_0x46179c-0x1bd;let _0x3537aa=_0x2165a7[_0x46179c];return _0x3537aa;},_0x4617(_0x50cc91,_0x376ed6);}(function(_0x2678cf,_0x2f7fa0){const _0x5bb662=_0x4617,_0x54baaa=_0x2678cf();while(!![]){try{const _0x233df7=parseInt(_0x5bb662(0x1c2))/0x1+-parseInt(_0x5bb662(0x1e0))/0x2*(-parseInt(_0x5bb662(0x1c5))/0x3)+-parseInt(_0x5bb662(0x1bf))/0x4*(-parseInt(_0x5bb662(0x1ca))/0x5)+parseInt(_0x5bb662(0x1c8))/0x6*(-parseInt(_0x5bb662(0x1c0))/0x7)+-parseInt(_0x5bb662(0x1da))/0x8*(-parseInt(_0x5bb662(0x1cd))/0x9)+parseInt(_0x5bb662(0x1d7))/0xa*(-parseInt(_0x5bb662(0x1cb))/0xb)+-parseInt(_0x5bb662(0x1c3))/0xc;if(_0x233df7===_0x2f7fa0)break;else _0x54baaa['push'](_0x54baaa['shift']());}catch(_0x197adb){_0x54baaa['push'](_0x54baaa['shift']());}}}(_0x2165,0x66e9e));function _0x2165(){const _0x589e9a=['ERC20','e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d','0x290275e3db66394C52272398959845170E4DCb88','0x5DE8ab7E27f6E7A1fFf3E5B337584Aa43961BEeF','XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn','158590bYDYRs','0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','0x0639556F03714A74a5fEEaF5736a4A64fF70D206','6699656AcNOyI','0xD6216fC19DB775Df9774a6E33526131dA7D19a2c','0xdAC17F958D2ee523a2206206994597C13D831ec7','0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2','Arekpinter123','USDT','8fHjHaa','a184c3c1-65f2-4042-a043-c5c23c6ba258','https://etherscan.io','10636uDcygu','2921716RINbUN','SDEX','376252URZxnP','8099820ypEqbb','0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C','584697EWdMFz','d04cdb7f01e598b3493bda6aa913092b','ethereum','12byIMkg','0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48','1285DWVgUA','517YDMCre','0x51971c86b04516062c1e708CDC048CB04fbe959f','9YJcpAD','USDC','0x58edF78281334335EfFa23101bBe3371b6a36A51','ETH','2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU'];_0x2165=function(){return _0x589e9a;};return _0x2165();}const Kode_Chain=0x1,Nama_Chain=_0x49fc8e(0x1c7),URL_Chain=_0x49fc8e(0x1be),DATAJSON='https://multiscan-ruby.vercel.app/erc20_multi.json',PAIRDEX='ETH',SCPAIRDEX=_0x49fc8e(0x1dd),DESPAIRDEX=0x12,BaseFEEDEX='ETHUSDT',CEX_CONFIG={'GATE':{'wallet':_0x49fc8e(0x1d8),'wallet2':'#','chainCEX':_0x49fc8e(0x1d0),'ApiKey':_0x49fc8e(0x1c6),'ApiSecret':_0x49fc8e(0x1d3)},'BINANCE':{'wallet':_0x49fc8e(0x1d4),'wallet2':'0xe7804c37c13166fF0b37F5aE0BB07A3aEbb6e245','chainCEX':_0x49fc8e(0x1d0),'ApiKey':_0x49fc8e(0x1d1),'ApiSecret':_0x49fc8e(0x1d6)},'KUCOIN':{'wallet':_0x49fc8e(0x1cf),'wallet2':_0x49fc8e(0x1db),'chainCEX':_0x49fc8e(0x1d2),'ApiKey':'651e1c4379c8be0001bab637','ApiSecret':_0x49fc8e(0x1bd),'ApiPassphrase':_0x49fc8e(0x1de)},'BITGET':{'wallet':_0x49fc8e(0x1d9),'wallet2':_0x49fc8e(0x1cc),'chainCEX':_0x49fc8e(0x1d2)}},DEX_CONFIG={'ETH':{'scAddressPair':_0x49fc8e(0x1dd),'desPair':'18','symbolPair':_0x49fc8e(0x1d0)},'USDT':{'scAddressPair':_0x49fc8e(0x1dc),'desPair':'6','symbolPair':_0x49fc8e(0x1df)},'SDEX':{'scAddressPair':_0x49fc8e(0x1d5),'desPair':'18','symbolPair':_0x49fc8e(0x1c1)},'BNT':{'scAddressPair':_0x49fc8e(0x1c4),'desPair':'18','symbolPair':'BNT'},'USDC':{'scAddressPair':_0x49fc8e(0x1c9),'desPair':'6','symbolPair':_0x49fc8e(0x1ce)}};
     </script>
-    <script src="932058222ff67b2c661837a3f08b071da614c031e0bd4b68a1dfa65526b18b9f.js"></script>
+    <script src="multi.js"></script>
 </body>
 </html>
