@@ -903,12 +903,7 @@
     "sc": "0x3b50805453023a91a8bf641e279401a0b23fa6f9",
     "status": true
   },
-  {
-    "symbol": "REVIDR",
-    "desimal": 6,
-    "sc": "0x2ef52Ed7De8c5ce03a4eF0efbe9B7450F2D7Edc9",
-    "status": false
-  },
+ 
   {
     "symbol": "REQIDR",
     "desimal": 18,
@@ -1306,12 +1301,7 @@
     "sc": "0x6c6ee5e31d828de241282b9606c8e98ea48526e2",
     "status": true
   },
-  {
-    "symbol": "HITOPIDR",
-    "desimal": 18,
-    "sc": "0x01022591fCe0609B57670bebA60102dFd2b95D77",
-    "status": true
-  },
+ 
   {
     "symbol": "HIGHIDR",
     "desimal": 18,
@@ -1336,12 +1326,7 @@
     "sc": "0xde30da39c46104798bb5aa3fe8b9e0e1f348163f",
     "status": true
   },
-  {
-    "symbol": "GSCIDR",
-    "desimal": 18,
-    "sc": "0x228ba514309ffdf03a81a205a6d040e429d6e80c",
-    "status": true
-  },
+  
   {
     "symbol": "GRTIDR",
     "desimal": 18,
@@ -1390,12 +1375,7 @@
     "sc": "0xcf0c122c6b73ff809c693db761e7baebe62b6a2e",
     "status": true
   },
-  {
-    "symbol": "FDUSDIDR",
-    "desimal": 18,
-    "sc": "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409",
-    "status": true
-  },
+  
   {
     "symbol": "FANCIDR",
     "desimal": 18,
@@ -1432,12 +1412,7 @@
     "sc": "0x57e114B691Db790C35207b2e685D4A43181e6061",
     "status": true
   },
-  {
-    "symbol": "EMIDR",
-    "desimal": 8,
-    "sc": "0x35b08722aa26be119c1608029ccbc976ac5c1082",
-    "status": true
-  },
+ 
   {
     "symbol": "EIGENIDR",
     "desimal": 18,
@@ -1504,12 +1479,7 @@
     "sc": "0x6B0FaCA7bA905a86F221CEb5CA404f605e5b3131",
     "status": true
   },
-  {
-    "symbol": "DAXIDR",
-    "desimal": 18,
-    "sc": "0x0b4bdc478791897274652dc15ef5c135cae61e60",
-    "status": true
-  },
+  
   {
     "symbol": "DARIDR",
     "desimal": 6,
@@ -1522,12 +1492,7 @@
     "sc": "0x0f51bb10119727a7e5ea3538074fb341f56b09ad",
     "status": true
   },
-  {
-    "symbol": "DAIIDR",
-    "desimal": 18,
-    "sc": "0x6b175474e89094c44da98b954eedeac495271d0f",
-    "status": true
-  },
+  
   {
     "symbol": "DADIDR",
     "desimal": 9,
@@ -1588,12 +1553,7 @@
     "sc": "0x80C62FE4487E1351b47Ba49809EBD60ED085bf52",
     "status": true
   },
-  {
-    "symbol": "CINDIDR",
-    "desimal": 18,
-    "sc": "0xaC0968a3E2020aC8ca83e60CcF69081EBc6d3bC3",
-    "status": false
-  },
+  
   {
     "symbol": "CHZIDR",
     "desimal": 18,
@@ -1780,12 +1740,7 @@
     "sc": "0x4d224452801aced8b2f0aebe155379bb5d594381",
     "status": true
   },
-  {
-    "symbol": "AOAIDR",
-    "desimal": 18,
-    "sc": "0x9ab165d795019b6d8b3e971dda91071421305e5a",
-    "status": false
-  },
+  
   {
     "symbol": "ANTIDR",
     "desimal": 18,
