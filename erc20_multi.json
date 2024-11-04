@@ -780,14 +780,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BYBIT",
-    "symbol": "AGIX",
-    "desimal": 8,
-    "sc": "0x5b7533812759b45c2b44c19e320ba2cd2681b542",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "AGRS",
     "desimal": 8,
@@ -816,22 +808,6 @@
     "symbol": "AIOZ",
     "desimal": 18,
     "sc": "0x626e8036deb333b408be468f951bdb42433cbf18",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "AIT",
-    "desimal": 18,
-    "sc": "0x89d584a1edb3a70b3b07963f9a3ea5399e38b136",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "AIT",
-    "desimal": 18,
-    "sc": "0x89d584a1edb3a70b3b07963f9a3ea5399e38b136",
     "status": true,
     "pairdex": "ETH"
   },
@@ -1100,14 +1076,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "GATE",
-    "symbol": "ARCX",
-    "desimal": 18,
-    "sc": "0x1321f1f1aa541a56c31682c57b80ecfccd9bb288",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "ARKM",
     "desimal": 18,
@@ -1196,14 +1164,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "AURA",
-    "desimal": "",
-    "sc": "0x",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "AVAIL",
     "desimal": 18,
@@ -1229,14 +1189,6 @@
   },
   {
     "cex": "BINANCE",
-    "symbol": "AXL",
-    "desimal": 6,
-    "sc": "0x467719ad09025fcc6cf6f8311755809d45a5e5f3",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
     "symbol": "AXL",
     "desimal": 6,
     "sc": "0x467719ad09025fcc6cf6f8311755809d45a5e5f3",
@@ -1444,22 +1396,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "BEBE",
-    "desimal": 18,
-    "sc": "0x81e0a2f57120e7b1a0e778ff0a05e7f68c885f2a",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "BERRY",
-    "desimal": 18,
-    "sc": "0x2d787D4f5005Bd66aC910c2E821241625c406ed5",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "BFT",
     "desimal": 18,
@@ -1477,14 +1413,6 @@
   },
   {
     "cex": "BINANCE",
-    "symbol": "BIFI",
-    "desimal": 18,
-    "sc": "0xb1f1ee126e9c96231cc3d3fad7c08b4cf873b1f1",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "KUCOIN",
     "symbol": "BIFI",
     "desimal": 18,
     "sc": "0xb1f1ee126e9c96231cc3d3fad7c08b4cf873b1f1",
@@ -1652,22 +1580,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "BOTTO",
-    "desimal": 18,
-    "sc": "0x9dfad1b7102d46b1b197b90095b5c4e9f5845bba",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "BUSD",
-    "desimal": 18,
-    "sc": "0x4fabb145d64652a948d72533023f6e7a623c7c53",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "BVM",
     "desimal": 18,
@@ -1680,14 +1592,6 @@
     "symbol": "BZZ",
     "desimal": 16,
     "sc": "0x19062190b1925b5b6689d7073fdfc8c2976ef8cb",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "CAD",
-    "desimal": 18,
-    "sc": "0x4349929808e515936a68903f6085f5e2b143ff3d",
     "status": true,
     "pairdex": "ETH"
   },
@@ -1764,14 +1668,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "KUCOIN",
-    "symbol": "CFG",
-    "desimal": 18,
-    "sc": "0xc221b7e65ffc80de234bbb6667abdd46593d34f0",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "CGPT",
     "desimal": 18,
@@ -1829,14 +1725,6 @@
   },
   {
     "cex": "KUCOIN",
-    "symbol": "CHZ",
-    "desimal": 18,
-    "sc": "0x3506424f91fd33084466f402d5d97f05f8e3b4af",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "CHZ",
     "desimal": 18,
     "sc": "0x3506424f91fd33084466f402d5d97f05f8e3b4af",
@@ -2005,14 +1893,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "CRTS",
-    "desimal": 18,
-    "sc": "0x678e840c640f619e17848045d23072844224dd37",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "CRTS",
     "desimal": 18,
     "sc": "0x678e840c640f619e17848045d23072844224dd37",
@@ -2189,22 +2069,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "DC",
-    "desimal": 18,
-    "sc": "0x7b4328c127b85369d9f82ca0503b000d09cf9180",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "DC",
-    "desimal": 18,
-    "sc": "0x7b4328c127b85369d9f82ca0503b000d09cf9180",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
     "symbol": "DEAI",
     "desimal": 18,
     "sc": "0x1495bc9e44af1f8bcb62278d2bec4540cf0c05ea",
@@ -2284,14 +2148,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "DKA",
-    "desimal": 18,
-    "sc": "0x5dc60C4D5e75D22588FA17fFEB90A63E535efCE0",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "DMTR",
     "desimal": 18,
@@ -2304,14 +2160,6 @@
     "symbol": "DMTR",
     "desimal": 18,
     "sc": "0x51cb253744189f11241becb29bedd3f1b5384fdb",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "DNT",
-    "desimal": 18,
-    "sc": "0x0AbdAce70D3790235af448C88547603b945604ea",
     "status": true,
     "pairdex": "ETH"
   },
@@ -2436,23 +2284,7 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "DZOO",
-    "desimal": 18,
-    "sc": "0xc97d6c52f3add91fa1c5287a453d7444aecbca83",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
-    "symbol": "EDEN",
-    "desimal": 18,
-    "sc": "0x1559fa1b8f28238fd5d76d9f434ad86fd20d1559",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "EDEN",
     "desimal": 18,
     "sc": "0x1559fa1b8f28238fd5d76d9f434ad86fd20d1559",
@@ -2676,14 +2508,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "EUL",
-    "desimal": 18,
-    "sc": "0xd9Fcd98c322942075A5C3860693e9f4f03AAE07b",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "EURT",
     "desimal": 6,
@@ -2724,23 +2548,7 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "FDUSD",
-    "desimal": 18,
-    "sc": "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
-    "symbol": "FERC",
-    "desimal": 18,
-    "sc": "0x2ecba91da63c29ea80fbe7b52632ca2d1f8e5be0",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "FERC",
     "desimal": 18,
     "sc": "0x2ecba91da63c29ea80fbe7b52632ca2d1f8e5be0",
@@ -2900,14 +2708,6 @@
     "pairdex": "BNT"
   },
   {
-    "cex": "BITGET",
-    "symbol": "FOLD",
-    "desimal": 18,
-    "sc": "0xd084944d3c05cd115c09d072b9f44ba3e0e45921",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "FOX",
     "desimal": 18,
@@ -2956,14 +2756,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "KUCOIN",
-    "symbol": "FTM",
-    "desimal": 18,
-    "sc": "0x4e15361fd6b4bb609fa63c81a2be19d873717870",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BITGET",
     "symbol": "FTM",
     "desimal": 18,
@@ -3056,14 +2848,6 @@
     "symbol": "G3",
     "desimal": 18,
     "sc": "0xCF67815ccE72E682Eb4429eCa46843bed81Ca739",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BYBIT",
-    "symbol": "GAL",
-    "desimal": 18,
-    "sc": "0xe4cc45bb5dbda06db6183e8bf016569f40497aa5",
     "status": true,
     "pairdex": "ETH"
   },
@@ -3188,22 +2972,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "KUCOIN",
-    "symbol": "GLQ",
-    "desimal": 18,
-    "sc": "0x9f9c8ec3534c3ce16f928381372bfbfbfb9f4d24",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "GM",
-    "desimal": 9,
-    "sc": "0xbc7250c8c3eca1dfc1728620af835fca489bfdf3",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "GMEE",
     "desimal": 18,
@@ -3253,14 +3021,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "GOG",
-    "desimal": 18,
-    "sc": "0x9ab7bb7fdc60f4357ecfef43986818a2a3569c62",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "GOG",
     "desimal": 18,
     "sc": "0x9ab7bb7fdc60f4357ecfef43986818a2a3569c62",
@@ -3335,7 +3095,7 @@
     "cex": "GATE",
     "symbol": "GTC",
     "desimal": 18,
-    "sc": "0xde30da39c46104798bb5aa3fe8b9e0e1f348163f",
+    "sc": "0xB70835D7822eBB9426B56543E391846C107bd32C",
     "status": true,
     "pairdex": "ETH"
   },
@@ -3396,14 +3156,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "HOPPY",
-    "desimal": 8,
-    "sc": "0x8c130499d33097d4d000d3332e1672f75b431543",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "HOT",
     "desimal": 18,
@@ -3496,14 +3248,6 @@
     "symbol": "ILV",
     "desimal": 18,
     "sc": "0x767fe9edc9e0df98e07454847909b5e959d7ca0e",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "IMGNAI",
-    "desimal": 9,
-    "sc": "0xa735a3af76cc30791c61c10d585833829d36cbe0",
     "status": true,
     "pairdex": "ETH"
   },
@@ -3573,14 +3317,6 @@
   },
   {
     "cex": "KUCOIN",
-    "symbol": "INSP",
-    "desimal": 18,
-    "sc": "0x186eF81fd8E77EEC8BfFC3039e7eC41D5FC0b457",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "INSP",
     "desimal": 18,
     "sc": "0x186eF81fd8E77EEC8BfFC3039e7eC41D5FC0b457",
@@ -3660,14 +3396,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "IZI",
-    "desimal": 18,
-    "sc": "0x9ad37205d608B8b219e6a2573f922094CEc5c200",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BYBIT",
     "symbol": "IZI",
     "desimal": 18,
@@ -3696,14 +3424,6 @@
     "symbol": "JASMY",
     "desimal": 18,
     "sc": "0x7420b4b9a0110cdc71fb720908340c03f9bc03ec",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "JPEG",
-    "desimal": 18,
-    "sc": "0xe80c0cd204d654cebe8dd64a4857cab6be8345a3",
     "status": true,
     "pairdex": "ETH"
   },
@@ -3748,14 +3468,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BYBIT",
-    "symbol": "KMON",
-    "desimal": 18,
-    "sc": "0xc732b6586a93b6b7cf5fed3470808bc74998224d",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "KNC",
     "desimal": 18,
@@ -3773,14 +3485,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "KOK",
-    "desimal": 18,
-    "sc": "0x9B9647431632AF44be02ddd22477Ed94d14AacAa",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "KOK",
     "desimal": 18,
     "sc": "0x9B9647431632AF44be02ddd22477Ed94d14AacAa",
@@ -4220,14 +3924,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "LOVELY",
-    "desimal": 18,
-    "sc": "0x0f6d4d4643a514132f84f4a270946db3c7cb701c",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "LPT",
     "desimal": 18,
@@ -4408,14 +4104,6 @@
     "symbol": "MASK",
     "desimal": 18,
     "sc": "0x69af81e73a73b40adf4f3d4223cd9b1ece623074",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BYBIT",
-    "symbol": "MATIC",
-    "desimal": 18,
-    "sc": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0",
     "status": true,
     "pairdex": "ETH"
   },
@@ -4724,14 +4412,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "MOONEY",
-    "desimal": 18,
-    "sc": "0x20d4DB1946859E2Adb0e5ACC2eac58047aD41395",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "MPH",
     "desimal": 18,
@@ -4760,14 +4440,6 @@
     "symbol": "MTA",
     "desimal": 18,
     "sc": "0xa3BeD4E1c75D00fa6f4E5E6922DB7261B5E9AcD2",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "MTL",
-    "desimal": 8,
-    "sc": "0xf433089366899d83a9f26a773d59ec7ecf30355e",
     "status": true,
     "pairdex": "ETH"
   },
@@ -4813,14 +4485,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "MV",
-    "desimal": 18,
-    "sc": "0xAE788F80F2756A86aa2F410C651F2aF83639B95b",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "MV",
     "desimal": 18,
     "sc": "0xAE788F80F2756A86aa2F410C651F2aF83639B95b",
@@ -4911,7 +4575,7 @@
     "cex": "KUCOIN",
     "symbol": "NEIRO",
     "desimal": 9,
-    "sc": "0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee",
+    "sc": "0xee2a03aa6dacf51c18679c516ad5283d8e7c2637",
     "status": true,
     "pairdex": "ETH"
   },
@@ -4919,15 +4583,7 @@
     "cex": "BYBIT",
     "symbol": "NEIRO",
     "desimal": 9,
-    "sc": "0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "NEST",
-    "desimal": 18,
-    "sc": "0xcd6926193308d3b371fdd6a6219067e550000000",
+    "sc": "0xee2a03aa6dacf51c18679c516ad5283d8e7c2637",
     "status": true,
     "pairdex": "ETH"
   },
@@ -5116,30 +4772,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "GATE",
-    "symbol": "OGV",
-    "desimal": 18,
-    "sc": "0x9c354503C38481a7A7a51629142963F98eCC12D0",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "OGV",
-    "desimal": 18,
-    "sc": "0x9c354503C38481a7A7a51629142963F98eCC12D0",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "OHM",
-    "desimal": 9,
-    "sc": "0x383518188c0c6d7730d91b2c03a03c837814a899",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "OM",
     "desimal": 18,
@@ -5197,14 +4829,6 @@
   },
   {
     "cex": "KUCOIN",
-    "symbol": "OMNI",
-    "desimal": 18,
-    "sc": "0x36e66fbbce51e4cd5bd3c62b637eb411b18949d4",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "OMNI",
     "desimal": 18,
     "sc": "0x36e66fbbce51e4cd5bd3c62b637eb411b18949d4",
@@ -5309,14 +4933,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "ORBR",
-    "desimal": 18,
-    "sc": "0xdA30f261a962d5AAe94C9ecd170544600d193766",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
     "symbol": "ORDER",
     "desimal": 18,
     "sc": "0xabd4c63d2616a5201454168269031355f4764337",
@@ -5356,23 +4972,7 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "ORDS",
-    "desimal": 18,
-    "sc": "0x8AB2ff0116A279a99950C66A12298962D152B83c",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
-    "symbol": "OX",
-    "desimal": 18,
-    "sc": "0xba0Dda8762C24dA9487f5FA026a9B64b695A07Ea",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "OX",
     "desimal": 18,
     "sc": "0xba0Dda8762C24dA9487f5FA026a9B64b695A07Ea",
@@ -5424,22 +5024,6 @@
     "symbol": "PAXG",
     "desimal": 18,
     "sc": "0x45804880de22913dafe09f4980848ece6ecbaf78",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "PC",
-    "desimal": 9,
-    "sc": "0x4f311c430540db1d64e635eb55f969f1660b2016",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "PEEPO",
-    "desimal": 18,
-    "sc": "0xaada04204e9e1099daf67cf3d5d137e84e41cf41",
     "status": true,
     "pairdex": "ETH"
   },
@@ -5596,14 +5180,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "KUCOIN",
-    "symbol": "PHA",
-    "desimal": 18,
-    "sc": "0x6c5ba91642f10282b576d91922ae6448c9d52f4e",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "PHTR",
     "desimal": 18,
@@ -5684,14 +5260,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "PLANET",
-    "desimal": 18,
-    "sc": "0x2ad9addd0d97ec3cdba27f92bf6077893b76ab0b",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BYBIT",
     "symbol": "PLANET",
     "desimal": 18,
@@ -5749,14 +5317,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "POOH",
-    "desimal": 18,
-    "sc": "0xb69753c06bb5c366be51e73bfc0cc2e3dc07e371",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "POOH",
     "desimal": 18,
     "sc": "0xb69753c06bb5c366be51e73bfc0cc2e3dc07e371",
@@ -5845,14 +5405,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "PRMX",
-    "desimal": 18,
-    "sc": "0xe4dae00bc1c46ea2F44ae71B1BEb8b171C15d812",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "PRMX",
     "desimal": 18,
     "sc": "0xe4dae00bc1c46ea2F44ae71B1BEb8b171C15d812",
@@ -6124,14 +5676,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "GATE",
-    "symbol": "QTCON",
-    "desimal": 18,
-    "sc": "0xa00a4d5786a6E955e9539d01D78Bf68f3271C050",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "QUICK",
     "desimal": 18,
@@ -6300,14 +5844,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "REP",
-    "desimal": 18,
-    "sc": "0x221657776846890989a759ba2973e427dff5c9bb",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "REQ",
     "desimal": 18,
@@ -6340,14 +5876,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "REVV",
-    "desimal": 18,
-    "sc": "0x557b933a7c2c45672b610f8954a3deb39a51a8ca",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "REZ",
     "desimal": 18,
@@ -6373,14 +5901,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "RFD",
-    "desimal": 18,
-    "sc": "0x955d5c14c8d4944da1ea7836bd44d54a8ec35ba1",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "RFD",
     "desimal": 18,
     "sc": "0x955d5c14c8d4944da1ea7836bd44d54a8ec35ba1",
@@ -6437,22 +5957,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "ROUTE",
-    "desimal": 18,
-    "sc": "0x60f67e1015b3f069dd4358a78c38f83fe3a667a9",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "ROUTE",
-    "desimal": 18,
-    "sc": "0x60f67e1015b3f069dd4358a78c38f83fe3a667a9",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BYBIT",
     "symbol": "ROUTE",
     "desimal": 18,
     "sc": "0x60f67e1015b3f069dd4358a78c38f83fe3a667a9",
@@ -6676,14 +6180,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "GATE",
-    "symbol": "SHI",
-    "desimal": 18,
-    "sc": "0xaD996A45fd2373ed0B10Efa4A8eCB9de445A4302",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "SHIB",
     "desimal": 18,
@@ -6764,14 +6260,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "SMILEY",
-    "desimal": 9,
-    "sc": "0x4c6e2c495b974b8d4220e370f23c7e0e1da9b644",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "SNT",
     "desimal": 18,
@@ -6808,14 +6296,6 @@
     "symbol": "SNX",
     "desimal": 18,
     "sc": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "SOLANA",
-    "desimal": 18,
-    "sc": "0x3d806324b6df5af3c1a81acba14a8a62fe6d643f",
     "status": true,
     "pairdex": "ETH"
   },
@@ -6829,14 +6309,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "SOV",
-    "desimal": 18,
-    "sc": "0xbdab72602e9ad40fc6a6852caf43258113b8f7a5",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
     "symbol": "SPA",
     "desimal": 18,
     "sc": "0xB4A3B0Faf0Ab53df58001804DdA5Bfc6a3D59008",
@@ -6901,14 +6373,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "SRM",
-    "desimal": 6,
-    "sc": "0x476c5E26a75bd202a9683ffD34359C0CC15be0fF",
-    "status": true,
-    "pairdex": "BNT"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "SRM",
     "desimal": 6,
     "sc": "0x476c5E26a75bd202a9683ffD34359C0CC15be0fF",
@@ -7068,14 +6532,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "SUDO",
-    "desimal": 18,
-    "sc": "0x3446dd70b2d52a6bf4a5a192d9b0a161295ab7f9",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "SUKU",
     "desimal": 18,
@@ -7172,14 +6628,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "GATE",
-    "symbol": "SXP",
-    "desimal": 18,
-    "sc": "0x8CE9137d39326AD0cD6491fb5CC0CbA0e089b6A9",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "SYN",
     "desimal": 18,
@@ -7280,14 +6728,6 @@
     "symbol": "TAIKO",
     "desimal": 18,
     "sc": "0x10dea67478c5F8C5E2D90e5E9B26dBe60c54d800",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "TEM",
-    "desimal": 18,
-    "sc": "0xae0585a259a3bcab258d6ee02fb583f7b33c2a12",
     "status": true,
     "pairdex": "ETH"
   },
@@ -7300,22 +6740,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "GATE",
-    "symbol": "THALES",
-    "desimal": 18,
-    "sc": "0x8947da500Eb47F82df21143D0C01A29862a8C3c5",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "THALES",
-    "desimal": 18,
-    "sc": "0x8947da500Eb47F82df21143D0C01A29862a8C3c5",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "KUCOIN",
     "symbol": "TIME",
     "desimal": 8,
@@ -7328,14 +6752,6 @@
     "symbol": "TIME",
     "desimal": 8,
     "sc": "0x485d17a6f1b8780392d53d64751824253011a260",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "TITAN",
-    "desimal": 18,
-    "sc": "0x3a8cccb969a61532d1e6005e2ce12c200caece87",
     "status": true,
     "pairdex": "ETH"
   },
@@ -7360,14 +6776,6 @@
     "symbol": "TLM",
     "desimal": 4,
     "sc": "0x888888848b652b3e3a0f34c96e00eec0f3a23f72",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "TLOS",
-    "desimal": 18,
-    "sc": "0x7825e833d495f3d1c28872415a4aee339d26ac88",
     "status": true,
     "pairdex": "ETH"
   },
@@ -7428,14 +6836,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BITGET",
-    "symbol": "TOWER",
-    "desimal": 18,
-    "sc": "0x1c9922314ed1415c95b9fd453c3818fd41867d0b",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "KUCOIN",
     "symbol": "TRAC",
     "desimal": 18,
@@ -7492,14 +6892,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "KUCOIN",
-    "symbol": "TRIAS",
-    "desimal": 18,
-    "sc": "0x3a856d4effa670c54585a5d523e96513e148e95d",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BYBIT",
     "symbol": "TRIBE",
     "desimal": 18,
@@ -7509,14 +6901,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "TROLL",
-    "desimal": 18,
-    "sc": "0xf8ebf4849F1Fa4FaF0DFF2106A173D3A6CB2eB3A",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "TROLL",
     "desimal": 18,
     "sc": "0xf8ebf4849F1Fa4FaF0DFF2106A173D3A6CB2eB3A",
@@ -7554,30 +6938,6 @@
     "sc": "0x4C19596f5aAfF459fA38B0f7eD92F11AE6543784",
     "status": true,
     "pairdex": "BNT"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "TRUF",
-    "desimal": 18,
-    "sc": "0x38c2a4a7330b22788374b8ff70bba513c8d848ca",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "TRUF",
-    "desimal": 18,
-    "sc": "0x38c2a4a7330b22788374b8ff70bba513c8d848ca",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "TRUF",
-    "desimal": 18,
-    "sc": "0x38c2a4a7330b22788374b8ff70bba513c8d848ca",
-    "status": true,
-    "pairdex": "ETH"
   },
   {
     "cex": "GATE",
@@ -7636,14 +6996,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "BYBIT",
-    "symbol": "TURBO",
-    "desimal": 18,
-    "sc": "0xa35923162c49cf95e6bf26623385eb431ad920d3",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "TURT",
     "desimal": 18,
@@ -7680,22 +7032,6 @@
     "symbol": "TUSD",
     "desimal": 18,
     "sc": "0x0000000000085d4780b73119b644ae5ecd22b376",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "TVK",
-    "desimal": 18,
-    "sc": "0xd084b83c305dafd76ae3e1b4e1f1fe2ecccb3988",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BYBIT",
-    "symbol": "TVK",
-    "desimal": 18,
-    "sc": "0xd084b83c305dafd76ae3e1b4e1f1fe2ecccb3988",
     "status": true,
     "pairdex": "ETH"
   },
@@ -7717,14 +7053,6 @@
   },
   {
     "cex": "KUCOIN",
-    "symbol": "UFO",
-    "desimal": 18,
-    "sc": "0x249e38ea4102d0cf8264d3701f1a0e39c4f2dc3b",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
     "symbol": "UFO",
     "desimal": 18,
     "sc": "0x249e38ea4102d0cf8264d3701f1a0e39c4f2dc3b",
@@ -7821,22 +7149,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "UPC",
-    "desimal": 5,
-    "sc": "0x487d62468282bd04ddf976631c23128a425555ee",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "UPC",
-    "desimal": 5,
-    "sc": "0x487d62468282bd04ddf976631c23128a425555ee",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
     "symbol": "UPI",
     "desimal": 18,
     "sc": "0x70d2b7c19352bb76e4409858ff5746e500f2b67c",
@@ -7916,14 +7228,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "GATE",
-    "symbol": "VEE",
-    "desimal": 18,
-    "sc": "0x3709E8615E02C15B096f8a9B460ccb8cA8194e86",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BINANCE",
     "symbol": "VIB",
     "desimal": 18,
@@ -7938,22 +7242,6 @@
     "sc": "0xC9bCa88B04581699fAb5aa276CCafF7Df957cbbf",
     "status": true,
     "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "VLX",
-    "desimal": 18,
-    "sc": "0x8C543AED163909142695f2d2aCd0D55791a9Edb9",
-    "status": true,
-    "pairdex": "BNT"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "VLX",
-    "desimal": 18,
-    "sc": "0x8C543AED163909142695f2d2aCd0D55791a9Edb9",
-    "status": true,
-    "pairdex": "BNT"
   },
   {
     "cex": "GATE",
@@ -8052,14 +7340,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "KUCOIN",
-    "symbol": "WAVES",
-    "desimal": 18,
-    "sc": "0x1cf4592ebffd730c7dc92c1bdffdfc3b9efcf29a",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "GATE",
     "symbol": "WBT",
     "desimal": 8,
@@ -8140,14 +7420,6 @@
     "pairdex": "ETH"
   },
   {
-    "cex": "GATE",
-    "symbol": "WNE",
-    "desimal": 9,
-    "sc": "0x46971fC433d90cf2ff1da4a66aBe320DfB0cE3b1",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
     "cex": "BITGET",
     "symbol": "WNXM",
     "desimal": 18,
@@ -8165,14 +7437,6 @@
   },
   {
     "cex": "BITGET",
-    "symbol": "WOJAK",
-    "desimal": 18,
-    "sc": "0x5026F006B85729a8b14553FAE6af249aD16c9aaB",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BYBIT",
     "symbol": "WOJAK",
     "desimal": 18,
     "sc": "0x5026F006B85729a8b14553FAE6af249aD16c9aaB",
@@ -8221,22 +7485,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "WSM",
-    "desimal": 18,
-    "sc": "0xb62e45c3df611dce236a6ddc7a493d79f9dfadef",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "WSM",
-    "desimal": 18,
-    "sc": "0xb62e45c3df611dce236a6ddc7a493d79f9dfadef",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
     "symbol": "XAUT",
     "desimal": 6,
     "sc": "0x68749665FF8D2d112Fa859AA293F07A622782F38",
@@ -8272,14 +7520,6 @@
     "symbol": "XCAD",
     "desimal": 18,
     "sc": "0x7659ce147d0e714454073a5dd7003544234b6aa0",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "XDEFI",
-    "desimal": 18,
-    "sc": "0x72b886d09c117654ab7da13a14d603001de0b777",
     "status": true,
     "pairdex": "ETH"
   },
@@ -8536,14 +7776,6 @@
     "symbol": "ZKL",
     "desimal": 18,
     "sc": "0xfc385a1df85660a7e041423db512f779070fcede",
-    "status": true,
-    "pairdex": "ETH"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "ZKX",
-    "desimal": 18,
-    "sc": "0xb91d822dfef943165f368d92c16bac9bd5ec6842",
     "status": true,
     "pairdex": "ETH"
   },
