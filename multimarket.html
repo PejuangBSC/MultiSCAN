@@ -101,6 +101,9 @@
             padding: 6px; /* Ubah nilai padding sesuai kebutuhan */
             font-size: 12px;
             vertical-align: middle;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .uk-table-striped-custom > tbody > tr:nth-child(4n-3),
         .uk-table-striped-custom > tbody > tr:nth-child(4n-2) {
@@ -435,48 +438,46 @@
     </div>
       
    <!-- TABEL HASIL SCANNER -->
-    <div class="uk-container uk-flex-center uk-flex-middle uk-table-hover" style="margin-top: 10px;">
-        <div class="tableFixHead table-content">
-            <table class="uk-table  uk-sticky uk-table-striped-custom ">
-                <thead class="custom-thead uk-overflow-auto sticky-header">
-                    <tr>  
-                        <th class="uk-text-secondary"> VOL BUY </th>                           
-                        <th  class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKiri1INCHSinyal"></span> 1INCH </th>
-                        <th  class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKiriODOSSinyal"></span> ODOS </th>
-                        <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKiriKYBERSWAPSinyal"></span> KYBER</th>
-                        <th  class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKiriPARASWAPSinyal"></span> PARA </th>
-                        <th class="uk-text-secondary dx_0x"> <span class="uk-badge" id="lKiri0XSinyal"></span> MATCHA</th>
-                       
-                        <th rowspan="2" style="background-color: #b1bae4; color: rgb(10, 11, 12);">&nbsp;MODAL <br/>& TOKEN&nbsp;</th>
-                        <th  class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKanan1INCHSinyal"></span> 1INCH </th>
-                        <th  class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKananODOSSinyal"></span> ODOS </th>
-                        <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKananKYBERSWAPSinyal"></span> KYBER</th>
-                        <th  class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKananPARASWAPSinyal"></span> PARA </th>
-                        <th class="uk-text-secondary dx_0x"> <span class="uk-badge" id="lKanan0XSinyal"></span> MATCHA </th>
-                        <th class="uk-text-secondary"> VOL SELl </th>
-                    </tr>
-                   
-                    <tr>       
-                        <th class="uk-text-secondary"> PRICE </th>                     
-                        <th  class="uk-text-danger dx_1inch">  <input type="number"  class="uk-input" value="" required id="LModalKiri1INCH"/> $</th>
-                        <th  class="uk-text-danger dx_odos">  <input type="number"  class="uk-input" value="" required id="LModalKiriODOS"/> $</th>
-                        <th  class="uk-text-danger dx_kyberswap">  <input type="number"  class="uk-input" value="" required id="LModalKiriKYBERSWAP"/> $</th>
-                        <th  class="uk-text-danger dx_paraswap">  <input type="number"  class="uk-input" value="" required id="LModalKiriPARASWAP"/> $</th>
-                        <th  class="uk-text-danger dx_0x">  <input type="number"  class="uk-input" value="" required id="LModalKiri0X"/> $</th>
+   <div class="uk-container uk-flex-center uk-flex-middle uk-table-hover" style="margin-top: 5px;">
+    <!-- Menambahkan max-width dan overflow-x untuk scroll horizontal -->
+    <div class="tableFixHead table-content" style="max-height: 70vh; overflow-y: auto; overflow-x: auto; max-width: 100%;">
+        <table class="uk-table uk-sticky uk-table-striped-custom">
+            <thead class="custom-thead uk-overflow-auto sticky-header">
+                <tr>  
+                    <th class="uk-text-secondary"> VOL BUY </th>                           
+                    <th class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKiri1INCHSinyal"></span> 1INCH </th>
+                    <th class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKiriODOSSinyal"></span> ODOS </th>
+                    <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKiriKYBERSWAPSinyal"></span> KYBER</th>
+                    <th class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKiriPARASWAPSinyal"></span> PARA </th>
+                    <th class="uk-text-secondary dx_0x"> <span class="uk-badge" id="lKiri0XSinyal"></span> MATCHA</th>
+                    <th rowspan="2" style="background-color: #cdcdcd; color: rgb(10, 11, 12);">&nbsp;MODAL <br/> TOKEN&nbsp;</th>
+                    <th class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKanan1INCHSinyal"></span> 1INCH </th>
+                    <th class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKananODOSSinyal"></span> ODOS </th>
+                    <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKananKYBERSWAPSinyal"></span> KYBER</th>
+                    <th class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKananPARASWAPSinyal"></span> PARA </th>
+                    <th class="uk-text-secondary dx_0x"> <span class="uk-badge" id="lKanan0XSinyal"></span> MATCHA </th>
+                    <th class="uk-text-secondary"> VOL SELL </th>
+                </tr>
+                <tr>       
+                    <th class="uk-text-secondary"> PRICE </th>                     
+                    <th class="uk-text-danger dx_1inch"> <input type="number" class="uk-input" required id="LModalKiri1INCH"/> $</th>
+                    <th class="uk-text-danger dx_odos"> <input type="number" class="uk-input" required id="LModalKiriODOS"/> $</th>
+                    <th class="uk-text-danger dx_kyberswap"> <input type="number" class="uk-input" required id="LModalKiriKYBERSWAP"/> $</th>
+                    <th class="uk-text-danger dx_paraswap"> <input type="number" class="uk-input" required id="LModalKiriPARASWAP"/> $</th>
+                    <th class="uk-text-danger dx_0x"> <input type="number" class="uk-input" required id="LModalKiri0X"/> $</th>
+                    <th class="uk-text-danger dx_1inch"> <input type="number" class="uk-input" required id="LModalKanan1INCH"/> $</th>
+                    <th class="uk-text-danger dx_odos"> <input type="number" class="uk-input" required id="LModalKananODOS"/> $</th>
+                    <th class="uk-text-danger dx_kyberswap"> <input type="number" class="uk-input" required id="LModalKananKYBERSWAP"/> $</th>
+                    <th class="uk-text-danger dx_paraswap"> <input type="number" class="uk-input" required id="LModalKananPARASWAP"/> $</th>
+                    <th class="uk-text-danger dx_0x"> <input type="number" class="uk-input" required id="LModalKanan0X"/> $</th>
+                    <th class="uk-text-secondary"> PRICE </th>
+                </tr>
+            </thead>
+            <tbody id="TabelHarga" style="text-align: center;"></tbody>
+        </table>
+    </div>
+</div>
 
-                        <th  class="uk-text-danger dx_1inch"> <input type="number"  class="uk-input" value="" required id="LModalKanan1INCH"/> $</th>
-                        <th  class="uk-text-danger dx_odos">  <input type="number"  class="uk-input" value="" required id="LModalKananODOS"/> $</th>
-                        <th  class="uk-text-danger dx_kyberswap">  <input type="number"  class="uk-input" value="" required id="LModalKananKYBERSWAP"/> $</th>
-                        <th  class="uk-text-danger dx_paraswap"> <input type="number"  class="uk-input" value="" required id="LModalKananPARASWAP"/> $</th>
-                        <th  class="uk-text-danger dx_0x"> <input type="number"  class="uk-input" value="" required id="LModalKanan0X"/> $</th>
-                        <th class="uk-text-secondary"> PRICE </th>
-                    </tr>
-                </thead>
-                
-                <tbody id="TabelHarga" style="text-align: center;"></tbody>
-            </table>
-        </div>
-    </div>    
     <script>
         //SETTING GLOBAL CHAIN, 
         const Kode_Chain = 1;
