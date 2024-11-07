@@ -13,7 +13,7 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/16770/16770026.png" type="image/x-icon">
+    <link rel="icon" href="https://cdn-icons-png.freepik.com/512/15301/15301597.png" type="image/x-icon">
 
 <style>
      #scanprogress {
@@ -29,7 +29,7 @@
       }
       #bar {
         width:100%;
-        background-color:#c4dbf4;
+        background-color:#b1bae4;
         height:100%;
       }
       .uk-label {
@@ -81,7 +81,7 @@
 
         /* Style untuk sel dalam header */
         .sticky-header th {    
-            background-color: #c4dbf4;
+            background-color: #b1bae4;
             font-weight: bold;
             font-size: large;
             text-align: center;
@@ -138,7 +138,7 @@
    
     <div class="uk-text-center" style="margin-top: 20px;"> <!-- Mengurangi margin-top -->
         <h3 class="uk-margin-remove" style="font-size: 30px;">
-            <span class="uk-text-primary"><label id="namachain"></label> MULTIMARKET v7.1</span>
+            <span class="uk-text" style="color: #1317e1;"><label id="namachain"></label> MULTIMARKET v1</span>
             <span class="uk-margin-small-left">
                 <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn3.iconfinder.com/data/icons/mixed-vol-12/256/futuro_icons_229-512.png" width="25px" />
                 <img id="set-modal" title="SETTING DATA" src="https://cdn-icons-png.flaticon.com/512/7588/7588701.png" width="25px" />
@@ -161,7 +161,9 @@
                 <a href="https://multichecker.vercel.app/bitget_erc.html" target="_blank"><img src="https://img.cryptorank.io/exchanges/150x150.bitget1702996260873.png" width="25px" alt="BITGET" /></a>
                 <a href="https://multiscan-ruby.vercel.app/erc_kucoin.html" target="_blank"><img src="https://www.svgrepo.com/show/331460/kucoin.svg" width="25px" alt="KUCOIN" /></a>
                 <a href="https://multiscan-ruby.vercel.app/erc_bybit.html" target="_blank"><img src="https://crypto-central.io/library/uploads/bybit_logo-min.png" width="25px" alt="BYBIT" /></a>
-                <b>[ UPDATE WALLET :
+                <a href="https://multiscan-ruby.vercel.app/erc_indodax.html" target="_blank"><img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//103/MTA-31087767/no_brand_saldo_indodax_10k_full04_mbbivye1.jpg" width="25px" alt="INDODAX" /></a>
+                <a href="https://multiscan-ruby.vercel.app/erc_coinex.html" target="_blank"><img src="https://iconape.com/wp-content/png_logo_vector/coinex-logo.png" width="25px" alt="COINEX" /></a>
+                <b>[ UPDATE WALLET : 
                 <label id="lastUpdateTime" class="uk-text uk-text-danger uk-text-small" style="font-size: 15px;"></label>
                  - <label class="uk-text uk-text-small uk-text-success" id="ip">...</label>
                 ]</b>
@@ -302,19 +304,7 @@
                                         <label for="walletMETA" class="uk-text-danger">WALLET METAMASK</label><br />
                                         <input class="uk-input" type="text" id="walletMETA" name="walletMETA" >
                                     </div>
-                                <div><br/>
-                                       
-                                    <div style="display: none;">
-                                        <label for="jeda-koin" class="uk-text-warning">PAIR DEX</label>    
-                                        <br/><label for="sc-address">SC Address:</label>
-                                        <input type="text" id="sc-addresspair" readonly value="" class="uk-input" >
-                                        
-                                        <label for="des-pair">Des Pair:</label>
-                                        <input type="text" readonly id="des-pair" value="" class="uk-input" >
-                    
-                                        <label for="symbo-pair">Symbol Pair:</label>
-                                        <input type="text" readonly id="symbol-pair" value="" class="uk-input" > 
-                                    </div>
+                                <div>                                    
                                 </div>
                             </div>
                         </div>
@@ -364,8 +354,6 @@
                         </b>
                         <br/>
                     
-                        <!-- Form Checkbox untuk CEX dan DEX Pair -->
-                        <form id="cexDexForm" >                        
                             <label class="uk-form-label uk-text-secondary"><b>CEX </b></label>
                             <b> 
                             <label class="uk-form-label uk-text-secondary" > 
@@ -376,14 +364,13 @@
                                 <input type="checkbox" value="BITGET" class="cex-checkbox"> BITGET
                             </label>
                             </b>                        
-                        </form>
                         <br />
 
                         <b>
                         <label class="uk-form-label uk-text-primary">DEX :</label>
                          <label class="uk-form-label uk-text-primary" > 
                             <input type="checkbox" class="uk-checkbox cdx_1inch"  id="D1INCH" /> 1INCH    
-                            <input type="checkbox" class="uk-checkbox cdx_odos"  id="DODOS" /> <span id="modalLPODOS">ODOS&nbsp;</span>
+                            <input type="checkbox" class="uk-checkbox cdx_odos"  id="DODOS" /> ODOS
                             <input type="checkbox" class="uk-checkbox cdx_0x"   id="D0X" /> MATCHA 
                             <input type="checkbox" class="uk-checkbox cdx_kyberswap"   id="DKYBERSWAP" /> KYBER   
                             <input type="checkbox" class="uk-checkbox cdx_paraswap"  id="DPARASWAP" /> PARA
@@ -394,10 +381,10 @@
                         <b>
                         <label class="uk-form-label uk-text-danger"> PAIR (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>) :</label>
                         <label class="uk-form-label uk-text-danger" >
-                            <input type="checkbox" value="ETH" class="dexpair-checkbox">ETH
-                            <input type="checkbox" value="BNT" class="dexpair-checkbox">BNT
-                            <!-- <input type="checkbox" value="USDC" class="dexpair-checkbox">USDC -->
                             <input type="checkbox" value="USDT" class="dexpair-checkbox">USDT
+                            <!-- <input type="checkbox" value="ETH" class="dexpair-checkbox">ETH -->
+                            <input type="checkbox" value="MATIC" class="dexpair-checkbox">MATIC
+                            <input type="checkbox" value="USDC" class="dexpair-checkbox">USDC
                         </label>
                          </b>  # 
                         <input type="radio" name="toggle" checked value="option2"> A 
@@ -446,25 +433,6 @@
         </div>
         
     </div>
-
-    <!-- Modal LIST LP ODOS -->
-    <div uk-modal id="myModalLPODOS">
-    <div class="uk-modal-dialog">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        <div class="uk-modal-header">
-        <h5 class="uk-modal-title">LIVE :: DAFTAR LP ODOS</h5>
-        </div>
-        <div class="uk-modal-body">
-        <div id="apiResultODOS">
-            <span id="checkboxLPODOS"></span>
-        </div>
-        </div>
-        <div class="uk-modal-footer uk-text-right">
-        <button class="uk-button uk-button-danger uk-modal-close" type="button">TUTUP</button>
-        <button id="simpanlpODOS" class="uk-button uk-button-primary">SIMPAN</button>
-        </div>
-    </div>
-    </div>
       
    <!-- TABEL HASIL SCANNER -->
     <div class="uk-container uk-flex-center uk-flex-middle uk-table-hover" style="margin-top: 10px;">
@@ -479,7 +447,7 @@
                         <th  class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKiriPARASWAPSinyal"></span> PARA </th>
                         <th class="uk-text-secondary dx_0x"> <span class="uk-badge" id="lKiri0XSinyal"></span> MATCHA</th>
                        
-                        <th rowspan="2" style="background-color: #c4dbf4; color: rgb(10, 11, 12);">&nbsp;MODAL <br/>& TOKEN&nbsp;</th>
+                        <th rowspan="2" style="background-color: #b1bae4; color: rgb(10, 11, 12);">&nbsp;MODAL <br/>& TOKEN&nbsp;</th>
                         <th  class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKanan1INCHSinyal"></span> 1INCH </th>
                         <th  class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKananODOSSinyal"></span> ODOS </th>
                         <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKananKYBERSWAPSinyal"></span> KYBER</th>
@@ -510,8 +478,84 @@
         </div>
     </div>    
     <script>
-      const _0x571299=_0x4977;(function(_0x2f54a9,_0x37d2d1){const _0x2b2a74=_0x4977,_0xf29736=_0x2f54a9();while(!![]){try{const _0x31d83e=parseInt(_0x2b2a74(0x14e))/0x1*(-parseInt(_0x2b2a74(0x154))/0x2)+parseInt(_0x2b2a74(0x14c))/0x3+parseInt(_0x2b2a74(0x151))/0x4+-parseInt(_0x2b2a74(0x159))/0x5*(-parseInt(_0x2b2a74(0x147))/0x6)+-parseInt(_0x2b2a74(0x14f))/0x7*(parseInt(_0x2b2a74(0x150))/0x8)+-parseInt(_0x2b2a74(0x158))/0x9+parseInt(_0x2b2a74(0x14d))/0xa;if(_0x31d83e===_0x37d2d1)break;else _0xf29736['push'](_0xf29736['shift']());}catch(_0x3d20f2){_0xf29736['push'](_0xf29736['shift']());}}}(_0x24bd,0x2e955));const Kode_Chain=0x1,Nama_Chain=_0x571299(0x153),URL_Chain=_0x571299(0x13c),DATAJSON=_0x571299(0x145),PAIRDEX=_0x571299(0x14b),SCPAIRDEX=_0x571299(0x142),DESPAIRDEX=0x12,BaseFEEDEX='ETHUSDT',CEX_CONFIG={'GATE':{'wallet':_0x571299(0x155),'wallet2':'#','chainCEX':_0x571299(0x14b),'ApiKey':_0x571299(0x157),'ApiSecret':_0x571299(0x152)},'BINANCE':{'wallet':_0x571299(0x149),'wallet2':'0x28C6c06298d514Db089934071355E5743bf21d60','chainCEX':_0x571299(0x14b),'ApiKey':_0x571299(0x13f),'ApiSecret':_0x571299(0x143)},'KUCOIN':{'wallet':_0x571299(0x140),'wallet2':_0x571299(0x156),'chainCEX':'ERC20','ApiKey':_0x571299(0x141),'ApiSecret':'a184c3c1-65f2-4042-a043-c5c23c6ba258','ApiPassphrase':_0x571299(0x13b)},'BITGET':{'wallet':_0x571299(0x13d),'wallet2':'0x51971c86b04516062c1e708CDC048CB04fbe959f','chainCEX':_0x571299(0x13a)},'BYBIT':{'wallet':'0xf89d7b9c864f589bbF53a82105107622B35EaA40','wallet2':_0x571299(0x14a),'chainCEX':'ETH','ApiKey':'c006zQZk7RSBh7lmCn','ApiSecret':'2mvUqoYtJLku0JOC8fHyVVmkocCGtFIjScqT'}},DEX_CONFIG={'ETH':{'scAddressPair':_0x571299(0x142),'desPair':'18','symbolPair':'ETH'},'USDT':{'scAddressPair':_0x571299(0x148),'desPair':'6','symbolPair':_0x571299(0x13e)},'SDEX':{'scAddressPair':_0x571299(0x144),'desPair':'18','symbolPair':'SDEX'},'BNT':{'scAddressPair':_0x571299(0x15a),'desPair':'18','symbolPair':'BNT'},'USDC':{'scAddressPair':'0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48','desPair':'6','symbolPair':_0x571299(0x146)}};function _0x4977(_0x44d211,_0x3932b0){const _0x24bd21=_0x24bd();return _0x4977=function(_0x497759,_0x7c4c){_0x497759=_0x497759-0x13a;let _0x5d50f7=_0x24bd21[_0x497759];return _0x5d50f7;},_0x4977(_0x44d211,_0x3932b0);}function _0x24bd(){const _0x2374cc=['676617WjnICn','5546550SxYqHu','6847hEBanr','21dhuYbA','698024TlSMqr','318816jhLKjY','e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d','ethereum','106VbSabk','0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','0xD6216fC19DB775Df9774a6E33526131dA7D19a2c','d04cdb7f01e598b3493bda6aa913092b','1302075pnZzYm','14740RICAWm','0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C','ERC20','Arekpinter123','https://etherscan.io','0x0639556F03714A74a5fEEaF5736a4A64fF70D206','USDT','2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU','0x58edF78281334335EfFa23101bBe3371b6a36A51','651e1c4379c8be0001bab637','0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2','XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn','0x5DE8ab7E27f6E7A1fFf3E5B337584Aa43961BEeF','https://multiscan-ruby.vercel.app/erc20_multi.json','USDC','204geUWuR','0xdAC17F958D2ee523a2206206994597C13D831ec7','0xDFd5293D8e347dFe59E90eFd55b2956a1343963d','0xf89d7b9c864f589bbF53a82105107622B35EaA40','ETH'];_0x24bd=function(){return _0x2374cc;};return _0x24bd();}
+        //SETTING GLOBAL CHAIN, 
+        const Kode_Chain = 1;
+        const Nama_Chain = "ethereum";
+        const URL_Chain = "https://etherscan.io";
+        const DATAJSON ='https://multiscan-ruby.vercel.app/erc20_multi.json';
+
+        //SETTING GLOBAL DEX
+
+        const BaseFEEDEX = "ETHUSDT";
+       
+        const CEX_CONFIG = {
+            GATE: {
+                wallet : '0x0D0707963952f2fBA59dD06f2b425ace40b492Fe',
+                wallet2 : '#',
+                chainCEX : 'ETH',
+                ApiKey : "d04cdb7f01e598b3493bda6aa913092b",
+                ApiSecret : "e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d",
+            },
+            BINANCE: {
+                wallet : '0xDFd5293D8e347dFe59E90eFd55b2956a1343963d',
+                wallet2 : '0x28C6c06298d514Db089934071355E5743bf21d60',
+                chainCEX : 'ETH',
+                ApiKey : "2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU",
+                ApiSecret : "XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn",
+            },
+            KUCOIN: {
+                wallet : '0x58edF78281334335EfFa23101bBe3371b6a36A51',
+                wallet2 : '0xD6216fC19DB775Df9774a6E33526131dA7D19a2c',
+             //   wallet3 : '0xf16E9B0D03470827A95CDfd0Cb8a8A3b46969B91',
+                chainCEX : 'ERC20',
+                ApiKey : "651e1c4379c8be0001bab637",
+                ApiSecret : "a184c3c1-65f2-4042-a043-c5c23c6ba258",
+                ApiPassphrase : "Arekpinter123",
+            }, 
+            BITGET: {
+                wallet : '0x0639556F03714A74a5fEEaF5736a4A64fF70D206',
+                wallet2 : '0x51971c86b04516062c1e708CDC048CB04fbe959f',
+                chainCEX : 'ERC20',
+            }, 
+            BYBIT: {
+                wallet : '0xf89d7b9c864f589bbF53a82105107622B35EaA40',
+                wallet2 : '0xf89d7b9c864f589bbF53a82105107622B35EaA40',
+                chainCEX : 'ETH',
+                ApiKey : "c006zQZk7RSBh7lmCn",
+                ApiSecret : "2mvUqoYtJLku0JOC8fHyVVmkocCGtFIjScqT",
+            }, 
+            // Add more exchanges as needed
+        };
+
+        const DEX_CONFIG = {
+            ETH: {
+                scAddressPair: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+                desPair: '18',
+                symbolPair: 'ETH',
+            },
+            USDT: {
+                scAddressPair: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+                desPair: '6',
+                symbolPair: 'USDT',
+            },
+            SDEX: {
+                scAddressPair: '0x5DE8ab7E27f6E7A1fFf3E5B337584Aa43961BEeF',
+                desPair: '18',
+                symbolPair: 'SDEX',
+            },
+            BNT: {
+                scAddressPair: '0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C',
+                desPair: '18',
+                symbolPair: 'BNT',
+            },
+            USDC: {
+                scAddressPair: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+                desPair: '6',
+                symbolPair: 'USDC',
+            }
+
+        };
     </script>
-    <script src="932058222ff67b2c661837a3f08b071da614c031e0bd4b68a1dfa65526b18b9f.js"></script>
+<script src="03db90c4ad37544984c763da9a95a76d03d6a2009e3f131fc5ff70b92ac9ff17.js"></script>
 </body>
 </html>
