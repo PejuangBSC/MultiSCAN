@@ -146,7 +146,7 @@
                 <img id="syncDATA" title="SINKRONISASI DATA" src="https://cdn3.iconfinder.com/data/icons/mixed-vol-12/256/futuro_icons_229-512.png" width="25px" />
                 <img id="set-modal" title="SETTING DATA" src="https://cdn-icons-png.flaticon.com/512/7588/7588701.png" width="25px" />
                 <img id="cek_wallet" title="UPDATE WALLET CEX" src="https://cdn-icons-png.flaticon.com/512/3687/3687106.png" width="25px" />
-                <a href="CRUDS_ARB.html" target="_blank">
+                <a href="MasterCRUDS.html" target="_blank">
                     <img title="MASTER DATA" src="https://cdn-icons-png.flaticon.com/512/8021/8021069.png" width="25px" />
                 </a>
                 <a href="manajemen_aset.html" target="_blank">
@@ -356,16 +356,11 @@
                         </b>
                         <br/>
                     
-                            <label class="uk-form-label uk-text-secondary"><b>CEX </b></label>
-                            <b> 
-                            <label class="uk-form-label uk-text-secondary" > 
-                                <input type="checkbox" value="BINANCE" class="cex-checkbox"> BINANCE
-                                <input type="checkbox" value="GATE"  class="cex-checkbox"> GATE
-                                <input type="checkbox" value="KUCOIN" class="cex-checkbox"> KUCOIN
-                                <input type="checkbox" value="BYBIT" class="cex-checkbox"> BYBIT
-                                <input type="checkbox" value="BITGET" class="cex-checkbox"> BITGET
-                            </label>
-                            </b>                        
+                            <!-- Bagian CEX -->
+                        <label class="uk-form-label uk-text-secondary"><b>CEX </b></label>
+                        <b>
+                            <label class="uk-form-label uk-text-secondary" id="cex-checkbox-container"></label>
+                        </b>                    
                         <br />
 
                         <b>
@@ -380,15 +375,11 @@
                         </b>                    
                         <br/>
 
-                        <b>
-                        <label class="uk-form-label uk-text-danger"> PAIR (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>) :</label>
-                        <label class="uk-form-label uk-text-danger" >
-                            <input type="checkbox" value="USDT" class="dexpair-checkbox">USDT
-                            <input type="checkbox" value="ETH" class="dexpair-checkbox">ETH
-                            <input type="checkbox" value="ARB" class="dexpair-checkbox">ARB
-                            <input type="checkbox" value="USDC" class="dexpair-checkbox">USDC
-                        </label>
-                         </b>  # 
+                         <!-- Bagian DEX PAIR -->
+                         <b>
+                            <label class="uk-form-label uk-text-danger">DEX PAIR (<label class="uk-form-label uk-text-primary" id="JmlFilterKoin"></label>) :</label>
+                            <label class="uk-form-label uk-text-danger" id="dexpair-checkbox-container"></label>
+                        </b> # 
                         <input type="radio" name="toggle" checked value="option2"> A 
                         <input type="radio" name="toggle" value="option1"> Z
                         <button class="uk-button uk-button-small uk-button-danger" type="button" style="display: none;" id="refresh">STOP</button>
@@ -400,8 +391,7 @@
                     </div>
                 </div>        
                  
-                <div class="uk-width-auto@m uk-width-expand@m">                        
-                    <label class="uk-text uk-text-small uk-text-danger" id="cek"></label>      
+                <div class="uk-width-auto@m uk-width-expand@m">  
                     <label class="uk-form-label uk-text-warning">
                         <b>INFO SINYAL  [SPEED :
                         <label class="uk-form-label uk-text-secondary">
@@ -420,8 +410,8 @@
                         <b>PARA</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalparaswap"> </label> ]<br/> 
                         <b>KYBER</b> [ <label class="uk-text uk-text-small uk-text-primary" id="sinyalkyberswap"> </label> ]<br/> 
                     </div>
-                
-                   
+                                
+                    <label class="uk-text uk-text-small uk-text-danger" id="cek"></label>      
                 </div>
                 
             </div>  
@@ -437,48 +427,49 @@
     </div>
       
    <!-- TABEL HASIL SCANNER -->
+    <!-- TABEL HASIL SCANNER -->
     <div class="uk-container uk-flex-center uk-flex-middle uk-table-hover" style="margin-top: 5px;">
-    <!-- Menambahkan max-width dan overflow-x untuk scroll horizontal -->
-    <div class="tableFixHead table-content" style="max-height: 70vh; overflow-y: auto; overflow-x: auto; max-width: 100%;">
-        <table class="uk-table uk-sticky uk-table-striped-custom">
-            <thead class="custom-thead uk-overflow-auto sticky-header">
-                <tr>  
-                    <th class="uk-text-secondary"> VOL BUY </th>                           
-                    <th class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKiri1INCHSinyal"></span> 1INCH </th>
-                    <th class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKiriODOSSinyal"></span> ODOS </th>
-                    <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKiriKYBERSWAPSinyal"></span> KYBER</th>
-                    <th class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKiriPARASWAPSinyal"></span> PARA </th>
-                    <th class="uk-text-secondary dx_0x"> <span class="uk-badge" id="lKiri0XSinyal"></span> MATCHA</th>
-                    <th rowspan="2" style="background-color: #cdcdcd; color: rgb(10, 11, 12);">&nbsp;MODAL <br/> TOKEN&nbsp;</th>
-                    <th class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKanan1INCHSinyal"></span> 1INCH </th>
-                    <th class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKananODOSSinyal"></span> ODOS </th>
-                    <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKananKYBERSWAPSinyal"></span> KYBER</th>
-                    <th class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKananPARASWAPSinyal"></span> PARA </th>
-                    <th class="uk-text-secondary dx_0x"> <span class="uk-badge" id="lKanan0XSinyal"></span> MATCHA </th>
-                    <th class="uk-text-secondary"> VOL SELL </th>
-                </tr>
-                <tr>       
-                    <th class="uk-text-secondary"> PRICE </th>                     
-                    <th class="uk-text-danger dx_1inch"> <input type="number" class="uk-input" required id="LModalKiri1INCH"/> $</th>
-                    <th class="uk-text-danger dx_odos"> <input type="number" class="uk-input" required id="LModalKiriODOS"/> $</th>
-                    <th class="uk-text-danger dx_kyberswap"> <input type="number" class="uk-input" required id="LModalKiriKYBERSWAP"/> $</th>
-                    <th class="uk-text-danger dx_paraswap"> <input type="number" class="uk-input" required id="LModalKiriPARASWAP"/> $</th>
-                    <th class="uk-text-danger dx_0x"> <input type="number" class="uk-input" required id="LModalKiri0X"/> $</th>
-                    <th class="uk-text-danger dx_1inch"> <input type="number" class="uk-input" required id="LModalKanan1INCH"/> $</th>
-                    <th class="uk-text-danger dx_odos"> <input type="number" class="uk-input" required id="LModalKananODOS"/> $</th>
-                    <th class="uk-text-danger dx_kyberswap"> <input type="number" class="uk-input" required id="LModalKananKYBERSWAP"/> $</th>
-                    <th class="uk-text-danger dx_paraswap"> <input type="number" class="uk-input" required id="LModalKananPARASWAP"/> $</th>
-                    <th class="uk-text-danger dx_0x"> <input type="number" class="uk-input" required id="LModalKanan0X"/> $</th>
-                    <th class="uk-text-secondary"> PRICE </th>
-                </tr>
-            </thead>
-            <tbody id="TabelHarga" style="text-align: center;"></tbody>
-        </table>
+        <!-- Menambahkan max-width dan overflow-x untuk scroll horizontal -->
+        <div class="tableFixHead table-content" style="max-height: 70vh; overflow-y: auto; overflow-x: auto; max-width: 100%;">
+            <table class="uk-table uk-sticky uk-table-striped-custom">
+                <thead class="custom-thead uk-overflow-auto sticky-header">
+                    <tr>  
+                        <th class="uk-text-secondary"> VOL BUY </th>                           
+                        <th class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKiri1INCHSinyal"></span> 1INCH </th>
+                        <th class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKiriODOSSinyal"></span> ODOS </th>
+                        <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKiriKYBERSWAPSinyal"></span> KYBER</th>
+                        <th class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKiriPARASWAPSinyal"></span> PARA </th>
+                        <th class="uk-text-secondary dx_0x"> <span class="uk-badge" id="lKiri0XSinyal"></span> MATCHA</th>
+                        <th rowspan="2" style="background-color: #cdcdcd; color: rgb(10, 11, 12);">&nbsp;MODAL <br/> TOKEN&nbsp;</th>
+                        <th class="uk-text-secondary dx_1inch"> <span class="uk-badge" id="lKanan1INCHSinyal"></span> 1INCH </th>
+                        <th class="uk-text-secondary dx_odos"> <span class="uk-badge" id="lKananODOSSinyal"></span> ODOS </th>
+                        <th class="uk-text-secondary dx_kyberswap"> <span class="uk-badge" id="lKananKYBERSWAPSinyal"></span> KYBER</th>
+                        <th class="uk-text-secondary dx_paraswap"> <span class="uk-badge" id="lKananPARASWAPSinyal"></span> PARA </th>
+                        <th class="uk-text-secondary dx_0x"> <span class="uk-badge" id="lKanan0XSinyal"></span> MATCHA </th>
+                        <th class="uk-text-secondary"> VOL SELL </th>
+                    </tr>
+                    <tr>       
+                        <th class="uk-text-secondary"> PRICE </th>                     
+                        <th class="uk-text-danger dx_1inch"> <input type="number" class="uk-input" required id="LModalKiri1INCH"/> $</th>
+                        <th class="uk-text-danger dx_odos"> <input type="number" class="uk-input" required id="LModalKiriODOS"/> $</th>
+                        <th class="uk-text-danger dx_kyberswap"> <input type="number" class="uk-input" required id="LModalKiriKYBERSWAP"/> $</th>
+                        <th class="uk-text-danger dx_paraswap"> <input type="number" class="uk-input" required id="LModalKiriPARASWAP"/> $</th>
+                        <th class="uk-text-danger dx_0x"> <input type="number" class="uk-input" required id="LModalKiri0X"/> $</th>
+                        <th class="uk-text-danger dx_1inch"> <input type="number" class="uk-input" required id="LModalKanan1INCH"/> $</th>
+                        <th class="uk-text-danger dx_odos"> <input type="number" class="uk-input" required id="LModalKananODOS"/> $</th>
+                        <th class="uk-text-danger dx_kyberswap"> <input type="number" class="uk-input" required id="LModalKananKYBERSWAP"/> $</th>
+                        <th class="uk-text-danger dx_paraswap"> <input type="number" class="uk-input" required id="LModalKananPARASWAP"/> $</th>
+                        <th class="uk-text-danger dx_0x"> <input type="number" class="uk-input" required id="LModalKanan0X"/> $</th>
+                        <th class="uk-text-secondary"> PRICE </th>
+                    </tr>
+                </thead>
+                <tbody id="TabelHarga" style="text-align: center;"></tbody>
+            </table>
+        </div>
     </div>
-</div>
-
+    
     <script>
-      const _0x24bce8=_0x38f0;function _0x38f0(_0x57a874,_0x4f0871){const _0x1d968e=_0x1d96();return _0x38f0=function(_0x38f0ae,_0x45693a){_0x38f0ae=_0x38f0ae-0x1ee;let _0x104630=_0x1d968e[_0x38f0ae];return _0x104630;},_0x38f0(_0x57a874,_0x4f0871);}(function(_0x1cd518,_0x16bb33){const _0x5ba7cc=_0x38f0,_0x287122=_0x1cd518();while(!![]){try{const _0x130dc5=parseInt(_0x5ba7cc(0x1f7))/0x1*(parseInt(_0x5ba7cc(0x203))/0x2)+-parseInt(_0x5ba7cc(0x1fe))/0x3*(parseInt(_0x5ba7cc(0x1f4))/0x4)+parseInt(_0x5ba7cc(0x1f1))/0x5+-parseInt(_0x5ba7cc(0x200))/0x6*(parseInt(_0x5ba7cc(0x1ee))/0x7)+-parseInt(_0x5ba7cc(0x1f3))/0x8*(-parseInt(_0x5ba7cc(0x205))/0x9)+-parseInt(_0x5ba7cc(0x1f0))/0xa*(parseInt(_0x5ba7cc(0x204))/0xb)+-parseInt(_0x5ba7cc(0x20e))/0xc*(parseInt(_0x5ba7cc(0x1fc))/0xd);if(_0x130dc5===_0x16bb33)break;else _0x287122['push'](_0x287122['shift']());}catch(_0xde33a8){_0x287122['push'](_0x287122['shift']());}}}(_0x1d96,0x60385));function _0x1d96(){const _0x53ef25=['ARB','742870VorHeY','1402000QCWuTX','ETHUSDT','1727872XnetLX','4WwqNOm','https://multiscan-ruby.vercel.app/arb_multi.json','Arbitrum\x20One','41IjkGlt','ARBITRUM','0x0639556F03714A74a5fEEaF5736a4A64fF70D206','2mvUqoYtJLku0JOC8fHyVVmkocCGtFIjScqT','0x03E6FA590CAdcf15A38e86158E9b3D06FF3399Ba','767sWBFoN','USDC','175062kcfvji','c006zQZk7RSBh7lmCn','612516zCkPkk','2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU','0x82af49447d8a07e3bd95bd0d56f35241523fbab1','23174jlhpoy','22rnxgmh','18KllfQC','d04cdb7f01e598b3493bda6aa913092b','ARBEVM','Arekpinter123','USDT','a184c3c1-65f2-4042-a043-c5c23c6ba258','https://arbiscan.io','0xe7804c37c13166fF0b37F5aE0BB07A3aEbb6e245','0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','56976pgftLt','XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn','0x912ce59144191c1204e64559fe8253a0e49e6548','21krsjbT'];_0x1d96=function(){return _0x53ef25;};return _0x1d96();}const Kode_Chain=0xa4b1,Nama_Chain='arbitrum',URL_Chain=_0x24bce8(0x20b),DATAJSON=_0x24bce8(0x1f5),BaseFEEDEX=_0x24bce8(0x1f2),CEX_CONFIG={'GATE':{'wallet':_0x24bce8(0x20d),'wallet2':'#','chainCEX':_0x24bce8(0x207),'ApiKey':_0x24bce8(0x206),'ApiSecret':'e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d'},'BINANCE':{'wallet':'0x290275e3db66394C52272398959845170E4DCb88','wallet2':_0x24bce8(0x20c),'chainCEX':_0x24bce8(0x1f8),'ApiKey':_0x24bce8(0x201),'ApiSecret':_0x24bce8(0x20f)},'KUCOIN':{'wallet':_0x24bce8(0x1fb),'wallet2':'#','chainCEX':_0x24bce8(0x1f8),'ApiKey':'651e1c4379c8be0001bab637','ApiSecret':_0x24bce8(0x20a),'ApiPassphrase':_0x24bce8(0x208)},'BITGET':{'wallet':_0x24bce8(0x1f9),'wallet2':'0x51971c86b04516062c1e708CDC048CB04fbe959f','chainCEX':'ArbitrumOne'},'BYBIT':{'wallet':'0xf89d7b9c864f589bbF53a82105107622B35EaA40','wallet2':'#','chainCEX':_0x24bce8(0x1f6),'ApiKey':_0x24bce8(0x1ff),'ApiSecret':_0x24bce8(0x1fa)}},DEX_CONFIG={'ARB':{'scAddressPair':_0x24bce8(0x210),'desPair':'18','symbolPair':_0x24bce8(0x1ef)},'USDT':{'scAddressPair':'0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9','desPair':'6','symbolPair':_0x24bce8(0x209)},'ETH':{'scAddressPair':_0x24bce8(0x202),'desPair':'18','symbolPair':'ETH'},'USDC':{'scAddressPair':'0xaf88d065e77c8cC2239327C5EDb3A432268e5831','desPair':'6','symbolPair':_0x24bce8(0x1fd)}};
+        const _0x1d8ebd=_0x145f;(function(_0x7397c0,_0x83f97c){const _0x2ae093=_0x145f,_0x3b16d6=_0x7397c0();while(!![]){try{const _0x73ea34=-parseInt(_0x2ae093(0x14c))/0x1*(parseInt(_0x2ae093(0x143))/0x2)+parseInt(_0x2ae093(0x131))/0x3+parseInt(_0x2ae093(0x140))/0x4*(parseInt(_0x2ae093(0x13f))/0x5)+-parseInt(_0x2ae093(0x120))/0x6*(parseInt(_0x2ae093(0x122))/0x7)+-parseInt(_0x2ae093(0x12b))/0x8*(parseInt(_0x2ae093(0x136))/0x9)+-parseInt(_0x2ae093(0x135))/0xa+parseInt(_0x2ae093(0x13d))/0xb;if(_0x73ea34===_0x83f97c)break;else _0x3b16d6['push'](_0x3b16d6['shift']());}catch(_0x2a1839){_0x3b16d6['push'](_0x3b16d6['shift']());}}}(_0x35d0,0x524de));const Kode_Chain=0xa4b1,Nama_Chain=_0x1d8ebd(0x12d),URL_Chain=_0x1d8ebd(0x118),DATAJSON=_0x1d8ebd(0x13b),BaseFEEDEX=_0x1d8ebd(0x11f),CEX_CONFIG={'GATE':{'wallet':_0x1d8ebd(0x149),'wallet2':'#','chainCEX':_0x1d8ebd(0x14b),'ApiKey':_0x1d8ebd(0x11c),'ApiSecret':_0x1d8ebd(0x12c)},'BINANCE':{'wallet':_0x1d8ebd(0x14d),'wallet2':_0x1d8ebd(0x128),'chainCEX':'ARBITRUM','ApiKey':_0x1d8ebd(0x11a),'ApiSecret':_0x1d8ebd(0x14f)},'KUCOIN':{'wallet':_0x1d8ebd(0x124),'wallet2':'#','chainCEX':_0x1d8ebd(0x137),'ApiKey':_0x1d8ebd(0x13c),'ApiSecret':_0x1d8ebd(0x13e),'ApiPassphrase':'Arekpinter123'},'BITGET':{'wallet':'0x0639556F03714A74a5fEEaF5736a4A64fF70D206','wallet2':_0x1d8ebd(0x14a),'chainCEX':_0x1d8ebd(0x129)},'BYBIT':{'wallet':_0x1d8ebd(0x134),'wallet2':'#','chainCEX':_0x1d8ebd(0x123),'ApiKey':_0x1d8ebd(0x119),'ApiSecret':_0x1d8ebd(0x148)}},DEX_CONFIG={'ARB':{'scAddressPair':_0x1d8ebd(0x126),'desPair':'18','symbolPair':'ARB'},'USDT':{'scAddressPair':_0x1d8ebd(0x127),'desPair':'6','symbolPair':_0x1d8ebd(0x14e)},'ETH':{'scAddressPair':_0x1d8ebd(0x13a),'desPair':'18','symbolPair':_0x1d8ebd(0x12a)},'USDC':{'scAddressPair':_0x1d8ebd(0x125),'desPair':'6','symbolPair':'USDC'}};function _0x145f(_0x4b898a,_0x4ace87){const _0x35d0f1=_0x35d0();return _0x145f=function(_0x145ff6,_0x250a94){_0x145ff6=_0x145ff6-0x118;let _0x3aed37=_0x35d0f1[_0x145ff6];return _0x3aed37;},_0x145f(_0x4b898a,_0x4ace87);}function generateCheckboxes(_0x3e3664,_0x1b2247,_0x249482){const _0x22d3a4=_0x1d8ebd,_0x209a9f=document['getElementById'](_0x1b2247);_0x209a9f[_0x22d3a4(0x150)]='',Object[_0x22d3a4(0x146)](_0x3e3664)[_0x22d3a4(0x130)](_0x9a54a8=>{const _0x2bf330=_0x22d3a4,_0x4cac3d=document[_0x2bf330(0x139)]('input');_0x4cac3d[_0x2bf330(0x144)]=_0x2bf330(0x147),_0x4cac3d['classList']['add'](_0x249482),_0x4cac3d[_0x2bf330(0x11d)]=_0x9a54a8;const _0x4cc0e8=document[_0x2bf330(0x139)](_0x2bf330(0x12f));_0x4cc0e8[_0x2bf330(0x12e)][_0x2bf330(0x11b)](_0x2bf330(0x132),_0x1b2247==='cex-checkbox-container'?_0x2bf330(0x142):_0x2bf330(0x141)),_0x4cc0e8[_0x2bf330(0x138)](_0x4cac3d),_0x4cc0e8[_0x2bf330(0x138)](document[_0x2bf330(0x11e)]('\x20'+_0x9a54a8)),_0x209a9f[_0x2bf330(0x138)](_0x4cc0e8);});}generateCheckboxes(CEX_CONFIG,_0x1d8ebd(0x145),_0x1d8ebd(0x121)),generateCheckboxes(DEX_CONFIG,_0x1d8ebd(0x133),'dexpair-checkbox');function _0x35d0(){const _0x398ac3=['https://multiscan-ruby.vercel.app/arb_multi.json','651e1c4379c8be0001bab637','9739796QefgFG','a184c3c1-65f2-4042-a043-c5c23c6ba258','50oPAZaN','79448lExPxw','uk-text-danger','uk-text-secondary','314NopKRc','type','cex-checkbox-container','keys','checkbox','2mvUqoYtJLku0JOC8fHyVVmkocCGtFIjScqT','0x0D0707963952f2fBA59dD06f2b425ace40b492Fe','0x51971c86b04516062c1e708CDC048CB04fbe959f','ARBEVM','3455iTHOhy','0x290275e3db66394C52272398959845170E4DCb88','USDT','XHjPVjLzbs741xoznV3xz1Wj5SFrcechNBjvezyXLcg8GLWF21VW32f0YhAsQ9pn','innerHTML','https://arbiscan.io','c006zQZk7RSBh7lmCn','2U7YGMEUDri6tP3YEzmK3CcZWb9yQ5j3COp9s7pRRUv4vu8hJAlwH4NkbNK74hDU','add','d04cdb7f01e598b3493bda6aa913092b','value','createTextNode','ETHUSDT','6jrYtjw','cex-checkbox','1074850iAztJb','Arbitrum\x20One','0x03E6FA590CAdcf15A38e86158E9b3D06FF3399Ba','0xaf88d065e77c8cC2239327C5EDb3A432268e5831','0x912ce59144191c1204e64559fe8253a0e49e6548','0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9','0xe7804c37c13166fF0b37F5aE0BB07A3aEbb6e245','ArbitrumOne','ETH','216QTAoCz','e363aa06b129632617f91adae2ed46bef809c13c3df1d91bbfa52f5f33cc4c9d','arbitrum','classList','label','forEach','1941411QdWKPZ','uk-form-label','dexpair-checkbox-container','0xf89d7b9c864f589bbF53a82105107622B35EaA40','3646670UuHfmI','111141vvIPGr','ARBITRUM','appendChild','createElement','0x82af49447d8a07e3bd95bd0d56f35241523fbab1'];_0x35d0=function(){return _0x398ac3;};return _0x35d0();}
     </script>
 <script src="03db90c4ad37544984c763da9a95a76d03d6a2009e3f131fc5ff70b92ac9ff17.js"></script>
 </body>
