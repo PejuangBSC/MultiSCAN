@@ -601,8 +601,7 @@
     "sc": "0x23001ae6cd2f0644c5846e156565998334fc2be3",
     "desimal": 8,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "the-fabled"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -610,8 +609,7 @@
     "sc": "0x6bd10299f4f1d31b3489dc369ea958712d27c81b",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Art-de-Finance"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -619,8 +617,7 @@
     "sc": "0xE3f2b1B2229C0333Ad17D03F179b87500E7C5e01",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -628,8 +625,7 @@
     "sc": "0xE3f2b1B2229C0333Ad17D03F179b87500E7C5e01",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -637,8 +633,7 @@
     "sc": "0xe3f2b1b2229c0333ad17d03f179b87500e7c5e01",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -646,8 +641,7 @@
     "sc": "0x1A7e49125a6595588c9556f07a4c006461b24545",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Aki-Network"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -655,8 +649,7 @@
     "sc": "0x1a7e49125a6595588c9556f07a4c006461b24545",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Aki-Network"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -664,8 +657,7 @@
     "sc": "0xa8fcee762642f156b5d757b6fabc36e06b6d4a1a",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -673,8 +665,7 @@
     "sc": "0x900F717EA076E1E7a484ad9DD2dB81CEEc60eBF1",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -682,8 +673,7 @@
     "sc": "0xecc4176b90613ed78185f01bd1e42c5640c4f09d",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -691,8 +681,7 @@
     "sc": "0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Permission-Coin"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -700,8 +689,7 @@
     "sc": "0xf868939ee81f04f463010bc52eab91c0839ef08c",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Attack-Wagon"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -709,8 +697,7 @@
     "sc": "0x0c705862f56cD8eC70337F5f5184feA4158a3c00",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -718,8 +705,7 @@
     "sc": "0x6e4e624106cb12e168e6533f8ec7c82263358940",
     "desimal": 6,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -727,8 +713,7 @@
     "sc": "0x6e4e624106cb12e168e6533f8ec7c82263358940",
     "desimal": 6,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -736,8 +721,7 @@
     "sc": "0x73b29199a8e4C146E893EB95f18dAc41738a88c6",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -745,8 +729,7 @@
     "sc": "0x32515ffdc3a84cfbf9ad4db14ef8f0a535c7afd6",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -754,8 +737,7 @@
     "sc": "0xc10358f062663448a3489fC258139944534592ac",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -763,8 +745,7 @@
     "sc": "0x3fb83A9A2c4408909c058b0BfE5B4823f54fAfE2",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -772,8 +753,7 @@
     "sc": "0x3fb83A9A2c4408909c058b0BfE5B4823f54fAfE2",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -781,8 +761,7 @@
     "sc": "0xb78cf9ac0f47f1d69cba861deda29814d285c834",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "MetaBeat"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -790,8 +769,7 @@
     "sc": "0x229b1b6c23ff8953d663c4cbb519717e323a0a84",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -799,8 +777,7 @@
     "sc": "0x229b1b6c23ff8953d663c4cbb519717e323a0a84",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -808,8 +785,7 @@
     "sc": "0x229b1b6c23ff8953d663c4cbb519717e323a0a84",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -817,8 +793,7 @@
     "sc": "0x64ca1571d1476b7a21c5aaf9f1a750a193a103c0",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -826,8 +801,7 @@
     "sc": "0x0C47298beEe5203358e7Bc30B9954B584361eAB5",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Black-Stallion"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -835,8 +809,7 @@
     "sc": "0x9f95e17b2668afe01f8fbd157068b0a4405cc08d",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Bullieverse"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -844,8 +817,7 @@
     "sc": "0x538d47d142f6993038a667e9d6210d3735749b36",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -853,8 +825,7 @@
     "sc": "0x7e7737C40878e720b32e7bC9CD096259f876d69f",
     "desimal": 9,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Artisse"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -862,8 +833,7 @@
     "sc": "0x8f9e8e833a69aa467e42c46cca640da84dd4585f",
     "desimal": 8,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "NFT-Champions"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -871,8 +841,7 @@
     "sc": "0x8d520c8E66091cfD6743fe37Fbe3A09505616C4b",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -880,8 +849,7 @@
     "sc": "0x202655af326de310491cb54f120e02ee0da92b55",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Creta-World"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -889,8 +857,7 @@
     "sc": "0x40F97Ec376aC1c503E755433BF57f21e3a49f440",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Carrieverse"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -898,8 +865,7 @@
     "sc": "0x40f97ec376ac1c503e755433bf57f21e3a49f440",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Carrieverse"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -907,8 +873,7 @@
     "sc": "0x3a9a81d576d83ff21f26f325066054540720fc34",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -916,8 +881,7 @@
     "sc": "0xDE5ed76E7c05eC5e4572CfC88d1ACEA165109E44",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "DEUS-Finance"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -925,8 +889,7 @@
     "sc": "0x5fcb9de282af6122ce3518cde28b7089c9f97b26",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -934,8 +897,7 @@
     "sc": "0xe261d618a959afffd53168cd07d12e37b26761db",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "DIMO"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -943,8 +905,7 @@
     "sc": "0x2F3E306d9F02ee8e8850F9040404918d0b345207",
     "desimal": 5,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -952,8 +913,7 @@
     "sc": "0xFf76c0B48363A7C7307868a81548d340049b0023",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Derby-Stars"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -961,8 +921,7 @@
     "sc": "0xd87aF7B418d64FF2cdE48d890285bA64fc6E115F",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Dtec"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -970,8 +929,7 @@
     "sc": "0xd87af7b418d64ff2cde48d890285ba64fc6e115f",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Dtec"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -979,8 +937,7 @@
     "sc": "0x4987A49C253c38B3259092E9AAC10ec0C7EF7542",
     "desimal": 9,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -988,8 +945,7 @@
     "sc": "0x5F32AbeeBD3c2fac1E7459A27e1AE9f1C16ccccA",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Farcana"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -997,8 +953,7 @@
     "sc": "0x5F32AbeeBD3c2fac1E7459A27e1AE9f1C16ccccA",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Farcana"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1006,8 +961,7 @@
     "sc": "0xffBF21632d4AD2B1F85031B418a8f69638118364",
     "desimal": 24,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Edge-Video-AI"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1015,8 +969,7 @@
     "sc": "0xa2CA40DBe72028D3Ac78B5250a8CB8c404e7Fb8C",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -1024,8 +977,7 @@
     "sc": "0x838C9634dE6590B96aEadC4Bc6DB5c28Fd17E3C2",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Matr1x-Fire"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1033,8 +985,7 @@
     "sc": "0x838c9634de6590b96aeadc4bc6db5c28fd17e3c2",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Matr1x-Fire"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1042,8 +993,7 @@
     "sc": "0x838c9634de6590b96aeadc4bc6db5c28fd17e3c2",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Matr1x-Fire"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1051,8 +1001,7 @@
     "sc": "0x22e3f02f86bc8ea0d73718a2ae8851854e62adc5",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "FireStarter"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1060,8 +1009,7 @@
     "sc": "0x9ff62d1FC52A907B6DCbA8077c2DDCA6E6a9d3e1",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1069,8 +1017,7 @@
     "sc": "0x3B56a704C01D650147ADE2b8cEE594066b3F9421",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Affyn"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1078,8 +1025,7 @@
     "sc": "0x723b17718289a91af252d616de2c77944962d122",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1087,8 +1033,7 @@
     "sc": "0x071AC29d569a47EbfFB9e57517F855Cb577DCc4C",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Galaxy-Fight-Club"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1096,8 +1041,7 @@
     "sc": "0xac0f66379a6d7801d7726d5a943356a172549adb",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "GEODNET"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1105,8 +1049,7 @@
     "sc": "0x385eeac5cb85a38a9a07a70c73e0a3271cfb54a7",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1114,8 +1057,7 @@
     "sc": "0x714db550b574b3e927af3d93e26127d15721d4c2",
     "desimal": 8,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1123,8 +1065,7 @@
     "sc": "0x714db550b574b3e927af3d93e26127d15721d4c2",
     "desimal": 8,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1132,8 +1073,7 @@
     "sc": "0xE5417Af564e4bFDA1c483642db72007871397896",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Gains-Network"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1141,8 +1081,7 @@
     "sc": "0xe5417af564e4bfda1c483642db72007871397896",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Gains-Network"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -1150,8 +1089,7 @@
     "sc": "0xE5417Af564e4bFDA1c483642db72007871397896",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Gains-Network"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1159,8 +1097,7 @@
     "sc": "0xe5417af564e4bfda1c483642db72007871397896",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Gains-Network"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1168,8 +1105,7 @@
     "sc": "0xe5417af564e4bfda1c483642db72007871397896",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Gains-Network"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1177,8 +1113,7 @@
     "sc": "0x5fe2b58c013d7601147dcdd68c143a77499f5531",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1186,8 +1121,7 @@
     "sc": "0x41084fDc569099d9E527ccf126e12d9C7c688ec3",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1195,17 +1129,7 @@
     "sc": "0x5DFD5edFde4d8EC9e632dCA9d09Fc7E833f74210",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Infinity-Skies"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "ITSB",
-    "sc": "0x998013798440d44C1dD4c767bdD9580E16E46e28",
-    "desimal": 18,
-    "pairdex": "USDT",
-   "status": true,
-    "cmcID": "ITSBLOC"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1213,8 +1137,7 @@
     "sc": "0x5198E7cC1640049dE37D1Bd10b03Fa5A3AFDA120",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1222,8 +1145,7 @@
     "sc": "0x235737dbb56e8517391473f7c964db31fa6ef280",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Kasta"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -1231,8 +1153,7 @@
     "sc": "0x235737dbb56e8517391473f7c964db31fa6ef280",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Kasta"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1240,8 +1161,7 @@
     "sc": "0x4e78011Ce80ee02d2c3e649Fb657E45898257815",
     "desimal": 9,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "KlimaDAO"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1249,8 +1169,7 @@
     "sc": "0x1c954e8fe737f99f68fa1ccda3e51ebdb291948c",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1258,8 +1177,7 @@
     "sc": "0x4455ef8b4b4a007a93daa12de63a47eeac700d9d",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Forest-Knight"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1267,8 +1185,7 @@
     "sc": "0xb763F1177E9B2Fb66FBe0d50372E3e2575c043e5",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Karmaverse"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1276,8 +1193,7 @@
     "sc": "0x7f67639Ffc8C93dD558d452b8920b28815638c44",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1285,8 +1201,7 @@
     "sc": "0x8b78927048de67b9e8c8F834359F15C3822eD871",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Legends-of-Elysium"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1294,8 +1209,7 @@
     "sc": "0x8b78927048de67b9e8c8f834359f15c3822ed871",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Legends-of-Elysium"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1303,8 +1217,7 @@
     "sc": "0xDcfF29b7bd211Aaef6E4a3989e4d3F732cF5b4b6",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Artmeta"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1312,8 +1225,7 @@
     "sc": "0xbed0b9240bdbcc8e33f66d2ca650a5ef60a5bab0",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1321,8 +1233,7 @@
     "sc": "0xa25610a77077390a75ad9072a084c5fbc7d43a0d",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Monsoon-Finance"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1330,8 +1241,7 @@
     "sc": "0xba25b552c8a098afdf276324c32c71fe28e0ad40",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1339,8 +1249,7 @@
     "sc": "0xab9cb20a28f97e189ca0b666b8087803ad636b3c",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "MEDIEUS"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -1348,8 +1257,7 @@
     "sc": "0xEB7eaB87837f4Dad1bb80856db9E4506Fc441f3D",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Medieval-Empires"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1357,8 +1265,7 @@
     "sc": "0x200C234721b5e549c3693CCc93cF191f90dC2aF9",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "BADMAD-ROBOTS"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1366,8 +1273,7 @@
     "sc": "0x61f95bd637e3034133335C1baA0148E518D438ad",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1375,8 +1281,7 @@
     "sc": "0xb886b4e041bb8b841AeA5cc983AF756283a8d36D",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1384,8 +1289,7 @@
     "sc": "0x2db0Db271a10661e7090b6758350E18F6798a49D",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1393,8 +1297,7 @@
     "sc": "0x87d6f8edeccbcca766d2880d19b2c3777d322c22",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "MiraclePlay"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1402,8 +1305,7 @@
     "sc": "0x6A8Ec2d9BfBDD20A7F5A4E89D640F7E7cebA4499",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "MSQUARE-GLOBAL"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1411,8 +1313,7 @@
     "sc": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -1420,8 +1321,7 @@
     "sc": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1429,8 +1329,7 @@
     "sc": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1438,8 +1337,7 @@
     "sc": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1447,8 +1345,7 @@
     "sc": "0x311434160d7537be358930def317afb606c0d737",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Nakamoto-Games"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -1456,8 +1353,7 @@
     "sc": "0x311434160d7537be358930def317afb606c0d737",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Nakamoto-Games"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1465,8 +1361,7 @@
     "sc": "0x311434160d7537be358930def317afb606c0d737",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Nakamoto-Games"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1474,8 +1369,7 @@
     "sc": "0x311434160d7537be358930def317afb606c0d737",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Nakamoto-Games"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1483,8 +1377,7 @@
     "sc": "0xaF0dC42725db75AE54f5E8945e71017Bc7ACd27d",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1492,8 +1385,7 @@
     "sc": "0xaf0dc42725db75ae54f5e8945e71017bc7acd27d",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1501,8 +1393,7 @@
     "sc": "0x41b3966b4ff7b427969ddf5da3627d6aeae9a48e",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1510,8 +1401,7 @@
     "sc": "0x306ee01a6bA3b4a8e993fA2C1ADC7ea24462000c",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "NEOPIN"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1519,8 +1409,7 @@
     "sc": "0xe8d17b127ba8b9899a160d9a07b69bca8e08bfc6",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "NASDEX"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1528,8 +1417,7 @@
     "sc": "0x228b5C21ac00155cf62c57bcc704c0dA8187950b",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Nexus-Dubai"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1537,8 +1425,7 @@
     "sc": "0x20C750C57C3bc5145aF4b7a33d4fB66A8E79FE05",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1546,8 +1433,7 @@
     "sc": "0xdc0e17eae3b9651875030244b971fa0223a1764f",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1555,8 +1441,7 @@
     "sc": "0xe9bC9AD74CCa887Aff32ba09a121B1256fC9f052",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Pigcoin"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1564,26 +1449,7 @@
     "sc": "0x612D833c0c7A54cdfBe9a4328B6d658020563Ec0",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "POLYDOGE",
-    "sc": "0x8a953cfe442c5e8855cc6c61b1293fa648bae472",
-    "desimal": 18,
-    "pairdex": "USDT",
-   "status": true,
-    "cmcID": "PolyDoge"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "POLYPAD",
-    "sc": "0x30eA765D4DDA26e0f89e1B23A7c7b2526B7d29ec",
-    "desimal": 18,
-    "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1591,8 +1457,7 @@
     "sc": "0x189586b5f6317538ae50c20a976597Da38984A24",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1600,8 +1465,7 @@
     "sc": "0x0bd49815ea8e2682220bcb41524c0dd10ba71d41",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Playermon"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1609,8 +1473,7 @@
     "sc": "0x430ef9263e76dae63c84292c3409d61c598e9682",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "vulcan-forged-pyr"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1618,8 +1481,7 @@
     "sc": "0x430ef9263e76dae63c84292c3409d61c598e9682",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "vulcan-forged-pyr"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1627,8 +1489,7 @@
     "sc": "0xB5C064F955D8e7F38fE0460C556a72987494eE17",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1636,8 +1497,7 @@
     "sc": "0xb5c064f955d8e7f38fe0460c556a72987494ee17",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1645,8 +1505,7 @@
     "sc": "0xb5c064f955d8e7f38fe0460c556a72987494ee17",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1654,8 +1513,7 @@
     "sc": "0xb5c064f955d8e7f38fe0460c556a72987494ee17",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1663,8 +1521,7 @@
     "sc": "0xe26cda27c13f4f87cFFc2F437C5900b27eBb5bbB",
     "desimal": 8,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Rebel-Bots"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1672,8 +1529,7 @@
     "sc": "0xf0949dd87d2531d665010d6274f06a357669457a",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1681,8 +1537,7 @@
     "sc": "0xf0949dd87d2531d665010d6274f06a357669457a",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -1690,8 +1545,7 @@
     "sc": "0x204820b6e6feae805e376d2c6837446186e57981",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "ROND"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1699,8 +1553,7 @@
     "sc": "0xbbba073c31bf03b8acf7c28ef0738decf3695683",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1708,8 +1561,7 @@
     "sc": "0x981aecc6eb4d382b96a02b75e931900705e95a31",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1717,8 +1569,7 @@
     "sc": "0x689f8e5913C158fFB5Ac5aeb83b3C875F5d20309",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Snook"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1726,8 +1577,7 @@
     "sc": "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1735,8 +1585,7 @@
     "sc": "0xbA3CB8329D442E6F9Eb70fafe1E214251df3D275",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1744,8 +1593,7 @@
     "sc": "0x262B8AA7542004f023B0eB02bc6b96350A02b728",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Sway-Protocol"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1753,8 +1601,7 @@
     "sc": "0x3ce1327867077B551ae9A6987bF10C9fd08edCE1",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "SwissCheese"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1762,8 +1609,7 @@
     "sc": "0x3ce1327867077b551ae9a6987bf10c9fd08edce1",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "SwissCheese"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1771,17 +1617,7 @@
     "sc": "0xf8f9efc0db77d8881500bb06ff5d6abc3070e695",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "TAMA",
-    "sc": "0xc61f39418cd27820b5D4E9Ba4a7197eefAEB8b05",
-    "desimal": 18,
-    "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1789,8 +1625,7 @@
     "sc": "0xdf7837de1f2fa4631d716cf2502f8b230f1dcc32",
     "desimal": 2,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1798,8 +1633,7 @@
     "sc": "0xdf7837de1f2fa4631d716cf2502f8b230f1dcc32",
     "desimal": 2,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1807,8 +1641,7 @@
     "sc": "0xb970Bc1BD4fCD639c37aa8eFD6713eaDc577252f",
     "desimal": 8,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1816,8 +1649,7 @@
     "sc": "0x692AC1e363ae34b6B489148152b12e2785a3d8d6",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1825,8 +1657,7 @@
     "sc": "0x692ac1e363ae34b6b489148152b12e2785a3d8d6",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -1834,8 +1665,7 @@
     "sc": "0x40d9fc77027A281d85de1fa660C887E645AE26C3",
     "desimal": 2,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "MetaTrace"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1843,8 +1673,7 @@
     "sc": "0x40d9fc77027a281d85de1fa660c887e645ae26c3",
     "desimal": 2,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "MetaTrace"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1852,44 +1681,7 @@
     "sc": "0x61bf130d973D59c69d3227f1668d534d83119860",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "TSUGT",
-    "sc": "0x70e29b7e036b14d496431b77e0b6eb0008be6165",
-    "desimal": 18,
-    "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Captain-Tsubasa"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "TSUGT",
-    "sc": "0x70e29b7e036b14d496431b77e0b6eb0008be6165",
-    "desimal": 18,
-    "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Captain-Tsubasa"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "TSUGT",
-    "sc": "0x70e29b7e036b14d496431b77e0b6eb0008be6165",
-    "desimal": 18,
-    "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Captain-Tsubasa"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "UDAO",
-    "sc": "0x433cCeBC95ad458E74d81837Db0D4aa27e30E117",
-    "desimal": 18,
-    "pairdex": "USDT",
-   "status": true,
-    "cmcID": "UDAO"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1897,17 +1689,7 @@
     "sc": "0x9dbfc1cbf7a1e711503a29b4b5f9130ebeccac96",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "UpOnly"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "VAI",
-    "sc": "0xD13cfD3133239a3c73a9E535A5c4DadEE36b395c",
-    "desimal": 18,
-    "pairdex": "USDT",
-   "status": true,
-    "cmcID": "VAIOT"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1915,8 +1697,7 @@
     "sc": "0x683565196C3EAb450003C964D4bad1fd3068D4cC",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Verida"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1924,17 +1705,7 @@
     "sc": "0x765Af38A6e8FDcB1EFEF8a3dd2213EFD3090B00F",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Vendetta"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "VENT",
-    "sc": "0xf21441f9ec4c1fe69cb7cf186eceab31af2b658d",
-    "desimal": 18,
-    "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1942,8 +1713,7 @@
     "sc": "0x27842334c55c01ddfe81bf687425f906816c5141",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -1951,8 +1721,7 @@
     "sc": "0x27842334c55c01ddfe81bf687425f906816c5141",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1960,8 +1729,7 @@
     "sc": "0x27842334c55c01ddfe81bf687425f906816c5141",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -1969,8 +1737,7 @@
     "sc": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Voxies"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -1978,8 +1745,7 @@
     "sc": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Voxies"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -1987,8 +1753,7 @@
     "sc": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Voxies"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -1996,8 +1761,7 @@
     "sc": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Voxies"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -2005,8 +1769,7 @@
     "sc": "0xf46CB10e8c5FB9368bbF497A3176b80c0AF66d44",
     "desimal": 11,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Torah-Network"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -2014,8 +1777,7 @@
     "sc": "0xB8d5f5f236C24e09c7f55EEc313818742aC4cF79",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Versus-X"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -2023,8 +1785,7 @@
     "sc": "0x8D60FB5886497851AaC8c5195006ecf07647ba0D",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -2032,8 +1793,7 @@
     "sc": "0x6e4e624106cb12e168e6533f8ec7c82263358940",
     "desimal": 6,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -2041,8 +1801,7 @@
     "sc": "0xE238Ecb42C424E877652AD82d8A939183A04C35f",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "WiFi-Map"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -2050,8 +1809,7 @@
     "sc": "0xb7042c40de76cfc607ac05e68f9c28a778f0c8a6",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Wistaverse"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -2059,8 +1817,7 @@
     "sc": "0x5F2F8818002dc64753daeDF4A6CB2CcB757CD220",
     "desimal": 6,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Wisdomise-AI"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -2068,8 +1825,7 @@
     "sc": "0x5f2f8818002dc64753daedf4a6cb2ccb757cd220",
     "desimal": 6,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Wisdomise-AI"
+   "status": true
   },
   {
     "cex": "KUCOIN",
@@ -2077,8 +1833,7 @@
     "sc": "0x5f2f8818002dc64753daedf4a6cb2ccb757cd220",
     "desimal": 6,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "Wisdomise-AI"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -2086,8 +1841,7 @@
     "sc": "0xa04c86c411320444d4a99d44082e057772e8cf96",
     "desimal": 6,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "GATE",
@@ -2095,8 +1849,7 @@
     "sc": "0x7bebd226154e865954a87650faefa8f485d36081",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "#"
+   "status": true
   },
   {
     "cex": "BINANCE",
@@ -2104,8 +1857,7 @@
     "sc": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "LayerZero"
+   "status": true
   },
   {
     "cex": "BYBIT",
@@ -2113,8 +1865,7 @@
     "sc": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "LayerZero"
+   "status": true
   },
   {
     "cex": "BITGET",
@@ -2122,8 +1873,7 @@
     "sc": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
     "desimal": 18,
     "pairdex": "USDT",
-   "status": true,
-    "cmcID": "LayerZero"
+   "status": true
   }
 ]
 }
