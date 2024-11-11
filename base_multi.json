@@ -590,7 +590,7 @@
         ]
   ],
   "telegram": {
-    "token": "7857099769:AAH6_LuLj7wU8n1WSvD81Z0tIWy3_9K4Q60",
+    "token": "8088189047:AAHXwPZ-f6D-zqppLauWGIV5enGn8qjxrvw",
     "id_grup": "-1002079288809"
   },
 "token":
@@ -632,49 +632,13 @@
     "cex": "GATE"
   },
   {
-    "symbol": "ALU",
-    "status": true,
-    "sc": "0x91ad1b44913cd1b8241a4ff1e2eaa198da6bf4c9",
-    "desimal": 18,
-    "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "BITGET"
-  },
-  {
-    "symbol": "ANS",
-    "status": true,
-    "sc": "0xa8C2E771288585229eEa8DBe072EDfA7bcB388bb",
-    "desimal": 18,
-    "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "GATE"
-  },
-  {
     "symbol": "AXL",
     "status": true,
     "sc": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
-    "desimal": 18,
+    "desimal": 6,
     "cmcID": "#N/A",
     "pairdex": "USDC",
     "cex": "BINANCE"
-  },
-  {
-    "symbol": "BABY",
-    "status": true,
-    "sc": "0x53E562b9B7E5E94b81f10e96Ee70Ad06df3D2657",
-    "desimal": 18,
-    "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "GATE"
-  },
-  {
-    "symbol": "BASEBEARCUTE",
-    "status": true,
-    "sc": "0x41a22eb30df65d6ab0ce0b4cfe8f4e0eb306d471",
-    "desimal": 18,
-    "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "GATE"
   },
   {
     "symbol": "BASEX",
@@ -684,15 +648,6 @@
     "cmcID": "#N/A",
     "pairdex": "USDC",
     "cex": "GATE"
-  },
-  {
-    "symbol": "BCP",
-    "status": true,
-    "sc": "0x87c211144b1d9bdaa5a791b8099ea4123dc31d21",
-    "desimal": 18,
-    "cmcID": "Block-Chain-People",
-    "pairdex": "USDC",
-    "cex": "BITGET"
   },
   {
     "symbol": "BCP",
@@ -709,24 +664,6 @@
     "sc": "0xBC45647eA894030a4E9801Ec03479739FA2485F0",
     "desimal": 18,
     "cmcID": "Basenji",
-    "pairdex": "USDC",
-    "cex": "GATE"
-  },
-  {
-    "symbol": "BONUS",
-    "status": true,
-    "sc": "0xFe7c0AF60e52dDf05C0F5F89CBf89758a45F6928",
-    "desimal": 18,
-    "cmcID": "BonusBlock",
-    "pairdex": "USDC",
-    "cex": "BYBIT"
-  },
-  {
-    "symbol": "BONUS",
-    "status": true,
-    "sc": "0xFe7c0AF60e52dDf05C0F5F89CBf89758a45F6928",
-    "desimal": 18,
-    "cmcID": "BonusBlock",
     "pairdex": "USDC",
     "cex": "GATE"
   },
@@ -884,42 +821,6 @@
     "cex": "GATE"
   },
   {
-    "symbol": "ETH",
-    "status": true,
-    "sc": 4,
-    "desimal": 18,
-    "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "BYBIT"
-  },
-  {
-    "symbol": "ETH",
-    "status": true,
-    "sc": "",
-    "desimal": 18,
-    "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "GATE"
-  },
-  {
-    "symbol": "ETH",
-    "status": true,
-    "sc": "",
-    "desimal": 18,
-    "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "BINANCE"
-  },
-  {
-    "symbol": "EVERY",
-    "status": true,
-    "sc": "#N/A",
-    "desimal": 18,
-    "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "BYBIT"
-  },
-  {
     "symbol": "FOMO",
     "status": true,
     "sc": "0x9a86980d3625b4a6e69d8a4606d51cbc019e2002",
@@ -938,15 +839,6 @@
     "cex": "GATE"
   },
   {
-    "symbol": "FROKAI",
-    "status": true,
-    "sc": "0xcbfe8E065534D0cc117Bd71A11B0249a63E247F7",
-    "desimal": 18,
-    "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "GATE"
-  },
-  {
     "symbol": "ISK",
     "status": true,
     "sc": "0xd85EFF20288ca72eA9eEcFFb428F89EE5066CA5C",
@@ -954,15 +846,6 @@
     "cmcID": "#N/A",
     "pairdex": "USDC",
     "cex": "GATE"
-  },
-  {
-    "symbol": "KATT",
-    "status": true,
-    "sc": "0xf4210f93bc68d63df3286c73eba08c6414f40c0d",
-    "desimal": 18,
-    "cmcID": "Katt-Daddy",
-    "pairdex": "USDC",
-    "cex": "BITGET"
   },
   {
     "symbol": "LAZYCAT",
@@ -1057,15 +940,6 @@
   {
     "symbol": "MFER",
     "status": true,
-    "sc": "0xe3086852a4b125803c815a158249ae468a3254ca",
-    "desimal": 18,
-    "cmcID": "mfercoin",
-    "pairdex": "USDC",
-    "cex": "BITGET"
-  },
-  {
-    "symbol": "MFER",
-    "status": true,
     "sc": "0xE3086852A4B125803C815a158249ae468A3254Ca",
     "desimal": 18,
     "cmcID": "mfercoin",
@@ -1098,15 +972,6 @@
     "cmcID": "donotfomoew",
     "pairdex": "USDC",
     "cex": "BITGET"
-  },
-  {
-    "symbol": "MOG",
-    "status": true,
-    "sc": "#N/A",
-    "desimal": 18,
-    "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "BYBIT"
   },
   {
     "symbol": "MOJO",
@@ -1150,15 +1015,6 @@
     "sc": "0x314d7f9e2f55B430ef656FBB98A7635D43a2261E",
     "desimal": 18,
     "cmcID": "NAYM",
-    "pairdex": "USDC",
-    "cex": "GATE"
-  },
-  {
-    "symbol": "PI",
-    "status": true,
-    "sc": "0x31d1154E9fD9607E6F95B4efb6FC3d868426fC30",
-    "desimal": 18,
-    "cmcID": "#N/A",
     "pairdex": "USDC",
     "cex": "GATE"
   },
@@ -1280,15 +1136,6 @@
     "cex": "GATE"
   },
   {
-    "symbol": "TOWER",
-    "status": true,
-    "sc": "0xf7c1cefcf7e1dd8161e00099facd3e1db9e528ee",
-    "desimal": 18,
-    "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "BITGET"
-  },
-  {
     "symbol": "UNA",
     "status": true,
     "sc": "0x24569d33653c404f90af10a2b98d6e0030d3d267",
@@ -1337,7 +1184,7 @@
     "symbol": "WAXL",
     "status": true,
     "sc": "0x23ee2343B892b1BB63503a4FAbc840E0e2C6810f",
-    "desimal": 18,
+    "desimal": 6,
     "cmcID": "#N/A",
     "pairdex": "USDC",
     "cex": "GATE"
