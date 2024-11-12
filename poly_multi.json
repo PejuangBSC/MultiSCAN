@@ -596,1029 +596,1435 @@
 "token":
 [
   {
-    "cex": "KUCOIN",
-    "symbol": "AA",
-    "sc": "0xb0ecc6ac0073c063dcfc026ccdc9039cae2998e1",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "A3S-Protocol"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "AARK",
-    "sc": "0xCa4e51F6AD4AFd9d1068E5899De9dd7d73F3463D",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Aark"
-  },
-  {
     "cex": "GATE",
-    "symbol": "AARK",
-    "sc": "0xCa4e51F6AD4AFd9d1068E5899De9dd7d73F3463D",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Aark"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "AFG",
-    "sc": "0x619C82392cb6E41778b7d088860Fea8447941f4c",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Army-of-Fortune-Gem"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "AICODE",
-    "sc": "0x7C8a1A80FDd00C9Cccd6EbD573E9EcB49BFa2a59",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "AI-CODE"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "APTR",
-    "sc": "0x1C986661170c1834db49C3830130D4038eEeb866",
-    "desimal": 6,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Aperture-Finance"
-  },
-  {
-    "cex": "BINANCE",
-    "symbol": "ARB",
-    "sc": "0x912CE59144191C1204E64559FE8253a0e49E6548",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Arbitrum"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "ARB",
-    "sc": "0x912CE59144191C1204E64559FE8253a0e49E6548",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Arbitrum"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "ARB",
-    "sc": "0x912CE59144191C1204E64559FE8253a0e49E6548",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Arbitrum"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "ARB",
-    "sc": "0x912CE59144191C1204E64559FE8253a0e49E6548",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Arbitrum"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "ARBI",
-    "sc": "0x07DD5BEAffb65B8fF2e575d500BDf324a05295DC",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "ArbiPad"
-  },
-  {
-    "cex": "BINANCE",
-    "symbol": "AXL",
-    "sc": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
-    "desimal": 6,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "AXL",
-    "sc": "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f",
-    "desimal": 6,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "BEBE",
-    "sc": "0x406d59819Bc2AeF682F4Ff2769085c98a264F97b",
-    "desimal": 6,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "BRI",
-    "sc": "0x51F6EE60108CBCB3b613093BD3F224cB49Aa1610",
-    "desimal": 9,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "CATCH",
-    "sc": "0xbC4c97Fb9befaa8B41448e1dFcC5236dA543217F",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "SpaceCatch"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "CATCH",
-    "sc": "0xbC4c97Fb9befaa8B41448e1dFcC5236dA543217F",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "SpaceCatch"
-  },
-  {
-    "cex": "BINANCE",
-    "symbol": "CRV",
-    "sc": "0x11cdb42b0eb46d95f990bedd4695a6e3fa034978",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "CTOK",
-    "sc": "0xA586B3B80D7e3e8d439e25fBC16Bc5bcEE3E2c85",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Codyfight"
-  },
-  {
-    "cex": "BINANCE",
-    "symbol": "DODO",
-    "sc": "0x69eb4fa4a2fbd498c257c57ea8b7655a2559a581",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "ECLIP",
-    "sc": "0x93ca0d85837FF83158Cd14D65B169CdB223b1921",
-    "desimal": 6,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Eclipse-Fi"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "EGP",
-    "sc": "0x7E7a7C916c19a45769f6BDAF91087f93c6C12F78",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "EGP",
-    "sc": "0x7E7a7C916c19a45769f6BDAF91087f93c6C12F78",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "EGP",
-    "sc": "0x7E7a7C916c19a45769f6BDAF91087f93c6C12F78",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "EMC",
-    "sc": "0xDFB8BE6F8c87f74295A87de951974362CedCFA30",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Edge-Matrix-Chain"
-  },
-  {
-    "cex": "BINANCE",
-    "symbol": "ETHFI",
-    "sc": "0x7189fb5b6504bbff6a852b13b7b82a3c118fdc27",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "FOREX",
-    "sc": "0xDb298285FE4C5410B05390cA80e8Fbe9DE1F259B",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "handleFOREX"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "G3",
-    "sc": "0xc24A365A870821EB83Fd216c9596eDD89479d8d7",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "G3",
-    "sc": "0xc24A365A870821EB83Fd216c9596eDD89479d8d7",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BINANCE",
-    "symbol": "GMX",
-    "sc": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "GMX",
-    "sc": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "GMX",
-    "sc": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "GMX",
-    "sc": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BINANCE",
-    "symbol": "GNS",
-    "sc": "0x18c11FD286C5EC11c3b683Caa813B77f5163A122",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "GNS",
-    "sc": "0x18c11FD286C5EC11c3b683Caa813B77f5163A122",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "GNS",
-    "sc": "0x18c11FD286C5EC11c3b683Caa813B77f5163A122",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "GNS",
-    "sc": "0x18c11FD286C5EC11c3b683Caa813B77f5163A122",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "GRAIL",
-    "sc": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Camelot-Token"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "GRAIL",
-    "sc": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Camelot-Token"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "GRAIL",
-    "sc": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Camelot-Token"
-  },
-  {
-    "cex": "BINANCE",
-    "symbol": "GRT",
-    "sc": "0x9623063377AD1B27544C965cCd7342f7EA7e88C7",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "GRT",
-    "sc": "0x9623063377AD1B27544C965cCd7342f7EA7e88C7",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "GRT",
-    "sc": "0x9623063377AD1B27544C965cCd7342f7EA7e88C7",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "GSWIFT",
-    "sc": "0x580E933D90091b9cE380740E3a4A39c67eB85B4c",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "GameSwift"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "HIPPOP",
-    "sc": "0xa0995d43901551601060447f9aBf93ebc277cEC2",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "HIPPOP"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "HMX",
-    "sc": "0x83d6c8C06ac276465e4C92E7aC8C23740F435140",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "HMX"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "HOME",
-    "sc": "0x1bD013bD089C2B6b2D30a0e0B545810a5844E761",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "OtterHome"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "IPOR",
-    "sc": "0x34229B3f16fBCDfA8d8d9d17C0852F9496f4C7BB",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BINANCE",
-    "symbol": "JOE",
-    "sc": "0x371c7ec6d8039ff7933a2aa28eb827ffe1f52f07",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "JOE"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "KNJ",
-    "sc": "0xfbbb21d8e7A461f06e5E27efD69703aCB5C732A8",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Kunji-Finance"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "LMR",
-    "sc": "0x0FC0c323Cf76E188654D63D62e668caBeC7a525b",
+    "symbol": "ABYS",
+    "sc": "0x23001ae6cd2f0644c5846e156565998334fc2be3",
     "desimal": 8,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
+    "cmcID": "Trinity-Of-The-Fabled"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "ADF",
+    "sc": "0x6bd10299f4f1d31b3489dc369ea958712d27c81b",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Art-de-Finance"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "AEG",
+    "sc": "0xE3f2b1B2229C0333Ad17D03F179b87500E7C5e01",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
     "cmcID": "#"
   },
   {
-    "cex": "BITGET",
-    "symbol": "LNDX",
-    "sc": "0xe10D4a4255D2D35c9e23E2C4790E073046FbaF5c",
+    "cex": "BYBIT",
+    "symbol": "AEG",
+    "sc": "0xE3f2b1B2229C0333Ad17D03F179b87500E7C5e01",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "AEG",
+    "sc": "0xe3f2b1b2229c0333ad17d03f179b87500e7c5e01",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "AKI",
+    "sc": "0x1A7e49125a6595588c9556f07a4c006461b24545",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Aki-Network"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "AKI",
+    "sc": "0x1a7e49125a6595588c9556f07a4c006461b24545",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Aki-Network"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "ALN",
+    "sc": "0xa8fcee762642f156b5d757b6fabc36e06b6d4a1a",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "ANGLE",
+    "sc": "0x900F717EA076E1E7a484ad9DD2dB81CEEc60eBF1",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "ANML",
+    "sc": "0xecc4176b90613ed78185f01bd1e42c5640c4f09d",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "ASK",
+    "sc": "0xaA3717090CDDc9B227e49d0D84A28aC0a996e6Ff",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Permission-Coin"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "ATK",
+    "sc": "0xf868939ee81f04f463010bc52eab91c0839ef08c",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Attack-Wagon"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "AWT",
+    "sc": "0x0c705862f56cD8eC70337F5f5184feA4158a3c00",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "AXL",
+    "sc": "0x6e4e624106cb12e168e6533f8ec7c82263358940",
     "desimal": 6,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "BITGET",
-    "symbol": "LOGX",
-    "sc": "0x59062301Fb510F4ea2417B67404CB16D31E604BA",
-    "desimal": 18,
+    "symbol": "AXL",
+    "sc": "0x6e4e624106cb12e168e6533f8ec7c82263358940",
+    "desimal": 6,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "GATE",
-    "symbol": "LOGX",
-    "sc": "0x59062301Fb510F4ea2417B67404CB16D31E604BA",
+    "symbol": "BAG",
+    "sc": "0x73b29199a8e4C146E893EB95f18dAc41738a88c6",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "BAKED",
+    "sc": "0x32515ffdc3a84cfbf9ad4db14ef8f0a535c7afd6",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "BCMC",
+    "sc": "0xc10358f062663448a3489fC258139944534592ac",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "BCUT",
+    "sc": "0x3fb83A9A2c4408909c058b0BfE5B4823f54fAfE2",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "BCUT",
+    "sc": "0x3fb83A9A2c4408909c058b0BfE5B4823f54fAfE2",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "KUCOIN",
-    "symbol": "LOGX",
-    "sc": "0x59062301Fb510F4ea2417B67404CB16D31E604BA",
+    "symbol": "BEAT",
+    "sc": "0xb78cf9ac0f47f1d69cba861deda29814d285c834",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
+    "cmcID": "MetaBeat"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "BLOK",
+    "sc": "0x229b1b6c23ff8953d663c4cbb519717e323a0a84",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "BLOK",
+    "sc": "0x229b1b6c23ff8953d663c4cbb519717e323a0a84",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "BLOK",
+    "sc": "0x229b1b6c23ff8953d663c4cbb519717e323a0a84",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "BONDLY",
+    "sc": "0x64ca1571d1476b7a21c5aaf9f1a750a193a103c0",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "BS",
+    "sc": "0x0C47298beEe5203358e7Bc30B9954B584361eAB5",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Black-Stallion"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "BULL",
+    "sc": "0x9f95e17b2668afe01f8fbd157068b0a4405cc08d",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Bullieverse"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "BURP",
+    "sc": "0x538d47d142f6993038a667e9d6210d3735749b36",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "CATHEON",
+    "sc": "0x7e7737C40878e720b32e7bC9CD096259f876d69f",
+    "desimal": 9,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Artisse"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "CHAMP",
+    "sc": "0x8f9e8e833a69aa467e42c46cca640da84dd4585f",
+    "desimal": 8,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "NFT-Champions"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "COT",
+    "sc": "0x8d520c8E66091cfD6743fe37Fbe3A09505616C4b",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "CRETA",
+    "sc": "0x202655af326de310491cb54f120e02ee0da92b55",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Creta-World"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "CVTX",
+    "sc": "0x40F97Ec376aC1c503E755433BF57f21e3a49f440",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Carrieverse"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "CVTX",
+    "sc": "0x40f97ec376ac1c503e755433bf57f21e3a49f440",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Carrieverse"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "DATA",
+    "sc": "0x3a9a81d576d83ff21f26f325066054540720fc34",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "DEUS",
+    "sc": "0xDE5ed76E7c05eC5e4572CfC88d1ACEA165109E44",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "DEUS-Finance"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "DHV",
+    "sc": "0x5fcb9de282af6122ce3518cde28b7089c9f97b26",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "DOGA",
+    "sc": "0x2F3E306d9F02ee8e8850F9040404918d0b345207",
+    "desimal": 5,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "DSRUN",
+    "sc": "0xFf76c0B48363A7C7307868a81548d340049b0023",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Derby-Stars"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "DTEC",
+    "sc": "0xd87aF7B418d64FF2cdE48d890285bA64fc6E115F",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Dtec"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "DTEC",
+    "sc": "0xd87af7b418d64ff2cde48d890285ba64fc6e115f",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Dtec"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "DUST",
+    "sc": "0x4987A49C253c38B3259092E9AAC10ec0C7EF7542",
+    "desimal": 9,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "FAR",
+    "sc": "0x5F32AbeeBD3c2fac1E7459A27e1AE9f1C16ccccA",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Farcana"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "FAR",
+    "sc": "0x5F32AbeeBD3c2fac1E7459A27e1AE9f1C16ccccA",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Farcana"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "FAST",
+    "sc": "0xffBF21632d4AD2B1F85031B418a8f69638118364",
+    "desimal": 24,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Edge-Video-AI"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "FEAR",
+    "sc": "0xa2CA40DBe72028D3Ac78B5250a8CB8c404e7Fb8C",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "FIRE",
+    "sc": "0x838C9634dE6590B96aEadC4Bc6DB5c28Fd17E3C2",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Matr1x-Fire"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "FIRE",
+    "sc": "0x838c9634de6590b96aeadc4bc6db5c28fd17e3c2",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Matr1x-Fire"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "FIRE",
+    "sc": "0x838c9634de6590b96aeadc4bc6db5c28fd17e3c2",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Matr1x-Fire"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "FLAME",
+    "sc": "0x22e3f02f86bc8ea0d73718a2ae8851854e62adc5",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "FireStarter"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "FORT",
+    "sc": "0x9ff62d1FC52A907B6DCbA8077c2DDCA6E6a9d3e1",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "FYN",
+    "sc": "0x3B56a704C01D650147ADE2b8cEE594066b3F9421",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Affyn"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "GAIA",
+    "sc": "0x723b17718289a91af252d616de2c77944962d122",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "GCOIN",
+    "sc": "0x071AC29d569a47EbfFB9e57517F855Cb577DCc4C",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Galaxy-Fight-Club"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "GEOD",
+    "sc": "0xac0f66379a6d7801d7726d5a943356a172549adb",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "GEODNET"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "GHST",
+    "sc": "0x385eeac5cb85a38a9a07a70c73e0a3271cfb54a7",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "BINANCE",
-    "symbol": "MAGIC",
-    "sc": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
-    "desimal": 18,
+    "symbol": "GMT",
+    "sc": "0x714db550b574b3e927af3d93e26127d15721d4c2",
+    "desimal": 8,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Treasure"
+    "status": true,
+    "cmcID": "#"
   },
   {
     "cex": "BITGET",
-    "symbol": "MAGIC",
-    "sc": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
-    "desimal": 18,
+    "symbol": "GMT",
+    "sc": "0x714db550b574b3e927af3d93e26127d15721d4c2",
+    "desimal": 8,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Treasure"
+    "status": true,
+    "cmcID": "#"
   },
   {
     "cex": "GATE",
-    "symbol": "MAGIC",
-    "sc": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
+    "symbol": "GNS",
+    "sc": "0xE5417Af564e4bFDA1c483642db72007871397896",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Treasure"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "MAGIC",
-    "sc": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Treasure"
+    "status": true,
+    "cmcID": "Gains-Network"
   },
   {
     "cex": "BINANCE",
-    "symbol": "MAV",
-    "sc": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
+    "symbol": "GNS",
+    "sc": "0xe5417af564e4bfda1c483642db72007871397896",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Maverick-Protocol"
+    "status": true,
+    "cmcID": "Gains-Network"
   },
   {
-    "cex": "GATE",
-    "symbol": "NRN",
-    "sc": "0xdadeca1167fe47499e53Eb50F261103630974905",
+    "cex": "BYBIT",
+    "symbol": "GNS",
+    "sc": "0xE5417Af564e4bFDA1c483642db72007871397896",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
+    "status": true,
+    "cmcID": "Gains-Network"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "GNS",
+    "sc": "0xe5417af564e4bfda1c483642db72007871397896",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Gains-Network"
   },
   {
     "cex": "KUCOIN",
-    "symbol": "NRN",
-    "sc": "0xdadeca1167fe47499e53Eb50F261103630974905",
+    "symbol": "GNS",
+    "sc": "0xe5417af564e4bfda1c483642db72007871397896",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "OPUL",
-    "sc": "0x0c5fa0E07949F941A6c2C29a008252db1527d6EE",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "OPUL",
-    "sc": "0x0c5fa0E07949F941A6c2C29a008252db1527d6EE",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "OX",
-    "sc": "0xba0Dda8762C24dA9487f5FA026a9B64b695A07Ea",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "OX-Coin"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "PARAM",
-    "sc": "0x69A1e699f562D7Af66Fc6cc473d99f4430C3AcD2",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Param"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "PARAM",
-    "sc": "0x69A1e699f562D7Af66Fc6cc473d99f4430C3AcD2",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Param"
+    "status": true,
+    "cmcID": "Gains-Network"
   },
   {
     "cex": "BINANCE",
-    "symbol": "PENDLE",
-    "sc": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
+    "symbol": "GRT",
+    "sc": "0x5fe2b58c013d7601147dcdd68c143a77499f5531",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "PENDLE",
-    "sc": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "PENDLE",
-    "sc": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "GATE",
-    "symbol": "PET",
-    "sc": "0x43c25F828390DE5a3648864eb485CC523E039e67",
+    "symbol": "IQT",
+    "sc": "0x41084fDc569099d9E527ccf126e12d9C7c688ec3",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "GATE",
-    "symbol": "POGAI",
-    "sc": "0x6fD58f5a2F3468e35fEb098b5F59F04157002407",
+    "symbol": "ISKY",
+    "sc": "0x5DFD5edFde4d8EC9e632dCA9d09Fc7E833f74210",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "POGAI"
+    "status": true,
+    "cmcID": "Infinity-Skies"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "KABY",
+    "sc": "0x5198E7cC1640049dE37D1Bd10b03Fa5A3AFDA120",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "KASTA",
+    "sc": "0x235737dbb56e8517391473f7c964db31fa6ef280",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Kasta"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "KASTA",
+    "sc": "0x235737dbb56e8517391473f7c964db31fa6ef280",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Kasta"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "KLIMA",
+    "sc": "0x4e78011Ce80ee02d2c3e649Fb657E45898257815",
+    "desimal": 9,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "KlimaDAO"
   },
   {
     "cex": "BINANCE",
-    "symbol": "POND",
-    "sc": "0xda0a57b710768ae17941a9fa33f8b720c8bd9ddd",
+    "symbol": "KNC",
+    "sc": "0x1c954e8fe737f99f68fa1ccda3e51ebdb291948c",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "GATE",
-    "symbol": "PSI",
-    "sc": "0x602Eb0D99A5e3e76D1510372C4d2020e12EaEa8a",
+    "symbol": "KNIGHT",
+    "sc": "0x4455ef8b4b4a007a93daa12de63a47eeac700d9d",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "TridentDAO"
+    "status": true,
+    "cmcID": "Forest-Knight"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "KNOT",
+    "sc": "0xb763F1177E9B2Fb66FBe0d50372E3e2575c043e5",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Karmaverse"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "LIME",
+    "sc": "0x7f67639Ffc8C93dD558d452b8920b28815638c44",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "LOE",
+    "sc": "0x8b78927048de67b9e8c8F834359F15C3822eD871",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Legends-of-Elysium"
   },
   {
     "cex": "BITGET",
-    "symbol": "QTLX",
-    "sc": "0x4d840b741bc05fde325d4ec0b4cfcd0cea237e4e",
+    "symbol": "LOE",
+    "sc": "0x8b78927048de67b9e8c8f834359f15c3822ed871",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
+    "cmcID": "Legends-of-Elysium"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "MART",
+    "sc": "0xDcfF29b7bd211Aaef6E4a3989e4d3F732cF5b4b6",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Artmeta"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "MAX",
+    "sc": "0xbed0b9240bdbcc8e33f66d2ca650a5ef60a5bab0",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "MCASH",
+    "sc": "0xa25610a77077390a75ad9072a084c5fbc7d43a0d",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Monsoon-Finance"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "MCRN",
+    "sc": "0xba25b552c8a098afdf276324c32c71fe28e0ad40",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "MDUS",
+    "sc": "0xab9cb20a28f97e189ca0b666b8087803ad636b3c",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "MEDIEUS"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "MEE",
+    "sc": "0xEB7eaB87837f4Dad1bb80856db9E4506Fc441f3D",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Medieval-Empires"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "METALDR",
+    "sc": "0x200C234721b5e549c3693CCc93cF191f90dC2aF9",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "BADMAD-ROBOTS"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "MHUNT",
+    "sc": "0x61f95bd637e3034133335C1baA0148E518D438ad",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "MLS",
+    "sc": "0xb886b4e041bb8b841AeA5cc983AF756283a8d36D",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "MOT",
+    "sc": "0x2db0Db271a10661e7090b6758350E18F6798a49D",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "MPT",
+    "sc": "0x87d6f8edeccbcca766d2880d19b2c3777d322c22",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "MiraclePlay"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "MSQ",
+    "sc": "0x6A8Ec2d9BfBDD20A7F5A4E89D640F7E7cebA4499",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "MSQUARE-GLOBAL"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "MV",
+    "sc": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "MV",
+    "sc": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "MV",
+    "sc": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "MV",
+    "sc": "0xa3c322ad15218fbfaed26ba7f616249f7705d945",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "NAKA",
+    "sc": "0x311434160d7537be358930def317afb606c0d737",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Nakamoto-Games"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "NAKA",
+    "sc": "0x311434160d7537be358930def317afb606c0d737",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Nakamoto-Games"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "NAKA",
+    "sc": "0x311434160d7537be358930def317afb606c0d737",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Nakamoto-Games"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "NAKA",
+    "sc": "0x311434160d7537be358930def317afb606c0d737",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Nakamoto-Games"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "NEXG",
+    "sc": "0xaF0dC42725db75AE54f5E8945e71017Bc7ACd27d",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "NEXG",
+    "sc": "0xaf0dc42725db75ae54f5e8945e71017bc7acd27d",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "BINANCE",
-    "symbol": "RDNT",
-    "sc": "0x3082cc23568ea640225c2467653db90e9250aaa0",
+    "symbol": "NEXO",
+    "sc": "0x41b3966b4ff7b427969ddf5da3627d6aeae9a48e",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "NPT",
+    "sc": "0x306ee01a6bA3b4a8e993fA2C1ADC7ea24462000c",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "NEOPIN"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "NSDX",
+    "sc": "0xe8d17b127ba8b9899a160d9a07b69bca8e08bfc6",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "NASDEX"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "NXD",
+    "sc": "0x228b5C21ac00155cf62c57bcc704c0dA8187950b",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Nexus-Dubai"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "ORB",
+    "sc": "0x20C750C57C3bc5145aF4b7a33d4fB66A8E79FE05",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "PERI",
+    "sc": "0xdc0e17eae3b9651875030244b971fa0223a1764f",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "PIGCOIN",
+    "sc": "0xe9bC9AD74CCa887Aff32ba09a121B1256fC9f052",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Pigcoin"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "PINE",
+    "sc": "0x612D833c0c7A54cdfBe9a4328B6d658020563Ec0",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "PORTX",
+    "sc": "0x189586b5f6317538ae50c20a976597Da38984A24",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "PYM",
+    "sc": "0x0bd49815ea8e2682220bcb41524c0dd10ba71d41",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Playermon"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "PYR",
+    "sc": "0x430ef9263e76dae63c84292c3409d61c598e9682",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Vulcan-Forged-(PYR)"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "PYR",
+    "sc": "0x430ef9263e76dae63c84292c3409d61c598e9682",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Vulcan-Forged-(PYR)"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "QUICK",
+    "sc": "0xB5C064F955D8e7F38fE0460C556a72987494eE17",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "QUICK",
+    "sc": "0xb5c064f955d8e7f38fe0460c556a72987494ee17",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "BITGET",
-    "symbol": "RDNT",
-    "sc": "0x3082cc23568ea640225c2467653db90e9250aaa0",
+    "symbol": "QUICK",
+    "sc": "0xb5c064f955d8e7f38fe0460c556a72987494ee17",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "RDNT",
-    "sc": "0x3082cc23568ea640225c2467653db90e9250aaa0",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "KUCOIN",
-    "symbol": "RDNT",
-    "sc": "0x3082cc23568ea640225c2467653db90e9250aaa0",
+    "symbol": "QUICK",
+    "sc": "0xb5c064f955d8e7f38fe0460c556a72987494ee17",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "RBLS",
+    "sc": "0xe26cda27c13f4f87cFFc2F437C5900b27eBb5bbB",
+    "desimal": 8,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Rebel-Bots"
   },
   {
     "cex": "BITGET",
-    "symbol": "ROSX",
-    "sc": "0xDC8184ba488e949815d4AAfb35B3c56ad03B4179",
+    "symbol": "RMV",
+    "sc": "0xf0949dd87d2531d665010d6274f06a357669457a",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Roseon"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "SPA",
-    "sc": "0x5575552988A3A80504bBaeB1311674fCFd40aD4B",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "KUCOIN",
-    "symbol": "SPA",
-    "sc": "0x5575552988A3A80504bBaeB1311674fCFd40aD4B",
+    "symbol": "RMV",
+    "sc": "0xf0949dd87d2531d665010d6274f06a357669457a",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "ROND",
+    "sc": "0x204820b6e6feae805e376d2c6837446186e57981",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "ROND"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "SAND",
+    "sc": "0xbbba073c31bf03b8acf7c28ef0738decf3695683",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "GATE",
-    "symbol": "SQD",
-    "sc": "0x1337420dED5ADb9980CFc35f8f2B054ea86f8aB1",
+    "symbol": "SAVG",
+    "sc": "0x981aecc6eb4d382b96a02b75e931900705e95a31",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Subsquid"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "SQD",
-    "sc": "0x1337420dED5ADb9980CFc35f8f2B054ea86f8aB1",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Subsquid"
+    "status": true,
+    "cmcID": "#"
   },
   {
     "cex": "GATE",
-    "symbol": "STARHEROES",
-    "sc": "0xB299751B088336E165dA313c33e3195B8c6663A6",
+    "symbol": "SNK",
+    "sc": "0x689f8e5913C158fFB5Ac5aeb83b3C875F5d20309",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "StarHeroes"
+    "status": true,
+    "cmcID": "Snook"
   },
   {
     "cex": "BINANCE",
     "symbol": "STG",
-    "sc": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
+    "sc": "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
-    "cex": "BITGET",
-    "symbol": "STG",
-    "sc": "0x6694340fc020c5e6b96567843da2df01b2ce1eb6",
+    "cex": "GATE",
+    "symbol": "SWASH",
+    "sc": "0xbA3CB8329D442E6F9Eb70fafe1E214251df3D275",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
-    "cex": "BITGET",
-    "symbol": "SYK",
-    "sc": "0xACC51FFDeF63fB0c014c882267C3A17261A5eD50",
+    "cex": "GATE",
+    "symbol": "SWAY",
+    "sc": "0x262B8AA7542004f023B0eB02bc6b96350A02b728",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Stryke"
+    "status": true,
+    "cmcID": "Sway-Protocol"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "SWCH",
+    "sc": "0x3ce1327867077B551ae9A6987bF10C9fd08edCE1",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "SwissCheese"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "SWCH",
+    "sc": "0x3ce1327867077b551ae9a6987bf10c9fd08edce1",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "SwissCheese"
   },
   {
     "cex": "BINANCE",
     "symbol": "SYN",
-    "sc": "0x080f6aed32fc474dd5717105dba5ea57268f46eb",
+    "sc": "0xf8f9efc0db77d8881500bb06ff5d6abc3070e695",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "TEL",
+    "sc": "0xdf7837de1f2fa4631d716cf2502f8b230f1dcc32",
+    "desimal": 2,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "TEL",
+    "sc": "0xdf7837de1f2fa4631d716cf2502f8b230f1dcc32",
+    "desimal": 2,
+    "pairdex": "USDT",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "GATE",
-    "symbol": "SYNO",
-    "sc": "0x577Fd586c9E6BA7f2E85E025D5824DBE19896656",
-    "desimal": 18,
+    "symbol": "TIMECHRONO",
+    "sc": "0xb970Bc1BD4fCD639c37aa8eFD6713eaDc577252f",
+    "desimal": 8,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Synonym-Finance"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "UXLINK",
-    "sc": "0x1A6B3A62391ECcaaa992ade44cd4AFe6bEC8CfF1",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "UXLINK"
+    "status": true,
+    "cmcID": "#"
   },
   {
     "cex": "GATE",
-    "symbol": "UXLINK",
-    "sc": "0x1A6B3A62391ECcaaa992ade44cd4AFe6bEC8CfF1",
+    "symbol": "TRADE",
+    "sc": "0x692AC1e363ae34b6B489148152b12e2785a3d8d6",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "UXLINK"
+    "status": true,
+    "cmcID": "#"
   },
   {
     "cex": "KUCOIN",
-    "symbol": "UXLINK",
-    "sc": "0x1A6B3A62391ECcaaa992ade44cd4AFe6bEC8CfF1",
+    "symbol": "TRADE",
+    "sc": "0x692ac1e363ae34b6b489148152b12e2785a3d8d6",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "UXLINK"
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "TRC",
+    "sc": "0x40d9fc77027A281d85de1fa660C887E645AE26C3",
+    "desimal": 2,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "MetaTrace"
   },
   {
     "cex": "BITGET",
-    "symbol": "VELA",
-    "sc": "0x088cd8f5eF3652623c22D48b1605DCfE860Cd704",
-    "desimal": 18,
+    "symbol": "TRC",
+    "sc": "0x40d9fc77027a281d85de1fa660c887e645ae26c3",
+    "desimal": 2,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Vela-Exchange"
+    "status": true,
+    "cmcID": "MetaTrace"
   },
   {
     "cex": "GATE",
-    "symbol": "VELA",
-    "sc": "0x088cd8f5eF3652623c22D48b1605DCfE860Cd704",
+    "symbol": "TRKX",
+    "sc": "0x61bf130d973D59c69d3227f1668d534d83119860",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Vela-Exchange"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "VRTX",
-    "sc": "0x95146881b86B3ee99e63705eC87AfE29Fcc044D9",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Vertex-Protocol"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "VRTX",
-    "sc": "0x95146881b86B3ee99e63705eC87AfE29Fcc044D9",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Vertex-Protocol"
+    "status": true,
+    "cmcID": "#"
   },
   {
     "cex": "KUCOIN",
-    "symbol": "VRTX",
-    "sc": "0x95146881b86B3ee99e63705eC87AfE29Fcc044D9",
+    "symbol": "UPO",
+    "sc": "0x9dbfc1cbf7a1e711503a29b4b5f9130ebeccac96",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Vertex-Protocol"
+    "status": true,
+    "cmcID": "UpOnly"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "VDA",
+    "sc": "0x683565196C3EAb450003C964D4bad1fd3068D4cC",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Verida"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "VDT",
+    "sc": "0x765Af38A6e8FDcB1EFEF8a3dd2213EFD3090B00F",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Vendetta"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "VEXT",
+    "sc": "0x27842334c55c01ddfe81bf687425f906816c5141",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "VEXT",
+    "sc": "0x27842334c55c01ddfe81bf687425f906816c5141",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "VEXT",
+    "sc": "0x27842334c55c01ddfe81bf687425f906816c5141",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "VOXEL",
+    "sc": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Voxies"
+  },
+  {
+    "cex": "BINANCE",
+    "symbol": "VOXEL",
+    "sc": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Voxies"
+  },
+  {
+    "cex": "BITGET",
+    "symbol": "VOXEL",
+    "sc": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Voxies"
+  },
+  {
+    "cex": "KUCOIN",
+    "symbol": "VOXEL",
+    "sc": "0xd0258a3fd00f38aa8090dfee343f10a9d4d30d3f",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Voxies"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "VP",
+    "sc": "0xf46CB10e8c5FB9368bbF497A3176b80c0AF66d44",
+    "desimal": 11,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Torah-Network"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "VSX",
+    "sc": "0xB8d5f5f236C24e09c7f55EEc313818742aC4cF79",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Versus-X"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "W3GG",
+    "sc": "0x8D60FB5886497851AaC8c5195006ecf07647ba0D",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
   },
   {
     "cex": "GATE",
     "symbol": "WAXL",
-    "sc": "0x23ee2343B892b1BB63503a4FAbc840E0e2C6810f",
+    "sc": "0x6e4e624106cb12e168e6533f8ec7c82263358940",
     "desimal": 6,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
-  },
-  {
-    "cex": "BINANCE",
-    "symbol": "WOO",
-    "sc": "0xcafcd85d8ca7ad1e1c6f82f651fa15e33aefd07b",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "GATE",
-    "symbol": "WXM",
-    "sc": "0xB6093B61544572Ab42A0E43AF08aBaFD41bf25A6",
+    "symbol": "WIFI",
+    "sc": "0xE238Ecb42C424E877652AD82d8A939183A04C35f",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "#"
+    "status": true,
+    "cmcID": "WiFi-Map"
   },
   {
-    "cex": "BINANCE",
-    "symbol": "XAI",
-    "sc": "0x4Cb9a7AE498CEDcBb5EAe9f25736aE7d428C9D66",
+    "cex": "GATE",
+    "symbol": "WISTA",
+    "sc": "0xb7042c40de76cfc607ac05e68f9c28a778f0c8a6",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Xai"
+    "status": true,
+    "cmcID": "Wistaverse"
+  },
+  {
+    "cex": "GATE",
+    "symbol": "WSDM",
+    "sc": "0x5F2F8818002dc64753daeDF4A6CB2CcB757CD220",
+    "desimal": 6,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Wisdomise-AI"
   },
   {
     "cex": "BITGET",
-    "symbol": "XAI",
-    "sc": "0x4Cb9a7AE498CEDcBb5EAe9f25736aE7d428C9D66",
-    "desimal": 18,
+    "symbol": "WSDM",
+    "sc": "0x5f2f8818002dc64753daedf4a6cb2ccb757cd220",
+    "desimal": 6,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Xai"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "XAI",
-    "sc": "0x4Cb9a7AE498CEDcBb5EAe9f25736aE7d428C9D66",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Xai"
+    "status": true,
+    "cmcID": "Wisdomise-AI"
   },
   {
     "cex": "KUCOIN",
-    "symbol": "XAI",
-    "sc": "0x4Cb9a7AE498CEDcBb5EAe9f25736aE7d428C9D66",
-    "desimal": 18,
+    "symbol": "WSDM",
+    "sc": "0x5f2f8818002dc64753daedf4a6cb2ccb757cd220",
+    "desimal": 6,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "Xai"
+    "status": true,
+    "cmcID": "Wisdomise-AI"
   },
   {
-    "cex": "GATE",
-    "symbol": "XPET",
-    "sc": "0x00CBcF7B3d37844e44b888Bc747bDd75FCf4E555",
-    "desimal": 18,
+    "cex": "BITGET",
+    "symbol": "WUSD",
+    "sc": "0xa04c86c411320444d4a99d44082e057772e8cf96",
+    "desimal": 6,
     "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "xPET-tech"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "XRWA",
-    "sc": "0x3096e7BFd0878Cc65be71f8899Bc4CFB57187Ba3",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "GATE",
-    "symbol": "YFX",
-    "sc": "0x569deb225441FD18BdE18aED53E2EC7Eb4e10D93",
+    "symbol": "ZIG",
+    "sc": "0x7bebd226154e865954a87650faefa8f485d36081",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "#"
   },
   {
     "cex": "BINANCE",
     "symbol": "ZRO",
-    "sc": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+    "sc": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
+    "cmcID": "LayerZero"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "ZRO",
+    "sc": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
     "cmcID": "LayerZero"
   },
   {
     "cex": "BITGET",
     "symbol": "ZRO",
-    "sc": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+    "sc": "0x6985884c4392d348587b19cb9eaaf157f13271cd",
     "desimal": 18,
     "pairdex": "USDT",
-    "status": "TRUE",
+    "status": true,
     "cmcID": "LayerZero"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "ZRO",
-    "sc": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "LayerZero"
-  },
-  {
-    "cex": "KUCOIN",
-    "symbol": "ZRO",
-    "sc": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "LayerZero"
-  },
-  {
-    "cex": "BITGET",
-    "symbol": "ZTX",
-    "sc": "0x1C43D05be7E5b54D506e3DdB6f0305e8A66CD04e",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "ZTX"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "ZTX",
-    "sc": "0x1C43D05be7E5b54D506e3DdB6f0305e8A66CD04e",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": "TRUE",
-    "cmcID": "ZTX"
   }
-]}
+]
+}
