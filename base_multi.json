@@ -704,13 +704,13 @@
     "cex": "GATE"
   },
   {
+    "cex": "GATE",
     "symbol": "BUZ",
-    "status": true,
     "sc": "0xc73dC7aE7A4fa40517aAfa941AE1ee436B91a12c",
-    "desimal": 18,
+    "desimal": 4,
     "cmcID": "#N/A",
-    "pairdex": "USDC",
-    "cex": "GATE"
+    "status": true,
+    "pairdex": "USDC"
   },
   {
     "symbol": "BWB",
@@ -767,13 +767,13 @@
     "cex": "BYBIT"
   },
   {
+    "cex": "BITGET",
     "symbol": "DEGEN",
-    "status": true,
     "sc": "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
     "desimal": 18,
     "cmcID": "Degen",
-    "pairdex": "USDC",
-    "cex": "BITGET"
+    "status": true,
+    "pairdex": "USDC"
   },
   {
     "symbol": "DEGEN",
@@ -820,15 +820,7 @@
     "pairdex": "USDC",
     "cex": "GATE"
   },
-  {
-    "symbol": "FOMO",
-    "status": true,
-    "sc": "0x9a86980d3625b4a6e69d8a4606d51cbc019e2002",
-    "desimal": 18,
-    "cmcID": "FOMO-BULL-CLUB",
-    "pairdex": "USDC",
-    "cex": "BITGET"
-  },
+ 
   {
     "symbol": "FRIEND",
     "status": true,
