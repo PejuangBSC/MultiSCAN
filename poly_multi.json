@@ -2890,15 +2890,7 @@
         "status": true,
         "cmcID": "UpOnly"
     },
-    {
-        "cex": "MEXC",
-        "symbol": "USDC",
-        "sc": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
-        "desimal": 18,
-        "pairdex": "USDT",
-        "status": true,
-        "cmcID": "-"
-    },
+  
     {
         "cex": "GATE",
         "symbol": "VDA",
