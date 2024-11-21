@@ -641,15 +641,6 @@
     "cmcID": "Aark"
   },
   {
-    "cex": "MEXC",
-    "symbol": "ACX",
-    "sc": "0x53691596d1BCe8CEa565b84d4915e69e03d9C99d",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
     "cex": "KUCOIN",
     "symbol": "AFG",
     "sc": "0x619C82392cb6E41778b7d088860Fea8447941f4c",
@@ -666,15 +657,6 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "Army-of-Fortune-Gem"
-  },
-  {
-    "cex": "MEXC",
-    "symbol": "AIAKITA",
-    "sc": "0x38c2fBdF53b451Ae5c4027711D6Fe5E1B2191B1C",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
   },
   {
     "cex": "MEXC",
@@ -705,36 +687,9 @@
   },
   {
     "cex": "MEXC",
-    "symbol": "AICORE",
-    "sc": "0x1aAE7De64D9ae1487e95858bbf98185F21e926fd",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
-    "cex": "MEXC",
     "symbol": "AIDOGE",
     "sc": "0x09E18590E8f76b6Cf471b3cd75fE1A1a9D2B2c2b",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
-    "cex": "MEXC",
-    "symbol": "AIPO",
-    "sc": "0x6c511dc18572d31C2c3f7b1505cB2BBC08282FcC",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
-    "cex": "MEXC",
-    "symbol": "AMC",
-    "sc": "0x299142a6370e1912156E53fBD4f25D7ba49DdcC5",
-    "desimal": 18,
+    "desimal": 6,
     "pairdex": "USDT",
     "status": true,
     "cmcID": ""
@@ -815,7 +770,7 @@
     "cex": "MEXC",
     "symbol": "ARBGPT",
     "sc": "0xe021047851012D8e981EbD9F3C2CBB8945E996DA",
-    "desimal": 18,
+    "desimal": 9,
     "pairdex": "USDT",
     "status": true,
     "cmcID": ""
@@ -885,24 +840,6 @@
   },
   {
     "cex": "GATE",
-    "symbol": "BEBE",
-    "sc": "0x406d59819Bc2AeF682F4Ff2769085c98a264F97b",
-    "desimal": 6,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": "#"
-  },
-  {
-    "cex": "MEXC",
-    "symbol": "BLUESALE",
-    "sc": "0x8A66794E1aaEBC7018A7B75F61f384e30ae3b159",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
-    "cex": "GATE",
     "symbol": "BRI",
     "sc": "0x51F6EE60108CBCB3b613093BD3F224cB49Aa1610",
     "desimal": 9,
@@ -947,15 +884,6 @@
     "cmcID": "SpaceCatch"
   },
   {
-    "cex": "MEXC",
-    "symbol": "CBL",
-    "sc": "0xD6b3d81868770083307840F513A3491960b95cb6",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
     "cex": "BINANCE",
     "symbol": "CRV",
     "sc": "0x11cdb42b0eb46d95f990bedd4695a6e3fa034978",
@@ -963,15 +891,6 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "#"
-  },
-  {
-    "cex": "GATE",
-    "symbol": "CTOK",
-    "sc": "0xA586B3B80D7e3e8d439e25fBC16Bc5bcEE3E2c85",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": "Codyfight"
   },
   {
     "cex": "MEXC",
@@ -990,15 +909,6 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "#"
-  },
-  {
-    "cex": "MEXC",
-    "symbol": "DOM",
-    "sc": "0xaB051400DCb6e81251AB489e0336f8FD8927236E",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
   },
   {
     "cex": "BYBIT",
@@ -1092,15 +1002,6 @@
   },
   {
     "cex": "MEXC",
-    "symbol": "FLAME",
-    "sc": "0x4A7779AbeD707A9C7DEadbBef5c15f3e52370A99",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
-    "cex": "MEXC",
     "symbol": "FORE",
     "sc": "0xcBe94D75ec713B7ead84f55620dc3174beEb1CFe",
     "desimal": 18,
@@ -1152,15 +1053,6 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "#"
-  },
-  {
-    "cex": "MEXC",
-    "symbol": "GAME",
-    "sc": "0xc4CBd54ffA7A6a142fd73554cC6C23DD95CD8E01",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
   },
   {
     "cex": "MEXC",
@@ -1460,15 +1352,6 @@
     "cmcID": "OtterHome"
   },
   {
-    "cex": "MEXC",
-    "symbol": "HTE",
-    "sc": "0x80DD74145B8bb10Cef01BF914f796BD8B54d7809",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
     "cex": "GATE",
     "symbol": "IPOR",
     "sc": "0x34229B3f16fBCDfA8d8d9d17C0852F9496f4C7BB",
@@ -1643,15 +1526,6 @@
     "cex": "MEXC",
     "symbol": "MKC",
     "sc": "0xFA58c669B855b29f99374d0F160dB286849D139B",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
-    "cex": "MEXC",
-    "symbol": "MTMS",
-    "sc": "0x4DD40ec670722067241b4396dBD253c38dd820b5",
     "desimal": 18,
     "pairdex": "USDT",
     "status": true,
@@ -1838,15 +1712,6 @@
     "cmcID": "#"
   },
   {
-    "cex": "MEXC",
-    "symbol": "PLAH",
-    "sc": "0x8347dff20de05b11c0781aaea90d5bee46c30252",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
     "cex": "GATE",
     "symbol": "POGAI",
     "sc": "0x6fD58f5a2F3468e35fEb098b5F59F04157002407",
@@ -1910,15 +1775,6 @@
     "cmcID": "#"
   },
   {
-    "cex": "MEXC",
-    "symbol": "RBAX",
-    "sc": "0x98d328DAA531c36A86EFDAb6015EE9a8320C2747",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
     "cex": "BINANCE",
     "symbol": "RDNT",
     "sc": "0x3082cc23568ea640225c2467653db90e9250aaa0",
@@ -1976,7 +1832,7 @@
     "cex": "MEXC",
     "symbol": "REKT",
     "sc": "0x1D987200dF3B744CFa9C14f713F5334CB4Bc4D5D",
-    "desimal": 18,
+    "desimal": 6,
     "pairdex": "USDT",
     "status": true,
     "cmcID": ""
@@ -1985,7 +1841,7 @@
     "cex": "MEXC",
     "symbol": "REUNI",
     "sc": "0x9ed7E4B1BFF939ad473dA5E7a218C771D1569456",
-    "desimal": 18,
+    "desimal": 6,
     "pairdex": "USDT",
     "status": true,
     "cmcID": ""
@@ -2021,15 +1877,6 @@
     "cex": "MEXC",
     "symbol": "SEX",
     "sc": "0xd26B0c6Ef8581E921AE41C66e508C62a581B709D",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
-    "cex": "MEXC",
-    "symbol": "SHIBAI",
-    "sc": "0xFA296FcA3c7DBa4a92A42Ec0B5E2138DA3b29050",
     "desimal": 18,
     "pairdex": "USDT",
     "status": true,
@@ -2199,15 +2046,6 @@
   },
   {
     "cex": "MEXC",
-    "symbol": "TPY",
-    "sc": "0xa279301414012C53Bc7b7a21788d33E244efBECC",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
-  },
-  {
-    "cex": "MEXC",
     "symbol": "TROVE",
     "sc": "0x982239D38Af50B0168dA33346d85Fb12929c4c07",
     "desimal": 18,
@@ -2372,7 +2210,7 @@
     "cex": "MEXC",
     "symbol": "WBC",
     "sc": "0x7ae9AB13fC8945323b778b3F8678145E80Ec2Efb",
-    "desimal": 18,
+    "desimal": 6,
     "pairdex": "USDT",
     "status": true,
     "cmcID": ""
@@ -2538,15 +2376,6 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "#"
-  },
-  {
-    "cex": "MEXC",
-    "symbol": "ZPC",
-    "sc": "0xeE0b14e8fC86691Cf6eE42B9954985B4cF968534",
-    "desimal": 18,
-    "pairdex": "USDT",
-    "status": true,
-    "cmcID": ""
   },
   {
     "cex": "BINANCE",
