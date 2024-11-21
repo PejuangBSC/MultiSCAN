@@ -605,6 +605,15 @@
     "cmcID": "A3S-Protocol"
   },
   {
+    "cex": "MEXC",
+    "symbol": "AA",
+    "sc": "0xb0eCc6ac0073c063DCFC026cCdC9039Cae2998E1",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "A3S-Protocol"
+  },
+  {
     "cex": "BITGET",
     "symbol": "AARK",
     "sc": "0xCa4e51F6AD4AFd9d1068E5899De9dd7d73F3463D",
@@ -623,6 +632,24 @@
     "cmcID": "Aark"
   },
   {
+    "cex": "BYBIT",
+    "symbol": "AARK",
+    "sc": "0xCa4e51F6AD4AFd9d1068E5899De9dd7d73F3463D",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Aark"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ACX",
+    "sc": "0x53691596d1BCe8CEa565b84d4915e69e03d9C99d",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "KUCOIN",
     "symbol": "AFG",
     "sc": "0x619C82392cb6E41778b7d088860Fea8447941f4c",
@@ -630,6 +657,33 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "Army-of-Fortune-Gem"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "AFG",
+    "sc": "0x619C82392cb6E41778b7d088860Fea8447941f4c",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Army-of-Fortune-Gem"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "AIAKITA",
+    "sc": "0x38c2fBdF53b451Ae5c4027711D6Fe5E1B2191B1C",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "AIBB",
+    "sc": "0xB9AF4762c039D63e30039F1712dfaB77026408c7",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
   },
   {
     "cex": "GATE",
@@ -641,7 +695,61 @@
     "cmcID": "AI-CODE"
   },
   {
+    "cex": "MEXC",
+    "symbol": "AICODE",
+    "sc": "0x7C8a1A80FDd00C9Cccd6EbD573E9EcB49BFa2a59",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "AI-CODE"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "AICORE",
+    "sc": "0x1aAE7De64D9ae1487e95858bbf98185F21e926fd",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "AIDOGE",
+    "sc": "0x09E18590E8f76b6Cf471b3cd75fE1A1a9D2B2c2b",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "AIPO",
+    "sc": "0x6c511dc18572d31C2c3f7b1505cB2BBC08282FcC",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "AMC",
+    "sc": "0x299142a6370e1912156E53fBD4f25D7ba49DdcC5",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "GATE",
+    "symbol": "APTR",
+    "sc": "0x1C986661170c1834db49C3830130D4038eEeb866",
+    "desimal": 6,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Aperture-Finance"
+  },
+  {
+    "cex": "BYBIT",
     "symbol": "APTR",
     "sc": "0x1C986661170c1834db49C3830130D4038eEeb866",
     "desimal": 6,
@@ -686,6 +794,33 @@
     "cmcID": "Arbitrum"
   },
   {
+    "cex": "BYBIT",
+    "symbol": "ARB",
+    "sc": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Arbitrum"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ARB",
+    "sc": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Arbitrum"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ARBGPT",
+    "sc": "0xe021047851012D8e981EbD9F3C2CBB8945E996DA",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "GATE",
     "symbol": "ARBI",
     "sc": "0x07DD5BEAffb65B8fF2e575d500BDf324a05295DC",
@@ -693,6 +828,42 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "ArbiPad"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ARBS",
+    "sc": "0xf50874f8246776CA4B89eEF471E718F70f38458F",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ARS",
+    "sc": "0x2EADCE7EBDEDF3c7291F1f658208A2720Ff4B74d",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ASTRADAO",
+    "sc": "0xd3188e0df68559c0B63361f6160c57Ad88B239D8",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "AVIVE",
+    "sc": "0x5117f4Ad0bc70Dbb3B05bF39A1EC1Ee40DD67654",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
   },
   {
     "cex": "BINANCE",
@@ -722,6 +893,15 @@
     "cmcID": "#"
   },
   {
+    "cex": "MEXC",
+    "symbol": "BLUESALE",
+    "sc": "0x8A66794E1aaEBC7018A7B75F61f384e30ae3b159",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "GATE",
     "symbol": "BRI",
     "sc": "0x51F6EE60108CBCB3b613093BD3F224cB49Aa1610",
@@ -729,6 +909,15 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "BTORO",
+    "sc": "0xB6212B633C941E9Be168C4b9C2d9E785F1cD42fb",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
   },
   {
     "cex": "BITGET",
@@ -749,6 +938,24 @@
     "cmcID": "SpaceCatch"
   },
   {
+    "cex": "MEXC",
+    "symbol": "CATCH",
+    "sc": "0xbC4c97Fb9befaa8B41448e1dFcC5236dA543217F",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "SpaceCatch"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "CBL",
+    "sc": "0xD6b3d81868770083307840F513A3491960b95cb6",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "BINANCE",
     "symbol": "CRV",
     "sc": "0x11cdb42b0eb46d95f990bedd4695a6e3fa034978",
@@ -767,9 +974,36 @@
     "cmcID": "Codyfight"
   },
   {
+    "cex": "MEXC",
+    "symbol": "DMT",
+    "sc": "0x8B0E6f19Ee57089F7649A455D89D7bC6314D04e8",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "BINANCE",
     "symbol": "DODO",
     "sc": "0x69eb4fa4a2fbd498c257c57ea8b7655a2559a581",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "DOM",
+    "sc": "0xaB051400DCb6e81251AB489e0336f8FD8927236E",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "DPX",
+    "sc": "0x6C2C06790b3E3E3c38e12Ee22F8183b37a13EE55",
     "desimal": 18,
     "pairdex": "USDT",
     "status": true,
@@ -812,6 +1046,15 @@
     "cmcID": "#"
   },
   {
+    "cex": "MEXC",
+    "symbol": "EGP",
+    "sc": "0x7E7a7C916c19a45769f6BDAF91087f93c6C12F78",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
     "cex": "GATE",
     "symbol": "EMC",
     "sc": "0xDFB8BE6F8c87f74295A87de951974362CedCFA30",
@@ -819,6 +1062,24 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "Edge-Matrix-Chain"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "EMC",
+    "sc": "0xDFB8BE6F8c87f74295A87de951974362CedCFA30",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Edge-Matrix-Chain"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "EQB",
+    "sc": "0xBfbCFe8873fE28Dfa25f1099282b088D52bbAD9C",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
   },
   {
     "cex": "BINANCE",
@@ -830,6 +1091,24 @@
     "cmcID": "#"
   },
   {
+    "cex": "MEXC",
+    "symbol": "FLAME",
+    "sc": "0x4A7779AbeD707A9C7DEadbBef5c15f3e52370A99",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "FORE",
+    "sc": "0xcBe94D75ec713B7ead84f55620dc3174beEb1CFe",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "GATE",
     "symbol": "FOREX",
     "sc": "0xDb298285FE4C5410B05390cA80e8Fbe9DE1F259B",
@@ -839,6 +1118,15 @@
     "cmcID": "handleFOREX"
   },
   {
+    "cex": "MEXC",
+    "symbol": "FOXIFY",
+    "sc": "0x6bcc14B02CD624EbE1a8A665Cb6d4067Aa097230",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "GATE",
     "symbol": "G3",
     "sc": "0xc24A365A870821EB83Fd216c9596eDD89479d8d7",
@@ -855,6 +1143,42 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "#"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "G3",
+    "sc": "0xc24A365A870821EB83Fd216c9596eDD89479d8d7",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "GAME",
+    "sc": "0xc4CBd54ffA7A6a142fd73554cC6C23DD95CD8E01",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "GFLY",
+    "sc": "0x872bAD41CFc8BA731f811fEa8B2d0b9fd6369585",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "GG",
+    "sc": "0x000000000026839b3f4181f2cF69336af6153b99",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Reboot"
   },
   {
     "cex": "BINANCE",
@@ -893,6 +1217,24 @@
     "cmcID": "#"
   },
   {
+    "cex": "BYBIT",
+    "symbol": "GMX",
+    "sc": "0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "GMX",
+    "sc": "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
     "cex": "BINANCE",
     "symbol": "GNS",
     "sc": "0x18c11FD286C5EC11c3b683Caa813B77f5163A122",
@@ -929,6 +1271,24 @@
     "cmcID": "#"
   },
   {
+    "cex": "BYBIT",
+    "symbol": "GNS",
+    "sc": "0x18c11FD286C5EC11c3b683Caa813B77f5163A122",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "GNS",
+    "sc": "0x18c11FD286C5EC11c3b683Caa813B77f5163A122",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
     "cex": "BITGET",
     "symbol": "GRAIL",
     "sc": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8",
@@ -948,6 +1308,15 @@
   },
   {
     "cex": "KUCOIN",
+    "symbol": "GRAIL",
+    "sc": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Camelot-Token"
+  },
+  {
+    "cex": "MEXC",
     "symbol": "GRAIL",
     "sc": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8",
     "desimal": 18,
@@ -992,6 +1361,69 @@
     "cmcID": "GameSwift"
   },
   {
+    "cex": "BYBIT",
+    "symbol": "GSWIFT",
+    "sc": "0x580E933D90091b9cE380740E3a4A39c67eB85B4c",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "GameSwift"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "GSWIFT",
+    "sc": "0x580E933D90091b9cE380740E3a4A39c67eB85B4c",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "GameSwift"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "GTA",
+    "sc": "0x73DB621CC8f0a767BeD0e5C0A2920F480D77b765",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "GTAJR",
+    "sc": "0xf173a46CE9452D7B54b572CF1eF8FC67937302A4",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "HAMBURGLAR",
+    "sc": "0x88F3C911190A2b6459345872c363371F3dFA72b6",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "HDN",
+    "sc": "0x3404149e9EE6f17Fb41DB1Ce593ee48FBDcD9506",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "HIP",
+    "sc": "0xa0995d43901551601060447f9aBf93ebc277cEC2",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "HIPPOP"
+  },
+  {
     "cex": "GATE",
     "symbol": "HIPPOP",
     "sc": "0xa0995d43901551601060447f9aBf93ebc277cEC2",
@@ -1010,6 +1442,15 @@
     "cmcID": "HMX"
   },
   {
+    "cex": "MEXC",
+    "symbol": "HOLD",
+    "sc": "0xb4bbfE92702730ef7F1d28e4b9E42381182F48a5",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "GATE",
     "symbol": "HOME",
     "sc": "0x1bD013bD089C2B6b2D30a0e0B545810a5844E761",
@@ -1017,6 +1458,15 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "OtterHome"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "HTE",
+    "sc": "0x80DD74145B8bb10Cef01BF914f796BD8B54d7809",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
   },
   {
     "cex": "GATE",
@@ -1035,6 +1485,24 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "JOE"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "JONES",
+    "sc": "0x10393c20975cF177a3513071bC110f7962CD67da",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "KABOSU",
+    "sc": "0x53bCF6698C911b2A7409a740EACDDB901fC2a2C6",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
   },
   {
     "cex": "GATE",
@@ -1091,6 +1559,15 @@
     "cmcID": "#"
   },
   {
+    "cex": "MEXC",
+    "symbol": "LOGX",
+    "sc": "0x59062301Fb510F4ea2417B67404CB16D31E604BA",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
     "cex": "BINANCE",
     "symbol": "MAGIC",
     "sc": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
@@ -1127,6 +1604,24 @@
     "cmcID": "Treasure"
   },
   {
+    "cex": "BYBIT",
+    "symbol": "MAGIC",
+    "sc": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Treasure"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "MAGIC",
+    "sc": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Treasure"
+  },
+  {
     "cex": "BINANCE",
     "symbol": "MAV",
     "sc": "0x7448c7456a97769f6cd04f1e83a4a23ccdc46abd",
@@ -1134,6 +1629,42 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "Maverick-Protocol"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "MCCHEESE",
+    "sc": "0x6658394CA08b855De82e15A8002A8D1c4f0d05d9",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "MKC",
+    "sc": "0xFA58c669B855b29f99374d0F160dB286849D139B",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "MTMS",
+    "sc": "0x4DD40ec670722067241b4396dBD253c38dd820b5",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "NEXT",
+    "sc": "0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
   },
   {
     "cex": "GATE",
@@ -1152,6 +1683,33 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "#"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "NRN",
+    "sc": "0xdadeca1167fe47499e53Eb50F261103630974905",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "NRN",
+    "sc": "0xdadeca1167fe47499e53Eb50F261103630974905",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "OIL",
+    "sc": "0xafE8107123EeFd62469474DEC9680860B890e5B6",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
   },
   {
     "cex": "BITGET",
@@ -1199,6 +1757,42 @@
     "cmcID": "Param"
   },
   {
+    "cex": "BYBIT",
+    "symbol": "PARAM",
+    "sc": "0x69A1e699f562D7Af66Fc6cc473d99f4430C3AcD2",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Param"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "PARAM",
+    "sc": "0x69A1e699f562D7Af66Fc6cc473d99f4430C3AcD2",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Param"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "PCH",
+    "sc": "0xBE5ACfd64358805616b5cbD5277B9A85011d7Cf1",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "PEAR",
+    "sc": "0x3212dc0F8c834e4DE893532d27CC9B6001684DB0",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "BINANCE",
     "symbol": "PENDLE",
     "sc": "0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8",
@@ -1235,7 +1829,34 @@
     "cmcID": "#"
   },
   {
+    "cex": "MEXC",
+    "symbol": "PET",
+    "sc": "0x43c25F828390DE5a3648864eb485CC523E039e67",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "PLAH",
+    "sc": "0x8347dff20de05b11c0781aaea90d5bee46c30252",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "GATE",
+    "symbol": "POGAI",
+    "sc": "0x6fD58f5a2F3468e35fEb098b5F59F04157002407",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "POGAI"
+  },
+  {
+    "cex": "MEXC",
     "symbol": "POGAI",
     "sc": "0x6fD58f5a2F3468e35fEb098b5F59F04157002407",
     "desimal": 18,
@@ -1251,6 +1872,15 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "PRY",
+    "sc": "0x1824a51C106EFC27d35A74efB56d9BF54dDb22d4",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
   },
   {
     "cex": "GATE",
@@ -1271,6 +1901,24 @@
     "cmcID": "#"
   },
   {
+    "cex": "MEXC",
+    "symbol": "QTLX",
+    "sc": "0x4D840b741bc05FDE325D4Ec0B4CFCD0CeA237e4E",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "RBAX",
+    "sc": "0x98d328DAA531c36A86EFDAb6015EE9a8320C2747",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "BINANCE",
     "symbol": "RDNT",
     "sc": "0x3082cc23568ea640225c2467653db90e9250aaa0",
@@ -1307,6 +1955,51 @@
     "cmcID": "#"
   },
   {
+    "cex": "BYBIT",
+    "symbol": "RDNT",
+    "sc": "0x3082cc23568ea640225c2467653db90e9250aaa0",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "RDNT",
+    "sc": "0x3082CC23568eA640225c2467653dB90e9250AaA0",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "REKT",
+    "sc": "0x1D987200dF3B744CFa9C14f713F5334CB4Bc4D5D",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "REUNI",
+    "sc": "0x9ed7E4B1BFF939ad473dA5E7a218C771D1569456",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "RONALD",
+    "sc": "0xfB08Dac00Da5E400915aF269245C722718293111",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "BITGET",
     "symbol": "ROSX",
     "sc": "0xDC8184ba488e949815d4AAfb35B3c56ad03B4179",
@@ -1316,6 +2009,33 @@
     "cmcID": "Roseon"
   },
   {
+    "cex": "MEXC",
+    "symbol": "ROSX",
+    "sc": "0xDC8184ba488e949815d4AAfb35B3c56ad03B4179",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Roseon"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "SEX",
+    "sc": "0xd26B0c6Ef8581E921AE41C66e508C62a581B709D",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "SHIBAI",
+    "sc": "0xFA296FcA3c7DBa4a92A42Ec0B5E2138DA3b29050",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "GATE",
     "symbol": "SPA",
     "sc": "0x5575552988A3A80504bBaeB1311674fCFd40aD4B",
@@ -1328,6 +2048,33 @@
     "cex": "KUCOIN",
     "symbol": "SPA",
     "sc": "0x5575552988A3A80504bBaeB1311674fCFd40aD4B",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "SPA",
+    "sc": "0x5575552988A3A80504bBaeB1311674fCFd40aD4B",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "SPARTA",
+    "sc": "0x11f98c7e42a367dab4f200d2fdc460fb445ce9a8",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "SPARTA",
+    "sc": "0x11F98c7E42A367DaB4f200d2fdc460fb445CE9a8",
     "desimal": 18,
     "pairdex": "USDT",
     "status": true,
@@ -1350,6 +2097,42 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "Subsquid"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "SQD",
+    "sc": "0x1337420dED5ADb9980CFc35f8f2B054ea86f8aB1",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Subsquid"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "SQD",
+    "sc": "0x1337420dED5ADb9980CFc35f8f2B054ea86f8aB1",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Subsquid"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "STAR",
+    "sc": "0xB299751B088336E165dA313c33e3195B8c6663A6",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "StarHeroes"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "STAR",
+    "sc": "0xB299751B088336E165dA313c33e3195B8c6663A6",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "StarHeroes"
   },
   {
     "cex": "GATE",
@@ -1379,6 +2162,15 @@
     "cmcID": "#"
   },
   {
+    "cex": "MEXC",
+    "symbol": "SUNDAE",
+    "sc": "0x352F4bF396a7353A0877f99e99757E5d294Df374",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "BITGET",
     "symbol": "SYK",
     "sc": "0xACC51FFDeF63fB0c014c882267C3A17261A5eD50",
@@ -1406,6 +2198,42 @@
     "cmcID": "Synonym-Finance"
   },
   {
+    "cex": "MEXC",
+    "symbol": "TPY",
+    "sc": "0xa279301414012C53Bc7b7a21788d33E244efBECC",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "TROVE",
+    "sc": "0x982239D38Af50B0168dA33346d85Fb12929c4c07",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "TUXC",
+    "sc": "0x4b019AAa21e98E212D31e54C843E73ff34d25717",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "UIBT",
+    "sc": "0x76BC2e765414E6C8b596c0f52c4240f80268f41D",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "BITGET",
     "symbol": "UXLINK",
     "sc": "0x1A6B3A62391ECcaaa992ade44cd4AFe6bEC8CfF1",
@@ -1433,6 +2261,24 @@
     "cmcID": "UXLINK"
   },
   {
+    "cex": "BYBIT",
+    "symbol": "UXLINK",
+    "sc": "0x1A6B3A62391ECcaaa992ade44cd4AFe6bEC8CfF1",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "UXLINK"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "UXLINK",
+    "sc": "0x1A6B3A62391ECcaaa992ade44cd4AFe6bEC8CfF1",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "UXLINK"
+  },
+  {
     "cex": "BITGET",
     "symbol": "VELA",
     "sc": "0x088cd8f5eF3652623c22D48b1605DCfE860Cd704",
@@ -1443,6 +2289,24 @@
   },
   {
     "cex": "GATE",
+    "symbol": "VELA",
+    "sc": "0x088cd8f5eF3652623c22D48b1605DCfE860Cd704",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Vela-Exchange"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "VELA",
+    "sc": "0x088cd8f5eF3652623c22D48b1605DCfE860Cd704",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Vela-Exchange"
+  },
+  {
+    "cex": "MEXC",
     "symbol": "VELA",
     "sc": "0x088cd8f5eF3652623c22D48b1605DCfE860Cd704",
     "desimal": 18,
@@ -1470,6 +2334,24 @@
   },
   {
     "cex": "KUCOIN",
+    "symbol": "VRTX",
+    "sc": "0x95146881b86B3ee99e63705eC87AfE29Fcc044D9",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Vertex-Protocol"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "VRTX",
+    "sc": "0x95146881b86B3ee99e63705eC87AfE29Fcc044D9",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Vertex-Protocol"
+  },
+  {
+    "cex": "MEXC",
     "symbol": "VRTX",
     "sc": "0x95146881b86B3ee99e63705eC87AfE29Fcc044D9",
     "desimal": 18,
@@ -1487,6 +2369,33 @@
     "cmcID": "#"
   },
   {
+    "cex": "MEXC",
+    "symbol": "WBC",
+    "sc": "0x7ae9AB13fC8945323b778b3F8678145E80Ec2Efb",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "WINR",
+    "sc": "0xD77B108d4f6cefaa0Cae9506A934e825BEccA46E",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "WNT",
+    "sc": "0xAD4b9c1FbF4923061814dD9d5732EB703FaA53D4",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "BINANCE",
     "symbol": "WOO",
     "sc": "0xcafcd85d8ca7ad1e1c6f82f651fa15e33aefd07b",
@@ -1496,7 +2405,34 @@
     "cmcID": "#"
   },
   {
+    "cex": "MEXC",
+    "symbol": "WRT",
+    "sc": "0xdDd6eBD74684318fa912084a41a01f11B6C277f7",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "WSG",
+    "sc": "0xEf04804E1e474D3F9B73184D7ef5D786F3Fce930",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "GATE",
+    "symbol": "WXM",
+    "sc": "0xB6093B61544572Ab42A0E43AF08aBaFD41bf25A6",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
     "symbol": "WXM",
     "sc": "0xB6093B61544572Ab42A0E43AF08aBaFD41bf25A6",
     "desimal": 18,
@@ -1541,7 +2477,34 @@
     "cmcID": "Xai"
   },
   {
+    "cex": "BYBIT",
+    "symbol": "XAI",
+    "sc": "0x4Cb9a7AE498CEDcBb5EAe9f25736aE7d428C9D66",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Xai"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "XAI",
+    "sc": "0x4Cb9a7AE498CEDcBb5EAe9f25736aE7d428C9D66",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "Xai"
+  },
+  {
     "cex": "GATE",
+    "symbol": "XPET",
+    "sc": "0x00CBcF7B3d37844e44b888Bc747bDd75FCf4E555",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "xPET-tech"
+  },
+  {
+    "cex": "MEXC",
     "symbol": "XPET",
     "sc": "0x00CBcF7B3d37844e44b888Bc747bDd75FCf4E555",
     "desimal": 18,
@@ -1559,6 +2522,15 @@
     "cmcID": "#"
   },
   {
+    "cex": "MEXC",
+    "symbol": "YACHT",
+    "sc": "0xdE70AeD3d14d39b4955147EfcF272334bdB75AB5",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
+  },
+  {
     "cex": "GATE",
     "symbol": "YFX",
     "sc": "0x569deb225441FD18BdE18aED53E2EC7Eb4e10D93",
@@ -1566,6 +2538,15 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "#"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ZPC",
+    "sc": "0xeE0b14e8fC86691Cf6eE42B9954985B4cF968534",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": ""
   },
   {
     "cex": "BINANCE",
@@ -1604,6 +2585,24 @@
     "cmcID": "LayerZero"
   },
   {
+    "cex": "BYBIT",
+    "symbol": "ZRO",
+    "sc": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "LayerZero"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ZRO",
+    "sc": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "LayerZero"
+  },
+  {
     "cex": "BITGET",
     "symbol": "ZTX",
     "sc": "0x1C43D05be7E5b54D506e3DdB6f0305e8A66CD04e",
@@ -1620,5 +2619,24 @@
     "pairdex": "USDT",
     "status": true,
     "cmcID": "ZTX"
+  },
+  {
+    "cex": "BYBIT",
+    "symbol": "ZTX",
+    "sc": "0x1C43D05be7E5b54D506e3DdB6f0305e8A66CD04e",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "ZTX"
+  },
+  {
+    "cex": "MEXC",
+    "symbol": "ZTX",
+    "sc": "0x1C43D05be7E5b54D506e3DdB6f0305e8A66CD04e",
+    "desimal": 18,
+    "pairdex": "USDT",
+    "status": true,
+    "cmcID": "ZTX"
   }
-]}
+]
+}
