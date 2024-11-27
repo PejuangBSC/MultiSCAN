@@ -14454,6 +14454,151 @@
         "cmcID": "",
         "status": false,
         "pairdex": "USDT"
-    }
+    },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "BABYDOGE",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0xc748673057861a797275cd8a068abb95a902e8de",
+    "Artyfact": "#",
+    "TRUE": true,
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "CAT",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0x6894CDe390a3f51155ea41Ed24a33A4827d3063D",
+    "Artyfact": "Simon's-Cat",
+    "TRUE": true,
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "CEEK",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0xe0f94ac5462997d2bc57287ac3a3ae4c31345d66",
+    "Artyfact": "#",
+    "TRUE": "FALSE",
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "DAO",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0x4d2d32d8652058bf98c772953e1df5c5c85d9f45",
+    "Artyfact": "#",
+    "TRUE": true,
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "FLOKI",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
+    "Artyfact": "#",
+    "TRUE": "FALSE",
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "GFT",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0x72ff5742319ef07061836f5c924ac6d72c919080",
+    "Artyfact": "Gifto",
+    "TRUE": "FALSE",
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "GOAL",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0xc4736f2611a62d545dc2d0d8f0766283617e6fcb",
+    "Artyfact": "#",
+    "TRUE": true,
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "GPT",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0x30842a9c941d9DE3AF582c41ad12b11D776ba69e",
+    "Artyfact": "QnA3.AI",
+    "TRUE": "FALSE",
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "ICE",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0xc335df7c25b72eec661d5aa32a7c2b7b2a1d1874",
+    "Artyfact": "#",
+    "TRUE": true,
+    "USDT": "USDT"
+  },
+  {
+    "6": 9,
+    "OKX": "OKX",
+    "ARTY": "MILO",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0xd9de2b1973e57dc9dba90c35d6cd940ae4a3cbe1",
+    "Artyfact": "Milo-Inu",
+    "TRUE": true,
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "RACA",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0x12bb890508c125661e03b09ec06e404bc9289040",
+    "Artyfact": "RACA",
+    "TRUE": true,
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "RIO",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0x94a8b4EE5CD64C79D0Ee816f467EA73009f51aA0",
+    "Artyfact": "#",
+    "TRUE": true,
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "ULTI",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0x0E7779e698052f8fe56C415C3818FCf89de9aC6D",
+    "Artyfact": "Ultiverse",
+    "TRUE": true,
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "WSM",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0x62694D43Ccb9B64e76e38385d15e325c7712A735",
+    "Artyfact": "Wall-Street-Memes",
+    "TRUE": "FALSE",
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "XR",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0x5f78F4BFCb2b43bC174FE16A69a13945CEfA2978",
+    "Artyfact": "XRADERS",
+    "TRUE": true,
+    "USDT": "USDT"
+  },
+  {
+    "6": 18,
+    "OKX": "OKX",
+    "ARTY": "ZKJ",
+    "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324": "0xc71b5f631354be6853efe9c3ab6b9590f8302e81",
+    "Artyfact": "Polyhedra-Network",
+    "TRUE": "FALSE",
+    "USDT": "USDT"
+  }
+
 ]
 }
