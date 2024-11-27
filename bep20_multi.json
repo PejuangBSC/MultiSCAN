@@ -14461,7 +14461,7 @@
     "sc": "0x617Cab4aAae1f8dfb3eE138698330776a1e1b324",
     "desimal": 6,
     "cmcID": "Artyfact",
-    "status": "TRUE",
+    "status": true,
     "pairdex": "USDT"
   },
   {
@@ -14470,7 +14470,7 @@
     "sc": "0xc748673057861a797275cd8a068abb95a902e8de",
     "desimal": 18,
     "cmcID": "#",
-    "status": "TRUE",
+    "status": true,
     "pairdex": "USDT"
   },
   {
@@ -14479,7 +14479,7 @@
     "sc": "0x6894CDe390a3f51155ea41Ed24a33A4827d3063D",
     "desimal": 18,
     "cmcID": "Simon's-Cat",
-    "status": "TRUE",
+    "status": true,
     "pairdex": "USDT"
   },
   {
@@ -14488,7 +14488,7 @@
     "sc": "0xe0f94ac5462997d2bc57287ac3a3ae4c31345d66",
     "desimal": 18,
     "cmcID": "#",
-    "status": "FALSE",
+    "status": false,
     "pairdex": "USDT"
   },
   {
@@ -14497,7 +14497,7 @@
     "sc": "0x4d2d32d8652058bf98c772953e1df5c5c85d9f45",
     "desimal": 18,
     "cmcID": "#",
-    "status": "TRUE",
+    "status": true,
     "pairdex": "USDT"
   },
   {
@@ -14506,7 +14506,7 @@
     "sc": "0xfb5b838b6cfeedc2873ab27866079ac55363d37e",
     "desimal": 18,
     "cmcID": "#",
-    "status": "FALSE",
+    "status": false,
     "pairdex": "USDT"
   },
   {
@@ -14515,7 +14515,7 @@
     "sc": "0x72ff5742319ef07061836f5c924ac6d72c919080",
     "desimal": 18,
     "cmcID": "Gifto",
-    "status": "FALSE",
+    "status": false,
     "pairdex": "USDT"
   },
   {
@@ -14524,7 +14524,7 @@
     "sc": "0xc4736f2611a62d545dc2d0d8f0766283617e6fcb",
     "desimal": 18,
     "cmcID": "#",
-    "status": "TRUE",
+    "status": true,
     "pairdex": "USDT"
   },
   {
@@ -14533,7 +14533,7 @@
     "sc": "0x30842a9c941d9DE3AF582c41ad12b11D776ba69e",
     "desimal": 18,
     "cmcID": "QnA3.AI",
-    "status": "FALSE",
+    "status": false,
     "pairdex": "USDT"
   },
   {
@@ -14542,7 +14542,7 @@
     "sc": "0xc335df7c25b72eec661d5aa32a7c2b7b2a1d1874",
     "desimal": 18,
     "cmcID": "#",
-    "status": "TRUE",
+    "status": true,
     "pairdex": "USDT"
   },
   {
@@ -14551,7 +14551,7 @@
     "sc": "0xd9de2b1973e57dc9dba90c35d6cd940ae4a3cbe1",
     "desimal": 9,
     "cmcID": "Milo-Inu",
-    "status": "TRUE",
+    "status": true,
     "pairdex": "USDT"
   },
   {
@@ -14560,7 +14560,7 @@
     "sc": "0x12bb890508c125661e03b09ec06e404bc9289040",
     "desimal": 18,
     "cmcID": "RACA",
-    "status": "TRUE",
+    "status": true,
     "pairdex": "USDT"
   },
   {
@@ -14569,7 +14569,7 @@
     "sc": "0x94a8b4EE5CD64C79D0Ee816f467EA73009f51aA0",
     "desimal": 18,
     "cmcID": "#",
-    "status": "TRUE",
+    "status": true,
     "pairdex": "USDT"
   },
   {
@@ -14578,7 +14578,7 @@
     "sc": "0x0E7779e698052f8fe56C415C3818FCf89de9aC6D",
     "desimal": 18,
     "cmcID": "Ultiverse",
-    "status": "TRUE",
+    "status": true,
     "pairdex": "USDT"
   },
   {
@@ -14587,7 +14587,7 @@
     "sc": "0x62694D43Ccb9B64e76e38385d15e325c7712A735",
     "desimal": 18,
     "cmcID": "Wall-Street-Memes",
-    "status": "FALSE",
+    "status": false,
     "pairdex": "USDT"
   },
   {
@@ -14596,7 +14596,7 @@
     "sc": "0x5f78F4BFCb2b43bC174FE16A69a13945CEfA2978",
     "desimal": 18,
     "cmcID": "XRADERS",
-    "status": "TRUE",
+    "status": true,
     "pairdex": "USDT"
   },
   {
@@ -14605,7 +14605,7 @@
     "sc": "0xc71b5f631354be6853efe9c3ab6b9590f8302e81",
     "desimal": 18,
     "cmcID": "Polyhedra-Network",
-    "status": "FALSE",
+    "status": false,
     "pairdex": "USDT"
   }
 
