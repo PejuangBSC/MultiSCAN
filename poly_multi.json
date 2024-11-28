@@ -2539,24 +2539,7 @@
     "status": true,
     "pairdex": "USDT"
   },
-  {
-    "cex": "BITGET",
-    "symbol": "MATICUSDCE",
-    "sc": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
-    "desimal": 6,
-    "cmcID": "#",
-    "status": true,
-    "pairdex": "USDT"
-  },
-  {
-    "cex": "BINANCE",
-    "symbol": "MATICUSDCE",
-    "sc": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
-    "desimal": 6,
-    "cmcID": "#",
-    "status": true,
-    "pairdex": "USDT"
-  },
+ 
   {
     "cex": "BITGET",
     "symbol": "MAX",
