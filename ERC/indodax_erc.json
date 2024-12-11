@@ -1706,7 +1706,7 @@
     "status": true
   },
   {
-    "symbol": "TIDR",
+    "symbol": "THRESHOLDIDR", 
     "sc": "0xCdF7028ceAB81fA0C6971208e83fa7872994beE5",
     "desimal": "18",
     "status": true
@@ -1749,8 +1749,8 @@
   },
   {
     "symbol": "UNIIDR",
-    "sc": "0x2730d6fdc86c95a74253beffaa8306b40fedecbb",
-    "desimal": "8",
+    "sc": "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984",
+    "desimal": "18",
     "status": true
   },
   {
@@ -1759,18 +1759,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "VIDYUSDT",
-    "sc": "0xc77b230f31b517f1ef362e59c173c2be6540b5e8",
-    "desimal": "18",
-    "status": true
-  },
-  {
-    "symbol": "VOLTUSDT",
-    "sc": "0x7f792db54b0e580cdc755178443f0430cf799aca",
-    "desimal": "9",
-    "status": true
-  },
+ 
   {
     "symbol": "VRAIDR",
     "sc": "0xf411903cbc70a74d22900a5de66a2dda66507255",
@@ -1845,7 +1834,7 @@
   },
   {
     "symbol": "ZRCIDR",
-    "sc": "0x0a6E7Ba5042B38349e437ec6Db6214AEC7B35676",
+    "sc": "0xfd418e42783382E86Ae91e445406600Ba144D162",
     "desimal": "18",
     "status": true
   },
