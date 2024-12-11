@@ -1466,7 +1466,7 @@
   },
   {
     "symbol": "RAREIDR",
-    "sc": "0x93dfaf57d986b9ca77df9376c50878e013d9c7c8",
+    "sc": "0xba5BDe662c17e2aDFF1075610382B9B691296350",
     "desimal": "18",
     "status": true
   },
@@ -1488,12 +1488,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "REVIDR",
-    "sc": "0x2ef52Ed7De8c5ce03a4eF0efbe9B7450F2D7Edc9",
-    "desimal": "6",
-    "status": true
-  },
+  
   {
     "symbol": "REZIDR",
     "sc": "0x3b50805453023a91a8bf641e279401a0b23fa6f9",
