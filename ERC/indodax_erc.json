@@ -1430,12 +1430,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "PUNDIXUSDT",
-    "sc": "0x0fd10b9899882a6f2fcb5c371e17e70fdee00c38",
-    "desimal": "18",
-    "status": true
-  },
+  
   {
     "symbol": "PYRIDR",
     "sc": "0x430ef9263e76dae63c84292c3409d61c598e9682",
