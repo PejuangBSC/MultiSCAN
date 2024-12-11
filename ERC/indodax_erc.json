@@ -1345,7 +1345,7 @@
   },
   {
     "symbol": "OMNIIDR",
-    "sc": "0x9e20461bc2c4c980f62f1B279D71734207a6A356",
+    "sc": "0x36E66fbBce51e4cD5bd3C62B637Eb411b18949D4",
     "desimal": "18",
     "status": true
   },
@@ -1368,7 +1368,7 @@
     "status": true
   },
   {
-    "symbol": "ORDERIDR",
+    "symbol": "ORDERLYIDR",
     "sc": "0xABD4C63d2616A5201454168269031355f4764337",
     "desimal": "18",
     "status": true
