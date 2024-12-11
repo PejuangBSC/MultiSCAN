@@ -699,12 +699,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "ATTIDR",
-    "sc": "0x89Fb927240750c1B15d4743cd58440fc5f14A11C",
-    "desimal": "18",
-    "status": true
-  },
+ 
   {
     "symbol": "AUCTIONIDR",
     "sc": "0xa9b1eb5908cfc3cdf91f9b8b3a74108598009096",
@@ -893,12 +888,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "DADIDR",
-    "sc": "0x5b322514ff727253292637d9054301600c2c81e8",
-    "desimal": "9",
-    "status": true
-  },
+
   {
     "symbol": "DAIIDR",
     "sc": "0x6b175474e89094c44da98b954eedeac495271d0f",
