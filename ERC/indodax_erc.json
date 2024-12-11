@@ -1534,18 +1534,7 @@
     "desimal": "8",
     "status": true
   },
-  {
-    "symbol": "SHIBIDR",
-    "sc": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
-    "desimal": "18",
-    "status": true
-  },
-  {
-    "symbol": "SHIBIDR",
-    "sc": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
-    "desimal": "18",
-    "status": true
-  },
+ 
   {
     "symbol": "SKLIDR",
     "sc": "0x00c83aecc790e8a4453e5dd3b0b4b3680501a7a7",
