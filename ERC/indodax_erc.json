@@ -675,6 +675,12 @@
     "status": true
   },
   
+ {
+    "symbol": "APUIDR",
+    "sc": "0x594DaaD7D77592a2b97b725A7AD59D7E188b5bFa",
+    "desimal": "18",
+    "status": true
+  },
   {
     "symbol": "ARKMIDR",
     "sc": "0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050",
