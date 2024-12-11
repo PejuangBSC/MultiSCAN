@@ -674,12 +674,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "APUIDR",
-    "sc": "0x0b5a91a43cb798c45fd56bfb5d41c13c42a7afa8",
-    "desimal": "18",
-    "status": true
-  },
+  
   {
     "symbol": "ARKMIDR",
     "sc": "0x6e2a43be0b1d33b726f0ca3b8de60b3482b8b050",
@@ -1019,12 +1014,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "FDUSDIDR",
-    "sc": "0xc5f0f7b66764F6ec8C8Dff7BA683102295E16409",
-    "desimal": "18",
-    "status": true
-  },
+
   {
     "symbol": "FETIDR",
     "sc": "0xaea46a60368a7bd060eec7df8cba43b7ef41ad85",
