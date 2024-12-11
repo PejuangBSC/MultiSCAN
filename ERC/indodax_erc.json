@@ -1183,12 +1183,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "LADYSIDR",
-    "sc": "0x12970e6868f88f6557b76120662c1b3e50a646bf",
-    "desimal": "18",
-    "status": true
-  },
+ 
   {
     "symbol": "LDOIDR",
     "sc": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
@@ -1207,12 +1202,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "LGOLDIDR",
-    "sc": "0x27778E14Ce36d3B85e1efFeB43816a17bBB7088A",
-    "desimal": "18",
-    "status": true
-  },
+  
   {
     "symbol": "LINAIDR",
     "sc": "0x3e9bc21c9b189c09df3ef1b824798658d5011937",
@@ -1316,7 +1306,7 @@
     "status": true
   },
   {
-    "symbol": "NEIROIDR",
+    "symbol": "NEIROCTOIDR",
     "sc": "0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee",
     "desimal": "9",
     "status": true
