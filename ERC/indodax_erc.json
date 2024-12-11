@@ -619,12 +619,7 @@
     "desimal": "8",
     "status": true
   },
-  {
-    "symbol": "ADPIDR",
-    "sc": "0xc314b0e758d5ff74f63e307a86ebfe183c95767b",
-    "desimal": "18",
-    "status": true
-  },
+ 
   {
     "symbol": "AEVOIDR",
     "sc": "0xB528edBef013aff855ac3c50b381f253aF13b997",
@@ -739,12 +734,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "BANANAIDR",
-    "sc": "0x92DF60c51C710a1b1C20E42D85e221f3A1bFc7f2",
-    "desimal": "18",
-    "status": true
-  },
+ 
   {
     "symbol": "BANDIDR",
     "sc": "0xba11d00c5f74255f56a5e366f4f77f5a186d7f55",
@@ -841,12 +831,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "CINDIDR",
-    "sc": "0xaC0968a3E2020aC8ca83e60CcF69081EBc6d3bC3",
-    "desimal": "18",
-    "status": true
-  },
+ 
   {
     "symbol": "COMBOIDR",
     "sc": "0xc03fbf20a586fa89c2a5f6f941458e1fbc40c661",
@@ -931,12 +916,7 @@
     "desimal": "6",
     "status": true
   },
-  {
-    "symbol": "DAXIDR",
-    "sc": "0x0b4bdc478791897274652dc15ef5c135cae61e60",
-    "desimal": "18",
-    "status": true
-  },
+  
   {
     "symbol": "DEFIIDR",
     "sc": "0x6B0FaCA7bA905a86F221CEb5CA404f605e5b3131",
@@ -1070,7 +1050,7 @@
     "status": true
   },
   {
-    "symbol": "GALAIDR",
+    "symbol": "GALAGAMESIDR",
     "sc": "0xd1d2Eb1B1e90B638588728b4130137D262C87cae",
     "desimal": "8",
     "status": true
@@ -1111,15 +1091,10 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "GSCIDR",
-    "sc": "0x228ba514309ffdf03a81a205a6d040e429d6e80c",
-    "desimal": "18",
-    "status": true
-  },
+ 
   {
     "symbol": "GTCIDR",
-    "sc": "0xB70835D7822eBB9426B56543E391846C107bd32C",
+    "sc": "0xDe30da39c46104798bB5aA3fe8B9e0e1F348163F",
     "desimal": "18",
     "status": true
   },
@@ -1147,12 +1122,7 @@
     "desimal": "18",
     "status": true
   },
-  {
-    "symbol": "HITOPIDR",
-    "sc": "0x01022591fCe0609B57670bebA60102dFd2b95D77",
-    "desimal": "18",
-    "status": true
-  },
+ 
   {
     "symbol": "HOTIDR",
     "sc": "0x9af839687f6c94542ac5ece2e317daae355493a1",
