@@ -15,8 +15,6 @@
         "ICON": "https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Ethereum-ETH-icon.png",
         "DATAJSON": "https://multichecker.vercel.app/JSON/erc20_multi.json",
         "BaseFEEDEX": "ETHUSDT",
-        
-        "WALLET_CEX": "0x0D0707963952f2fBA59dD06f2b425ace40b492Fe",
         "PAIRDEXS": {  
             "ETH": {
                 "symbolPair": "ETH",
@@ -43,8 +41,6 @@
         "ICON": "https://cryptologos.cc/logos/bnb-bnb-logo.png",
         "DATAJSON": "https://multichecker.vercel.app/JSON/bep20_multi.json",
         "BaseFEEDEX": "BNBUSDT",
-        
-        "WALLET_CEX": "0x0D0707963952f2fBA59dD06f2b425ace40b492Fe",        
         "PAIRDEXS": {
             "USDT": {
                 "symbolPair": "USDT",
