@@ -1,5 +1,6 @@
 [
   {
+    "ticker": "1inch_idr",
     "token": "1INCH",
     "status": true,
     "chain": "ETH",
@@ -11,6 +12,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "aa_idr",
     "token": "AA",
     "status": true,
     "chain": "BSC",
@@ -22,6 +24,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "aave_idr",
     "token": "AAVE",
     "status": true,
     "chain": "ETH",
@@ -33,6 +36,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "abyss_idr",
     "token": "ABYSS",
     "status": true,
     "chain": "ETH",
@@ -44,6 +48,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ach_idr",
     "token": "ACH",
     "status": true,
     "chain": "ETH",
@@ -55,6 +60,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "adp_idr",
     "token": "ADP",
     "status": true,
     "chain": "ETH",
@@ -66,6 +72,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "aevo_idr",
     "token": "AEVO",
     "status": true,
     "chain": "ETH",
@@ -77,6 +84,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "agi_idr",
     "token": "AGI",
     "status": true,
     "chain": "ETH",
@@ -88,6 +96,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ai_idr",
     "token": "AI",
     "status": true,
     "chain": "BSC",
@@ -99,6 +108,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "aioz_idr",
     "token": "AIOZ",
     "status": true,
     "chain": "ETH",
@@ -110,6 +120,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "alice_idr",
     "token": "ALICE",
     "status": true,
     "chain": "ETH",
@@ -121,6 +132,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "alif_idr",
     "token": "alif",
     "status": true,
     "chain": "BSC",
@@ -132,6 +144,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "alpaca_idr",
     "token": "ALPACA",
     "status": true,
     "chain": "BSC",
@@ -143,6 +156,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "alt_idr",
     "token": "ALT",
     "status": true,
     "chain": "BSC",
@@ -154,6 +168,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "alt_idr",
     "token": "ALT",
     "status": true,
     "chain": "ETH",
@@ -165,6 +180,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "amp_idr",
     "token": "AMP",
     "status": true,
     "chain": "ETH",
@@ -176,6 +192,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "andy_idr",
     "token": "ANDY",
     "status": true,
     "chain": "ETH",
@@ -187,6 +204,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ankr_idr",
     "token": "ANKR",
     "status": true,
     "chain": "ETH",
@@ -198,6 +216,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ape_idr",
     "token": "APE",
     "status": true,
     "chain": "ETH",
@@ -209,6 +228,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "api3_idr",
     "token": "API3",
     "status": true,
     "chain": "ETH",
@@ -220,6 +240,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "apu_idr",
     "token": "APU",
     "status": true,
     "chain": "ETH",
@@ -231,6 +252,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "arb_idr",
     "token": "ARB",
     "status": true,
     "chain": "ETH",
@@ -242,6 +264,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "arkm_idr",
     "token": "ARKM",
     "status": true,
     "chain": "ETH",
@@ -253,6 +276,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ata_idr",
     "token": "ATA",
     "status": true,
     "chain": "ETH",
@@ -264,6 +288,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ath_idr",
     "token": "ATH",
     "status": true,
     "chain": "ETH",
@@ -275,6 +300,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "auction_idr",
     "token": "Auction",
     "status": true,
     "chain": "ETH",
@@ -286,6 +312,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "audio_idr",
     "token": "AUDIO",
     "status": true,
     "chain": "ETH",
@@ -297,6 +324,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "axl_idr",
     "token": "AXL",
     "status": true,
     "chain": "BSC",
@@ -308,6 +336,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "axs_idr",
     "token": "AXS",
     "status": true,
     "chain": "ETH",
@@ -319,6 +348,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "badger_idr",
     "token": "BADGER",
     "status": true,
     "chain": "ETH",
@@ -330,6 +360,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "bake_idr",
     "token": "BAKE",
     "status": true,
     "chain": "BSC",
@@ -341,6 +372,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "bal_idr",
     "token": "BAL",
     "status": true,
     "chain": "ETH",
@@ -352,6 +384,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "banana_idr",
     "token": "BANANA",
     "status": true,
     "chain": "ETH",
@@ -363,6 +396,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "band_idr",
     "token": "BAND",
     "status": true,
     "chain": "ETH",
@@ -374,6 +408,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "bat_idr",
     "token": "BAT",
     "status": true,
     "chain": "ETH",
@@ -385,6 +420,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "beam_idr",
     "token": "BEAM",
     "status": true,
     "chain": "ETH",
@@ -396,6 +432,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "beta_idr",
     "token": "BETA",
     "status": true,
     "chain": "BSC",
@@ -407,6 +444,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "bgb_idr",
     "token": "BGB",
     "status": true,
     "chain": "ETH",
@@ -418,6 +456,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "bgb_idr",
     "token": "BGB",
     "status": true,
     "chain": "ETH",
@@ -429,6 +468,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "bico_idr",
     "token": "BICO",
     "status": true,
     "chain": "ETH",
@@ -440,6 +480,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "blur_idr",
     "token": "BLUR",
     "status": true,
     "chain": "ETH",
@@ -451,6 +492,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "bnb_idr",
     "token": "BNB",
     "status": true,
     "chain": "BSC",
@@ -462,6 +504,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "bnb_idr",
     "token": "BNB",
     "status": true,
     "chain": "ETH",
@@ -473,6 +516,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "bnxnew_idr",
     "token": "BNX",
     "status": true,
     "chain": "BSC",
@@ -484,6 +528,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "bond_idr",
     "token": "BOND",
     "status": true,
     "chain": "ETH",
@@ -495,6 +540,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "bone_idr",
     "token": "BONE",
     "status": true,
     "chain": "ETH",
@@ -506,6 +552,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "btr_idr",
     "token": "BTR",
     "status": true,
     "chain": "BSC",
@@ -517,6 +564,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "c98_idr",
     "token": "C98",
     "status": true,
     "chain": "ETH",
@@ -528,6 +576,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "cake_idr",
     "token": "Cake",
     "status": true,
     "chain": "BSC",
@@ -539,6 +588,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "cat_idr",
     "token": "CAT",
     "status": true,
     "chain": "BSC",
@@ -550,6 +600,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "cel_idr",
     "token": "CEL",
     "status": true,
     "chain": "ETH",
@@ -561,6 +612,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "celr_idr",
     "token": "CELR",
     "status": true,
     "chain": "ETH",
@@ -572,6 +624,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "cgpt_idr",
     "token": "CGPT",
     "status": true,
     "chain": "BSC",
@@ -583,6 +636,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "chr_idr",
     "token": "CHR",
     "status": true,
     "chain": "ETH",
@@ -594,6 +648,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "cht_idr",
     "token": "CHT",
     "status": true,
     "chain": "BSC",
@@ -605,6 +660,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "chz_idr",
     "token": "CHZ",
     "status": true,
     "chain": "ETH",
@@ -616,6 +672,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "clv_idr",
     "token": "CLV",
     "status": true,
     "chain": "BSC",
@@ -627,6 +684,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "cng_idr",
     "token": "CNG",
     "status": true,
     "chain": "BSC",
@@ -638,6 +696,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "col_idr",
     "token": "COL",
     "status": true,
     "chain": "BSC",
@@ -649,6 +708,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "combo_idr",
     "token": "COMBO",
     "status": true,
     "chain": "ETH",
@@ -660,6 +720,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "comp_idr",
     "token": "COMP",
     "status": true,
     "chain": "ETH",
@@ -671,6 +732,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "conx_idr",
     "token": "CONX",
     "status": true,
     "chain": "BSC",
@@ -682,6 +744,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "coti_idr",
     "token": "COTI",
     "status": true,
     "chain": "ETH",
@@ -693,6 +756,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "cream_idr",
     "token": "CREAM",
     "status": true,
     "chain": "ETH",
@@ -704,6 +768,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "cro_idr",
     "token": "CRO",
     "status": true,
     "chain": "ETH",
@@ -715,6 +780,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "crv_idr",
     "token": "CRV",
     "status": true,
     "chain": "ETH",
@@ -726,6 +792,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ctk_idr",
     "token": "CTK",
     "status": true,
     "chain": "BSC",
@@ -737,6 +804,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "ctsi_idr",
     "token": "CTSI",
     "status": true,
     "chain": "BSC",
@@ -748,6 +816,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "cvc_idr",
     "token": "CVC",
     "status": true,
     "chain": "ETH",
@@ -759,6 +828,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "cvx_idr",
     "token": "CVX",
     "status": true,
     "chain": "ETH",
@@ -770,6 +840,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "cyber_idr",
     "token": "CYBER",
     "status": true,
     "chain": "ETH",
@@ -781,6 +852,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dad_idr",
     "token": "DAD",
     "status": true,
     "chain": "ETH",
@@ -792,6 +864,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dai_idr",
     "token": "DAI",
     "status": true,
     "chain": "ETH",
@@ -803,6 +876,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dao_idr",
     "token": "DAO",
     "status": true,
     "chain": "ETH",
@@ -814,6 +888,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dar_idr",
     "token": "DAR",
     "status": true,
     "chain": "ETH",
@@ -825,6 +900,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dct_idr",
     "token": "DCT",
     "status": true,
     "chain": "BSC",
@@ -836,6 +912,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "defi_idr",
     "token": "DEFI",
     "status": true,
     "chain": "ETH",
@@ -847,6 +924,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dent_idr",
     "token": "DENT",
     "status": true,
     "chain": "ETH",
@@ -858,6 +936,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dep_idr",
     "token": "DEP",
     "status": true,
     "chain": "ETH",
@@ -869,6 +948,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dfg_idr",
     "token": "DFG",
     "status": true,
     "chain": "BSC",
@@ -880,6 +960,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "dnt_idr",
     "token": "DNT",
     "status": true,
     "chain": "ETH",
@@ -891,6 +972,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dodo_idr",
     "token": "DODO",
     "status": true,
     "chain": "BSC",
@@ -902,6 +984,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "doge_idr",
     "token": "DOGE",
     "status": true,
     "chain": "ETH",
@@ -913,6 +996,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dusk_idr",
     "token": "DUSK",
     "status": true,
     "chain": "ETH",
@@ -924,6 +1008,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dvi_idr",
     "token": "DVI",
     "status": true,
     "chain": "ETH",
@@ -935,6 +1020,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "dydx_idr",
     "token": "DYDX",
     "status": true,
     "chain": "ETH",
@@ -946,6 +1032,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "efi_idr",
     "token": "EFI",
     "status": true,
     "chain": "ETH",
@@ -957,6 +1044,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "eigen_idr",
     "token": "EIGEN",
     "status": true,
     "chain": "ETH",
@@ -968,6 +1056,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "elf_idr",
     "token": "ELF",
     "status": true,
     "chain": "BSC",
@@ -979,6 +1068,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "ena_idr",
     "token": "ENA",
     "status": true,
     "chain": "ETH",
@@ -990,6 +1080,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "enj_idr",
     "token": "ENJ",
     "status": true,
     "chain": "ETH",
@@ -1001,6 +1092,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ens_idr",
     "token": "ENS",
     "status": true,
     "chain": "ETH",
@@ -1012,6 +1104,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ern_idr",
     "token": "ERN",
     "status": true,
     "chain": "ETH",
@@ -1023,6 +1116,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "eth_idr",
     "token": "ETH",
     "status": true,
     "chain": "ETH",
@@ -1034,6 +1128,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ethfi_idr",
     "token": "ETHFI",
     "status": true,
     "chain": "ETH",
@@ -1045,6 +1140,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "fanc_idr",
     "token": "FANC",
     "status": true,
     "chain": "ETH",
@@ -1056,6 +1152,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "fet_idr",
     "token": "FET",
     "status": true,
     "chain": "ETH",
@@ -1067,6 +1164,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "floki_idr",
     "token": "FLOKI",
     "status": true,
     "chain": "BSC",
@@ -1078,6 +1176,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "flux_idr",
     "token": "FLUX",
     "status": true,
     "chain": "ETH",
@@ -1089,6 +1188,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ftm_idr",
     "token": "FTM",
     "status": true,
     "chain": "ETH",
@@ -1100,6 +1200,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "fwog_idr",
     "token": "FWOG",
     "status": true,
     "chain": "ETH",
@@ -1111,6 +1212,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "fxs_idr",
     "token": "FXS",
     "status": true,
     "chain": "ETH",
@@ -1122,6 +1224,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "galagames_idr",
     "token": "GALA",
     "status": true,
     "chain": "BSC",
@@ -1133,6 +1236,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "galagames_idr",
     "token": "GALA",
     "status": true,
     "chain": "ETH",
@@ -1144,6 +1248,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "galagames_idr",
     "token": "GALA",
     "status": true,
     "chain": "ETH",
@@ -1155,6 +1260,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "glch_idr",
     "token": "GLCH",
     "status": true,
     "chain": "ETH",
@@ -1166,6 +1272,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "glm_idr",
     "token": "GLM",
     "status": true,
     "chain": "ETH",
@@ -1177,6 +1284,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "gmt_idr",
     "token": "GMT",
     "status": true,
     "chain": "BSC",
@@ -1188,6 +1296,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "gno_idr",
     "token": "GNO",
     "status": true,
     "chain": "ETH",
@@ -1199,6 +1308,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "grt_idr",
     "token": "GRT",
     "status": true,
     "chain": "ETH",
@@ -1210,6 +1320,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "gtc_idr",
     "token": "GTC",
     "status": true,
     "chain": "ETH",
@@ -1221,6 +1332,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "h2o_idr",
     "token": "H2O",
     "status": true,
     "chain": "BSC",
@@ -1232,6 +1344,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "hft_idr",
     "token": "HFT",
     "status": true,
     "chain": "ETH",
@@ -1243,6 +1356,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "hifi_idr",
     "token": "HIFI",
     "status": true,
     "chain": "ETH",
@@ -1254,6 +1368,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "high_idr",
     "token": "HIGH",
     "status": true,
     "chain": "ETH",
@@ -1265,6 +1380,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "hmstr_idr",
     "token": "HMSTR",
     "status": true,
     "chain": "BSC",
@@ -1276,6 +1392,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "hot_idr",
     "token": "HOT",
     "status": true,
     "chain": "ETH",
@@ -1287,6 +1404,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "spaceid_idr",
     "token": "ID",
     "status": true,
     "chain": "BSC",
@@ -1298,6 +1416,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "idx_idr",
     "token": "IDRX",
     "status": true,
     "chain": "BSC",
@@ -1309,6 +1428,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "ilv_idr",
     "token": "ILV",
     "status": true,
     "chain": "ETH",
@@ -1320,6 +1440,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "imx_idr",
     "token": "IMX",
     "status": true,
     "chain": "ETH",
@@ -1331,6 +1452,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "inj_idr",
     "token": "INJ",
     "status": true,
     "chain": "ETH",
@@ -1342,6 +1464,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "iotx_idr",
     "token": "IOTX",
     "status": true,
     "chain": "BSC",
@@ -1353,6 +1476,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "iq_idr",
     "token": "IQ",
     "status": true,
     "chain": "ETH",
@@ -1364,6 +1488,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "islm_idr",
     "token": "ISLM",
     "status": true,
     "chain": "ETH",
@@ -1375,6 +1500,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "jasmy_idr",
     "token": "JASMY",
     "status": true,
     "chain": "ETH",
@@ -1386,6 +1512,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "joe_idr",
     "token": "JOE",
     "status": true,
     "chain": "BSC",
@@ -1397,6 +1524,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "knc_idr",
     "token": "KNC",
     "status": true,
     "chain": "BSC",
@@ -1408,6 +1536,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "kok_idr",
     "token": "KOK",
     "status": true,
     "chain": "ETH",
@@ -1419,6 +1548,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "krd_idr",
     "token": "KRD",
     "status": true,
     "chain": "BSC",
@@ -1430,6 +1560,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "kunci_idr",
     "token": "KUNCI",
     "status": true,
     "chain": "BSC",
@@ -1441,6 +1572,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "l3_idr",
     "token": "L3",
     "status": true,
     "chain": "ETH",
@@ -1452,6 +1584,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ladys_idr",
     "token": "LADYS",
     "status": true,
     "chain": "ETH",
@@ -1463,6 +1596,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ldo_idr",
     "token": "LDO",
     "status": true,
     "chain": "ETH",
@@ -1474,6 +1608,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "leo_idr",
     "token": "LEO",
     "status": true,
     "chain": "ETH",
@@ -1485,6 +1620,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "lever_idr",
     "token": "LEVER",
     "status": true,
     "chain": "ETH",
@@ -1496,6 +1632,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "lgold_idr",
     "token": "LGOLD",
     "status": true,
     "chain": "BSC",
@@ -1507,6 +1644,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "lina_idr",
     "token": "LINA",
     "status": true,
     "chain": "ETH",
@@ -1518,6 +1656,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "link_idr",
     "token": "LINK",
     "status": true,
     "chain": "ETH",
@@ -1529,6 +1668,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "lista_idr",
     "token": "LISTA",
     "status": true,
     "chain": "BSC",
@@ -1540,6 +1680,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "lit_idr",
     "token": "LIT",
     "status": true,
     "chain": "ETH",
@@ -1551,6 +1692,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "looks_idr",
     "token": "LOOKS",
     "status": true,
     "chain": "ETH",
@@ -1562,6 +1704,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "loom_idr",
     "token": "LOOM",
     "status": true,
     "chain": "ETH",
@@ -1573,6 +1716,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "lpt_idr",
     "token": "LPT",
     "status": true,
     "chain": "ETH",
@@ -1584,6 +1728,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "lqty_idr",
     "token": "LQTY",
     "status": true,
     "chain": "ETH",
@@ -1595,6 +1740,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "lrc_idr",
     "token": "LRC",
     "status": true,
     "chain": "ETH",
@@ -1606,6 +1752,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "lyfel_idr",
     "token": "LYFE",
     "status": true,
     "chain": "BSC",
@@ -1617,6 +1764,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "mana_idr",
     "token": "MANA",
     "status": true,
     "chain": "ETH",
@@ -1628,6 +1776,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "mask_idr",
     "token": "MASK",
     "status": true,
     "chain": "ETH",
@@ -1639,6 +1788,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "mav_idr",
     "token": "MAV",
     "status": true,
     "chain": "BSC",
@@ -1650,6 +1800,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "mavia_idr",
     "token": "MAVIA",
     "status": true,
     "chain": "ETH",
@@ -1661,6 +1812,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "mbox_idr",
     "token": "MBOX",
     "status": true,
     "chain": "BSC",
@@ -1672,6 +1824,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "mct_idr",
     "token": "MCT",
     "status": true,
     "chain": "BSC",
@@ -1683,6 +1836,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "meme_idr",
     "token": "MEME",
     "status": true,
     "chain": "ETH",
@@ -1694,6 +1848,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "metis_idr",
     "token": "Metis",
     "status": true,
     "chain": "ETH",
@@ -1705,6 +1860,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "mkr_idr",
     "token": "MKR",
     "status": true,
     "chain": "ETH",
@@ -1716,6 +1872,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "mmeta_idr",
     "token": "MMETA",
     "status": true,
     "chain": "BSC",
@@ -1727,6 +1884,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "mnt_idr",
     "token": "MNT",
     "status": true,
     "chain": "ETH",
@@ -1738,6 +1896,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "moca_idr",
     "token": "MOCA",
     "status": true,
     "chain": "ETH",
@@ -1749,6 +1908,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "moodeng_idr",
     "token": "MOODENG",
     "status": true,
     "chain": "ETH",
@@ -1760,6 +1920,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "mpro_idr",
     "token": "MPRO",
     "status": true,
     "chain": "BSC",
@@ -1771,6 +1932,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "mrs_idr",
     "token": "MRS",
     "status": true,
     "chain": "BSC",
@@ -1782,6 +1944,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "mshd_idr",
     "token": "MSHD",
     "status": true,
     "chain": "BSC",
@@ -1793,6 +1956,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "mtc_idr",
     "token": "MTC",
     "status": true,
     "chain": "BSC",
@@ -1804,6 +1968,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "mtl_idr",
     "token": "MTL",
     "status": true,
     "chain": "ETH",
@@ -1815,6 +1980,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "multi_idr",
     "token": "MULTI",
     "status": true,
     "chain": "BSC",
@@ -1826,6 +1992,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "mura_idr",
     "token": "Mura",
     "status": true,
     "chain": "BSC",
@@ -1837,6 +2004,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "nbt_idr",
     "token": "NBT",
     "status": true,
     "chain": "BSC",
@@ -1848,6 +2016,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "near_idr",
     "token": "NEAR",
     "status": true,
     "chain": "BSC",
@@ -1859,6 +2028,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "neirocto_idr",
     "token": "Neiro",
     "status": true,
     "chain": "ETH",
@@ -1870,6 +2040,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "neirocto_idr",
     "token": "NEIRO",
     "status": true,
     "chain": "ETH",
@@ -1881,6 +2052,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "nexo_idr",
     "token": "NEXO",
     "status": true,
     "chain": "ETH",
@@ -1892,6 +2064,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "nfp_idr",
     "token": "NFP",
     "status": true,
     "chain": "BSC",
@@ -1903,6 +2076,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "npc_idr",
     "token": "NPC",
     "status": true,
     "chain": "ETH",
@@ -1914,6 +2088,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "nusa_idr",
     "token": "NUSA",
     "status": true,
     "chain": "BSC",
@@ -1925,6 +2100,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "octo_idr",
     "token": "OCTO",
     "status": true,
     "chain": "ETH",
@@ -1936,6 +2112,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ogn_idr",
     "token": "OGN",
     "status": true,
     "chain": "ETH",
@@ -1947,6 +2124,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "okb_idr",
     "token": "OKB",
     "status": true,
     "chain": "ETH",
@@ -1958,6 +2136,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "om_idr",
     "token": "OM",
     "status": true,
     "chain": "ETH",
@@ -1969,6 +2148,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "omg_idr",
     "token": "OMG",
     "status": true,
     "chain": "ETH",
@@ -1980,6 +2160,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "omni_idr",
     "token": "OMNI",
     "status": true,
     "chain": "ETH",
@@ -1991,6 +2172,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ondo_idr",
     "token": "ONDO",
     "status": true,
     "chain": "ETH",
@@ -2002,6 +2184,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "orbs_idr",
     "token": "ORBS",
     "status": true,
     "chain": "ETH",
@@ -2013,6 +2196,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "orc_idr",
     "token": "ORC",
     "status": true,
     "chain": "ETH",
@@ -2024,6 +2208,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "orderly_idr",
     "token": "ORDER",
     "status": true,
     "chain": "ETH",
@@ -2035,6 +2220,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "pando_idr",
     "token": "PANDO",
     "status": true,
     "chain": "ETH",
@@ -2046,6 +2232,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "paxg_idr",
     "token": "PAXG",
     "status": true,
     "chain": "ETH",
@@ -2057,6 +2244,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "pendle_idr",
     "token": "PENDLE",
     "status": true,
     "chain": "BSC",
@@ -2068,6 +2256,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "people_idr",
     "token": "PEOPLE",
     "status": true,
     "chain": "ETH",
@@ -2079,6 +2268,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "pepe_idr",
     "token": "PEPE",
     "status": true,
     "chain": "ETH",
@@ -2090,6 +2280,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "perp_idr",
     "token": "PERP",
     "status": true,
     "chain": "ETH",
@@ -2101,6 +2292,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "pha_idr",
     "token": "PHA",
     "status": true,
     "chain": "ETH",
@@ -2112,6 +2304,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "pixel_idr",
     "token": "PIXEL",
     "status": true,
     "chain": "ETH",
@@ -2123,6 +2316,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "pol_idr",
     "token": "POL",
     "status": true,
     "chain": "ETH",
@@ -2134,6 +2328,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "pols_idr",
     "token": "POLS",
     "status": true,
     "chain": "ETH",
@@ -2145,6 +2340,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "poly_idr",
     "token": "POLY",
     "status": true,
     "chain": "ETH",
@@ -2156,6 +2352,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "portal_idr",
     "token": "PORTAL",
     "status": true,
     "chain": "ETH",
@@ -2167,6 +2364,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "powr_idr",
     "token": "POWR",
     "status": true,
     "chain": "ETH",
@@ -2178,6 +2376,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "prom_idr",
     "token": "PROM",
     "status": true,
     "chain": "BSC",
@@ -2189,6 +2388,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "puffer_idr",
     "token": "PUFFER",
     "status": true,
     "chain": "ETH",
@@ -2200,6 +2400,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "pyr_idr",
     "token": "PYR",
     "status": true,
     "chain": "ETH",
@@ -2211,6 +2412,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "qnt_idr",
     "token": "QNT",
     "status": true,
     "chain": "ETH",
@@ -2222,6 +2424,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "rad_idr",
     "token": "RAD",
     "status": true,
     "chain": "ETH",
@@ -2233,6 +2436,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "rare_idr",
     "token": "RARE",
     "status": true,
     "chain": "ETH",
@@ -2244,6 +2448,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ren_idr",
     "token": "REN",
     "status": true,
     "chain": "ETH",
@@ -2255,6 +2460,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "rep_idr",
     "token": "REPv2",
     "status": true,
     "chain": "ETH",
@@ -2266,6 +2472,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "req_idr",
     "token": "REQ",
     "status": true,
     "chain": "ETH",
@@ -2277,6 +2484,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "rev_idr",
     "token": "REV",
     "status": true,
     "chain": "ETH",
@@ -2288,6 +2496,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "rez_idr",
     "token": "REZ",
     "status": true,
     "chain": "ETH",
@@ -2299,6 +2508,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "rlc_idr",
     "token": "RLC",
     "status": true,
     "chain": "ETH",
@@ -2310,6 +2520,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "root_idr",
     "token": "ROOT",
     "status": true,
     "chain": "ETH",
@@ -2321,6 +2532,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "rpl_idr",
     "token": "RPL",
     "status": true,
     "chain": "ETH",
@@ -2332,6 +2544,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "rsr_idr",
     "token": "RSR",
     "status": true,
     "chain": "ETH",
@@ -2343,6 +2556,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "rss3_idr",
     "token": "RSS3",
     "status": true,
     "chain": "ETH",
@@ -2354,6 +2568,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "rvm_idr",
     "token": "RVM",
     "status": true,
     "chain": "BSC",
@@ -2365,6 +2580,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "safe_idr",
     "token": "SAFE",
     "status": true,
     "chain": "ETH",
@@ -2376,6 +2592,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "sand_idr",
     "token": "SAND",
     "status": true,
     "chain": "ETH",
@@ -2387,6 +2604,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "sfi_idr",
     "token": "SFI",
     "status": true,
     "chain": "ETH",
@@ -2398,6 +2616,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "sfp_idr",
     "token": "SFP",
     "status": true,
     "chain": "BSC",
@@ -2409,6 +2628,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "sgt_idr",
     "token": "SGT",
     "status": true,
     "chain": "ETH",
@@ -2420,6 +2640,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "shan_idr",
     "token": "SHAN",
     "status": true,
     "chain": "BSC",
@@ -2431,6 +2652,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "shib_idr",
     "token": "SHIB",
     "status": true,
     "chain": "BSC",
@@ -2442,6 +2664,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "shib_idr",
     "token": "SHIB",
     "status": true,
     "chain": "ETH",
@@ -2453,6 +2676,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "shill_idr",
     "token": "SHILL",
     "status": true,
     "chain": "BSC",
@@ -2464,6 +2688,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "shred_idr",
     "token": "SHRED",
     "status": true,
     "chain": "BSC",
@@ -2475,6 +2700,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "skl_idr",
     "token": "SKL",
     "status": true,
     "chain": "ETH",
@@ -2486,6 +2712,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "skya_idr",
     "token": "SKYA",
     "status": true,
     "chain": "ETH",
@@ -2497,6 +2724,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "slp_idr",
     "token": "SLP",
     "status": true,
     "chain": "ETH",
@@ -2508,6 +2736,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "snt_idr",
     "token": "SNT",
     "status": true,
     "chain": "ETH",
@@ -2519,6 +2748,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "snx_idr",
     "token": "SNX",
     "status": true,
     "chain": "ETH",
@@ -2530,6 +2760,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "solve_idr",
     "token": "SOLVE",
     "status": true,
     "chain": "ETH",
@@ -2541,6 +2772,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "spell_idr",
     "token": "SPELL",
     "status": true,
     "chain": "ETH",
@@ -2552,6 +2784,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "spx_idr",
     "token": "SPX",
     "status": true,
     "chain": "ETH",
@@ -2563,6 +2796,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "spx_idr",
     "token": "SPX",
     "status": true,
     "chain": "ETH",
@@ -2574,6 +2808,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "srm_idr",
     "token": "SRM",
     "status": true,
     "chain": "ETH",
@@ -2585,6 +2820,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ssv_idr",
     "token": "SSV",
     "status": true,
     "chain": "ETH",
@@ -2596,6 +2832,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "stg_idr",
     "token": "STG",
     "status": true,
     "chain": "ETH",
@@ -2607,6 +2844,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "storj_idr",
     "token": "STORJ",
     "status": true,
     "chain": "ETH",
@@ -2618,6 +2856,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "strk_idr",
     "token": "STRK",
     "status": true,
     "chain": "ETH",
@@ -2629,6 +2868,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "strm_idr",
     "token": "STRM",
     "status": true,
     "chain": "BSC",
@@ -2640,6 +2880,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "superverse_idr",
     "token": "SUPER",
     "status": true,
     "chain": "ETH",
@@ -2651,6 +2892,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "sushi_idr",
     "token": "SUSHI",
     "status": true,
     "chain": "ETH",
@@ -2662,6 +2904,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "swell_idr",
     "token": "SWELL",
     "status": true,
     "chain": "ETH",
@@ -2673,6 +2916,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "syn_idr",
     "token": "SYN",
     "status": true,
     "chain": "BSC",
@@ -2684,6 +2928,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "threshold_idr",
     "token": "T",
     "status": true,
     "chain": "ETH",
@@ -2695,6 +2940,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "tel_idr",
     "token": "TEL",
     "status": true,
     "chain": "ETH",
@@ -2706,6 +2952,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ten_idr",
     "token": "TEN",
     "status": true,
     "chain": "ETH",
@@ -2717,6 +2964,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "titan_idr",
     "token": "Titan",
     "status": true,
     "chain": "ETH",
@@ -2728,6 +2976,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "tlm_idr",
     "token": "TLM",
     "status": true,
     "chain": "BSC",
@@ -2739,6 +2988,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "tmg_idr",
     "token": "TMG",
     "status": true,
     "chain": "BSC",
@@ -2750,6 +3000,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "token_idr",
     "token": "TOKEN",
     "status": true,
     "chain": "BSC",
@@ -2761,6 +3012,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "toko_idr",
     "token": "TOKO",
     "status": true,
     "chain": "ETH",
@@ -2772,6 +3024,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "trb_idr",
     "token": "TRB",
     "status": true,
     "chain": "ETH",
@@ -2783,6 +3036,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "trx_idr",
     "token": "TRX",
     "status": true,
     "chain": "ETH",
@@ -2794,6 +3048,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "turbo_idr",
     "token": "TURBO",
     "status": true,
     "chain": "ETH",
@@ -2805,6 +3060,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "tusd_idr",
     "token": "TUSD",
     "status": true,
     "chain": "BSC",
@@ -2816,6 +3072,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "twelve_idr",
     "token": "TWELVE",
     "status": true,
     "chain": "BSC",
@@ -2827,6 +3084,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "ucjl_idr",
     "token": "UCJL",
     "status": true,
     "chain": "BSC",
@@ -2838,6 +3096,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "uma_idr",
     "token": "UMA",
     "status": true,
     "chain": "ETH",
@@ -2849,6 +3108,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "uni_idr",
     "token": "UNI",
     "status": true,
     "chain": "ETH",
@@ -2860,6 +3120,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "unix_idr",
     "token": "unix",
     "status": true,
     "chain": "BSC",
@@ -2871,6 +3132,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "unmd_idr",
     "token": "UNMD",
     "status": true,
     "chain": "BSC",
@@ -2882,6 +3144,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "usdc_idr",
     "token": "USDC",
     "status": true,
     "chain": "BSC",
@@ -2893,6 +3156,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "usdc_idr",
     "token": "USDC",
     "status": true,
     "chain": "ETH",
@@ -2904,6 +3168,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "uw3s_idr",
     "token": "UW3S",
     "status": true,
     "chain": "BSC",
@@ -2915,6 +3180,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "vanry_idr",
     "token": "VANRY",
     "status": true,
     "chain": "ETH",
@@ -2926,6 +3192,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "vbg_idr",
     "token": "VBG",
     "status": true,
     "chain": "BSC",
@@ -2937,6 +3204,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "vcg_idr",
     "token": "VCG",
     "status": true,
     "chain": "BSC",
@@ -2948,6 +3216,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "vra_idr",
     "token": "VRA",
     "status": true,
     "chain": "ETH",
@@ -2959,6 +3228,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "w3f_idr",
     "token": "W3F",
     "status": true,
     "chain": "BSC",
@@ -2970,6 +3240,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "wbtc_idr",
     "token": "WBTC",
     "status": true,
     "chain": "ETH",
@@ -2981,6 +3252,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "wld_idr",
     "token": "WLD",
     "status": true,
     "chain": "ETH",
@@ -2992,6 +3264,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "wnxm_idr",
     "token": "wNXM",
     "status": true,
     "chain": "ETH",
@@ -3003,6 +3276,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "woo_idr",
     "token": "WOO",
     "status": true,
     "chain": "BSC",
@@ -3014,6 +3288,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "wozx_idr",
     "token": "WOZX",
     "status": true,
     "chain": "ETH",
@@ -3025,6 +3300,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "wtec_idr",
     "token": "WTEC",
     "status": true,
     "chain": "BSC",
@@ -3036,6 +3312,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "xaut_idr",
     "token": "XAUt",
     "status": true,
     "chain": "ETH",
@@ -3047,6 +3324,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "xr_idr",
     "token": "XR",
     "status": true,
     "chain": "BSC",
@@ -3058,6 +3336,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "xvs_idr",
     "token": "XVS",
     "status": true,
     "chain": "BSC",
@@ -3069,6 +3348,7 @@
     "pair_dex": "USDT"
   },
   {
+    "ticker": "yfi_idr",
     "token": "YFI",
     "status": true,
     "chain": "ETH",
@@ -3080,6 +3360,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "yfii_idr",
     "token": "YFII",
     "status": true,
     "chain": "ETH",
@@ -3091,6 +3372,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "ygg_idr",
     "token": "YGG",
     "status": true,
     "chain": "ETH",
@@ -3102,6 +3384,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "zeta_idr",
     "token": "ZETA",
     "status": true,
     "chain": "ETH",
@@ -3113,6 +3396,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "zig_idr",
     "token": "ZIG",
     "status": true,
     "chain": "ETH",
@@ -3124,6 +3408,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "zrc_idr",
     "token": "ZRC",
     "status": true,
     "chain": "ETH",
@@ -3135,6 +3420,7 @@
     "pair_dex": "ETH"
   },
   {
+    "ticker": "zrx_idr",
     "token": "ZRX",
     "status": true,
     "chain": "ETH",
