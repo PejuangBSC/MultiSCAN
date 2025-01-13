@@ -807,6 +807,7 @@ $(document).ready(function () {
     
                 if (ratePrice.idr) {
                     saveToLocalStorage('PriceRateUSDT', ratePrice.idr);
+                    $("#rateUSDT").text("RATE USDT: "+ratePrice.idr);
                 }
             })
             .fail(function (error) {
