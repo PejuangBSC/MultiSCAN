@@ -791,8 +791,50 @@ $(document).ready(function () {
             }
         });
     }
-
+    
     function cekPricePAIR() {
+        // Ambil harga ETHUSDT dari API Binance
+        $.getJSON('https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT')
+            .done(function (response) {
+                let ratePrice = {}; // Inisialisasi objek untuk menyimpan harga
+                
+                // Simpan harga ETH/USDT ke ratePrice
+                if (response.price) {
+                    ratePrice["eth"] = parseFloat(response.price); // Harga ETH ke USDT
+                }
+    
+                // Ambil harga USDT/IDR dari API Indodax
+                $.getJSON('https://indodax.com/api/ticker/usdtidr')
+                    .done(function (responseIndodax) {
+                        ratePrice["idr"] = parseFloat(responseIndodax.ticker.last); // Harga USDT ke IDR
+    
+                        // Hitung harga ETH ke IDR
+                        if (ratePrice.eth) {
+                            saveToLocalStorage('PriceRateBuy', ratePrice.eth);
+                            saveToLocalStorage('PriceRateSell', ratePrice.eth);
+                            console.log("RATE ETH/USDT: " + ratePrice.eth.toFixed(2));
+                        }
+    
+                        // Simpan harga USDT ke IDR ke localStorage dan tampilkan di halaman
+                        if (ratePrice.idr) {
+                            saveToLocalStorage('PriceRateUSDT', ratePrice.idr);
+                            console.log("RATE USDT/IDR: " + ratePrice.idr);
+                            $("#rateUSDT").text("RATE USDT/IDR: " + ratePrice.idr);
+                        }
+                    })
+                    .fail(function (error) {
+                        console.error("Error fetching USDT/IDR price:", error);
+                        toastr.error('CEK KONEKSI INODAX ANDA / AKTIFKAN CORS!');
+                    });
+            })
+            .fail(function (error) {
+                console.error("Error fetching ETH/USDT price:", error);
+                toastr.error('CEK KONEKSI BINANCE ANDA / AKTIFKAN CORS!');
+            });
+    }
+    
+    
+    function cekPricePAIR2() {
         $.getJSON('https://indodax.com/api/ticker/usdtidr')
             .done(function (response) {
                 let ratePrice = {}; // Inisialisasi objek untuk menyimpan harga
