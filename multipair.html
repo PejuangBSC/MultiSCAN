@@ -940,15 +940,8 @@
             if (allFeeWD.length >= 0) {
                 saveToLocalStorage("WALLET_CEX", allFeeWD); // Simpan ke localStorage
                 saveToLocalStorage("LASTUPDATE_FEEWD",lastModifiedTime);
+                removeFromLocalStorage("TOKEN_SCANNER");
             }
-
-          //  $('#lastUpdateTime').html(lastModifiedTime);
-        
-            // Tambahkan event listener untuk mengunduh CSV saat jumlah wallet diklik
-            // $('#downloadCsv').on('click', function (e) {
-            //     e.preventDefault();
-            //     download_ALl_token(allFeeWD, 'TOKEN_'+DTChain.Nama_Chain.toUpperCase()+'_ALL_CEX_'+totalWallets+'.csv');
-            // });
         
             toastr.success("SUKSES UPDATE SEMUA WALLET CEX, SILAKAN REFRESH!!");
             setLastAction("UPDATE WALLET CEX");
@@ -1072,8 +1065,8 @@
                         chain: statusItem.chain || "---",
                         tokenName: statusItem.currency.replace(`_${chain}`, "") || "---", // Hapus suffix "_chain"
                         scToken: "---", // Tetap default
-                        depositEnable: !statusItem.deposit_disabled ? "true" : "false",
-                        withdrawEnable: !statusItem.withdraw_disabled ? "true" : "false",
+                        depositEnable: !statusItem.deposit_disabled ? true : false,
+                        withdrawEnable: !statusItem.withdraw_disabled ? true : false,
                         feeWDs: feeWD // Tetap simpan dengan feeWD yang ada atau null jika tidak ditemukan
                     };
                 });
@@ -1126,8 +1119,8 @@
                         tokenName: item.coin,
                         scToken: CEXChain ? CEXChain.contractAddress : "---",  // Jika tidak ada contractAddress, tampilkan "---"
                         feeWDs: CEXChain ? CEXChain.withdrawFee : 0,
-                        depositEnable: CEXChain ? CEXChain.rechargeable === "true" : false, // Diganti CEXChain
-                        withdrawEnable: CEXChain ? CEXChain.withdrawable === "true" : false // Diganti CEXChain
+                        depositEnable: CEXChain ? CEXChain.rechargeable === "true" : false,
+                        withdrawEnable: CEXChain ? CEXChain.withdrawable === "true" : false
                     };
                 });
                 
