@@ -323,6 +323,10 @@
         if (info && dataACTION.time) {
             $("#infoAPP").text(`${dataACTION.action} at ${dataACTION.time}`);
             loadStoredData();
+            var link = $('a[href="scanner.html"]'); // Pilih elemen link
+            var href = link.attr('href'); // Ambil URL href
+            link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
+
         } 
     }
 
@@ -945,7 +949,7 @@
         
             toastr.success("SUKSES UPDATE SEMUA WALLET CEX, SILAKAN REFRESH!!");
             setLastAction("UPDATE WALLET CEX");
-             console.log("SUKSES UPDATE WALLET CEX : ");
+             console.log("SUKSES UPDATE WALLET DARI SEMUA CEX!!");
         }
     }
    
@@ -975,125 +979,123 @@
         }
     }    
 
- //fungsi cek FEE WD per TOKEN GATE
- function CekfeeWDGATE() {
-        var key = CONFIG_CEX.GATE.ApiKey;
-        var secret = CONFIG_CEX.GATE.ApiSecret;
-        var host = "https://proxykanan.awokawok.workers.dev/?https://api.gateio.ws";
-        var prefix = "/api/v4";
-        var method = "GET";
-        var chain = DTChain.CEXCHAIN.GATE.chainCEX; // Chain yang difokuskan
-        var timestamp = Math.floor(Date.now() / 1000); // Current timestamp in seconds
+    //fungsi cek FEE WD per TOKEN GATE
+    function CekfeeWDGATE() {
+            var key = CONFIG_CEX.GATE.ApiKey;
+            var secret = CONFIG_CEX.GATE.ApiSecret;
+            var host = "https://proxykanan.awokawok.workers.dev/?https://api.gateio.ws";
+            var prefix = "/api/v4";
+            var method = "GET";
+            var chain = DTChain.CEXCHAIN.GATE.chainCEX; // Chain yang difokuskan
+            var timestamp = Math.floor(Date.now() / 1000); // Current timestamp in seconds
 
-        var buildSignature = function (url, body) {
-            var bodyHash = CryptoJS.SHA512(body).toString(CryptoJS.enc.Hex);
-            var signString = method + "\n" + prefix + url + "\n" + "" + "\n" + bodyHash + "\n" + timestamp;
-            var hmac = CryptoJS.HmacSHA512(signString, secret);
-            return hmac.toString(CryptoJS.enc.Hex);
-        };
+            var buildSignature = function (url, body) {
+                var bodyHash = CryptoJS.SHA512(body).toString(CryptoJS.enc.Hex);
+                var signString = method + "\n" + prefix + url + "\n" + "" + "\n" + bodyHash + "\n" + timestamp;
+                var hmac = CryptoJS.HmacSHA512(signString, secret);
+                return hmac.toString(CryptoJS.enc.Hex);
+            };
 
-        // API untuk fee WD
-        var feeWDUrl = "/wallet/withdraw_status";
-        var feeWDHeaders = {
-            'Timestamp': timestamp,
-            'KEY': key,
-            'SIGN': buildSignature(feeWDUrl, "")
-        };
+            // API untuk fee WD
+            var feeWDUrl = "/wallet/withdraw_status";
+            var feeWDHeaders = {
+                'Timestamp': timestamp,
+                'KEY': key,
+                'SIGN': buildSignature(feeWDUrl, "")
+            };
 
-        // API untuk status deposit dan withdraw
-        var statusUrl = "/spot/currencies";
-        var statusHeaders = {
-            'Timestamp': timestamp,
-            'KEY': key,
-            'SIGN': buildSignature(statusUrl, "")
-        };
+            // API untuk status deposit dan withdraw
+            var statusUrl = "/spot/currencies";
+            var statusHeaders = {
+                'Timestamp': timestamp,
+                'KEY': key,
+                'SIGN': buildSignature(statusUrl, "")
+            };
 
-        // Lakukan dua panggilan API secara paralel
-        $.when(
-            $.ajax({
-                url: host + prefix + feeWDUrl,
-                method: method,
-                headers: feeWDHeaders
-            }),
-            $.ajax({
-                url: host + prefix + statusUrl,
-                method: method,
-                headers: statusHeaders
-            })
-        ).done(function (feeWDResponse, statusResponse) {
-            var feeWDData = feeWDResponse[0];
-            var statusData = statusResponse[0];
-
-            if (!Array.isArray(feeWDData) || !Array.isArray(statusData)) {
-                console.error("Unexpected API response");
-                toastr.error("Respons API tidak sesuai format!");
-                return;
-            }
-
-            // Gabungkan data status dan fee WD
-            var combinedData = statusData
-                .filter(function (statusItem) {
-                    // Filter status berdasarkan chain yang relevan
-                    return (
-                        statusItem.currency &&
-                        !statusItem.currency.includes("_OLD") &&
-                        !statusItem.delisted &&
-                        statusItem.chain === chain
-                    );
+            // Lakukan dua panggilan API secara paralel
+            $.when(
+                $.ajax({
+                    url: host + prefix + feeWDUrl,
+                    method: method,
+                    headers: feeWDHeaders
+                }),
+                $.ajax({
+                    url: host + prefix + statusUrl,
+                    method: method,
+                    headers: statusHeaders
                 })
-                .map(function (statusItem) {
-                    var feeWDItem = feeWDData.find(function (feeItem) {
-                        var statusCurrency = statusItem.currency;
-                        var feeCurrency = feeItem.currency;
+            ).done(function (feeWDResponse, statusResponse) {
+                var feeWDData = feeWDResponse[0];
+                var statusData = statusResponse[0];
 
-                        // Hapus suffix "_chain" pada statusItem.currency jika ada
-                        var cleanStatusCurrency = statusCurrency.replace(`_${chain}`, "");
+                if (!Array.isArray(feeWDData) || !Array.isArray(statusData)) {
+                    console.error("Unexpected API response");
+                    toastr.error("Respons API tidak sesuai format!");
+                    return;
+                }
 
-                        // Bandingkan currency tanpa suffix "_chain" dengan feeCurrency
-                        if (feeCurrency === cleanStatusCurrency) {
-                            return feeItem.withdraw_fix_on_chains && feeItem.withdraw_fix_on_chains[chain];
-                        }
+                // Gabungkan data status dan fee WD
+                var combinedData = statusData
+                    .filter(function (statusItem) {
+                        // Filter status berdasarkan chain yang relevan
+                        return (
+                            statusItem.currency &&
+                            !statusItem.currency.includes("_OLD") &&
+                            !statusItem.delisted &&
+                            statusItem.chain === chain
+                        );
+                    })
+                    .map(function (statusItem) {
+                        var feeWDItem = feeWDData.find(function (feeItem) {
+                            var statusCurrency = statusItem.currency;
+                            var feeCurrency = feeItem.currency;
 
-                        return false;
+                            // Hapus suffix "_chain" pada statusItem.currency jika ada
+                            var cleanStatusCurrency = statusCurrency.replace(`_${chain}`, "");
+
+                            // Bandingkan currency tanpa suffix "_chain" dengan feeCurrency
+                            if (feeCurrency === cleanStatusCurrency) {
+                                return feeItem.withdraw_fix_on_chains && feeItem.withdraw_fix_on_chains[chain];
+                            }
+
+                            return false;
+                        });
+
+                        // Jika feeWDItem tidak ditemukan, set feeWDs ke null atau nilai default lain
+                        var feeWD = feeWDItem ? parseFloat(feeWDItem.withdraw_fix_on_chains[chain]) : null;
+
+                        return {
+                            cex: "GATE",
+                            chain: statusItem.chain || "---",
+                            tokenName: statusItem.currency.replace(`_${chain}`, "") || "---", // Hapus suffix "_chain"
+                            scToken: "---", // Tetap default
+                            depositEnable: !statusItem.deposit_disabled ? true : false,
+                            withdrawEnable: !statusItem.withdraw_disabled ? true : false,
+                            feeWDs: feeWD // Tetap simpan dengan feeWD yang ada atau null jika tidak ditemukan
+                        };
                     });
 
-                    // Jika feeWDItem tidak ditemukan, set feeWDs ke null atau nilai default lain
-                    var feeWD = feeWDItem ? parseFloat(feeWDItem.withdraw_fix_on_chains[chain]) : null;
+                // Tampilkan data gabungan sebelum filter final
+                //console.log("Data Gabungan Sebelum Filter Final:", combinedData);
 
-                    return {
-                        cex: "GATE",
-                        chain: statusItem.chain || "---",
-                        tokenName: statusItem.currency.replace(`_${chain}`, "") || "---", // Hapus suffix "_chain"
-                        scToken: "---", // Tetap default
-                        depositEnable: !statusItem.deposit_disabled ? true : false,
-                        withdrawEnable: !statusItem.withdraw_disabled ? true : false,
-                        feeWDs: feeWD // Tetap simpan dengan feeWD yang ada atau null jika tidak ditemukan
-                    };
+                // Filter hasil berdasarkan ketersediaan feeWDs dan tokenName yang valid
+                combinedData = combinedData.filter(function (item) {
+                    return item.chain && item.tokenName;
                 });
 
-            // Tampilkan data gabungan sebelum filter final
-            //console.log("Data Gabungan Sebelum Filter Final:", combinedData);
+                console.log("GATE WALLET:",combinedData);
+                // Gabungkan hasil ke allFeeWD
+                allFeeWD = allFeeWD.concat(combinedData);
+                //checkAndSaveAllFeeWD();
+                isGateSuccess = true; // Tandai sukses
+                toastr.info("SUKSES, CEK UPDATE WALLET GATE");
+                checkAllUpdatesCompleted();
 
-            // Filter hasil berdasarkan ketersediaan feeWDs dan tokenName yang valid
-            combinedData = combinedData.filter(function (item) {
-                return item.chain && item.tokenName;
+            }).fail(function (xhr, status, error) {
+                console.error("Error:", error);
+                toastr.error("Gagal mendapatkan data dari API GATE");
             });
-
-           // console.log("DARI GATE", combinedData);
-
-            // Gabungkan hasil ke allFeeWD
-            allFeeWD = allFeeWD.concat(combinedData);
-            //checkAndSaveAllFeeWD();
-            isGateSuccess = true; // Tandai sukses
-            toastr.info("SUKSES, CEK UPDATE WALLET GATE");
-            checkAllUpdatesCompleted();
-
-        }).fail(function (xhr, status, error) {
-            console.error("Error:", error);
-            toastr.error("Gagal mendapatkan data dari API GATE");
-        });
-    }
-
+        }
     //fungsi cek FEE WD per TOKEN BITGET
     function CekfeeWDBITGET() {
         $.ajax({
@@ -1124,6 +1126,7 @@
                     };
                 });
                 
+                console.log("BITGET WALLET:",coinDepositWithdrawStatus);
                 // Gabungkan hasil ke allFeeWD
                 allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
                 //checkAndSaveAllFeeWD();
@@ -1200,6 +1203,7 @@
                     });
 
                     // Gabungkan hasil ke allFeeWD
+                    console.log("KUCOIN WALLET:",coinDepositWithdrawStatus);
                     allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
                     //checkAndSaveAllFeeWD();
 
@@ -1270,7 +1274,8 @@
                     }
                     return null; // Token ini diabaikan jika kedua status adalah false
                 }).filter(item => item !== null); // Hapus nilai null (yang tidak memenuhi syarat)                
-    
+               
+                console.log("BINANCE WALLET:",coinDepositWithdrawStatus);
                 // Gabungkan hasil ke allFeeWD
                 allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
                 //checkAndSaveAllFeeWD();
@@ -1330,6 +1335,7 @@
                 }).filter(item => item.depositEnable || item.withdrawEnable); // Hanya ambil yang salah satu deposit / withdraw aktif
     
                 // Gabungkan hasil ke allFeeWD
+                console.log("MEXC WALLET:",coinDepositWithdrawStatus);
                 allFeeWD = [...allFeeWD, ...coinDepositWithdrawStatus];
                 //checkAndSaveAllFeeWD();
     
@@ -1384,13 +1390,14 @@
                         cex: "BYBIT",
                         chain: DTChain.CEXCHAIN.BYBIT.chainCEX,
                         tokenName: item.coin,
-                        scToken: "---",  // Tidak ada informasi contract address di BYBIT
+                        scToken: Network.contractAddress,  // Tidak ada informasi contract address di BYBIT
                         feeWDs: Network ? Network.withdrawFee : 0,
                         depositEnable: Network ? (Network.chainDeposit === '1') : false,
                         withdrawEnable: Network ? (Network.chainWithdraw === '1') : false
                     };
                 });
-    
+
+                console.log("BYBIT WALLET:",coinDepositWithdrawStatus);
                 // Gabungkan hasil ke allFeeWD
                 allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
                 //checkAndSaveAllFeeWD();
@@ -1462,7 +1469,7 @@
                         withdrawEnable: item.canWd     // Status withdraw
                     };
                 });
-    
+                console.log("OKX WALLET:",coinDepositWithdrawStatus);
                 // Gabungkan hasil ke allFeeWD
                 allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
                 //checkAndSaveAllFeeWD();
