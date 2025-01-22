@@ -218,7 +218,6 @@
                                 <div>
                                 </div>
                                 
-
                                 <div class="uk-flex uk-flex-middle uk-margin ">
                                  <!-- <div style="display: none;"> -->
                                     <div>
@@ -282,7 +281,6 @@
     </div>
     <div id="progress" style="font-size: 14px; font-weight: bold; margin-top: 5px;"></div>
     
-
     <div class="uk-overflow-auto uk-margin-small-top">
         <table class="uk-table uk-table-hover uk-table-small uk-table-striped">
             <thead class="table-header">
@@ -1213,9 +1211,9 @@
             let row = `
                 <tr data-index="${index}">
                     <td style="text-align:center; vertical-align: middle;" class="uk-text-success" ><a href=${urlsCEX.tradeToken} target="_blank"><span id=BUY_${data.cex}_${data.symbol_in}_${data.symbol_out}_${(DTChain.Nama_Chain).toUpperCase()}>PRICE & VOL BUY <br>${data.cex}</span></a></td>
-                    <td class="uk-text-center">
-                        <input type="checkbox" class="statusCheckbox" data-index="${data.no}" ${data.status ? 'checked' : ''}>
-                        <span class="uk-text-center uk-text-secondary uk-text-bolder"> ${linkToken}  VS ${linkPair}</br></span>                        
+                        <td class="uk-text-center">
+                            <input type="checkbox" class="statusCheckbox" data-index="${data.no}" ${data.status ? 'checked' : ''}>
+                         <span class="uk-text-center uk-text-secondary uk-text-bolder"> ${linkToken}  VS ${linkPair}</br></span>                        
                        <span style="${withdrawStatus.style}"><a href=${urlsCEX.withdrawUrl} target="_blank">${withdrawStatus.text}</a> </span> <a href="${URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">[SC]</a>~ 
                         <span style="${depositStatus.style}"><a href=${urlsCEX.depositUrl} target="_blank">${depositStatus.text}</a></span> <a href="${URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">[SC]</a></br>
                         <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex}</span>: ${linkStok}</br>
@@ -1263,22 +1261,22 @@
         updateSortIcons();
     }
 
-    // Fungsi untuk menangani perubahan status checkbox status PAIR
-    $(document).on('change', '.statusCheckbox', function() {
-        const no = $(this).data('index');  // Ambil 'no' dari data (ID unik token)
-        const isChecked = $(this).prop('checked');  // Ambil status checkbox (checked/un-checked)    
-        const storedData = getFromLocalStorage('TOKEN_SCANNER', []); // Ambil data dari localStorage
-
-        // Cari token berdasarkan 'no' yang unik
-        const token = storedData.find(t => t.no === no);  // Gunakan 'no' untuk mencari token
+    $(document).on('change', '.statusCheckbox', function(event) {
+        event.preventDefault(); // Mencegah tindakan default
+        const no = $(this).data('index');
+        const isChecked = $(this).prop('checked');
+        const storedData = getFromLocalStorage('TOKEN_SCANNER', []);
+        const token = storedData.find(t => t.no === no);
         if (token) {
             token.status = isChecked;
             saveToLocalStorage('TOKEN_SCANNER', storedData);
-            UIkit.notification(`Berhasil UBAH status PAIR ${token.symbol_in}-${token.symbol_out} pada ${token.cex}!`, { status: 'success' });
-            loadStoredData(storedData); 
-            location.reload();
+            toastr.info(`Berhasil mengubah status PAIR ${token.symbol_in}-${token.symbol_out}!`);
+            $(`td[data-index="${no}"]`).remove();
         }
+       // const filteredTokens = filterTokens();
+       // loadStoredData(filteredTokens);      
     });
+
     function GeturlExchanger(cex, NameToken, NamePair) {
         // Konversi nama token dan pasangan ke uppercase
         const token = NameToken.toUpperCase();
@@ -1420,7 +1418,8 @@
     });
 
     // Fungsi untuk menangani perubahan CEX/DEX/DEXPAIR
-    $(document).on('change', 'input[type="checkbox"]', function() {
+   // $(document).on('change', 'input[type="checkbox"]', function() {
+        $(document).on('change', 'div#cex-options input[type="checkbox"], div#dex-options input[type="checkbox"], div#dexpair-options input[type="checkbox"]', function() {
         // Menentukan kategori checkbox berdasarkan ID
         const groupName = $(this).closest('div').attr('id'); // Ambil ID div induk dari checkbox
         
@@ -1444,7 +1443,7 @@
         }
 
         // Memanggil fungsi filter dan reload tabel setelah ada perubahan
-      //  const filteredTokens = filterTokens();
+        const filteredTokens = filterTokens();
         loadStoredData(filteredTokens);
         location.reload();
     });
