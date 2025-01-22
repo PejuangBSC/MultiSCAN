@@ -629,7 +629,9 @@
                 const savedData = getFromLocalStorage("TOKEN_SCANNER", []);
                 // Validasi apakah data berhasil disimpan
                 if (savedData.length === combinedData.length) {
-                   toastr.success("LOAD DATA BERHASIL, SILAKAN REFRESH");
+                    if (confirm('LOAD DATA BERHASIL')) {
+                        location.reload();
+                    }
                 }                       
             });
 
@@ -649,7 +651,7 @@
     }
 
     //scan dengan batas maksimum eksekusi pergrup (speedscan)
-    $("#startSCAN").click(function () {
+    $("#startSCANBaru").click(function () {
         sendStatusTELE(SavedSettingData.nickname, 'ONLINE');
         $('#sinyal-container span[id^="sinyal"]').empty();
         form_off();
@@ -752,7 +754,7 @@
                                             getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex, function (error, DataDEX) {     
                                                 if (error) {
                                                     console.error("Error dalam getPriceDEX:", error);
-                                                    $(`#${dexId}`).removeClass('errorrestapi').addClass(error.color);
+                                                    $(`#${dexId}`).addClass(error.color);
 
                                                     $(`span#BUY_${dexId}`).text(``);
                                                     $(`span#SELL_${dexId}`).text(``);
@@ -813,7 +815,7 @@
     });
 
     //fungsi memulai pengecekan harga CEX dan DEX
-   $("#startSCANLama").click(function () {
+   $("#startSCAN").click(function () {
         sendStatusTELE(SavedSettingData.nickname, 'ONLINE');
 
         $('#sinyal-container span[id^="sinyal"]').empty();
@@ -919,7 +921,7 @@
                                             getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex, function (error, DataDEX) {     
                                                 if (error) {
                                                     console.error("Error dalam getPriceDEX:", error);
-                                                    $(`#${dexId}`).removeClass('errorrestapi').addClass(error.color);
+                                                    $(`#${dexId}`).css('background-color',error.color);
 
                                                     $(`span#BUY_${dexId}`).text(``);
                                                     $(`span#SELL_${dexId}`).text(``);
@@ -1059,41 +1061,35 @@
 
     //fungsi filter TOKEN berdasarkan CEX,DEX dan DEX-PAIR
     function filterTokens() {
-        const allTokens = getFromLocalStorage("TOKEN_SCANNER", []); // Ambil semua token dari localStorage
-        const selectedCEX = getFromLocalStorage("CEX_PILIH", []); // Ambil pilihan CEX dari localStorage
-        const selectedDEXPAIR = getFromLocalStorage("DEXPAIR_PILIH", []); // Ambil pilihan DEXPAIR dari localStorage
+        const allTokens = Array.isArray(getFromLocalStorage("TOKEN_SCANNER", [])) ? getFromLocalStorage("TOKEN_SCANNER", []) : [];
+        const selectedCEX = Array.isArray(getFromLocalStorage("CEX_PILIH", [])) ? getFromLocalStorage("CEX_PILIH", []) : [];
+        const selectedDEXPAIR = Array.isArray(getFromLocalStorage("DEXPAIR_PILIH", [])) ? getFromLocalStorage("DEXPAIR_PILIH", []) : [];
 
-        if (!Array.isArray(allTokens) || allTokens.length === 0) {
+        if (allTokens.length === 0) {
             console.warn("No tokens available for filtering.");
             return [];
         }
 
-        // Cek jika "NON" dipilih
         const isNonSelected = selectedDEXPAIR.includes("NON");
-        const dexPairs = Object.keys(DTChain.PAIRDEXS).filter(pair => pair !== "NON"); // Semua pasangan kecuali "NON"
+        const dexPairs = Object.keys(DTChain.PAIRDEXS).filter(pair => pair !== "NON");
 
-        // Filter token
         const filteredTokens = allTokens.filter(token => {
-            const validCEX = selectedCEX.includes(token.cex); // Token harus memiliki CEX yang dipilih
-            let validDexPair;
+            if (!token || !token.cex || !token.symbol_in || !token.symbol_out) return false;
 
-            if (isNonSelected) {
-                // Jika "NON" dipilih
-                validDexPair = !dexPairs.some(pair => 
-                    token.symbol_in === pair || token.symbol_out === pair
-                ) || selectedDEXPAIR.some(pair =>
-                    token.symbol_in === pair || token.symbol_out === pair
-                ); // Tampilkan token di luar daftar DEX kecuali yang dipilih
-            } else {
-                // Jika "NON" tidak dipilih
-                validDexPair = selectedDEXPAIR.some(pair => 
-                    token.symbol_in === pair || token.symbol_out === pair
-                );
-            }
+            const validCEX = selectedCEX.includes(token.cex);
+            const validDexPair = isNonSelected
+                ? selectedDEXPAIR.some(pair => token.symbol_in === pair || token.symbol_out === pair)
+                || !dexPairs.some(pair => token.symbol_in === pair || token.symbol_out === pair)
+                : selectedDEXPAIR.some(pair => token.symbol_in === pair || token.symbol_out === pair);
 
-            // Kembalikan token jika CEX valid, DEX pair valid, dan status true
             return validCEX && validDexPair && token.status === true && token.withdrawEnable === true && token.depositEnable === true;
         });
+
+        if (filteredTokens.length === 0) {
+            console.warn("No tokens matched the filtering criteria.");
+            toastr.error("TIDAK ADA TOKEN-PAIR YANG SESUAI CEX/DEX/PAIRDEX !!");
+        }
+
         return filteredTokens;
     }
 
@@ -1136,7 +1132,6 @@
         $InfoStatus.text("Sedang Memuat DATA TOKEN...").show();
 
         let $tableBody = $('#dataTableBody');
-        
         if (!Array.isArray(filteredData) || filteredData.length === 0) {
             // Jika tidak ada data, tampilkan pesan kosong
             $InfoStatus.text("Tidak ada data token yang ditemukan.");
@@ -1219,6 +1214,7 @@
                 <tr data-index="${index}">
                     <td style="text-align:center; vertical-align: middle;" class="uk-text-success" ><a href=${urlsCEX.tradeToken} target="_blank"><span id=BUY_${data.cex}_${data.symbol_in}_${data.symbol_out}_${(DTChain.Nama_Chain).toUpperCase()}>PRICE & VOL BUY <br>${data.cex}</span></a></td>
                     <td class="uk-text-center">
+                        <input type="checkbox" class="statusCheckbox" data-index="${data.no}" ${data.status ? 'checked' : ''}>
                         <span class="uk-text-center uk-text-secondary uk-text-bolder"> ${linkToken}  VS ${linkPair}</br></span>                        
                        <span style="${withdrawStatus.style}"><a href=${urlsCEX.withdrawUrl} target="_blank">${withdrawStatus.text}</a> </span> <a href="${URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">[SC]</a>~ 
                         <span style="${depositStatus.style}"><a href=${urlsCEX.depositUrl} target="_blank">${depositStatus.text}</a></span> <a href="${URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">[SC]</a></br>
@@ -1256,9 +1252,10 @@
 
         // Perbarui total token
         $('#tokenCount').text(` TOTAL : ${filteredData.length} PAIR-TOKEN `);
+       
         // Sembunyikan pesan loading setelah selesai
         $InfoStatus.text("SELESAI, Memuat DATA TOKEN !!");
-       
+        
         $("#startSCAN").show();
         setTimeout(() => $InfoStatus.fadeOut(), 2000);
 
@@ -1266,6 +1263,22 @@
         updateSortIcons();
     }
 
+    // Fungsi untuk menangani perubahan status checkbox status PAIR
+    $(document).on('change', '.statusCheckbox', function() {
+        const no = $(this).data('index');  // Ambil 'no' dari data (ID unik token)
+        const isChecked = $(this).prop('checked');  // Ambil status checkbox (checked/un-checked)    
+        const storedData = getFromLocalStorage('TOKEN_SCANNER', []); // Ambil data dari localStorage
+
+        // Cari token berdasarkan 'no' yang unik
+        const token = storedData.find(t => t.no === no);  // Gunakan 'no' untuk mencari token
+        if (token) {
+            token.status = isChecked;
+            saveToLocalStorage('TOKEN_SCANNER', storedData);
+            UIkit.notification(`Berhasil UBAH status PAIR ${token.symbol_in}-${token.symbol_out} pada ${token.cex}!`, { status: 'success' });
+            loadStoredData(storedData); 
+            location.reload();
+        }
+    });
     function GeturlExchanger(cex, NameToken, NamePair) {
         // Konversi nama token dan pasangan ke uppercase
         const token = NameToken.toUpperCase();
@@ -2195,14 +2208,17 @@
             
             error: function (xhr) {
                 var alertMessage = "Terjadi kesalahan";
-                var warna = "error";
+                var warna = "#f39999";
                 switch (xhr.status) {
                     case 0:                                            
-                        if(dexType=='odos' || dexType=='jupiter' ){
-                            warna = "errorrestapi";   
+                        if(dexType=='jupiter' ){
+                            warna = "#f6f2f1";   
                             getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
+                        }else if(dexType=='odos'){
+                            warna = "#f6f2f1";  
+                            getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
                         }else{
-                            var warna = "error";
+                            var warna = "#f39999";
                         } 
                         break;                        
                     case 400:
@@ -2210,7 +2226,7 @@
                             var errorResponse = JSON.parse(xhr.responseText);
                             if (errorResponse.description && errorResponse.description.toLowerCase().includes("insufficient liquidity")) {
                                 alertMessage = "NO LP (No Liquidity Provider)";
-                                warna = "error";
+                                warna = "#f39999";
                             } else {
                                 alertMessage = errorResponse.detail || errorResponse.description || "KONEKSI BURUK";
                             }
@@ -2228,11 +2244,11 @@
                         alertMessage = "Permintaan tidak ditemukan";
                         break ;
                     case 429:
-                        warna = "errorrestapi";
+                        warna = "#f6f2f1";
                         if (dexType !== 'jupiter' && dexType !== 'magpie') {
                             getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
                         }else{
-                            var warna = "error";
+                            var warna = "#f39999";
                             alertMessage = "AKSES KENA LIMIT";
                         }                        
                         break;
@@ -2314,7 +2330,7 @@
             },
             error: function (xhr) {
                 var alertMessage = "Terjadi kesalahan";
-                var warna = "error";
+                var warna = "#f39999";
             
                 switch (xhr.status) {
                     case 0:
@@ -2353,6 +2369,7 @@
                         alertMessage = "Respons tidak valid";
                         break;
                     default:
+                        warna = "#f39999";
                         alertMessage = "Status: " + xhr.status;
                 }
 
@@ -2475,7 +2492,7 @@
             
             error: function (xhr) {
                 let alertMessage = "Kesalahan tidak diketahui";
-                let warna = "error";
+                let warna = "#f39999";
             
                 // Jika ada responseJSON dan memiliki key description, gunakan pesan ini
                 if (xhr.responseJSON && xhr.responseJSON.description) {
@@ -2505,6 +2522,7 @@
                             alertMessage = "Layanan tidak tersedia"; 
                             break;
                         default: 
+                           warna = "#f39999";
                             alertMessage = `Status: ${xhr.status}`;
                     }
                 }
