@@ -2142,7 +2142,7 @@
                                 break;
                             case 'magpie':
                                 amount_out = parseFloat(response.amountOut) / Math.pow(10, des_output);
-                                FeeSwap = parseFloat(response.fees[0].value)+0.5;
+                                FeeSwap = parseFloat(response.fees[0].value);
                                 break;    
                             case 'okx':
                                 amount_out = response.data[0].toTokenAmount / Math.pow(10, des_output);
