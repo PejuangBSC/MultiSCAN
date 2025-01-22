@@ -853,7 +853,7 @@
                         filterPNL: 0,
                         walletMeta: "-",
                         nickname:"",
-                        speedScan:2
+                        speedScan:1
                     };
                     // Menyimpan data yang berhasil disinkronisasi ke localStorage
                     saveToLocalStorage('SERVERCORS', serverCORS);
@@ -1096,7 +1096,7 @@ function getWalletStatus(cex, tokenName) {
     function CekfeeWDGATE() {
             var key = CONFIG_CEX.GATE.ApiKey;
             var secret = CONFIG_CEX.GATE.ApiSecret;
-            var host = selectedServer+"https://api.gateio.ws";
+            var host = "https://kirihaha.awokawok.workers.dev/?https://api.gateio.ws";
             var prefix = "/api/v4";
             var method = "GET";
             var chain = DTChain.CEXCHAIN.GATE.chainCEX; // Chain yang difokuskan
