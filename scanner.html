@@ -209,9 +209,9 @@
                                 <div class="uk-flex uk-flex-middle uk-margin ">
                                        <div>
                                             <label for="SPEEDSCAN" class="uk-text-danger">WAKTU TUNGGU</label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4"  name="waktu-tunggu"> NORMAL </label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="3" name="waktu-tunggu"> MEDIUM </label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="2" name="waktu-tunggu"> FAST </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="3"  name="waktu-tunggu"> NORMAL </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="2" name="waktu-tunggu"> MEDIUM </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="1" name="waktu-tunggu"> FAST </label>
                                         </div>
                                    </div>
                                 <div>
@@ -224,12 +224,12 @@
                                         <input class="uk-input" type="number" id="inFilterPNL" value="0" name="filterpnl" >         
                                     </div>
                                     <div>
-                                        <label for="jeda-time-group" class="uk-text-danger">JEDA / GROUP {1000}</label><br/>
-                                        <input class="uk-input" id="jeda-time-group" type="number" value="1000" name="jeda-time-group" >
+                                        <label for="jeda-time-group" class="uk-text-danger">JEDA / GROUP {700}</label><br/>
+                                        <input class="uk-input" id="jeda-time-group" type="number" value="700" name="jeda-time-group" >
                                     </div>
                                     <div>
-                                        <label for="jeda-koin" class="uk-text-primary">JEDA / KOIN {700}</label><br/>
-                                        <input class="uk-input" type="number" id="jeda-koin" value="700" name="jeda-koin" > 
+                                        <label for="jeda-koin" class="uk-text-primary">JEDA / KOIN {200}</label><br/>
+                                        <input class="uk-input" type="number" id="jeda-koin" value="200" name="jeda-koin" > 
                                     </div>
                                 </div>
 
@@ -648,7 +648,7 @@
     }
 
     //scan dengan batas maksimum eksekusi pergrup (speedscan)
-    $("#startSCANBaru").click(function () {
+    $("#startSCAN").click(function () {
         sendStatusTELE(SavedSettingData.nickname, 'ONLINE');
         $('#sinyal-container span[id^="sinyal"]').empty();
         form_off();
@@ -662,9 +662,11 @@
         let dexList = getFromLocalStorage("DEX_PILIH", []);
 
         let speedScan = parseInt(getFromLocalStorage('SavedSettingData.speedScan', 1000)); // Ambil speedScan dari localStorage, default 1000ms
+        
         function delay(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         }
+
         function updateProgress(current, total, startTime, TokenPair) {
             let duration = ((Date.now() - startTime) / 1000 / 60).toFixed(2);
             let progressPercentage = Math.floor((current / total) * 100);
@@ -799,161 +801,6 @@
 
 
         processTokens(); // Memulai pemrosesan token
-    });
-
-    //fungsi memulai pengecekan harga CEX dan DEX
-   $("#startSCAN").click(function () {
-        sendStatusTELE(SavedSettingData.nickname, 'ONLINE');
-
-        $('#sinyal-container span[id^="sinyal"]').empty();
-        form_off();
-        $("#stopSCAN").show().prop('disabled', false);
-        $('#LoadDataBtn, #SettingModal,  #chain-links-container').css('pointer-events', 'none').css('opacity', '0.4');
-
-        let ConfigScan = getFromLocalStorage('DATA_SETTING', {});
-        let scanPerKoin = parseInt(ConfigScan.scanPerKoin);
-        let jedaTimeGroup = parseInt(ConfigScan.jedaTimeGroup);
-        let dexList = getFromLocalStorage("DEX_PILIH", []);
-
-        if (!filteredTokens || filteredTokens.length === 0) {
-            console.warn("Tidak ada token yang difilter!");
-            return;
-        }
-
-        function delay(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-
-        function updateProgress(current, total, startTime, TokenPair) {
-            let duration = ((Date.now() - startTime) / 1000 / 60).toFixed(2);
-            let progressPercentage = Math.floor((current / total) * 100);
-            let progressText = `CHECKING - ${TokenPair} [${current}/${total}] :: Mulai: ${new Date(startTime).toLocaleTimeString()} ~ DURASI [${duration} Menit]`;
-
-            $('#progress-bar').css('width', progressPercentage + '%');
-            $('#progress-text').text(progressPercentage + '%');
-            $('#progress').text(progressText);
-        }
-
-        async function processTokens() {
-            let startTime = Date.now();
-            let totalTokens = filteredTokens.length;
-            let currentProcessed = 0;
-
-            for (let i = 0; i < filteredTokens.length; i += scanPerKoin) {
-                let groupTokens = filteredTokens.slice(i, i + scanPerKoin);
-                console.log(`Memproses grup ${Math.floor(i / scanPerKoin) + 1}`);
-                console.log("-------------------------------");
-
-                let promises = groupTokens.map(async (token, index) => {
-                    try {
-                       // console.log(`Memproses ${token.symbol_in} => ${token.symbol_out} pada grup ${Math.floor(i / scanPerKoin) + 1} (Anggota ke-${index + 1})`);
-                       feeGasGwei()
-                        if (!token.status) {
-                            console.log(`Token ${token.symbol_in}_${token.symbol_out} tidak aktif.`);
-                            return;
-                        }
-
-                        let cex = token.cex.toUpperCase();
-                        let symbolIn = token.symbol_in.toUpperCase();
-                        let symbolOut = token.symbol_out.toUpperCase();
-                        let sc_input = token.sc_in.toUpperCase();
-                        let sc_output = token.sc_out.toUpperCase();
-                        let des_input = token.des_in;
-                        let des_output = token.des_out;
-                        let NameToken = token.symbol_in.toUpperCase();
-                        let NamePair = token.symbol_out.toUpperCase();
-
-                        let TokenPair = `${symbolIn}_${symbolOut}`;
-                        // Menggunakan Promise untuk menangani callback
-                        await new Promise((resolve) => {
-                            getPriceCEX(token, symbolIn, symbolOut, cex, function (error, DataCEX) {                                
-                                //console.log("DATA CEX",DataCEX);
-                                updateProgress(currentProcessed + index, totalTokens, startTime, `${cex} : ${symbolIn} VS ${symbolOut}`);
-                                if (error) {
-                                    console.error("Error data from CEX:", error);
-                                    toastr.info(`Cek Ulang Harga ${symbolIn} atau ${symbolOut} Exchanger : ${cex}`);
-                                    resolve(); // Pastikan resolve dipanggil meskipun terjadi error
-                                    $('#' + cex + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).css('background-color','#fadcdc');
-                                    return;
-                                }
-
-                                try {            
-                                    let priceBuyTokenCEX = DataCEX.volumes_buyToken[0]?.price || "N/A";
-                                    let priceSellTokenCEX = DataCEX.volumes_sellToken[0]?.price || "N/A";
-
-                                    let priceBuyPairCEX = DataCEX.volumes_buyPair[0]?.price || "N/A";
-                                    let priceSellPairCEX = DataCEX.volumes_sellPair[0]?.price || "N/A";
-
-                                    let feeWD = parseFloat(DataCEX.feeWD || 0).toFixed(2);
-                                    dexList.forEach((dex) => {
-                                        let dexId = `${cex}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
-                                        let modalKey = `MODAL_${dex.toUpperCase()}`;
-                                        let modalValue = SavedSettingData[modalKey];
-                                        //console.log(dexId);
-                                        let dextype=dex.toLowerCase();
-
-                                        if ($(`#${dexId}`).length) {
-                                            var Modal = parseFloat(modalValue);
-                                            var amount_in =parseFloat(Modal) / parseFloat(priceBuyTokenCEX);
-                                           // console.warn(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex);
-                                            getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex, function (error, DataDEX) {     
-                                                if (error) {
-                                                    console.error("Error dalam getPriceDEX:", error);
-                                                    $(`#${dexId}`).css('background-color',error.color);
-
-                                                     $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERROR]</span>`);
-                                                    return;
-                                                }else{
-                                                    
-                                                    if (NameToken == "USDT") {
-                                                        $(`span#SELL_${dexId}`).text(`${formatPrice(priceSellPairCEX)} ${NamePair} (${cex})`);       
-                                                    }else if(NamePair == "USDT"){
-                                                        $(`span#BUY_${dexId}`).text(`${formatPrice(priceBuyTokenCEX)} ${NameToken} (${cex})`);
-                                                    }else  {
-                                                        $(`span#BUY_${dexId}`).text(`${formatPrice(priceBuyTokenCEX)} ${NameToken} (${cex})`);
-                                                        $(`span#SELL_${dexId}`).text(`${formatPrice(priceSellPairCEX)} ${NamePair} (${cex})`);    
-                                                    }  
-                                                    
-                                                    ResultEksekusi(DataDEX, DataCEX, Modal, amount_in, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair, dextype); 
-                                                }
-                                            });    
-                                            
-                                        }
-                                    });
-                                    
-                                   // Mengupdate elemen-elemen dalam tabel dengan ID yang sesuai
-
-                                } catch (innerError) {
-                                    console.warn(`Kesalahan saat memproses data token ${TokenPair}:`, innerError);
-                                }
-
-                                resolve(); // Memastikan resolve dipanggil meskipun ada kesalahan
-                            });
-                        });
-
-                    } catch (error) {
-                        console.warn(`Kesalahan pada token ${token.symbol_in}_${token.symbol_out}:`, error);
-                    }
-                });
-
-                await Promise.all(promises);  // Menunggu semua promises selesai
-
-                currentProcessed += groupTokens.length; // Update jumlah token yang telah diproses
-                console.log("---------------------------");
-
-                await delay(jedaTimeGroup);  // Menunggu sebelum melanjutkan ke grup berikutnya
-            }
-
-            // Pastikan progress bar mencapai 100% setelah seluruh proses selesai
-                updateProgress(currentProcessed, totalTokens, startTime, "SELESAI");
-                form_on();
-                $("#stopSCAN").hide().prop('disabled', false);
-                $('#LoadDataBtn, #SettingModal,  #chain-links-container').css('pointer-events', 'auto').css('opacity', '1');
-
-            // console.log("Pengecekan selesai!");
-        }
-
-        processTokens();  // Memulai pemrosesan token
     });
 
     //genereta inputan checkbox
