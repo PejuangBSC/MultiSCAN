@@ -321,27 +321,25 @@
     function saveToLocalStorage(key, value) {
         try {
             localStorage.setItem(storagePrefix + key, JSON.stringify(value));
-            //console.log("Data saved successfully:", key);
+            console.log("Data saved successfully:", key);
         } catch (error) {
-            if (error.name === "QuotaExceededError" && isLocalStorageFull()) {
-                toastr.error("MEMORY BROWSER PENUH!!!");
+            // Tambahkan log untuk memverifikasi jenis error
+            console.error("Error saat menyimpan data:", error);
+
+            if (error.name === "QuotaExceededError") {
+                // Tambahkan pengecekan ruang yang tersedia sebelum menyimpan
+                let usedSpace = new Blob(Object.values(localStorage)).size;
+                let totalSpace = 5 * 1024 * 1024; // Biasanya 5MB
+                console.error(`Used space: ${usedSpace} bytes / Total allowed: ${totalSpace} bytes`);
+
+                toastr.error("MEMORY BROWSER PENUH!!! Sisa ruang tidak mencukupi.");
             } else {
-                console.error("Unexpected error:", error);
+                toastr.error("Terjadi kesalahan tak terduga saat menyimpan data.");
             }
         }
     }
 
-    // Fungsi untuk memeriksa apakah localStorage penuh
-    function isLocalStorageFull() {
-        try {
-            const testKey = "__test__";
-            localStorage.setItem(testKey, "test"); // Coba simpan data sementara
-            localStorage.removeItem(testKey); // Hapus data setelah dicek
-            return false; // Tidak penuh
-        } catch (e) {
-            return true; // Penuh jika error
-        }
-    }
+
     // Fungsi untuk menghapus item dari localStorage
     function removeFromLocalStorage(key) {
         localStorage.removeItem(storagePrefix + key);
@@ -2182,16 +2180,16 @@
                 var warna = "#f39999";
                 switch (xhr.status) {
                     case 0:                                            
-                        if(dexType=='jupiter' || dexType=='odos' ){
-                            warna = "#f6f2f1";   
-                            getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
-                        }
-                        // else if(dexType=='odos'){
-                        //     warna = "#f6f2f1";  
-                        //     getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
+                        if(dexType!=='jupiter' || dexType=='odos' ){
+                          //  warna = "#f6f2f1";   
+                        //     getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
                         // }
-                        else{
-                            var warna = "#f39999";
+                        // // else if(dexType=='odos'){
+                          //   warna = "#f6f2f1";  
+                             getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
+                        // }
+                        //else{
+                           // var warna = "#f39999";
                         } 
                         break;                        
                     case 400:
@@ -2219,7 +2217,7 @@
                     case 429:
                         warna = "#f6f2f1";
                         if (dexType !== 'jupiter' && dexType !== 'magpie') {
-                            getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
+                            getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
                         }else{
                             var warna = "#f39999";
                             alertMessage = "AKSES KENA LIMIT";
@@ -2237,9 +2235,9 @@
                     default:
                         alertMessage = "Status: " + xhr.status;
                 }
-                $(`#SWAP_${dexId}`).html(`<a href="${linkDEX}" title="${dexType.toUpperCase()} : ${alertMessage}" target="_blank" class="uk-text-danger"><i class="bi bi-x-circle"></i> ${dexType.toUpperCase()} </a>`);
+                $(`#SWAP_${dexId}`).html(`<a href="${linkDEX}" title="${dexType.toUpperCase()}: ${alertMessage}" target="_blank" class="uk-text-danger"><i class="bi bi-x-circle"></i> ${dexType.toUpperCase()} </a>`);
 
-                callback({ statusCode: xhr.status, pesanDEX: alertMessage, color: warna, DEX: dexType.toUpperCase() }, null);
+                callback({ statusCode: xhr.status, pesanDEX:`${dexType.toUpperCase()}: ${alertMessage}`, color: warna, DEX: dexType.toUpperCase() }, null);
             }, 
         });
     }
@@ -2349,7 +2347,7 @@
                 // Kirim callback untuk penanganan lebih lanjut
                 callback({ 
                     statusCode: xhr.status, 
-                    pesanDEX: "SWOOP "+alertMessage, 
+                    pesanDEX: "SWOOP: "+alertMessage, 
                     color: warna, 
                     DEX: dexType.toUpperCase() 
                 }, null);
@@ -2503,7 +2501,7 @@
                 // Kirim callback untuk menangani error lebih lanjut
                 callback({ 
                     statusCode: xhr.status, 
-                    pesanDEX: "RANGO "+alertMessage, 
+                    pesanDEX: "RANGO: "+alertMessage, 
                     color: warna, 
                     DEX: dexType.toUpperCase() 
                 }, null);
