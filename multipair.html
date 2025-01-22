@@ -53,6 +53,7 @@
             <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank"><img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="30px" /></a> &nbsp;
             <img class="icon" id="UpdateWalletCEX" title="UPDATE WALLET CEX" width="30px" src="https://cdn-icons-png.flaticon.com/512/3687/3687106.png" /> &nbsp;
             <img class="icon" id="reload" title="REFRESH PAGE" width="30px" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" /> &nbsp;
+            <a href="memory.html" target="_blank"><img title="MANAJEMEN MEMORY" src="https://cdn-icons-png.flaticon.com/512/9776/9776871.png" width="30px" /></a> &nbsp;            
             <a href="scanner.html" target="_blank" > <img class="icon" id="Scan Price" title="SCANNER PRICE" width="30px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/copy-cat-5381934-4568586.png" /></a> &nbsp;
                 SETTING MULTIPAIR :: <label id="namachain"></label>&nbsp;&nbsp;
             <span id="chain-links-container"></span>             
@@ -183,7 +184,7 @@
     // Mengatur konfigurasi global chain berdasarkan input dari URL
     const { Kode_Chain, Nama_Chain, URL_Chain, pairs } = selectedChain; 
 
-    const storagePrefix = "TRI_" + Nama_Chain.toUpperCase() + "_";
+    const storagePrefix = "MULTIPAIR_" + Nama_Chain.toUpperCase() + "_";
     let sortOrder = {};
 
     // Fungsi umum untuk mendapatkan data dari localStorage
@@ -298,7 +299,7 @@
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'TRI_' + Nama_Chain.toUpperCase() + '_TOKEN.csv';
+        a.download = 'MULTIPAIR_' + Nama_Chain.toUpperCase() + '_TOKEN.csv';
         a.click();
         URL.revokeObjectURL(url);
     });
@@ -890,7 +891,7 @@ let cachedWalletData = null;
 function getWalletStatus(cex, tokenName) {
     // Cek apakah data sudah di-cache
     if (!cachedWalletData) {
-        const key = "TRI_" + Nama_Chain.toUpperCase() + "_WALLET_CEX";
+        const key = "MULTIPAIR_" + Nama_Chain.toUpperCase() + "_WALLET_CEX";
         cachedWalletData = JSON.parse(localStorage.getItem(key)) || {};
 
         // Ubah data menjadi objek dengan key unik
@@ -929,7 +930,7 @@ function getWalletStatus(cex, tokenName) {
             return null;
         }
 
-        const key = "TRI_" + Nama_Chain.toUpperCase() + "_WALLET_CEX"; // Membuat key berdasarkan chain
+        const key = "MULTIPAIR_" + Nama_Chain.toUpperCase() + "_WALLET_CEX"; // Membuat key berdasarkan chain
         const WalletCEXData = JSON.parse(localStorage.getItem(key)) || []; // Ambil data dari localStorage
 
         // Pastikan data ada
