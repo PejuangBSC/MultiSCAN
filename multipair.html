@@ -54,7 +54,7 @@
             <img class="icon" id="reload" title="REFRESH PAGE" width="30px" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" /> &nbsp;
             <a href="memory.html" target="_blank"><img title="MANAJEMEN MEMORY" src="https://cdn-icons-png.flaticon.com/512/9776/9776871.png" width="30px" /></a> &nbsp;            
             <a href="scanner.html" target="_blank" > <img class="icon" id="Scan Price" title="SCANNER PRICE" width="30px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/copy-cat-5381934-4568586.png" /></a> &nbsp;
-                SETTING MULTIPAIR :: <label id="namachain"></label>&nbsp;&nbsp;
+              MULTIPAIR SETTING <label id="namachain"></label>&nbsp;&nbsp;
             <span id="chain-links-container"></span>             
         </h3>
     </div>
@@ -160,7 +160,7 @@
                     <th class="uk-text-center uk-text-bold">Aksi</th>
                 </tr>
             </thead>
-            <div id="loadingStatus" style="text-align:center; font-weight:bold; color:rgb(255, 0, 47);">PROSESING LOAD DATA TOKEN...</div>
+            <div id="loadingStatus" style="text-align:center; font-weight:bold; color:rgb(255, 0, 47);"></div>
 
             <tbody id="dataTableBody">
                 <!-- Data akan di-render di sini -->
@@ -313,6 +313,7 @@
             toastr.error('<b>SILAKAN SINKRONISASI DATA TERLEBIH DAHULU !!</b><br/>');    
             $("#infoAPP").html("SILAKAN, SINKRONISASI DATA DAHULU!!!").addClass('uk-text-danger');;     
             info=false;
+            $('#UpdateWalletCEX').css('pointer-events', 'none').css('opacity', '0.4');
         } else if (!WalletCEX || !WalletCEX.length) {
             $("#UpdateWalletCEX").addClass("img-large");  
             toastr.warning("SILAKAN UPDATE WALLET CEX");
@@ -326,7 +327,6 @@
             var link = $('a[href="scanner.html"]'); // Pilih elemen link
             var href = link.attr('href'); // Ambil URL href
             link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
-
         } 
     }
 
@@ -348,7 +348,6 @@
                 $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
                  $('.table-header').css({
                      'background-color': selectedChain.WARNA,
-                    // 'color':'white' // Fallback warna dasar
                  });
                  $('h3#judul').css({
                      'color': selectedChain.WARNA, // Fallback warna dasar
@@ -698,9 +697,8 @@
             toastr.info(`Berhasil mengubah status PAIR ${token.symbol_in}-${token.symbol_out}!`);
             $(`td[data-index="${no}"]`).remove();
         }
-       // const filteredTokens = filterTokens();
-       // loadStoredData(filteredTokens);      
     });
+
     // Fungsi untuk mengurutkan tabel
     function sortTable(columnIndex) {
         const rows = $('#dataTableBody tr').get();
@@ -743,7 +741,7 @@
     // fungsi sync data dari SERVER
     $('#SyncDataBtn').on('click', function() {       
         // Menghapus data yang ada di localStorage dengan key yang sesuai
-        removeFromLocalStorage('DATA_SETTING');
+       // removeFromLocalStorage('DATA_SETTING');
         removeFromLocalStorage("LASTUPDATE_FEEWD");
         removeFromLocalStorage("WALLET_CEX");
         
@@ -807,74 +805,39 @@
     });
 
     // Simpan data dalam bentuk objek yang lebih cepat untuk pencarian
-let cachedWalletData = null;
+    let cachedWalletData = null;
 
-function getWalletStatus(cex, tokenName) {
-    // Cek apakah data sudah di-cache
-    if (!cachedWalletData) {
-        const key = "MULTIPAIR_" + Nama_Chain.toUpperCase() + "_WALLET_CEX";
-        cachedWalletData = JSON.parse(localStorage.getItem(key)) || {};
+    function getWalletStatus(cex, tokenName) {
+        // Cek apakah data sudah di-cache
+        if (!cachedWalletData) {
+            const key = "MULTIPAIR_" + Nama_Chain.toUpperCase() + "_WALLET_CEX";
+            cachedWalletData = JSON.parse(localStorage.getItem(key)) || {};
 
-        // Ubah data menjadi objek dengan key unik
-        cachedWalletData = cachedWalletData.reduce((acc, item) => {
-            const key = item.cex + '_' + item.tokenName;
-            acc[key] = item;
-            return acc;
-        }, {});
-    }
+            // Ubah data menjadi objek dengan key unik
+            cachedWalletData = cachedWalletData.reduce((acc, item) => {
+                const key = item.cex + '_' + item.tokenName;
+                acc[key] = item;
+                return acc;
+            }, {});
+        }
 
-    // Validasi parameter wajib
-    if (!cex || !tokenName) {
-        console.error("Parameter tidak valid: cex, tokenName kosong.");
-        return null;
-    }
-
-    const key = cex + '_' + tokenName;
-    const token = cachedWalletData[key];
-
-    if (token) {
-        return {
-            withdrawEnable: token.withdrawEnable || false,
-            depositEnable: token.depositEnable || false
-        };
-    }
-
-    // Jika token tidak ditemukan
-    return null;
-}
-
-    // Fungsi untuk mengambil status wallet berdasarkan CEX dan token
-    function getWalletStatusLama(cex, tokenName) {
         // Validasi parameter wajib
         if (!cex || !tokenName) {
             console.error("Parameter tidak valid: cex, tokenName kosong.");
             return null;
         }
 
-        const key = "MULTIPAIR_" + Nama_Chain.toUpperCase() + "_WALLET_CEX"; // Membuat key berdasarkan chain
-        const WalletCEXData = JSON.parse(localStorage.getItem(key)) || []; // Ambil data dari localStorage
+        const key = cex + '_' + tokenName;
+        const token = cachedWalletData[key];
 
-        // Pastikan data ada
-        if (WalletCEXData.length > 0) {
-            // Cari token berdasarkan cex, tokenName, dan scToken
-            const token = WalletCEXData.find(item => 
-                item.cex === cex &&               // Cek nama CEX (case-insensitive)
-                item.tokenName === tokenName 
-                //&&  // Cek tokenName (case-insensitive)
-               // item.scToken === scToken         // Cek smart contract token (case-insensitive)
-            );
-
-            // Jika token ditemukan, kembalikan status withdraw dan deposit
-            if (token) {
-                return {
-                    withdrawEnable: token.withdrawEnable || false,  // Status Withdraw
-                    depositEnable: token.depositEnable || false     // Status Deposit
-                };
-            }
+        if (token) {
+            return {
+                withdrawEnable: token.withdrawEnable || false,
+                depositEnable: token.depositEnable || false
+            };
         }
 
-        // Kembalikan null jika data tidak ditemukan
-    // console.warn("Token tidak ditemukan:", { cex, tokenName, scToken });
+        // Jika token tidak ditemukan
         return null;
     }
 
@@ -979,12 +942,13 @@ function getWalletStatus(cex, tokenName) {
             if (allFeeWD.length >= 0) {
                 saveToLocalStorage("WALLET_CEX", allFeeWD); // Simpan ke localStorage
                 saveToLocalStorage("LASTUPDATE_FEEWD",lastModifiedTime);
-                removeFromLocalStorage("TOKEN_SCANNER");
+               // removeFromLocalStorage("TOKEN_SCANNER");
+
+                toastr.success("SUKSES UPDATE SEMUA WALLET CEX, SILAKAN REFRESH!!");
+                setLastAction("UPDATE WALLET CEX");
+                console.log("SUKSES UPDATE WALLET DARI SEMUA CEX!!");
+                location.reload();                
             }
-        
-            toastr.success("SUKSES UPDATE SEMUA WALLET CEX, SILAKAN REFRESH!!");
-            setLastAction("UPDATE WALLET CEX");
-             console.log("SUKSES UPDATE WALLET DARI SEMUA CEX!!");
         }
     }
    
