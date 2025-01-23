@@ -121,12 +121,13 @@
         <h2 id="judul" class="uk-margin-remove" style="font-size: 26px;" > &nbsp;
             <img class="icon" id="LoadDataBtn" title="LOAD DATA" width="25px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" /> &nbsp;
             <img class="icon" id="SettingModal" title="CONFIG APLIKASI" width="25px" src="https://cdn-icons-png.flaticon.com/512/771/771203.png" /> &nbsp;
+            <img class="icon" id="ExportDATA" title="EXPORT DATA" width="25px" src="https://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/export-icon.png" /> &nbsp;
             <img class="icon" id="reload" title="REFRESH PAGE" width="25px" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" /> &nbsp;
+            <img class="icon" id="UpdateWalletCEX" title="UPDATE WALLET CEX" width="25px" src="https://images.freeimages.com/fic/images/icons/2770/ios_7_icons/512/wallet.png" /> &nbsp;
             <a href="multipair.html" target="_blank" > <img class="icon" id="MasterData" title="SETTING DATA" width="25px" src="https://cdn3.iconfinder.com/data/icons/servers-4/24/Computer-Database-512.png" /></a> &nbsp;
             <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" > <img class="icon" id="BukaKunci" title="BUKA AKSES" width="25px" src="https://cdn-icons-png.flaticon.com/512/9921/9921748.png" /></a> &nbsp;
             <a href="aset.html" target="_blank" > <img class="icon"  id="Modal" title="MANAJEMEN ASSET" width="25px" src="https://cdn-icons-png.flaticon.com/512/6573/6573160.png" /> </a> &nbsp;
-            
-                MULTIPAIR CHAIN :: <label id="namachain"></label>&nbsp;
+                MULTIPAIR SCANNER <label id="namachain"></label>&nbsp;
             <span id="chain-links-container"></span>             
         </h2>
     </div>
@@ -597,7 +598,65 @@
                 });
             });
 
-            $('#LoadDataBtn').on('click', function() {   
+            $('#LoadDataBtn').on('click', function() {
+                // Ambil data dari localStorage dengan key "TOKEN_SCANNER"
+                const storedData = getFromLocalStorage("TOKEN", []); // Ambil data token yang sudah ada
+                const WalletCEXData = getFromLocalStorage("WALLET_CEX", []); // Ambil data Wallet CEX dari localStorage
+
+                // Gabungkan data dari TOKEN dan status dari WALLET_CEX
+                const combinedData = storedData.map(token => {
+                    // Cari data wallet CEX berdasarkan CEX dan tokenName yang sesuai untuk withdraw (symbol_in)
+                    const walletWithdraw = WalletCEXData.find(item =>
+                        item.cex === token.cex && item.tokenName === token.symbol_in
+                    );
+
+                    // Cari data wallet CEX berdasarkan CEX dan tokenName yang sesuai untuk deposit (symbol_out)
+                    const walletDeposit = WalletCEXData.find(item =>
+                        item.cex === token.cex && item.tokenName === token.symbol_out
+                    );
+
+                    // Gabungkan data token dengan status wallet
+                    return {
+                        ...token,  // Gabungkan data token yang sudah ada
+                        feeWDs: walletWithdraw ? walletWithdraw.feeWDs : "",  // Fee Withdraw diambil dari symbol_in
+                        depositEnable: walletDeposit ? walletDeposit.depositEnable : false,  // Status Deposit
+                        withdrawEnable: walletWithdraw ? walletWithdraw.withdrawEnable : false  // Status Withdraw
+                    };
+                });
+
+                // Konfirmasi dari pengguna
+                if (confirm('LOAD DATA AKAN MERUBAH DATA SEBELUMNYA, LANJUTKAN??')) {
+                    saveToLocalStorage("TOKEN_SCANNER", combinedData);
+
+                    const savedData = getFromLocalStorage("TOKEN_SCANNER", []);
+                    // Validasi apakah data berhasil disimpan
+                    if (savedData.length === combinedData.length) {
+                        toastr.success("LOAD DATA BERHASIL!", {
+                            timeOut: 4000, // Durasi toast (4 detik)
+                            progressBar: true,
+                            closeButton: true,
+                        });
+
+                        // Refresh halaman untuk memperbarui data
+                        setTimeout(() => location.reload(), 2000);
+                    } else {
+                        toastr.error("LOAD DATA GAGAL!", {
+                            timeOut: 4000,
+                            progressBar: true,
+                            closeButton: true,
+                        });
+                    }
+                } else {
+                    // Jika pengguna menekan "Tidak", tidak ada aksi yang dilakukan
+                    toastr.info("PROSES LOAD DATA DIBATALKAN OLEH PENGGUNA.", {
+                        timeOut: 3000,
+                        progressBar: true,
+                        closeButton: true,
+                    });
+                }
+            });
+
+            $('#LoadDataBtnLama').on('click', function() {   
                 // Ambil data dari localStorage dengan key "TOKEN_SCANNER"
                 const storedData = getFromLocalStorage("TOKEN", []); // Ambil data token yang sudah ada
                 const WalletCEXData = getFromLocalStorage("WALLET_CEX", []); // Ambil data Wallet CEX dari localStorage
@@ -731,7 +790,7 @@
                                 clearTimeout(timeout); // Hentikan timeout jika selesai
                                 if (error) {
                                     console.error("Error data from CEX:", error);
-                                    toastr.info(`Cek Ulang Harga ${symbolIn} atau ${symbolOut} Exchanger : ${cex}`);
+                                    toastr.error(`Cek Ulang Harga ${symbolIn} atau ${symbolOut} Exchanger : ${cex}`);
                                     resolve(); // Pastikan resolve dipanggil meskipun terjadi error
                                     $('#' + cex + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).css('background-color','#fadcdc');
                                     return;
@@ -2666,6 +2725,59 @@
             return hash & hash;
         }, 0);
     }
+
+    $('#UpdateWalletCEX').on('click', function () {
+        // Ambil data dari localStorage dengan key "TOKEN_SCANNER"
+        const storedData = getFromLocalStorage("TOKEN_SCANNER", []); // Ambil data token yang sudah ada
+                const WalletCEXData = getFromLocalStorage("WALLET_CEX", []); // Ambil data Wallet CEX dari localStorage
+
+                // Gabungkan data dari TOKEN dan status dari WALLET_CEX
+                const combinedData = storedData.map(token => {
+                    // Cari data wallet CEX berdasarkan CEX dan tokenName yang sesuai untuk withdraw (symbol_in)
+                    const walletWithdraw = WalletCEXData.find(item =>
+                        item.cex === token.cex && item.tokenName === token.symbol_in
+                    ); 
+
+                    // Cari data wallet CEX berdasarkan CEX dan tokenName yang sesuai untuk deposit (symbol_out)
+                    const walletDeposit = WalletCEXData.find(item =>
+                        item.cex === token.cex && item.tokenName === token.symbol_out
+                    ); 
+
+                    // Gabungkan data token dengan status wallet
+                    return {
+                        ...token,  // Gabungkan data token yang sudah ada
+                        feeWDs: walletWithdraw ? walletWithdraw.feeWDs : "",  // Fee Withdraw diambil dari symbol_in
+                        depositEnable: walletDeposit ? walletDeposit.depositEnable : false,  // Status Deposit
+                        withdrawEnable: walletWithdraw ? walletWithdraw.withdrawEnable : false  // Status Withdraw
+                    };
+                });
+               
+        if (confirm('MEMPERBAHARUI STATUS WITHDRAW & DEPOSIT CEX?')) {
+        saveToLocalStorage("TOKEN_SCANNER", combinedData);
+
+            const savedData = getFromLocalStorage("TOKEN_SCANNER", []);
+            
+            // Validasi apakah data berhasil disimpan
+            if (savedData.length === combinedData.length) {
+                toastr.success('BERHASIL MEMPERBAHARUI STATUS WITHDRAW & DEPOSIT CEX', {
+                    timeOut: 5000, // Durasi toast (5 detik)
+                    progressBar: true, // Tampilkan progress bar
+                    closeButton: true, // Tampilkan tombol close
+                });
+            } else {
+                toastr.error("GAGAL MEMPERBAHARUI DATA WALLET CEX! ❌", {
+                    timeOut: 5000,
+                    progressBar: true,
+                    closeButton: true,
+                });
+            }
+        }
+
+    });
+    
+    $('#ExportDATA').on('click', function() {   
+                                  
+    });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
 </body>
