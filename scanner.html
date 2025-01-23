@@ -559,8 +559,6 @@
 
         // Tampilkan semua pesan error
         $("#InfoAPP").html(errorMessages.join('<br/>')).addClass("text-large");  
-        toastr.error(errorMessages.join(' '));
-        console.warn(errorMessages.join(' | '));
     }
 
     $(document).ready(function() {  
@@ -2506,7 +2504,7 @@
             $("#ip").text(`IP: ${savedID.ip}`);
             toastr.success(`ANDA MENDAPATKAN IP: ${savedID.ip}`);
         } catch (error) {
-            toastr.error("GAGAL CEK IP!!");
+            toastr.info("GAGAL CEK IP!!");
         }
     }
 
