@@ -2359,7 +2359,7 @@
     // Fungsi untuk mengecek harga pada RANGO
     function getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback) {
         var dexId = `${cex}_${dexType.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
-        const amount_in = amount_in / Math.pow(10, 18);
+        var amount_in = amount_in / Math.pow(10, 18);
         let transformedChain = 
             DTChain.Nama_Chain.toUpperCase() === "ETHEREUM" ? "ETH" : 
             DTChain.Nama_Chain.toUpperCase() === "AVAX" ? "AVAX_CCHAIN" : 
