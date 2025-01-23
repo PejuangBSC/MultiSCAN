@@ -254,6 +254,7 @@
     var DataTokens = getFromLocalStorage('TOKEN',[]);
     var serverCORSList = getFromLocalStorage("SERVERCORS", []);
     var WalletCEX = getFromLocalStorage("LASTUPDATE_FEEWD", []);
+    var DATAWalletCEX = getFromLocalStorage("WALLET_CEX", []);
     var dataACTION = getFromLocalStorage('HISTORY');
 
     function getRandomServerFromCORSList() {       
@@ -314,7 +315,7 @@
             $("#infoAPP").html("SILAKAN, SINKRONISASI DATA DAHULU!!!").addClass('uk-text-danger');;     
             info=false;
             $('#UpdateWalletCEX').css('pointer-events', 'none').css('opacity', '0.4');
-        } else if (!WalletCEX || !WalletCEX.length) {
+        } else if (!WalletCEX || !WalletCEX.length || !DATAWalletCEX || !DATAWalletCEX.length) {
             $("#UpdateWalletCEX").addClass("img-large");  
             toastr.warning("SILAKAN UPDATE WALLET CEX");
             $("#infoAPP").html("SILAKAN UPDATE WALLET CEX!!!").addClass('uk-text-danger');;
