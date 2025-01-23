@@ -582,7 +582,7 @@
                     $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
                      $('h2#judul').css('color', selectedChain.WARNA);
                     $('#favicon').attr('href', DTChain.ICON_CHAIN); 
-                    //$('#sinyal-container').css('color', selectedChain.WARNA);
+                    $('#sinyal-container').css('color', selectedChain.WARNA);
                     $('h4#daftar').css({'background-color': selectedChain.WARNA,'padding-left':'4px','color':'white'});
                     
                     cekDataAwal();
@@ -691,7 +691,7 @@
         
         $("#stopSCAN").show().prop('disabled', false);
 
-        $('#LoadDataBtn, #SettingModal, #UpdateWalletCEX, #chain-links-container').css('pointer-events', 'none').css('opacity', '0.4');
+        $('#LoadDataBtn, #SettingModal, #MasterData, #chain-links-container').css('pointer-events', 'none').css('opacity', '0.4');
 
         // Pastikan checkbox tetap aktif dan bisa diubah statusnya
         $('.statusCheckbox').css({ 'pointer-events': 'auto',  'opacity': '1'  }).prop('disabled', false); 
@@ -1849,7 +1849,8 @@
         var sellCell = $(`#SELL_${IdCELL}`);
         var rowCell = $(`#${IdCELL}`);
 
-        var sinyals = ` <a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class' >${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${TokenPair} (${(PNL).toFixed(2)})</a> | `;
+        var sinyals = ` <a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class'>
+            ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${TokenPair} (${(PNL).toFixed(2)})</a> | `;
 
         // Simplified condition check
         var isPositivePNL = (filterPNLValue === 0 && totalValue > totalModal + totalFee) || ((totalValue - totalModal) > filterPNLValue);
@@ -1890,7 +1891,7 @@
         let idCELL = `${cex.toUpperCase()}_${DEXPLUS.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
         
         // Membuat link dengan format umum tanpa pengecekan kondisi
-        var sLink = `<a href=#SWAP_${idCELL} class='uk-text-primary>
+        var sLink = `<a href=#SWAP_${idCELL} class='uk-text-secondary uk-text-bolder'>
             ${NameToken}->${NamePair}
             (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span>${PNL.toFixed(2)}$)
         </a>`;
