@@ -108,7 +108,7 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
             padding: 1px;
-            background-image: linear-gradient(#cffad4, #fefefe, #f3f7f4);
+            /* background-image: linear-gradient(#cffad4, #fefefe, #f3f7f4); */
             color: #0f0f0f;
         }
 
@@ -120,13 +120,13 @@
     <div class="uk-text-center"> <!-- Mengurangi margin-top -->        
         <h2 id="judul" class="uk-margin-remove" style="font-size: 26px;" > &nbsp;
             <img class="icon" id="LoadDataBtn" title="LOAD DATA" width="25px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" /> &nbsp;
-            <img class="icon" id="SettingModal" title="SETTING APLIKASI" width="25px" src="https://cdn-icons-png.flaticon.com/512/771/771203.png" /> &nbsp;
+            <img class="icon" id="SettingModal" title="CONFIG APLIKASI" width="25px" src="https://cdn-icons-png.flaticon.com/512/771/771203.png" /> &nbsp;
             <img class="icon" id="reload" title="REFRESH PAGE" width="25px" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" /> &nbsp;
-            <a href="multipair.html" target="_blank" > <img class="icon" id="MasterData" title="MASTER DATA" width="25px" src="https://cdn3.iconfinder.com/data/icons/servers-4/24/Computer-Database-512.png" /></a> &nbsp;
+            <a href="multipair.html" target="_blank" > <img class="icon" id="MasterData" title="SETTING DATA" width="25px" src="https://cdn3.iconfinder.com/data/icons/servers-4/24/Computer-Database-512.png" /></a> &nbsp;
             <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" > <img class="icon" id="BukaKunci" title="BUKA AKSES" width="25px" src="https://cdn-icons-png.flaticon.com/512/9921/9921748.png" /></a> &nbsp;
             <a href="aset.html" target="_blank" > <img class="icon"  id="Modal" title="MANAJEMEN ASSET" width="25px" src="https://cdn-icons-png.flaticon.com/512/6573/6573160.png" /> </a> &nbsp;
             
-                MULTIPAIR :: <label id="namachain"></label>&nbsp;
+                MULTIPAIR CHAIN :: <label id="namachain"></label>&nbsp;
             <span id="chain-links-container"></span>             
         </h2>
     </div>
@@ -254,13 +254,13 @@
 
     <div>
         <!-- Bagian untuk menampilkan sinyal DEX -->
-        <div class="uk-text uk-text-small uk-text-warning  uk-margin-small-top " id="sinyal-container" style="background-color: #fff;">
+        <div class="uk-text uk-text-small  uk-margin-small-top " id="sinyal-container" style="background-color: #fff;">
             <!-- Sinyal DEX akan dimuat di sini -->
         </div>
         <div class="uk-grid-small uk-flex uk-flex-middle  uk-margin-small-top" uk-grid>
             <!-- Judul dan Jumlah Token -->
             <div class="uk-width-expand">
-                <h4 class="uk-heading-line uk-margin-remove uk-text-primary">
+                <h4 class="uk-heading-line uk-margin-remove" id="daftar">
                     <span style="font-size:medium; font-weight: bolder;">DAFTAR TOKEN <span id="namachain2"></span> (<span id="tokenCount" class="token-count">0</span>)</span>
                 </h4>
             </div>
@@ -568,8 +568,11 @@
                     $('title').text("SCANNER " + Nama_Chain.toUpperCase());
                     $('#namachain').text(Nama_Chain.toUpperCase());
                     $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
-                    $('h2#judul').css('color', selectedChain.WARNA);
+                     $('h2#judul').css('background-color', selectedChain.WARNA);
                     $('#favicon').attr('href', DTChain.ICON_CHAIN); 
+                    //$('#sinyal-container').css('color', selectedChain.WARNA);
+                    $('h4#daftar').css({'background-color': selectedChain.WARNA,'padding-left':'4px'});
+                    
                     cekDataAwal();
 
                     // Untuk setiap chain yang ada di CONFIG_CHAINS dibuatkan ICON LINK CHAIN
