@@ -291,8 +291,8 @@
                 <!-- Baris-baris data akan ditambahkan secara dinamis -->
             </tbody>
         </table>
-        <div id="InfoStatus" style="text-align:center; font-weight:bold; color:red;">MOHON MENUNGGU, SEDANG MEMUAT DATA TABEL TOKEN...</div>    
-        <div id="cek" style="text-align:center; font-weight:bold; color:red;"></div>    
+        <div id="InfoAPP" style="text-align:center; font-weight:bold; color:red;"></div>    
+        <div id="InfoStatus" style="text-align:center; font-weight:bold; color:red;"></div>    
     </div>
 </div>
 
@@ -386,6 +386,7 @@
     var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
     var DataTokens = getFromLocalStorage('TOKEN_SCANNER',[]);
     var serverCORSList = getFromLocalStorage("SERVERCORS", []); 
+    var WalletCEX = getFromLocalStorage("WALLET_CEX", []); 
 
     const dexList = [
             { id: 'D1INCH', Modal: SavedSettingData.Modal1INCH,  dex: '1inch' },
@@ -526,6 +527,10 @@
     });
 
     function cekDataAwal() {
+        // console.log("DataTokens:", DataTokens);
+        // console.log("SavedSettingData:", SavedSettingData);
+        // console.log("WalletCEX:", WalletCEX);
+
         // Array untuk menyimpan pesan error
         let errorMessages = [];
         if (!DataTokens.length) {
@@ -535,6 +540,10 @@
         }else if (!SavedSettingData || SavedSettingData.walletMeta === '-' ) {
             errorMessages.push('CEK, SETTINGAN APLIKASI {MODAL,WALLET METAMASK}!');
             $("#SettingModal").addClass("img-large");
+            form_off();
+        }else if (!WalletCEX.length) {
+            errorMessages.push('TIDAK ADA DATA WALLET CEX, SILAKAN UPDATE WALLET PADA SETTINGAN!');
+            $("#MasterData").addClass("img-large");
             form_off();
         }else{
             generateInputCheckbox(CONFIG_CEX,  "cex-options","","uk-form-label uk-text-success");
@@ -549,7 +558,9 @@
             link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
 
         // Tampilkan semua pesan error
-        $("#InfoStatus").html(errorMessages.join('<br/>')).addClass("text-large");    
+        $("#InfoAPP").html(errorMessages.join('<br/>')).addClass("text-large");  
+        toastr.error(errorMessages.join(' '));
+        console.warn(errorMessages.join(' | '));
     }
 
     $(document).ready(function() {  
@@ -654,45 +665,6 @@
                         closeButton: true,
                     });
                 }
-            });
-
-            $('#LoadDataBtnLama').on('click', function() {   
-                // Ambil data dari localStorage dengan key "TOKEN_SCANNER"
-                const storedData = getFromLocalStorage("TOKEN", []); // Ambil data token yang sudah ada
-                const WalletCEXData = getFromLocalStorage("WALLET_CEX", []); // Ambil data Wallet CEX dari localStorage
-
-                // Gabungkan data dari TOKEN dan status dari WALLET_CEX
-                const combinedData = storedData.map(token => {
-                    // Cari data wallet CEX berdasarkan CEX dan tokenName yang sesuai untuk withdraw (symbol_in)
-                    const walletWithdraw = WalletCEXData.find(item =>
-                        item.cex === token.cex && item.tokenName === token.symbol_in
-                    ); 
-
-                    // Cari data wallet CEX berdasarkan CEX dan tokenName yang sesuai untuk deposit (symbol_out)
-                    const walletDeposit = WalletCEXData.find(item =>
-                        item.cex === token.cex && item.tokenName === token.symbol_out
-                    ); 
-
-                    // Gabungkan data token dengan status wallet
-                    return {
-                        ...token,  // Gabungkan data token yang sudah ada
-                        feeWDs: walletWithdraw ? walletWithdraw.feeWDs : "",  // Fee Withdraw diambil dari symbol_in
-                        depositEnable: walletDeposit ? walletDeposit.depositEnable : false,  // Status Deposit
-                        withdrawEnable: walletWithdraw ? walletWithdraw.withdrawEnable : false  // Status Withdraw
-                    };
-                });
-               
-                if (confirm('LOAD DATA AKAN MERUBAH DATA SEBELUMNYA, LANJUTKAN??')) {
-                    saveToLocalStorage("TOKEN_SCANNER", combinedData);
-                }          
-
-                const savedData = getFromLocalStorage("TOKEN_SCANNER", []);
-                // Validasi apakah data berhasil disimpan
-                if (savedData.length === combinedData.length) {
-                    if (confirm('LOAD DATA BERHASIL')) {
-                        location.reload();
-                    }
-                }                       
             });
 
             $("#stopSCAN,#reload").click(function () {
@@ -929,7 +901,7 @@
             $("#dexpair-options").addClass("error");
             form_on(); // tetap off jika `PILIH_DEX_PAIR` belum diatur
         }   
-        $("#cek").html(errorMessages.join('<br/>')).addClass("text-large");    
+        $("#InfoAPP").html(errorMessages.join('<br/>')).addClass("text-large");    
     }
     
     // Fungsi untuk menentukan warna berdasarkan nama CEX
@@ -1163,148 +1135,6 @@
         $("#startSCAN").show();
         setTimeout(() => $InfoStatus.fadeOut(), 2000);
 
-        updateSortIcons();
-    }
-
-    // memuat data TABEL berdasarkan filter tertentu
-    function loadStoredDataLama(filteredData) {
-        $('.table-header th').css('background-color', DTChain.COLOR_CHAIN); 
-        loadSignalData();
-        let selectedDEX = getFromLocalStorage('DEX_PILIH', []); // Ambil pilihan DEX dari localStorage
-        let appSettings = getFromLocalStorage('DATA_SETTING', {}); // Ambil pengaturan dari localStorage
-        
-        let $InfoStatus = $('div#InfoStatus');
-        $InfoStatus.text("Sedang Memuat DATA TOKEN...").show();
-
-        let $tableBody = $('#dataTableBody');
-        if (!Array.isArray(filteredData) || filteredData.length === 0) {
-            // Jika tidak ada data, tampilkan pesan kosong
-            $InfoStatus.text("Tidak ada data token yang ditemukan.");
-            setTimeout(() => $InfoStatus.fadeOut(), 2000);
-            $('#tokenCount').text(" TOTAL : 0 PAIR-TOKEN ");
-            return;
-        }
-
-        $tableBody.empty(); // Kosongkan tabel sebelum menambahkan data baru
-        // Menambahkan kolom header secara dinamis, termasuk label DEX
-        let $headerRow = $('.table-header');
-        $headerRow.empty(); // Mengosongkan header yang ada sebelumnya
-
-        // Menambahkan kolom header untuk data
-        $headerRow.append('<th class="uk-text-center uk-text-bold">PRICE & VOL BUY</th>');
-        $headerRow.append('<th class="uk-text-center uk-text-bold">DETAIL TOKEN</th>');
-
-        // Tambahkan header untuk DEX di tengah
-        selectedDEX.forEach((dex) => {
-            let modalName = appSettings[`MODAL_${dex.toUpperCase()}`] || 0;
-            $headerRow.append(`<th class="uk-text-center uk-text-bold">${dex} [${modalName}]</th>`);
-        });
-
-        $headerRow.append('<th class="uk-text-center uk-text-bold">PRICE & VOL SELL</th>');
-
-        // Iterasi data yang telah difilter dan buat baris tabel
-        filteredData.forEach((data, index) => {
-            const warnaCEX = getWarnaCEX(data.cex); // Warna berdasarkan nama CEX
-
-           // Default status untuk Wallet
-            let withdrawStatus = { text: '??', style: 'color:red; font-weight:bold;' };
-            let depositStatus = { text: '??', style: 'color:red; font-weight:bold;' };
-
-            const isWithdrawEnabled = data.withdrawEnable === true || data.withdrawEnable === 'true';
-            withdrawStatus = {
-                text: isWithdrawEnabled ? 'WD' : 'WX',
-                style: isWithdrawEnabled ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;',
-            };
-            const isDepositEnabled = data.depositEnable === true || data.depositEnable === 'true';
-            depositStatus = {
-                text: isDepositEnabled ? 'DP' : 'DX',
-                style: isDepositEnabled ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;',
-            };
-
-            var urlsCEX = GeturlExchanger(data.cex, data.symbol_in, data.symbol_out);
-            var linkToken = urlsCEX.tradeToken 
-                ? `<a href="${urlsCEX.tradeToken}" target="_blank"><b><label>${(data.symbol_in).toUpperCase()}</label></b></a>` 
-                : `<b><label>${(data.symbol_in).toUpperCase()}</label></b>`;
-
-            var linkPair = urlsCEX.tradePair 
-                ? `<a href="${urlsCEX.tradePair}" target="_blank"><b><label>${(data.symbol_out).toUpperCase()}</label></b></a>` 
-                : `<b><label>${(data.symbol_out).toUpperCase()}</label></b>`;
-
-            let transformedChain = 
-                DTChain.Nama_Chain.toUpperCase() === "ETHEREUM" ? "ETH" : 
-                DTChain.Nama_Chain.toUpperCase() === "POLYGON" ? "POL" : 
-                DTChain.Nama_Chain.toUpperCase() === "AVAX" ? "AVAX_CCHAIN" : 
-                DTChain.Nama_Chain.toUpperCase();  
-            
-            var linkLIFI ='<span class=uk-text-success><a href=https://jumper.exchange/?fromChain='+DTChain.Kode_Chain+'&fromToken='+data.sc_in+'&toChain='+DTChain.Kode_Chain+'&toToken='+data.sc_out+' target=_blank><img src=https://jumper.exchange/apple-touch-icon-180x180.png alt=LIFI width=20px /></a></a></span>';
-            var linkOKDEX =  "<span class=uk-text-success><a href=https://www.okx.com/web3/dex-swap?inputChain="+DTChain.Kode_Chain+"&inputCurrency=" + data.sc_in + "&outputChain=501&outputCurrency=" + data.sc_out+" target=_blank><img src=https://cdn.bitkeep.vip/u_b_d5720c60-81ad-11ed-8134-f90501d87feb.png alt=OKXDEX width=25px /></a></span>";      
-            var linkUNIDEX = "<span class=uk-text-success><a href=https://app.unidex.exchange/?chain=" + DTChain.Nama_Chain + "&from=" + data.sc_in + "&to=" + data.sc_out + " target=_blank><img src=https://s1.coincarp.com/logo/1/unidex.png?style=200 alt=UNIDEX width=20px /></a></span>";
-            var linkRango = "<span class=uk-text-success><a href=https://app.rango.exchange/bridge?fromBlockchain=" +transformedChain+ "&toBlockchain=" + transformedChain +"&fromToken="+ data.symbol_in +"--" + data.sc_in + "&toToken=" + data.symbol_out +"--"+data.sc_out+" target=_blank><img src=https://rango.exchange/logo.png alt=RANGO width=20px /></a></span>";
-
-            var linkStok = '';
-        
-            // Mendapatkan semua wallet dari konfigurasi CONFIG_CEX berdasarkan variabel `cex`
-            Object.keys(DTChain.CEXCHAIN[data.cex]).forEach((key, index) => {
-                if (key.includes('address')) {
-                    // Menambahkan link untuk setiap wallet ke dalam linkStok
-                    linkStok += '<b><a href='+DTChain.URL_Chain+'/token/' + data.sc_in + '?a=' + DTChain.CEXCHAIN[data.cex][key] + ' target="_blank"> #' + (index + 1) + ' </a></b>';
-                }
-            });
-
-            linkStok = linkStok.slice(0, -2);        
-            linkStok += '<div></div>';
-
-            // Baris tabel
-            let row = `
-                <tr data-index="${index}">
-                    <td style="text-align:center; vertical-align: middle;" class="uk-text-success" ><a href=${urlsCEX.tradeToken} target="_blank"><span id=BUY_${data.cex}_${data.symbol_in}_${data.symbol_out}_${(DTChain.Nama_Chain).toUpperCase()}>PRICE & VOL BUY <br>${data.cex}</span></a></td>
-                        <td class="uk-text-center">
-                            <input type="checkbox" class="statusCheckbox" data-index="${data.no}" ${data.status ? 'checked' : ''}>
-                         <span class="uk-text-center uk-text-secondary uk-text-bolder"> ${linkToken}  VS ${linkPair}</br></span>                        
-                       <span style="${withdrawStatus.style}"><a href=${urlsCEX.withdrawUrl} target="_blank">${withdrawStatus.text}</a> </span> <a href="${URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">[SC]</a>~ 
-                        <span style="${depositStatus.style}"><a href=${urlsCEX.depositUrl} target="_blank">${depositStatus.text}</a></span> <a href="${URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">[SC]</a></br>
-                        <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex}</span>: ${linkStok}</br>
-                        <span id=feeWDUSDT_${data.cex}_${data.symbol_in}_${data.symbol_out}_${(DTChain.Nama_Chain).toUpperCase()} class="uk-text-center uk-text-danger uk-text-bolder">FEE WD ? </span> <br/>
-                        ${linkOKDEX} ${linkLIFI} ${linkUNIDEX} ${linkRango} 
-                    </td>
-                    
-            `;
-
-            // Tambahkan kolom DEX di tengah tabel
-            selectedDEX.forEach((dex) => {
-                let modalValue = data[dex] || '-'; // Ambil nilai dari data sesuai dengan DEX
-                let idCELL=`${data.cex}_${dex.toUpperCase()}_${data.symbol_in}_${data.symbol_out}_${(DTChain.Nama_Chain).toUpperCase()}`;
-                //console.log(idCELL);
-                row += `
-                    <td class="uk-text-center" style="vertical-align: middle;" id=${idCELL} >
-                        <a href=${urlsCEX.tradeToken} target="_blank"><span class=uk-text-success id=BUY_${idCELL}>BUY CEX ? </span></a> <br/>
-                        <span class=uk-text-secondary id=SWAP_${idCELL}>SWAP DEX ?</span><br/>
-                        <a href=${urlsCEX.tradePair} target="_blank"><span class=uk-text-danger id=SELL_${idCELL}>SELL CEX ? </span></a></br>
-                        <span class=uk-text-primary id=RESULT_${idCELL}>RESULT ? </span>
-                    </td>
-                `;
-            });
-
-            // Lanjutkan dengan kolom lain
-            row += `
-                    <td style="text-align:center; vertical-align: middle;" class="uk-text-danger"><a href=${urlsCEX.tradePair} target="_blank"><span id=SELL_${data.cex}_${data.symbol_in}_${data.symbol_out}_${(DTChain.Nama_Chain).toUpperCase()}>PRICE & VOL SELL <br>${data.cex}</span></a></td>
-                </tr>
-            `;
-
-            // Tambahkan baris ke tabel
-            $tableBody.append(row);
-        });
-
-        // Perbarui total token
-        $('#tokenCount').text(` TOTAL : ${filteredData.length} PAIR-TOKEN `);
-       
-        // Sembunyikan pesan loading setelah selesai
-        $InfoStatus.text("SELESAI, Memuat DATA TOKEN !!");
-        
-        $("#startSCAN").show();
-        setTimeout(() => $InfoStatus.fadeOut(), 2000);
-
-        // Perbarui ikon urutan jika diperlukan
         updateSortIcons();
     }
 
@@ -1563,34 +1393,6 @@
             // Tambahkan modal div ke container
             container.append(modalDiv);
         });
-    }
-
-    // Fungsi untuk mengambil status wallet berdasarkan CEX dan token
-    function getWalletStatus(cex, tokenName) {
-        // Validasi parameter wajib
-        if (!cex || !tokenName) {
-            console.error("Parameter tidak valid: cex, tokenName atau  kosong.");
-            return null;
-        }
-
-        const WalletCEXData = getFromLocalStorage('WALLET_CEX', {});
-        // Pastikan data ada
-        if (WalletCEXData.length > 0) {
-            // Cari token berdasarkan cex, tokenName, dan scToken
-            const token = WalletCEXData.find(item => 
-                item.cex === cex &&               // Cek nama CEX (case-insensitive)
-                item.tokenName === tokenName     // Cek smart contract token (case-insensitive)
-            );
-
-            // Jika token ditemukan, kembalikan status withdraw dan deposit
-            if (token) {
-                return {
-                    withdrawEnable: token.withdrawEnable || false,  // Status Withdraw
-                    depositEnable: token.depositEnable || false     // Status Deposit
-                };
-            }
-        }
-        return null;
     }
 
     // Fungsi untuk memproses data order book umum
@@ -2729,37 +2531,48 @@
     $('#UpdateWalletCEX').on('click', function () {
         // Ambil data dari localStorage dengan key "TOKEN_SCANNER"
         const storedData = getFromLocalStorage("TOKEN_SCANNER", []); // Ambil data token yang sudah ada
-                const WalletCEXData = getFromLocalStorage("WALLET_CEX", []); // Ambil data Wallet CEX dari localStorage
+        const WalletCEXData = getFromLocalStorage("WALLET_CEX", []); // Ambil data Wallet CEX dari localStorage
 
-                // Gabungkan data dari TOKEN dan status dari WALLET_CEX
-                const combinedData = storedData.map(token => {
-                    // Cari data wallet CEX berdasarkan CEX dan tokenName yang sesuai untuk withdraw (symbol_in)
-                    const walletWithdraw = WalletCEXData.find(item =>
-                        item.cex === token.cex && item.tokenName === token.symbol_in
-                    ); 
+        // Cek apakah WalletCEXData kosong
+        if (!Array.isArray(WalletCEXData) || WalletCEXData.length === 0) {
+            toastr.error("DATA WALLET PADA SETTINGAN KOSONG! TIDAK DAPAT MEMPERBAHARUI STATUS.", {
+                timeOut: 5000, // Durasi toast (5 detik)
+                progressBar: true, // Tampilkan progress bar
+                closeButton: true, // Tampilkan tombol close
+            });
+            return; // Hentikan proses jika WalletCEXData kosong
+        }
 
-                    // Cari data wallet CEX berdasarkan CEX dan tokenName yang sesuai untuk deposit (symbol_out)
-                    const walletDeposit = WalletCEXData.find(item =>
-                        item.cex === token.cex && item.tokenName === token.symbol_out
-                    ); 
+        // Gabungkan data dari TOKEN dan status dari WALLET_CEX
+        const combinedData = storedData.map(token => {
+            // Cari data wallet CEX berdasarkan CEX dan tokenName yang sesuai untuk withdraw (symbol_in)
+            const walletWithdraw = WalletCEXData.find(item =>
+                item.cex === token.cex && item.tokenName === token.symbol_in
+            );
 
-                    // Gabungkan data token dengan status wallet
-                    return {
-                        ...token,  // Gabungkan data token yang sudah ada
-                        feeWDs: walletWithdraw ? walletWithdraw.feeWDs : "",  // Fee Withdraw diambil dari symbol_in
-                        depositEnable: walletDeposit ? walletDeposit.depositEnable : false,  // Status Deposit
-                        withdrawEnable: walletWithdraw ? walletWithdraw.withdrawEnable : false  // Status Withdraw
-                    };
-                });
-               
+            // Cari data wallet CEX berdasarkan CEX dan tokenName yang sesuai untuk deposit (symbol_out)
+            const walletDeposit = WalletCEXData.find(item =>
+                item.cex === token.cex && item.tokenName === token.symbol_out
+            );
+
+            // Gabungkan data token dengan status wallet
+            return {
+                ...token,  // Gabungkan data token yang sudah ada
+                feeWDs: walletWithdraw ? walletWithdraw.feeWDs : "",  // Fee Withdraw diambil dari symbol_in
+                depositEnable: walletDeposit ? walletDeposit.depositEnable : false,  // Status Deposit
+                withdrawEnable: walletWithdraw ? walletWithdraw.withdrawEnable : false  // Status Withdraw
+            };
+        });
+
+        // Konfirmasi dari pengguna
         if (confirm('MEMPERBAHARUI STATUS WITHDRAW & DEPOSIT CEX?')) {
-        saveToLocalStorage("TOKEN_SCANNER", combinedData);
+            saveToLocalStorage("TOKEN_SCANNER", combinedData);
 
             const savedData = getFromLocalStorage("TOKEN_SCANNER", []);
-            
+
             // Validasi apakah data berhasil disimpan
             if (savedData.length === combinedData.length) {
-                toastr.success('BERHASIL MEMPERBAHARUI STATUS WITHDRAW & DEPOSIT CEX', {
+                toastr.success('BERHASIL MEMPERBAHARUI STATUS WITHDRAW & DEPOSIT CEX, SILAKAN REFRESH', {
                     timeOut: 5000, // Durasi toast (5 detik)
                     progressBar: true, // Tampilkan progress bar
                     closeButton: true, // Tampilkan tombol close
@@ -2772,9 +2585,8 @@
                 });
             }
         }
-
     });
-    
+
     $('#ExportDATA').on('click', function() {   
                                   
     });
