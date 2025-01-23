@@ -549,6 +549,7 @@
     }
 
     $(document).ready(function() {  
+          
         CekIdentitas(); 
         if (typeof CONFIG_CEX !== 'undefined' && typeof CONFIG_CHAINS !== 'undefined') {
             const currentPage = window.location.pathname.split('/').pop(); // Mengambil bagian terakhir dari path URL
@@ -564,7 +565,7 @@
                     $('title').text("SCANNER " + Nama_Chain.toUpperCase());
                     $('#namachain').text(Nama_Chain.toUpperCase());
                     $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
-                    $('h2#judul').css('color', selectedChain.color);
+                    $('h2#judul').css('color', selectedChain.WARNA);
                     $('#favicon').attr('href', DTChain.ICON_CHAIN); 
                     cekDataAwal();
 
@@ -2214,11 +2215,11 @@
                         alertMessage = "Permintaan tidak ditemukan";
                         break ;
                     case 429:
-                        warna = "#f6f2f1";
-                        if (dexType !== 'jupiter' && dexType !== 'magpie') {
+                        if (dexType !== '0x' && dexType !== 'magpie') {
+                            warna = "#f6f2f1";
                             getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
                         }else{
-                            var warna = "#f39999";
+                            warna = "#f39999";
                             alertMessage = "AKSES KENA LIMIT";
                         }                        
                         break;
@@ -2358,7 +2359,7 @@
     // Fungsi untuk mengecek harga pada RANGO
     function getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback) {
         var dexId = `${cex}_${dexType.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
-        
+        const amount_in = amount_in / Math.pow(10, 18);
         let transformedChain = 
             DTChain.Nama_Chain.toUpperCase() === "ETHEREUM" ? "ETH" : 
             DTChain.Nama_Chain.toUpperCase() === "AVAX" ? "AVAX_CCHAIN" : 
@@ -2406,12 +2407,12 @@
         const requestData = {
             from: {
                 blockchain: NetworkChain,
-                symbol: NamePair.toUpperCase(),
+                symbol: NameToken.toUpperCase(),
                 address: sc_input,
             },
             to: {
                 blockchain: NetworkChain,
-                symbol: NameToken.toUpperCase(),
+                symbol: NamePair.toUpperCase(),
                 address: sc_output,
             },
             amount: amount_in.toString(),
