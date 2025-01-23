@@ -996,7 +996,7 @@
             $('#tokenCount').text("0");
 
             const jml = DataTokens.filter(t => t.status === true).length;
-            $('#tokenCountALL').text(`TOTAL : ${jml} ALL PAIR-TOKEN`);  
+            $('#tokenCountALL').text(`TOTAL ALL: ${jml} PAIR-TOKEN`);  
 
             return;
         }
@@ -1140,7 +1140,7 @@
         $('#tokenCount').text(`${filteredData.length}`);
 
         const jml = DataTokens.filter(t => t.status === true).length;
-        $('#tokenCountALL').text(`TOTAL : ${jml} ALL PAIR-TOKEN`);  
+        $('#tokenCountALL').text(`TOTAL ALL: ${jml} PAIR-TOKEN`);  
 
         // Sembunyikan status loading setelah selesai
         $InfoStatus.text("SELESAI, Memuat DATA TOKEN !!");
