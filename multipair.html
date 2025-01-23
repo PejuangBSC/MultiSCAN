@@ -65,22 +65,22 @@
                 <b><span class="uk-text-primary uk-text-medium">TOKEN : </span></b>
                     <input class="uk-input" type="text" id="ID" hidden>
                 <div class="uk-form-controls" style="flex: 1;">
-                    <input class="uk-input" type="text" id="token_in" placeholder="TOKEN CEX" required>
+                    <input class="uk-input" type="text" id="token_in" placeholder="NAME TOKEN" required>
                 </div>
                 <div class="uk-form-controls" style="flex: 3;">
                     <input class="uk-input" type="text" id="sc_in" placeholder="SC TOKEN CEX" required>
                 </div>
                 <div class="uk-form-controls" style="flex: 1;">
-                    <input class="uk-input" type="number" id="des_in" placeholder="DES TOKEN CEX" required min="0">
+                    <input class="uk-input" type="number" id="des_in" placeholder="DES TOKEN" required min="0">
                 </div>
                 <div class="uk-form-controls" style="flex: 1;">
-                    <input class="uk-input" type="text" id="token_out" placeholder="PAIR DEX" required>
+                    <input class="uk-input" type="text" id="token_out" placeholder="NAME PAIR" required>
                 </div>
                 <div class="uk-form-controls" style="flex: 3;">
-                    <input class="uk-input" type="text" id="sc_out" placeholder="SC DEX" required>
+                    <input class="uk-input" type="text" id="sc_out" placeholder="SC PAIR DEX" required>
                 </div>
                 <div class="uk-form-controls" style="flex: 1;">
-                    <input class="uk-input" type="number" id="des_out" placeholder="DES DEX" required min="0">
+                    <input class="uk-input" type="number" id="des_out" placeholder="DES PAIR" required min="0">
                 </div>
             </div>
 
@@ -100,9 +100,10 @@
                         <label><input class="uk-checkbox uk-text-warning" type="checkbox" id="status" checked> AKTIF</label>
                     </div>
                 </div>
-            
+                
                 <!-- Kolom untuk Tombol -->
                 <div class="uk-width-auto uk-flex uk-flex-middle" style="gap: 10px;">
+                    <button type="button" id="addButton" class="uk-button uk-button-secondary">TAMBAH</button>
                     <button type="button" id="cancelButton" class="uk-button uk-button-danger" style="display: none;">CANCEL</button>
                     <button type="submit" id="SaveButton" class="uk-button uk-button-primary">SIMPAN</button>
                 </div>
@@ -333,7 +334,7 @@
     }
 
     $(document).ready(function() {
-    
+
     if (typeof CONFIG_CEX !== 'undefined' && typeof CONFIG_CHAINS !== 'undefined') {
         const currentPage = window.location.pathname.split('/').pop(); // Mengambil bagian terakhir dari path URL
             
@@ -392,6 +393,8 @@
                 cexOptions.append(checkbox); // Tambahkan setiap checkbox
             });
         }
+        // Set awal semua input di-disable
+        $('#cryptoForm').find('input, select, button, textarea').not('#addButton').prop('disabled', true);
 
         // Submit Form
         $('#cryptoForm').on('submit', function (event) {
@@ -462,8 +465,21 @@
         $('#dataTableBody').on('click', '.edit-btn', function() {
             const index = $(this).data('index');
             editRow(index);
-            UIkit.notification('Silakan lakukan perubahan data!', { status: 'success' });
+            $('#cryptoForm').find('input, select, button, textarea').prop('disabled', false);
+            $('#cancelButton').show();
+            $('#addButton').hide();
+            toastr.info('SILAKAN UBAH DATA TOKEN & PAIR');
         });
+
+        // Ketika tombol Add diklik
+        $('#addButton').on('click', function () {
+            // Aktifkan semua input, tombol, dan elemen dalam form
+            $('#cryptoForm').find('input, select, button, textarea').prop('disabled', false);
+            $('#cancelButton').show();
+            $('#addButton').hide();
+            toastr.info('SILAKAN INPUTKAN DATA TOKEN & PAIR');
+        });
+
         // Fungsi untuk menghapus data
         function deleteRow(index) {
             const data = getFromLocalStorage("TOKEN",[]);
