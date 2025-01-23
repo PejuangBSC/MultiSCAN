@@ -568,10 +568,10 @@
                     $('title').text("SCANNER " + Nama_Chain.toUpperCase());
                     $('#namachain').text(Nama_Chain.toUpperCase());
                     $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
-                     $('h2#judul').css('background-color', selectedChain.WARNA);
+                     $('h2#judul').css('color', selectedChain.WARNA);
                     $('#favicon').attr('href', DTChain.ICON_CHAIN); 
                     //$('#sinyal-container').css('color', selectedChain.WARNA);
-                    $('h4#daftar').css({'background-color': selectedChain.WARNA,'padding-left':'4px'});
+                    $('h4#daftar').css({'background-color': selectedChain.WARNA,'padding-left':'4px','color':'white'});
                     
                     cekDataAwal();
 
@@ -653,6 +653,7 @@
 
     //scan dengan batas maksimum eksekusi pergrup (speedscan)
     $("#startSCAN").click(function () {
+        cekDataAwal();
         sendStatusTELE(SavedSettingData.nickname, 'ONLINE');
         $('#sinyal-container span[id^="sinyal"]').empty();
         form_off();
