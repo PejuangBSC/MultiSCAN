@@ -370,7 +370,7 @@
         const serverCORSList = getFromLocalStorage("SERVERCORS", []);  // Ambil data dari localStorage
     
         if (!serverCORSList || serverCORSList.length === 0) {
-            toastr.warning("SERVER CORS TIDAK ADA, SILAKAN SYCN ULANG!!");
+            toastr.warning("DATA SETTING TIDAK ADA, SILAKAN SYCN ULANG!!");
             return null; // Tidak ada server dalam daftar
         }
     
@@ -543,7 +543,10 @@
             loadStoredData(filteredTokens);
             loadCheckboxSelections();            
         }
-        
+        var link = $('a[href="multipair.html"]'); // Pilih elemen link
+            var href = link.attr('href'); // Ambil URL href
+            link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
+
         // Tampilkan semua pesan error
         $("#InfoStatus").html(errorMessages.join('<br/>')).addClass("text-large");    
     }
@@ -975,17 +978,30 @@
         filteredData.forEach((data, index) => {
             const warnaCEX = getWarnaCEX(data.cex);
 
+            const urlsCEX = GeturlExchanger(data.cex, data.symbol_in, data.symbol_out);
+
+            // Link untuk token withdraw
+            const linkWd = urlsCEX.withdrawUrl
+                ? `<a href="${urlsCEX.withdrawUrl}" target="_blank"><b>WD</b></a>`
+                : `<b>WX</b>`;
+
+            // Link untuk pair deposit
+            const linkDepo = urlsCEX.depositUrl
+                ? `<a href="${urlsCEX.depositUrl}" target="_blank"><b>DP</b></a>`
+                : `<b>DX</b>`;
+
+            // Status withdraw dengan link
             const withdrawStatus = {
-                text: data.withdrawEnable ? 'WD' : 'WX',
+                text: data.withdrawEnable ? linkWd : `<b style="color:red; font-weight:bold;">WX</b>`,
                 style: data.withdrawEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;',
             };
 
+            // Status deposit dengan link
             const depositStatus = {
-                text: data.depositEnable ? 'DP' : 'DX',
+                text: data.depositEnable ? linkDepo : `<b style="color:red; font-weight:bold;">DX</b>`,
                 style: data.depositEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;',
             };
 
-            const urlsCEX = GeturlExchanger(data.cex, data.symbol_in, data.symbol_out);
             const linkToken = urlsCEX.tradeToken
                 ? `<a href="${urlsCEX.tradeToken}" target="_blank"><b>${data.symbol_in.toUpperCase()}</b></a>`
                 : `<b>${data.symbol_in.toUpperCase()}</b>`;
@@ -994,6 +1010,7 @@
                 ? `<a href="${urlsCEX.tradePair}" target="_blank"><b>${data.symbol_out.toUpperCase()}</b></a>`
                 : `<b>${data.symbol_out.toUpperCase()}</b>`;
 
+               
             const linkStok = Object.keys(DTChain.CEXCHAIN[data.cex])
                 .filter((key) => key.includes('address'))
                 .map(
