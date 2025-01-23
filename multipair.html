@@ -306,6 +306,10 @@
 
 
     function cekDataAwal() {
+        var link = $('a[href="scanner.html"]'); // Pilih elemen link
+            var href = link.attr('href'); // Ambil URL href
+            link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
+
         // Verifikasi awal untuk memastikan DATA_SETTING sudah di-sync
         var info=true;
         if (savedSettingData.length === 0 || !DataTokens.length || !serverCORSList.length) {
@@ -325,9 +329,6 @@
         if (info && dataACTION.time) {
             $("#infoAPP").text(`${dataACTION.action} at ${dataACTION.time}`);
             loadStoredData();
-            var link = $('a[href="scanner.html"]'); // Pilih elemen link
-            var href = link.attr('href'); // Ambil URL href
-            link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
         } 
     }
 
