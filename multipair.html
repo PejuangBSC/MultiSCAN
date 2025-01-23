@@ -14,8 +14,12 @@
     <link rel="icon" href="https://www.iconpacks.net/icons/1/free-settings-icon-778-thumb.png" type="image/x-icon">
     <script src="config_tri.js"></script>
     <style>
+         body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 1px;
+            color: #0f0f0f;
+        }
         .uk-container { width: 96%; max-width: none; }
-        .table-header { background-color: #cbdcff; }
         .table-header th { color: black; font-size: medium; font-weight: bolder; cursor: pointer; position: relative; }
         .status-active { color: green; }
         .status-inactive { color: red; }
@@ -36,12 +40,7 @@
             width: 80px !important; /* Atur ukuran sesuai kebutuhan */
             transition: transform 0.3s; /* Menambahkan efek animasi */
         }
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 1px;
-            background-color:aliceblue;
-            color: #0f0f0f;
-        }
+       
     </style>
     
 </head>
@@ -259,7 +258,7 @@
 
     function getRandomServerFromCORSList() {       
         if (!serverCORSList || serverCORSList.length === 0) {
-            toastr.warning("SERVER CORS TIDAK ADA, SILAKAN SYCN ULANG!!");
+           // toastr.warning("SERVER CORS TIDAK ADA, SILAKAN SYCN ULANG!!");
             $("#infoAPP").html("SINKRONISASI DATA DAHULU!!!").addClass('uk-text-danger');
             return null; // Tidak ada server dalam daftar
         }
@@ -347,7 +346,12 @@
                 $('title').text("SETTING " + Nama_Chain.toUpperCase());
                 $('#namachain').text(Nama_Chain.toUpperCase());
                 $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
-                $('h3#judul').css('color', selectedChain.color);
+                 $('.table-header').css({
+                     'background-color': selectedChain.WARNA, // Fallback warna dasar
+                 });
+                 $('h3#judul').css({
+                     'color': selectedChain.WARNA, // Fallback warna dasar
+                 });
                 cekDataAwal(); 
                  // Untuk setiap chain yang ada di CONFIG_CHAINS dibuatkan ICON LINK CHAIN
                 Object.keys(CONFIG_CHAINS).forEach(chainKey => {
@@ -609,139 +613,52 @@
     }
 
     function loadStoredData() {
-    // Menampilkan pesan loading sebelum proses pengecekan
-    $('div#loadingStatus').text("Sedang Memuat DATA TOKEN...");
+        // Menampilkan pesan loading sebelum proses pengecekan
+        $('div#loadingStatus').text("Sedang Memuat DATA TOKEN...");
 
-    // Ambil data dari localStorage
-    const storedData = getFromLocalStorage("TOKEN", []);
-    $('#dataTableBody').empty(); // Kosongkan tabel sebelum menambahkan data baru
-
-    let rows = ''; // Variabel untuk menyimpan semua baris tabel
-    storedData.forEach((data, index) => {
-        // Mendapatkan warna berdasarkan nama CEX
-        const warnaCEX = getWarnaCEX(data.cex); 
-
-        // Default status untuk Wallet
-        let withdrawStatus = { text: '---', style: '' };
-        let depositStatus = { text: '---', style: '' };
-
-        // Periksa data wallet terkait untuk withdraw dan deposit
-        const StatusToken = getWalletStatus(data.cex, data.symbol_in);
-        if (StatusToken) {
-            withdrawStatus.text = StatusToken.withdrawEnable ? 'OPEN' : 'CLOSE';
-            withdrawStatus.style = StatusToken.withdrawEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
-        }
-
-        const StatusPair = getWalletStatus(data.cex, data.symbol_out);
-        if (StatusPair) {
-            depositStatus.text = StatusPair.depositEnable ? 'OPEN' : 'CLOSE';
-            depositStatus.style = StatusPair.depositEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
-        }
-
-        // Baris tabel untuk ditambahkan
-        const row = `
-            <tr data-index="${index}" style="color: ${warnaCEX};">
-                <td class="uk-text-center">${index + 1}</td>
-                <td class="uk-text-center">${data.cex}</td>
-                <td style="text-align:center;">${data.symbol_in}</td>
-                <td style="font-size:small;">
-                    <a href="${URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">${data.sc_in}</a><br/>(${data.des_in})
-                </td>
-                <td class="uk-text-center" style="${withdrawStatus.style}">${withdrawStatus.text}</td>
-                <td style="text-align:center;">${data.symbol_out}</td>
-                <td style="font-size:small;">
-                    <a href="${URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">${data.sc_out}</a><br/>(${data.des_out})
-                </td>
-                <td class="uk-text-center" style="${depositStatus.style}">${depositStatus.text}</td>
-                <td class="uk-text-center">
-                    <label>
-                        <input type="checkbox" class="statusCheckbox" data-index="${index}" ${data.status ? 'checked' : ''}>
-                        ${data.status ? 'Aktif' : 'Tidak Aktif'}
-                    </label>
-                </td>
-                <td class="action-buttons">
-                    <button class="uk-button uk-button-secondary edit-btn" data-index="${index}">Edit</button>
-                    <button class="uk-button uk-button-danger delete-btn" data-index="${index}">Delete</button>
-                </td>
-            </tr>
-        `;
-        rows += row; // Menambahkan row ke dalam string
-    });
-
-    // Menambahkan semua baris sekaligus ke dalam tabel
-    $('#dataTableBody').append(rows);
-
-    // Tampilkan jumlah token
-    $('#tokenCount').text(` TOTAL : ${storedData.length} PAIR-TOKEN `);
-
-    // Memperbarui ikon urutan jika diperlukan
-    updateSortIcons();
-
-    // Menampilkan status loading selesai setelah 2 detik
-    setTimeout(() => {
-        $('div#loadingStatus').text("SELESAI, Memuat DATA TOKEN !!");
-        setTimeout(() => $('div#loadingStatus').fadeOut(), 2000); // Menyembunyikan pesan setelah 2 detik
-    }, 2000);
-}
-
-    // memuat data TOKEN pada tabel
-    function loadStoredData2() {
-        // Tampilkan pesan loading sebelum proses pengecekan
-        
-        const storedData = getFromLocalStorage("TOKEN",[]); // Ambil data dari localStorage
+        // Ambil data dari localStorage
+        const storedData = getFromLocalStorage("TOKEN", []);
         $('#dataTableBody').empty(); // Kosongkan tabel sebelum menambahkan data baru
 
+        let rows = ''; // Variabel untuk menyimpan semua baris tabel
         storedData.forEach((data, index) => {
-            // Setelah semua data selesai diproses
-            if(index>data.length){
-                $('div#loadingStatus').text("Sedang Memuat DATA TOKEN..."); 
-            }else{
-                $('div#loadingStatus').text("SELESAI, Memuat DATA TOKEN !!"); 
-                setTimeout(() => $('div#loadingStatus').fadeOut(), 2000); 
-            }
-            const warnaCEX = getWarnaCEX(data.cex); // Mendapatkan warna berdasarkan nama CEX
-            
+            // Mendapatkan warna berdasarkan nama CEX
+            const warnaCEX = getWarnaCEX(data.cex); 
+
             // Default status untuk Wallet
             let withdrawStatus = { text: '---', style: '' };
             let depositStatus = { text: '---', style: '' };
 
-           // if (data.cex !== 'GATE') {
-                // Periksa data wallet terkait untuk withdraw dan deposit
-                const StatusToken = getWalletStatus(data.cex, data.symbol_in);
-                if (StatusToken) {
-                    withdrawStatus.text = StatusToken.withdrawEnable ? 'OPEN' : 'CLOSE';
-                    withdrawStatus.style = StatusToken.withdrawEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
-                }
-             //console.log(`CEK WD: ${data.symbol_in} CEX:${data.cex}`, StatusToken);
+            // Periksa data wallet terkait untuk withdraw dan deposit
+            const StatusToken = getWalletStatus(data.cex, data.symbol_in);
+            if (StatusToken) {
+                withdrawStatus.text = StatusToken.withdrawEnable ? 'OPEN' : 'CLOSE';
+                withdrawStatus.style = StatusToken.withdrawEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
+            }
 
-                const StatusPair = getWalletStatus(data.cex, data.symbol_out);
-                if (StatusPair) {
-                    depositStatus.text = StatusPair.depositEnable ? 'OPEN' : 'CLOSE';
-                    depositStatus.style = StatusPair.depositEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
-                }
-            // console.log(`CEK DP: ${data.symbol_out} CEX:${data.cex}`, StatusPair);
-            //}
+            const StatusPair = getWalletStatus(data.cex, data.symbol_out);
+            if (StatusPair) {
+                depositStatus.text = StatusPair.depositEnable ? 'OPEN' : 'CLOSE';
+                depositStatus.style = StatusPair.depositEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
+            }
 
-            // Baris tabel untuk ditampilkan
+            // Baris tabel untuk ditambahkan
             const row = `
                 <tr data-index="${index}" style="color: ${warnaCEX};">
                     <td class="uk-text-center">${index + 1}</td>
-                    <td class="uk-text-center">${data.cex}</td> <!-- Warna berdasarkan CEX -->
+                    <td class="uk-text-center">${data.cex}</td>
                     <td style="text-align:center;">${data.symbol_in}</td>
                     <td style="font-size:small;">
                         <a href="${URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">${data.sc_in}</a><br/>(${data.des_in})
                     </td>
-                    <td class="uk-text-center" style="${withdrawStatus.style}">${withdrawStatus.text}</td> <!-- Status Withdraw -->
+                    <td class="uk-text-center" style="${withdrawStatus.style}">${withdrawStatus.text}</td>
                     <td style="text-align:center;">${data.symbol_out}</td>
                     <td style="font-size:small;">
                         <a href="${URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">${data.sc_out}</a><br/>(${data.des_out})
                     </td>
-                    <td class="uk-text-center" style="${depositStatus.style}">${depositStatus.text}</td> <!-- Status Deposit -->
+                    <td class="uk-text-center" style="${depositStatus.style}">${depositStatus.text}</td>
                     <td class="uk-text-center">
-                        <label>
-                            <input type="checkbox" class="statusCheckbox" data-index="${index}" ${data.status ? 'checked' : ''}>
-                            ${data.status ? 'Aktif' : 'Tidak Aktif'}
-                        </label>
+                         <input type="checkbox" class="statusCheckbox" data-index="${data.no}" ${data.status ? 'checked' : ''}>AKTIF
                     </td>
                     <td class="action-buttons">
                         <button class="uk-button uk-button-secondary edit-btn" data-index="${index}">Edit</button>
@@ -749,37 +666,40 @@
                     </td>
                 </tr>
             `;
-            $('#dataTableBody').append(row); // Tambahkan baris ke tbody
+            rows += row; // Menambahkan row ke dalam string
         });
 
-        // Sembunyikan pesan setelah 3 detik
-        $('#tokenCount').text(` TOTAL : ${storedData.length} PAIR-TOKEN `); // Tampilkan jumlah token
+        // Menambahkan semua baris sekaligus ke dalam tabel
+        $('#dataTableBody').append(rows);
+
+        // Tampilkan jumlah token
+        $('#tokenCount').text(` TOTAL : ${storedData.length} PAIR-TOKEN `);
+
         // Memperbarui ikon urutan jika diperlukan
         updateSortIcons();
+
+        // Menampilkan status loading selesai setelah 2 detik
+        setTimeout(() => {
+            $('div#loadingStatus').text("SELESAI, Memuat DATA TOKEN !!");
+            setTimeout(() => $('div#loadingStatus').fadeOut(), 2000); // Menyembunyikan pesan setelah 2 detik
+        }, 2000);
     }
-    // Fungsi untuk menangani perubahan status checkbox
-    $(document).on('change', '.statusCheckbox', function() {
-        const index = $(this).data('index');  // Ambil index dari data
-        const isChecked = $(this).prop('checked');  // Ambil status checkbox (checked/un-checked)
-        
-        const storedData = getFromLocalStorage("TOKEN",[]);  // Ambil data dari localStorage
 
-        if (index >= 0 && index < storedData.length) {
-            // Update status data
-            storedData[index].status = isChecked;
-
-            // Simpan kembali ke localStorage
-            saveToLocalStorage(storedData);
-            
-            // Perbarui tampilan status pada checkbox (aktif/tidak aktif)
-            $(this).next().text(isChecked ? 'Aktif' : 'Tidak Aktif');
-            toastr.success('Berhasil UBAH status PAIR '+storedData[index].symbol_in+'-'+storedData[index].symbol_out+' !', { status: 'success' });
-           // UIkit.notification('Berhasil UBAH status PAIR '+storedData[index].symbol_in+'-'+storedData[index].symbol_out+' !', { status: 'success' });
-            setLastAction("UBAH STATUS TOKEN");
+    $(document).on('change', '.statusCheckbox', function(event) {
+        event.preventDefault(); // Mencegah tindakan default
+        const no = $(this).data('index');
+        const isChecked = $(this).prop('checked');
+        const storedData = getFromLocalStorage('TOKEN', []);
+        const token = storedData.find(t => t.no === no);
+        if (token) {
+            token.status = isChecked;
+            saveToLocalStorage('TOKEN', storedData);
+            toastr.info(`Berhasil mengubah status PAIR ${token.symbol_in}-${token.symbol_out}!`);
+            $(`td[data-index="${no}"]`).remove();
         }
+       // const filteredTokens = filterTokens();
+       // loadStoredData(filteredTokens);      
     });
-
-
     // Fungsi untuk mengurutkan tabel
     function sortTable(columnIndex) {
         const rows = $('#dataTableBody tr').get();
@@ -1413,13 +1333,12 @@ function getWalletStatus(cex, tokenName) {
         const recvWindow = "5000";
         const queryString = `recvWindow=${recvWindow}&timestamp=${timestamp}`;
         const signature = calculateSignature("MEXC", apiSecret, queryString);
-
         if (!signature) {
             toastr.error("Gagal menghitung signature MEXC. Periksa konfigurasi.");
             return;
         }
 
-        const apiUrl = selectedServer+`https://api.mexc.com/api/v3/capital/config/getall`;
+        const apiUrl = `https://cors-anywhere.herokuapp.com/https://api.mexc.com/api/v3/capital/config/getall`;
         
         $.ajax({
             url: `${apiUrl}?${queryString}&signature=${signature}`,
