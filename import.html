@@ -233,31 +233,41 @@
                     'opacity': '0.4',
                 });
 
-                if (!dataTokenPilih || !Array.isArray(dataTokenPilih) || dataTokenPilih.length === 0) {
-                    // Jika data token dan data token pilih tidak ada
-                    if (!DataTokens || !Array.isArray(DataTokens) || DataTokens.length === 0) {
-                        $("#infoAPP").show().html("SILAKAN PILIH DATA TOKEN DAN PAIR DAHULU!!!").addClass('uk-text-danger');
-                        toastr.error('<b>SILAKAN PILIH DATA TOKEN DAN PAIR TERLEBIH DAHULU !!</b><br/>');
-                        form_off();
-                        $("#ImportDataBtn").addClass("img-large");
-                        $('#MasterDataBtn').css({
-                            'pointer-events': 'none',
-                            'opacity': '0.4',
-                        });
-                        info = false;
-                    } else{
-                        $('#MasterDataBtn').css({
-                            'pointer-events': 'auto',
-                            'opacity': '1'
-                        });
-                    }
-                } else if (!WalletCEX || !WalletCEX.length || !DATAWalletCEX || !DATAWalletCEX.length) {
-                    // Jika data wallet CEX kosong
-                    $("#infoAPP").show().html("SILAKAN UPDATE WALLET CEX!!!").addClass('uk-text-danger');
-                    toastr.warning('<b>SILAKAN UPDATE WALLET CEX</b>');
-                    $("#UpdateWalletCEX").addClass("img-large");
-                    info = false;
-                }
+                    if (!dataTokenPilih || !Array.isArray(dataTokenPilih) || dataTokenPilih.length === 0) {
+                        // Jika data token dan data token pilih tidak ada
+                        if (!DataTokens || !Array.isArray(DataTokens) || DataTokens.length === 0) {
+                            $("#infoAPP").show().html("SILAKAN PILIH DATA TOKEN DAN PAIR DAHULU!!!").addClass('uk-text-danger');
+                            toastr.error('<b>SILAKAN PILIH DATA TOKEN DAN PAIR TERLEBIH DAHULU !!</b><br/>');
+                            form_off();
+                            $("#ImportDataBtn").addClass("img-large");
+                            $('#MasterDataBtn').css({
+                                'pointer-events': 'none',
+                                'opacity': '0.4',
+                            });
+                            info = false;
+                        } else {
+                            if (!WalletCEX || !WalletCEX.length || !DATAWalletCEX || !DATAWalletCEX.length) {
+                                // Jika data wallet CEX kosong
+                                $("#infoAPP").show().html("SILAKAN UPDATE WALLET CEX PADA MENU SETTING!!!").addClass('uk-text-danger');
+                                toastr.warning('<b>SILAKAN UPDATE WALLET CEX PADA MENU SETTING</b>');
+                                $("#UpdateWalletCEX,#MasterDataBtn").addClass("img-large");
+                                $('#MasterDataBtn').css({
+                                    'pointer-events': 'auto',
+                                    'opacity': '1',
+                                });
+                                info = false;
+                            }else{
+                                $('#UpdateWalletCEX').css({
+                                        'pointer-events': 'auto',
+                                        'opacity': '1'
+                                    });
+                                $('#MasterDataBtn').css({
+                                    'pointer-events': 'auto',
+                                    'opacity': '1'
+                                });
+                            }
+                    }    
+                } 
 
                 if (info && dataACTION && dataACTION.time) {
                     // Menampilkan aksi terakhir jika semua kondisi terpenuhi
