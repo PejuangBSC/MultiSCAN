@@ -382,6 +382,8 @@
             COLOR_CHAIN: chainData.WARNA,
         };
     }
+
+    
    // Fungsi untuk memilih server secara acak dari array
    function getRandomServerFromCORSList() {
         const serverCORSList = getFromLocalStorage("SERVERCORS", []);  // Ambil data dari localStorage
@@ -567,9 +569,11 @@
             $('#UpdateWalletCEX').css('pointer-events', 'none').css('opacity', '0.4');
             
         }else{
-            generateInputCheckbox(CONFIG_CEX,  "cex-options","","EXCH:","uk-form-label uk-text-success");
+            const savedPairs = getFromLocalStorage("selectedPair",[]);
+            const savedCexs = getFromLocalStorage("selectedCEX",[]);
+            generateInputCheckbox(savedCexs,  "cex-options","","EXCH:","uk-form-label uk-text-success");
             generateInputCheckbox(DTChain.DEXS,  "dex-options","D","DEFI:","uk-form-label uk-text-danger");
-            generateInputCheckbox(DTChain.PAIRDEXS, "dexpair-options","","PAIRING :","uk-form-label uk-text-primary");
+            generateInputCheckbox(savedPairs, "dexpair-options","","PAIRING :","uk-form-label uk-text-primary");
             generateInputModal(DTChain.DEXS);
             loadStoredData(filteredTokens);
             loadCheckboxSelections();            
