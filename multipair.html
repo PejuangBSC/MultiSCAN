@@ -20,6 +20,7 @@
             font-family: Arial, Helvetica, sans-serif;
             padding: 1px;
             color: #0f0f0f;
+            background-color: #dbfac7;
         }
         .uk-container { width: 96%; max-width: none; }
         .table-header th { color: rgb(251, 250, 250); font-size: medium; font-weight: bolder; cursor: pointer; position: relative; }
@@ -50,7 +51,7 @@
 <div class="uk-container uk-margin-top">
     <div class="uk-text-center"> <!-- Mengurangi margin-top -->
         <h3 id="judul" class="uk-margin-remove" style="font-size: 30px;" > &nbsp;
-            <a href="import.html" target="_blank"><img class="icon" id="ImportDataBtn" title="PILIH TOKEN PAIR" width="30px" src="https://icons.veryicon.com/png/o/internet--web/2022-alibaba-cloud-product-icon-cloud/cbs-database-backup.png" /> </a>&nbsp;
+            <a href="import.html" target="_blank"><img class="icon" id="ImportDataBtn" title="PILIH TOKEN PAIR" width="30px" src="https://icons.veryicon.com/png/o/internet--web/2022-alibaba-cloud-product-icon-cloud/cbs-database-backup.png" /> </a>
             <img class="icon" id="SyncDataBtn" title="SINKRONISASI DATA" width="30px" src="https://cdn3.iconfinder.com/data/icons/mixed-vol-12/256/futuro_icons_229-512.png" /> &nbsp;
             <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank"><img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="30px" /></a> &nbsp;
             <img class="icon" id="UpdateWalletCEX" title="UPDATE WALLET CEX" width="30px" src="https://cdn-icons-png.flaticon.com/512/3687/3687106.png" /> &nbsp;
@@ -313,37 +314,45 @@
 
 
     function cekDataAwal() {
-        var link = $('a[href="scanner.html"]'); // Pilih elemen link
-            var href = link.attr('href'); // Ambil URL href
-            link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
+       // Update href untuk scanner.html
+        var scannerLink = $('a[href="scanner.html"]'); // Pilih elemen link dengan href scanner.html
+        var scannerHref = scannerLink.attr('href'); // Ambil URL href
+        scannerLink.attr('href', scannerHref + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter chain
+
+        // Update href untuk import.html
+        var importLink = $('a[href="import.html"]'); // Pilih elemen link dengan href import.html
+        var importHref = importLink.attr('href'); // Ambil URL href
+        importLink.attr('href', importHref + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter chain
+
 
         // Verifikasi awal untuk memastikan DATA_SETTING sudah di-sync
         var info=true;
         if (!dataTokenPilih || !Array.isArray(dataTokenPilih) || dataTokenPilih.length === 0) {
-            form_off();
-            $("#ImportDataBtn").addClass("img-large");
-            toastr.error('<b>SILAKAN PILIH DATA TOKEN PAIR TERLEBIH DAHULU !!</b><br/>');
-            $("#infoAPP").html("SILAKAN, PILIH TOKEN PAIR DAHULU!!!").addClass('uk-text-danger');
-            info = false;
-            // Menonaktifkan elemen #Scanner
-            $('#SyncDataBtn,#UpdateWalletCEX,#Scanner').css({
-                'pointer-events': 'none', // Menonaktifkan interaksi klik
-                'opacity': '0.4',         // Memberikan efek visual tidak aktif
-                'cursor': 'not-allowed'   // Mengubah kursor menjadi tanda larangan
-            });
-        }
-        else if (savedSettingData.length === 0 || !DataTokens.length || !serverCORSList.length) {
-            form_off(); 
-            $("#SyncDataBtn").addClass("img-large");               
-            toastr.error('<b>SILAKAN SINKRONISASI DATA TERLEBIH DAHULU !!</b><br/>');    
-            $("#infoAPP").html("SILAKAN, SINKRONISASI DATA DAHULU!!!").addClass('uk-text-danger');;     
-            info=false;
-            $('#UpdateWalletCEX,#Scanner').css('pointer-events', 'none').css('opacity', '0.4');
-        } else if (!WalletCEX || !WalletCEX.length || !DATAWalletCEX || !DATAWalletCEX.length) {
-            $("#UpdateWalletCEX").addClass("img-large");  
-            toastr.warning("SILAKAN UPDATE WALLET CEX");
-            $("#infoAPP").html("SILAKAN UPDATE WALLET CEX!!!").addClass('uk-text-danger');;
-            info=false;
+            if (savedSettingData.length === 0 || !DataTokens.length || !serverCORSList.length) {
+                form_off(); 
+                $("#SyncDataBtn").addClass("img-large");               
+                toastr.error('<b>SILAKAN SINKRONISASI DATA TERLEBIH DAHULU !!</b><br/>');    
+                $("#infoAPP").html("SILAKAN, SINKRONISASI DATA DAHULU!!!").addClass('uk-text-danger');;     
+                info=false;
+                $('#UpdateWalletCEX,#Scanner').css('pointer-events', 'none').css('opacity', '0.4');
+            } else if (!WalletCEX || !WalletCEX.length || !DATAWalletCEX || !DATAWalletCEX.length) {
+                $("#UpdateWalletCEX").addClass("img-large");  
+                toastr.warning("SILAKAN UPDATE WALLET CEX");
+                $("#infoAPP").html("SILAKAN UPDATE WALLET CEX!!!").addClass('uk-text-danger');;
+                info=false;
+            }else{
+                form_off();
+                $("#ImportDataBtn").addClass("img-large");
+                toastr.error('<b>SILAKAN PILIH DATA TOKEN PAIR TERLEBIH DAHULU !!</b><br/>');
+                $("#infoAPP").html("SILAKAN, PILIH TOKEN PAIR DAHULU!!!").addClass('uk-text-danger');
+                info = false;
+                // Menonaktifkan elemen #Scanner
+                $('#SyncDataBtn,#UpdateWalletCEX,#Scanner').css({
+                    'pointer-events': 'none', // Menonaktifkan interaksi klik
+                    'opacity': '0.4',         // Memberikan efek visual tidak aktif
+                    'cursor': 'not-allowed'   // Mengubah kursor menjadi tanda larangan
+                });
+            }            
         }// Menampilkan aksi terakhir
 
         if (info && dataACTION.time) {
