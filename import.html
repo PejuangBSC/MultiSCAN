@@ -105,7 +105,7 @@
         <!-- Tabel Hasil -->
         <h3 class="uk-heading-line uk-margin-top" id="daftar"><span>Daftar Token Pair <span id="namachain2"></span> Hasil Pilihan  </span></h3>
        
-        <table class="uk-table uk-table-striped uk-table-hover" id="result-table" id="daftartabel">
+        <table class="uk-table uk-table-striped uk-table-hover" id="result-table" >
             <thead class="table-header">
                 <tr>
                     <th>CEX</th>
@@ -389,6 +389,10 @@
 
                 // Event listener untuk filter CEX
                 $(document).on("change", ".cex-filter", function () {
+                    const selectedCEX = $(".cex-filter:checked").map(function () {
+                        return $(this).val();
+                    }).get();
+                    saveToLocalStorage("selectedCEX", selectedCEX);
                     updatePairCheckboxes();
                 });
 
@@ -399,6 +403,10 @@
                     } else {
                         $("#filter-btn").prop("disabled", true);
                     }
+                    const selectedPair = $(".pair-filter:checked").map(function () {
+                        return $(this).val();
+                    }).get();
+                    saveToLocalStorage("selectedPair", selectedPair);
                 });
 
                 // Event listener untuk menampilkan data setelah tombol diklik
@@ -429,6 +437,7 @@
 
                 // Event listener untuk tombol Load Data
                 $("#load-data-btn").click(function () {
+
                     // Ambil data sementara yang disimpan di tombol
                     const filteredData = $(this).data("filteredData");
 
