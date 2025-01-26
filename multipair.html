@@ -216,36 +216,30 @@
     // Fungsi umum untuk mendapatkan data dari localStorage
     function getFromLocalStorage(key, defaultValue) {
         return JSON.parse(localStorage.getItem(storagePrefix + key)) || defaultValue;
-        console.log("Data from localStorage:", data); // Debug log
+       // console.log("Data from localStorage:", data); // Debug log
     }
 
-    // Fungsi umum untuk menyimpan data ke localStorage
-    function saveToLocalStorage(key, value) {
+     // Fungsi umum untuk menyimpan data ke localStorage
+     function saveToLocalStorage(key, value) {
         try {
             localStorage.setItem(storagePrefix + key, JSON.stringify(value));
-            //console.log("Data saved successfully:", key);
+           // console.log("Data saved successfully:", key);
         } catch (error) {
-            if (error.name === "QuotaExceededError" && isLocalStorageFull()) {
-                toastr.error("MEMORY BROWSER PENUH!!!");
-                $("#infoAPP").text("MEMORY BROWSER PENUH!!!");
+            // Tambahkan log untuk memverifikasi jenis error
+            console.error("Error saat menyimpan data:", error);
+
+            if (error.name === "QuotaExceededError") {
+                // Tambahkan pengecekan ruang yang tersedia sebelum menyimpan
+                let usedSpace = new Blob(Object.values(localStorage)).size;
+                let totalSpace = 5 * 1024 * 1024; // Biasanya 5MB
+                console.error(`Used space: ${usedSpace} bytes / Total allowed: ${totalSpace} bytes`);
+
+                toastr.error("MEMORY BROWSER PENUH!!! Sisa ruang tidak mencukupi.");
             } else {
-                console.error("Unexpected error:", error);
+                toastr.error("Terjadi kesalahan tak terduga saat menyimpan data.");
             }
         }
     }
-
-    // Fungsi untuk memeriksa apakah localStorage penuh
-    function isLocalStorageFull() {
-        try {
-            const testKey = "__test__";
-            localStorage.setItem(testKey, "test"); // Coba simpan data sementara
-            localStorage.removeItem(testKey); // Hapus data setelah dicek
-            return false; // Tidak penuh
-        } catch (e) {
-            return true; // Penuh jika error
-        }
-    }
-
     // Fungsi untuk menghapus item dari localStorage
     function removeFromLocalStorage(key) {
         localStorage.removeItem(storagePrefix + key);
@@ -1399,7 +1393,7 @@
             },
             success: function (data) {
                 dataCoins = data.result.rows;
-    
+               // console.log(dataCoins);
                 // Filter berdasarkan chainType yang sesuai dengan konfigurasi di chainTypeConfig dan hanya ambil yang deposit atau withdraw enable
                 const coinsWithNetwork = dataCoins.filter(function (item) {
                     return item.chains.some(function (network) {
