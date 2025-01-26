@@ -369,27 +369,32 @@
                 });
                 info = false;
             } else{
+                if (!WalletCEX || !WalletCEX.length || !DATAWalletCEX || !DATAWalletCEX.length) {
+                    // Jika data wallet CEX kosong
+                    $("#infoAPP").show().html("SILAKAN UPDATE WALLET CEX!!!").addClass('uk-text-danger');
+                    toastr.warning('<b>SILAKAN UPDATE WALLET CEX</b>');
+                    $('#UpdateWalletCEX').css({
+                        'pointer-events': 'auto',
+                        'opacity': '1'
+                    });
+                    $("#UpdateWalletCEX").addClass("img-large");
+                    info = false;
+                }else{
+                    $('#Scanner').css({
+                        'pointer-events': 'auto',
+                        'opacity': '1'
+                    });
+                    $('#UpdateWalletCEX').css({
+                        'pointer-events': 'auto',
+                        'opacity': '1'
+                    });
+                }
                 $('#MasterDataBtn').css({
                     'opacity': '1'
                 });
             }
         } 
-        if (!WalletCEX || !WalletCEX.length || !DATAWalletCEX || !DATAWalletCEX.length) {
-            // Jika data wallet CEX kosong
-            $("#infoAPP").show().html("SILAKAN UPDATE WALLET CEX!!!").addClass('uk-text-danger');
-            toastr.warning('<b>SILAKAN UPDATE WALLET CEX</b>');
-            $('#UpdateWalletCEX').css({
-                'pointer-events': 'auto',
-                'opacity': '1'
-            });
-            $("#UpdateWalletCEX").addClass("img-large");
-            info = false;
-        }else{
-            $('#Scanner').css({
-                'pointer-events': 'auto',
-                'opacity': '1'
-            });
-        }
+        
 
         if (info && dataACTION && dataACTION.time) {
             // Menampilkan aksi terakhir jika semua kondisi terpenuhi
@@ -753,79 +758,6 @@
                     <td class="action-buttons">
                         <button class="uk-icon-button uk-button-secondary edit-btn" uk-icon="pencil" data-index="${index}"></button>
                         <button class="uk-icon-button uk-button-danger delete-btn" uk-icon="trash" data-index="${index}"></button>
-                    </td>
-                </tr>
-            `;
-            rows += row; // Menambahkan row ke dalam string
-        });
-
-        // Menambahkan semua baris sekaligus ke dalam tabel
-        $('#dataTableBody').append(rows);
-
-        // Tampilkan jumlah token
-        $('#tokenCount').text(` TOTAL : ${storedData.length} PAIR-TOKEN `);
-
-        // Memperbarui ikon urutan jika diperlukan
-        updateSortIcons();
-
-        // Menampilkan status loading selesai setelah 2 detik
-        setTimeout(() => {
-            $('div#loadingStatus').text("SELESAI, Memuat DATA TOKEN !!");
-            setTimeout(() => $('div#loadingStatus').fadeOut(), 2000); // Menyembunyikan pesan setelah 2 detik
-        }, 2000);
-    }
-
-    function loadStoredDataLama() {
-        // Menampilkan pesan loading sebelum proses pengecekan
-        $('div#loadingStatus').text("Sedang Memuat DATA TOKEN...");
-
-        // Ambil data dari localStorage
-        const storedData = getFromLocalStorage("TOKEN", []);
-        $('#dataTableBody').empty(); // Kosongkan tabel sebelum menambahkan data baru
-
-        let rows = ''; // Variabel untuk menyimpan semua baris tabel
-        storedData.forEach((data, index) => {
-            // Mendapatkan warna berdasarkan nama CEX
-            const warnaCEX = getWarnaCEX(data.cex); 
-
-            // Default status untuk Wallet
-            let withdrawStatus = { text: '---', style: '' };
-            let depositStatus = { text: '---', style: '' };
-
-            // Periksa data wallet terkait untuk withdraw dan deposit
-            const StatusToken = getWalletStatus(data.cex, data.symbol_in);
-            if (StatusToken) {
-                withdrawStatus.text = StatusToken.withdrawEnable ? 'OPEN' : 'CLOSE';
-                withdrawStatus.style = StatusToken.withdrawEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
-            }
-
-            const StatusPair = getWalletStatus(data.cex, data.symbol_out);
-            if (StatusPair) {
-                depositStatus.text = StatusPair.depositEnable ? 'OPEN' : 'CLOSE';
-                depositStatus.style = StatusPair.depositEnable ? 'color:black; font-weight:bold;' : 'color:red; font-weight:bold;';
-            }
-
-            // Baris tabel untuk ditambahkan
-            const row = `
-                <tr data-index="${index}" style="color: ${warnaCEX};">
-                    <td class="uk-text-center">${index + 1}</td>
-                    <td class="uk-text-center">${data.cex}</td>
-                    <td style="text-align:center;">${data.symbol_in}</td>
-                    <td style="font-size:small;">
-                        <a href="${URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">${data.sc_in}</a><br/>(${data.des_in})
-                    </td>
-                    <td class="uk-text-center" style="${withdrawStatus.style}">${withdrawStatus.text}</td>
-                    <td style="text-align:center;">${data.symbol_out}</td>
-                    <td style="font-size:small;">
-                        <a href="${URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">${data.sc_out}</a><br/>(${data.des_out})
-                    </td>
-                    <td class="uk-text-center" style="${depositStatus.style}">${depositStatus.text}</td>
-                    <td class="uk-text-center">
-                         <input type="checkbox" class="statusCheckbox" data-index="${data.no}" ${data.status ? 'checked' : ''}>AKTIF
-                    </td>
-                    <td class="action-buttons">
-                        <button class="uk-button uk-button-secondary edit-btn" data-index="${index}">Edit</button>
-                        <button class="uk-button uk-button-danger delete-btn" data-index="${index}">Delete</button>
                     </td>
                 </tr>
             `;
