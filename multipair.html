@@ -312,8 +312,54 @@
         URL.revokeObjectURL(url);
     });
 
-
     function cekDataAwal() {
+        // Update href untuk scanner.html
+        var scannerLink = $('a[href="scanner.html"]');
+        var scannerHref = scannerLink.attr('href');
+        scannerLink.attr('href', scannerHref + "?chain=" + encodeURIComponent(chainName));
+
+        // Update href untuk import.html
+        var importLink = $('a[href="import.html"]');
+        var importHref = importLink.attr('href');
+        importLink.attr('href', importHref + "?chain=" + encodeURIComponent(chainName));
+
+        // Variabel info untuk status akhir
+        var info = true;
+
+        if (!dataTokenPilih || !Array.isArray(dataTokenPilih) || dataTokenPilih.length === 0) {
+            // Jika data token dan data token pilih tidak ada
+            if (!DataTokens || !Array.isArray(DataTokens) || DataTokens.length === 0) {
+                $("#infoAPP").html("SILAKAN PILIH DATA TOKEN DAN PAIR DAHULU!!!").addClass('uk-text-danger');
+                toastr.error('<b>SILAKAN PILIH DATA TOKEN DAN PAIR TERLEBIH DAHULU !!</b><br/>');
+            } else {
+                $("#SyncDataBtn").addClass("img-large");    
+                $("#infoAPP").html("SILAKAN SINKRONISASI DATA DAHULU!!!").addClass('uk-text-danger');
+                toastr.error('<b>SILAKAN SINKRONISASI DATA TERLEBIH DAHULU !!</b><br/>');
+            }
+            form_off();
+            $("#ImportDataBtn").addClass("img-large");
+            $('#SyncDataBtn, #UpdateWalletCEX, #Scanner').css({
+                'pointer-events': 'none',
+                'opacity': '0.4',
+                'cursor': 'not-allowed'
+            });
+            info = false;
+        } else if (!WalletCEX || !WalletCEX.length || !DATAWalletCEX || !DATAWalletCEX.length) {
+            // Jika data wallet CEX kosong
+            $("#infoAPP").html("SILAKAN UPDATE WALLET CEX!!!").addClass('uk-text-danger');
+            toastr.warning('<b>SILAKAN UPDATE WALLET CEX</b>');
+            $("#UpdateWalletCEX").addClass("img-large");
+            info = false;
+        }
+
+        if (info && dataACTION && dataACTION.time) {
+            // Menampilkan aksi terakhir jika semua kondisi terpenuhi
+            $("#infoAPP").text(`${dataACTION.action} at ${dataACTION.time}`);
+            loadStoredData();
+        }
+    }
+
+    function cekDataAwal2() {
        // Update href untuk scanner.html
         var scannerLink = $('a[href="scanner.html"]'); // Pilih elemen link dengan href scanner.html
         var scannerHref = scannerLink.attr('href'); // Ambil URL href
