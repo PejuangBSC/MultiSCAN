@@ -171,6 +171,10 @@
                                 <button type="button" id="startSCAN" style="display: none;" class="uk-button uk-button-secondary uk-button-small">START</button>
                                 <button type="button" id="stopSCAN" style="display: none;" class="uk-button uk-button-danger uk-button-small">STOP</button>
                             </div>
+                            <div class="uk-align-center">
+                                <b><span class="uk-text-secondary uk-text-medium">INFO APLIKASI: &nbsp;</span></b>
+                                <b><span class="uk-text-success uk-text-medium" id="infoAPP"></span></b>&nbsp; &nbsp; &nbsp;
+                            </div>  
                         </div>
                 </form>
             </div>
@@ -545,47 +549,60 @@
     });
 
     function cekDataAwal() {
-        // console.log("DataTokens:", DataTokens);
-        // console.log("SavedSettingData:", SavedSettingData);
-        // console.log("WalletCEX:", WalletCEX);
+        var info = true; // Variabel status info
+        let errorMessages = []; // Array untuk menyimpan pesan error
 
-        // Array untuk menyimpan pesan error
-        let errorMessages = [];
+        // Validasi data dan push error ke array
         if (!MasterTokens.length) {
             errorMessages.push('TIDAK ADA DATA PADA SETTINGAN!');
             $("#MasterData").addClass("icon-wrapper");
-            $('#UpdateWalletCEX,#LoadDataBtn,#SettingModal').css('pointer-events', 'none').css('opacity', '0.4');            
-        }else if (!DataTokens.length) {
-            form_off(); 
-            $("#LoadDataBtn").addClass("icon-wrapper");   
-            errorMessages.push('<b>SILAKAN LOAD DATA TERLEBIH DAHULU !!</b><br/>');         
-        }else if (!SavedSettingData || SavedSettingData.walletMeta === '-' ) {
+            $('#UpdateWalletCEX,#LoadDataBtn,#SettingModal').css('pointer-events', 'none').css('opacity', '0.4');
+            info = false;
+        } else if (!DataTokens.length) {
+            form_off();
+            $("#LoadDataBtn").addClass("icon-wrapper");
+            errorMessages.push('<b>SILAKAN LOAD DATA TERLEBIH DAHULU !!</b><br/>');
+            info = false;
+        } else if (!SavedSettingData || SavedSettingData.walletMeta === '-') {
             errorMessages.push('CEK, SETTINGAN APLIKASI {MODAL,WALLET METAMASK}!');
             $("#SettingModal").addClass("icon-wrapper");
             form_off();
-        }else if (!WalletCEX.length) {
+            info = false;
+        } else if (!WalletCEX.length) {
             errorMessages.push('TIDAK ADA DATA WALLET CEX, SILAKAN UPDATE WALLET PADA SETTINGAN!');
             $("#MasterData").addClass("icon-wrapper");
             $('#UpdateWalletCEX').css('pointer-events', 'none').css('opacity', '0.4');
-            
-        }else{
-            const savedPairs = getFromLocalStorage("selectedPair",[]);
-            const savedCexs = getFromLocalStorage("selectedCEX",[]);
-            generateInputCheckbox(savedCexs,  "cex-options","","EXCH:","uk-form-label uk-text-success");
-            generateInputCheckbox(DTChain.DEXS,  "dex-options","D","DEFI:","uk-form-label uk-text-danger");
-            generateInputCheckbox(savedPairs, "dexpair-options","","PAIRING :","uk-form-label uk-text-primary");
+            info = false;
+        } else {
+            // Proses jika semua data valid
+            const savedPairs = getFromLocalStorage("selectedPair", []);
+            const savedCexs = getFromLocalStorage("selectedCEX", []);
+            generateInputCheckbox(savedCexs, "cex-options", "", "EXCH:", "uk-form-label uk-text-success");
+            generateInputCheckbox(DTChain.DEXS, "dex-options", "D", "DEFI:", "uk-form-label uk-text-danger");
+            generateInputCheckbox(savedPairs, "dexpair-options", "", "PAIRING :", "uk-form-label uk-text-primary");
             generateInputModal(DTChain.DEXS);
             loadStoredData(filteredTokens);
-            loadCheckboxSelections();            
+            loadCheckboxSelections();
         }
-        
-        var link = $('a[href="multipair.html"]'); // Pilih elemen link
-            var href = link.attr('href'); // Ambil URL href
-            link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
 
-        // Tampilkan semua pesan error
-        $("#InfoAPP").html(errorMessages.join('<br/>')).addClass("text-large");  
+        // Update link dengan parameter baru
+        var link = $('a[href="multipair.html"]'); // Pilih elemen link
+        var href = link.attr('href'); // Ambil URL href
+        link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
+
+        // Tampilkan semua pesan error ke #infoAPP
+        if (!info) {
+            $("#infoAPP").show().html(errorMessages.join("<br/>")); // Gabungkan semua pesan error
+        }
+
+        // Proses aksi terakhir jika kondisi terpenuhi
+        var dataACTION = getFromLocalStorage('HISTORY');
+        if (info && dataACTION && dataACTION.time) {
+            $("#infoAPP").show().text(`${dataACTION.action} at ${dataACTION.time}`);
+            loadStoredData();
+        }
     }
+
 
     $(document).ready(function() {  
           
@@ -2728,6 +2745,7 @@
                             progressBar: true, // Tampilkan progress bar
                             closeButton: true, // Tampilkan tombol close
                         });
+                        setLastAction("UPDATE WALLET CEX");
                     } else {
                         toastr.error("GAGAL MEMPERBAHARUI DATA WALLET CEX! ❌", {
                             timeOut: 5000,
@@ -2737,7 +2755,7 @@
                     }
                 }
                 // toastr.success("SUKSES UPDATE SEMUA WALLET CEX, SILAKAN REFRESH!!");
-                // setLastAction("UPDATE WALLET CEX");
+                 setLastAction("GAGAL UPDATE WALLET CEX");
                 // console.log("SUKSES UPDATE WALLET DARI SEMUA CEX!!");
                 // location.reload();                
             }
@@ -3321,7 +3339,25 @@
         document.body.removeChild(a);
     });
 
+    function setLastAction(action) {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        const day = now.getDate().toString().padStart(2, '0');
+        const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Bulan dimulai dari 0
+        const year = now.getFullYear();
 
+        const formattedTime = `${hours}:${minutes}:${seconds} | ${day}/${month}/${year}`;
+
+        const lastAction = {
+            time: formattedTime,
+            action: action
+        };
+
+        saveToLocalStorage("HISTORY", lastAction);
+        $("#infoAPP").html(`${lastAction.action} at ${lastAction.time}`);
+    }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
 </body>
