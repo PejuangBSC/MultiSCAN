@@ -46,8 +46,15 @@
                 transform: scale(1.6); /* You can adjust the scale factor as needed */
             }
         .img-large {
-            width: 60px !important; /* Atur ukuran sesuai kebutuhan */
+            width: 50px !important; /* Atur ukuran sesuai kebutuhan */
             transition: transform 0.3s; /* Menambahkan efek animasi */
+            display: inline-flex;          /* Menjadikan elemen inline fleksibel */
+            justify-content: center;       /* Pusatkan gambar secara horizontal */
+            align-items: center;      
+            background-color: #f97aa8;     /* Warna latar belakang */
+            border-radius: 40%;            /* Membuat bentuk lingkaran */
+            cursor: pointer;               /* Ubah kursor menjadi tangan saat diklik */
+            transition: background-color 0.3s ease; /* Animasi untuk efek hover */
         }
         .uk-table th{
             color: white;
@@ -61,13 +68,13 @@
             <div class="uk-width-auto@m">
                 <div class="uk-card uk-card-default uk-card-small uk-card-body">
                     <h3 id="judul">
-                        MULTIPAIR V2 :: IMPORT <label id="namachain"></h3>
+                        MULTIPAIR V2 <label id="namachain"></label> :: IMPORT </h3>
                         &nbsp;
                         <a href="import.html">
-                            <img class="icon" id="ImportDataBtn" title="PILIH TOKEN PAIR" width="35px" src="https://icons.veryicon.com/png/o/internet--web/2022-alibaba-cloud-product-icon-cloud/cbs-database-backup.png" />
+                            <img class="icon" id="ImportDataBtn" title="IMPORT TOKEN PAIR" width="35px" src="https://icons.veryicon.com/png/o/internet--web/2022-alibaba-cloud-product-icon-cloud/cbs-database-backup.png" />
                         </a>&nbsp;
                         <a href="multipair.html">
-                            <img class="icon" id="MasterDataBtn" title="PILIH TOKEN PAIR" width="35px" src="https://cdn-icons-png.flaticon.com/512/324/324125.png" />
+                            <img class="icon" id="MasterDataBtn" title="SETTING TOKEN PAIR" width="35px" src="https://cdn-icons-png.flaticon.com/512/324/324125.png" />
                         </a>&nbsp;
                         <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
                             <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="35px" />
@@ -95,8 +102,9 @@
                     <button id="stop-btn" class="uk-button uk-button-danger uk-width-auto">BATALKAN</button>
                     <button id="load-data-btn" class="uk-button uk-button-secondary uk-width-auto" style="display: none;">SIMPAN </button>
                 </div>
-                <div class="uk-align-center">
-                    <b><span class="uk-text-success uk-text-medium" id="infoAPP"></span></b>&nbsp; &nbsp; &nbsp;
+                <div class="uk-align-center uk-background-muted">
+                    <b><span class="uk-text-secondary uk-text-medium">INFO APLIKASI: &nbsp;</span></b>
+                    <b><span class="uk-text-success uk-text-medium" id="infoAPP">???</span></b>&nbsp; &nbsp; &nbsp;
                 </div> 
             </div>
         </div>
@@ -124,6 +132,13 @@
     </div>
 
     <script>
+         toastr.options = {
+            "timeOut": "2000",            // Durasi munculnya toastr dalam milidetik
+            "extendedTimeOut": "2000",    // Waktu tambahan saat toastr di-hover
+            "closeButton": true,          // Tampilkan tombol close (opsional)
+            "progressBar": true,          // Tampilkan progress bar (opsional)
+            "positionClass": "toast-top-right" // Posisi toastr (ubah sesuai kebutuhan)
+        };
         $(document).ready(function () {
             // Mendapatkan parameter dari URL
             const urlParams = new URLSearchParams(window.location.search);
@@ -236,8 +251,8 @@
                     if (!dataTokenPilih || !Array.isArray(dataTokenPilih) || dataTokenPilih.length === 0) {
                         // Jika data token dan data token pilih tidak ada
                         if (!DataTokens || !Array.isArray(DataTokens) || DataTokens.length === 0) {
-                            $("#infoAPP").show().html("SILAKAN PILIH DATA TOKEN DAN PAIR DAHULU!!!").addClass('uk-text-danger');
-                            toastr.error('<b>SILAKAN PILIH DATA TOKEN DAN PAIR TERLEBIH DAHULU !!</b><br/>');
+                            $("#infoAPP").show().html("SILAKAN PILIH DATA TOKEN DAN PAIR DAHULU DI MENU IMPORT!!").addClass('uk-text-danger');
+                            toastr.error('<b>SILAKAN PILIH DATA TOKEN DAN PAIR DAHULU DI MENU IMPORT!!</b><br/>');
                             form_off();
                             $("#ImportDataBtn").addClass("img-large");
                             $('#MasterDataBtn').css({
@@ -482,16 +497,20 @@
                                         nickname:"",
                                         speedScan:1
                                     };
-                                    // Menyimpan data yang berhasil disinkronisasi ke localStorage
-                                    saveToLocalStorage('SERVERCORS', serverCORS);
-                                    saveToLocalStorage('TOKEN', tokenWithID); // Menyimpan token dengan ID
-                                    saveToLocalStorage('DATA_SETTING', DataJSON);
                     
                                     // Menggunakan konfirmasi dengan tombol OK untuk refresh
-                                    if (confirm('PILIH DATA TOKEN PAIR BERHASIL, LANJUT SETINGAN BERIKUTNYA!')) {
+                                    if (confirm('SIMPAN PILIHAN TOKEN PAIR ?')) {
                                         removeFromLocalStorage("TOKEN_PILIH");
-                                        setLastAction("FILTER & IMPORT DATA TOKEN PAIR");
+
+                                        saveToLocalStorage('SERVERCORS', serverCORS);
+                                        saveToLocalStorage('TOKEN', tokenWithID); // Menyimpan token dengan ID
+                                        saveToLocalStorage('DATA_SETTING', DataJSON);
+
+                                        toastr.success('✅ BERHASIL IMPORT TOKEN PAIR, SILAKAN LANJUT KE MENU SETTINGAN.')
+                                        setLastAction("IMPORT TOKEN & PAIR");
                                         location.reload(); // Refresh halaman jika pengguna klik OK
+                                    }else{
+                                        removeFromLocalStorage("TOKEN_PILIH")
                                     }
                                 } else {
                                     // Jika struktur data dari server tidak sesuai
@@ -510,8 +529,7 @@
                                 alert(errorMessage);
                             }
                         });
-                        toastr.success("SUKSES PILIH TOKEN PAIR, SILAKAN KESETTING DATA!!");
-                        $("#load-data-btn").addClass("img-large");
+                       
                     } else {
                         toastr.error("GAGAL PILIH TOKEN PAIR, SILAKAN ULANGI LAGI!!");
                     }
