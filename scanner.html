@@ -126,7 +126,7 @@
             <!-- Bagian Kiri (Form) -->
             <div class="uk-width-auto">
                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
-                    MULTIPAIR V2 SCANNER <label id="namachain"></label>&nbsp;
+                    MULTIPAIR V2 <label id="namachain"></label> :: SCANNER &nbsp;
                 </h2>
                 <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
                 <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
@@ -150,10 +150,7 @@
                 <form id="cryptoForm" style=" width: 96%;">
                         <div class="dex-group  uk-grid-small uk-flex uk-flex-between" uk-grid>
                            
-                            <div class="uk-width-auto uk-flex uk-flex-middle uk-background-muted">
-                                <b><span class="uk-text-secondary uk-text-medium">INFO APLIKASI: &nbsp;</span></b>
-                                <b><span class="uk-text-primary uk-text-medium" id="infoAPP">???</span></b>&nbsp; &nbsp; &nbsp;
-                            </div>                              
+                                                         
 
                             <!-- Kolom untuk DEX -->
                             <div class="uk-width-auto uk-flex uk-flex-middle">
@@ -173,12 +170,16 @@
                             <div class="uk-width-auto uk-flex uk-flex-middle">
                                 <div id="dexpair-options" class="uk-form-controls" style="display: flex;">
                                     <!-- Radio button PAIR DEX akan di-generate di sini -->
-                                </div> &nbsp;&nbsp;( <span id="tokenCount" class="uk-text-danger uk-text-bolder" >0</span>)
+                                </div> &nbsp;&nbsp; <span id="tokenCount" class="uk-text-danger uk-text-bolder" ></span>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <button type="button" id="startSCAN" style="display: none;" class="uk-button uk-button-secondary uk-button-small">START</button>
                                 <button type="button" id="stopSCAN" style="display: none;" class="uk-button uk-button-danger uk-button-small">STOP</button>                                
                             </div>
 
+                            <div class="uk-width-auto uk-flex uk-flex-middle uk-background-muted uk-text-small">
+                                <b><span class="uk-text-secondary uk-text-medium">INFO: &nbsp;</span></b>
+                                <b><span class="uk-text-primary uk-text-medium" id="infoAPP">???</span></b>&nbsp; &nbsp; &nbsp;
+                            </div> 
                              
                         </div>
                 </form>
@@ -1049,7 +1050,7 @@
         if (!Array.isArray(filteredData) || filteredData.length === 0) {
             $InfoStatus.text("Tidak ada data token yang ditemukan.");
             setTimeout(() => $InfoStatus.fadeOut(), 2000);
-            //$('#tokenCount').text("0");
+            $('#tokenCount').text("");
 
             const jml = DataTokens.filter(t => t.status === true).length;
             $('#tokenCountALL').text(`TOTAL ALL: ${jml} PAIR-TOKEN`);  
@@ -1194,7 +1195,7 @@
         $tableBody.append(fragment);
 
         // Perbarui total token filter
-        $('#tokenCount').text(`${filteredData.length}`);
+        $('#tokenCount').text(`( ${filteredData.length} )`);
 
         const jml = DataTokens.filter(t => t.status === true).length;
         $('#tokenCountALL').text(`TOTAL ALL: ${jml} PAIR-TOKEN`);  
@@ -2762,7 +2763,7 @@
                     // Validasi apakah data berhasil disimpan
                     if (savedData.length === combinedData.length) {
                         alert("✅ SUKSES UPDATE WALLET CEX");
-                        setLastAction("SUKSES UPDATE WALLET SEMUA CEX");
+                        setLastAction("UPDATE WALLET CEX");
                         location.reload();
                     } else {
                         toastr.error("GAGAL MEMPERBAHARUI DATA WALLET CEX! ❌", {
@@ -2770,7 +2771,7 @@
                             progressBar: true,
                             closeButton: true,
                         });
-                        setLastAction("GAGAL UPDATE WALLET CEX");
+                        setLastAction("GAGAL UPDATE WALLET");
                     }
                 }
         }
