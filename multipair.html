@@ -60,7 +60,7 @@
         <div class="uk-width-auto@m">
             <div class="uk-card uk-card-default uk-card-small uk-card-body">
                 <h3 id="judul">
-                    MULTIPAIR V2 <label id="namachain"></label>:: SETTING </h3>
+                    MULTIPAIR V2 <label id="namachain"></label> :: SETTING </h3>
                     &nbsp;
                     <a href="import.html">
                         <img class="icon" id="ImportDataBtn" title="IMPORT TOKEN PAIR" width="30px" src="https://icons.veryicon.com/png/o/internet--web/2022-alibaba-cloud-product-icon-cloud/cbs-database-backup.png" />
@@ -136,8 +136,8 @@
                             <button type="button" id="cancelButton" class="uk-button uk-button-danger" style="display: none;">CANCEL</button>
                             <button type="submit" id="SaveButton" class="uk-button uk-button-primary">SIMPAN</button>
                         </div>
-                        <div class="uk-align-center uk-background-muted">
-                            <b><span class="uk-text-secondary uk-text-medium">INFO APLIKASI: &nbsp;</span></b>
+                        <div class="uk-align-center uk-background-muted uk-text-small">
+                            <b><span class="uk-text-secondary uk-text-medium">INFO: &nbsp;</span></b>
                             <b><span class="uk-text-success uk-text-medium" id="infoAPP">???</span></b>&nbsp; &nbsp; &nbsp;
                         </div>   
                     </div>
@@ -521,7 +521,7 @@
 
           //  UIkit.notification('Data berhasil disimpan!', { status: 'success' });
             toastr.info('Data berhasil disimpan!', { status: 'success' });
-            setLastAction("UBAH DATA PAIR");
+            setLastAction("UBAH DATA TOKEN PAIR");
         });
 
         $('#dataTableBody').on('click', '.delete-btn', function() {
@@ -533,7 +533,7 @@
                 deleteRow(index);
               //  UIkit.notification('Data berhasil dihapus!', { status: 'success' });
                 toastr.info('Data berhasil dihapus!', { status: 'success' });
-                setLastAction("HAPUS DATA PAIR");
+                setLastAction("HAPUS DATA TOKEN PAIR");
             }, () => {
                 // Jika pengguna memilih "Cancel", tidak melakukan apa-apa
                 UIkit.notification('Penghapusan data dibatalkan.', { status: 'primary' });
@@ -1001,7 +1001,7 @@
                 saveToLocalStorage("LASTUPDATE_FEEWD",lastModifiedTime);
 
                 toastr.success("✅ SUKSES UPDATE SEMUA WALLET CEX, SILAKAN REFRESH!!");
-                setLastAction("SUKSES UPDATE WALLET CEX");
+                setLastAction("UPDATE WALLET CEX");
                 alert("✅ SUKSES UPDATE SEMUA WALLET CEX, SILAKAN REFRESH!!");
                 location.reload();                
             }       
