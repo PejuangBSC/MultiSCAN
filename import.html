@@ -102,8 +102,8 @@
                     <button id="stop-btn" class="uk-button uk-button-danger uk-width-auto">BATALKAN</button>
                     <button id="load-data-btn" class="uk-button uk-button-secondary uk-width-auto" style="display: none;">SIMPAN </button>
                 </div>
-                <div class="uk-align-center uk-background-muted">
-                    <b><span class="uk-text-secondary uk-text-medium">INFO APLIKASI: &nbsp;</span></b>
+                <div class="uk-align-center uk-background-muted uk-text-small">
+                    <b><span class="uk-text-secondary uk-text-medium">INFO: &nbsp;</span></b>
                     <b><span class="uk-text-success uk-text-medium" id="infoAPP">???</span></b>&nbsp; &nbsp; &nbsp;
                 </div> 
             </div>
@@ -251,8 +251,8 @@
                     if (!dataTokenPilih || !Array.isArray(dataTokenPilih) || dataTokenPilih.length === 0) {
                         // Jika data token dan data token pilih tidak ada
                         if (!DataTokens || !Array.isArray(DataTokens) || DataTokens.length === 0) {
-                            $("#infoAPP").show().html("SILAKAN PILIH DATA TOKEN DAN PAIR DAHULU DI MENU IMPORT!!").addClass('uk-text-danger');
-                            toastr.error('<b>SILAKAN PILIH DATA TOKEN DAN PAIR DAHULU DI MENU IMPORT!!</b><br/>');
+                            $("#infoAPP").show().html("SILAKAN PILIH DATA TOKEN & PAIR DAHULU, KEMUDIAN LALU SIMPAN !!").addClass('uk-text-danger');
+                            toastr.error('<b>SILAKAN PILIH DATA TOKEN DAN PAIR!!</b><br/>');
                             form_off();
                             $("#ImportDataBtn").addClass("img-large");
                             $('#MasterDataBtn').css({
