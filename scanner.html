@@ -815,7 +815,7 @@
                                     console.error("Error data from CEX:", error);
                                     toastr.error(`Cek Ulang Harga ${symbolIn} atau ${symbolOut} Exchanger : ${cex}`);
                                     resolve(); // Pastikan resolve dipanggil meskipun terjadi error
-                                    $('#' + cex + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).css('background-color','#fadcdc');
+                                    $('#' + cex + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase()).css('background-color','#949191');
                                     return;
                                 } else {
                                     let priceBuyTokenCEX = DataCEX.volumes_buyToken[0]?.price || "N/A";
