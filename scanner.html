@@ -1168,11 +1168,11 @@
                 row.innerHTML += `
                     <td class="uk-text-center" style="vertical-align: middle;" id="${idCELL}">
                         <a href="${urlsCEX.tradeToken}" target="_blank">
-                            <span class="buy" id="BUY_${idCELL}"> --- </span>
+                            <span class="buy" id="BUY_${idCELL}" title="${data.cex}"> --- </span>
                         </a><br>
                         <span class="uk-text-primary uk-text-bolder" id="SWAP_${idCELL}"> --- </span><br>
                         <a href="${urlsCEX.tradePair}" target="_blank">
-                            <span class="sell" id="SELL_${idCELL}"> --- </span>
+                            <span class="sell" id="SELL_${idCELL}" title="${data.cex}"> --- </span>
                         </a><br>
                         <hr class="uk-divider-small uk-margin-remove">
                         <span class="uk-text-primary" id="RESULT_${idCELL}"> --- </span>
@@ -1886,11 +1886,11 @@
         }
         
         if (NameToken == "USDT") {
-            var RateSwap = `<label class="uk-text-success" title="${formatPrice(rateTokentoPair)} ${NameToken}-${NamePair}"> ${formatPrice(rateBuyPairDEX)} ${NamePair}</label>`;
+            var RateSwap = `<label class="uk-text-success" title="DEX: ${dextype.toUpperCase()} ${formatPrice(rateTokentoPair)}(${NameToken}-${NamePair})"> ${formatPrice(rateBuyPairDEX)} ${NamePair}</label>`;
         }else if(NamePair == "USDT"){
-            var RateSwap = `<label class="uk-text-danger" title="${formatPrice(rateTokentoPair)} ${NameToken}-${NamePair}"> ${formatPrice(rateTokentoPair)} ${NameToken}</label>`; // Kosongkan jika salah satunya adalah USDT
+            var RateSwap = `<label class="uk-text-danger" title="DEX: ${dextype.toUpperCase()} ${formatPrice(rateTokentoPair)} (${NameToken}-${NamePair})"> ${formatPrice(rateTokentoPair)} ${NameToken}</label>`; // Kosongkan jika salah satunya adalah USDT
         }else  {
-            var RateSwap = ` <label class="uk-text-primary" title="${formatPrice(rateSellTokenDEX)} ${NameToken}  ${formatPrice(rateBuyPairDEX)} ${NamePair}">${formatPrice(rateTokentoPair)} ${NameToken}-${NamePair}</label>`;
+            var RateSwap = ` <label class="uk-text-primary" title="DEX: ${dextype.toUpperCase()} ${formatPrice(rateSellTokenDEX)} ${NameToken} ${formatPrice(rateBuyPairDEX)} ${NamePair}">${formatPrice(rateTokentoPair)} ${NameToken}-${NamePair}</label>`;
         }  
 
         // Cek apakah elemen dengan ID ada di DOM
