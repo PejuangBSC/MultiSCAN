@@ -829,6 +829,7 @@
 
     // Simpan data dalam bentuk objek yang lebih cepat untuk pencarian
     let cachedWalletData = null;
+    let isCEXSuccess = {}; // Deklarasi global untuk menyimpan status keberhasilan
 
     function getWalletStatus(cex, tokenName) {
         // Cek apakah data sudah di-cache
@@ -869,112 +870,129 @@
     });
 
     $('#UpdateWalletCEX').on('click', function () {
-        // Set waktu terakhir diperbarui ke default
-        //$('#lastUpdateTime').text("???");
-        removeFromLocalStorage("WALLET_CEX");
-        removeFromLocalStorage("LASTUPDATE_FEEWD");
-        // Ambil daftar CEX yang tersedia dari CONFIG_CEX
-        const availableExchanges = Object.keys(CONFIG_CEX);
-        console.log("CEX yang tersedia:");
-        availableExchanges.forEach(exchange => {
+        // Ambil daftar CEX yang dipilih dari localStorage
+        const selectedCEX = getFromLocalStorage("selectedCEX", []); // Ambil data terpilih, default array kosong jika tidak ada
+        if (selectedCEX.length === 0) {
+            toastr.error("Tidak ada CEX yang dipilih. Silakan pilih CEX terlebih dahulu.");
+            return;
+        }
+
+        console.log("CEX yang dipilih:");
+        selectedCEX.forEach(exchange => {
             console.log(`- ${exchange}`);
         });
-        allFeeWD = []; 
-        isGateSuccess = false;
-        isBinanceSuccess = false;
-        isKucoinSuccess = false;
-        isBitgetSuccess = false;
-        isBybitSuccess = false;
-        isMexcSuccess = false;
-        isOkxSuccess = false;
-    
-        // Cek dan panggil fungsi cek fee withdrawal berdasarkan keberadaan CEX dalam konfigurasi
-        if (CONFIG_CEX.GATE) {
-            console.log("Memeriksa Status Wallet GATE...");
-            CekfeeWDGATE(CONFIG_CEX.GATE); // Panggil fungsi untuk GATE
-        }
-    
-        if (CONFIG_CEX.BINANCE) {
-            console.log("Memeriksa Status Wallet BINANCE...");
-            CekfeeWDBINANCE(CONFIG_CEX.BINANCE); // Panggil fungsi untuk BINANCE
-        }
-    
-        if (CONFIG_CEX.KUCOIN) {
-            console.log("Memeriksa Status Wallet KUCOIN...");
-            CekfeeWDKUCOIN(CONFIG_CEX.KUCOIN); // Panggil fungsi untuk KUCOIN
-        }
-    
-        if (CONFIG_CEX.BYBIT) {
-            console.log("Memeriksa Status Wallet BYBIT...");
-            CekfeeWDBYBIT(CONFIG_CEX.BYBIT); // Panggil fungsi untuk BYBIT
-        }
-    
-        if (CONFIG_CEX.BITGET) {
-            console.log("Memeriksa Status Wallet BITGET...");
-            CekfeeWDBITGET(CONFIG_CEX.BITGET); // Panggil fungsi untuk BITGET
-        }
-    
-        if (CONFIG_CEX.MEXC) {
-            console.log("Memeriksa Status Wallet MEXC...");
-            CekfeeWDMEXC(CONFIG_CEX.MEXC); // Panggil fungsi untuk MEXC
-        }
 
-        if (CONFIG_CEX.OKX) {
-            console.log("Memeriksa Status Wallet OKX...");
-            CekfeeWDOKX(CONFIG_CEX.OKX); // Panggil fungsi untuk MEXC
-        }
+        allFeeWD = [];
+        // Reset status keberhasilan untuk semua CEX
+        let isCEXSuccess = {
+            GATE: false,
+            BINANCE: false,
+            KUCOIN: false,
+            BYBIT: false,
+            BITGET: false,
+            MEXC: false,
+            OKX: false,
+        };
+
+        // Cek dan panggil fungsi cek fee withdrawal hanya untuk CEX yang dipilih
+        selectedCEX.forEach(exchange => {
+            if (CONFIG_CEX[exchange]) {
+                console.log(`Memeriksa Status Wallet ${exchange.toUpperCase()}...`);
+                switch (exchange) {
+                    case "GATE":
+                        CekfeeWDGATE(CONFIG_CEX.GATE);
+                        break;
+                    case "BINANCE":
+                        CekfeeWDBINANCE(CONFIG_CEX.BINANCE);
+                        break;
+                    case "KUCOIN":
+                        CekfeeWDKUCOIN(CONFIG_CEX.KUCOIN);
+                        break;
+                    case "BYBIT":
+                        CekfeeWDBYBIT(CONFIG_CEX.BYBIT);
+                        break;
+                    case "BITGET":
+                        CekfeeWDBITGET(CONFIG_CEX.BITGET);
+                        break;
+                    case "MEXC":
+                        CekfeeWDMEXC(CONFIG_CEX.MEXC);
+                        break;
+                    case "OKX":
+                        CekfeeWDOKX(CONFIG_CEX.OKX);
+                        break;
+                    default:
+                        console.warn(`CEX ${exchange} tidak dikenali.`);
+                }
+            }
+        });
     });
-    // Fungsi untuk mengecek apakah semua pembaruan berhasil
+
     function checkAllUpdatesCompleted() {
-        // Pengecekan manual dengan menggunakan if
+        // Pengecekan manual untuk setiap CEX
         let allSuccess = true;
+        let isSuccess=0;
 
-        if (CONFIG_CEX.GATE && isGateSuccess !== true) {
+        if (CONFIG_CEX.GATE && isCEXSuccess.GATE !== true) {
             allSuccess = false;
+        }else{
+            isSuccess++;
         }
 
-        if (CONFIG_CEX.BINANCE && isBinanceSuccess !== true) {
+        if (CONFIG_CEX.BINANCE && isCEXSuccess.BINANCE !== true) {
             allSuccess = false;
+        }else{
+            isSuccess++;
         }
 
-        if (CONFIG_CEX.KUCOIN && isKucoinSuccess !== true) {
+        if (CONFIG_CEX.KUCOIN && isCEXSuccess.KUCOIN !== true) {
             allSuccess = false;
+        }else{
+            isSuccess++;
         }
 
-        if (CONFIG_CEX.BYBIT && isBybitSuccess !== true) {
+        if (CONFIG_CEX.BYBIT && isCEXSuccess.BYBIT !== true) {
             allSuccess = false;
+        }else{
+            isSuccess++;
         }
 
-        if (CONFIG_CEX.BITGET && isBitgetSuccess !== true) {
+        if (CONFIG_CEX.BITGET && isCEXSuccess.BITGET !== true) {
             allSuccess = false;
+        }else{
+            isSuccess++;
         }
 
-        if (CONFIG_CEX.MEXC && isMexcSuccess !== true) {
+        if (CONFIG_CEX.MEXC && isCEXSuccess.MEXC !== true) {
             allSuccess = false;
+        }else{
+            isSuccess++;
         }
 
-        if (CONFIG_CEX.OKX && isOkxSuccess !== true) {
+        if (CONFIG_CEX.OKX && isCEXSuccess.OKX !== true) {
             allSuccess = false;
+        }else{
+            isSuccess++;
         }
-
-        if (allSuccess) {
-            const lastModifiedTime = new Date().toLocaleString(); // Waktu terakhir update
-            const totalWallets = allFeeWD.length; // Hitung jumlah wallet yang diperbarui
         
-          //  saveToLocalStorage("LASTUPDATE_FEEWD", lastModifiedTime);
-            if (allFeeWD.length >= 0) {
+        const selectedCEX = getFromLocalStorage("selectedCEX", []);  
+        const lastModifiedTime = new Date().toLocaleString(); // Waktu terakhir update
+        const totalWallets = allFeeWD.length; // Hitung jumlah wallet yang diperbarui
+ 
+            if (isSuccess==selectedCEX.length) {
+                        // Set waktu terakhir diperbarui ke default
+                removeFromLocalStorage("WALLET_CEX");
+                removeFromLocalStorage("LASTUPDATE_FEEWD");
+
                 saveToLocalStorage("WALLET_CEX", allFeeWD); // Simpan ke localStorage
                 saveToLocalStorage("LASTUPDATE_FEEWD",lastModifiedTime);
-               // removeFromLocalStorage("TOKEN_SCANNER");
 
-                toastr.success("SUKSES UPDATE SEMUA WALLET CEX, SILAKAN REFRESH!!");
-                setLastAction("UPDATE WALLET CEX");
-                console.log("SUKSES UPDATE WALLET DARI SEMUA CEX!!");
+                toastr.success("✅ SUKSES UPDATE SEMUA WALLET CEX, SILAKAN REFRESH!!");
+                setLastAction("SUKSES UPDATE WALLET CEX");
+                alert("✅ SUKSES UPDATE SEMUA WALLET CEX, SILAKAN REFRESH!!");
                 location.reload();                
-            }
-        }
+            }       
     }
-   
+
     // Fungsi untuk Signature CEX
     function calculateSignature(exchange, apiSecret, dataToSign, hashMethod = "HmacSHA256") {
         if (!apiSecret || !dataToSign) {
@@ -1107,12 +1125,11 @@
 
                 console.log("GATE WALLET:",combinedData);
                 // Gabungkan hasil ke allFeeWD
-                allFeeWD = allFeeWD.concat(combinedData);
-                //checkAndSaveAllFeeWD();
-                isGateSuccess = true; // Tandai sukses
-                toastr.info("SUKSES, CEK UPDATE WALLET GATE");
-                checkAllUpdatesCompleted();
+                 allFeeWD = allFeeWD.concat(combinedData);
 
+                toastr.info("SUKSES, CEK UPDATE WALLET GATE");
+                isCEXSuccess.GATE = true; // Tandai sukses jika berhasil
+                checkAllUpdatesCompleted(); // Cek jika semu
             }).fail(function (xhr, status, error) {
                 console.error("Error:", error);
                 toastr.error("Gagal mendapatkan data dari API GATE");
@@ -1151,11 +1168,9 @@
                 console.log("BITGET WALLET:",coinDepositWithdrawStatus);
                 // Gabungkan hasil ke allFeeWD
                 allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
-                //checkAndSaveAllFeeWD();
-    
-                isBitgetSuccess = true; // Tandai sukses
                 toastr.info("SUKSES, CEK UPDATE WALLET BITGET");
-                checkAllUpdatesCompleted();
+                isCEXSuccess.BITGET = true; // Tandai sukses jika berhasil
+                checkAllUpdatesCompleted(); // Cek jika semu
             },
             error: function(xhr, status, error) {
                 toastr.error('UPDATE FEE WD BITGET GAGAL, SILAKAN REFRESH!!');
@@ -1227,11 +1242,11 @@
                     // Gabungkan hasil ke allFeeWD
                     console.log("KUCOIN WALLET:",coinDepositWithdrawStatus);
                     allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
-                    //checkAndSaveAllFeeWD();
-
-                    isKucoinSuccess = true; // Tandai sukses
-                    toastr.info("SUKSES, CEK UPDATE WALLET KUCOIN");
-                    checkAllUpdatesCompleted();
+                    if(allFeeWD){
+                        toastr.info("SUKSES, CEK UPDATE WALLET KUCOIN");
+                        isCEXSuccess.KUCOIN = true; // Tandai sukses jika berhasil
+                        checkAllUpdatesCompleted(); // Cek jika semu
+                    }
                 } else {
                     toastr.error('Gagal mendapatkan data, kode: ' + data.code);
                 }
@@ -1300,12 +1315,15 @@
                 console.log("BINANCE WALLET:",coinDepositWithdrawStatus);
                 // Gabungkan hasil ke allFeeWD
                 allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
-                //checkAndSaveAllFeeWD();
-    
-                toastr.info("SUKSES, CEK UPDATE WALLET BINANCE");
-    
+
+                if(allFeeWD){
+                        toastr.info("SUKSES, CEK UPDATE WALLET BINANCE");
+                        isCEXSuccess.BINANCE = true; // Tandai sukses jika berhasil
+                        checkAllUpdatesCompleted(); // Cek jika semu
+                    }
+
                 isBinanceSuccess = true; // Tandai sukses
-                checkAllUpdatesCompleted();
+               //();
             },
             error: function () {
                 toastr.error('UPDATE FEE WD BINANCE GAGAL, SILAKAN REFRESH!!');
@@ -1358,11 +1376,11 @@
                 // Gabungkan hasil ke allFeeWD
                 console.log("MEXC WALLET:",coinDepositWithdrawStatus);
                 allFeeWD = [...allFeeWD, ...coinDepositWithdrawStatus];
-                //checkAndSaveAllFeeWD();
-    
-                isMexcSuccess = true; // Tandai sukses
-                toastr.info("SUKSES, CEK UPDATE WALLET MEXC");
-                checkAllUpdatesCompleted();
+                if(allFeeWD){
+                        toastr.info("SUKSES, CEK UPDATE WALLET MEXC");
+                        isCEXSuccess.MEXC = true; // Tandai sukses jika berhasil
+                        checkAllUpdatesCompleted(); // Cek jika semu
+                    }
             },
             error: function (xhr, status, error) {
                 toastr.error('UPDATE WALLET MEXC GAGAL, MASALAH KONEKSI!!');
@@ -1421,11 +1439,12 @@
                 console.log("BYBIT WALLET:",coinDepositWithdrawStatus);
                 // Gabungkan hasil ke allFeeWD
                 allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
-                //checkAndSaveAllFeeWD();
-    
-                isBybitSuccess = true; // Tandai sukses
-                toastr.info("SUKSES, CEK UPDATE WALLET BYBIT");
-                checkAllUpdatesCompleted();
+
+                if(allFeeWD){
+                        toastr.info("SUKSES, CEK UPDATE WALLET BYBIT");
+                        isCEXSuccess.BYBIT = true; // Tandai sukses jika berhasil
+                        checkAllUpdatesCompleted(); // Cek jika semu
+                    }
                 
             },
             error: function (xhr, status, error) {
@@ -1493,12 +1512,13 @@
                 console.log("OKX WALLET:",coinDepositWithdrawStatus);
                 // Gabungkan hasil ke allFeeWD
                 allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
-                //checkAndSaveAllFeeWD();
-    
-                isOkxSuccess = true; 
-                checkAllUpdatesCompleted();
-    
-                toastr.info("SUKSES, CEK UPDATE WALLET OKX");
+
+                if(allFeeWD){
+                        toastr.info("SUKSES, CEK UPDATE WALLET OKX");
+                        isCEXSuccess.OKX = true; // Tandai sukses jika berhasil
+                        checkAllUpdatesCompleted(); // Cek jika semu
+                    }
+
             },
             error: function (xhr, status, error) {
                 toastr.error('UPDATE WALLET OKX GAGAL, MASALAH KONEKSI!!');
