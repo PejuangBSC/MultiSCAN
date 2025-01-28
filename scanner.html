@@ -838,7 +838,7 @@
                                             var Modal = parseFloat(modalValue);
                                             var amount_in =parseFloat(Modal) / parseFloat(priceBuyTokenCEX);
                                             getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex, function (error, DataDEX) {     
-                                                if (error) {
+                                                if (error || !DataDEX) {
                                                     console.error("Error: Get Pice DEX:", error);
                                                     $(`#${dexId}`).css('background-color',error.color);
 
@@ -1934,7 +1934,7 @@
 
             rowCell.css({'background-color': '#c2f890','font-weight':'bolder'});
             resultCell.html(`
-                <span class="uk-text-danger">FEE:${totalFee.toFixed(2)}$</span>
+                <span class="uk-text-danger">FeeAll:${totalFee.toFixed(2)}$</span>
                 <span class="uk-text-primary">SW:${FeeSwap.toFixed(2)}$</span><br/>
                 <span class="uk-text-warning">GET:${(totalGet).toFixed(2)}$</span>
                  <span class="uk-text-secondary" >PNL:${(PNL).toFixed(2)}$</span>
@@ -1943,7 +1943,7 @@
             InfoSinyal(dex.toLowerCase(), TokenPair, PNL, totalFee, cex.toUpperCase(), NameToken, pairdex);
         } else {
             resultCell.html(`
-                <span class="uk-text-danger">FEE:${totalFee.toFixed(2)}$</span>
+                <span class="uk-text-danger">FeeAll:${totalFee.toFixed(2)}$</span>
                 <span class="uk-text-primary">SW:${FeeSwap.toFixed(2)}$</span><br/>
                 <span class="uk-text-warning">GET:${(totalGet).toFixed(2)}$</span>
                  <span class="uk-text-secondary" >PNL:${(PNL).toFixed(2)}$</span>
@@ -1951,8 +1951,8 @@
         }
 
         // Send message if PNL > 2
-        if (PNL > 2) {
-            MultisendMessage(cex, dex.toUpperCase(), NameToken,pairdex, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname);
+        if (PNL > 1) {
+            MultisendMessage(cex, dex.toUpperCase(), NameToken,pairdex, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname,sc_input,sc_output);
         }
     }
 
@@ -2134,11 +2134,10 @@
                         };
                         callback(null, result);
                     } catch (error) {
-                       // $(`#SWAP_${dexId}`).html(`<a href="${linkDEX}" title="${dexType.toUpperCase()} : ${error.message}" target="_blank" class="uk-text-danger"><i class="bi bi-x-circle"></i> ${dexType.toUpperCase()} </a>`);
                         callback({
                             statusCode: 500,
                             pesanDEX: `Error DEX : ${error.message}`,
-                            color: "error",
+                            color: "#f39999",
                             DEX: dexType.toUpperCase(),
                         }, null);
                     }
@@ -2151,7 +2150,7 @@
                     case 0:                                            
                         if(dexType!=='jupiter' || dexType !== 'magpie' ){
                             warna = "#f6f2f1";                          
-                             getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
+                            getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
                         } 
                         break;                        
                     case 400:
@@ -2209,6 +2208,7 @@
                         alertMessage = "Respons tidak valid";
                         break;
                     default:
+                        warna = "#f39999";
                         alertMessage = "Status: " + xhr.status;
                 }
                 $(`#SWAP_${dexId}`).html(`<a href="${linkDEX}" title="${dexType.toUpperCase()}: ${alertMessage}" target="_blank" class="uk-text-danger"><i class="bi bi-x-circle"></i> ${dexType.toUpperCase()} </a>`);
@@ -2530,15 +2530,17 @@
           }
         }
         //sent sinyal kegrup tele
-        function MultisendMessage(cex, dex, token,pair, modal, PNL, priceBUY, priceSELL, FeeSwap,FeeWD, totalFee,nickname) {
-            // Mengambil user dari localStorage menggunakan getFromLocalStorage        
+        function MultisendMessage(cex, dex, token,pair, modal, PNL, priceBUY, priceSELL, FeeSwap,FeeWD, totalFee,nickname,sc_in,sc_out) {
+            // Mengambil user dari localStorage menggunakan getFromLocalStorage  
+            let Linksctoken=`<a href="${DTChain.URL_Chain}/token/${sc_in}" target="_blank" class="uk-link"> ${token}</a>`;
+            let Linkscpair=`<a href="${DTChain.URL_Chain}/token/${sc_out}" target="_blank" class="uk-link">  ${pair}</a>`;
             var message = 
                 "<b>#MULTIPAIR_V2 #" + DTChain.Nama_Chain.toUpperCase() + "\n USER : </b> ~ " + nickname +
                 " \n ----------------------------------------- \n MARKET: " + cex +" VS " + dex +
                 " \n TOKEN-PAIR: <b>#" + token+"_"+pair + "</b> " + 
                 " \n MODAL: <b> " + modal + "$</b> | PROFIT: <b>" + PNL.toFixed(2) + "$ </b> " +
-                " \n <b>BUY "+token+": </b> " + priceBUY.toFixed(9) +
-                " \n <b>SELL "+pair+": </b>" + priceSELL.toFixed(9) + 
+                " \n <b>BUY "+Linksctoken+": </b> " + priceBUY.toFixed(9) +
+                " \n <b>SELL "+Linkscpair+": </b>" + priceSELL.toFixed(9) + 
                 " \n <b>FEEWD: </b>" + FeeWD.toFixed(3) + 
                 " \n FEETOTAL: <b>" + totalFee.toFixed(2) + "$</b> | SWAP:<b>" + FeeSwap.toFixed(2) + "$</b>" +
                 " \n -----------------------------------------";
