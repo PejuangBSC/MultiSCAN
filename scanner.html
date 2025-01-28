@@ -172,9 +172,10 @@
                             </div>
                             <!-- Kolom untuk PAIR -->
                             <div class="uk-width-auto uk-flex uk-flex-middle">
+                                <b><span class="uk-text-secondary uk-text-medium">PAIR&nbsp;</span></b> <span id="tokenCount" class="uk-text-danger uk-text-bolder" > </span>&nbsp;:
                                 <div id="dexpair-options" class="uk-form-controls" style="display: flex;">
                                     <!-- Radio button PAIR DEX akan di-generate di sini -->
-                                </div> &nbsp;&nbsp; <span id="tokenCount" class="uk-text-danger uk-text-bolder" ></span>
+                                </div> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <button type="button" id="startSCAN" style="display: none;" class="uk-button uk-button-secondary uk-button-small">START</button>
                                 <button type="button" id="stopSCAN" style="display: none;" class="uk-button uk-button-danger uk-button-small">STOP</button>                                
@@ -585,7 +586,7 @@
             loadStoredData(filteredTokens);
             generateInputCheckbox(savedCexs, "cex-options", "", "EXCH ", "uk-form-label uk-text-success");
             generateInputCheckbox(DTChain.DEXS, "dex-options", "D", "DEFI:", "uk-form-label uk-text-danger");
-            generateInputCheckbox(savedPairs, "dexpair-options", "", "PAIR :", "uk-form-label uk-text-primary");
+            generateInputCheckbox(savedPairs, "dexpair-options", "", "", "uk-form-label uk-text-primary");
             generateInputModal(DTChain.DEXS);            
             loadCheckboxSelections();
         }
@@ -1207,7 +1208,7 @@
         $tableBody.append(fragment);
 
         // Perbarui total token filter
-        $('#tokenCount').text(`( ${filteredData.length} )`);
+        $('#tokenCount').text(`(${filteredData.length})`);
 
         const jml = DataTokens.filter(item => 
             item.status === true && 
