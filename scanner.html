@@ -1892,9 +1892,9 @@
         }
         
         if (NameToken == "USDT") {
-            var RateSwap = `<label class="uk-text-success" title="DEX: ${dextype.toUpperCase()} ${formatPrice(rateTokentoPair)}(${NameToken}-${NamePair})"> ${formatPrice(rateBuyPairDEX)} ${NamePair}</label>`;
+            var RateSwap = `<label class="uk-text-success" title="DEX: ${dextype.toUpperCase()} ${formatPrice(rateBuyPairDEX)}(USDT->${NamePair})"> ${formatPrice(rateBuyPairDEX)} ${NamePair}</label>`;
         }else if(NamePair == "USDT"){
-            var RateSwap = `<label class="uk-text-danger" title="DEX: ${dextype.toUpperCase()} ${formatPrice(rateTokentoPair)} (${NameToken}-${NamePair})"> ${formatPrice(rateTokentoPair)} ${NameToken}</label>`; // Kosongkan jika salah satunya adalah USDT
+            var RateSwap = `<label class="uk-text-danger" title="DEX: ${dextype.toUpperCase()} ${formatPrice(rateTokentoPair)} (${NameToken}->USDT)"> ${formatPrice(rateTokentoPair)} ${NameToken}</label>`; // Kosongkan jika salah satunya adalah USDT
         }else  {
             var RateSwap = ` <label class="uk-text-primary" title="DEX: ${dextype.toUpperCase()} ${formatPrice(rateSellTokenDEX)} ${NameToken} ${formatPrice(rateBuyPairDEX)} ${NamePair}">${formatPrice(rateTokentoPair)} ${NameToken}-${NamePair}</label>`;
         }  
