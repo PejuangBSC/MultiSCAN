@@ -1923,6 +1923,18 @@
         var sellCell = $(`#SELL_${IdCELL}`);
         var rowCell = $(`#${IdCELL}`);
 
+        const urlsCEX = GeturlExchanger(cex.toUpperCase(), NameToken, pairdex);
+
+        // Link untuk token withdraw
+        const linkWd = urlsCEX.withdrawUrl
+            ? `<a href="${urlsCEX.withdrawUrl}" target="_blank"><b>| WD</b></a>`
+            : `<b>| WD</b>`;
+
+        // Link untuk pair deposit
+        const linkDepo = urlsCEX.depositUrl
+            ? `<a href="${urlsCEX.depositUrl}" target="_blank"><b>| DP</b></a>`
+            : `<b>| DP</b>`;
+
         var sinyals = ` <a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class'>
             ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${TokenPair} (${(PNL).toFixed(2)}$)</a> `;
 
@@ -1934,10 +1946,10 @@
 
             rowCell.css({'background-color': '#c2f890','font-weight':'bolder'});
             resultCell.html(`
-                <span class="uk-text-danger">FeeAll:${totalFee.toFixed(2)}$</span>
-                <span class="uk-text-primary">SW:${FeeSwap.toFixed(2)}$</span><br/>
+                <span class="uk-text-danger">All:${totalFee.toFixed(2)}$</span>
+                <span class="uk-text-primary">SW:${FeeSwap.toFixed(2)}$</span> ${linkWd}<br/>
                 <span class="uk-text-warning">GET:${(totalGet).toFixed(2)}$</span>
-                 <span class="uk-text-secondary" >PNL:${(PNL).toFixed(2)}$</span>
+                 <span class="uk-text-secondary" >PNL:${(PNL).toFixed(2)}$ ${linkDepo}</span>
             `);
 
             InfoSinyal(dex.toLowerCase(), TokenPair, PNL, totalFee, cex.toUpperCase(), NameToken, pairdex);
