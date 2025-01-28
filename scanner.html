@@ -1050,7 +1050,7 @@
         if (!Array.isArray(filteredData) || filteredData.length === 0) {
             $InfoStatus.text("Tidak ada data token yang ditemukan.");
             setTimeout(() => $InfoStatus.fadeOut(), 2000);
-            $('#tokenCount').text("");
+          //  $('#tokenCount').text("");
 
             const jml = DataTokens.filter(t => t.status === true).length;
             $('#tokenCountALL').text(`TOTAL ALL: ${jml} PAIR-TOKEN`);  
