@@ -94,8 +94,8 @@
             <div class="uk-width-expand@m">
                 <div >
                     <h4 class="uk-heading-divider" id="judulcex">Pilihan Exchanger (CEX) & TOKEN PAIR</h4>
-                    <span id="cex-options" class="uk-grid-small uk-child-width-auto uk-grid uk-margin-remove uk-text-primary"></span>
-                   <span id="pair-checkboxes" class="uk-grid-small uk-child-width-auto uk-grid uk-margin-remove uk-text-success"></span>                
+                    <span id="cex-options" class="uk-grid-small uk-child-width-auto uk-grid uk-margin-remove uk-text-primary uk-text-bolder"></span>
+                   <span id="pair-checkboxes" class="uk-grid-small uk-child-width-auto uk-grid uk-margin-remove uk-text-secondary  uk-text-bolder"></span>                
 
                 
                     <button id="filter-btn" class="uk-button uk-button-primary uk-width-auto" disabled>Tampilkan</button>
@@ -158,33 +158,27 @@
                 return JSON.parse(localStorage.getItem(storagePrefix + key)) || defaultValue;
             // console.log("Data from localStorage:", data); // Debug log
             }
-
             // Fungsi umum untuk menyimpan data ke localStorage
             function saveToLocalStorage(key, value) {
-                try {
-                    localStorage.setItem(storagePrefix + key, JSON.stringify(value));
-                    //console.log("Data saved successfully:", key);
-                } catch (error) {
-                    if (error.name === "QuotaExceededError" && isLocalStorageFull()) {
-                        toastr.error("MEMORY BROWSER PENUH!!!");
-                        $("#infoAPP").text("MEMORY BROWSER PENUH!!!");
-                    } else {
-                        console.error("Unexpected error:", error);
+                    try {
+                        localStorage.setItem(storagePrefix + key, JSON.stringify(value));
+                    // console.log("Data saved successfully:", key);
+                    } catch (error) {
+                        // Tambahkan log untuk memverifikasi jenis error
+                        console.error("Error saat menyimpan data:", error);
+
+                        if (error.name === "QuotaExceededError") {
+                            // Tambahkan pengecekan ruang yang tersedia sebelum menyimpan
+                            let usedSpace = new Blob(Object.values(localStorage)).size;
+                            let totalSpace = 5 * 1024 * 1024; // Biasanya 5MB
+                            console.error(`Used space: ${usedSpace} bytes / Total allowed: ${totalSpace} bytes`);
+
+                            toastr.error("MEMORY BROWSER PENUH!!! Sisa ruang tidak mencukupi.");
+                        } else {
+                            toastr.error("Terjadi kesalahan tak terduga saat menyimpan data.");
+                        }
                     }
                 }
-            }
-
-            // Fungsi untuk memeriksa apakah localStorage penuh
-            function isLocalStorageFull() {
-                try {
-                    const testKey = "__test__";
-                    localStorage.setItem(testKey, "test"); // Coba simpan data sementara
-                    localStorage.removeItem(testKey); // Hapus data setelah dicek
-                    return false; // Tidak penuh
-                } catch (e) {
-                    return true; // Penuh jika error
-                }
-            }
 
             // Fungsi untuk menghapus item dari localStorage
             function removeFromLocalStorage(key) {
@@ -251,7 +245,7 @@
                     if (!dataTokenPilih || !Array.isArray(dataTokenPilih) || dataTokenPilih.length === 0) {
                         // Jika data token dan data token pilih tidak ada
                         if (!DataTokens || !Array.isArray(DataTokens) || DataTokens.length === 0) {
-                            $("#infoAPP").show().html("SILAKAN PILIH DATA TOKEN & PAIR DAHULU, KEMUDIAN LALU SIMPAN !!").addClass('uk-text-danger');
+                            $("#infoAPP").show().html("SILAKAN PILIH DATA TOKEN & PAIR DAHULU, KEMUDIAN TAMPILKAN & SIMPAN !!").addClass('uk-text-danger');
                             toastr.error('<b>SILAKAN PILIH DATA TOKEN DAN PAIR!!</b><br/>');
                             form_off();
                             $("#ImportDataBtn").addClass("img-large");
