@@ -153,7 +153,8 @@
                             <div class="uk-width-auto uk-flex uk-flex-middle uk-background-muted uk-text-small">
                                 <b><span class="uk-text-secondary uk-text-medium">INFO: &nbsp;</span></b>
                                 <b><span class="uk-text-primary uk-text-medium" id="infoAPP">???</span></b>&nbsp; &nbsp; &nbsp;
-                            </div>                                    
+                            </div> 
+                                  
 
                             <!-- Kolom untuk DEX -->
                             <div class="uk-width-auto uk-flex uk-flex-middle">
@@ -178,8 +179,7 @@
                                 <button type="button" id="startSCAN" style="display: none;" class="uk-button uk-button-secondary uk-button-small">START</button>
                                 <button type="button" id="stopSCAN" style="display: none;" class="uk-button uk-button-danger uk-button-small">STOP</button>                                
                             </div>
-
-                             
+        
                         </div>
                 </form>
             </div>
@@ -415,6 +415,9 @@
     var MasterTokens = getFromLocalStorage('TOKEN',[]);
     var serverCORSList = getFromLocalStorage("SERVERCORS", []); 
     var WalletCEX = getFromLocalStorage("WALLET_CEX", []); 
+    // Proses jika semua data valid
+    var savedPairs = getFromLocalStorage("selectedPair", []);
+    var savedCexs = getFromLocalStorage("selectedCEX", []);
 
     const dexList = [
             { id: 'D1INCH', Modal: SavedSettingData.Modal1INCH,  dex: '1inch' },
@@ -579,14 +582,11 @@
             $('#UpdateWalletCEX').css('pointer-events', 'none').css('opacity', '0.4');
             info = false;
         } else {
-            // Proses jika semua data valid
-            const savedPairs = getFromLocalStorage("selectedPair", []);
-            const savedCexs = getFromLocalStorage("selectedCEX", []);
-            generateInputCheckbox(savedCexs, "cex-options", "", "EXCH:", "uk-form-label uk-text-success");
-            generateInputCheckbox(DTChain.DEXS, "dex-options", "D", "DEFI:", "uk-form-label uk-text-danger");
-            generateInputCheckbox(savedPairs, "dexpair-options", "", "PAIRING :", "uk-form-label uk-text-primary");
-            generateInputModal(DTChain.DEXS);
             loadStoredData(filteredTokens);
+            generateInputCheckbox(savedCexs, "cex-options", "", "EXCH ", "uk-form-label uk-text-success");
+            generateInputCheckbox(DTChain.DEXS, "dex-options", "D", "DEFI:", "uk-form-label uk-text-danger");
+            generateInputCheckbox(savedPairs, "dexpair-options", "", "PAIR :", "uk-form-label uk-text-primary");
+            generateInputModal(DTChain.DEXS);            
             loadCheckboxSelections();
         }
 
@@ -891,36 +891,49 @@
 
     //genereta inputan checkbox
     function generateInputCheckbox(items, containerId, idPrefix, labelText, style) {
-            const $container = $(`#${containerId}`);
-            $container.empty(); // Bersihkan container
+        const $container = $(`#${containerId}`);
+        $container.empty(); // Bersihkan container
 
-            // Tambahkan label di atas checkbox
-            const label = `
-                <b>
-                    <span class="uk-text-secondary uk-text-medium">${labelText}</span>
-                </b>
-            `;
-            $container.append(label);
-
-            // Jika items adalah objek, ambil key-nya
-            if (typeof items === 'object' && !Array.isArray(items)) {
-                items = Object.keys(items); // Ambil key dari objek
-            }
-
-            // Iterasi dan tambahkan checkbox beserta label
-            const checkboxWrapper = $('<div style="display: flex;"></div>'); // Bungkus checkbox
-            items.forEach(item => {
-                const checkboxId = `${idPrefix}${item.toUpperCase()}`;
-                const checkbox = `
-                    <label class="${style || ''}" for="${checkboxId}">
-                        <input type="checkbox" id="${checkboxId}" value="${item}" checked>
-                        ${item.toUpperCase()}
-                    </label>`;
-                checkboxWrapper.append(checkbox);
-            });
-
-            $container.append(checkboxWrapper); // Masukkan checkbox ke dalam container
+        // Variabel untuk jumlah token (khusus untuk cex-options)
+        let jml = 0;
+        // Hitung jumlah token hanya jika containerId adalah "cex-options"
+        if (containerId === "cex-options") {
+            jml = filteredTokens.filter(t => t.status === true && items.includes(t.cex)).length;
         }
+   
+        // Tambahkan label di atas checkbox
+        const label = `
+            <b>
+                <span class="uk-text-secondary uk-text-medium">
+                    ${labelText}
+                </span>
+            </b>
+        `;
+        $container.append(label);
+
+        // Jika `items` adalah objek, ubah menjadi array key
+        if (typeof items === 'object' && !Array.isArray(items)) {
+            items = Object.keys(items); // Ambil key dari objek
+        }
+
+        // Iterasi dan tambahkan checkbox beserta label
+        const checkboxWrapper = $('<div style="display: flex; flex-wrap: wrap; gap: 10px;"></div>'); // Bungkus checkbox
+        items.forEach(item => {
+            const checkboxId = `${idPrefix}${item.toUpperCase()}`;
+
+            const countForCEX = containerId === "cex-options" 
+                ? DataTokens.filter(t => t.status === true && t.cex === item && t.depositEnable === true && t.withdrawEnable === true).length 
+                : ""; // Hanya hitung jumlah token untuk cex-options
+            const checkbox = `
+                <label class="${style || ''}" for="${checkboxId}">
+                    <input type="checkbox" id="${checkboxId}" value="${item}" checked>
+                    ${item.toUpperCase()}${containerId === "cex-options" ? ` (${countForCEX})` : ""}
+                </label>`;
+            checkboxWrapper.append(checkbox);
+        });
+
+        $container.append(checkboxWrapper); // Masukkan checkbox ke dalam container
+    }
 
     // Fungsi untuk memuat data dari localStorage saat halaman dimuat
     function loadCheckboxSelections() {
@@ -930,7 +943,6 @@
         $('#cex-options input[type="checkbox"]').each(function() {
             $(this).prop('checked', savedCEX.includes($(this).val()));
         });
-
         // Muat data DEX
         const savedDEX = getFromLocalStorage("DEX_PILIH", []);
         $('#dex-options input[type="checkbox"]').each(function() {
@@ -1054,10 +1066,6 @@
         if (!Array.isArray(filteredData) || filteredData.length === 0) {
             $InfoStatus.text("Tidak ada data token yang ditemukan.");
             setTimeout(() => $InfoStatus.fadeOut(), 2000);
-            //$('#tokenCount').text("");
-
-            const jml = DataTokens.filter(t => t.status === true).length;
-            $('#tokenCountALL').text(`TOTAL ALL: ${jml} PAIR-TOKEN`);  
 
             return;
         }
@@ -1201,8 +1209,13 @@
         // Perbarui total token filter
         $('#tokenCount').text(`( ${filteredData.length} )`);
 
-        const jml = DataTokens.filter(t => t.status === true).length;
-        $('#tokenCountALL').text(`TOTAL ALL: ${jml} PAIR-TOKEN`);  
+        const jml = DataTokens.filter(item => 
+            item.status === true && 
+            item.depositEnable === true && 
+            item.withdrawEnable === true
+        ).length;
+
+        $('#tokenCountALL').text(`TOTAL : ${jml} PAIR-TOKEN`);  
 
         // Sembunyikan status loading setelah selesai
         $InfoStatus.text("SELESAI, Memuat DATA TOKEN !!");
@@ -1221,27 +1234,54 @@
         updateSortIcons();
     }
 
-    $(document).on('change', '.statusCheckbox', function(event) {
-        event.preventDefault(); // Mencegah tindakan default
+    // UPDATE STATUS TOKEN-PAIR
+   $(document).on('change', '.statusCheckbox', function (event) {
+        event.preventDefault();
         const id = $(this).data('id');
         const no = $(this).data('index');
         const isChecked = $(this).prop('checked');
         const storedData = getFromLocalStorage('TOKEN_SCANNER', []);
+        const selectedCEX = getFromLocalStorage('CEX_PILIH', []); // Ambil selectedCEX dari localStorage
         const token = storedData.find(t => t.no === no);
-        const jml = storedData.filter(t => t.status === true).length;
 
         if (token) {
             token.status = isChecked;
             saveToLocalStorage('TOKEN_SCANNER', storedData);
-            toastr.info(`Berhasil mengubah status PAIR ${token.symbol_in}-${token.symbol_out}!`);
-            $(`td[data-index="${id}"]`).remove();
-            $('tr[data-index="' + id + '"]').hide();
 
-            $('#tokenCountALL').text(`TOTAL : ${jml} ALL PAIR-TOKEN`);     
+            // Hitung ulang jumlah total token aktif
+            const jml = DataTokens.filter(item => 
+                item.status === true && 
+                item.depositEnable === true && 
+                item.withdrawEnable === true
+            ).length;
+
+            // Perbarui elemen yang menampilkan total ALL token
+            $('#tokenCountALL').text(`TOTAL ALL : ${jml} PAIR-TOKEN`);
+
+            // Hitung ulang jumlah token per CEX
+            const savedCexs = [...new Set(storedData.map(t => t.cex))]; // Ambil daftar CEX unik
+            const tokenCounts = savedCexs.reduce((acc, cex) => {
+                acc[cex] = storedData.filter(t => t.cex === cex && t.status === true  && t.depositEnable === true && t.withdrawEnable === true).length;
+                return acc;
+            }, {});
+
+            // Perbarui jumlah token dan status checkbox di cex-options
+            savedCexs.forEach(cex => {
+                const countText = ` (${tokenCounts[cex] || 0})`;
+                const isCheckedCEX = selectedCEX.includes(cex); // Cek apakah cex termasuk dalam selectedCEX
+                $(`#cex-options label:contains(${cex.toUpperCase()})`).each(function () {
+                    const labelText = $(this).text().split('(')[0].trim(); // Ambil teks label sebelum tanda kurung
+                    $(this).html(`
+                        <input type="checkbox" value="${cex}" ${isCheckedCEX ? 'checked' : ''}>
+                        ${labelText}${countText}
+                    `);
+                });
+            });
+
+            toastr.info(`Berhasil mengubah status PAIR ${token.symbol_in}-${token.symbol_out}!`);
         }
-       
     });
-   
+
     function GeturlExchanger(cex, NameToken, NamePair) {
         // Konversi nama token dan pasangan ke uppercase
         const token = NameToken.toUpperCase();
@@ -1977,7 +2017,7 @@
         // Membuat link dengan format umum tanpa pengecekan kondisi
         var sLink = `<a href=#SWAP_${idCELL} class='buy'>
             ${NameToken}->${NamePair}
-            (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span><span class="uk-text-secondary">${PNL.toFixed(2)}$</span>)
+            (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span><span class="uk-text-primary">${PNL.toFixed(2)}$</span>)
         </a>`;
 
         // Menambahkan link ke elemen dengan ID yang sesuai
@@ -2055,7 +2095,7 @@
                     apiUrl = "https://api-defillama.1inch.io/v6.0/" + DTChain.Kode_Chain + "/quote?src=" + sc_input + "&dst=" + sc_output + "&amount=" + amount_in + "&includeGas=true";
                 break;
             case 'magpie':
-                    apiUrl = "https://api.magpiefi.xyz/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=true&slippage=0.1";
+                    apiUrl = "https://api.magpiefi.xyz/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=false&slippage=0.1";
                 break;
             case 'okx':
                 var queryString = `/api/v5/dex/aggregator/quote?amount=${amount_in}&chainId=${DTChain.Kode_Chain}` + `&fromTokenAddress=${sc_input}&toTokenAddress=${sc_output}`;
@@ -3324,6 +3364,7 @@
     $('#tokenCountALL').on('click', function () {
         // Ambil data dari localStorage
         const rawData = getFromLocalStorage("TOKEN_SCANNER", []);
+        //const rawData = filteredData;
         if (!rawData || rawData.length === 0) {
             toastr.error('Data TOKEN tidak ditemukan...');
             return;
@@ -3338,7 +3379,9 @@
             symbol_out: item.symbol_out,
             sc_out: item.sc_out,
             des_out: item.des_out,
-            status: item.status ? "TRUE" : "FALSE" // Konversi boolean ke string uppercase
+            status: item.status ? "TRUE" : "FALSE" ,
+            depositEnable: item.status ? "TRUE" : "FALSE",
+            withdrawEnable: item.status ? "TRUE" : "FALSE"
         }));
 
         // Buat header dan isi CSV
@@ -3353,8 +3396,12 @@
         // Buat elemen <a> untuk download
         const a = document.createElement('a');
         // Hitung jumlah item yang statusnya true
-        const countTrueStatus = formattedData.filter(item => item.status === "TRUE").length;
-
+        const countTrueStatus = rawData.filter(item => 
+            item.status === true && 
+            item.depositEnable === true && 
+            item.withdrawEnable === true
+        ).length;
+   
         a.href = url;
         a.download = countTrueStatus+'_MULTIPAIR_V2_' + (Nama_Chain || 'UNKNOWN').toUpperCase() + '_TOKEN.csv'; // Pastikan Nama_Chain terdefinisi
         a.style.display = 'none';
@@ -3384,6 +3431,7 @@
         saveToLocalStorage("HISTORY", lastAction);
         $("#infoAPP").html(`${lastAction.action} at ${lastAction.time}`);
     }
+    
 </script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.22/dist/js/uikit.min.js"></script>
 </body>
