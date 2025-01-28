@@ -629,7 +629,7 @@
                     $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
                      $('h2#judul').css('color', selectedChain.WARNA);
                     $('#favicon').attr('href', DTChain.ICON_CHAIN); 
-                    $('#sinyal-container').css('color','black');
+                    $('#sinyal-container').css('color', 'black');
                     $('#progress-bar').css('background-color', selectedChain.WARNA);
                     $('h4#daftar').css({'text-align': 'center','color': selectedChain.WARNA,'padding-left':'4px'});
                    
@@ -999,8 +999,13 @@
         });
 
         if (filteredTokens.length === 0) {
+            const savedCEX = getFromLocalStorage("CEX_PILIH", []);
+            const savedDEX = getFromLocalStorage("DEX_PILIH", []);
+            if(savedCEX.length>0 && savedDEX.length >0){
+                toastr.error("TIDAK ADA TOKEN-PAIR YANG SESUAI CEX/DEX/PAIRDEX !!");  
+            }
             console.warn("No tokens matched the filtering criteria.");
-            toastr.error("TIDAK ADA TOKEN-PAIR YANG SESUAI CEX/DEX/PAIRDEX !!");
+           // toastr.error("TIDAK ADA TOKEN-PAIR YANG SESUAI CEX/DEX/PAIRDEX !!");
         }
 
         return filteredTokens;
@@ -1050,7 +1055,7 @@
         if (!Array.isArray(filteredData) || filteredData.length === 0) {
             $InfoStatus.text("Tidak ada data token yang ditemukan.");
             setTimeout(() => $InfoStatus.fadeOut(), 2000);
-          //  $('#tokenCount').text("");
+            //$('#tokenCount').text("");
 
             const jml = DataTokens.filter(t => t.status === true).length;
             $('#tokenCountALL').text(`TOTAL ALL: ${jml} PAIR-TOKEN`);  
@@ -2146,7 +2151,7 @@
                     case 0:                                            
                         if(dexType!=='jupiter' || dexType !== 'magpie' ){
                             warna = "#f6f2f1";                          
-                             getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
+                             getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
                         } 
                         break;                        
                     case 400:
@@ -2246,7 +2251,7 @@
         };
     
         $.ajax({
-            url: selectedServer+'https://swoop-backend.up.railway.app/swap',
+            url: 'https://swoop-backend.up.railway.app/swap',
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(payload),
@@ -2338,13 +2343,6 @@
             DTChain.Nama_Chain.toUpperCase() === "AVAX" ? "AVAX_CCHAIN" : 
             DTChain.Nama_Chain.toUpperCase();
             
-        // let normalizedPairdex = NamePair === "ETH" ? "WETH" :
-        //         NamePair === "BNB" ? "WBNB" :
-        //         NamePair === "POL" ? "WPOL" :
-        //         NamePair === "SOL" ? "WSOL" :
-        //         NamePair === "AVAX" ? "WAVAX" :
-        //         NamePair;
-
         var dexLinks = generateDexLink(dexType, NameToken, sc_input, NamePair, sc_output);
 
         const NetworkChain = (DTChain.Nama_Chain || "").toUpperCase() === "ETHEREUM"
