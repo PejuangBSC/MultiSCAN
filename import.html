@@ -402,6 +402,7 @@
                         return $(this).val();
                     }).get();
                     updatePairCheckboxes();
+                    $("#load-data-btn").data("selectedCEX", selectedCEX); 
                 });
 
                 // Event listener untuk filter Pair
@@ -414,6 +415,7 @@
                     const selectedPair = $(".pair-filter:checked").map(function () {
                         return $(this).val();
                     }).get();
+                    $("#load-data-btn").data("selectedPair", selectedPair);
                 });
 
                 // Event listener untuk menampilkan data setelah tombol diklik
