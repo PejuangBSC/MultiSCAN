@@ -401,7 +401,6 @@
                     const selectedCEX = $(".cex-filter:checked").map(function () {
                         return $(this).val();
                     }).get();
-                    saveToLocalStorage("selectedCEX", selectedCEX);
                     updatePairCheckboxes();
                 });
 
@@ -415,7 +414,6 @@
                     const selectedPair = $(".pair-filter:checked").map(function () {
                         return $(this).val();
                     }).get();
-                    saveToLocalStorage("selectedPair", selectedPair);
                 });
 
                 // Event listener untuk menampilkan data setelah tombol diklik
@@ -446,7 +444,13 @@
 
                 // Event listener untuk tombol Load Data
                 $("#load-data-btn").click(function () {
+                    // Ambil data sementara yang disimpan di tombol
+                    const selectedCEX = $(this).data("selectedCEX") || [];
+                    const selectedPair = $(this).data("selectedPair") || [];
 
+                    // Simpan ke localStorage saat tombol diklik
+                    saveToLocalStorage("selectedCEX", selectedCEX);
+                    saveToLocalStorage("selectedPair", selectedPair);
                     // Ambil data sementara yang disimpan di tombol
                     const filteredData = $(this).data("filteredData");
 
@@ -458,7 +462,7 @@
 
                         removeFromLocalStorage("LASTUPDATE_FEEWD");
                         removeFromLocalStorage("WALLET_CEX");
-                     //   removeFromLocalStorage("TOKEN_SCANNER");
+                        removeFromLocalStorage("TOKEN_SCANNER");
 
                         $.ajax({
                             url: DTChain.DATAJSON,
