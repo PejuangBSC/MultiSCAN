@@ -2076,7 +2076,7 @@
                 apiUrl = "https://api.paraswap.io/prices?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + DTChain.Kode_Chain + "&amount=" + amount_in + "&version=6.2";
                 break;
             case 'odos':
-                apiUrl = "https://api.odos.xyz/sor/quote/v2";
+                apiUrl = selectedServer+"https://api.odos.xyz/sor/quote/v2";
                 requestData = {
                     chainId: DTChain.Kode_Chain,
                     inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
