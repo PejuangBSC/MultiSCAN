@@ -1255,7 +1255,9 @@
                 item.depositEnable === true && 
                 item.withdrawEnable === true
             ).length;
-
+            
+            $(`td[data-index="${id}"]`).remove();
+            $('tr[data-index="' + id + '"]').hide();
             // Perbarui elemen yang menampilkan total ALL token
             $('#tokenCountALL').text(`TOTAL ALL : ${jml} PAIR-TOKEN`);
 
