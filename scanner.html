@@ -142,7 +142,8 @@
                 </a>
                 <img class="icon" id="reload" title="REFRESH PAGE" width="30px" src="https://cdn-icons-png.flaticon.com/512/2546/2546705.png" />
               
-                <span id="chain-links-container"></span>                
+                <span id="chain-links-container"></span>     
+                <h6 id="config" class="uk-margin-remove uk-text-center uk-text-danger">---</h6>              
             </div>
     
             <!-- Bagian Kanan (Konten Lainnya) -->
@@ -227,9 +228,9 @@
                                 <div class="uk-flex uk-flex-middle uk-margin ">
                                        <div>
                                             <label for="SPEEDSCAN" class="uk-text-danger">WAKTU TUNGGU</label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="1"  name="waktu-tunggu"> NORMAL </label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="0.7" name="waktu-tunggu"> MEDIUM </label>
-                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="0.5" name="waktu-tunggu"> FAST </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="1.5"  name="waktu-tunggu"> NORMAL </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="1.25" name="waktu-tunggu"> MEDIUM </label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="0.9" name="waktu-tunggu"> FAST </label>
                                         </div>
                                    </div>
                                 <div>
@@ -611,7 +612,19 @@
 
 
     $(document).ready(function() {  
-          
+        let waktuTunggu=SavedSettingData.speedScan;
+        let speed=0;
+        if (waktuTunggu == "1.5") {
+            speed = "NORMAL";
+        } else if (waktuTunggu == "1.25") {
+            speed = "MEDIUM";
+        } else if (waktuTunggu == "0.9") {
+            speed = "FAST";
+        }else{
+            speed = "ANOMALI";
+        }
+        $("#config").text(`FilterPNL: ${SavedSettingData.filterPNL} | Grup: ${SavedSettingData.scanPerKoin} ~ ${speed} [${SavedSettingData.jedaTimeGroup}-${SavedSettingData.jedaKoin}] | Gwei: ${parseFloat(getFromLocalStorage('gasGWEI', 0)).toFixed(2)}`)
+  
         CekIdentitas(); 
         if (typeof CONFIG_CEX !== 'undefined' && typeof CONFIG_CHAINS !== 'undefined') {
             const currentPage = window.location.pathname.split('/').pop(); // Mengambil bagian terakhir dari path URL
