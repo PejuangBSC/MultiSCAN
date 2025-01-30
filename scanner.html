@@ -1152,6 +1152,12 @@
                 #RANG
                 </a>
             </span>`;
+
+             const linkRBX = `<span class="uk-text-primary">
+                <a href="https://app.rubic.exchange/?fromChain=${(DTChain.Nama_Chain).toUpperCase()}&toChain=${(DTChain.Nama_Chain).toUpperCase()}&from=${data.sc_in}&to=${data.sc_out}" target="_blank">
+                #RBCX
+                </a>
+            </span>`;
             //$('#' + cex + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase())
             let row = document.createElement('tr');
             row.setAttribute('data-index', index);
@@ -1173,7 +1179,7 @@
                     <a href="${DTChain.URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">[SC]</a><br>
                     <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex}</span>: ${linkStok}<br>
                     <span id=feeWDUSDT_${data.cex}_${data.symbol_in}_${data.symbol_out}_${(DTChain.Nama_Chain).toUpperCase()} class="uk-text-center uk-text-warning uk-text-bolder">FEE WD ? </span> <br/>
-                    ${linkOKDEX} ${linkUNIDEX} ${linkRango}
+                    ${linkOKDEX} ${linkUNIDEX} ${linkRBX}
                 </td>
             `;
 
