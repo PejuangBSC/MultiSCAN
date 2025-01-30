@@ -591,7 +591,8 @@
             generateInputModal(DTChain.DEXS);            
             loadCheckboxSelections();
 
-             let speed=0;
+            let waktuTunggu=SavedSettingData.speedScan;
+            let speed=0;
             if (waktuTunggu == "1.5") {
                 speed = "NORMAL";
             } else if (waktuTunggu == "1.25") {
@@ -602,7 +603,7 @@
                 speed = "ANOMALI";
             }
             $("#config").text(`FilterPNL: ${SavedSettingData.filterPNL} | Grup: ${SavedSettingData.scanPerKoin} ~ ${speed} [${SavedSettingData.jedaTimeGroup}-${SavedSettingData.jedaKoin}] | Gwei: ${parseFloat(getFromLocalStorage('gasGWEI', 0)).toFixed(2)}`)
-        }
+         }
 
         // Update link dengan parameter baru
         var link = $('a[href="multipair.html"]'); // Pilih elemen link
