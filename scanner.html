@@ -1240,7 +1240,14 @@
 
         // Sembunyikan status loading setelah selesai
         $InfoStatus.text("SELESAI, Memuat DATA TOKEN !!");
-        $("#startSCAN").show();
+        if (selectedDEX.length <= 4) {
+            $("#startSCAN").show();
+        }else{
+            alert("❌ MAX 4 DEX, SILAKAN KURANGI! ❌");
+            return; // Hentikan proses jika lebih dari 4 DEX
+        }
+        
+      //  $("#startSCAN").show();
         setTimeout(() => $InfoStatus.fadeOut(), 2000);
         //beri warna header
         $(".table-header th").css({
