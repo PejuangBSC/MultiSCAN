@@ -943,7 +943,7 @@
         {
             "no": 77,
             "cex": "BINANCE",
-            "symbol_in": "Cake",
+            "symbol_in": "CAKE",
             "sc_in": "0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898",
             "des_in": 18,
             "symbol_out": "UNI",
@@ -954,7 +954,7 @@
         {
             "no": 78,
             "cex": "BINANCE",
-            "symbol_in": "Cake",
+            "symbol_in": "CAKE",
             "sc_in": "0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898",
             "des_in": 18,
             "symbol_out": "ETH",
@@ -965,7 +965,7 @@
         {
             "no": 79,
             "cex": "BINANCE",
-            "symbol_in": "Cake",
+            "symbol_in": "CAKE",
             "sc_in": "0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898",
             "des_in": 18,
             "symbol_out": "USDC",
@@ -976,7 +976,7 @@
         {
             "no": 80,
             "cex": "BINANCE",
-            "symbol_in": "Cake",
+            "symbol_in": "CAKE",
             "sc_in": "0x152649eA73beAb28c5b49B26eb48f7EAD6d4c898",
             "des_in": 18,
             "symbol_out": "USDT",
@@ -4150,28 +4150,6 @@
             "symbol_out": "USDT",
             "sc_out": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
             "des_out": 6,
-            "status": true
-        },
-        {
-            "no": 369,
-            "cex": "BINANCE",
-            "symbol_in": "wBETH",
-            "sc_in": "0xa2E3356610840701BDf5611a53974510Ae27E2e1",
-            "des_in": 18,
-            "symbol_out": "ETH",
-            "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-            "des_out": 18,
-            "status": true
-        },
-        {
-            "no": 370,
-            "cex": "BINANCE",
-            "symbol_in": "wBETH",
-            "sc_in": "0xa2E3356610840701BDf5611a53974510Ae27E2e1",
-            "des_in": 18,
-            "symbol_out": "ETH",
-            "sc_out": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-            "des_out": 18,
             "status": true
         },
         {
