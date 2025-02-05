@@ -738,7 +738,7 @@
 
     function formatPrice(price) {
         if (price >= 1) {
-            return price.toFixed(3) + '$'; // Jika >= 1, tampilkan 2 angka desimal
+            return price.toFixed(4) + '$'; // Jika >= 1, tampilkan 2 angka desimal
         }
 
         let strPrice = price.toFixed(20).replace(/0+$/, ''); // Paksa format desimal, hapus nol di akhir
