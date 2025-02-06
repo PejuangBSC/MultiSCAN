@@ -738,7 +738,7 @@
 
     function formatPrice(price) {
         if (price >= 1) {
-            return price.toFixed(4) + '$'; // Jika >= 1, tampilkan 2 angka desimal
+            return price.toFixed(2) + '$'; // Jika >= 1, tampilkan 2 angka desimal
         }
 
         let strPrice = price.toFixed(20).replace(/0+$/, ''); // Paksa format desimal, hapus nol di akhir
@@ -874,6 +874,27 @@
                                                     $(`#${dexId}`).css('background-color',error.color);
 
                                                      $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERROR]</span>`);
+
+                                                     if(error.statusCode==0 && dextype=="odos" ){
+                                                        getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, 'altodos', NameToken, NamePair, cex,function (altError, altDataDEX){  
+                                                            if (!altError) {
+                                                                $(`#${dexId}`).css('background-color', '#f9f9e4');
+                                                                if (NameToken == "USDT") {
+                                                                    $(`span#SELL_${dexId}`).text(`${formatPrice(priceSellPairCEX)} ${NamePair}`);       
+                                                                }else if(NamePair == "USDT"){
+                                                                    $(`span#BUY_${dexId}`).text(`${formatPrice(priceBuyTokenCEX)} ${NameToken}`);
+                                                                }else  {
+                                                                    $(`span#BUY_${dexId}`).text(`${formatPrice(priceBuyTokenCEX)} ${NameToken}`);
+                                                                    $(`span#SELL_${dexId}`).text(`${formatPrice(priceSellPairCEX)} ${NamePair}`);    
+                                                                }  
+                                                                    ResultEksekusi(altDataDEX, DataCEX, Modal, amount_in, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair, 'odos'); 
+                                                                }
+                                                            else{
+                                                                $(`#${dexId}`).css('background-color',altError.color);
+                                                                $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERROR]</span>`);
+                                                            }
+                                                        });
+                                                    }
                                                     return;
                                                 }else{
                                                     
@@ -2130,6 +2151,18 @@
                     slippageLimitPercent: 0.3,
                 };
                 break;
+            case 'altodos':
+                apiUrl = "https://ethmainnet.server.hinkal.pro/OdosSwapData";               
+                requestData = {
+                    chainId: DTChain.Kode_Chain,
+                    compact: true,
+                    disableRFQs: true,
+                    userAddr: "0xDb954A050D442E488fe24b0a3250170223AAB2e4",
+                    inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
+                    outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
+                    slippageLimitPercent: 0.3,
+                };                
+                break;    
             case '0x':
                     if (DTChain.Nama_Chain.toLowerCase() === 'ethereum') {
                         apiUrl = "https://api.0x.org/swap/v1/quote?buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in;
@@ -2165,7 +2198,7 @@
     
         $.ajax({
             url: apiUrl,
-            method: ['odos', 'swoop'].includes(dexType) ? 'POST' : 'GET', // Cek tipe DEX
+            method: ['odos','altodos', 'swoop'].includes(dexType) ? 'POST' : 'GET', // Cek tipe DEX
             headers: Object.assign(
                 {}, 
                 headers || {}, // Header tambahan dari variabel `headers`
@@ -2178,8 +2211,8 @@
                     "OK-ACCESS-TIMESTAMP": timestamp,
                 } : {}
             ),
-            data: ['odos', 'swoop'].includes(dexType) ? JSON.stringify(requestData) : requestData, // Format data berdasarkan tipe DEX
-            contentType: ['odos', 'swoop'].includes(dexType) ? 'application/json' : undefined, // Set `contentType` hanya jika diperlukan
+            data: ['odos','altodos', 'swoop'].includes(dexType) ? JSON.stringify(requestData) : requestData, // Format data berdasarkan tipe DEX
+            contentType: ['odos','altodos', 'swoop'].includes(dexType) ? 'application/json' : undefined, // Set `contentType` hanya jika diperlukan
             timeout: parseInt(SavedSettingData.waktuTunggu) * 1000, // Ambil waktu tunggu dari localStorage atau default ke 0
             success: function (response, xhr) {
                 //console.log("RESPONSE DEX: ",response)
@@ -2197,6 +2230,10 @@
                             case 'odos':
                                 amount_out = response.outValues / PriceRate; 
                                 FeeSwap = response.gasEstimateValue;
+                                break;
+                            case 'altodos':
+                                amount_out = parseFloat(response.odosResponse.outValues[0]) / PriceRate; 
+                                FeeSwap = response.odosResponse.gasEstimateValue;
                                 break;
                             case '0x':
                                 amount_out = response.buyAmount / Math.pow(10, des_output);
