@@ -875,11 +875,9 @@
                                             var amount_in =parseFloat(Modal) / parseFloat(priceBuyTokenCEX);
                                             getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex, function (error, DataDEX) {     
                                                 if (error || !DataDEX) {
+                                                  if (error || !DataDEX) {
                                                   //  console.error("Error: Get Price DEX:", error);
-                                                    $(`#${dexId}`).css('background-color',error.color);
-
-                                                     $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERROR]</span>`);
-
+                                                    
                                                      if(error.statusCode==0 || error.statusCode==429 && dextype=="odos" ){
                                                         getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, 'altodos', NameToken, NamePair, cex,function (altError, altDataDEX){  
                                                             if (!altError) {
@@ -899,9 +897,7 @@
                                                                 $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERRORX]</span>`);
                                                             }
                                                         });
-                                                    }
-
-                                                    if(dextype=="paraswap" ){
+                                                    }else if(dextype=="paraswap" ){
                                                         getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, 'altpara', NameToken, NamePair, cex,function (altError, altDataDEX){  
                                                           if (altDataDEX !== null && altDataDEX.amount_out > 0) {
                                                                 $(`#${dexId}`).css('background-color', '#f9f9e4');
@@ -919,6 +915,9 @@
                                                                 $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="TIDAK DAPAT HARGA">[ERRORX]</span>`);
                                                             }
                                                         });
+                                                    }else{
+                                                        $(`#${dexId}`).css('background-color',error.color);
+                                                        $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERROR]</span>`);
                                                     }
 
                                                     return;
