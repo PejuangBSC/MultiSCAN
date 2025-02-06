@@ -903,7 +903,7 @@
 
                                                     if(dextype=="paraswap" ){
                                                         getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, 'altpara', NameToken, NamePair, cex,function (altError, altDataDEX){  
-                                                            if (!altError) {
+                                                          if (altDataDEX !== null && altDataDEX.amount_out > 0) {
                                                                 $(`#${dexId}`).css('background-color', '#f9f9e4');
                                                                 if (NameToken == "USDT") {
                                                                     $(`span#SELL_${dexId}`).text(`${formatPrice(priceSellPairCEX)} ${NamePair}`);       
@@ -916,8 +916,8 @@
                                                                     ResultEksekusi(altDataDEX, DataCEX, Modal, amount_in, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair, 'paraswap'); 
                                                                 }
                                                             else{
-                                                                $(`#${dexId}`).css('background-color',altError.color);
-                                                                $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERROR]</span>`);
+                                                                $(`#${dexId}`).css('background-color','#f39999');
+                                                                $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="TIDAK DAPAT HARGA">[ERRORX]</span>`);
                                                             }
                                                         });
                                                     }
