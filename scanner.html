@@ -896,7 +896,7 @@
                                                                 }
                                                             else{
                                                                 $(`#${dexId}`).css('background-color',altError.color);
-                                                                $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERROR]</span>`);
+                                                                $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERRORX]</span>`);
                                                             }
                                                         });
                                                     }
@@ -914,8 +914,7 @@
                                                                     $(`span#SELL_${dexId}`).text(`${formatPrice(priceSellPairCEX)} ${NamePair}`);    
                                                                 }  
                                                                     ResultEksekusi(altDataDEX, DataCEX, Modal, amount_in, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair, 'paraswap'); 
-                                                                }
-                                                            else{
+                                                            }else{
                                                                 $(`#${dexId}`).css('background-color','#f39999');
                                                                 $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="TIDAK DAPAT HARGA">[ERRORX]</span>`);
                                                             }
