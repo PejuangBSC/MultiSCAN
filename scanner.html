@@ -1268,14 +1268,14 @@
                 row.innerHTML += `
                     <td class="uk-text-center" style="vertical-align: middle;" id="${idCELL}">
                         <a href="${urlsCEX.tradeToken}" target="_blank">
-                            <span class="buy" id="BUY_${idCELL}" title="${data.cex}"> --- </span>
+                            <span class="buy" id="BUY_${idCELL}" title="${data.cex}">  </span>
                         </a><br>
-                        <span class="uk-text-primary uk-text-bolder" id="SWAP_${idCELL}"> --- </span><br>
+                        <span class="uk-text-primary uk-text-bolder" id="SWAP_${idCELL}">  </span><br>
                         <a href="${urlsCEX.tradePair}" target="_blank">
-                            <span class="sell" id="SELL_${idCELL}" title="${data.cex}"> --- </span>
+                            <span class="sell" id="SELL_${idCELL}" title="${data.cex}">  </span>
                         </a><br>
                         <hr class="uk-divider-small uk-margin-remove">
-                        <span class="uk-text-primary" id="RESULT_${idCELL}"> --- </span>
+                        <span class="uk-text-primary" id="RESULT_${idCELL}">  </span>
                     </td>
                 `;
             });
@@ -2185,7 +2185,7 @@
                 apiUrl = `https://ag.kanalabs.io/v1/swapQuote?inputToken=${sc_input}&outputToken=${sc_output}&chain=${kanaChainId}&amountIn=${amount_in.toString()}&slippage=0.5&isFeeReferrer=false`;
                 break;
             case 'odos':
-                apiUrl = selectedServer+"https://api.odos.xyz/sor/quote/v2";
+                apiUrl = "https://api.odos.xyz/sor/quote/v2";
                 requestData = {
                     chainId: DTChain.Kode_Chain,
                     inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
@@ -2430,7 +2430,9 @@
         };
     
         $.ajax({
-            url: 'https://swoop-backend.up.railway.app/swap',
+           // url: 'https://swoop-backend.up.railway.app/swap',
+            url:'https://swoop-backend-2.up.railway.app/swap',
+
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(payload),
