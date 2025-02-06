@@ -914,10 +914,9 @@
                                                                 $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="TIDAK DAPAT HARGA">[ERRORX]</span>`);
                                                             }
                                                         });
-                                                    }else{
+                                                    }
                                                         $(`#${dexId}`).css('background-color',error.color);
                                                         $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERROR]</span>`);
-                                                    }
 
                                                     return;
 
