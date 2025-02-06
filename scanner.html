@@ -67,7 +67,10 @@
         }
 
         .uk-table tbody td {
-            font-size: 12px;
+            font-size: 11.5px;
+            padding: 4px;
+            border: 0.85px solid #0f0e0e;
+            white-space: nowrap;
         }
         .merah{
             font-weight: bold;
@@ -223,11 +226,13 @@
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="14"  name="koin-group"> 14</label> 
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="12"  name="koin-group"> 12</label>
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="10"  name="koin-group"> 10</label>  
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="8"  name="koin-group"> 8</label>  
                                         </div>
                                     </div>
                                 <div class="uk-flex uk-flex-middle uk-margin ">
                                        <div>
                                             <label for="SPEEDSCAN" class="uk-text-danger">WAKTU TUNGGU</label>
+                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="2"  name="waktu-tunggu"> ANOMALI </label>
                                             <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="1.5"  name="waktu-tunggu"> NORMAL </label>
                                             <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="1.25" name="waktu-tunggu"> MEDIUM </label>
                                             <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="0.9" name="waktu-tunggu"> FAST </label>
@@ -870,12 +875,12 @@
                                             var amount_in =parseFloat(Modal) / parseFloat(priceBuyTokenCEX);
                                             getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex, function (error, DataDEX) {     
                                                 if (error || !DataDEX) {
-                                                    console.error("Error: Get Pice DEX:", error);
+                                                  //  console.error("Error: Get Price DEX:", error);
                                                     $(`#${dexId}`).css('background-color',error.color);
 
                                                      $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERROR]</span>`);
 
-                                                     if(error.statusCode==0 && dextype=="odos" ){
+                                                     if(error.statusCode==0 || error.statusCode==429 && dextype=="odos" ){
                                                         getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, 'altodos', NameToken, NamePair, cex,function (altError, altDataDEX){  
                                                             if (!altError) {
                                                                 $(`#${dexId}`).css('background-color', '#f9f9e4');
@@ -895,7 +900,30 @@
                                                             }
                                                         });
                                                     }
+
+                                                    if(dextype=="paraswap" ){
+                                                        getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, 'altpara', NameToken, NamePair, cex,function (altError, altDataDEX){  
+                                                            if (!altError) {
+                                                                $(`#${dexId}`).css('background-color', '#f9f9e4');
+                                                                if (NameToken == "USDT") {
+                                                                    $(`span#SELL_${dexId}`).text(`${formatPrice(priceSellPairCEX)} ${NamePair}`);       
+                                                                }else if(NamePair == "USDT"){
+                                                                    $(`span#BUY_${dexId}`).text(`${formatPrice(priceBuyTokenCEX)} ${NameToken}`);
+                                                                }else  {
+                                                                    $(`span#BUY_${dexId}`).text(`${formatPrice(priceBuyTokenCEX)} ${NameToken}`);
+                                                                    $(`span#SELL_${dexId}`).text(`${formatPrice(priceSellPairCEX)} ${NamePair}`);    
+                                                                }  
+                                                                    ResultEksekusi(altDataDEX, DataCEX, Modal, amount_in, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair, 'paraswap'); 
+                                                                }
+                                                            else{
+                                                                $(`#${dexId}`).css('background-color',altError.color);
+                                                                $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERROR]</span>`);
+                                                            }
+                                                        });
+                                                    }
+
                                                     return;
+
                                                 }else{
                                                     
                                                     if (NameToken == "USDT") {
@@ -1279,10 +1307,10 @@
         // Sembunyikan status loading setelah selesai
         $InfoStatus.text("SELESAI, Memuat DATA TOKEN !!");
           // Cek apakah dexList melebihi batas maksimum
-        if (selectedDEX.length <= 4) {
+        if (selectedDEX.length <= 5) {
             $("#startSCAN").show();
         }else{
-            alert("❌ MAX 4 DEX, SILAKAN KURANGI! ❌");
+            alert("❌ MAX 5 DEX, SILAKAN KURANGI! ❌");
             return; // Hentikan proses jika lebih dari 4 DEX
         }
         
@@ -2127,6 +2155,15 @@
                                 NamePair === "AVAX" ? "WAVAX" :
                                 NamePair;
         var linkDEX = generateDexLink(dexType, NameToken, sc_input, NamePair, sc_output);
+        // Mapping chainId untuk Kana
+        const KanaChainID = {
+            'solana': 1,
+            'polygon': 3,
+            'bsc': 4,
+            'ethereum': 6,
+            'Avalanche': 10,
+            'Arbitrum': 11,
+        };
 
         switch (dexType) {
             case 'kyberswap':
@@ -2140,6 +2177,12 @@
                 break;
             case 'paraswap':
                 apiUrl = "https://api.paraswap.io/prices?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + DTChain.Kode_Chain + "&amount=" + amount_in + "&version=6.2";
+                break;
+            case 'altpara':
+                const chainName = DTChain.Nama_Chain.toLowerCase();
+                const kanaChainId = KanaChainID[chainName];
+                // Endpoint untuk Kana
+                apiUrl = `https://ag.kanalabs.io/v1/swapQuote?inputToken=${sc_input}&outputToken=${sc_output}&chain=${kanaChainId}&amountIn=${amount_in.toString()}&slippage=0.5&isFeeReferrer=false`;
                 break;
             case 'odos':
                 apiUrl = selectedServer+"https://api.odos.xyz/sor/quote/v2";
@@ -2227,6 +2270,10 @@
                                 amount_out = response.priceRoute.destAmount / Math.pow(10, des_output);
                                 FeeSwap = parseFloat(response.priceRoute.gasCostUSD);
                                 break;
+                            case 'altpara':
+                                amount_out = response.data[0].finalAmountOut / Math.pow(10, des_output);
+                                FeeSwap = (response.data[0].estimatedGas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0)) * parseFloat(getFromLocalStorage('PRICEGAS', 0));                                    
+                                break;
                             case 'odos':
                                 amount_out = response.outValues / PriceRate; 
                                 FeeSwap = response.gasEstimateValue;
@@ -2283,9 +2330,9 @@
                 var alertMessage = "Terjadi kesalahan";
                 var warna = "#f39999";
                 switch (xhr.status) {
-                    case 0:                                            
-                        if(dexType!=='jupiter' || dexType !== 'magpie' ){
-                            warna = "#f6f2f1";                          
+                    case 0:               
+                        if (dexType !== 'jupiter' && dexType !== 'magpie' && dexType !== 'odos' &&  dexType !== 'altodos' && dexType !== 'paraswap' && dexType !== 'altpara') { 
+                        warna = "#f6f2f1";                          
                             getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
                         } 
                         break;                        
@@ -2312,8 +2359,8 @@
                         alertMessage = "Permintaan tidak ditemukan";
                         break ;
                     case 429:
-                        if (dexType !== '0x' && dexType !== 'magpie') {
-                            warna = "#f6f2f1";
+                        if (dexType !== 'jupiter' && dexType !== 'magpie' && dexType !== 'odos' &&  dexType !== 'altodos' && dexType !== 'paraswap' && dexType !== 'altpara') { 
+                        warna = "#f6f2f1";  
                             getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
                         }else{
                             warna = "#f39999";
@@ -2326,10 +2373,6 @@
                             if (errorResponse.msg && errorResponse.msg.toLowerCase().includes("too many requests")) {
                                 alertMessage = "AKSES KENA LIMIT (500 Too Many Requests)";
                                 warna = "#f39999";
-                                // if (dexType == '0kx') {
-                                //     warna = "#f6f2f1";
-                                //     getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
-                                // }
                             } else {
                                 alertMessage = errorResponse.detail || "GAGAL DAPATKAN DATA";
                             }
