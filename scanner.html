@@ -1221,7 +1221,7 @@
                 </a>
             </span>`;
 
-            const linkUNIDEX = `<span class="uk-text-success">
+            const linkUNIDEX = `<span class="uk-text-danger">
                 <a href="https://app.unidex.exchange/?chain=${DTChain.Nama_Chain}&from=${data.sc_in}&to=${data.sc_out}" target="_blank">
                     #UNID
                 </a>
@@ -1250,16 +1250,16 @@
                         <span id="BUY_${data.cex}_${data.symbol_in}_${data.symbol_out}_${DTChain.Nama_Chain.toUpperCase()}">PRICE & VOL BUY <br>${data.cex}</span>
                     </a>
                 </td>
-                <td class="uk-text-center" style="text-align:center; vertical-align: middle;">
+                <td class="uk-text-center" style="text-align:center; vertical-align: middle; background:lightgray;">
                     <input type="checkbox" class="statusCheckbox"  data-id="${index}" data-index="${data.no}" ${data.status ? 'checked' : ''}>
-                    <span class="uk-text-center uk-text-secondary uk-text-bolder">${linkToken} VS ${linkPair}</span><br>
+                    <span class="uk-text-center uk-text-primary uk-text-bolder">${linkToken} VS ${linkPair}</span><br>
                     <span style="${withdrawStatus.style}">${withdrawStatus.text}</span> 
                     <a href="${DTChain.URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">[SC]</a> ~ 
                     <span style="${depositStatus.style}">${depositStatus.text}</span> 
                     <a href="${DTChain.URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">[SC]</a><br>
                     <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex}</span>: ${linkStok}<br>
                     <span id=feeWDUSDT_${data.cex}_${data.symbol_in}_${data.symbol_out}_${(DTChain.Nama_Chain).toUpperCase()} class="uk-text-center uk-text-warning uk-text-bolder">FEE WD ? </span> <br/>
-                    ${linkOKDEX} ${linkUNIDEX} ${linkRBX}
+                    <span class="uk-text-bolder">${linkOKDEX} ${linkUNIDEX} ${linkRBX}</span>
                 </td>
             `;
 
