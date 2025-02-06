@@ -875,7 +875,6 @@
                                             var amount_in =parseFloat(Modal) / parseFloat(priceBuyTokenCEX);
                                             getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex, function (error, DataDEX) {     
                                                 if (error || !DataDEX) {
-                                                  if (error || !DataDEX) {
                                                   //  console.error("Error: Get Price DEX:", error);
                                                     
                                                      if(error.statusCode==0 || error.statusCode==429 && dextype=="odos" ){
@@ -894,7 +893,7 @@
                                                                 }
                                                             else{
                                                                 $(`#${dexId}`).css('background-color',altError.color);
-                                                                $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${error.pesanDEX}">[ERRORX]</span>`);
+                                                                $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="${altError.pesanDEX}">[ERRORX]</span>`);
                                                             }
                                                         });
                                                     }else if(dextype=="paraswap" ){
@@ -911,7 +910,7 @@
                                                                 }  
                                                                     ResultEksekusi(altDataDEX, DataCEX, Modal, amount_in, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair, 'paraswap'); 
                                                             }else{
-                                                                $(`#${dexId}`).css('background-color','#f39999');
+                                                                $(`#${dexId}`).css('background-color',altError.color);
                                                                 $(`#SWAP_${dexId}`).html(`${dex.toUpperCase()} <br/> <span title="TIDAK DAPAT HARGA">[ERRORX]</span>`);
                                                             }
                                                         });
