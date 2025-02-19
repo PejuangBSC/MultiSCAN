@@ -1238,6 +1238,13 @@
                 #RBCX
                 </a>
             </span>`;
+
+             const linkDEFIL = = `<span class="uk-text-danger">
+                <a href="https://swap.defillama.com/?chain=${DTChain.Nama_Chain}&from=${data.sc_in}&to=${data.sc_out}" target="_blank">
+                    #UNID
+                </a>
+            </span>`;
+            
             //$('#' + cex + '_' + TokenPair+'_'+ (DTChain.Nama_Chain).toUpperCase())
             let row = document.createElement('tr');
             row.setAttribute('data-index', index);
@@ -1259,7 +1266,7 @@
                     <a href="${DTChain.URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">[SC]</a><br>
                     <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex}</span>: ${linkStok}<br>
                     <span id=feeWDUSDT_${data.cex}_${data.symbol_in}_${data.symbol_out}_${(DTChain.Nama_Chain).toUpperCase()} class="uk-text-center uk-text-warning uk-text-bolder">FEE WD ? </span> <br/>
-                    <span class="uk-text-bolder">${linkOKDEX} ${linkUNIDEX} ${linkRBX}</span>
+                    <span class="uk-text-bolder">${linkOKDEX} ${linkUNIDEX} ${linkDEFIL}</span>
                 </td>
             `;
 
