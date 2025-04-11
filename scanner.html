@@ -2366,6 +2366,10 @@
                         alertMessage = "API SALAH";
                         break;
                     case 403:
+                        if (dexType ==='0x') {   
+                             warna = "#f6f2f1";                          
+                             getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, NameToken, dexType, NamePair, cex, callback);
+                         } 
                         alertMessage = "AKSES DIBLOK";
                         break;
                     case 404:
