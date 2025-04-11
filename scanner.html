@@ -2438,7 +2438,6 @@
             type: 'POST',
             contentType: 'application/json',
             data: JSON.stringify(payload),
-            timeout: parseInt(SavedSettingData.speedScan) * 1000,
             success: function (response) {
                     var amount_out = parseFloat(response.amountOutWei) / Math.pow(10, des_output);
                     var FeeSwap = ((parseFloat(getFromLocalStorage('gasGWEI')) * 250000) / Math.pow(10, 9))*parseFloat(getFromLocalStorage('PRICEGAS'));
