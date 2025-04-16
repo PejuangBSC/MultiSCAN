@@ -795,7 +795,10 @@
 
     $(document).ready(function() {  
 
-       const fullURL = window.location.pathname + window.location.search;
+      // Tangkap path saat ini (misal: /V1/dark.html?chain=ethereum)
+    const fullURL = window.location.pathname + window.location.search;
+
+    // Perbaiki semua <a href="#..."> supaya tidak lompat ke /V1/#...
     $('a[href^="#"]').each(function() {
         const hash = $(this).attr('href');
         $(this).attr('href', fullURL + hash);
