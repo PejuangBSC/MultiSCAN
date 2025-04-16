@@ -139,7 +139,7 @@
         }
 
     </style>
-      <base href="/V1/dark.html">
+      <base href="/V1/">
 </head>
 <body>
 <div class="uk-container uk-margin-small-top">
@@ -795,10 +795,12 @@
 
     $(document).ready(function() {  
 
-         $('a[href^="V1/index.html#"]').each(function() {
-            const hash = $(this).attr('href').split('#')[1];
-            $(this).attr('href', '#' + hash);  // hilangkan 'index.html'
-        });
+        const currentPath = window.location.pathname + window.location.search; // e.g. /V1/dark.html?chain=ethereum
+
+    $('a[href^="#"]').each(function() {
+        const hash = $(this).attr('href');
+        $(this).attr('href', currentPath + hash); 
+    });
           // Initialize Web3.js instance
             // Ambil chain dari URL (misalnya: ?chain=polygon)
     const infuraApiKey = '9d0429abadc34232af7d5c0e6ab98631';
