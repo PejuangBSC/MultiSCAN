@@ -128,8 +128,7 @@
         }
 
     </style>
-    <base href="/V1/">
-
+    
 </head>
 <body>
 <div class="uk-container uk-margin-small-top">
@@ -2298,12 +2297,24 @@
                 RateSwap = `<label class="uk-text-success" title="${titleInfo}">${formatPrice(rateBuyPairDEX)}</label>`;
             } else if (stablecoins.includes(Name_out)) {
                 titleInfo += `${formatPrice(rateTokentoPair)} (${Name_in}->${Name_out})`;
-                titleInfo += ` | ${toIDR(rateTokentoPair)}`;
+                titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
                 RateSwap = `<label class="uk-text-danger" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
             } else {
-                titleInfo += `${formatPrice(rateSellTokenDEX)} ${Name_in}, ${formatPrice(rateBuyPairDEX)} ${Name_out}`;
-                titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
-                RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateSellTokenDEX)}</label>`;
+               // titleInfo += `${formatPrice(rateSellTokenDEX)} ${Name_in}, ${formatPrice(rateBuyPairDEX)} ${Name_out}`;
+               // titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
+               // RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateSellTokenDEX)}</label>`;
+                if (trx === "PairtoToken") {
+                    // Khusus USDT saat PairtoToken → ambil rate dari PAIR (symbol_out)
+                    titleInfo += `${formatPrice(rateSellTokenDEX)} ${Name_in}, ${formatPrice(rateBuyPairDEX)} ${Name_out}`;
+                    titleInfo += `| ${toIDR(rateBuyPairDEX)}`;
+                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateBuyPairDEX)}</label>`;
+                } else {
+                    // Selain itu, ambil rate dari TOKEN (symbol_in)
+                    titleInfo += `${formatPrice(rateSellTokenDEX)} ${Name_in}, ${formatPrice(rateBuyPairDEX)} ${Name_out}`;
+                    titleInfo += `| ${toIDR(rateSellTokenDEX)}`;
+                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateSellTokenDEX)}</label>`;
+                }
+
             }
 
             if ($(`#SWAP_${IdCELL}`).length > 0) {
@@ -3280,6 +3291,7 @@
         isBybitSuccess = false;
         isMexcSuccess = false;
         isOkxSuccess = false;
+        isINDODAXSuccess = false;
 
         // Cek dan panggil fungsi cek fee withdrawal hanya untuk CEX yang dipilih
         selectedCEX.forEach(exchange => {
@@ -3306,6 +3318,9 @@
                         break;
                     case "OKX":
                         CekfeeWDOKX(CONFIG_CEX.OKX);
+                        break;
+                    case "INDODAX":
+                        CekfeeWDINDODAX();
                         break;
                     default:
                         console.warn(`CEX ${exchange} tidak dikenali.`);
@@ -3362,6 +3377,12 @@
             isSuccess++;
         }
 
+        if (isINDODAXSuccess !== true) {
+            allSuccess = false;
+        }else{
+            isSuccess++;
+        }
+        
             const selectedCEX = getFromLocalStorage("selectedCEX", []);  
             const lastModifiedTime = new Date().toLocaleString(); // Waktu terakhir update
             const totalWallets = allFeeWD.length; // Hitung jumlah wallet yang diperbarui
@@ -3449,6 +3470,51 @@
                 return null;
         }
     }    
+
+    function CekfeeWDINDODAX() {
+        // Ambil data token dari localStorage
+        const TokenDataIndodax = getFromLocalStorage("TOKEN");
+
+        // Cek jika data tersedia dan merupakan array
+        if (!Array.isArray(TokenDataIndodax)) {
+            toastr.error("Data token INDODAX tidak valid atau tidak ditemukan.");
+            return;
+        }
+
+        // Format jadi dua arah: symbol_in & symbol_out
+        const formattedData = TokenDataIndodax
+            .filter(token => token.cex === "INDODAX" && token.status === true)
+            .flatMap(token => {
+                return [
+                    {
+                        cex: "INDODAX",
+                        chain: token.symbol_out.toUpperCase(), // asumsi chain disamakan dengan symbol_out
+                        tokenName: token.symbol_in.toUpperCase(),
+                        scToken: token.sc_in || "",
+                        feeWDs: 0.0001,
+                        depositEnable: true,
+                        withdrawEnable: true
+                    },
+                    {
+                        cex: "INDODAX",
+                        chain: token.symbol_in.toUpperCase(),
+                        tokenName: token.symbol_out.toUpperCase(),
+                        scToken: token.sc_out || "",
+                        feeWDs: 0.0001,
+                        depositEnable: true,
+                        withdrawEnable: true
+                    }
+                ];
+            });
+
+        // Tambahkan ke array global
+        allFeeWD = allFeeWD.concat(formattedData);
+
+        // Tandai sukses dan panggil callback
+        toastr.info("SUKSES, CEK UPDATE WALLET INDODAX");
+        isINDODAXSuccess = true;
+        checkAllUpdatesCompleted();
+    }
 
     //fungsi cek FEE WD per TOKEN GATE
     function CekfeeWDGATE() {
