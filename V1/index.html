@@ -2288,31 +2288,28 @@
                 currency: "IDR"
             }) : "N/A";
 
-            let titleInfo = `DEX ${dextype.toUpperCase()} : `;
+            let titleInfo = `DEX ${dextype.toUpperCase()} `;
             let RateSwap = "";
 
             if (stablecoins.includes(Name_in)) {
-                titleInfo += `${formatPrice(rateBuyPairDEX)} (${Name_in}->${Name_out})`;
+                titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateBuyPairDEX)}`;
                 titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
                 RateSwap = `<label class="uk-text-success" title="${titleInfo}">${formatPrice(rateBuyPairDEX)}</label>`;
             } else if (stablecoins.includes(Name_out)) {
-                titleInfo += `${formatPrice(rateTokentoPair)} (${Name_in}->${Name_out})`;
+                titleInfo += ` (${Name_in}->${Name_out}) : ${formatPrice(rateTokentoPair)}`;
                 titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
                 RateSwap = `<label class="uk-text-danger" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
             } else {
-               // titleInfo += `${formatPrice(rateSellTokenDEX)} ${Name_in}, ${formatPrice(rateBuyPairDEX)} ${Name_out}`;
-               // titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
-               // RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateSellTokenDEX)}</label>`;
-                if (trx === "PairtoToken") {
-                    // Khusus USDT saat PairtoToken → ambil rate dari PAIR (symbol_out)
-                    titleInfo += `${formatPrice(rateSellTokenDEX)} ${Name_in}, ${formatPrice(rateBuyPairDEX)} ${Name_out}`;
-                    titleInfo += `| ${toIDR(rateBuyPairDEX)}`;
-                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateBuyPairDEX)}</label>`;
+                if (trx === "TokentoPair") {
+                     // Selain itu, ambil rate dari TOKEN (symbol_in)
+                    titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateSellTokenDEX)}`;
+                    titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
+                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;                   
                 } else {
-                    // Selain itu, ambil rate dari TOKEN (symbol_in)
-                    titleInfo += `${formatPrice(rateSellTokenDEX)} ${Name_in}, ${formatPrice(rateBuyPairDEX)} ${Name_out}`;
-                    titleInfo += `| ${toIDR(rateSellTokenDEX)}`;
-                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateSellTokenDEX)}</label>`;
+                    // Khusus USDT saat PairtoToken → ambil rate dari PAIR (symbol_out)
+                    titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateBuyPairDEX)}`;
+                    titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
+                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
                 }
 
             }
