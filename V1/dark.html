@@ -795,11 +795,12 @@
 
     $(document).ready(function() {  
 
-        const currentPath = window.location.pathname + window.location.search; // e.g. /V1/dark.html?chain=ethereum
+        const fullURL = window.location.pathname + window.location.search; 
+    // Hasil: /V1/dark.html?chain=ethereum
 
     $('a[href^="#"]').each(function() {
         const hash = $(this).attr('href');
-        $(this).attr('href', currentPath + hash); 
+        $(this).attr('href', fullURL + hash);
     });
           // Initialize Web3.js instance
             // Ambil chain dari URL (misalnya: ?chain=polygon)
