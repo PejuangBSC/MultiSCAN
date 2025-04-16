@@ -794,10 +794,10 @@
 
 
     $(document).ready(function() {  
-         $('a[href^="index.html"], a[href="#"]').on('click', function(e) {
-        e.preventDefault();
-        console.log('Diblok dari dark.html:', $(this).attr('href'));
-    });
+            $('a[href^="index.html#"]').each(function() {
+                const hash = $(this).attr('href').split('#')[1];
+                $(this).attr('href', 'dark.html#' + hash);
+            });
           // Initialize Web3.js instance
             // Ambil chain dari URL (misalnya: ?chain=polygon)
     const infuraApiKey = '9d0429abadc34232af7d5c0e6ab98631';
