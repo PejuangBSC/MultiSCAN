@@ -795,9 +795,7 @@
 
     $(document).ready(function() {  
 
-        const fullURL = window.location.pathname + window.location.search; 
-    // Hasil: /V1/dark.html?chain=ethereum
-
+       const fullURL = window.location.pathname + window.location.search;
     $('a[href^="#"]').each(function() {
         const hash = $(this).attr('href');
         $(this).attr('href', fullURL + hash);
