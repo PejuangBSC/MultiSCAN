@@ -126,16 +126,90 @@
             cursor: pointer;               /* Ubah kursor menjadi tangan saat diklik */
             transition: background-color 0.3s ease; /* Animasi untuk efek hover */
         }
+        /* Warna link default (light mode) */
+        a, .uk-link {
+            color: inherit !important;
+            text-decoration: none;
+        }
 
+        /* Warna link dalam dark mode */
+        .dark-mode a,
+        .dark-mode .uk-link {
+            color: #4fc3f7 !important;  /* Warna biru muda, bisa diganti sesuai preferensi */
+        }
+
+        /* CSS dark mode */
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: #121212 !important;
+            color: #f0f0f0 !important;
+        }
+
+        .dark-mode .uk-table tbody td {
+            background-color: #1e1e1e !important;
+            color: #f0f0f0 !important;
+            border-color: #444 !important;
+        }
+
+        .dark-mode .uk-overflow-auto {
+            background-color: #1a1a1a !important;
+        }
+
+        .dark-mode .uk-button {
+            background-color: #333 !important;
+            color: #fff !important;
+            border-color: #555 !important;
+        }
+
+        .dark-mode .icon-wrapper {
+            background-color: #333 !important;
+        }
+
+        .dark-mode .merah {
+            background-color: #b00020 !important;
+            color: #fff !important;
+        }
+
+        .dark-mode .buy {
+            color:#20be20 !important
+        }
+
+        .dark-mode .sell {
+            color: #ff6666 !important;
+        }
+        #darkModeToggle {
+            width: 17px;
+            height: 17px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: fixed;
+            top: 12px;
+            right: 12px;
+            z-index: 9999;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s ease;
+        }
+        .dark-mode #darkModeToggle {
+            background-color: #333;
+        }
     </style>
-     <base href="/V1/">
-
+<base href="/V1/">
 </head>
 <body>
 <div class="uk-container uk-margin-small-top">
         <div class="uk-flex uk-flex-between uk-grid-small" uk-grid style="flex: 1;">
             <!-- Bagian Kiri (Form) -->
-            <div class="uk-width-auto">
+            <div class="uk-width-auto uk-background-muted">
+                <div id="darkModeToggle" onclick="toggleDarkMode()" class="icon-wrapper" title="Ganti Mode Gelap/Terang">
+                    <span uk-icon="icon: moon; ratio: 0.4"></span> 🌓
+                </div>
                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
                     MULTISCAN  V1 :: <label id="namachain"></label>  &nbsp;
                 </h2>
@@ -162,8 +236,8 @@
                 <form id="cryptoForm" style=" width: 96%;">
                         <div class="dex-group  uk-grid-small uk-flex uk-flex-between" uk-grid>
                            
-                            <div class="uk-width-auto uk-flex uk-flex-middle uk-background-muted uk-text-small">
-                                <b><span class="uk-text-secondary uk-text-medium">INFO: &nbsp;</span></b>
+                            <div class="uk-width-auto uk-flex uk-flex-middle  uk-text-small">
+                                <b><span class="uk-text-danger uk-text-medium">INFO: &nbsp;</span></b>
                                 <b><span class="uk-text-primary uk-text-medium" id="infoAPP">???</span></b>&nbsp; &nbsp; &nbsp;
                             </div> 
                                   
@@ -175,7 +249,7 @@
                             </div>
                             <!-- Kolom untuk PAIR -->
                             <div class="uk-width-auto uk-flex uk-flex-middle">
-                                <b><span class="uk-text-secondary uk-text-medium">PAIR&nbsp;</span></b> <span id="tokenCount" class="uk-text-danger uk-text-bolder" > </span>&nbsp;:
+                                <b><span class="uk-text-danger uk-text-medium">PAIR&nbsp;</span></b> <span id="tokenCount" class="uk-text-danger uk-text-bolder" > </span>&nbsp;:
                                 <div id="dexpair-options" class="uk-form-controls" style="display: flex;">
                                     <!-- Radio button PAIR DEX akan di-generate di sini -->
                                 </div> 
@@ -336,6 +410,11 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- JS untuk dark mode -->
+<script>
+    
+    </script>
+    
 <script>
     toastr.options = {
         "timeOut": "2000",            // Durasi munculnya toastr dalam milidetik
@@ -387,7 +466,6 @@
         }
     }
 
-
     // Fungsi untuk menghapus item dari localStorage
     function removeFromLocalStorage(key) {
         localStorage.removeItem(storagePrefix + key);
@@ -416,6 +494,29 @@
     }
 
     
+    function toggleDarkMode() {
+        const isDark = document.body.classList.toggle('dark-mode');    
+        document.body.classList.remove('uk-light', 'uk-dark');
+        document.body.classList.add(isDark ? 'uk-dark' : 'uk-light');
+
+        saveToLocalStorage("darkMode", isDark);
+        updateDarkIcon(isDark);
+
+        toastr.info("UBAH MODE BERHASIL!!");
+        // Tunggu sebentar sebelum reload
+        setTimeout(() => {
+            location.reload();
+        }, 500);
+    }
+
+    function updateDarkIcon(isDark) {
+        const icon = document.querySelector('#darkModeToggle span');
+        if (icon) {
+            icon.setAttribute("uk-icon", isDark ? "icon: sun; ratio: 1.4" : "icon: moon; ratio: 1.4");
+            UIkit.icon(icon).$emit('update'); // refresh ikon
+        }
+    }
+        
    // Fungsi untuk memilih server secara acak dari array
    function getRandomServerFromCORSList() {
         const serverCORSList = getFromLocalStorage("SERVERCORS", []);  // Ambil data dari localStorage
@@ -755,11 +856,6 @@
             // hitung total token
             const jml = DataTokens.filter(item => 
                 item.status === true 
-                /* 
-                && 
-                item.withdrawToken === true && item.depositPair === true && 
-                item.withdrawPair === true && item.depositToken === true
-                */
             ).length;
 
             $('#tokenCountALL').text(`TOTAL SEMUA: ${jml} PAIR-TOKEN`);  
@@ -784,9 +880,15 @@
 
 
     $(document).ready(function() {  
-     
-          // Initialize Web3.js instance
-            // Ambil chain dari URL (misalnya: ?chain=polygon)
+    // dark mode change    
+    const isDark = getFromLocalStorage("darkMode", false);
+    if (isDark) {
+        $('body').addClass('dark-mode uk-dark').removeClass('uk-light');
+    } else {
+        $('body').removeClass('dark-mode uk-dark');
+    }
+    updateDarkIcon(isDark);
+
     const infuraApiKey = '9d0429abadc34232af7d5c0e6ab98631';
     const urlParams = new URLSearchParams(window.location.search);
     const chain = urlParams.get('chain') || 'eth'; // Default ke 'eth' jika chain tidak ditemukan di URL
@@ -1287,7 +1389,7 @@
         // Tambahkan label di atas checkbox
         const label = `
             <b>
-                <span class="uk-text-secondary uk-text-medium">
+                <span class="uk-text-warning uk-text-medium">
                     ${labelText}
                 </span>
             </b>
@@ -1540,7 +1642,7 @@
             detailTd.innerHTML = `
                 <input type="checkbox" class="statusCheckbox" data-id="${index}" data-index="${data.no}" ${data.status ? 'checked' : ''}>#${index+1}
                  <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex} </span><br/>
-                <span class="uk-text-secondary uk-text-bolder">${linkToken} VS ${linkPair}</span><br>
+                <span class="uk-text-danger uk-text-bolder">${linkToken} VS ${linkPair}</span><br>
                <span class="uk-text-primary uk-text-bolder">${withdrawToken}~${depositToken}</span> | <span class="uk-text-primary uk-text-bolder">${withdrawPair}~${depositPair}</span> <br/>
                
                 <span class="uk-text-primary uk-text-bolder">${data.symbol_in}</span> 
@@ -2097,7 +2199,7 @@
                     ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
                 </span>`;
             }).join('') +
-            `<span class='uk-text-secondary uk-text-bolder'>${finalResult.token} -> ${finalResult.pair}</span><br/>` +
+            `<span class='uk-text-primary uk-text-bolder'>${finalResult.token} -> ${finalResult.pair}</span><br/>` +
             finalResult.volumes_sellPair.reverse().map((data, index) => {
                 return `<span class='uk-text-danger' title="IDR: ${getPriceIDR(data.price)}">
                     ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
@@ -2111,7 +2213,7 @@
                     ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
                 </span>`;
             }).join('') +
-            `<span class='uk-text-secondary uk-text-bolder'>${finalResult.pair} -> ${finalResult.token}</span><br/>` +
+            `<span class='uk-text-primary uk-text-bolder'>${finalResult.pair} -> ${finalResult.token}</span><br/>` +
             finalResult.volumes_sellToken.reverse().map((data, index) => {
                 return `<span class='uk-text-danger' title="IDR: ${getPriceIDR(data.price)}">
                     ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
@@ -2345,67 +2447,6 @@
             );
         }
 
-      function ResultEksekusiLama(amount_out,FeeSwap,sc_input, sc_output, cex, Modal, amount_in, priceBuyToken_CEX, priceSellToken_CEX, priceBuyPair_CEX, priceSellPair_CEX, Name_in, Name_out, feeWD, dextype, trx) {
-        var NameX = Name_in+"_"+Name_out;  
-        var amount_out = Number(amount_out);
-        var FeeSwap = parseFloat(FeeSwap);
-        var FeeWD = parseFloat(feeWD);
-        var FeeTrade = parseFloat(0.0014 * Modal);
-        
-        // Hitung Harga Rata-rata
-        var rateSellTokenDEX = (amount_out * priceSellPair_CEX) / amount_in; // Harga rata-rata jual Name_in di DEX
-        var rateBuyPairDEX = (amount_in * priceBuyToken_CEX) / amount_out;
-        var rateTokentoPair = amount_out / amount_in; // Menghitung rate MDT per BNT atau per jumlah yang dibeli
-
-        // Hitung Nilai Akhir dan P&L
-        var totalModal = Modal + FeeSwap + FeeWD + FeeTrade; // Modal awal (USDT)
-        var totalFee = FeeSwap + FeeWD + FeeTrade; // Total biaya (USDT)
-        var totalValue = amount_out * priceSellPair_CEX; // Nilai akhir (USDT)
-        var profitLoss = totalValue - totalModal; // Profit or Loss (USDT)
-        var profitLossPercent = totalModal !== 0 ? (profitLoss / totalModal) * 100 : 0; // Profit or Loss (%)
-        var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
-        // == 0 ? totalFee + (Modal * 0.2 / 100) : parseFloat(SavedSettingData.FilterPNL);
-        
-        var conlusion="NO SELISIH";
-        var selisih =false;
-            // Jika filter PNL adalah 0, bandingkan nilai akhir dengan modal + semua biaya
-            if (filterPNLValue == 0) {
-                if (totalValue > totalModal + totalFee) {
-                    conlusion = "GET SIGNAL";
-                    selisih=true;
-                }
-            }
-            // Jika filter PNL bukan 0, bandingkan selisih nilai akhir dan modal dengan filter PNL
-            else {
-                if ((totalValue - totalModal) > filterPNLValue) {
-                    conlusion = "GET SIGNAL";
-                    selisih=true;
-                }
-            }         // Output log
-            
-                let IdCELL = `${cex.toUpperCase()}_${dextype.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}`;
-                var linkDEX = generateDexLink(dextype.toLowerCase(), Name_in, sc_input, Name_out, sc_output);
-
-            if (!linkDEX) {
-                console.error(`DEX Type "${dexType}" tidak valid atau belum didukung.`);
-                return;
-            }
-            if (stablecoins.includes(Name_in)) {
-                var RateSwap = `<label class="uk-text-success" title="DEX ${dextype.toUpperCase()} : ${formatPrice(rateBuyPairDEX)}(${Name_in}->${Name_out})"> ${formatPrice(rateBuyPairDEX)}</label>`;
-            } else if (stablecoins.includes(Name_out)) {
-                var RateSwap = `<label class="uk-text-danger" title="DEX ${dextype.toUpperCase()} : ${formatPrice(rateTokentoPair)} (${Name_in}->${Name_out})"> ${formatPrice(rateTokentoPair)}</label>`;
-            } else {
-                var RateSwap = `<label class="uk-text-primary" title="DEX ${dextype.toUpperCase()} : ${formatPrice(rateSellTokenDEX)} ${Name_in} ${formatPrice(rateBuyPairDEX)} ${Name_out}">${formatPrice(rateTokentoPair)}</label>`;
-            }   
-         // Cek apakah elemen dengan ID ada di DOM
-            if ($(`#SWAP_${IdCELL}`).length > 0) {
-                $(`#SWAP_${IdCELL}`).html(`<a href="${linkDEX}" target="_blank">  ${RateSwap} `);           
-            }
-
-            DisplayPNL( profitLoss,  cex,  Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out,totalValue,totalModal,conlusion,selisih,trx,profitLossPercent);
-            
-    }
-
      // Fungsi INFO SINYAL
      function DisplayPNL(PNL, cex, Coin_in, NameX, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, Coin_out, totalValue, totalModal, conclusion, selisih, trx, profitLossPercent) {
        // console.log('trx',trx)
@@ -2435,26 +2476,21 @@
         var isPositivePNL = (filterPNLValue === 0 && totalValue > totalModal) || ((totalValue - totalModal) > filterPNLValue);
 
         if (isPositivePNL) {
-           // if(trx==='TokentoPair'){
                 var tokenData = DataTokens.find(t => t.cex === cex.toUpperCase() && t.symbol_in === Coin_in && t.symbol_out === Coin_out);
-
                 var withdraw = tokenData.withdrawToken ? createLink(urlsCEXToken.withdrawUrl, 'WD') : `<b style="color:red; font-weight:bold;">WX</b>`;
                 var deposit = tokenData.depositPair ? createLink(urlsCEXToken.depositUrl, 'DP') : `<b style="color:red; font-weight:bold;">DX</b>`;
-            // }else{    
-            //     var tokenData = DataTokens.find(t => t.cex === cex.toUpperCase() && t.symbol_in === Coin_out && t.symbol_out === Coin_in);
-
-            //     var withdraw = tokenData.withdrawPair ? createLink(urlsCEXPair.withdrawUrl, 'WD') : `<b style="color:red; font-weight:bold;">WX</b>`;
-            //     var deposit = tokenData.depositToken ? createLink(urlsCEXToken.depositUrl, 'DP') : `<b style="color:red; font-weight:bold;">DX</b>`;
-            // }    
+             
             toastr.success(sinyals);
-            rowCell.css({ 'background-color': '#c2f890', 'font-weight': 'bolder' });
-                resultCell.html(`
-                <span class="uk-text-secondary"> ${withdraw} [${FeeWD.toFixed(2)}$] ~ ${deposit}</span><br/>
-                    <span class="uk-text-danger">All:${totalFee.toFixed(2)}$</span>
-                    <span class="uk-text-primary">SW:${FeeSwap.toFixed(2)}$</span> <br/>
-                    <span class="uk-text-secondary">GT:${totalGet.toFixed(2)}$</span>
-                    <span class="uk-text-secondary">PNL:${PNL.toFixed(2)}$ </span>
-                `);
+            
+            rowCell.attr("style", "background-color: #daf4c3 !important; font-weight: bolder !important; color: black !important;");
+            resultCell.html(`
+                <span style="color: #444;">${withdraw} [${FeeWD.toFixed(2)}$] ~ ${deposit}</span><br/>
+                <span style="color: #d20000;">All: ${totalFee.toFixed(2)}$</span>
+                <span style="color: #1e87f0;">SW: ${FeeSwap.toFixed(2)}$</span><br/>
+                <span style="color: #444;">GT: ${totalGet.toFixed(2)}$</span>
+                <span style="color: #444;">PNL: ${PNL.toFixed(2)}$</span>
+            `);
+
 
             if (!buyCell.parent().is("span")) {
                 buyCell.wrap('<a href="' + buyLink + '" target="_blank"></a>');
@@ -2466,11 +2502,11 @@
             InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out,profitLossPercent);
         } else {
             resultCell.html(`
-                <span class="uk-text-secondary" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
+                <span class="uk-text-warning" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
                 <span class="uk-text-danger" title="FEE ALL">ALL:${totalFee.toFixed(2)}$</span>
                 <span class="uk-text-primary" title="FEE SWAP"> ${FeeSwap.toFixed(2)}$</span><br/>
                 <span class="uk-text-success" title="GET BRUTO">Get:${totalGet.toFixed(2)}$</span>
-                <span class="uk-text-secondary" title="GET NETTO / PNL" > ${PNL.toFixed(2)}$</span>
+                <span class="uk-text-warning" title="GET NETTO / PNL" > ${PNL.toFixed(2)}$</span>
             `);
         }
 
@@ -2778,25 +2814,12 @@
                 var warna = "#f39999";
                 switch (xhr.status) {
                     case 0:  
-//                        alertMessage = "NO RESPON"; 
                         if(dexType=='kyberswap' || dexType =='odos' ||  dexType == '0x'){
                             alertMessage = "KENA LIMIT";
                         }
-                        // else if(dexType=='0x'){
-                        //         getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, dexType, NameToken, NamePair, cex,action, callback);
-                        //         console.log(`${dexType} PINDAH KE SWOOP`);
-                        //     }
                             else{
                             alertMessage = "NULL RESPONSE";
                         }
-                        /*
-                        if(dexType=='kyberswap' || dexType=='odos'){
-                            getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, dexType, NameToken, NamePair, cex,action, callback);
-                            console.log(`${dexType} PINDAH KE SWOOP`);
-                        }else{
-                            alertMessage = "AKSES KENA LIMIT";
-                        }
-                        */
                         break;                        
                     case 400:
                         try { 
@@ -2820,10 +2843,6 @@
                     case 403:
                         alertMessage = "AKSES DIBLOK";
                         warna = "#fff";
-                        // if(dexType=='0x'){
-                        //         getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, dexType, NameToken, NamePair, cex,action, callback);
-                        //         console.log(`${dexType} PINDAH KE SWOOP`);
-                        //     }
                         break;
                     case 404:
                         alertMessage = "Permintaan tidak ditemukan";
@@ -2831,14 +2850,6 @@
                     case 429:
                             warna = "#f39999";
                             alertMessage = "AKSES KENA LIMIT";
-                            /*
-                            if(dexType=='okx'){
-                                getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, dexType, NameToken, NamePair, cex,action, callback);
-                                console.log(`${dexType} PINDAH KE SWOOP`);
-                            }else{
-                                alertMessage = "AKSES KENA LIMIT";
-                            }
-                            */
                         break;
                     case 500:
                         try {
