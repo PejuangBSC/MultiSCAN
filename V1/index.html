@@ -916,15 +916,7 @@
         avax: `https://avalanche-mainnet.infura.io/v3/${infuraApiKey}`,
         optimism: `https://optimism-mainnet.infura.io/v3/${infuraApiKey}`,
         solana: solanaWeb3.clusterApiUrl('mainnet-beta')
-    };
-
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        const hash = this.getAttribute('href');
-        const currentURL = window.location.href.split('#')[0];
-        history.pushState(null, null, currentURL + hash);
-        document.querySelector(hash).scrollIntoView({ behavior: 'smooth' });
-    });
+    };    
 
     // Tentukan URL RPC untuk chain yang dipilih
     let web3;
