@@ -425,19 +425,7 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- JS untuk dark mode -->
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const hash = this.getAttribute('href');
-        const currentURL = window.location.href.split('#')[0];
-        history.pushState(null, null, currentURL + hash);
-        document.querySelector(hash).scrollIntoView({ behavior: 'smooth' });
-    });
-});
 
-    </script>
     
 <script>
    
@@ -930,6 +918,14 @@
         optimism: `https://optimism-mainnet.infura.io/v3/${infuraApiKey}`,
         solana: solanaWeb3.clusterApiUrl('mainnet-beta')
     };
+
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        const hash = this.getAttribute('href');
+        const currentURL = window.location.href.split('#')[0];
+        history.pushState(null, null, currentURL + hash);
+        document.querySelector(hash).scrollIntoView({ behavior: 'smooth' });
+    });
 
     // Tentukan URL RPC untuk chain yang dipilih
     let web3;
