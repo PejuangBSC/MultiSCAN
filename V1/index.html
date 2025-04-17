@@ -77,8 +77,9 @@
             white-space: nowrap;
         }
         .uk-background{
-            background-color: lightgray;
+            background-color: #e2e2e2 !important;
         }
+       
         .merah{
             font-weight: bold;
             color: rgb(250, 249, 249) !important;
@@ -137,6 +138,20 @@
         .dark-mode .uk-link {
             color: #4fc3f7 !important;  /* Warna biru muda, bisa diganti sesuai preferensi */
         }
+        /* Mode terang (default) */
+        body.uk-light #sinyal-container {
+            background-color: #fff !important;
+            color: #000 !important;
+        }
+        .dark-mode .uk-background{
+            background-color: #616263f5 !important;
+        }
+
+        /* Mode gelap */
+        body.uk-dark #sinyal-container {
+            background-color: #1e1e1e !important;
+            color: #f0f0f0 !important;
+        }
 
         /* CSS dark mode */
         body {
@@ -145,11 +160,11 @@
 
         .dark-mode {
             background-color: #121212 !important;
-            color: #f0f0f0 !important;
+            color: #5d0404 !important
         }
 
         .dark-mode .uk-table tbody td {
-            background-color: #1e1e1e !important;
+            background-color: #1e1e1e ;
             color: #f0f0f0 !important;
             border-color: #444 !important;
         }
@@ -200,13 +215,13 @@
             background-color: #333;
         }
     </style>
-<base href="/V1/">
+    <base href="/V1/">
 </head>
 <body>
-<div class="uk-container uk-margin-small-top">
-        <div class="uk-flex uk-flex-between uk-grid-small" uk-grid style="flex: 1;">
+<div class="uk-container uk-margin-small-top uk-background-muted">
+        <div class="uk-flex uk-flex-between uk-grid-small uk-margin " uk-grid style="flex: 1;">
             <!-- Bagian Kiri (Form) -->
-            <div class="uk-width-auto uk-background-muted">
+            <div class="uk-width-auto">
                 <div id="darkModeToggle" onclick="toggleDarkMode()" class="icon-wrapper" title="Ganti Mode Gelap/Terang">
                     <span uk-icon="icon: moon; ratio: 0.4"></span> 🌓
                 </div>
@@ -359,7 +374,7 @@
 
     <div>
         <!-- Bagian untuk menampilkan sinyal DEX -->
-        <div class="uk-text uk-text-small  uk-margin-small-top " id="sinyal-container" style="background-color: #fff;">
+        <div class="uk-text uk-text-small uk-margin-small-top" id="sinyal-container">
             <!-- Sinyal DEX akan dimuat di sini -->
         </div>
         <div class="uk-grid-small uk-flex uk-flex-middle  uk-margin-small-top" uk-grid>
@@ -1179,7 +1194,7 @@
                                                     var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in_token));
                                                     getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
                                                         if (!altError) {
-                                                            $(`#${IdTokentoPair}`).css('background-color', '#f9f9e4');
+                                                            $(`#${IdTokentoPair}`).css('background-color', '#ded5d5');
                                                             $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
                                                             $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
                                                                 ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair');
@@ -1196,7 +1211,7 @@
                                                    var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in_token));
                                                     getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
                                                         if (!altError) {
-                                                            $(`#${IdTokentoPair}`).css('background-color', '#f9f9e4');
+                                                            $(`#${IdTokentoPair}`).css('background-color', '#ded5d5');
                                                             $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
                                                             $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
                                                                 ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair');
@@ -1211,7 +1226,7 @@
                                                    // toastr.info(`${TokenPair} ${dextype} PINDAH SERVER`);
                                                     getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in_token, priceBuyPairCEX, 'altodos', NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
                                                         if (!altError) {
-                                                            $(`#${IdTokentoPair}`).css('background-color', '#f9f9e4');
+                                                            $(`#${IdTokentoPair}`).css('background-color', '#ded5d5');
                                                             $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
                                                             $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
                                                                 ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair');
@@ -1224,7 +1239,7 @@
                                                 }
                                             return;
                                         } else {
-                                           // $(`#${IdTokentoPair}`).css('background-color', "#f9f9e4");
+                                           // $(`#${IdTokentoPair}`).css('background-color', "#faf6f6");
                                             $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
                                             $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
                                             
@@ -1250,7 +1265,7 @@
                                                     var amount_in = BigInt(Math.round(Math.pow(10, des_output) * amount_in_pair));
                                                     getPriceSWOOP( sc_output, des_output,sc_input, des_input, amount_in, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
                                                         if (!altError) {
-                                                            $(`#${IdPairtoToken}`).css('background-color', '#f9f9e4');
+                                                            $(`#${IdPairtoToken}`).css('background-color', '#ded5d5');
                                                             $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
                                                             $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
 
@@ -1267,7 +1282,7 @@
                                                    var amount_in = BigInt(Math.round(Math.pow(10, des_output) * amount_in_pair));
                                                     getPriceSWOOP( sc_output, des_output,sc_input, des_input, amount_in, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
                                                         if (!altError) {
-                                                            $(`#${IdPairtoToken}`).css('background-color', '#f9f9e4');
+                                                            $(`#${IdPairtoToken}`).css('background-color', '#ded5d5');
                                                             $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
                                                             $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
 
@@ -1282,7 +1297,7 @@
                                                    // toastr.info(`${PairToken} ${dextype} PINDAH SERVER`);
                                                     getPriceDEX( sc_output, des_output,sc_input, des_input, amount_in_pair, priceBuyPairCEX, 'altodos', NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
                                                         if (!altError) {
-                                                            $(`#${IdPairtoToken}`).css('background-color', '#f9f9e4');
+                                                            $(`#${IdPairtoToken}`).css('background-color', '#ded5d5');
                                                             $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
                                                             $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
 
@@ -1295,7 +1310,7 @@
                                             }
                                             return;
                                         } else {
-                                           // $(`#${IdPairtoToken}`).css('background-color', "#f9f9e4");
+                                           //$(`#${IdPairtoToken}`).css('background-color', "#faf6f6");
                                             $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
                                             $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
                                            
@@ -2523,7 +2538,7 @@
         
         // Membuat link dengan format umum tanpa pengecekan kondisi
         var sLink = `<a href=#SWAP_${idCELL} class='buy'>
-            ${NameToken}->${NamePair} <span class="uk-text-secondary"> ${profitLossPercent.toFixed(1)}% </span>
+            ${NameToken}->${NamePair} <span class="uk-text-warning"> ${profitLossPercent.toFixed(1)}% </span>
             (<span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}:</span><span class="uk-text-primary">${PNL.toFixed(2)}$ </span>)
         </a>`;
 
