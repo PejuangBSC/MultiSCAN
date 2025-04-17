@@ -431,6 +431,14 @@
     </script>
     
 <script>
+    document.querySelectorAll('a[data-scroll]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const id = this.getAttribute('href').substring(1);
+            location.hash = id; // menjaga query string tetap utuh
+        });
+    });
+
     toastr.options = {
         "timeOut": "2000",            // Durasi munculnya toastr dalam milidetik
         "extendedTimeOut": "2000",    // Waktu tambahan saat toastr di-hover
