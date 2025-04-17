@@ -1209,24 +1209,37 @@
             });
         }
     //fungsi cek FEE WD per TOKEN BITGET
-    function CekfeeWDBITGET() {
+   function CekfeeWDBITGET() {
         $.ajax({
             url: 'https://api.bitget.com/api/v2/spot/public/coins',
             method: "GET",
             success: function(response) {
                 // Filter data untuk coin dengan network sesuai dengan chainTypeConfig dan hanya yang deposit atau withdraw aktif
+                // const coinsWithChain = response.data.filter(function(item) {
+                //     return item.chains.some(function(chain) {
+                //         return chain.chain === DTChain.CEXCHAIN.BITGET.chainCEX &&
+                //                (chain.rechargeable === "true" || chain.withdrawable === "true"); // Salah satu harus aktif
+                //     });
+                // });
+                // Filter data untuk coin dengan network sesuai dengan chainTypeConfig dan hanya yang deposit atau withdraw aktif
                 const coinsWithChain = response.data.filter(function(item) {
                     return item.chains.some(function(chain) {
-                        return chain.chain === DTChain.CEXCHAIN.BITGET.chainCEX &&
-                               (chain.rechargeable === "true" || chain.withdrawable === "true"); // Salah satu harus aktif
+                        // If chain is 'erc20' and coin is 'ETH', treat it as 'eth'
+                        if (DTChain.CEXCHAIN.BITGET.chainCEX === 'ERC20' && item.coin === 'ETH') {
+                            chain.chain = 'ETH';
+                        }
+                        return (chain.chain === DTChain.CEXCHAIN.BITGET.chainCEX || chain.chain === 'ETH') &&
+                            (chain.rechargeable === "true" || chain.withdrawable === "true"); // Salah satu harus aktif
                     });
                 });
-    
+
                 const coinDepositWithdrawStatus = coinsWithChain.map(function(item) {
+                    // const CEXChain = item.chains.find(function(chain) {
+                    //     return chain.chain === DTChain.CEXCHAIN.BITGET.chainCEX;
+                    // });
                     const CEXChain = item.chains.find(function(chain) {
-                        return chain.chain === DTChain.CEXCHAIN.BITGET.chainCEX;
+                        return chain.chain === DTChain.CEXCHAIN.BITGET.chainCEX || chain.chain === 'ETH';
                     });
-                
                     return {
                         cex: "BITGET",
                         chain: DTChain.CEXCHAIN.BITGET.chainCEX,
