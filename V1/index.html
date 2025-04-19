@@ -138,18 +138,19 @@
         .dark-mode .uk-link {
             color: #4fc3f7 !important;  /* Warna biru muda, bisa diganti sesuai preferensi */
         }
-        /* Mode terang (default) */
-         #sinyal-container {
-            background-color: #fff !important;
-            color: #000 !important;
-        }
+        
         .dark-mode .uk-background{
             background-color: #616263f5 !important;
         }
 
+        /* Mode terang (default) */
+        #sinyal-container {
+            background-color: #fff !important;
+            color: #000 !important;
+        }
         /* Mode gelap */
         body.uk-dark #sinyal-container {
-            background-color: #1e1e1e !important;
+            background-color: #605d5d !important;
             color: #f0f0f0 !important;
         }
 
@@ -215,6 +216,7 @@
             background-color: #333;
         }
     </style>
+    <!-- <base href="/V1/"> -->
 </head>
 <body>
 <div class="uk-container uk-margin-small-top uk-background-muted">
@@ -424,11 +426,12 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<!-- JS untuk dark mode -->
+<script>
+    
+    </script>
     
 <script>
-   
-
     toastr.options = {
         "timeOut": "2000",            // Durasi munculnya toastr dalam milidetik
         "extendedTimeOut": "2000",    // Waktu tambahan saat toastr di-hover
@@ -781,28 +784,40 @@
         return parseFloat((idrAmount / rateUSDT).toFixed(8));
     }
 
-     // Fungsi untuk mendapatkan fee gas dalam Gwei
-     function feeGasGwei() {
-        $.when(
-            $.ajax({
-                url: 'https://data-api.binance.vision/api/v3/ticker/24hr?symbol=' + DTChain.BaseFEEDEX,
-                method: 'GET'
-            }),
-            $.ajax({
-                url: 'https://gas.api.infura.io/v3/9d0429abadc34232af7d5c0e6ab98631/networks/' + DTChain.Kode_Chain + '/suggestedGasFees',
-                method: 'GET'
-            })
-        ).done(function(PriceResponse, gasResponse) {
-            var lastPrice = PriceResponse[0].lastPrice;
-            saveToLocalStorage('PRICEGAS', lastPrice); // Menggunakan saveToLocalStorage
-            var mediumGasFee = gasResponse[0].low.suggestedMaxFeePerGas;
-            saveToLocalStorage('gasGWEI', mediumGasFee); // Menggunakan saveToLocalStorage
-            
-           // $("#LGwei").text("" + parseFloat(getFromLocalStorage('gasGWEI', 0)).toFixed(2)+" | "+DTChain.BaseFEEDEX+":"+parseFloat(getFromLocalStorage('PRICEGAS', 0)).toFixed(2)); // Menggunakan getFromLocalStorage
+    function feeGasGwei() {
+        const isSolana = (DTChain?.Nama_Chain || "").toLowerCase() === "solana";
+        
+        let lastPrice = null;  // Mendeklarasikan lastPrice agar bisa diakses secara global
 
-           //  console.log('Medium Gas Fee:', mediumGasFee);
-        }).fail(function(error) {
-            console.error('Failed to fetch data:', error);
+        // Panggil Binance untuk semua chain
+        $.ajax({
+            url: 'https://data-api.binance.vision/api/v3/ticker/24hr?symbol=' + DTChain.BaseFEEDEX,
+            method: 'GET'
+        }).done(function (PriceResponse) {
+            lastPrice = PriceResponse.lastPrice;  // Simpan nilai lastPrice
+            saveToLocalStorage('PRICEGAS', lastPrice);
+            console.log('BASE FEE '+DTChain.BaseFEEDEX+' FOR DEX:', lastPrice);
+
+            // Jika bukan Solana, baru panggil Infura untuk gas fee
+            if (!isSolana) {
+                $.ajax({
+                    url: 'https://gas.api.infura.io/v3/9d0429abadc34232af7d5c0e6ab98631/networks/' + DTChain.Kode_Chain + '/suggestedGasFees',
+                    method: 'GET'
+                }).done(function (gasResponse) {
+                    const mediumGasFee = gasResponse.low.suggestedMaxFeePerGas;
+                    saveToLocalStorage('gasGWEI', mediumGasFee);
+                    console.log('FEE GAS GWEI:', mediumGasFee);
+                    console.log('BASE FEE ' + DTChain.BaseFEEDEX + ' FOR DEX:', lastPrice);
+
+                }).fail(function (error) {
+                    console.error('Failed to fetch gas fee from Infura:', error);
+                });
+            } else {
+                console.log('Chain Solana: Tidak perlu gas fee dari Infura.');
+            }
+
+        }).fail(function (error) {
+            console.error('Failed to fetch price from Binance:', error);
         });
     }
 
@@ -916,7 +931,7 @@
         avax: `https://avalanche-mainnet.infura.io/v3/${infuraApiKey}`,
         optimism: `https://optimism-mainnet.infura.io/v3/${infuraApiKey}`,
         solana: solanaWeb3.clusterApiUrl('mainnet-beta')
-    };    
+    };
 
     // Tentukan URL RPC untuk chain yang dipilih
     let web3;
@@ -1349,9 +1364,9 @@
             for (let groupIndex = 0; groupIndex < tokenGroups.length; groupIndex++) {
                 let groupTokens = tokenGroups[groupIndex];
                 console.log(`Memproses grup ${groupIndex + 1} dari ${tokenGroups.length}`);
-                if ((selectedChain?.Nama_Chain || "").toLowerCase() !== "solana") {
+                //if ((selectedChain?.Nama_Chain || "").toLowerCase() !== "solana") {
                     feeGasGwei();
-                }
+               // }
                 getRateUSDT(); // panggil di awal aplikasi atau sebelum getPriceCEX
 
                 for (let tokenIndex = 0; tokenIndex < groupTokens.length; tokenIndex++) {
@@ -2057,7 +2072,7 @@
                         if (ratePrice.eth) {
                             saveToLocalStorage('RateIDRETH', ratePrice.eth);
                             saveToLocalStorage('RateETHIDR', ratePrice.eth);
-                            console.log("RATE ETH/USDT: " + ratePrice.eth.toFixed(2));
+                         //   console.log("RATE ETH/USDT: " + ratePrice.eth.toFixed(2));
                         }
     
                         // Simpan harga USDT ke IDR ke localStorage dan tampilkan di halaman
@@ -2553,7 +2568,12 @@
             'kyberswap': `https://kyberswap.com/swap/${DTChain.Nama_Chain}/${sc_input}-to-${sc_output}`,
             'kana': `https://app.paraswap.xyz/#/swap/${sc_input}-${sc_output}?version=6.2&network=${DTChain.Nama_Chain}`,
             'odos': "https://app.odos.xyz",
-            '0x': `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
+            '0x': DTChain.Nama_Chain.toLowerCase() === 'solana' 
+           // `https://matcha.xyz/tokens/solana/${sc_input.toLowerCase()}?buyChain=1399811149&buyAddress=${sc_output.toLowerCase()}`
+            ? `https://matcha.xyz/tokens/solana/${sc_input}?sellChain=1399811149&sellAddress=${sc_output}` 
+            : `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
+        
+           // '0x': `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
             '1inch': `https://app.1inch.io/#/${DTChain.Kode_Chain}/advanced/swap/${sc_input}/${sc_output}`,
             'okx': `https://www.okx.com/web3/dex-swap?inputChain=${DTChain.Kode_Chain}&inputCurrency=${sc_input}&outputChain=501&outputCurrency=${sc_output}`,
             'magpie': `https://app.magpiefi.xyz/swap/${DTChain.Nama_Chain.toLowerCase()}/${NameToken.toUpperCase()}/${DTChain.Nama_Chain.toLowerCase()}/${NamePair.toUpperCase()}`,
@@ -2562,7 +2582,7 @@
             'jupiter': `https://jup.ag/swap/${sc_input}-${sc_output}`,
             'bebop' : `https://bebop.xyz/trade?${DTChain.Nama_Chain}&sell=${NameToken.toUpperCase()}&buy=${NamePair.toUpperCase()}`,
         };
-
+       // https://matcha.xyz/tokens/solana/So11111111111111111111111111111111111111112?sellChain=1399811149&sellAddress=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&sellAmount=100
         return link[dex] || null;
     }
 
@@ -2580,7 +2600,7 @@
                                 NamePair === "SOL" ? "WSOL" :
                                 NamePair === "AVAX" ? "WAVAX" :
                                 NamePair;
-        var linkDEX = generateDexLink(dexType, NameToken, sc_input, NamePair, sc_output);
+        var linkDEX = generateDexLink(dexType, NameToken, sc_input_in, NamePair, sc_output_in);
         // Mapping chainId untuk Kana
         const KanaChainID = {
             'solana': 1,
@@ -2627,8 +2647,13 @@
                 };                
                 break;
             case '0x':           
-                    apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
+                    if(DTChain.Nama_Chain.toLowerCase() === 'solana'){
+                        apiUrl = selectedServer+"https://matcha.xyz/api/swap/quote/solana?sellTokenAddress="+sc_input_in+"&buyTokenAddress="+sc_output_in+"&sellAmount="+amount_in+"&dynamicSlippage=true&slippageBps=50&userPublicKey=Eo6CpSc1ViboPva7NZ1YuxUnDCgqnFDXzcDMDAF6YJ1L";
+                    }else{
+                        apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
+                    }
                     break;
+                    //
             case '1inch':
                     apiUrl = "https://api-defillama.1inch.io/v6.0/" + DTChain.Kode_Chain + "/quote?src=" + sc_input + "&dst=" + sc_output + "&amount=" + amount_in + "&includeGas=true";
                 break;
@@ -2698,7 +2723,7 @@
             headers: Object.assign(
                 {}, 
                 headers || {}, // Header tambahan dari variabel `headers`
-                dexType === '0x' ? { '0x-api-key': "6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5" } : {},
+               // dexType === '0x' ? { '0x-api-key': "6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5" } : {},
                 dexType === 'okx' ? {
                     "OK-ACCESS-PROJECT": selectedApiKey.ProjectOKX,
                     "OK-ACCESS-KEY": selectedApiKey.ApiKeyOKX,
@@ -2755,9 +2780,22 @@
                                 FeeSwap = parseFloat(response.data.estimatedGas);
                                 break;
                             case '0x':
+                                // Konversi buyAmount ke satuan desimal (jumlah token yang diterima)
                                 amount_out = response.buyAmount / Math.pow(10, des_output);
-                                FeeSwap = ((response.transaction.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('PRICEGAS', 0))) ; // Menggunakan getFromLocalStorage
+
+                                if (DTChain.Nama_Chain.toLowerCase() === 'solana') {
+                                    // Jika jaringan adalah Solana, fee berasal dari totalNetworkFee (dalam lamport)
+                                    let feeLamport = Number(response.totalNetworkFee || 0); // fallback jika null
+                                    FeeSwap =( feeLamport / 1e9)* parseFloat(getFromLocalStorage('PRICEGAS', 0)); // konversi lamport ke SOL
+                                   
+                                } else {
+                                    // Jika bukan Solana (misal Ethereum, BSC, dll.), hitung dari gas dan harga gas
+                                    let gasUsed = Number(response.transaction?.gas || 0);
+                                    let gasPrice = parseFloat(getFromLocalStorage('PRICEGAS', 0));
+                                    FeeSwap = (gasUsed / 1e9) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // hasil dalam native coin (ETH, BNB, dll.)
+                                }
                                 break;
+
                             case '1inch':
                                 amount_out = parseFloat(response.dstAmount) / Math.pow(10, des_output);
                                 FeeSwap = ((response.gas / Math.pow(10, 9) * parseFloat(getFromLocalStorage('gasGWEI', 0)))) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // Menggunakan getFromLocalStorage
@@ -2771,9 +2809,22 @@
                                 FeeSwap = (response.data[0].estimateGasFee / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0)) * parseFloat(getFromLocalStorage('PRICEGAS', 0));            
                                 break;  
                             case 'jupiter':
-                                var amount_out = response.outAmount/Math.pow(10, des_output);
-                                FeeSwap = 0.1;    
-                                case 'bebop':
+                                var amount_out = response.outAmount / Math.pow(10, des_output);
+                                
+                                // Menghitung total fee dari semua route
+                                // var totalFeeLamport = 0;
+                                // if (Array.isArray(response.routePlan)) {
+                                //     response.routePlan.forEach(route => {
+                                //         const feeAmount = parseFloat(route.swapInfo.feeAmount || 0);
+                                //         totalFeeLamport += feeAmount;
+                                //     });
+                                // }
+
+                                // Konversi fee dari Lamport ke SOL (1 SOL = 1e9 Lamport)
+//                                FeeSwap = (totalFeeLamport / Math.pow(10, 9))* parseFloat(getFromLocalStorage('PRICEGAS', 0));  // Menggunakan nilai fee dalam SOL
+                                FeeSwap =0.1;
+                                break;
+                            case 'bebop':
                                 // Ambil sellTokens dan buyTokens dari respons
                                 const sellTokens = response.routes[0].quote.sellTokens;
                                 const buyTokens = response.routes[0].quote.buyTokens;
