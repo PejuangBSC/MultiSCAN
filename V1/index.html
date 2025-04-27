@@ -765,8 +765,25 @@
                 // Return hasil BUY dan SELL
                 return { priceSell ,priceBuy};
             }
+        },
+        BITMART: {
+            url: coins => selectedServer+`https://api-cloud.bitmart.com/spot/quotation/v3/books?symbol=${coins.symbol}_USDT&limit=3`,
+            processData: data => {
+                if (!data?.data?.asks || !data?.data?.bids) {
+                    console.error('Invalid BITMART response structure:', data);
+                    return { priceBuy: [], priceSell: [] };
+                }
+                const priceBuy = data.data.bids.slice(0, 3).map(([price, volume]) => ({
+                    price: parseFloat(price),
+                    volume: parseFloat(volume) * parseFloat(price)
+                }));
+                const priceSell = data.data.asks.slice(0, 3).map(([price, volume]) => ({
+                    price: parseFloat(price),
+                    volume: parseFloat(volume) * parseFloat(price)
+                }));
+                return { priceBuy, priceSell };
+            }
         }
-
 
         ,COINEX: {
             url: coins => `https://api.coinex.com/v2/spot/depth?limit=5&interval=0.00000000001&market${coins.symbol}USDT`,
@@ -1846,6 +1863,12 @@
             if (baseUrlTradePair !== "#") baseUrlTradePair = `https://www.okx.com/trade-spot/${pair}-usdt`;
             baseUrlWithdraw = `https://www.okx.com/balance/withdrawal/${token}-chain`;
             baseUrlDeposit = `https://www.okx.com/balance/recharge/${pair}`;
+        }
+        else if (cex === "BITMART") {
+            if (baseUrlTradeToken !== "#") baseUrlTradeToken = `https://www.bitmart.com/trade/en-US?symbol=${token}_USDT&type=spot`;
+            if (baseUrlTradePair !== "#") baseUrlTradePair = `https://www.bitmart.com/trade/en-US?symbol=${pair}_USDT&type=spot`;
+            baseUrlWithdraw = `https://www.bitmart.com/asset-withdrawal/en-US`;
+            baseUrlDeposit = `https://www.bitmart.com/asset-deposit/en-US`;
         }
         else if (cex === "INDODAX") {
             if (baseUrlTradeToken !== "#") baseUrlTradeToken = `https://indodax.com/market/${token}IDR`;
@@ -3376,6 +3399,7 @@
         isMexcSuccess = false;
         isOkxSuccess = false;
         isINDODAXSuccess = false;
+        isBitmartSuccess = false;
 
         // Cek dan panggil fungsi cek fee withdrawal hanya untuk CEX yang dipilih
         selectedCEX.forEach(exchange => {
@@ -3402,6 +3426,9 @@
                         break;
                     case "OKX":
                         CekfeeWDOKX(CONFIG_CEX.OKX);
+                        break;
+                    case "BITMART":
+                        CekfeeWDBITMART(CONFIG_CEX.BITMART);
                         break;
                     case "INDODAX":
                         CekfeeWDINDODAX();
@@ -3456,6 +3483,12 @@
         }
 
         if (CONFIG_CEX.OKX && isOkxSuccess !== true) {
+            allSuccess = false;
+        }else{
+            isSuccess++;
+        }
+
+        if (CONFIG_CEX.BITMART && isBitmartSuccess !== true) {
             allSuccess = false;
         }else{
             isSuccess++;
@@ -3598,6 +3631,56 @@
         toastr.info("SUKSES, CEK UPDATE WALLET INDODAX");
         isINDODAXSuccess = true;
         checkAllUpdatesCompleted();
+    }
+
+     //fungsi cek FEE WD per TOKEN BITMART
+     function CekfeeWDBITMART() {
+        $.ajax({
+            url: 'https://cors-anywhere.herokuapp.com/https://api-cloud.bitmart.com/account/v1/currencies',
+            method: "GET",
+            success: function(response) {
+                let parsedResponse;
+                try {
+                    parsedResponse = (typeof response === "string") ? JSON.parse(response) : response;
+                } catch (e) {
+                    toastr.error('RESPON BITMART TIDAK VALID JSON');
+                    return;
+                }
+
+            // console.log('PARSED RESPONSE:', parsedResponse); // Tambahkan ini!!
+
+                if (!parsedResponse.data || !parsedResponse.data.currencies) {
+                    toastr.error('DATA BITMART TIDAK SESUAI FORMAT!!');
+                    return;
+                }
+
+                const coinsWithChain = parsedResponse.data.currencies.filter(function(item) {
+                    return (item.deposit_enabled === true || item.withdraw_enabled === true) &&
+                        (item.network === DTChain.CEXCHAIN.BITMART.chainCEX); 
+                });
+
+                const coinDepositWithdrawStatus = coinsWithChain.map(function(item) {
+                    return {
+                        cex: "BITMART",
+                        chain: DTChain.CEXCHAIN.BITMART.chainCEX,
+                        tokenName: item.currency,
+                        scToken: item.contract_address ? item.contract_address : "---",
+                        feeWDs: item.withdraw_fee ? parseFloat(item.withdraw_fee) : 0,
+                        depositEnable: item.deposit_enabled === true,
+                        withdrawEnable: item.withdraw_enabled === true
+                    };
+                });
+
+                console.log("BITMART WALLET:", coinDepositWithdrawStatus);
+                allFeeWD = allFeeWD.concat(coinDepositWithdrawStatus);
+                toastr.info("SUKSES, CEK UPDATE WALLET BITMART");
+                isBitmartSuccess = true;
+                checkAllUpdatesCompleted();
+            },
+            error: function(xhr, status, error) {
+                toastr.error('UPDATE FEE WD BITMART GAGAL, SILAKAN REFRESH!!');
+            }
+        });
     }
 
     function CekfeeWDGATE() {
