@@ -227,7 +227,7 @@
                     <span uk-icon="icon: moon; ratio: 0.4"></span> 🌓
                 </div>
                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
-                    MULTISCAN  V1.2 :: <label id="namachain"></label>  &nbsp;
+                    MULTISCAN  V1.3 :: <label id="namachain"></label>  &nbsp;
                 </h2>
                 <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
                 <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
@@ -662,11 +662,11 @@
                     console.error('Invalid KUCOIN response structure:', data);
                     return { priceBuy: [], priceSell: [] };
                 }
-                const priceBuy = data.data.bids.slice(0, 4).map(([price, volume]) => ({
+                const priceBuy = data.data.bids.slice(0, 3).map(([price, volume]) => ({
                     price: parseFloat(price),
                     volume: parseFloat(volume) * parseFloat(price)
                 }));
-                const priceSell = data.data.asks.slice(0, 4).map(([price, volume]) => ({
+                const priceSell = data.data.asks.slice(0, 3).map(([price, volume]) => ({
                     price: parseFloat(price),
                     volume: parseFloat(volume) * parseFloat(price)
                 }));
@@ -2683,7 +2683,9 @@
                     if(DTChain.Nama_Chain.toLowerCase() === 'solana'){
                         apiUrl = selectedServer+"https://matcha.xyz/api/swap/quote/solana?sellTokenAddress="+sc_input_in+"&buyTokenAddress="+sc_output_in+"&sellAmount="+amount_in+"&dynamicSlippage=true&slippageBps=50&userPublicKey=Eo6CpSc1ViboPva7NZ1YuxUnDCgqnFDXzcDMDAF6YJ1L";
                     }else{
-                        apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
+                        //https://matcha.xyz/api/swap/price?chainId=1&buyToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&sellToken=0x3c4b6e6e1ea3d4863700d7f76b36b7f3d3f13e3d&sellAmount=11100000000&slippageBps=5000&gasPrice=573730960
+                        apiUrl = selectedServer+"https://matcha.xyz/api/swap/price?chainId=" + DTChain.Kode_Chain +"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in ;
+                       // apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
                     }
                     break;
                     //
