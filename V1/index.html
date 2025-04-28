@@ -227,7 +227,7 @@
                     <span uk-icon="icon: moon; ratio: 0.4"></span> 🌓
                 </div>
                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
-                    MULTISCAN  V1.3 :: <label id="namachain"></label>  &nbsp;
+                    MULTISCAN  V1.2 :: <label id="namachain"></label>  &nbsp;
                 </h2>
                 <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
                 <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
@@ -1226,9 +1226,8 @@
                                             $(`#${IdTokentoPair}`).css('background-color', error.color);
                                             $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/> <span <span class=uk-text-danger title="${error.pesanDEX}">[ERROR]</span>`);
                                               
-                                                if ((error.statusCode == 0 && (dextype == "kyberswap"  ||  dextype == "0x")) || 
-                                                    (error.statusCode == 429 && dextype == "okx") || 
-                                                    (error.statusCode == 403 && dextype == "0x")){
+                                                if ((error.statusCode == 0 && (dextype == "kyberswap" )) || 
+                                                    (error.statusCode == 429 && dextype == "okx")){
 
                                                    // toastr.info(`${TokenPair} ${dextype} PINDAH SERVER`);
                                                     var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in_token));
@@ -1246,10 +1245,25 @@
                                                     });
                                                 }
                                                 
-                                                if (dextype === "0x") {
+                                                // if (dextype === "0x") {
+                                                //    // toastr.info(`${TokenPair} ${dextype} PINDAH SERVER`);
+                                                //    var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in_token));
+                                                //     getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
+                                                //         if (!altError) {
+                                                //             $(`#${IdTokentoPair}`).css('background-color', '#ded5d5');
+                                                //             $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
+                                                //             $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
+                                                //                 ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, Modal, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair');
+                                                //             }
+                                                //         else{
+                                                //                 $(`#${IdTokentoPair}`).css('background-color',altError.color);
+                                                //                 $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a> <span title="TIDAK DAPAT HARGA">[ERROR]</span>`);
+                                                //         }
+                                                //     });
+                                                // }
+                                                if (dextype === "odos") {
                                                    // toastr.info(`${TokenPair} ${dextype} PINDAH SERVER`);
-                                                   var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in_token));
-                                                    getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
+                                                    getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in_token, priceBuyPairCEX, 'altodos', NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
                                                         if (!altError) {
                                                             $(`#${IdTokentoPair}`).css('background-color', '#ded5d5');
                                                             $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
@@ -1262,9 +1276,10 @@
                                                         }
                                                     });
                                                 }
-                                                if (dextype === "odos") {
+
+                                                if (dextype === "alt0x") {
                                                    // toastr.info(`${TokenPair} ${dextype} PINDAH SERVER`);
-                                                    getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in_token, priceBuyPairCEX, 'altodos', NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
+                                                    getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in_token, priceBuyPairCEX, 'alt0x', NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
                                                         if (!altError) {
                                                             $(`#${IdTokentoPair}`).css('background-color', '#ded5d5');
                                                             $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
@@ -1317,10 +1332,25 @@
                                                     });
                                                 }  
                                             
-                                            if(dextype==="0x"){
+                                            // if(dextype==="0x"){
+                                            //        // toastr.info(`${PairToken} ${dextype} PINDAH SERVER`);
+                                            //        var amount_in = BigInt(Math.round(Math.pow(10, des_output) * amount_in_pair));
+                                            //         getPriceSWOOP( sc_output, des_output,sc_input, des_input, amount_in, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
+                                            //             if (!altError) {
+                                            //                 $(`#${IdPairtoToken}`).css('background-color', '#ded5d5');
+                                            //                 $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
+                                            //                 $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
+
+                                            //                 ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_output, sc_input, cex, Modal, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken');
+                                            //             }else{
+                                            //                 $(`#${IdPairtoToken}`).css('background-color',altError.color);
+                                            //                 $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a>  <span title="TIDAK DAPAT HARGA">[ERROR]</span>`)
+                                            //             }
+                                            //     });
+                                            // }
+                                            if(dextype==="odos"){
                                                    // toastr.info(`${PairToken} ${dextype} PINDAH SERVER`);
-                                                   var amount_in = BigInt(Math.round(Math.pow(10, des_output) * amount_in_pair));
-                                                    getPriceSWOOP( sc_output, des_output,sc_input, des_input, amount_in, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
+                                                    getPriceDEX( sc_output, des_output,sc_input, des_input, amount_in_pair, priceBuyPairCEX, 'altodos', NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
                                                         if (!altError) {
                                                             $(`#${IdPairtoToken}`).css('background-color', '#ded5d5');
                                                             $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
@@ -1333,9 +1363,10 @@
                                                         }
                                                 });
                                             }
-                                            if(dextype==="odos"){
+
+                                            if(dextype==="alt0x"){
                                                    // toastr.info(`${PairToken} ${dextype} PINDAH SERVER`);
-                                                    getPriceDEX( sc_output, des_output,sc_input, des_input, amount_in_pair, priceBuyPairCEX, 'altodos', NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
+                                                    getPriceDEX( sc_output, des_output,sc_input, des_input, amount_in_pair, priceBuyPairCEX, 'alt0x', NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
                                                         if (!altError) {
                                                             $(`#${IdPairtoToken}`).css('background-color', '#ded5d5');
                                                             $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
@@ -2679,13 +2710,17 @@
                     slippageLimitPercent: 0.3,
                 };                
                 break;
+            case 'alt0x':           
+                  apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
+                break;
+            case 'alt0x':           
+                  apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
+                break;            
             case '0x':           
                     if(DTChain.Nama_Chain.toLowerCase() === 'solana'){
                         apiUrl = selectedServer+"https://matcha.xyz/api/swap/quote/solana?sellTokenAddress="+sc_input_in+"&buyTokenAddress="+sc_output_in+"&sellAmount="+amount_in+"&dynamicSlippage=true&slippageBps=50&userPublicKey=Eo6CpSc1ViboPva7NZ1YuxUnDCgqnFDXzcDMDAF6YJ1L";
                     }else{
-                        //https://matcha.xyz/api/swap/price?chainId=1&buyToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&sellToken=0x3c4b6e6e1ea3d4863700d7f76b36b7f3d3f13e3d&sellAmount=11100000000&slippageBps=5000&gasPrice=573730960
-                        apiUrl = selectedServer+"https://matcha.xyz/api/swap/price?chainId=" + DTChain.Kode_Chain +"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in ;
-                       // apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
+                        apiUrl = "https://matcha.xyz/api/swap/price?chainId=" + DTChain.Kode_Chain +"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in ;
                     }
                     break;
                     //
@@ -2829,6 +2864,11 @@
                                     let gasPrice = parseFloat(getFromLocalStorage('PRICEGAS', 0));
                                     FeeSwap = (gasUsed / 1e9) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // hasil dalam native coin (ETH, BNB, dll.)
                                 }
+                                break;
+
+                            case 'alt0x':
+                                amount_out = response.buyAmount / Math.pow(10, des_output);
+                                FeeSwap = ((response.transaction.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('PRICEGAS', 0))) ; // Menggunakan getFromLocalStorage
                                 break;
 
                             case '1inch':
