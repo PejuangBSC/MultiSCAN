@@ -148,10 +148,10 @@
         }
 
         /* Mode terang (default) */
-        #sinyal-container {
-            background-color: #e7f0ec !important;
+        /* #sinyal-container {
+            background-color: #eefbef !important;
             color: #000 !important;
-        }
+        } */
         /* Mode gelap */
         body.uk-dark #sinyal-container {
             background-color: #605d5d !important;
@@ -231,7 +231,7 @@
                     <span uk-icon="icon: moon; ratio: 0.4"></span> 🌓
                 </div>
                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
-                    MULTISCAN  V1.3  :: <label id="namachain"></label> <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp;
+                    MULTISCAN  V1.4 :: <label id="namachain"></label> <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp;
                 </h2>
                 <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
                 <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
@@ -394,6 +394,13 @@
            
             <!-- Pencarian -->
             <div class="uk-width-auto uk-flex uk-flex-middle">
+                <span class="uk-form-label uk-text-warning uk-text-bolder">POSISI : 
+                    <span class="uk-form-label uk-text-success">
+                        <input type="checkbox" checked class="posisi-check" value="Actionkiri"> KIRI 
+                        <input type="checkbox" checked class="posisi-check" value="ActionKana"> KANAN
+                    </span>  
+                </span>
+                &nbsp;&nbsp;
                 <span class="uk-form-label uk-text-danger uk-text-bolder">SORTING : 
                     <span class="uk-form-label uk-text-primary">
                         <input type="radio" name="toggle" checked value="opt_A"> A 
@@ -438,7 +445,7 @@
     
 <script>
     toastr.options = {
-        "timeOut": "2000",            // Durasi munculnya toastr dalam milidetik
+        "timeOut": "2500",            // Durasi munculnya toastr dalam milidetik
         "extendedTimeOut": "2000",    // Waktu tambahan saat toastr di-hover
         "closeButton": true,          // Tampilkan tombol close (opsional)
         "progressBar": true,          // Tampilkan progress bar (opsional)
@@ -985,15 +992,30 @@
                     // console.log(`CEXS `, CONFIG_CEX); 
                     // console.log(`DEXS `, DTChain.DEXS); 
                     // generate CEX,DEX dan PAIR
+                    function hexToRgba(hex, alpha) {
+                        var r = parseInt(hex.slice(1, 3), 16);
+                        var g = parseInt(hex.slice(3, 5), 16);
+                        var b = parseInt(hex.slice(5, 7), 16);
+                        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+                    }
+
+                    var warnaAsli = selectedChain.WARNA; // Contoh: "#FF0000"
+                    var warnaFaded = hexToRgba(warnaAsli, 0.2); // Alpha 0.3
+
+                    $('#sinyal-container').css('background-color', warnaFaded);
+
                     
                     // Update tampilan dengan nama chain dan warna
                     $('title').text("SCANNER " + Nama_Chain.toUpperCase());
                     $('#namachain').text(Nama_Chain.toUpperCase());
                     $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
-                     $('h2#judul').css('color', selectedChain.WARNA);
+                    $('h2#judul').css('color', selectedChain.WARNA);
                     $('#favicon').attr('href', DTChain.ICON_CHAIN); 
-                    $('#sinyal-container').css('color', 'black');
                     $('#progress-bar').css('background-color', selectedChain.WARNA);
+
+                    $('#sinyal-container').css('background-color',warnaFaded);
+                    $('#sinyal-container').css('color', 'black');
+
                     $('h4#daftar').css({'text-align': 'center','color': selectedChain.WARNA,'padding-left':'4px'});
                    
                     cekDataAwal();
@@ -1019,7 +1041,28 @@
                     $(this).toggle($(this).text().toLowerCase().indexOf(searchValue) > -1);
                 });
             });
-            
+
+            $('.posisi-check').on('change', function () {
+                const kiri = $('input[value="Actionkiri"]');
+                const kanan = $('input[value="ActionKana"]');
+                
+                // Cek jumlah yang dicentang
+                const checkedCount = $('.posisi-check:checked').length;
+
+                if (checkedCount === 0) {
+                    // Kembalikan checkbox ini ke posisi sebelumnya (ON)
+                    $(this).prop('checked', true);
+                    toastr.error("Minimal salah satu POSISI harus aktif!");
+                    return;
+                }else{
+                    $("#startSCAN").show();
+                }
+
+                const label = $(this).val() === 'Actionkiri' ? 'KIRI' : 'KANAN';
+                const status = $(this).is(':checked') ? 'AKTIF' : 'NONAKTIF';
+                toastr.info(`POSISI ${label} ${status}`);
+            });
+
             $('#LoadDataBtn').on('click', function () {
                 const storedData = getFromLocalStorage("TOKEN", []);
                 const WalletCEXData = getFromLocalStorage("WALLET_CEX", []);
@@ -1217,7 +1260,7 @@
                             dexList.forEach((dex) => {
                                 let IdTokentoPair = `${cex}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
                                 let IdPairtoToken = `${cex}_${dex.toUpperCase()}_${PairToken}_${(DTChain.Nama_Chain).toUpperCase()}`;
-                                
+                               
                                    // Mendapatkan nilai modal kiri dan kanan dari localStorage
                                 let modalKeyKiri = `MODAL_KIRI_${dex.toUpperCase()}`;
                                 let modalKeyKanan = `MODAL_KANAN_${dex.toUpperCase()}`;
@@ -1233,7 +1276,8 @@
                                 
                                 // dari KIRI
                                 // token to pair
-                                if ($(`#${IdTokentoPair}`).length) {
+                                if ($(`#${IdTokentoPair}`).length && $('input[type="checkbox"][value="Actionkiri"]').is(':checked')) {
+                               // if ($(`#${IdTokentoPair}`).length) {
                                     if (dextype === "rango") {
                                        // toastr.info(`${TokenPair} ${dextype} RANGO RUNNING`);
                                         var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in_token));
@@ -1336,7 +1380,8 @@
 
                                 // pair to token
                                 // DARI KANAN
-                                if ($(`#${IdPairtoToken}`).length) {
+                               // if ($(`#${IdPairtoToken}`).length) {
+                                if ($(`#${IdPairtoToken}`).length && $('input[type="checkbox"][value="ActionKana"]').is(':checked')) {
                                    getPriceDEX( sc_output, des_output,sc_input, des_input, amount_in_pair, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (error, DataDEX) {
                                     
                                         if (error || !DataDEX) {
@@ -2535,101 +2580,107 @@
         return apiKeysOKXDEX[randomIndex];
       }
 
+   
     function ResultEksekusi(amount_out, FeeSwap, sc_input, sc_output, cex, Modal, amount_in, priceBuyToken_CEX, priceSellToken_CEX, priceBuyPair_CEX, priceSellPair_CEX, Name_in, Name_out, feeWD, dextype, trx) {
-        var NameX = Name_in + "_" + Name_out;
-        amount_out = parseFloat(amount_out);
-        FeeSwap = parseFloat(FeeSwap);
-        var FeeWD = parseFloat(feeWD);
-        Modal = parseFloat(Modal);
-        var FeeTrade = parseFloat(0.001 * Modal);
+            var NameX = Name_in + "_" + Name_out;
+            var FeeWD = parseFloat(feeWD);
+            var FeeTrade = parseFloat(0.0014 * Modal);
+    
+            FeeSwap = parseFloat(FeeSwap);    
+            Modal = parseFloat(Modal);
+            amount_in = parseFloat(amount_in);
+            amount_out = parseFloat(amount_out);
+            priceBuyToken_CEX = parseFloat(priceBuyToken_CEX);
+            priceSellPair_CEX = parseFloat(priceSellPair_CEX);
 
-        // Definisikan rate
-        var rateBuyPairDEX = amount_in / amount_out; // Hitung rate beli pair di DEX
-        var rateSellTokenDEX = amount_out / amount_in; // Hitung rate jual token di DEX
+            // Hitung harga rata-rata swap
+            var rateSellTokenDEX = (amount_out * priceSellPair_CEX) / amount_in;
+            var rateBuyPairDEX = (amount_in * priceBuyToken_CEX) / amount_out;
+            var rateTokentoPair = amount_out / amount_in;
 
-        // Hitung nilai output dalam USDT
-        var valueOutInUSDT = amount_out * priceSellPair_CEX; // Output DEX dalam USD via CEX
-        var valueInInUSDT = amount_in * priceBuyToken_CEX; // Input DEX dalam USD via CEX
-        var rateSwapDEX = amount_out / amount_in; // Swap rate DEX (hanya untuk informasi)
-
-        // Hitung total nilai
-        var totalModal = Modal + FeeSwap + FeeWD + FeeTrade;
-        var totalFee = FeeSwap + FeeWD + FeeTrade;
-
-        let totalValue = 0;
-        if (trx === "TokentoPair") {
-            totalValue = valueOutInUSDT; // Untuk transaksi TokentoPair
-        } else if (trx === "PairtoToken") {
-            totalValue = valueInInUSDT; // Untuk transaksi PairtoToken
-        }
-
-        var profitLoss = totalValue - totalModal;
-        var profitLossPercent = totalModal !== 0 ? (profitLoss / totalModal) * 100 : 0;
-
-        var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
-        var conlusion = "NO SELISIH";
-        var selisih = false;
-
-        // Perhitungan untuk sinyal
-        if (filterPNLValue === 0) {
-            if (totalValue > totalModal + totalFee) {
-                conlusion = "GET SIGNAL";
-                selisih = true;
-            }
-        } else {
-            if ((totalValue - totalModal) > filterPNLValue) {
-                conlusion = "GET SIGNAL";
-                selisih = true;
-            }
-        }
-
-        let IdCELL = `${cex.toUpperCase()}_${dextype.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}`;
-        var linkDEX = generateDexLink(dextype.toLowerCase(), Name_in, sc_input, Name_out, sc_output);
-
-        if (!linkDEX) {
-            console.error(`DEX Type "${dextype}" tidak valid atau belum didukung.`);
-            return;
-        }
-
-        const rateUSDTtoIDR = getFromLocalStorage("PriceRateUSDT", 0);
-        const toIDR = usdt => rateUSDTtoIDR ? (usdt * rateUSDTtoIDR).toLocaleString("id-ID", {
-            style: "currency",
-            currency: "IDR"
-        }) : "N/A";
-
-        // Menampilkan informasi RateSwap hanya untuk PairtoToken dalam USDT
-        let titleInfo = `DEX ${dextype.toUpperCase()} `;
-        let RateSwap = "";
-
-        // Menggunakan logika seperti yang Anda inginkan untuk menampilkan rate sesuai dengan jenis transaksi
-        if (stablecoins.includes(Name_in)) {
-            titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateBuyPairDEX)}`;
-            titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
-            RateSwap = `<label class="uk-text-success" title="${titleInfo}">${formatPrice(rateBuyPairDEX)}</label>`;
-        } else if (stablecoins.includes(Name_out)) {
-            titleInfo += ` (${Name_in}->${Name_out}) : ${formatPrice(rateSellTokenDEX)}`;
-            titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
-            RateSwap = `<label class="uk-text-danger" title="${titleInfo}">${formatPrice(rateSellTokenDEX)}</label>`;
-        } else {
+            // Hitung total nilai
+            var totalModal = Modal + FeeSwap + FeeWD + FeeTrade;
+            var totalFee = FeeSwap + FeeWD + FeeTrade;
+            // Hitung nilai output dalam USDT
+            var valueOutInUSDT = amount_out * priceSellPair_CEX; // Output DEX dalam USD via CEX
+            var valueInInUSDT = amount_in * priceBuyToken_CEX; // Input DEX dalam USD via CEX
+            
+            let totalValue = 0;
             if (trx === "TokentoPair") {
-                // Ambil rate dari TOKEN (symbol_in)
-                titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateSellTokenDEX)}`;
-                titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
-                RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateSellTokenDEX)}</label>`;
+                totalValue = valueOutInUSDT; // Untuk transaksi TokentoPair
+            } else if (trx === "PairtoToken") {
+                totalValue = valueInInUSDT; // Untuk transaksi PairtoToken
+            }
+            var profitLoss = totalValue - totalModal;
+            var profitLossPercent = totalModal !== 0 ? (profitLoss / totalModal) * 100 : 0;
+
+            var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
+            var conlusion = "NO SELISIH";
+            var selisih = false;
+
+            if (filterPNLValue === 0) {
+                if (totalValue > totalModal + totalFee) {
+                    conlusion = "GET SIGNAL";
+                    selisih = true;
+                }
             } else {
-                // Khusus USDT saat PairtoToken → ambil rate dari PAIR (symbol_out)
+                if ((totalValue - totalModal) > filterPNLValue) {
+                    conlusion = "GET SIGNAL";
+                    selisih = true;
+                }
+            }
+            // console.log("TotalValue:", totalValue, typeof totalValue);
+            // console.log("TotalModal:", totalModal, typeof totalModal);
+
+            let IdCELL = `${cex.toUpperCase()}_${dextype.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}`;
+            var linkDEX = generateDexLink(dextype.toLowerCase(), Name_in, sc_input, Name_out, sc_output);
+
+            if (!linkDEX) {
+                console.error(`DEX Type "${dexType}" tidak valid atau belum didukung.`);
+                return;
+            }
+
+            // Ambil rate IDR dari localStorage
+            const rateUSDTtoIDR = getFromLocalStorage("PriceRateUSDT", 0);
+            const toIDR = usdt => rateUSDTtoIDR ? (usdt * rateUSDTtoIDR).toLocaleString("id-ID", {
+                style: "currency",
+                currency: "IDR"
+            }) : "N/A";
+
+            let titleInfo = `DEX ll ${dextype.toUpperCase()} `;
+            let RateSwap = "";
+
+            if (stablecoins.includes(Name_in)) {
                 titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateBuyPairDEX)}`;
                 titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
-                RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateBuyPairDEX)}</label>`;
+                RateSwap = `<label class="uk-text-success" title="${titleInfo}">${formatPrice(rateBuyPairDEX)}</label>`;
+            } else if (stablecoins.includes(Name_out)) {
+                titleInfo += ` (${Name_in}->${Name_out}) : ${formatPrice(rateTokentoPair)}`;
+                titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
+                RateSwap = `<label class="uk-text-danger" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
+            } else {
+                if (trx === "TokentoPair") {
+                     // Selain itu, ambil rate dari TOKEN (symbol_in)
+                    titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateSellTokenDEX)}`;
+                    titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
+                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;                   
+                } else {
+                    // Khusus USDT saat PairtoToken → ambil rate dari PAIR (symbol_out)
+                    titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateBuyPairDEX)}`;
+                    titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
+                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
+                }
+
             }
-        }
 
         if ($(`#SWAP_${IdCELL}`).length > 0) {
             $(`#SWAP_${IdCELL}`).html(`<a href="${linkDEX}" target="_blank">${RateSwap}</a>`);
         }
 
         // Menampilkan PNL
-        DisplayPNL(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSwapDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent);
+        // Panggil fungsi tampilan hasil
+        //console.log(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent); 
+        DisplayPNL(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent);
     }
 
     function DisplayPNL(PNL, cex, Coin_in, NameX, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, Coin_out, totalValue, totalModal, conclusion, selisih, trx, profitLossPercent) {
@@ -2659,22 +2710,23 @@
             toastr.success(sinyals);
             rowCell.attr("style", "background-color: #daf4c3 !important; font-weight: bolder !important; color: black !important;");
 
+            let htmlFee = '';
+            if (trx === "TokentoPair") {
+                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
+                        ${createLink(urlsCEXToken.withdrawUrl, 'WD')}<br/>`;
+            } else if (trx === "PairtoToken") {
+                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
+                        ${createLink(urlsCEXToken.depositUrl, 'DP')}<br/>`;
+            }
+
             let htmlResult = `
+                ${htmlFee}
                 <span style="color: #d20000;">All: ${totalFee.toFixed(2)}$</span>
                 <span style="color: #1e87f0;">SW: ${FeeSwap.toFixed(2)}$</span><br/>
                 <span style="color: #444;">GT: ${totalGet.toFixed(2)}$</span>
                 <span style="color: #444;">PNL: ${PNL.toFixed(2)}$</span><br/>
             `;
 
-            // Munculkan link WD / DP hanya jika profit bersih
-            if (trx === "TokentoPair") {
-                htmlResult = `
-                    <span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
-                    ${createLink(urlsCEXToken.withdrawUrl, 'WD')}<br/>
-                ` + htmlResult;
-            } else if (trx === "PairtoToken") {
-                htmlResult += `${createLink(urlsCEXToken.depositUrl, 'DP')}`;
-            }
 
             resultCell.html(htmlResult);
 
@@ -2691,7 +2743,7 @@
                 <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
                 <span class="uk-text-danger" title="FEE ALL">ALL:${totalFee.toFixed(2)}$</span>
                 <span class="uk-text-primary" title="FEE SWAP"> ${FeeSwap.toFixed(2)}$</span><br/>
-                <span class="uk-text-success" title="GET BRUTO">Get:${totalGet.toFixed(2)}$</span>
+                <span class="uk-text-success" title="GET BRUTO">GT:${totalGet.toFixed(2)}$</span>
                 <span class="uk-text-warning" title="GET NETTO / PNL" > ${PNL.toFixed(2)}$</span>
             `);
         }
@@ -2716,7 +2768,7 @@
         </a>`;
        // (<span class="uk-text-warning">${profitLossPercent.toFixed(1)}%</span>)
         // Menambahkan link ke elemen dengan ID yang sesuai
-        $("#sinyal" + DEXPLUS.toLowerCase()).append(` ${sLink} |`);
+        $("#sinyal" + DEXPLUS.toLowerCase()).append(` ${sLink} `);
         
         var audio = new Audio('audio.mp3');  // Ganti dengan path file suara yang sesuai
         audio.play();
@@ -3426,54 +3478,56 @@
           }
         }
         //sent sinyal kegrup tele
-        function MultisendMessage(cex, dex, token,pair, modal, PNL, priceBUY, priceSELL, FeeSwap,FeeWD, totalFee,nickname,sc_in,sc_out) {
-            // Mengambil user dari localStorage menggunakan getFromLocalStorage  
-            let Linksctoken=`<a href="${DTChain.URL_Chain}/token/${sc_in}" target="_blank" class="uk-link"> ${token}</a>`;
-            let Linkscpair=`<a href="${DTChain.URL_Chain}/token/${sc_out}" target="_blank" class="uk-link">  ${pair}</a>`;
-            var message = 
-                "<b>#MULTISCAN_V1 #" + DTChain.Nama_Chain.toUpperCase() + "\n USER : </b> ~ " + nickname +
-                " \n ----------------------------------------- \n MARKET: " + cex +" VS " + dex +
-                " \n TOKEN-PAIR: <b>#" + token+"_"+pair + "</b> " + 
-                " \n MODAL: <b> " + modal + "$</b> | PROFIT: <b>" + PNL.toFixed(2) + "$ </b> " +
-                " \n <b>BUY "+Linksctoken+": </b> " + priceBUY.toFixed(9) +
-                " \n <b>SELL "+Linkscpair+": </b>" + priceSELL.toFixed(9) + 
-                " \n <b>FEEWD: </b>" + FeeWD.toFixed(3) + 
-                " \n FEETOTAL: <b>" + totalFee.toFixed(2) + "$</b> | SWAP:<b>" + FeeSwap.toFixed(2) + "$</b>" +
-                " \n -----------------------------------------";
-        
-            // Mengambil setting dari localStorage
-            var SavedSettingData = getFromLocalStorage('DATA_SETTING', { ID_GRUP: 0, TOKEN: '' });
-            var users = [
-                { chat_id: SavedSettingData.ID_GRUP } // Menggunakan ID grup yang disimpan di localStorage
-            ];
-        
-            var token = SavedSettingData.TOKEN; // Menggunakan token yang disimpan di localStorage
-            var apiUrl = 'https://api.telegram.org/bot' + token + '/sendMessage';
-        
-            // Loop melalui daftar pengguna dan mengirim pesan
-            for (var i = 0; i < users.length; i++) {
-                var user = users[i];
-                var chatId = user.chat_id; // ID chat pengguna
-        
-                // Membuat permintaan POST menggunakan jQuery
-                $.ajax({
-                    url: apiUrl,
-                    method: "POST",
-                    data: {
-                        chat_id: chatId,
-                        text: message,
-                        parse_mode: "HTML",
-                        disable_web_page_preview: true
-                    },
-                    success: function (response) {
-                        // console.log("Message sent successfully");
-                    },
-                    error: function (xhr, status, error) {
-                        // console.log("Error sending message:", error);
-                    }
-                });
+        function MultisendMessage(cex, dex, token, pair, modal, PNL, priceBUY, priceSELL, FeeSwap, FeeWD, totalFee, nickname, sc_in, sc_out) {
+            const urlsCEX = GeturlExchanger(cex, token, pair);
+            const SavedSettingData = getFromLocalStorage('DATA_SETTING', { ID_GRUP: 0, TOKEN: '' });
+
+            if (!SavedSettingData.TOKEN || !SavedSettingData.ID_GRUP) {
+                toastr.error("Token atau ID Grup Telegram tidak tersedia!");
+                return;
             }
+
+            let Linksctoken = `<a href="${DTChain.URL_Chain}/token/${sc_in}" target="_blank" class="uk-link">${token}</a>`;
+            let Linkscpair = `<a href="${DTChain.URL_Chain}/token/${sc_out}" target="_blank" class="uk-link">${pair}</a>`;
+            let linkDEX = `<a href="https://swap.defillama.com/?chain=${DTChain.Nama_Chain}&from=${sc_in}&to=${sc_out}" target="_blank" class="uk-link">${dex}</a>`;
+            let linkCEX = urlsCEX && urlsCEX.tradeToken ? `<a href="${urlsCEX.tradeToken}" target="_blank" class="uk-link">${cex}</a>` : `<b>${cex}</b>`;
+
+            let message = 
+                `<b>#MULTISCAN_V1 #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
+                `-----------------------------------------\n` +
+                `MARKET: ${linkCEX} VS ${linkDEX}\n` +
+                `TOKEN-PAIR: <b>#${token}_${pair}</b>\n` +
+                `MODAL: <b>${modal}$</b> | PROFIT: <b>${PNL.toFixed(2)}$</b>\n` +
+                `<b>BUY ${Linksctoken}:</b> ${priceBUY.toFixed(9)}\n` +
+                `<b>SELL ${Linkscpair}:</b> ${priceSELL.toFixed(9)}\n` +
+                `<b>FEEWD:</b> ${FeeWD.toFixed(3)}\n` +
+                `FEETOTAL: <b>${totalFee.toFixed(2)}$</b> | SWAP: <b>${FeeSwap.toFixed(2)}$</b>\n` +
+                `-----------------------------------------`;
+
+            toastr.info(message);
+
+            // Kirim ke Telegram
+            const apiUrl = 'https://api.telegram.org/bot' + SavedSettingData.TOKEN + '/sendMessage';
+            $.ajax({
+                url: apiUrl,
+                method: "POST",
+                data: {
+                    chat_id: SavedSettingData.ID_GRUP,
+                    text: message,
+                    parse_mode: "HTML",
+                    disable_web_page_preview: true
+                },
+                success: function () {
+                    console.log("Pesan berhasil dikirim ke Telegram");
+                },
+                error: function (xhr, status, error) {
+                    console.error("Gagal kirim pesan:", error);
+                    toastr.error("Gagal kirim ke Telegram: " + error);
+                }
+            });
         }
+
+  
     // Fungsi CekIdentitas untuk mendapatkan ID perangkat
     async function CekIdentitas() {
         try {
