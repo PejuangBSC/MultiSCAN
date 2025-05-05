@@ -2688,7 +2688,7 @@
             InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal);
         } else {
             resultCell.html(`
-                <span style="color:#0f04e2 !important;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
+                <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
                 <span class="uk-text-danger" title="FEE ALL">ALL:${totalFee.toFixed(2)}$</span>
                 <span class="uk-text-primary" title="FEE SWAP"> ${FeeSwap.toFixed(2)}$</span><br/>
                 <span class="uk-text-success" title="GET BRUTO">Get:${totalGet.toFixed(2)}$</span>
@@ -2710,8 +2710,8 @@
         // Membuat link dengan format umum tanpa pengecekan kondisi
 
         var sLink = `<a href=#SWAP_${idCELL} class='buy'>
-            <span style='color:${warnaCEX}; font-weight:bolder;'>${cex.toUpperCase()}<span class="uk-text-danger">~${modal}</span></span>
-            [${NameToken}->${NamePair}: <span class="uk-text-primary">${PNL.toFixed(2)}$] </span>
+            <span style='color:${warnaCEX}; font-weight:bolder;'>[ ${cex.toUpperCase()}<span class="uk-text-secondary">: ${modal}</span>
+            ~ ${NameToken}->${NamePair}: <span class="uk-text-primary">${PNL.toFixed(2)}$ </span> ]</span>
            
         </a>`;
        // (<span class="uk-text-warning">${profitLossPercent.toFixed(1)}%</span>)
