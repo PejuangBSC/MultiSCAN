@@ -1039,7 +1039,7 @@
                     $('#favicon').attr('href', DTChain.ICON_CHAIN); 
                     $('#progress-bar').css('background-color', selectedChain.WARNA);
 
-                    $('#sinyal-container').css('color', selectedChain.WARNA);
+                    $('#sinyal-container').css('color',"black");
 
                     $('h4#daftar').css({'text-align': 'center','color': selectedChain.WARNA,'padding-left':'4px'});
                    
@@ -2672,7 +2672,7 @@
                 currency: "IDR"
             }) : "N/A";
 
-            let titleInfo = `DEX ll ${dextype.toUpperCase()} `;
+            let titleInfo = `DEX ${dextype.toUpperCase()}: `;
             let RateSwap = "";
 
             if (stablecoins.includes(Name_in)) {
@@ -2787,8 +2787,8 @@
         // Membuat link dengan format umum tanpa pengecekan kondisi
 
         var sLink = `<a href=#SWAP_${idCELL} class='buy'>
-            <span style='color:${warnaCEX}; font-weight:bolder;'>[ ${cex.toUpperCase()}<span class="uk-text-secondary">: ${modal}</span>
-            ~ ${NameToken}->${NamePair}: <span class="uk-text-success">${PNL.toFixed(2)}$ </span> ]</span>
+            <span style='color:${warnaCEX}; font-weight:bolder;'>[ ${cex.toUpperCase()}<span class="uk-text-secondary">:${modal}</span>
+            ~ ${NameToken}->${NamePair}: <span class="uk-text-danger">${PNL.toFixed(2)}$ </span> ]</span>
            
         </a>`;
        // (<span class="uk-text-warning">${profitLossPercent.toFixed(1)}%</span>)
