@@ -230,10 +230,11 @@
                 <div id="darkModeToggle" onclick="toggleDarkMode()" class="icon-wrapper" title="Ganti Mode Gelap/Terang">
                     <span uk-icon="icon: moon; ratio: 0.4"></span> 🌓
                 </div>
-                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
+                <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
                     MULTISCAN  V1.4  :: <label id="namachain"></label> 
                     <!-- <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp; -->
-                </h2>                <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
+                </h2>
+                <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
                 <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
                 <img class="icon" id="UpdateWalletCEX" title="UPDATE WALLET CEX" width="30px" src="https://images.freeimages.com/fic/images/icons/2770/ios_7_icons/512/wallet.png" />
                 <a href="manajemen_aset.html" target="_blank">
@@ -262,26 +263,52 @@
                             </div> 
                                   
                             <!-- Kolom untuk CEX -->
-                            <div class="uk-width-auto uk-flex uk-flex-middle">
+                            <div class="uk-width-auto uk-flex uk-flex-middle uk-margin-small-top uk-text-small">
                                 <div id="cex-options" class="uk-form-controls" style="display: flex;">
                                     <!-- Radio button CEX akan di-generate di sini -->
                                 </div>
                             </div>
                             <!-- Kolom untuk PAIR -->
-                            <div class="uk-width-auto uk-flex uk-flex-middle">
+                            <!-- <div class="uk-width-auto uk-flex uk-flex-middle uk-margin-small-top uk-text-small">
                                 <b><span class="uk-text-danger uk-text-medium">PAIR&nbsp;</span></b> <span id="tokenCount" class="uk-text-danger uk-text-bolder" > </span>&nbsp;:
+                                <div id="dexpair-options" class="uk-form-controls" style="display: flex;"> -->
+                                    <!-- Radio button PAIR DEX akan di-generate di sini -->
+                                <!-- </div> 
+                            </div> -->
+
+                            <div class="uk-width-auto uk-flex uk-flex-middle  uk-margin-remove-top uk-text-small">
+                                <div id="dex-options" class="uk-form-controls" style="display: flex;">
+                                    <!-- Radio button DEX akan di-generate di sini -->
+                                </div>
+                                &nbsp;&nbsp; | &nbsp;&nbsp;
+                                <b><span class="uk-text-secondary uk-text-medium">PAIR&nbsp;</span></b> <span id="tokenCount" class="uk-text-danger uk-text-bolder" > </span>&nbsp;:
                                 <div id="dexpair-options" class="uk-form-controls" style="display: flex;">
                                     <!-- Radio button PAIR DEX akan di-generate di sini -->
                                 </div> 
                             </div>
 
                             <!-- Kolom untuk DEX -->
-                            <div class="uk-width-auto uk-flex uk-flex-middle">
-                                <div id="dex-options" class="uk-form-controls" style="display: flex;">
-                                    <!-- Radio button DEX akan di-generate di sini -->
+                            <div class="uk-width-auto uk-flex uk-flex-middle uk-margin-remove-top uk-text-small">
+                                      <!-- Kolom untuk SETTING SCANNER -->
+                                <div class="uk-width-auto uk-flex uk-flex-middle">
+                                    <span class="uk-form-label uk-text-secondary uk-text-bolder">SCANNER : 
+                                        <span class="uk-form-label uk-text-success">
+                                            <input type="checkbox" checked class="posisi-check" value="Actionkiri"> KIRI 
+                                            <input type="checkbox" checked class="posisi-check" value="ActionKana"> KANAN
+                                        </span>  
+                                    </span>
+                                    &nbsp;&nbsp;
+                                    <span class="uk-form-label uk-text-warning uk-text-bolder">SORTING : 
+                                        <span class="uk-form-label uk-text-primary">
+                                            <input type="radio" name="toggle" checked value="opt_A"> A 
+                                            <input type="radio" name="toggle" value="opt_B"> Z
+                                            <input type="checkbox" checked id="strictFilter"> WALLET CEX
+                                            </span>  
+                                    </span>
                                 </div>
                                 &nbsp;&nbsp;
                                 &nbsp;&nbsp;
+                                
                                 <button type="button" id="startSCAN" style="display: none;" class="uk-button uk-button-secondary uk-button-small">START</button>
                                 <button type="button" id="stopSCAN" style="display: none;" class="uk-button uk-button-danger uk-button-small">STOP</button>                                
 
@@ -394,7 +421,7 @@
            
             <!-- Pencarian -->
             <div class="uk-width-auto uk-flex uk-flex-middle">
-                <span class="uk-form-label uk-text-warning uk-text-bolder">POSISI : 
+                <!-- <span class="uk-form-label uk-text-warning uk-text-bolder">POSISI : 
                     <span class="uk-form-label uk-text-success">
                         <input type="checkbox" checked class="posisi-check" value="Actionkiri"> KIRI 
                         <input type="checkbox" checked class="posisi-check" value="ActionKana"> KANAN
@@ -407,7 +434,7 @@
                         <input type="radio" name="toggle" value="opt_B"> Z
                         <input type="checkbox" checked id="strictFilter"> WALLET CEX
                         </span>  
-                </span>
+                </span> -->
                 &nbsp;&nbsp;&nbsp;
                 <input type="text" id="searchInput" class="uk-input uk-form-small uk-form-primary uk-form-width-small" placeholder="Cari di tabel...">
             </div>
@@ -902,8 +929,8 @@
             info = false;
         } else {
             loadStoredData(filteredTokens);
-            generateInputCheckbox(savedCexs, "cex-options", "", "EXCH ", "uk-form-label uk-text-success");
-            generateInputCheckbox(DTChain.DEXS, "dex-options", "D", "DEFI:", "uk-form-label uk-text-danger");
+            generateInputCheckbox(savedCexs, "cex-options", "", "EXCH: ", "uk-form-label uk-text-success");
+            generateInputCheckbox(DTChain.DEXS, "dex-options", "D", "DEFI: ", "uk-form-label uk-text-danger");
             generateInputCheckbox(savedPairs, "dexpair-options", "", "", "uk-form-label uk-text-primary");
             generateInputModal(DTChain.DEXS);            
             loadCheckboxSelections();
@@ -1000,11 +1027,10 @@
                     }
 
                     var warnaAsli = selectedChain.WARNA; // Contoh: "#FF0000"
-                    var warnaFaded = hexToRgba(warnaAsli, 0.2); // Alpha 0.3
+                    var warnaFaded = hexToRgba(warnaAsli, 0.1); // Alpha 0.3
 
                     $('#sinyal-container').css('background-color', warnaFaded);
 
-                    
                     // Update tampilan dengan nama chain dan warna
                     $('title').text("SCANNER " + Nama_Chain.toUpperCase());
                     $('#namachain').text(Nama_Chain.toUpperCase());
@@ -1013,8 +1039,7 @@
                     $('#favicon').attr('href', DTChain.ICON_CHAIN); 
                     $('#progress-bar').css('background-color', selectedChain.WARNA);
 
-                    $('#sinyal-container').css('background-color',warnaFaded);
-                    $('#sinyal-container').css('color', 'black');
+                    $('#sinyal-container').css('color', selectedChain.WARNA);
 
                     $('h4#daftar').css({'text-align': 'center','color': selectedChain.WARNA,'padding-left':'4px'});
                    
@@ -1550,7 +1575,7 @@
         // Tambahkan label di atas checkbox
         const label = `
             <b>
-                <span class="uk-text-warning uk-text-medium">
+                <span class="uk-text-secondary uk-text-medium">
                     ${labelText}
                 </span>
             </b>
@@ -2763,7 +2788,7 @@
 
         var sLink = `<a href=#SWAP_${idCELL} class='buy'>
             <span style='color:${warnaCEX}; font-weight:bolder;'>[ ${cex.toUpperCase()}<span class="uk-text-secondary">: ${modal}</span>
-            ~ ${NameToken}->${NamePair}: <span class="uk-text-primary">${PNL.toFixed(2)}$ </span> ]</span>
+            ~ ${NameToken}->${NamePair}: <span class="uk-text-success">${PNL.toFixed(2)}$ </span> ]</span>
            
         </a>`;
        // (<span class="uk-text-warning">${profitLossPercent.toFixed(1)}%</span>)
@@ -3504,7 +3529,7 @@
                 `FEETOTAL: <b>${totalFee.toFixed(2)}$</b> | SWAP: <b>${FeeSwap.toFixed(2)}$</b>\n` +
                 `-----------------------------------------`;
 
-            toastr.info(message);
+           // toastr.info(message);
 
             // Kirim ke Telegram
             const apiUrl = 'https://api.telegram.org/bot' + SavedSettingData.TOKEN + '/sendMessage';
