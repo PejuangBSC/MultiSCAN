@@ -1225,7 +1225,7 @@
     $("#startSCAN").click(function () {
         
         cekDataAwal();
-        //  sendStatusTELE(SavedSettingData.nickname, 'ONLINE');
+        sendStatusTELE(SavedSettingData.nickname, 'ONLINE');
         CekIdentitas();
         $('#sinyal-container span[id^="sinyal"]').empty();
         form_off();
@@ -2822,9 +2822,10 @@
             `);
         }
 
-        if (PNL > 1) {
+        if (PNL > 1 && parseFloat(vol) >= parseFloat(modal)) {
             MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
         }
+
     }
 
 
@@ -3568,7 +3569,7 @@
             let linkCEX = urlsCEX && urlsCEX.tradeToken ? `<a href="${urlsCEX.tradeToken}" target="_blank" class="uk-link">${cex}</a>` : `<b>${cex}</b>`;
 
             let message = 
-                `<b>#MULTISCAN_V1 #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
+                `<b>#MULTISCAN_V1.5 #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
                 `-----------------------------------------\n` +
                 `MARKET: ${linkCEX} VS ${linkDEX}\n` +
                 `TOKEN-PAIR: <b>#${token}_${pair}</b>\n` +
