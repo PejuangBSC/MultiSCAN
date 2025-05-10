@@ -1288,19 +1288,35 @@
                       //  console.log(DataCEX);
 
                         clearTimeout(timeout);
-                        if (error || !DataCEX)  {
-                            console.error("Error data from CEX:", error);
+                        let isInvalid = false;
+
+                        // Validasi manual harga
+                        let priceBuyTokenCEX = DataCEX.volumes_buyToken[2]?.price || 0;
+                        let priceSellTokenCEX = DataCEX.volumes_sellToken[0]?.price || 0;
+
+                        let priceBuyPairCEX = DataCEX.volumes_buyPair[2]?.price || 0;
+                        let priceSellPairCEX = DataCEX.volumes_sellPair[0]?.price || 0;
+
+                        if (!isFinite(priceBuyTokenCEX) || priceBuyTokenCEX <= 0) {
+                            console.warn(`Harga beli ${NameToken} tidak valid: ${priceBuyTokenCEX}`);
+                            isInvalid = true;
+                        }
+
+                        if (!isFinite(priceBuyPairCEX) || priceBuyPairCEX <= 0) {
+                            console.warn(`Harga beli ${NamePair} tidak valid: ${priceBuyPairCEX}`);
+                            isInvalid = true;
+                        }
+
+                        // Gabungkan ke blok error utama
+                        if (error || !DataCEX || isInvalid) {
+                            console.error("Error data from CEX:", error || "Data tidak valid");
                             toastr.error(`Cek Ulang Harga ${symbolIn} atau ${symbolOut} Exchanger : ${cex}`);
                             resolve();
                             $('#' + cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
                             return;
-                        } else {
-                            let priceBuyTokenCEX = DataCEX.volumes_buyToken[2]?.price || "N/A";
-                            let priceSellTokenCEX = DataCEX.volumes_sellToken[0]?.price || "N/A";
-
-                            let priceBuyPairCEX = DataCEX.volumes_buyPair[2]?.price || "N/A";
-                            let priceSellPairCEX = DataCEX.volumes_sellPair[0]?.price || "N/A";
-
+                        }
+                        else {
+                            
                             const buyVolToken = (DataCEX.volumes_buyToken.length > 0) 
                                 ? DataCEX.volumes_buyToken.reduce((min, item) => item.price < min.price ? item : min).volume 
                                 : 1;
@@ -2307,7 +2323,7 @@
     }
 
     // Fungsi untuk memproses data order book exchanger
-    function processOrderBook(data) {
+    function processOrderBookLAMA(data) {
         const priceBuy = data.bids.slice(0, 3).map(([price, volume]) => ({
             price: parseFloat(price),
             volume: parseFloat(volume) * parseFloat(price) // Volume dalam USD
@@ -2317,6 +2333,23 @@
             price: parseFloat(price),
             volume: parseFloat(volume) * parseFloat(price) // Volume dalam USD
         })).reverse(); // Membalik urutan priceSell
+
+        return { priceBuy, priceSell };
+    }
+
+    function processOrderBook(data) {
+        const rawBids = Array.isArray(data?.bids) ? data.bids.slice(0, 3) : [];
+        const rawAsks = Array.isArray(data?.asks) ? data.asks.slice(0, 3) : [];
+
+        const priceBuy = rawBids.map(([price, volume]) => ({
+            price: parseFloat(price),
+            volume: parseFloat(volume) * parseFloat(price)
+        })).reverse();
+
+        const priceSell = rawAsks.map(([price, volume]) => ({
+            price: parseFloat(price),
+            volume: parseFloat(volume) * parseFloat(price)
+        })).reverse();
 
         return { priceBuy, priceSell };
     }
@@ -2878,6 +2911,18 @@
         var dexId = `${cex}_${dexType.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
         var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
         var selectedApiKey = getRandomApiKeyOKX();
+
+        // var multiplier = Math.pow(10, des_input);
+        // var numericAmount = multiplier * amount_in;
+
+        // if (isNaN(numericAmount) || !isFinite(numericAmount)) {
+        //     console.error("Nilai amount_in tidak valid:", { des_input, amount_in });
+        //     callback("Nilai amount_in tidak valid untuk konversi ke BigInt.", null);
+        //     return;
+        // }
+
+        // var amount_in = BigInt(Math.round(numericAmount));
+
         var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in));
         var apiUrl, requestData,headers;   
         let normalizedNamePair = NamePair === "ETH" ? "WETH" :
