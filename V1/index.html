@@ -1298,12 +1298,12 @@
                         let priceSellPairCEX = DataCEX.volumes_sellPair[0]?.price || 0;
 
                         if (!isFinite(priceBuyTokenCEX) || priceBuyTokenCEX <= 0) {
-                            console.warn(`Harga beli ${NameToken} tidak valid: ${priceBuyTokenCEX}`);
+                            toastr.error(`Harga ${NameToken} pada ${cex} tidak valid: ${priceBuyTokenCEX}`);
                             isInvalid = true;
                         }
 
                         if (!isFinite(priceBuyPairCEX) || priceBuyPairCEX <= 0) {
-                            console.warn(`Harga beli ${NamePair} tidak valid: ${priceBuyPairCEX}`);
+                            toastr.error(`Harga ${NamePair} pada ${cex} tidak valid: ${priceBuyPairCEX}`);
                             isInvalid = true;
                         }
 
@@ -1325,9 +1325,6 @@
                                 ? DataCEX.volumes_sellToken.reduce((max, item) => item.price > max.price ? item : max).volume 
                                 : 1;
 
-
-                            // console.log("Volume Buy Token (harga terendah):", buyVolToken);
-                            // console.log("Volume Sell Pair (harga tertinggi):", sellVolPair);
                             dexList.forEach((dex) => {
                                 let IdTokentoPair = `${cex}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
                                 let IdPairtoToken = `${cex}_${dex.toUpperCase()}_${PairToken}_${(DTChain.Nama_Chain).toUpperCase()}`;
@@ -2699,14 +2696,22 @@
             var totalFee = FeeSwap + FeeWD + FeeTrade;
             // Hitung nilai output dalam USDT
             var valueOutInUSDT = amount_out * priceSellPair_CEX; // Output DEX dalam USD via CEX
-            var valueInInUSDT = amount_in * priceBuyToken_CEX; // Input DEX dalam USD via CEX
+            var valueInInUSDT = amount_out * priceBuyToken_CEX; // Input DEX dalam USD via CEX
             
-            let totalValue = 0;
-            if (trx === "TokentoPair") {
-                totalValue = valueOutInUSDT; // Untuk transaksi TokentoPair
-            } else if (trx === "PairtoToken") {
-                totalValue = valueInInUSDT; // Untuk transaksi PairtoToken
-            }
+            // let totalValue = 0;
+            // if (trx === "TokentoPair") {
+            //     totalValue = valueOutInUSDT; // Untuk transaksi TokentoPair
+            // } else if (trx === "PairtoToken") {
+            //     totalValue = amount_out*priceSellToken_CEX; // Untuk transaksi PairtoToken
+            // }
+            var totalValue = amount_out * priceSellPair_CEX; // Nilai akhir (USDT)
+//            console.warn("TOTAL VALUE",totalValue)
+            // console.log("TOKEN BUY:",priceBuyToken_CEX);
+            // console.log("TOKEN SELL:",priceSellToken_CEX);
+
+            // console.log("PAIR BUY:",priceBuyPair_CEX);
+            // console.log("PAIR SELL:",priceSellPair_CEX);
+            
             var profitLoss = totalValue - totalModal;
             var profitLossPercent = totalModal !== 0 ? (profitLoss / totalModal) * 100 : 0;
 
@@ -2725,8 +2730,7 @@
                     selisih = true;
                 }
             }
-            // console.log("TotalValue:", totalValue, typeof totalValue);
-            // console.log("TotalModal:", totalModal, typeof totalModal);
+         
 
             let IdCELL = `${cex.toUpperCase()}_${dextype.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}`;
             var linkDEX = generateDexLink(dextype.toLowerCase(), Name_in, sc_input, Name_out, sc_output);
@@ -2775,7 +2779,7 @@
 
         // Menampilkan PNL
         // Panggil fungsi tampilan hasil
-      //  console.log(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent); 
+       // console.log(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent); 
         DisplayPNL(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent,vol);
     }
 
@@ -3912,7 +3916,7 @@
                 return [
                     {
                         cex: "INDODAX",
-                        chain: token.symbol_out.toUpperCase(), // asumsi chain disamakan dengan symbol_out
+                        chain: DTChain.CEXCHAIN.INDODAX.chainCEX, // asumsi chain disamakan dengan symbol_out
                         tokenName: token.symbol_in.toUpperCase(),
                         scToken: token.sc_in || "",
                         feeWDs: 0.0001,
@@ -3921,7 +3925,7 @@
                     },
                     {
                         cex: "INDODAX",
-                        chain: token.symbol_in.toUpperCase(),
+                        chain:  DTChain.CEXCHAIN.INDODAX.chainCEX,
                         tokenName: token.symbol_out.toUpperCase(),
                         scToken: token.sc_out || "",
                         feeWDs: 0.0001,
