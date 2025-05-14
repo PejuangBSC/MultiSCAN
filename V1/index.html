@@ -245,7 +245,7 @@
                     <img class="icon" id="MasterData" title="SETTING DATA" width="30px" src="https://cdn-icons-png.flaticon.com/128/3934/3934107.png" />
                 </a>
                 <a href="auto.html" target="_blank">
-                    <img class="icon" title="AUTO SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/585/585603.png" />
+                    <img class="icon" title="FAVORITE SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/256/5046/5046573.png" />
                 </a>
                 <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
                     <img class="icon" id="BukaKunci" title="BUKA AKSES" width="30px" src="https://cdn-icons-png.flaticon.com/512/9921/9921748.png" />
@@ -687,7 +687,7 @@
         // Lakukan update tampilan sesuai perubahan sorting
         loadStoredData(filteredTokens);
     });
-
+    
     $(document).on('click', `[id^="SelAuto-"]`, function () {
         const index = $(this).data('index');
         const item = filteredTokens[index];
@@ -702,8 +702,6 @@
         CEX: ${item.cex}
         Token: ${item.symbol_in}
         Pair: ${item.symbol_out}`;
-        // Withdraw: ${item.withdrawToken} / ${item.withdrawPair}
-        // Deposit: ${item.depositToken} / ${item.depositPair}`;
         toastr.success(detailText, `BERHASIL TAMBAH DATA #${index + 1}`, {
             timeOut: 5000,
             closeButton: true,
@@ -711,10 +709,10 @@
         });
 
         // Ambil data dari localStorage
-        let tokens = getFromLocalStorage('TOKEN_AUTO_SCANNER', []);
-        if (!Array.isArray(tokens)) tokens = []; // 🛠 fix untuk error .some is not a function
+        let tokens = getFromLocalStorage('TOKEN_FAV_SCANNER', []);
+        if (!Array.isArray(tokens)) tokens = [];
 
-        // Batas maksimal 10 token
+        // Batas maksimal 30 token
         if (tokens.length >= 30) {
             toastr.warning("Maksimal 30 token yang bisa dipilih!", "Batas Tercapai");
             return;
@@ -727,13 +725,23 @@
             return;
         }
 
+        // ✅ PROMPT modal kiri dan kanan
+        const modalKiri  = prompt(`Masukkan Modal KIRI {${item.symbol_in}}`,  "100");
+        if (modalKiri === null) return;         // user klik Cancel
+
+        const modalKanan = prompt(`Masukkan Modal KANAN: {${item.symbol_in}}`, "100");
+        if (modalKanan === null) return;
+
+        // Tambahkan properti ke item
+        item.modal_kiri = parseFloat(modalKiri) || 0;
+        item.modal_kanan = parseFloat(modalKanan) || 0;
+
         // Simpan token ke localStorage
         tokens.push(item);
-        saveToLocalStorage('TOKEN_AUTO_SCANNER', tokens);
+        saveToLocalStorage('TOKEN_FAV_SCANNER', tokens);
         console.log("Token berhasil ditambahkan:", item);
     });
 
-    //console.log("DATA TOKEN FILTER",filteredTokens);
     // Mapping konfigurasi untuk setiap exchange
     const exchangeConfig = {
         GATE: {
@@ -1957,9 +1965,7 @@
                 <input type="checkbox" class="statusCheckbox" data-id="${index}" data-index="${data.no}" ${data.status ? 'checked' : ''}>#${index+1}
                  <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex} </span><br/>
                  <span class="uk-text-danger uk-text-bolder">${linkToken} VS ${linkPair}</span>
-                 <span id="SelAuto-${index}" data-index="${index}" uk-icon="icon: plus-circle; ratio: 0.8"  class="uk-text-success uk-text-bolder"  style="cursor:pointer"> </span>
-
-                <br>
+                 <span id="SelAuto-${index}" data-index="${index}" uk-icon="icon: plus-circle; ratio: 0.8"  class="uk-text-success uk-text-bolder"  style="cursor:pointer"> </span> <br>
                <span class="uk-text-primary uk-text-bolder">${withdrawToken}~${depositToken}</span> | <span class="uk-text-primary uk-text-bolder">${withdrawPair}~${depositPair}</span> <br/>
                
                 <span class="uk-text-primary uk-text-bolder">${data.symbol_in}</span> 
