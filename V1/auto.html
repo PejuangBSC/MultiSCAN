@@ -15,7 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.70.0/lib/index.iife.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script> 
     
-   <link id="favicon" rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/256/5046/5046573.png">
+    <link id="favicon" rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5397/5397757.png">
 
     <script src="config.js"></script>
     <style>
@@ -233,20 +233,20 @@
                     <span uk-icon="icon: moon; ratio: 0.4"></span> 🌓
                 </div>
                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
-                    AUTO SCANNER  V1.1  :: <label id="namachain"></label> 
+                    FAVORITE SCAN  V1.1  :: <label id="namachain"></label> 
                     <!-- <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp; -->
                 </h2>
                 <a href="index.html" target="_blank">
                     <img class="icon" id="Scanner" title="SCANNER PRICE" width="35px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/copy-cat-5381934-4568586.png" />
                 </a>
-                <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
+                <!-- <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" /> -->
                 <!-- <img class="icon" id="UpdateWalletCEX" title="UPDATE WALLET CEX" width="30px" src="https://images.freeimages.com/fic/images/icons/2770/ios_7_icons/512/wallet.png" /> -->
                 <a href="manajemen_aset.html" target="_blank">
                     <img class="icon" id="Modal" title="MANAJEMEN ASSET" width="30px" src="https://cdn-icons-png.flaticon.com/512/1194/1194711.png" />
                 </a>
-                <a href="multipair.html" target="_blank">
+                <!-- <a href="multipair.html" target="_blank">
                     <img class="icon" id="MasterData" title="SETTING DATA" width="30px" src="https://cdn-icons-png.flaticon.com/128/3934/3934107.png" />
-                </a>
+                </a> -->
                 <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
                     <img class="icon" id="BukaKunci" title="BUKA AKSES" width="30px" src="https://cdn-icons-png.flaticon.com/512/9921/9921748.png" />
                 </a>
@@ -599,7 +599,7 @@
     var selectedServer = getRandomServerFromCORSList();
     const DTChain = getChainData(chainName);  
     var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
-    var DataTokens = getFromLocalStorage('TOKEN_AUTO_SCANNER',[]);
+    var DataTokens = getFromLocalStorage('TOKEN_FAV_SCANNER',[]);
     var MasterTokens = getFromLocalStorage('TOKEN',[]);
     var serverCORSList = getFromLocalStorage("SERVERCORS", []); 
     var WalletCEX = getFromLocalStorage("WALLET_CEX", []); 
@@ -624,7 +624,7 @@
     let filteredTokens = [];
 
     function filterTokens(strictMode) {
-        const allTokens = getFromLocalStorage("TOKEN_AUTO_SCANNER", []);
+        const allTokens = getFromLocalStorage("TOKEN_FAV_SCANNER", []);
         const selectedCEX = getFromLocalStorage("CEX_PILIH", []);
         const selectedDEXPAIR = getFromLocalStorage("DEXPAIR_PILIH", []);
         const selectedDEX = getFromLocalStorage("DEX_PILIH", []);
@@ -704,14 +704,14 @@
         }
 
         // Ambil data token yang sudah disimpan
-        let tokens = getFromLocalStorage('TOKEN_AUTO_SCANNER', []);
+        let tokens = getFromLocalStorage('TOKEN_FAV_SCANNER', []);
         if (!Array.isArray(tokens)) tokens = [];
 
         // Hapus berdasarkan item.no
         tokens = tokens.filter(t => t.no !== item.no);
 
         // Simpan ulang
-        saveToLocalStorage('TOKEN_AUTO_SCANNER', tokens);
+        saveToLocalStorage('TOKEN_FAV_SCANNER', tokens);
 
         // Tampilkan notifikasi
         toastr.success("Token berhasil dihapus", `Dihapus: ${item.symbol_in}`, {
@@ -722,7 +722,6 @@
         // Refresh halaman (atau bisa panggil fungsi update UI jika tidak ingin full reload)
         setTimeout(() => location.reload(), 500);
     });
-
 
 
     //console.log("DATA TOKEN FILTER",filteredTokens);
@@ -1080,10 +1079,11 @@
                     $('#sinyal-container').css('background-color', warnaFaded);
 
                     // Update tampilan dengan nama chain dan warna
+                    $('title').text(Nama_Chain.toUpperCase());
                     $('#namachain').text(Nama_Chain.toUpperCase());
                     $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
                     $('h2#judul').css('color', selectedChain.WARNA);
-                     $('title').text(Nama_Chain.toUpperCase());
+                    // $('#favicon').attr('href', DTChain.ICON_CHAIN); 
                     $('#progress-bar').css('background-color', selectedChain.WARNA);
 
                     $('#sinyal-container').css('color',"black");
@@ -1201,9 +1201,9 @@
 
                 // Konfirmasi penyimpanan
                 if (confirm('LOAD DATA AKAN MERUBAH DATA SEBELUMNYA, LANJUTKAN??')) {
-                    saveToLocalStorage("TOKEN_AUTO_SCANNER", combinedData);
+                    saveToLocalStorage("TOKEN_FAV_SCANNER", combinedData);
 
-                    const savedData = getFromLocalStorage("TOKEN_AUTO_SCANNER", []);
+                    const savedData = getFromLocalStorage("TOKEN_FAV_SCANNER", []);
                     if (savedData.length === combinedData.length) {
                         toastr.info("LOADING DATA TOKEN PAIR...", {
                             timeOut: 3000,
@@ -1381,14 +1381,10 @@
                             dexList.forEach((dex) => {
                                 let IdTokentoPair = `${cex}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
                                 let IdPairtoToken = `${cex}_${dex.toUpperCase()}_${PairToken}_${(DTChain.Nama_Chain).toUpperCase()}`;
-                               
-                                   // Mendapatkan nilai modal kiri dan kanan dari localStorage
-                                let modalKeyKiri = `MODAL_KIRI_${dex.toUpperCase()}`;
-                                let modalKeyKanan = `MODAL_KANAN_${dex.toUpperCase()}`;
-                                
-                                let modalKiri = SavedSettingData[modalKeyKiri];
-                                let modalKanan = SavedSettingData[modalKeyKanan];
-                                
+                                                               
+                                let modalKiri = token.modal_kiri;
+                                let modalKanan = token.modal_kanan;
+                              //  console.log("MODAL KIRI & KANAN",token.modal_kiri,token.modal_kanan);
                                 let dextype = dex.toLowerCase();
                                 
                                 // Perhitungan untuk modal kiri dan kanan
@@ -1870,7 +1866,7 @@
 
                 let th = document.createElement('th');
                 th.className = 'header';
-                th.textContent = `${dex} [${modalKiri}]`; // Tampilkan modal kiri
+                th.textContent = `${dex} `; // Tampilkan modal kiri
                 headerFragment.appendChild(th);
             });
 
@@ -1887,7 +1883,7 @@
 
                 let th = document.createElement('th');
                 th.className = 'header';
-                th.textContent = `${dex} [${modalKanan}]`; // Tampilkan modal kanan
+                th.textContent = `${dex} `; // Tampilkan modal kanan
                 headerFragment.appendChild(th);
             });
 
@@ -1980,12 +1976,10 @@
             detailTd.className = 'uk-text-center uk-background uk-text-nowrap';
 
             detailTd.innerHTML = `
-                <input type="checkbox" class="statusCheckbox" data-id="${index}" data-index="${data.no}" ${data.status ? 'checked' : ''}>#${index+1}
-                 <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex} </span><br/>
-                 <span class="uk-text-danger uk-text-bolder">${linkToken} VS ${linkPair}</span>
-                 <span id="DelAuto-${index}" data-index="${index}" uk-icon="icon: minus-circle; ratio: 0.8"  class="uk-text-danger uk-text-bolder"  style="cursor:pointer"> </span>
-
-                <br>
+               #${index+1}  <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex}  </span><br/>
+               <span class="uk-text-primary uk-text-bolder">${data.modal_kiri}$</span> <=> <span class="uk-text-danger uk-text-bolder">${data.modal_kanan}$</span><br/>
+                 <span class="uk-text-secondary uk-text-bolder">${linkToken} VS ${linkPair}</span>
+                 <span id="DelAuto-${index}" data-index="${index}" uk-icon="icon: minus-circle; ratio: 0.8"  class="uk-text-danger uk-text-bolder"  style="cursor:pointer"> </span><br/>
                <span class="uk-text-primary uk-text-bolder">${withdrawToken}~${depositToken}</span> | <span class="uk-text-primary uk-text-bolder">${withdrawPair}~${depositPair}</span> <br/>
                
                 <span class="uk-text-primary uk-text-bolder">${data.symbol_in}</span> 
@@ -2056,13 +2050,13 @@
         const id = $(this).data('id');
         const no = $(this).data('index');
         const isChecked = $(this).prop('checked');
-        const storedData = getFromLocalStorage('TOKEN_AUTO_SCANNER', []);
+        const storedData = getFromLocalStorage('TOKEN_FAV_SCANNER', []);
         const selectedCEX = getFromLocalStorage('CEX_PILIH', []); // Ambil selectedCEX dari localStorage
         const token = storedData.find(t => t.no === no);
 
         if (token) {
             token.status = isChecked;
-            saveToLocalStorage('TOKEN_AUTO_SCANNER', storedData);
+            saveToLocalStorage('TOKEN_FAV_SCANNER', storedData);
 
             // Hitung ulang jumlah total token aktif
             const jml = storedData.filter(item => 
@@ -2492,7 +2486,7 @@
             return;
         }
 
-        const feeList = getFromLocalStorage("TOKEN_AUTO_SCANNER", []);
+        const feeList = getFromLocalStorage("TOKEN_FAV_SCANNER", []);
         if (!Array.isArray(feeList) || feeList.length === 0) {
             toastr.error("PERIKSA ULANG FEE WD dari EXCHANGER !!");
             callback("Token scanner belum diatur.", null);
@@ -2869,7 +2863,7 @@
 
         // Menampilkan PNL
         // Panggil fungsi tampilan hasil
-       // console.log(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent); 
+        console.log(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent); 
         DisplayPNL(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent,vol);
     }
 
@@ -3918,8 +3912,8 @@
 
                 saveToLocalStorage("WALLET_CEX", allFeeWD); // Simpan ke localStorage
                 saveToLocalStorage("LASTUPDATE_FEEWD",lastModifiedTime);
-                // Ambil data dari localStorage dengan key "TOKEN_AUTO_SCANNER"
-                const storedData = getFromLocalStorage("TOKEN_AUTO_SCANNER", []); // Ambil data token yang sudah ada
+                // Ambil data dari localStorage dengan key "TOKEN_FAV_SCANNER"
+                const storedData = getFromLocalStorage("TOKEN_FAV_SCANNER", []); // Ambil data token yang sudah ada
                 const WalletCEXData = getFromLocalStorage("WALLET_CEX", []); // Ambil data Wallet CEX dari localStorage
 
                 // Gabungkan data dari TOKEN dan status dari WALLET_CEX
@@ -3949,9 +3943,9 @@
 
                 // Konfirmasi dari pengguna
                 if (confirm('RELOAD STATUS WITHDRAW & DEPOSIT CEX?')) {
-                    saveToLocalStorage("TOKEN_AUTO_SCANNER", combinedData);
+                    saveToLocalStorage("TOKEN_FAV_SCANNER", combinedData);
 
-                    const savedData = getFromLocalStorage("TOKEN_AUTO_SCANNER", []);
+                    const savedData = getFromLocalStorage("TOKEN_FAV_SCANNER", []);
 
                     // Validasi apakah data berhasil disimpan
                     if (savedData.length === combinedData.length) {
@@ -4597,7 +4591,7 @@
     //fungsi download token
     $('#tokenCountALL').on('click', function () {
         // Ambil data dari localStorage
-        const rawData = getFromLocalStorage("TOKEN_AUTO_SCANNER", []);
+        const rawData = getFromLocalStorage("TOKEN_FAV_SCANNER", []);
         //const rawData = filteredData;
         if (!rawData || rawData.length === 0) {
             toastr.error('Data TOKEN tidak ditemukan...');
