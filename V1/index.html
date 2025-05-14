@@ -715,8 +715,8 @@
         if (!Array.isArray(tokens)) tokens = []; // 🛠 fix untuk error .some is not a function
 
         // Batas maksimal 10 token
-        if (tokens.length >= 10) {
-            toastr.warning("Maksimal 10 token yang bisa dipilih!", "Batas Tercapai");
+        if (tokens.length >= 30) {
+            toastr.warning("Maksimal 30 token yang bisa dipilih!", "Batas Tercapai");
             return;
         }
 
