@@ -1659,16 +1659,7 @@
                 let countdown = 10;
                 $('#progress-text').text(`Restarting in ${countdown}s...`);
                 $('#bar').css('width', '0%');
-                
-                cekDataAwal();
-                $('#sinyal-container span[id^="sinyal"]').empty();
-                form_off();
-                $("#stopSCAN").show().prop('disabled', false);
-                $('#LoadDataBtn, #SettingModal, #MasterData, #UpdateWalletCEX, #chain-links-container')
-                    .css('pointer-events', 'none')
-                    .css('opacity', '0.4');
-                $('.statusCheckbox').css({ 'pointer-events': 'auto', 'opacity': '1' }).prop('disabled', false);
-
+               
                 // ⏳ Jalankan countdown mundur 10s
                 const countdownInterval = setInterval(() => {
                     countdown--;
@@ -1677,6 +1668,16 @@
                         clearInterval(countdownInterval);
                         console.log("Memulai ulang proses scan karena autorun aktif...");
                         toastr.info("MEMULAI SCAN LAGI!");
+
+                        cekDataAwal();
+                        $('#sinyal-container span[id^="sinyal"]').empty();
+                        form_off();
+                        $("#stopSCAN").show().prop('disabled', false);
+                        $('#LoadDataBtn, #SettingModal, #MasterData, #UpdateWalletCEX, #chain-links-container')
+                            .css('pointer-events', 'none')
+                            .css('opacity', '0.4');
+                        $('.statusCheckbox').css({ 'pointer-events': 'auto', 'opacity': '1' }).prop('disabled', false);
+
                         processTokens(); // Mulai ulang scan
                     }
                 }, 1000);
