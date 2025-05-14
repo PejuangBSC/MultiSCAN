@@ -1659,7 +1659,8 @@
                 let countdown = 10;
                 $('#progress-text').text(`Restarting in ${countdown}s...`);
                 $('#bar').css('width', '0%');
-
+                
+                cekDataAwal();
                 $('#sinyal-container span[id^="sinyal"]').empty();
                 form_off();
                 $("#stopSCAN").show().prop('disabled', false);
