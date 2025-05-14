@@ -13,7 +13,8 @@
     <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.70.0/lib/index.iife.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script> 
+    
     <link id="favicon" rel="icon" type="image/png" >
     <script src="config.js"></script>
     <style>
@@ -242,6 +243,9 @@
                 </a>
                 <a href="multipair.html" target="_blank">
                     <img class="icon" id="MasterData" title="SETTING DATA" width="30px" src="https://cdn-icons-png.flaticon.com/128/3934/3934107.png" />
+                </a>
+                <a href="auto.html" target="_blank">
+                    <img class="icon" title="AUTO SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/585/585603.png" />
                 </a>
                 <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
                     <img class="icon" id="BukaKunci" title="BUKA AKSES" width="30px" src="https://cdn-icons-png.flaticon.com/512/9921/9921748.png" />
@@ -683,6 +687,52 @@
         // Lakukan update tampilan sesuai perubahan sorting
         loadStoredData(filteredTokens);
     });
+
+    $(document).on('click', `[id^="SelAuto-"]`, function () {
+        const index = $(this).data('index');
+        const item = filteredTokens[index];
+
+        if (!item) {
+            console.warn("Data tidak ditemukan di filteredTokens", index);
+            return;
+        }
+
+        // Tampilkan detail dengan toastr
+        const detailText = `
+        CEX: ${item.cex}
+        Token: ${item.symbol_in}
+        Pair: ${item.symbol_out}`;
+        // Withdraw: ${item.withdrawToken} / ${item.withdrawPair}
+        // Deposit: ${item.depositToken} / ${item.depositPair}`;
+        toastr.success(detailText, `BERHASIL TAMBAH DATA #${index + 1}`, {
+            timeOut: 5000,
+            closeButton: true,
+            escapeHtml: true
+        });
+
+        // Ambil data dari localStorage
+        let tokens = getFromLocalStorage('TOKEN_AUTO_SCANNER', []);
+        if (!Array.isArray(tokens)) tokens = []; // 🛠 fix untuk error .some is not a function
+
+        // Batas maksimal 10 token
+        if (tokens.length >= 10) {
+            toastr.warning("Maksimal 10 token yang bisa dipilih!", "Batas Tercapai");
+            return;
+        }
+
+        // Cek duplikasi berdasarkan 'no'
+        const isExist = tokens.some(t => t.no === item.no);
+        if (isExist) {
+            toastr.info("Token sudah dipilih sebelumnya.", "Duplikat");
+            return;
+        }
+
+        // Simpan token ke localStorage
+        tokens.push(item);
+        saveToLocalStorage('TOKEN_AUTO_SCANNER', tokens);
+        console.log("Token berhasil ditambahkan:", item);
+    });
+
     //console.log("DATA TOKEN FILTER",filteredTokens);
     // Mapping konfigurasi untuk setiap exchange
     const exchangeConfig = {
@@ -1906,7 +1956,10 @@
             detailTd.innerHTML = `
                 <input type="checkbox" class="statusCheckbox" data-id="${index}" data-index="${data.no}" ${data.status ? 'checked' : ''}>#${index+1}
                  <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex} </span><br/>
-                <span class="uk-text-danger uk-text-bolder">${linkToken} VS ${linkPair}</span><br>
+                 <span class="uk-text-danger uk-text-bolder">${linkToken} VS ${linkPair}</span>
+                 <span id="SelAuto-${index}" data-index="${index}" uk-icon="icon: plus-circle; ratio: 0.8"  class="uk-text-success uk-text-bolder"  style="cursor:pointer"> </span>
+
+                <br>
                <span class="uk-text-primary uk-text-bolder">${withdrawToken}~${depositToken}</span> | <span class="uk-text-primary uk-text-bolder">${withdrawPair}~${depositPair}</span> <br/>
                
                 <span class="uk-text-primary uk-text-bolder">${data.symbol_in}</span> 
