@@ -1285,34 +1285,45 @@
                     let timeout = setTimeout(() => reject("Timeout"), speedScan);
                     //console.log("Detail TOKEN PAIR",token);
                     getPriceCEX(token, token.symbol_in, token.symbol_out, token.cex, (error, DataCEX) => {
-                      //  console.log(DataCEX);
+                       // console.log(DataCEX);
 
                         clearTimeout(timeout);
                         let isInvalid = false;
 
-                        // Validasi manual harga
-                        let priceBuyTokenCEX = DataCEX.volumes_buyToken[2]?.price || 0;
-                        let priceSellTokenCEX = DataCEX.volumes_sellToken[0]?.price || 0;
+                        // Ambil harga dari volume level 0 atau fallback ke 0 jika tidak ada
+                        let priceBuyTokenCEX = DataCEX.volumes_buyToken?.[0]?.price || 0;
+                        let priceSellTokenCEX = DataCEX.volumes_sellToken?.[0]?.price || 0;
 
-                        let priceBuyPairCEX = DataCEX.volumes_buyPair[2]?.price || 0;
-                        let priceSellPairCEX = DataCEX.volumes_sellPair[0]?.price || 0;
+                        let priceBuyPairCEX = DataCEX.volumes_buyPair?.[0]?.price || 0;
+                        let priceSellPairCEX = DataCEX.volumes_sellPair?.[0]?.price || 0;
 
+                        // Validasi harga-harga
                         if (!isFinite(priceBuyTokenCEX) || priceBuyTokenCEX <= 0) {
-                            toastr.error(`Harga ${NameToken} pada ${cex} tidak valid: ${priceBuyTokenCEX}`);
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_in} pada ${token.cex}`);
+                            isInvalid = true;
+                        }
+
+                        if (!isFinite(priceSellTokenCEX) || priceSellTokenCEX <= 0) {
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_in} pada ${token.cex}`);
                             isInvalid = true;
                         }
 
                         if (!isFinite(priceBuyPairCEX) || priceBuyPairCEX <= 0) {
-                            toastr.error(`Harga ${NamePair} pada ${cex} tidak valid: ${priceBuyPairCEX}`);
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_out} pada ${token.cex}`);
                             isInvalid = true;
                         }
 
-                        // Gabungkan ke blok error utama
+                        if (!isFinite(priceSellPairCEX) || priceSellPairCEX <= 0) {
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_out} pada ${token.cex}`);
+                            isInvalid = true;
+                        }
+
+                        // Jika error atau tidak valid, skip ke step berikutnya
                         if (error || !DataCEX || isInvalid) {
                             console.error("Error data from CEX:", error || "Data tidak valid");
-                            toastr.error(`Cek Ulang Harga ${symbolIn} atau ${symbolOut} Exchanger : ${cex}`);
-                            resolve();
-                            $('#' + cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
+                            toastr.error(`Cek ulang harga ${token.symbol_in}/${token.symbol_out} di ${token.cex}`);
+                            resolve(); // lanjut ke iterasi berikutnya jika async dalam Promise
+                            $('#' + token.cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
                             return;
                         }
                         else {
@@ -1367,8 +1378,8 @@
                                             $(`#${IdTokentoPair}`).css('background-color', error.color);
                                             $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/> <span <span class=uk-text-danger title="${error.pesanDEX}">[ERROR]</span>`);
                                               
-                                                if ((error.statusCode == 0 && (dextype == "kyberswap" )) || 
-                                                    (error.statusCode == 429 && dextype == "okx")){
+                                                if ((error.statusCode == 0 && (dextype == "kyberswap" ))){
+                                                 //    ||  (error.statusCode == 429 && dextype == "okx")){
 
                                                    // toastr.info(`${TokenPair} ${dextype} PINDAH SERVER`);
                                                     var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in_token));
@@ -1456,7 +1467,7 @@
                                             $(`#${IdPairtoToken}`).css('background-color', error.color);
                                             $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/> <span <span class=uk-text-danger title="${error.pesanDEX}">[ERROR]</span>`);
                                                 
-                                                    if ((error.statusCode == 0 && (dextype == "kyberswap" ||  dextype == "0x")) ||   (error.statusCode == 429 && dextype == "okx") ||  (error.statusCode == 403 && dextype == "0x")) {
+                                                    if ((error.statusCode == 0 && (dextype == "kyberswap" ||  dextype == "0x")) ||  (error.statusCode == 403 && dextype == "0x")) {
                                                     // toastr.info(`${PairToken} ${dextype} PINDAH SERVER`);
                                                         var amount_in = BigInt(Math.round(Math.pow(10, des_output) * amount_in_pair));
                                                         getPriceSWOOP( sc_output, des_output,sc_input, des_input, amount_in, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
@@ -2070,7 +2081,7 @@
         }
         else if (cex === "INDODAX") {
             if (baseUrlTradeToken !== "#") baseUrlTradeToken = `https://indodax.com/market/${token}IDR`;
-            if (baseUrlTradePair !== "#") baseUrlTradePair = `https://indodax.com/market/${token}IDR`;
+            if (baseUrlTradePair !== "#") baseUrlTradePair = `https://indodax.com/market/${pair}IDR`;
             baseUrlWithdraw = `https://indodax.com/finance/${token}#kirim`;
             baseUrlDeposit = `https://indodax.com/finance/${token}`;
         }
@@ -2384,7 +2395,7 @@
                     })
                     .fail(function (error) {
                         console.error("Error fetching USDT/IDR price:", error);
-                        toastr.error('CEK KONEKSI INODAX ANDA / AKTIFKAN CORS!');
+                        toastr.error('KONEKSI INDODAX KENA lIMIT!');
                     });
             })
             .fail(function (error) {
@@ -2843,9 +2854,9 @@
             }
             if (!sellCell.parent().is("span")) {
                 sellCell.wrap('<a href="' + sellLink + '" target="_blank"></a>');
-            }
+            }           
 
-            InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal);
+            InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal,trx);
         } else {
             resultCell.html(`
                 <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
@@ -2864,18 +2875,28 @@
 
 
     // Fungsi untuk menampilkan sinyal hasil scan dan memutar suara
-    function InfoSinyal(DEXPLUS, TokenPair, PNL, totalFee, cex, NameToken, NamePair,profitLossPercent,modal) {
+    function InfoSinyal(DEXPLUS, TokenPair, PNL, totalFee, cex, NameToken, NamePair,profitLossPercent,modal,trx) {
         // Menentukan warna teks berdasarkan `cex` menggunakan fungsi getWarnaCEX
         var warnaCEX = getWarnaCEX(cex);
         let idCELL = `${cex.toUpperCase()}_${DEXPLUS.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
         
         // Membuat link dengan format umum tanpa pengecekan kondisi
 
-        var sLink = `<a href=#SWAP_${idCELL} class='buy'>
-            <span style='color:${warnaCEX}; font-weight:bolder;'>[ ${cex.toUpperCase()}<span class="uk-text-secondary">:${modal}</span>
-            ~ ${NameToken}->${NamePair}: <span class="uk-text-danger">${PNL.toFixed(2)}$ </span> ]</span>
+        // var sLink = `<a href=#SWAP_${idCELL} class='buy'>
+        //     <span style='color:${warnaCEX}; font-weight:bolder;'>[ ${cex.toUpperCase()}<span class="uk-text-secondary">:${modal}</span>
+        //     ~ ${NameToken}->${NamePair}: <span class="uk-text-warning">${PNL.toFixed(2)}$ </span> ]</span>
            
+        // </a>`;
+
+        let warnaPNL = trx === "TokentoPair" ? "uk-text-success" : "uk-text-danger";
+
+        var sLink = `<a href="#SWAP_${idCELL}" class="buy">
+            <span style="color:${warnaCEX}; font-weight:bolder;">
+                [ ${cex.toUpperCase()}<span class="uk-text-secondary">:${modal}</span>
+               <span class="${warnaPNL}"> ~ ${NameToken}->${NamePair}</span>: <span class="uk-text-warning">${PNL.toFixed(2)}$</span> ]
+            </span>
         </a>`;
+
        // (<span class="uk-text-warning">${profitLossPercent.toFixed(1)}%</span>)
         // Menambahkan link ke elemen dengan ID yang sesuai
         $("#sinyal" + DEXPLUS.toLowerCase()).append(` ${sLink} `);
@@ -2984,9 +3005,6 @@
             case 'alt0x':           
                   apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
                 break;
-            case 'alt0x':           
-                  apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
-                break;            
             case '0x':           
                     if(DTChain.Nama_Chain.toLowerCase() === 'solana'){
                         apiUrl = selectedServer+"https://matcha.xyz/api/swap/quote/solana?sellTokenAddress="+sc_input_in+"&buyTokenAddress="+sc_output_in+"&sellAmount="+amount_in+"&dynamicSlippage=true&slippageBps=50&userPublicKey=Eo6CpSc1ViboPva7NZ1YuxUnDCgqnFDXzcDMDAF6YJ1L";
