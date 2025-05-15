@@ -838,6 +838,7 @@
 
                 // Proses data SELL: sort harga dari besar ke kecil, baru ambil 3 data teratas
                 const priceSell = data.sell
+                    .sort((a, b) => parseFloat(b[0]) - parseFloat(a[0]))
                     .slice(0, 3)
                     .map(([price, volume]) => {
                         const priceFloat = parseFloat(price);
@@ -1019,7 +1020,6 @@
             $("#infoAPP").show().text(`${dataACTION.action} at ${dataACTION.time}`);
         }
     }
-
 
     $(document).ready(function() {  
     // dark mode change    
@@ -1787,8 +1787,6 @@
         return cexConfig && cexConfig.WARNA ? cexConfig.WARNA : 'black'; // Gunakan warna dari konfigurasi atau 'black' jika tidak ditemukan
     }
 
-    //fungsi filter TOKEN berdasarkan CEX,DEX dan DEX-PAIR
-    
     // Fungsi untuk menampilkan sinyal DEX
     function loadSignalData() {
         let selectedDEX = getFromLocalStorage('DEX_PILIH', []); // Ambil pilihan DEX dari localStorage
@@ -2404,21 +2402,6 @@
         });
     }
 
-    // Fungsi untuk memproses data order book exchanger
-    function processOrderBookLAMA(data) {
-        const priceBuy = data.bids.slice(0, 3).map(([price, volume]) => ({
-            price: parseFloat(price),
-            volume: parseFloat(volume) * parseFloat(price) // Volume dalam USD
-        })).reverse(); // Membalik urutan priceBuy
-
-        const priceSell = data.asks.slice(0, 3).map(([price, volume]) => ({
-            price: parseFloat(price),
-            volume: parseFloat(volume) * parseFloat(price) // Volume dalam USD
-        })).reverse(); // Membalik urutan priceSell
-
-        return { priceBuy, priceSell };
-    }
-
     function processOrderBook(data) {
         const rawBids = Array.isArray(data?.bids) ? data.bids.slice(0, 3) : [];
         const rawAsks = Array.isArray(data?.asks) ? data.asks.slice(0, 3) : [];
@@ -2435,7 +2418,6 @@
 
         return { priceBuy, priceSell };
     }
-
 
     function getRateUSDT() {
         // Ambil harga ETHUSDT dari API Binance
@@ -2964,7 +2946,7 @@
 
         let warnaPNL = trx === "TokentoPair" ? "uk-text-success" : "uk-text-danger";
 
-        var sLink = `<a href="#SWAP_${idCELL}" class="buy">
+        var sLink = `<a href="#${idCELL}" class="buy">
             <span style="color:${warnaCEX}; font-weight:bolder;">
                 [ ${cex.toUpperCase()}<span class="uk-text-secondary">:${modal}</span>
                <span class="${warnaPNL}"> ~ ${NameToken}->${NamePair}</span>: <span class="uk-text-warning">${PNL.toFixed(2)}$</span> ]
