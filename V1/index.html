@@ -842,7 +842,6 @@
 
                 // Proses data BUY: langsung ambil 3 data teratas dari API (tidak di-sort)
                 const priceBuy = data.buy
-                 //   .sort((a, b) => parseFloat(b[0]) - parseFloat(a[0]))
                     .slice(0, 3)
                     .map(([price, volume]) => {
                         const priceFloat = parseFloat(price);
@@ -855,7 +854,6 @@
 
                 // Proses data SELL: sort harga dari besar ke kecil, baru ambil 3 data teratas
                 const priceSell = data.sell
-                    .sort((a, b) => parseFloat(b[0]) - parseFloat(a[0]))
                     .slice(0, 3)
                     .map(([price, volume]) => {
                         const priceFloat = parseFloat(price);
@@ -2584,32 +2582,37 @@
         };
 
         $('#LEFT_' + cexName + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).html(
-            finalResult.volumes_buyToken.map((data, index) => {
-                    return `<span class='uk-text-success' title="IDR: ${getPriceIDR(data.price)}">
-                        ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
-                    </span>`;
-                }).join('') +
+            (
+                cexName === 'INDODAX'
+                    ? finalResult.volumes_buyToken.slice().sort((a, b) => b.price - a.price)
+                    : finalResult.volumes_buyToken
+            ).map((data, index) => {
+                return `<span class='uk-text-success' title="IDR: ${getPriceIDR(data.price)}">
+                    ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
+                </span>`;
+            }).join('') +
             `<span class='uk-text-primary uk-text-bolder'>${finalResult.token} -> ${finalResult.pair}</span><br/>` +
-            finalResult.volumes_sellPair
-                .slice()
-                .sort((a, b) => b.price - a.price) // Urut harga besar ke kecil
-                .map((data, index) => {
-                    return `<span class='uk-text-danger' title="IDR: ${getPriceIDR(data.price)}">
-                        ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
-                    </span>`;
-                }).join('')
+            (
+                cexName === 'INDODAX'
+                    ? finalResult.volumes_sellPair.slice().sort((a, b) => a.price - b.price) // harga kecil ke besar
+                    : finalResult.volumes_sellPair
+            ).map((data, index) => {
+                return `<span class='uk-text-danger' title="IDR: ${getPriceIDR(data.price)}">
+                    ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
+                </span>`;
+            }).join('')
         );
 
         $('#RIGHT_' + cexName + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).html(
             finalResult.volumes_buyPair.map((data, index) => {
-                    return `<span class='uk-text-success' title="IDR: ${getPriceIDR(data.price)}">
-                        ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
-                    </span>`;
-                }).join('') +
+                return `<span class='uk-text-success' title="IDR: ${getPriceIDR(data.price)}">
+                    ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
+                </span>`;
+            }).join('') +
             `<span class='uk-text-primary uk-text-bolder'>${finalResult.pair} -> ${finalResult.token}</span><br/>` +
             finalResult.volumes_sellToken
                 .slice()
-                .sort((a, b) => b.price - a.price) // Urut harga besar ke kecil
+                .sort((a, b) => b.price - a.price) // global: harga besar ke kecil
                 .map((data, index) => {
                     return `<span class='uk-text-danger' title="IDR: ${getPriceIDR(data.price)}">
                         ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
@@ -2618,6 +2621,7 @@
         );
     }
 
+  
     // list api OKXDEX sell_BINANCE_USDT_buy_0x_BAL
     const apiKeysOKXDEX = [
         
@@ -2812,7 +2816,7 @@
                 currency: "IDR"
             }) : "N/A";
 
-            let titleInfo = `DEX ${dextype.toUpperCase()}: `;
+            let titleInfo = `${dextype.toUpperCase()}: `;
             let RateSwap = "";
 
             if (stablecoins.includes(Name_in)) {
@@ -2824,17 +2828,30 @@
                 titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
                 RateSwap = `<label class="uk-text-danger" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
             } else {
-                if (trx === "TokentoPair") {
+                // if (trx === "TokentoPair") {
+                //      // Selain itu, ambil rate dari TOKEN (symbol_in)
+                //     titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateSellTokenDEX)}`;
+                //     titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
+                //     RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;                   
+                // } else {
+                //     // Khusus USDT saat PairtoToken → ambil rate dari PAIR (symbol_out)
+                //     titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateBuyPairDEX)}`;
+                //     titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
+                //     RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
+                // }
+
+                 if (trx === "TokentoPair") {
                      // Selain itu, ambil rate dari TOKEN (symbol_in)
-                    titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateSellTokenDEX)}`;
+                    titleInfo += ` ${formatPrice(rateTokentoPair)} ${Name_in}/${Name_out}`;
                     titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
-                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;                   
+                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateSellTokenDEX)}</label>`;                   
                 } else {
                     // Khusus USDT saat PairtoToken → ambil rate dari PAIR (symbol_out)
-                    titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateBuyPairDEX)}`;
+                    titleInfo += ` ${formatPrice(rateTokentoPair)} ${Name_in}/${Name_out}`;
                     titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
-                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
+                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateBuyPairDEX)}</label>`;
                 }
+                
 
             }
 
