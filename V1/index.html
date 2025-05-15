@@ -842,7 +842,7 @@
 
                 // Proses data BUY: langsung ambil 3 data teratas dari API (tidak di-sort)
                 const priceBuy = data.buy
-                    .sort((a, b) => parseFloat(b[0]) - parseFloat(a[0]))
+                //    .sort((a, b) => parseFloat(b[0]) - parseFloat(a[0]))
                     .slice(0, 3)
                     .map(([price, volume]) => {
                         const priceFloat = parseFloat(price);
