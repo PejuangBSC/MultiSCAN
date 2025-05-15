@@ -233,7 +233,7 @@
                     <span uk-icon="icon: moon; ratio: 0.4"></span> 🌓
                 </div>
                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
-                    FAVORITE SCAN  V1.1  :: <label id="namachain"></label> 
+                    FAVORITE SCAN  V1.5  :: <label id="namachain"></label> 
                     <!-- <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp; -->
                 </h2>
                 <a href="index.html" target="_blank">
@@ -486,6 +486,7 @@
     const storagePrefix = "MULTISCAN_V1_" + Nama_Chain.toUpperCase() + "_";
     let sortOrder = {};
     const stablecoins = ["USDT", "DAI", "USDC", "FDUSD"];
+    const makfav=30;
 
     // Fungsi umum untuk mendapatkan data dari localStorage
     function getFromLocalStorage(key, defaultValue) {
@@ -653,7 +654,7 @@
             const validDexPair = selectedDEXPAIR.some(pair => token.symbol_in === pair || token.symbol_out === pair) ||
                 (isNonSelected && !dexPairs.some(pair => token.symbol_in === pair || token.symbol_out === pair));
 
-            if (!validCEX || !validDexPair || !token.status) return false;
+            if ( !validDexPair || !token.status) return false;
             if (strictMode && (!token.withdrawToken || !token.depositPair || !token.withdrawPair || !token.depositToken)) return false;
             
             return true;
@@ -999,7 +1000,7 @@
                 item.status === true 
             ).length;
 
-            $('#tokenCountALL').text(`TOTAL SEMUA: ${jml} PAIR-TOKEN`);  
+            $('#tokenCountALL').text(`TOTAL SEMUA: ${jml} / ${makfav} PAIR-TOKEN`);  
         }
 
         // Update link dengan parameter baru
@@ -3659,7 +3660,7 @@
 
         var message = " #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>" +
             "\n ----------------------------------------------------"+
-            "\n <b> AUTOSCANNER ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
+            "\n <b> #FAVORITE 1.5 ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
             "\n <b> CEX: </b>" + cexList.toUpperCase() +
             "\n <b> DEX: </b>" + dexList.toUpperCase() +
             "\n <b> ID UNIX : </b>" + data.id +
@@ -3706,7 +3707,7 @@
             let linkCEX = urlsCEX && urlsCEX.tradeToken ? `<a href="${urlsCEX.tradeToken}" target="_blank" class="uk-link">${cex}</a>` : `<b>${cex}</b>`;
 
             let message = 
-                `<b>#AUTOSCANNER #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
+                `<b>#FAVORITE 1.5 #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
                 `-----------------------------------------\n` +
                 `MARKET: ${linkCEX} VS ${linkDEX}\n` +
                 `TOKEN-PAIR: <b>#${token}_${pair}</b>\n` +
