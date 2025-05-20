@@ -364,6 +364,9 @@
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="6"  name="koin-group"> 6</label> 
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="5" checked name="koin-group"> 5</label>
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4"  name="koin-group"> 4</label>  
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="3"  name="koin-group"> 3</label>  
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="2"  name="koin-group"> 2</label>  
+                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="1"  name="koin-group"> 1</label>  
                                         </div>
                                     </div>
                                 <div class="uk-flex uk-flex-middle uk-margin ">
@@ -1018,10 +1021,25 @@
             $('#tokenCountALL').text(`TOTAL SEMUA: ${jml} PAIR-TOKEN`);  
         }
 
-        // Update link dengan parameter baru
-        var link = $('a[href="multipair.html"]'); // Pilih elemen link
-        var href = link.attr('href'); // Ambil URL href
-        link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
+        // // Update link dengan parameter baru
+        // var link = $('a[href="multipair.html"]'); // Pilih elemen link
+        // var href = link.attr('href'); // Ambil URL href
+        // link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
+
+        // Daftar file HTML target
+        var targetFiles = ["multipair.html", "auto.html"];
+
+        // Loop setiap file dan update href-nya
+        targetFiles.forEach(function(file) {
+            $('a[href="' + file + '"]').each(function() {
+                var link = $(this);
+                var href = link.attr('href');
+
+                // Tambahkan parameter chain, sesuaikan separator jika sudah ada query string
+                var separator = href.includes('?') ? '&' : '?';
+                link.attr('href', href + separator + "chain=" + encodeURIComponent(chainName));
+            });
+        });
 
         // Tampilkan semua pesan error ke #infoAPP
         if (!info) {
@@ -2883,86 +2901,6 @@
         var buyCell = $(`#LEFT_${IdCELL}`);
         var sellCell = $(`#RIGHT_${IdCELL}`);
 
-        // console.log("PAIR", NameX);   
-        // console.log("TRX", trx);            
-        // console.log("Vol", vol);
-        // console.log("CheckVOL:", checkVol);
-        // console.log("PNL:", PNL);
-        // console.log("FEE ALL:", totalFee);
-        // console.log('------------------------------------');
-
-        var sinyals = `<a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class'>
-            ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${NameX} (${PNL.toFixed(2)}$)</a>`;
-
-        const isPNLPositive = (filterPNLValue === 0 && totalValue > totalModal) || ((totalValue - totalModal) > filterPNLValue);
-        const isVolEnough = parseFloat(vol) >= parseFloat(modal);
-        const canHighlight = (!checkVol && isPNLPositive) || (checkVol && isPNLPositive && isVolEnough);
-
-        if (canHighlight) {
-            toastr.success(sinyals);
-            rowCell.attr("style", "background-color: #daf4c3 !important; font-weight: bolder !important; color: black !important;");
-
-            let htmlFee = '';
-            if (trx === "TokentoPair") {
-                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
-                        ${createLink(urlsCEXToken.withdrawUrl, 'WD')}<br/>`;
-            } else if (trx === "PairtoToken") {
-                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
-                        ${createLink(urlsCEXToken.depositUrl, 'DP')}<br/>`;
-            }
-
-            let htmlResult = `
-                ${htmlFee}
-                <span style="color: #d20000;">All: ${totalFee.toFixed(2)}$</span>
-                <span style="color: #1e87f0;">SW: ${FeeSwap.toFixed(2)}$</span><br/>
-                <span style="color: #444;">GT: ${totalGet.toFixed(2)}$</span>
-                <span style="color: #444;">PNL: ${PNL.toFixed(2)}$</span><br/>
-            `;
-            resultCell.html(htmlResult);
-
-            if (!buyCell.parent().is("span")) {
-                buyCell.wrap('<a href="' + buyLink + '" target="_blank"></a>');
-            }
-            if (!sellCell.parent().is("span")) {
-                sellCell.wrap('<a href="' + sellLink + '" target="_blank"></a>');
-            }           
-
-            InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal,trx);
-        } else {
-            resultCell.html(`
-                <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
-                <span class="uk-text-danger" title="FEE ALL">ALL:${totalFee.toFixed(2)}$</span>
-                <span class="uk-text-primary" title="FEE SWAP"> ${FeeSwap.toFixed(2)}$</span><br/>
-                <span class="uk-text-success" title="GET BRUTO">GT:${totalGet.toFixed(2)}$</span>
-                <span class="uk-text-warning" title="GET NETTO / PNL" > ${PNL.toFixed(2)}$</span>
-            `);
-        }
-
-        if (PNL > 1 && parseFloat(vol) >= parseFloat(modal)) {
-            MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
-        }
-
-    }
-
-
-    function DisplayPNL(PNL, cex, Coin_in, NameX, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, Coin_out, totalValue, totalModal, conclusion, selisih, trx, profitLossPercent, vol) {
-        var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
-        var nickname = SavedSettingData.nickname;
-        var totalValue = parseFloat(totalValue);
-        var totalGet = totalValue - parseFloat(modal);
-        var totalModal = parseFloat(totalModal);
-        var totalFee = parseFloat(totalFee);
-        var checkVol = $('#checkVOL').is(':checked');
-
-        const urlsCEXToken = GeturlExchanger(cex.toUpperCase(), Coin_in, Coin_out);
-        var buyLink = urlsCEXToken.tradeToken;
-        var sellLink = urlsCEXToken.tradePair;
-        var IdCELL = `${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}`;
-        var rowCell = $(`#${IdCELL}`);
-        var resultCell = $(`#RESULT_${IdCELL}`);
-        var buyCell = $(`#LEFT_${IdCELL}`);
-        var sellCell = $(`#RIGHT_${IdCELL}`);
-
         var sinyals = `<a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class'>
             ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${NameX} (${PNL.toFixed(2)}$)</a>`;
 
@@ -3025,8 +2963,88 @@
         }
     }
 
+    function DisplayPNLLAMA(PNL, cex, Coin_in, NameX, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, Coin_out, totalValue, totalModal, conclusion, selisih, trx, profitLossPercent, vol) {
+        var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
+        var nickname = SavedSettingData.nickname;
+        var totalValue = parseFloat(totalValue);
+        var totalGet = totalValue - parseFloat(modal);
+        var totalModal = parseFloat(totalModal);
+        var totalFee = parseFloat(totalFee);
+        var checkVol = $('#checkVOL').is(':checked');
+
+        const urlsCEXToken = GeturlExchanger(cex.toUpperCase(), Coin_in, Coin_out);
+        var buyLink = urlsCEXToken.tradeToken;
+        var sellLink = urlsCEXToken.tradePair;
+        var IdCELL = `${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}`;
+        var rowCell = $(`#${IdCELL}`);
+        var resultCell = $(`#RESULT_${IdCELL}`);
+        var buyCell = $(`#LEFT_${IdCELL}`);
+        var sellCell = $(`#RIGHT_${IdCELL}`);
+
+        // console.log("PAIR", NameX);   
+        // console.log("TRX", trx);            
+        // console.log("Vol", vol);
+        // console.log("CheckVOL:", checkVol);
+        // console.log("PNL:", PNL);
+        // console.log("FEE ALL:", totalFee);
+        // console.log('------------------------------------');
+
+        var sinyals = `<a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class'>
+            ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${NameX} (${PNL.toFixed(2)}$)</a>`;
+
+        const isPNLPositive = (filterPNLValue === 0 && totalValue > totalModal) || ((totalValue - totalModal) > filterPNLValue);
+        const isVolEnough = parseFloat(vol) >= parseFloat(modal);
+        const canHighlight = (!checkVol && isPNLPositive) || (checkVol && isPNLPositive && isVolEnough);
+
+        if (canHighlight) {
+            toastr.success(sinyals);
+            rowCell.attr("style", "background-color: #daf4c3 !important; font-weight: bolder !important; color: black !important;");
+
+            let htmlFee = '';
+            if (trx === "TokentoPair") {
+                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
+                        ${createLink(urlsCEXToken.withdrawUrl, 'WD')}<br/>`;
+            } else if (trx === "PairtoToken") {
+                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
+                        ${createLink(urlsCEXToken.depositUrl, 'DP')}<br/>`;
+            }
+
+            let htmlResult = `
+                ${htmlFee}
+                <span style="color: #d20000;">All: ${totalFee.toFixed(2)}$</span>
+                <span style="color: #1e87f0;">SW: ${FeeSwap.toFixed(2)}$</span><br/>
+                <span style="color: #444;">GT: ${totalGet.toFixed(2)}$</span>
+                <span style="color: #444;">PNL: ${PNL.toFixed(2)}$</span><br/>
+            `;
+            resultCell.html(htmlResult);
+
+            if (!buyCell.parent().is("span")) {
+                buyCell.wrap('<a href="' + buyLink + '" target="_blank"></a>');
+            }
+            if (!sellCell.parent().is("span")) {
+                sellCell.wrap('<a href="' + sellLink + '" target="_blank"></a>');
+            }           
+
+            InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal,trx);
+        } else {
+            resultCell.html(`
+                <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
+                <span class="uk-text-danger" title="FEE ALL">ALL:${totalFee.toFixed(2)}$</span>
+                <span class="uk-text-primary" title="FEE SWAP"> ${FeeSwap.toFixed(2)}$</span><br/>
+                <span class="uk-text-success" title="GET BRUTO">GT:${totalGet.toFixed(2)}$</span>
+                <span class="uk-text-warning" title="GET NETTO / PNL" > ${PNL.toFixed(2)}$</span>
+            `);
+        }
+
+        if (PNL > 1 && parseFloat(vol) >= parseFloat(modal)) {
+            MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
+        }
+
+    }
+
+
     // Fungsi untuk menampilkan sinyal hasil scan dan memutar suara
-    function InfoSinyalLAMA(DEXPLUS, TokenPair, PNL, totalFee, cex, NameToken, NamePair,profitLossPercent,modal,trx) {
+    function InfoSinyal(DEXPLUS, TokenPair, PNL, totalFee, cex, NameToken, NamePair,profitLossPercent,modal,trx) {
         // Menentukan warna teks berdasarkan `cex` menggunakan fungsi getWarnaCEX
         var warnaCEX = getWarnaCEX(cex);
         let idCELL = `${cex.toUpperCase()}_${DEXPLUS.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
