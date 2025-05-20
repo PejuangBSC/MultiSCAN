@@ -259,15 +259,13 @@
             <!-- Bagian Kanan (Konten Lainnya) -->
             <div class="uk-width-expand uk-margin-small-top">
                 <form id="cryptoForm" style=" width: 96%;">
-                        <div class="dex-group  uk-grid-small uk-flex uk-flex-between" uk-grid>
                            
                             <div class="uk-width-auto uk-flex uk-flex-middle  uk-text-small">
                                 <b><span class="uk-text-danger uk-text-medium">INFO: &nbsp;</span></b>
                                 <b><span class="uk-text-primary uk-text-medium" id="infoAPP">???</span></b>&nbsp; &nbsp; &nbsp;
                             </div> 
                                   
-                           
-                            <div class="uk-width-auto uk-flex uk-flex-middle uk-margin-remove-top uk-text-small">
+                            <div class="uk-width-auto uk-flex uk-flex-middle uk-margin-small-top uk-text-small">
                                 <div class="uk-width-auto uk-flex uk-flex-middle  uk-margin-remove-top uk-text-small">
                                     <div id="dex-options" class="uk-form-controls" style="display: flex;">
                                         <!-- Radio button DEX akan di-generate di sini -->
@@ -276,7 +274,7 @@
                                 </div>
                             </div>
                             <!-- Kolom untuk DEX -->
-                            <div class="uk-width-auto uk-flex uk-flex-middle uk-margin-remove-top uk-text-small">
+                            <div class="uk-width-auto uk-flex uk-flex-middle uk-margin-small-top uk-text-small">
                                       <!-- Kolom untuk SETTING SCANNER -->
                                 <div class="uk-width-auto uk-flex uk-flex-middle">
                                     <span class="uk-form-label uk-text-secondary uk-text-bolder">SCANNER : 
@@ -308,7 +306,7 @@
 
                             </div>
         
-                        </div>
+                        
                 </form>
             </div>
         </div>
@@ -2897,7 +2895,7 @@
             }           
 
             InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal,trx);
-             // MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
+            
         } else {
             resultCell.html(`
                 <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
