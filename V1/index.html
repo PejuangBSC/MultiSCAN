@@ -298,7 +298,7 @@
                                     <span class="uk-form-label uk-text-secondary uk-text-bolder">SCANNER : 
                                         <span class="uk-form-label uk-text-success">
                                             <input type="checkbox" checked class="posisi-check" value="Actionkiri"> KIRI 
-                                            <input type="checkbox" checked class="posisi-check" value="ActionKana"> KANAN
+                                            <input type="checkbox" checked class="posisi-check" value="ActionKanan"> KANAN
                                         </span>  
                                     </span>
                                     &nbsp;&nbsp;
@@ -436,7 +436,7 @@
                 <!-- <span class="uk-form-label uk-text-warning uk-text-bolder">POSISI : 
                     <span class="uk-form-label uk-text-success">
                         <input type="checkbox" checked class="posisi-check" value="Actionkiri"> KIRI 
-                        <input type="checkbox" checked class="posisi-check" value="ActionKana"> KANAN
+                        <input type="checkbox" checked class="posisi-check" value="ActionKanan"> KANAN
                     </span>  
                 </span>
                 &nbsp;&nbsp;
@@ -504,7 +504,7 @@
     const storagePrefix = "MULTISCAN_V1_" + Nama_Chain.toUpperCase() + "_";
     let sortOrder = {};
     const stablecoins = ["USDT", "DAI", "USDC", "FDUSD"];
-    const makfav=30;
+    const makfav=50;
 
     // Fungsi umum untuk mendapatkan data dari localStorage
     function getFromLocalStorage(key, defaultValue) {
@@ -1150,7 +1150,7 @@
 
             $('.posisi-check').on('change', function () {
                 const kiri = $('input[value="Actionkiri"]');
-                const kanan = $('input[value="ActionKana"]');
+                const kanan = $('input[value="ActionKanan"]');
                 
                 // Cek jumlah yang dicentang
                 const checkedCount = $('.posisi-check:checked').length;
@@ -1537,7 +1537,7 @@
                                 // pair to token
                                 // DARI KANAN
                                // if ($(`#${IdPairtoToken}`).length) {
-                                if ($(`#${IdPairtoToken}`).length && $('input[type="checkbox"][value="ActionKana"]').is(':checked')) {
+                                if ($(`#${IdPairtoToken}`).length && $('input[type="checkbox"][value="ActionKanan"]').is(':checked')) {
                                    getPriceDEX( sc_output, des_output,sc_input, des_input, amount_in_pair, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (error, DataDEX) {
                                     
                                         if (error || !DataDEX) {
@@ -2049,8 +2049,63 @@
         updateSortIcons();
     }
 
-    //FUNGSI ubah status tokenpair
+    // FUNGSI ubah status tokenpair atau hapus token jika di-uncheck
     $(document).on('change', '.statusCheckbox', function (event) {
+        event.preventDefault();
+        const id = $(this).data('id');
+        const no = $(this).data('index');
+        const isChecked = $(this).prop('checked');
+        let storedData = getFromLocalStorage('TOKEN_SCANNER', []);
+        const selectedCEX = getFromLocalStorage('CEX_PILIH', []);
+        const token = storedData.find(t => t.no === no);
+
+        if (token) {
+            if (!isChecked) {
+                // Jika checkbox di-uncheck, hapus token dari localStorage
+                if (confirm(`YAKIN, NONAKTIF ${token.symbol_in} VS ${token.symbol_out}?`)) {
+                    storedData = storedData.filter(t => t.no !== no);
+                    saveToLocalStorage('TOKEN_SCANNER', storedData);
+                    $('tr[data-index="' + id + '"]').remove(); // Hapus baris dari tabel
+                    toastr.info(`PAIR ${token.symbol_in}-${token.symbol_out} BERHASIL DI NONAKTIFKAN!`);
+                } else {
+                    $(this).prop('checked', true); // Batalkan uncheck jika tidak konfirmasi
+                    return;
+                }
+            } else {
+                // Jika checkbox dicentang, tandai status = true
+                token.status = true;
+                saveToLocalStorage('TOKEN_SCANNER', storedData);
+                toastr.info(`PAIR ${token.symbol_in}-${token.symbol_out} diaktifkan!`);
+            }
+
+            // Ambil ulang data dan hitung ulang jumlah aktif
+            const allData = getFromLocalStorage('TOKEN_SCANNER', []);
+
+            const jml = allData.filter(item => item.status === true).length;
+            $('#tokenCountALL').text(`TOTAL SEMUA : ${jml} PAIR-TOKEN`);
+
+            const savedCexs = [...new Set(allData.map(t => t.cex))];
+            const tokenCounts = savedCexs.reduce((acc, cex) => {
+                acc[cex] = allData.filter(t => t.cex === cex && t.status === true).length;
+                return acc;
+            }, {});
+
+            savedCexs.forEach(cex => {
+                const countText = ` (${tokenCounts[cex] || 0})`;
+                const isCheckedCEX = selectedCEX.includes(cex);
+                $(`#cex-options label:contains(${cex.toUpperCase()})`).each(function () {
+                    const labelText = $(this).text().split('(')[0].trim();
+                    $(this).html(`
+                        <input type="checkbox" value="${cex}" ${isCheckedCEX ? 'checked' : ''}>
+                        ${labelText}${countText}
+                    `);
+                });
+            });
+        }
+    });
+
+    //FUNGSI ubah status tokenpair
+    $(document).on('change', '.statusCheckboxLAMA', function (event) {
         event.preventDefault();
         const id = $(this).data('id');
         const no = $(this).data('index');
@@ -3098,7 +3153,7 @@
        // https://matcha.xyz/tokens/solana/So11111111111111111111111111111111111111112?sellChain=1399811149&sellAddress=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&sellAmount=100
         return link[dex] || null;
     }
-
+//https://aggserver.mytokenpocket.vip/v3/transit/swap?token0=0x67b725d7e342d7b611fa85e859df9697d9378b2e&token1=0xbdeae1ca48894a1759a8374d63925f21f2ee2639&decimal0=18&decimal1=18&impact=5000&part=5&amountIn=969000000000000000000&amountOutMin=0&to=0x0000000000000000000000000000000000000456&ns=ethereum&chainId=56&issuer=0x0000000000000000000000000000000000000456&channel=web&liquiditySources=
     function getPriceDEX(sc_input_in, des_input, sc_output_in, des_output, amount_in, PriceRate,  dexType, NameToken, NamePair, cex,action, callback) {
         var sc_input=sc_input_in.toLowerCase();
         var sc_output=sc_output_in.toLowerCase();
