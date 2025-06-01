@@ -52,7 +52,7 @@
         }
        
     </style>
-     <base href="/V1/">
+     <!-- <base href="/V1/"> -->
 </head>
 <body>
 <div class="uk-container uk-margin-top">
@@ -1005,7 +1005,7 @@
             isSuccess++;
         }
 
-        if (isCEXSuccess.INDODAX !== true) {
+        if (CONFIG_CEX.INDODAX && isCEXSuccess.INDODAX !== true) {
             allSuccess = false;
         }else{
             isSuccess++;
@@ -1074,7 +1074,7 @@
                 return [
                     {
                         cex: "INDODAX",
-                        chain: token.symbol_out.toUpperCase(), // asumsi chain disamakan dengan symbol_out
+                      //  chain: DTChain.CEXCHAIN.INDODAX.chainCEX, // asumsi chain disamakan dengan symbol_out
                         tokenName: token.symbol_in.toUpperCase(),
                         scToken: token.sc_in || "",
                         feeWDs: 0.0001,
@@ -1083,7 +1083,7 @@
                     },
                     {
                         cex: "INDODAX",
-                        chain: token.symbol_in.toUpperCase(),
+                     //   chain: DTChain.CEXCHAIN.INDODAX.chainCEX,
                         tokenName: token.symbol_out.toUpperCase(),
                         scToken: token.sc_out || "",
                         feeWDs: 0.0001,
