@@ -261,8 +261,20 @@
                 <form id="cryptoForm" style=" width: 96%;">
                         <div class="dex-group  uk-grid-small uk-flex uk-flex-between" uk-grid>
                            
-                            <div class="uk-width-auto uk-flex uk-flex-middle  uk-text-small">
-                                <b><span class="uk-text-danger uk-text-medium">INFO: &nbsp;</span></b>
+                            <div class="uk-width-auto uk-flex uk-flex-middle  uk-text-small">                                   
+                                <!-- Tombol Download (ikon merah) -->
+                                <a href="#" onclick="downloadTokenScannerJSON()" title="Download LIST TOKEN"  style=" color: red !important;">
+                                    <span uk-icon="icon: bag; ratio: 0.7"></span>
+                                </a>
+
+                                <!-- Tombol Upload (ikon hijau) -->
+                                <label for="uploadJSON" title="Upload LIST TOKEN" style=" color: green !important; cursor:pointer; margin-left:5px;">
+                                    <span uk-icon="icon: cloud-upload; ratio: 0.9"></span>
+                                </label>
+                                &nbsp;&nbsp; 
+                                <input type="file" id="uploadJSON" accept="application/json" style="display:none;" onchange="uploadTokenScannerJSON(event)">
+                
+                                <b><span class="uk-text-secondary uk-text-medium">INFO: &nbsp;</span></b>
                                 <b><span class="uk-text-primary uk-text-medium" id="infoAPP">???</span></b>&nbsp; &nbsp; &nbsp;
                             </div> 
                                   
@@ -427,10 +439,10 @@
             <div class="uk-width-expand">
                 <h4 class="uk-heading-line uk-margin-remove" id="daftar">
                     <span style="font-size:medium; font-weight: bolder;">DAFTAR TOKEN PAIR ::  <span id="namachain2"></span> (<span id="tokenCountALL" class="token-count">0</span>)</span>
-                    
-                </h4>
+                </h4>           
             </div>
            
+            
             <!-- Pencarian -->
             <div class="uk-width-auto uk-flex uk-flex-middle">
                 <!-- <span class="uk-form-label uk-text-warning uk-text-bolder">POSISI : 
@@ -539,6 +551,74 @@
         localStorage.removeItem(storagePrefix + key);
        // console.log("Remove from localStorage:", key); // Debug log
     }
+
+    const TOKEN_KEY = "TOKEN_SCANNER";
+    const SETTING_KEY = "DATA_SETTING";
+
+    function downloadTokenScannerJSON() {
+        const tokenData = getFromLocalStorage(TOKEN_KEY, []);
+        const settingData = getFromLocalStorage(SETTING_KEY, {});
+
+        const combined = {
+            [TOKEN_KEY]: tokenData,
+            [SETTING_KEY]: settingData
+        };
+
+        const blob = new Blob([JSON.stringify(combined, null, 2)], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "PROFIL_APP.json";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        setLastAction("DOWNLOAD PROFIL");
+    }
+
+    function uploadTokenScannerJSON(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const json = JSON.parse(e.target.result);
+
+                const userConfirmed = window.confirm("APAKAH ANDA INGIN UPLOAD FILE?");
+                if (!userConfirmed) {
+                    toastr.info("Upload dibatalkan.");
+                    return;
+                }
+
+                // Cek data masing-masing
+                if (json[TOKEN_KEY]) {
+                    saveToLocalStorage(TOKEN_KEY, json[TOKEN_KEY]);
+                } else {
+                    console.warn("TOKEN_SCANNER tidak ditemukan di file.");
+                }
+
+                if (json[SETTING_KEY]) {
+                    saveToLocalStorage(SETTING_KEY, json[SETTING_KEY]);
+                } else {
+                    console.warn("DATA_SETTING tidak ditemukan di file.");
+                }
+
+                setLastAction("UPLOAD PROFIL");
+                toastr.success("Data berhasil diupload!");
+                location.reload();
+
+            } catch (error) {
+                console.error("Error parsing JSON:", error);
+                toastr.error("Format file JSON tidak valid!");
+            }
+        };
+        reader.readAsText(file);
+    }
+
+
     // Fungsi untuk mendapatkan data chain berdasarkan nama chain
     function getChainData(chainName) {
         const chainData = CONFIG_CHAINS[chainName]; // base
@@ -4047,7 +4127,7 @@
             isSuccess++;
         }
 
-        if (isINDODAXSuccess !== true) {
+        if (CONFIG_CEX.INDODAX && isINDODAXSuccess !== true) {
             allSuccess = false;
         }else{
             isSuccess++;
@@ -4153,12 +4233,12 @@
 
         // Format jadi dua arah: symbol_in & symbol_out
         const formattedData = TokenDataIndodax
-            .filter(token => token.cex === "INDODAX" && token.status === true)
+            .filter(token => token.cex === "INDODAX" && token.status === true )
             .flatMap(token => {
                 return [
                     {
                         cex: "INDODAX",
-                        chain: DTChain.CEXCHAIN.INDODAX.chainCEX, // asumsi chain disamakan dengan symbol_out
+                     //   chain: DTChain.CEXCHAIN.INDODAX.chainCEX, // asumsi chain disamakan dengan symbol_out
                         tokenName: token.symbol_in.toUpperCase(),
                         scToken: token.sc_in || "",
                         feeWDs: 0.0001,
@@ -4167,7 +4247,7 @@
                     },
                     {
                         cex: "INDODAX",
-                        chain:  DTChain.CEXCHAIN.INDODAX.chainCEX,
+                    //    chain:  DTChain.CEXCHAIN.INDODAX.chainCEX,
                         tokenName: token.symbol_out.toUpperCase(),
                         scToken: token.sc_out || "",
                         feeWDs: 0.0001,
@@ -4179,7 +4259,7 @@
 
         // Tambahkan ke array global
         allFeeWD = allFeeWD.concat(formattedData);
-
+       console.log("INDODAX WALLET:", formattedData);     
         // Tandai sukses dan panggil callback
         toastr.info("SUKSES, CEK UPDATE WALLET INDODAX");
         isINDODAXSuccess = true;
