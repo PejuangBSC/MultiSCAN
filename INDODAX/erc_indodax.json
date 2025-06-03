@@ -1530,7 +1530,7 @@
     "status": true
   },
   {
-    "symbol": "ORDERIDR",
+    "symbol": "ORDERLYIDR",
     "sc": "0xABD4C63d2616A5201454168269031355f4764337",
     "desimal": 18,
     "wd": 0,
@@ -1557,13 +1557,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "PEPEIDR",
-    "sc": "0x6982508145454ce325ddbe47a25d4ec3d2311933",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "PERPIDR",
     "sc": "0xbc396689893d065f41bc2c6ecbee5e0085233447",
@@ -1634,13 +1628,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "PUNDIXUSDT",
-    "sc": "0x0fd10b9899882a6f2fcb5c371e17e70fdee00c38",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "PYRIDR",
     "sc": "0x430ef9263e76dae63c84292c3409d61c598e9682",
@@ -1781,13 +1769,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "SHIBIDR",
-    "sc": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "SKLIDR",
     "sc": "0x00c83aecc790e8a4453e5dd3b0b4b3680501a7a7",
@@ -1887,7 +1869,7 @@
     "status": true
   },
   {
-    "symbol": "SUPERIDR",
+    "symbol": "SUPERVERSEIDR",
     "sc": "0xe53ec727dbdeb9e2d5456c3be40cff031ab40a55",
     "desimal": 18,
     "wd": 0,
