@@ -659,7 +659,7 @@
     "status": true
   },
   {
-    "symbol": "ALTIDR",
+    "symbol": "ALTLAYERIDR",
     "sc": "0x8457CA5040ad67fdebbCC8EdCE889A335Bc0fbFB",
     "desimal": 18,
     "wd": 0,
@@ -693,13 +693,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "AOAIDR",
-    "sc": "0x9ab165d795019b6d8b3e971dda91071421305e5a",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "APEIDR",
     "sc": "0x4d224452801aced8b2f0aebe155379bb5d594381",
@@ -714,13 +708,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "APUIDR",
-    "sc": "0x594daad7d77592a2b97b725a7ad59d7e188b5bfa",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "ARBIDR",
     "sc": "0xb50721bcf8d664c30412cfbc6cf7a15145234ad1",
@@ -819,13 +807,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "BETAIDR",
-    "sc": "0xbe1a001fe942f96eea22ba08783140b9dcc09d28",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "BGBIDR",
     "sc": "0x54D2252757e1672EEaD234D27B1270728fF90581",
@@ -868,13 +850,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "BONKUSDT",
-    "sc": "0x1151CB3d861920e07a38e03eEAd12C32178567F6",
-    "desimal": 5,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "BOTXIDR",
     "sc": "0xEF19F4E48830093Ce5bC8b3Ff7f903A0AE3E9Fa1",
@@ -931,20 +907,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "CINDIDR",
-    "sc": "0xaC0968a3E2020aC8ca83e60CcF69081EBc6d3bC3",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "CLVIDR",
-    "sc": "0x80C62FE4487E1351b47Ba49809EBD60ED085bf52",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "COMPIDR",
     "sc": "0xc00e94cb662c3520282e6f5717214004a7f26888",
@@ -1044,7 +1007,7 @@
     "status": true
   },
   {
-    "symbol": "DIDR",
+    "symbol": "DARIDR",
     "sc": "0x33b481CbBF3c24f2B3184Ee7Cb02dAAD1C4F49A8",
     "desimal": 6,
     "wd": 0,
@@ -1114,7 +1077,7 @@
     "status": true
   },
   {
-    "symbol": "EPICIDR",
+    "symbol": "ERNIDR",
     "sc": "0xbbc2ae13b23d715c30720f079fcd9b4a74093505",
     "desimal": 18,
     "wd": 0,
@@ -1141,13 +1104,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "FLOKIIDR",
-    "sc": "0xcf0c122c6b73ff809c693db761e7baebe62b6a2e",
-    "desimal": 9,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "FLUXIDR",
     "sc": "0x720cd16b011b987da3518fbf38c3071d4f0d1495",
@@ -1184,7 +1141,7 @@
     "status": true
   },
   {
-    "symbol": "GIDR",
+    "symbol": "GRAVITYIDR",
     "sc": "0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649",
     "desimal": 18,
     "wd": 0,
@@ -1268,7 +1225,7 @@
     "status": true
   },
   {
-    "symbol": "IDIDR",
+    "symbol": "SPACEIDIDR",
     "sc": "0x2dfF88A56767223A5529eA5960Da7A3F5f766406",
     "desimal": 18,
     "wd": 0,
