@@ -1308,13 +1308,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "LADYSIDR",
-    "sc": "0x12970e6868f88f6557b76120662c1b3e50a646bf",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+  
   {
     "symbol": "LDOIDR",
     "sc": "0x5a98fcbea516cf06857215779fd812ca3bef1b32",
@@ -1441,13 +1435,7 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "MOGIDR",
-    "sc": "0xaaeE1A9723aaDB7afA2810263653A34bA2C21C7a",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
+ 
   {
     "symbol": "MOVEIDR",
     "sc": "0x3073f7aaa4db83f95e9fff17424f71d4751a3073",
@@ -1462,27 +1450,8 @@
     "wd": 0,
     "status": true
   },
-  {
-    "symbol": "MULTIIDR",
-    "sc": "0x65ef703f5594d2573eb71aaf55bc0cb548492df4",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "NBTIDR",
-    "sc": "0x446F2A8A39Cc730ef378Be759A3c57f1a3fE824c",
-    "desimal": 18,
-    "wd": 0,
-    "status": true
-  },
-  {
-    "symbol": "NEIROIDR",
-    "sc": "0x812ba41e071c7b7fa4ebcfb62df5f45f6fa853ee",
-    "desimal": 9,
-    "wd": 0,
-    "status": true
-  },
+ 
+
   {
     "symbol": "NEXOIDR",
     "sc": "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206",
