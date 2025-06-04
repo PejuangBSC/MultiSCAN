@@ -15,7 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js@1.70.0/lib/index.iife.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script> 
     
-    <link id="favicon" rel="icon" type="image/png" >
+    <link id="favicon" rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/5397/5397757.png">
+
     <script src="config.js"></script>
     <style>
         .uk-container { width: 96%; max-width: none; }
@@ -232,21 +233,20 @@
                     <span uk-icon="icon: moon; ratio: 0.4"></span> 🌓
                 </div>
                 <h2 id="judul" class="uk-margin-remove" style="font-size: 30px; text-align:center;">
-                    MULTISCAN  V1.5  :: <label id="namachain"></label> 
+                    FAVORITE SCAN  V1.5  :: <label id="namachain"></label> 
                     <!-- <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /> &nbsp; -->
                 </h2>
-                <img class="icon" id="LoadDataBtn" title="LOAD DATA TOKEN" width="30px" src="https://png.pngtree.com/png-clipart/20230815/original/pngtree-database-sync-icon-icon-symbol-data-vector-picture-image_10830033.png" />
-                <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" />
-                <img class="icon" id="UpdateWalletCEX" title="UPDATE WALLET CEX" width="30px" src="https://images.freeimages.com/fic/images/icons/2770/ios_7_icons/512/wallet.png" />
+                <a href="index.html" target="_blank">
+                    <img class="icon" id="Scanner" title="SCANNER PRICE" width="35px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/copy-cat-5381934-4568586.png" />
+                </a>
+                <!-- <img class="icon" id="SettingModal" title="CONFIG SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/512/1170/1170635.png" /> -->
+                <!-- <img class="icon" id="UpdateWalletCEX" title="UPDATE WALLET CEX" width="30px" src="https://images.freeimages.com/fic/images/icons/2770/ios_7_icons/512/wallet.png" /> -->
                 <a href="manajemen_aset.html" target="_blank">
                     <img class="icon" id="Modal" title="MANAJEMEN ASSET" width="30px" src="https://cdn-icons-png.flaticon.com/512/1194/1194711.png" />
                 </a>
-                <a href="multipair.html" target="_blank">
+                <!-- <a href="multipair.html" target="_blank">
                     <img class="icon" id="MasterData" title="SETTING DATA" width="30px" src="https://cdn-icons-png.flaticon.com/128/3934/3934107.png" />
-                </a>
-                <a href="auto.html" target="_blank">
-                    <img class="icon" title="FAVORITE SCANNER" width="30px" src="https://cdn-icons-png.flaticon.com/256/5046/5046573.png" />
-                </a>
+                </a> -->
                 <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
                     <img class="icon" id="BukaKunci" title="BUKA AKSES" width="30px" src="https://cdn-icons-png.flaticon.com/512/9921/9921748.png" />
                 </a>
@@ -259,52 +259,22 @@
             <!-- Bagian Kanan (Konten Lainnya) -->
             <div class="uk-width-expand uk-margin-small-top">
                 <form id="cryptoForm" style=" width: 96%;">
-                        <div class="dex-group  uk-grid-small uk-flex uk-flex-between" uk-grid>
                            
-                            <div class="uk-width-auto uk-flex uk-flex-middle  uk-text-small">                                   
-                                <!-- Tombol Download (ikon merah) -->
-                                <a href="#" onclick="downloadTokenScannerJSON()" title="Download LIST TOKEN"  style=" color: red !important;">
-                                    <span uk-icon="icon: bag; ratio: 0.7"></span>
-                                </a>
-
-                                <!-- Tombol Upload (ikon hijau) -->
-                                <label for="uploadJSON" title="Upload LIST TOKEN" style=" color: green !important; cursor:pointer; margin-left:5px;">
-                                    <span uk-icon="icon: cloud-upload; ratio: 0.9"></span>
-                                </label>
-                                &nbsp;&nbsp; 
-                                <input type="file" id="uploadJSON" accept="application/json" style="display:none;" onchange="uploadTokenScannerJSON(event)">
-                
-                                <b><span class="uk-text-secondary uk-text-medium">INFO: &nbsp;</span></b>
+                            <div class="uk-width-auto uk-flex uk-flex-middle  uk-text-small">
+                                <b><span class="uk-text-danger uk-text-medium">INFO: &nbsp;</span></b>
                                 <b><span class="uk-text-primary uk-text-medium" id="infoAPP">???</span></b>&nbsp; &nbsp; &nbsp;
                             </div> 
                                   
-                            <!-- Kolom untuk CEX -->
                             <div class="uk-width-auto uk-flex uk-flex-middle uk-margin-small-top uk-text-small">
-                                <div id="cex-options" class="uk-form-controls" style="display: flex;">
-                                    <!-- Radio button CEX akan di-generate di sini -->
+                                <div class="uk-width-auto uk-flex uk-flex-middle  uk-margin-remove-top uk-text-small">
+                                    <div id="dex-options" class="uk-form-controls" style="display: flex;">
+                                        <!-- Radio button DEX akan di-generate di sini -->
+                                    </div>
+                                
                                 </div>
                             </div>
-                            <!-- Kolom untuk PAIR -->
-                            <!-- <div class="uk-width-auto uk-flex uk-flex-middle uk-margin-small-top uk-text-small">
-                                <b><span class="uk-text-danger uk-text-medium">PAIR&nbsp;</span></b> <span id="tokenCount" class="uk-text-danger uk-text-bolder" > </span>&nbsp;:
-                                <div id="dexpair-options" class="uk-form-controls" style="display: flex;"> -->
-                                    <!-- Radio button PAIR DEX akan di-generate di sini -->
-                                <!-- </div> 
-                            </div> -->
-
-                            <div class="uk-width-auto uk-flex uk-flex-middle  uk-margin-remove-top uk-text-small">
-                                <div id="dex-options" class="uk-form-controls" style="display: flex;">
-                                    <!-- Radio button DEX akan di-generate di sini -->
-                                </div>
-                                &nbsp;&nbsp; | &nbsp;&nbsp;
-                                <b><span class="uk-text-secondary uk-text-medium">PAIR&nbsp;</span></b> <span id="tokenCount" class="uk-text-danger uk-text-bolder" > </span>&nbsp;:
-                                <div id="dexpair-options" class="uk-form-controls" style="display: flex;">
-                                    <!-- Radio button PAIR DEX akan di-generate di sini -->
-                                </div> 
-                            </div>
-
                             <!-- Kolom untuk DEX -->
-                            <div class="uk-width-auto uk-flex uk-flex-middle uk-margin-remove-top uk-text-small">
+                            <div class="uk-width-auto uk-flex uk-flex-middle uk-margin-small-top uk-text-small">
                                       <!-- Kolom untuk SETTING SCANNER -->
                                 <div class="uk-width-auto uk-flex uk-flex-middle">
                                     <span class="uk-form-label uk-text-secondary uk-text-bolder">SCANNER : 
@@ -319,23 +289,24 @@
                                             <input type="radio" name="toggle" checked value="opt_A"> A 
                                             <input type="radio" name="toggle" value="opt_B"> Z
                                         </span>  
-                                            <span class="uk-form-label uk-text-primary">
+                                        <span class="uk-form-label uk-text-primary">
                                             <input type="checkbox" checked id="strictFilter"> WALLET CEX
-                                        </span>  
-                                        <span class="uk-form-label uk-text-danger">
+                                        </span>  &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span class="uk-form-label uk-text-success">
                                             <input type="checkbox" class="vol-check" id="checkVOL"> VOL CHECK
                                         </span>  
-                                    </span>
+                                    </span> &nbsp;&nbsp;&nbsp;&nbsp;
                                 </div>
-                                &nbsp;&nbsp;
-                                &nbsp;&nbsp;
-                                
+                                <span class="uk-form-label uk-text-danger uk-text-danger uk-text-bolder">
+                                   AUTOSCAN  <input type="checkbox" id="autorun">
+                                </span> 
+                                  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; 
                                 <button type="button" id="startSCAN" style="display: none;" class="uk-button uk-button-secondary uk-button-small">START</button>
                                 <button type="button" id="stopSCAN" style="display: none;" class="uk-button uk-button-danger uk-button-small">STOP</button>                                
 
                             </div>
         
-                        </div>
+                        
                 </form>
             </div>
         </div>
@@ -376,9 +347,6 @@
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="6"  name="koin-group"> 6</label> 
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="5" checked name="koin-group"> 5</label>
                                            <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="4"  name="koin-group"> 4</label>  
-                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="3"  name="koin-group"> 3</label>  
-                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="2"  name="koin-group"> 2</label>  
-                                           <label class="uk-form-label uk-text-success"><input class="uk-radio" type="radio" value="1"  name="koin-group"> 1</label>  
                                         </div>
                                     </div>
                                 <div class="uk-flex uk-flex-middle uk-margin ">
@@ -439,10 +407,10 @@
             <div class="uk-width-expand">
                 <h4 class="uk-heading-line uk-margin-remove" id="daftar">
                     <span style="font-size:medium; font-weight: bolder;">DAFTAR TOKEN PAIR ::  <span id="namachain2"></span> (<span id="tokenCountALL" class="token-count">0</span>)</span>
-                </h4>           
+                    
+                </h4>
             </div>
            
-            
             <!-- Pencarian -->
             <div class="uk-width-auto uk-flex uk-flex-middle">
                 <!-- <span class="uk-form-label uk-text-warning uk-text-bolder">POSISI : 
@@ -524,6 +492,21 @@
        // console.log("Data from localStorage:", data); // Debug log
     }
 
+    function getFromLocalStorageBARU(key, defaultValue = []) {
+        try {
+            const raw = localStorage.getItem(storagePrefix + key);
+            const parsed = JSON.parse(raw);
+
+            if (Array.isArray(parsed)) return parsed;
+            console.warn("Data bukan array:", parsed);
+            return defaultValue;
+
+        } catch (e) {
+            console.warn("Gagal parsing data localStorage:", e);
+            return defaultValue;
+        }
+    }
+
     // Fungsi umum untuk menyimpan data ke localStorage
     function saveToLocalStorage(key, value) {
         try {
@@ -551,74 +534,6 @@
         localStorage.removeItem(storagePrefix + key);
        // console.log("Remove from localStorage:", key); // Debug log
     }
-
-    const TOKEN_KEY = "TOKEN_SCANNER";
-    const SETTING_KEY = "DATA_SETTING";
-
-    function downloadTokenScannerJSON() {
-        const tokenData = getFromLocalStorage(TOKEN_KEY, []);
-        const settingData = getFromLocalStorage(SETTING_KEY, {});
-
-        const combined = {
-            [TOKEN_KEY]: tokenData,
-            [SETTING_KEY]: settingData
-        };
-
-        const blob = new Blob([JSON.stringify(combined, null, 2)], { type: "application/json" });
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "PROFIL_APP.json";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-
-        setLastAction("DOWNLOAD PROFIL");
-    }
-
-    function uploadTokenScannerJSON(event) {
-        const file = event.target.files[0];
-        if (!file) return;
-
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            try {
-                const json = JSON.parse(e.target.result);
-
-                const userConfirmed = window.confirm("APAKAH ANDA INGIN UPLOAD FILE?");
-                if (!userConfirmed) {
-                    toastr.info("Upload dibatalkan.");
-                    return;
-                }
-
-                // Cek data masing-masing
-                if (json[TOKEN_KEY]) {
-                    saveToLocalStorage(TOKEN_KEY, json[TOKEN_KEY]);
-                } else {
-                    console.warn("TOKEN_SCANNER tidak ditemukan di file.");
-                }
-
-                if (json[SETTING_KEY]) {
-                    saveToLocalStorage(SETTING_KEY, json[SETTING_KEY]);
-                } else {
-                    console.warn("DATA_SETTING tidak ditemukan di file.");
-                }
-
-                setLastAction("UPLOAD PROFIL");
-                toastr.success("Data berhasil diupload!");
-                location.reload();
-
-            } catch (error) {
-                console.error("Error parsing JSON:", error);
-                toastr.error("Format file JSON tidak valid!");
-            }
-        };
-        reader.readAsText(file);
-    }
-
-
     // Fungsi untuk mendapatkan data chain berdasarkan nama chain
     function getChainData(chainName) {
         const chainData = CONFIG_CHAINS[chainName]; // base
@@ -683,7 +598,7 @@
     var selectedServer = getRandomServerFromCORSList();
     const DTChain = getChainData(chainName);  
     var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
-    var DataTokens = getFromLocalStorage('TOKEN_SCANNER',[]);
+    var DataTokens = getFromLocalStorage('TOKEN_FAV_SCANNER',[]);
     var MasterTokens = getFromLocalStorage('TOKEN',[]);
     var serverCORSList = getFromLocalStorage("SERVERCORS", []); 
     var WalletCEX = getFromLocalStorage("WALLET_CEX", []); 
@@ -708,10 +623,12 @@
     let filteredTokens = [];
 
     function filterTokens(strictMode) {
-        const allTokens = getFromLocalStorage("TOKEN_SCANNER", []);
+        const allTokens = getFromLocalStorage("TOKEN_FAV_SCANNER", []);
         const selectedCEX = getFromLocalStorage("CEX_PILIH", []);
         const selectedDEXPAIR = getFromLocalStorage("DEXPAIR_PILIH", []);
         const selectedDEX = getFromLocalStorage("DEX_PILIH", []);
+
+       // console.warn("TOKEN DataTokens", allTokens);
 
         if (!Array.isArray(allTokens) || allTokens.length === 0) {
             console.warn("No tokens available for filtering.");
@@ -719,9 +636,11 @@
             updateTokenCount();
             return;
         }
-
-       // console.warn("TOKEN PAIR", allTokens);
-       // console.warn("DEX is", selectedDEX.length);
+        // console.log("Memanggil filterTokens(), strictMode:", strictMode);
+        // console.log("selectedCEX", selectedCEX);
+        // console.log("selectedDEXPAIR", selectedDEXPAIR);
+        // console.log("selectedDEX", selectedDEX);
+        // console.log("allTokens", allTokens); // Pastikan ini tampil
 
         const isNonSelected = selectedDEXPAIR.includes("NON");
         const dexPairs = Object.keys(DTChain.PAIRDEXS).filter(pair => pair !== "NON");
@@ -733,7 +652,7 @@
             const validDexPair = selectedDEXPAIR.some(pair => token.symbol_in === pair || token.symbol_out === pair) ||
                 (isNonSelected && !dexPairs.some(pair => token.symbol_in === pair || token.symbol_out === pair));
 
-            if (!validCEX || !validDexPair || !token.status) return false;
+            if (!token.status) return false;
             if (strictMode && (!token.withdrawToken || !token.depositPair || !token.withdrawPair || !token.depositToken)) return false;
             
             return true;
@@ -771,8 +690,10 @@
         // Lakukan update tampilan sesuai perubahan sorting
         loadStoredData(filteredTokens);
     });
-    
-    $(document).on('click', `[id^="SelAuto-"]`, function () {
+
+    $(document).on('click', `[id^="DelAuto-"]`, function () {
+        console.log("HAPUS KOIN AUTO");
+
         const index = $(this).data('index');
         const item = filteredTokens[index];
 
@@ -781,51 +702,28 @@
             return;
         }
 
-        // Tampilkan detail dengan toastr
-        const detailText = `
-        CEX: ${item.cex}
-        Token: ${item.symbol_in}
-        Pair: ${item.symbol_out}`;
-        toastr.success(detailText, `BERHASIL TAMBAH DATA #${index + 1}`, {
-            timeOut: 5000,
-            closeButton: true,
-            escapeHtml: true
-        });
-
-        // Ambil data dari localStorage
+        // Ambil data token yang sudah disimpan
         let tokens = getFromLocalStorage('TOKEN_FAV_SCANNER', []);
         if (!Array.isArray(tokens)) tokens = [];
 
-        // Batas maksimal 30 token
-        if (tokens.length >= makfav) {
-            toastr.warning("Maksimal ${makfav} token yang bisa dipilih!", "Batas Tercapai");
-            return;
-        }
+        // Hapus berdasarkan item.no
+        tokens = tokens.filter(t => t.no !== item.no);
 
-        // Cek duplikasi berdasarkan 'no'
-        const isExist = tokens.some(t => t.no === item.no);
-        if (isExist) {
-            toastr.info("Token sudah dipilih sebelumnya.", "Duplikat");
-            return;
-        }
-
-        // ✅ PROMPT modal kiri dan kanan
-        const modalKiri  = prompt(`Masukkan Modal KIRI {${item.symbol_in}}`,  "100");
-        if (modalKiri === null) return;         // user klik Cancel
-
-        const modalKanan = prompt(`Masukkan Modal KANAN: {${item.symbol_in}}`, "100");
-        if (modalKanan === null) return;
-
-        // Tambahkan properti ke item
-        item.modal_kiri = parseFloat(modalKiri) || 0;
-        item.modal_kanan = parseFloat(modalKanan) || 0;
-
-        // Simpan token ke localStorage
-        tokens.push(item);
+        // Simpan ulang
         saveToLocalStorage('TOKEN_FAV_SCANNER', tokens);
-        console.log("Token berhasil ditambahkan:", item);
+
+        // Tampilkan notifikasi
+        toastr.success("Token berhasil dihapus", `Dihapus: ${item.symbol_in}`, {
+            timeOut: 3000,
+            closeButton: true
+        });
+
+        // Refresh halaman (atau bisa panggil fungsi update UI jika tidak ingin full reload)
+        setTimeout(() => location.reload(), 500);
     });
 
+
+    //console.log("DATA TOKEN FILTER",filteredTokens);
     // Mapping konfigurasi untuk setiap exchange
     const exchangeConfig = {
         GATE: {
@@ -951,6 +849,7 @@
                 return { priceSell ,priceBuy};
             }
         },
+
         BITMART: {
             url: coins => selectedServer+`https://api-cloud.bitmart.com/spot/quotation/v3/books?symbol=${coins.symbol}_USDT&limit=3`,
             processData: data => {
@@ -1048,7 +947,7 @@
     });
 
     function cekDataAwal() {
-
+      //  console.log(DataTokens);
         var info = true; // Variabel status info
         let errorMessages = []; // Array untuk menyimpan pesan error
 
@@ -1060,9 +959,10 @@
             info = false;
         } else if (!DataTokens.length) {
             form_off();
-            $("#LoadDataBtn").addClass("icon-wrapper");
-            errorMessages.push('<b>SILAKAN LOAD DATA TERLEBIH DAHULU !!</b><br/>');
+           // $("#LoadDataBtn").addClass("icon-wrapper");
+            errorMessages.push('<b>SILAKAN PILIH TOKEN-PAIR TERLEBIH DAHULU !!</b><br/>');
             info = false;
+
         } else if (!SavedSettingData || SavedSettingData.walletMeta === '-') {
             errorMessages.push('CEK, SETTINGAN APLIKASI {MODAL,WALLET ADDRESS}!');
             $("#SettingModal").addClass("icon-wrapper");
@@ -1075,9 +975,9 @@
             info = false;
         } else {
             loadStoredData(filteredTokens);
-            generateInputCheckbox(savedCexs, "cex-options", "", "EXCH: ", "uk-form-label uk-text-success");
+           // generateInputCheckbox(savedCexs, "cex-options", "", "EXCH: ", "uk-form-label uk-text-success");
             generateInputCheckbox(DTChain.DEXS, "dex-options", "D", "DEFI: ", "uk-form-label uk-text-danger");
-            generateInputCheckbox(savedPairs, "dexpair-options", "", "", "uk-form-label uk-text-primary");
+           // generateInputCheckbox(savedPairs, "dexpair-options", "", "", "uk-form-label uk-text-primary");
             generateInputModal(DTChain.DEXS);            
             loadCheckboxSelections();
 
@@ -1098,28 +998,13 @@
                 item.status === true 
             ).length;
 
-            $('#tokenCountALL').text(`TOTAL SEMUA: ${jml} PAIR-TOKEN`);  
+            $('#tokenCountALL').text(`TOTAL SEMUA: ${jml} / ${makfav} PAIR-TOKEN`);  
         }
 
-        // // Update link dengan parameter baru
-        // var link = $('a[href="multipair.html"]'); // Pilih elemen link
-        // var href = link.attr('href'); // Ambil URL href
-        // link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
-
-        // Daftar file HTML target
-        var targetFiles = ["multipair.html", "auto.html"];
-
-        // Loop setiap file dan update href-nya
-        targetFiles.forEach(function(file) {
-            $('a[href="' + file + '"]').each(function() {
-                var link = $(this);
-                var href = link.attr('href');
-
-                // Tambahkan parameter chain, sesuaikan separator jika sudah ada query string
-                var separator = href.includes('?') ? '&' : '?';
-                link.attr('href', href + separator + "chain=" + encodeURIComponent(chainName));
-            });
-        });
+        // Update link dengan parameter baru
+        var link = $('a[href="multipair.html"]'); // Pilih elemen link
+        var href = link.attr('href'); // Ambil URL href
+        link.attr('href', href + "?chain=" + encodeURIComponent(chainName)); // Update href dengan parameter baru
 
         // Tampilkan semua pesan error ke #infoAPP
         if (!info) {
@@ -1132,7 +1017,6 @@
             $("#infoAPP").show().text(`${dataACTION.action} at ${dataACTION.time}`);
         }
     }
-
 
     $(document).ready(function() {  
     // dark mode change    
@@ -1193,11 +1077,11 @@
                     $('#sinyal-container').css('background-color', warnaFaded);
 
                     // Update tampilan dengan nama chain dan warna
-                    $('title').text("SCANNER " + Nama_Chain.toUpperCase());
+                    $('title').text(Nama_Chain.toUpperCase());
                     $('#namachain').text(Nama_Chain.toUpperCase());
                     $('#namachain2').text("CHAIN " + Nama_Chain.toUpperCase());
                     $('h2#judul').css('color', selectedChain.WARNA);
-                    $('#favicon').attr('href', DTChain.ICON_CHAIN); 
+                    // $('#favicon').attr('href', DTChain.ICON_CHAIN); 
                     $('#progress-bar').css('background-color', selectedChain.WARNA);
 
                     $('#sinyal-container').css('color',"black");
@@ -1315,9 +1199,9 @@
 
                 // Konfirmasi penyimpanan
                 if (confirm('LOAD DATA AKAN MERUBAH DATA SEBELUMNYA, LANJUTKAN??')) {
-                    saveToLocalStorage("TOKEN_SCANNER", combinedData);
+                    saveToLocalStorage("TOKEN_FAV_SCANNER", combinedData);
 
-                    const savedData = getFromLocalStorage("TOKEN_SCANNER", []);
+                    const savedData = getFromLocalStorage("TOKEN_FAV_SCANNER", []);
                     if (savedData.length === combinedData.length) {
                         toastr.info("LOADING DATA TOKEN PAIR...", {
                             timeOut: 3000,
@@ -1381,7 +1265,7 @@
     $("#startSCAN").click(function () {
         
         cekDataAwal();
-        sendStatusTELE(SavedSettingData.nickname, 'ONLINE');
+        sendStatusTELE(SavedSettingData.nickname, 'AUTO ON');
         CekIdentitas();
         $('#sinyal-container span[id^="sinyal"]').empty();
         form_off();
@@ -1414,7 +1298,7 @@
             let duration = ((Date.now() - startTime) / 1000 / 60).toFixed(2);
             let progressPercentage = Math.floor((current / total) * 100);
             let progressText = `CHECKING - ${TokenPair} [${current}/${total}] :: Mulai: ${new Date(startTime).toLocaleTimeString()} ~ DURASI [${duration} Menit]`;
-
+            
             $('#progress-bar').css('width', progressPercentage + '%');
             $('#progress-text').text(progressPercentage + '%');
             $('#progress').text(progressText);
@@ -1444,42 +1328,41 @@
                        // console.log(DataCEX);
 
                         clearTimeout(timeout);
-                        
-                        if (error || !DataCEX) {
-                            console.error("Error data from CEX:", error || "Data tidak valid");
-                            toastr.error(`Cek ulang harga ${token.symbol_in}/${token.symbol_out} di ${token.cex}`);
-                            resolve(); // lanjut ke token berikutnya
-                            $('#' + token.cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
-                            return; // ⛔ Hentikan eksekusi agar tidak akses null
-                        }
-
                         let isInvalid = false;
+
+                        // Ambil harga dari volume level 0 atau fallback ke 0 jika tidak ada
                         let priceBuyTokenCEX = DataCEX.volumes_buyToken?.[0]?.price || 0;
                         let priceSellTokenCEX = DataCEX.volumes_sellToken?.[0]?.price || 0;
+
                         let priceBuyPairCEX = DataCEX.volumes_buyPair?.[0]?.price || 0;
                         let priceSellPairCEX = DataCEX.volumes_sellPair?.[0]?.price || 0;
 
-                        // Validasi harga
+                        // Validasi harga-harga
                         if (!isFinite(priceBuyTokenCEX) || priceBuyTokenCEX <= 0) {
                             toastr.error(`Tidak Dapat Harga ${token.symbol_in} pada ${token.cex}`);
                             isInvalid = true;
                         }
+
                         if (!isFinite(priceSellTokenCEX) || priceSellTokenCEX <= 0) {
                             toastr.error(`Tidak Dapat Harga ${token.symbol_in} pada ${token.cex}`);
                             isInvalid = true;
                         }
+
                         if (!isFinite(priceBuyPairCEX) || priceBuyPairCEX <= 0) {
                             toastr.error(`Tidak Dapat Harga ${token.symbol_out} pada ${token.cex}`);
                             isInvalid = true;
                         }
+
                         if (!isFinite(priceSellPairCEX) || priceSellPairCEX <= 0) {
                             toastr.error(`Tidak Dapat Harga ${token.symbol_out} pada ${token.cex}`);
                             isInvalid = true;
                         }
 
-                        if (isInvalid) {
-                            toastr.error(`CEK MANUAL ${token.symbol_in} di ${token.cex}`);
-                            resolve();
+                        // Jika error atau tidak valid, skip ke step berikutnya
+                        if (error || !DataCEX || isInvalid) {
+                            console.error("Error data from CEX:", error || "Data tidak valid");
+                            toastr.error(`Cek ulang harga ${token.symbol_in}/${token.symbol_out} di ${token.cex}`);
+                            resolve(); // lanjut ke iterasi berikutnya jika async dalam Promise
                             $('#' + token.cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
                             return;
                         }
@@ -1496,14 +1379,10 @@
                             dexList.forEach((dex) => {
                                 let IdTokentoPair = `${cex}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
                                 let IdPairtoToken = `${cex}_${dex.toUpperCase()}_${PairToken}_${(DTChain.Nama_Chain).toUpperCase()}`;
-                               
-                                   // Mendapatkan nilai modal kiri dan kanan dari localStorage
-                                let modalKeyKiri = `MODAL_KIRI_${dex.toUpperCase()}`;
-                                let modalKeyKanan = `MODAL_KANAN_${dex.toUpperCase()}`;
-                                
-                                let modalKiri = SavedSettingData[modalKeyKiri];
-                                let modalKanan = SavedSettingData[modalKeyKanan];
-                                
+                                                               
+                                let modalKiri = token.modal_kiri;
+                                let modalKanan = token.modal_kanan;
+                              //  console.log("MODAL KIRI & KANAN",token.modal_kiri,token.modal_kanan);
                                 let dextype = dex.toLowerCase();
                                 
                                 // Perhitungan untuk modal kiri dan kanan
@@ -1733,10 +1612,9 @@
             for (let groupIndex = 0; groupIndex < tokenGroups.length; groupIndex++) {
                 let groupTokens = tokenGroups[groupIndex];
                 console.log(`Memproses grup ${groupIndex + 1} dari ${tokenGroups.length}`);
-                //if ((selectedChain?.Nama_Chain || "").toLowerCase() !== "solana") {
-                    feeGasGwei();
-               // }
-                getRateUSDT(); // panggil di awal aplikasi atau sebelum getPriceCEX
+
+                feeGasGwei();
+                getRateUSDT();
 
                 for (let tokenIndex = 0; tokenIndex < groupTokens.length; tokenIndex++) {
                     let token = groupTokens[tokenIndex];
@@ -1760,12 +1638,47 @@
                 await delay(jedaTimeGroup);
             }
 
-
+            // Tampilkan progres 100%
             updateProgress(totalTokens, totalTokens, startTime, "SELESAI");
-            form_on();
 
+            form_on();
             $("#stopSCAN").hide().prop("disabled", false);
-            $("#LoadDataBtn, #SettingModal, #MasterData,#UpdateWalletCEX,#chain-links-container").css("pointer-events", "auto").css("opacity", "1");
+            $("#LoadDataBtn, #SettingModal, #MasterData, #UpdateWalletCEX, #chain-links-container")
+                .css("pointer-events", "auto")
+                .css("opacity", "1");
+
+            // ✅ Jalankan ulang hanya jika scan sudah complete dan autorun aktif
+           
+            if ($('#autorun').prop('checked')) {
+                let countdown = 10;
+                $('#progress-text').text(`Restarting in ${countdown}s...`);
+                $('#bar').css('width', '0%');
+               
+                // ⏳ Jalankan countdown mundur 10s
+                const countdownInterval = setInterval(() => {
+                    countdown--;
+                    $('#progress-text').text(`Restarting in ${countdown}s...`);
+                    if (countdown <= 0) {
+                        clearInterval(countdownInterval);
+                        console.log("Memulai ulang proses scan karena autorun aktif...");
+                        toastr.info("MEMULAI SCAN LAGI!");
+
+                        cekDataAwal();
+                        $('#sinyal-container span[id^="sinyal"]').empty();
+                        form_off();
+                        $("#stopSCAN").show().prop('disabled', false);
+                        $('#LoadDataBtn, #SettingModal, #MasterData, #UpdateWalletCEX, #chain-links-container')
+                            .css('pointer-events', 'none')
+                            .css('opacity', '0.4');
+                        $('.statusCheckbox').css({ 'pointer-events': 'auto', 'opacity': '1' }).prop('disabled', false);
+
+                        processTokens(); // Mulai ulang scan
+                    }
+                }, 1000);
+            } else {
+                $('#progress-text').html("SCAN COMPLETE");
+            }
+
         }
 
         processTokens();
@@ -1804,7 +1717,7 @@
             const checkboxId = `${idPrefix}${item.toUpperCase()}`;
 
             const countForCEX = containerId === "cex-options" 
-                ? DataTokens.filter(t => t.status === true && t.cex === item).length 
+                ? filteredTokens.filter(t => t.status === true && t.cex === item).length 
                 /*  && t.depositPair === true && t.withdrawToken === true && t.depositToken === true && t.withdrawPair === true).length */
                 : ""; // Hanya hitung jumlah token untuk cex-options
             const checkbox = `
@@ -1871,8 +1784,6 @@
         return cexConfig && cexConfig.WARNA ? cexConfig.WARNA : 'black'; // Gunakan warna dari konfigurasi atau 'black' jika tidak ditemukan
     }
 
-    //fungsi filter TOKEN berdasarkan CEX,DEX dan DEX-PAIR
-    
     // Fungsi untuk menampilkan sinyal DEX
     function loadSignalData() {
         let selectedDEX = getFromLocalStorage('DEX_PILIH', []); // Ambil pilihan DEX dari localStorage
@@ -1951,7 +1862,7 @@
 
                 let th = document.createElement('th');
                 th.className = 'header';
-                th.textContent = `${dex} [${modalKiri}]`; // Tampilkan modal kiri
+                th.textContent = `${dex} `; // Tampilkan modal kiri
                 headerFragment.appendChild(th);
             });
 
@@ -1968,7 +1879,7 @@
 
                 let th = document.createElement('th');
                 th.className = 'header';
-                th.textContent = `${dex} [${modalKanan}]`; // Tampilkan modal kanan
+                th.textContent = `${dex} `; // Tampilkan modal kanan
                 headerFragment.appendChild(th);
             });
 
@@ -2061,10 +1972,10 @@
             detailTd.className = 'uk-text-center uk-background uk-text-nowrap';
 
             detailTd.innerHTML = `
-                <input type="checkbox" class="statusCheckbox" data-id="${index}" data-index="${data.no}" ${data.status ? 'checked' : ''}>#${index+1}
-                 <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex} </span><br/>
-                 <span class="uk-text-danger uk-text-bolder">${linkToken} VS ${linkPair}</span>
-                 <span id="SelAuto-${index}" data-index="${index}" uk-icon="icon: plus-circle; ratio: 0.8"  class="uk-text-success uk-text-bolder"  style="cursor:pointer"> </span> <br>
+               #${index+1}  <span style="color: ${warnaCEX}; font-weight:bolder;">${data.cex}  </span><br/>
+               <span class="uk-text-primary uk-text-bolder">${data.modal_kiri}$</span> <=> <span class="uk-text-danger uk-text-bolder">${data.modal_kanan}$</span><br/>
+                 <span class="uk-text-secondary uk-text-bolder">${linkToken} VS ${linkPair}</span>
+                 <span id="DelAuto-${index}" data-index="${index}" uk-icon="icon: minus-circle; ratio: 0.8"  class="uk-text-danger uk-text-bolder"  style="cursor:pointer"> </span><br/>
                <span class="uk-text-primary uk-text-bolder">${withdrawToken}~${depositToken}</span> | <span class="uk-text-primary uk-text-bolder">${withdrawPair}~${depositPair}</span> <br/>
                
                 <span class="uk-text-primary uk-text-bolder">${data.symbol_in}</span> 
@@ -2129,74 +2040,19 @@
         updateSortIcons();
     }
 
-    // FUNGSI ubah status tokenpair atau hapus token jika di-uncheck
+    //FUNGSI ubah status tokenpair
     $(document).on('change', '.statusCheckbox', function (event) {
         event.preventDefault();
         const id = $(this).data('id');
         const no = $(this).data('index');
         const isChecked = $(this).prop('checked');
-        let storedData = getFromLocalStorage('TOKEN_SCANNER', []);
-        const selectedCEX = getFromLocalStorage('CEX_PILIH', []);
-        const token = storedData.find(t => t.no === no);
-
-        if (token) {
-            if (!isChecked) {
-                // Jika checkbox di-uncheck, hapus token dari localStorage
-                if (confirm(`YAKIN, NONAKTIF ${token.symbol_in} VS ${token.symbol_out}?`)) {
-                    storedData = storedData.filter(t => t.no !== no);
-                    saveToLocalStorage('TOKEN_SCANNER', storedData);
-                    $('tr[data-index="' + id + '"]').remove(); // Hapus baris dari tabel
-                    toastr.info(`PAIR ${token.symbol_in}-${token.symbol_out} BERHASIL DI NONAKTIFKAN!`);
-                } else {
-                    $(this).prop('checked', true); // Batalkan uncheck jika tidak konfirmasi
-                    return;
-                }
-            } else {
-                // Jika checkbox dicentang, tandai status = true
-                token.status = true;
-                saveToLocalStorage('TOKEN_SCANNER', storedData);
-                toastr.info(`PAIR ${token.symbol_in}-${token.symbol_out} diaktifkan!`);
-            }
-
-            // Ambil ulang data dan hitung ulang jumlah aktif
-            const allData = getFromLocalStorage('TOKEN_SCANNER', []);
-
-            const jml = allData.filter(item => item.status === true).length;
-            $('#tokenCountALL').text(`TOTAL SEMUA : ${jml} PAIR-TOKEN`);
-
-            const savedCexs = [...new Set(allData.map(t => t.cex))];
-            const tokenCounts = savedCexs.reduce((acc, cex) => {
-                acc[cex] = allData.filter(t => t.cex === cex && t.status === true).length;
-                return acc;
-            }, {});
-
-            savedCexs.forEach(cex => {
-                const countText = ` (${tokenCounts[cex] || 0})`;
-                const isCheckedCEX = selectedCEX.includes(cex);
-                $(`#cex-options label:contains(${cex.toUpperCase()})`).each(function () {
-                    const labelText = $(this).text().split('(')[0].trim();
-                    $(this).html(`
-                        <input type="checkbox" value="${cex}" ${isCheckedCEX ? 'checked' : ''}>
-                        ${labelText}${countText}
-                    `);
-                });
-            });
-        }
-    });
-
-    //FUNGSI ubah status tokenpair
-    $(document).on('change', '.statusCheckboxLAMA', function (event) {
-        event.preventDefault();
-        const id = $(this).data('id');
-        const no = $(this).data('index');
-        const isChecked = $(this).prop('checked');
-        const storedData = getFromLocalStorage('TOKEN_SCANNER', []);
+        const storedData = getFromLocalStorage('TOKEN_FAV_SCANNER', []);
         const selectedCEX = getFromLocalStorage('CEX_PILIH', []); // Ambil selectedCEX dari localStorage
         const token = storedData.find(t => t.no === no);
 
         if (token) {
             token.status = isChecked;
-            saveToLocalStorage('TOKEN_SCANNER', storedData);
+            saveToLocalStorage('TOKEN_FAV_SCANNER', storedData);
 
             // Hitung ulang jumlah total token aktif
             const jml = storedData.filter(item => 
@@ -2251,10 +2107,10 @@
 
         // Menentukan URL berdasarkan nilai cex
         if (cex === "GATE") {
-            if (baseUrlTradeToken !== "#") baseUrlTradeToken = `https://www.gate.io/trade/${token}_USDT`;
-            if (baseUrlTradePair !== "#") baseUrlTradePair = `https://www.gate.io/trade/${pair}_USDT`;
-            baseUrlWithdraw = `https://www.gate.io/myaccount/withdraw/${token}`;
-            baseUrlDeposit = `https://www.gate.io/myaccount/deposit/${pair}`;
+            if (baseUrlTradeToken !== "#") baseUrlTradeToken = `https://www.www.gate.com/trade/${token}_USDT`;
+            if (baseUrlTradePair !== "#") baseUrlTradePair = `https://www.www.gate.com/trade/${pair}_USDT`;
+            baseUrlWithdraw = `https://www.www.gate.com/myaccount/withdraw/${token}`;
+            baseUrlDeposit = `https://www.www.gate.com/myaccount/deposit/${pair}`;
         } else if (cex === "BINANCE") {
             if (baseUrlTradeToken !== "#") baseUrlTradeToken = `https://www.binance.com/en/trade/${token}_USDT`;
             if (baseUrlTradePair !== "#") baseUrlTradePair = `https://www.binance.com/en/trade/${pair}_USDT`;
@@ -2467,36 +2323,6 @@
     }
 
     //fungsi generate setting modal untuk DEX
-    function generateInputModalLama(dexList) {
-        const container = $('#modal-container');
-        container.empty(); // Bersihkan container
-        dexList.forEach(dex => {
-            // Mengubah nama dex menjadi huruf besar
-            const dexUpperCase = dex.toUpperCase();
-            // Membuat heading
-            const heading = $('<h5></h5>')
-                .css({ 'margin': '8px 0px', 'color': '#e4322c' })
-                .text(`Modal ${dexUpperCase}`);
-            
-            container.append(heading);
-
-            // Membuat modal div
-            const modalDiv = $('<div></div>');
-            // Input modal
-            const modalInput = $('<input>')
-                .attr('type', 'number')
-                .attr('id', `Modal${dexUpperCase}`)
-                .addClass('uk-input')
-                .val('0')
-                .attr('required', true);
-            // Tambahkan label dan input ke modal div
-            modalDiv.append(modalInput);
-
-            // Tambahkan modal div ke container
-            container.append(modalDiv);
-        });
-    }
-
     function generateInputModal(dexList) {
         const container = $('#modal-container');
         container.empty(); // Bersihkan container
@@ -2543,25 +2369,19 @@
         });
     }
 
-    // Fungsi untuk memproses data order book exchanger
- 
     function processOrderBook(data) {
-        const rawBids = Array.isArray(data?.bids) ? data.bids.slice(0, 3) : [];
-        const rawAsks = Array.isArray(data?.asks) ? data.asks.slice(0, 3) : [];
-
-        const priceBuy = rawBids.map(([price, volume]) => ({
+        const priceBuy = data.bids.slice(0, 3).map(([price, volume]) => ({
             price: parseFloat(price),
-            volume: parseFloat(volume) * parseFloat(price)
-        })).reverse();
+            volume: parseFloat(volume) * parseFloat(price) // Volume dalam USD
+        })).reverse(); // Membalik urutan priceBuy
 
-        const priceSell = rawAsks.map(([price, volume]) => ({
+        const priceSell = data.asks.slice(0, 3).map(([price, volume]) => ({
             price: parseFloat(price),
-            volume: parseFloat(volume) * parseFloat(price)
-        })).reverse();
+            volume: parseFloat(volume) * parseFloat(price) // Volume dalam USD
+        })).reverse(); // Membalik urutan priceSell
 
         return { priceBuy, priceSell };
     }
-
 
     function getRateUSDT() {
         // Ambil harga ETHUSDT dari API Binance
@@ -2613,7 +2433,7 @@
             return;
         }
 
-        const feeList = getFromLocalStorage("TOKEN_SCANNER", []);
+        const feeList = getFromLocalStorage("TOKEN_FAV_SCANNER", []);
         if (!Array.isArray(feeList) || feeList.length === 0) {
             toastr.error("PERIKSA ULANG FEE WD dari EXCHANGER !!");
             callback("Token scanner belum diatur.", null);
@@ -2702,11 +2522,6 @@
                         const priceBuy = processedData?.priceSell?.[2]?.price || 0;
                         const priceSell = processedData?.priceBuy?.[2]?.price || 0;
 
-                        if (priceBuy <= 0 || priceSell <= 0) {
-                            callback(`Harga tidak valid untuk ${tokenName} di ${cex}.`, null);
-                            return;
-                        }
-
                         results[tokenName] = {
                             price_sell: priceSell,
                             price_buy: priceBuy,
@@ -2774,7 +2589,6 @@
         );
     }
 
-  
     // list api OKXDEX sell_BINANCE_USDT_buy_0x_BAL
     const apiKeysOKXDEX = [
         
@@ -2928,12 +2742,13 @@
             // }
             var totalValue = amount_out * priceSellPair_CEX; // Nilai akhir (USDT)
 //            console.warn("TOTAL VALUE",totalValue)
+            // console.log("TOKEN:",NameX);
             // console.log("TOKEN BUY:",priceBuyToken_CEX);
             // console.log("TOKEN SELL:",priceSellToken_CEX);
 
             // console.log("PAIR BUY:",priceBuyPair_CEX);
             // console.log("PAIR SELL:",priceSellPair_CEX);
-            
+            // console.log("-----------------------------");
             var profitLoss = totalValue - totalModal;
             var profitLossPercent = totalModal !== 0 ? (profitLoss / totalModal) * 100 : 0;
 
@@ -2993,7 +2808,7 @@
                 //     RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
                 // }
 
-                 if (trx === "TokentoPair") {
+                if (trx === "TokentoPair") {
                      // Selain itu, ambil rate dari TOKEN (symbol_in)
                     titleInfo += ` ${formatPrice(rateTokentoPair)} ${Name_in}/${Name_out}`;
                     titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
@@ -3004,7 +2819,6 @@
                     titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
                     RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateBuyPairDEX)}</label>`;
                 }
-                
 
             }
 
@@ -3014,91 +2828,11 @@
 
         // Menampilkan PNL
         // Panggil fungsi tampilan hasil
-       // console.log(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent); 
+        //console.log(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent); 
         DisplayPNL(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent,vol);
     }
 
     function DisplayPNL(PNL, cex, Coin_in, NameX, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, Coin_out, totalValue, totalModal, conclusion, selisih, trx, profitLossPercent, vol) {
-        var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
-        var nickname = SavedSettingData.nickname;
-        var totalValue = parseFloat(totalValue);
-        var totalGet = totalValue - parseFloat(modal);
-        var totalModal = parseFloat(totalModal);
-        var totalFee = parseFloat(totalFee);
-        var checkVol = $('#checkVOL').is(':checked');
-
-        const urlsCEXToken = GeturlExchanger(cex.toUpperCase(), Coin_in, Coin_out);
-        var buyLink = urlsCEXToken.tradeToken;
-        var sellLink = urlsCEXToken.tradePair;
-        var IdCELL = `${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}`;
-        var rowCell = $(`#${IdCELL}`);
-        var resultCell = $(`#RESULT_${IdCELL}`);
-        var buyCell = $(`#LEFT_${IdCELL}`);
-        var sellCell = $(`#RIGHT_${IdCELL}`);
-
-        var sinyals = `<a href="#SWAP_${cex.toUpperCase()}_${dex.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}" class='link-class'>
-            ${cex.toUpperCase()} VS ${dex.toUpperCase()} : ${NameX} (${PNL.toFixed(2)}$)</a>`;
-
-        const isPNLPositive = (filterPNLValue === 0 && totalValue > totalModal) || ((totalValue - totalModal) > filterPNLValue);
-        const isVolEnough = parseFloat(vol) >= parseFloat(modal);
-        const canHighlight = (!checkVol && isPNLPositive) || (checkVol && isPNLPositive && isVolEnough);
-
-        if (canHighlight) {
-            toastr.success(sinyals);
-            rowCell.attr("style", "background-color: #daf4c3 !important; font-weight: bolder !important; color: black !important;");
-
-            let htmlFee = '';
-            if (trx === "TokentoPair") {
-                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
-                        ${createLink(urlsCEXToken.withdrawUrl, 'WD')}<br/>`;
-            } else if (trx === "PairtoToken") {
-                htmlFee = `<span style="color:#0f04e2 !important;">FeeWD: ${FeeWD.toFixed(2)}$</span> | 
-                        ${createLink(urlsCEXToken.depositUrl, 'DP')}<br/>`;
-            }
-
-            let htmlResult = `
-                ${htmlFee}
-                <span style="color: #d20000;">All: ${totalFee.toFixed(2)}$</span>
-                <span style="color: #1e87f0;">SW: ${FeeSwap.toFixed(2)}$</span><br/>
-                <span style="color: #444;">GT: ${totalGet.toFixed(2)}$</span>
-                <span style="color: #444;">PNL: ${PNL.toFixed(2)}$</span><br/>
-            `;
-            resultCell.html(htmlResult);
-
-            if (!buyCell.parent().is("span")) {
-                buyCell.wrap('<a href="' + buyLink + '" target="_blank"></a>');
-            }
-            if (!sellCell.parent().is("span")) {
-                sellCell.wrap('<a href="' + sellLink + '" target="_blank"></a>');
-            }
-
-            InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal, trx);
-        } else {
-            resultCell.html(`
-                <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
-                <span class="uk-text-danger" title="FEE ALL">ALL:${totalFee.toFixed(2)}$</span>
-                <span class="uk-text-primary" title="FEE SWAP"> ${FeeSwap.toFixed(2)}$</span><br/>
-                <span class="uk-text-success" title="GET BRUTO">GT:${totalGet.toFixed(2)}$</span>
-                <span class="uk-text-warning" title="GET NETTO / PNL" > ${PNL.toFixed(2)}$</span>
-            `);
-        }
-
-        // Highlight PNL < -50% dari modal (rugi besar)
-        if (PNL < (-0.5 * parseFloat(modal))) {
-            rowCell.attr("style", "background-color: #ffe0e6 !important; font-weight: bold !important; color: black !important;");
-        }
-
-        // Highlight PNL > 50% dari modal (cuan besar)
-        if (PNL > (0.5 * parseFloat(modal))) {
-            rowCell.attr("style", "background-color: #ffd9b2 !important; font-weight: bold !important; color: black !important;");
-        }
-
-        if (PNL > 1 && parseFloat(vol) >= parseFloat(modal)) {
-            MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
-        }
-    }
-
-    function DisplayPNLLAMA(PNL, cex, Coin_in, NameX, totalFee, modal, dex, priceCEX, priceDEX, FeeSwap, FeeWD, sc_input, sc_output, Coin_out, totalValue, totalModal, conclusion, selisih, trx, profitLossPercent, vol) {
         var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
         var nickname = SavedSettingData.nickname;
         var totalValue = parseFloat(totalValue);
@@ -3161,6 +2895,7 @@
             }           
 
             InfoSinyal(dex.toLowerCase(), NameX, PNL, totalFee, cex.toUpperCase(), Coin_in, Coin_out, profitLossPercent, modal,trx);
+            
         } else {
             resultCell.html(`
                 <span style="color:black;" title="FEE WD CEX">FeeWD : ${FeeWD.toFixed(2)}$</span><br/>
@@ -3171,7 +2906,7 @@
             `);
         }
 
-        if (PNL > 1 && parseFloat(vol) >= parseFloat(modal)) {
+        if (PNL > 1) {
             MultisendMessage(cex, dex.toUpperCase(), Coin_in, Coin_out, modal, PNL, priceCEX, priceDEX, FeeSwap, FeeWD, totalFee, nickname, sc_input, sc_output);
         }
 
@@ -3233,8 +2968,9 @@
        // https://matcha.xyz/tokens/solana/So11111111111111111111111111111111111111112?sellChain=1399811149&sellAddress=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&sellAmount=100
         return link[dex] || null;
     }
-//https://aggserver.mytokenpocket.vip/v3/transit/swap?token0=0x67b725d7e342d7b611fa85e859df9697d9378b2e&token1=0xbdeae1ca48894a1759a8374d63925f21f2ee2639&decimal0=18&decimal1=18&impact=5000&part=5&amountIn=969000000000000000000&amountOutMin=0&to=0x0000000000000000000000000000000000000456&ns=ethereum&chainId=56&issuer=0x0000000000000000000000000000000000000456&channel=web&liquiditySources=
+
     function getPriceDEX(sc_input_in, des_input, sc_output_in, des_output, amount_in, PriceRate,  dexType, NameToken, NamePair, cex,action, callback) {
+         var selectedServer = getRandomServerFromCORSList();
         var sc_input=sc_input_in.toLowerCase();
         var sc_output=sc_output_in.toLowerCase();
         var dexId = `${cex}_${dexType.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
@@ -3283,12 +3019,12 @@
                 apiUrl = "https://aggregator-api.kyberswap.com/" + NetChain.toLowerCase() + "/api/v1/routes?tokenIn=" + sc_input + "&tokenOut=" + sc_output + "&amountIn=" + amount_in+ "&gasInclude=true";
                 break;
             case 'odos':
-                apiUrl = "https://api.odos.xyz/sor/quote/v2";               
+                apiUrl = selectedServer+"https://api.odos.xyz/sor/quote/v2";               
                 requestData = {
                     chainId: DTChain.Kode_Chain,
                     compact: true,
                     disableRFQs: true,
-                    userAddr: "0xDb954A050D442E488fe24b0a3250170223AAB2e4",
+                    userAddr: SavedSettingData.walletMeta,
                     inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
                     outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
                     slippageLimitPercent: 0.3,
@@ -3300,7 +3036,7 @@
                     chainId: DTChain.Kode_Chain,
                     compact: true,
                     disableRFQs: true,
-                    userAddr: "0xDb954A050D442E488fe24b0a3250170223AAB2e4",
+                    userAddr: SavedSettingData.walletMeta,
                     inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
                     outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
                     slippageLimitPercent: 0.3,
@@ -3377,7 +3113,7 @@
             case 'bebop':
                 apiUrl = "https://api.relay.link/quote";
                 requestData = {
-                    user: "0xDb954A050D442E488fe24b0a3250170223AAB2e4",
+                    user: SavedSettingData.walletMeta,
                     originChainId: DTChain.Kode_Chain,            // chain asal
                     destinationChainId: DTChain.Kode_Chain,       // chain tujuan (ubah jika berbeda)
                     originCurrency: sc_input,                     // token address asal
@@ -3890,7 +3626,7 @@
 
         var message = " #" + user.toUpperCase() + " is <b>[ " + status + " ]</b>" +
             "\n ----------------------------------------------------"+
-            "\n <b> MULTISCAN_V1.5 ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
+            "\n <b> #FAVORITE 1.5 ~ "+DTChain.Nama_Chain.toUpperCase()+" </b>"+
             "\n <b> CEX: </b>" + cexList.toUpperCase() +
             "\n <b> DEX: </b>" + dexList.toUpperCase() +
             "\n <b> ID UNIX : </b>" + data.id +
@@ -3937,7 +3673,7 @@
             let linkCEX = urlsCEX && urlsCEX.tradeToken ? `<a href="${urlsCEX.tradeToken}" target="_blank" class="uk-link">${cex}</a>` : `<b>${cex}</b>`;
 
             let message = 
-                `<b>#MULTISCAN_V1.5 #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
+                `<b>#FAVORITE 1.5 #${DTChain.Nama_Chain.toUpperCase()}</b>\nUSER: ~ ${nickname}\n` +
                 `-----------------------------------------\n` +
                 `MARKET: ${linkCEX} VS ${linkDEX}\n` +
                 `TOKEN-PAIR: <b>#${token}_${pair}</b>\n` +
@@ -4127,7 +3863,7 @@
             isSuccess++;
         }
 
-        if (CONFIG_CEX.INDODAX && isINDODAXSuccess !== true) {
+        if (isINDODAXSuccess !== true) {
             allSuccess = false;
         }else{
             isSuccess++;
@@ -4143,8 +3879,8 @@
 
                 saveToLocalStorage("WALLET_CEX", allFeeWD); // Simpan ke localStorage
                 saveToLocalStorage("LASTUPDATE_FEEWD",lastModifiedTime);
-                // Ambil data dari localStorage dengan key "TOKEN_SCANNER"
-                const storedData = getFromLocalStorage("TOKEN_SCANNER", []); // Ambil data token yang sudah ada
+                // Ambil data dari localStorage dengan key "TOKEN_FAV_SCANNER"
+                const storedData = getFromLocalStorage("TOKEN_FAV_SCANNER", []); // Ambil data token yang sudah ada
                 const WalletCEXData = getFromLocalStorage("WALLET_CEX", []); // Ambil data Wallet CEX dari localStorage
 
                 // Gabungkan data dari TOKEN dan status dari WALLET_CEX
@@ -4174,9 +3910,9 @@
 
                 // Konfirmasi dari pengguna
                 if (confirm('RELOAD STATUS WITHDRAW & DEPOSIT CEX?')) {
-                    saveToLocalStorage("TOKEN_SCANNER", combinedData);
+                    saveToLocalStorage("TOKEN_FAV_SCANNER", combinedData);
 
-                    const savedData = getFromLocalStorage("TOKEN_SCANNER", []);
+                    const savedData = getFromLocalStorage("TOKEN_FAV_SCANNER", []);
 
                     // Validasi apakah data berhasil disimpan
                     if (savedData.length === combinedData.length) {
@@ -4233,12 +3969,12 @@
 
         // Format jadi dua arah: symbol_in & symbol_out
         const formattedData = TokenDataIndodax
-            .filter(token => token.cex === "INDODAX" && token.status === true )
+            .filter(token => token.cex === "INDODAX" && token.status === true)
             .flatMap(token => {
                 return [
                     {
                         cex: "INDODAX",
-                     //   chain: DTChain.CEXCHAIN.INDODAX.chainCEX, // asumsi chain disamakan dengan symbol_out
+                        chain: DTChain.CEXCHAIN.INDODAX.chainCEX, // asumsi chain disamakan dengan symbol_out
                         tokenName: token.symbol_in.toUpperCase(),
                         scToken: token.sc_in || "",
                         feeWDs: 0.0001,
@@ -4247,7 +3983,7 @@
                     },
                     {
                         cex: "INDODAX",
-                    //    chain:  DTChain.CEXCHAIN.INDODAX.chainCEX,
+                        chain:  DTChain.CEXCHAIN.INDODAX.chainCEX,
                         tokenName: token.symbol_out.toUpperCase(),
                         scToken: token.sc_out || "",
                         feeWDs: 0.0001,
@@ -4259,7 +3995,7 @@
 
         // Tambahkan ke array global
         allFeeWD = allFeeWD.concat(formattedData);
-       console.log("INDODAX WALLET:", formattedData);     
+
         // Tandai sukses dan panggil callback
         toastr.info("SUKSES, CEK UPDATE WALLET INDODAX");
         isINDODAXSuccess = true;
@@ -4822,7 +4558,7 @@
     //fungsi download token
     $('#tokenCountALL').on('click', function () {
         // Ambil data dari localStorage
-        const rawData = getFromLocalStorage("TOKEN_SCANNER", []);
+        const rawData = getFromLocalStorage("TOKEN_FAV_SCANNER", []);
         //const rawData = filteredData;
         if (!rawData || rawData.length === 0) {
             toastr.error('Data TOKEN tidak ditemukan...');
@@ -4868,7 +4604,7 @@
         ).length;
    
         a.href = url;
-        a.download = countTrueStatus+'_MULTISCAN_V1_' + (Nama_Chain || 'UNKNOWN').toUpperCase() + '_TOKEN.csv'; // Pastikan Nama_Chain terdefinisi
+        a.download = countTrueStatus+'_MULTISCAN_V1_' + (Nama_Chain || 'UNKNOWN').toUpperCase() + '_TOKEN_FAV.csv'; // Pastikan Nama_Chain terdefinisi
         a.style.display = 'none';
 
         // Tambahkan tombol ke DOM dan klik
