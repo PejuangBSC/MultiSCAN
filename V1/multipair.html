@@ -540,6 +540,64 @@
             });
         });
 
+        $("#dataTableBody").on('click', '.up-btn', function () {
+            const index = $(this).data('index');
+            importTokenToScanner(index);
+        });
+
+        function importTokenToScanner(index) {
+            const storedData = getFromLocalStorage("TOKEN", []);
+            const WalletCEXData = getFromLocalStorage("WALLET_CEX", []);
+            let token = storedData[index];
+
+            if (!token) {
+                toastr.error("Data token tidak ditemukan.");
+                return;
+            }
+
+            const walletToken = WalletCEXData.find(item =>
+                item.cex === token.cex && item.tokenName === token.symbol_in
+            );
+            const walletPair = WalletCEXData.find(item =>
+                item.cex === token.cex && item.tokenName === token.symbol_out
+            );
+
+            // Tambahkan informasi wallet
+            token = {
+                ...token,
+                feeWDToken: walletToken ? walletToken.feeWDs : "",
+                feeWDPair: walletPair ? walletPair.feeWDs : "",
+                depositPair: walletPair ? walletPair.depositEnable : false,
+                withdrawToken: walletToken ? walletToken.withdrawEnable : false,
+                depositToken: walletToken ? walletToken.depositEnable : false,
+                withdrawPair: walletPair ? walletPair.withdrawEnable : false,
+            };
+
+            // Ambil data yang sudah ada di TOKEN_SCANNER
+            const current = getFromLocalStorage("TOKEN_SCANNER", []);
+
+            const alreadyExists = current.some(item =>
+                item.cex === token.cex &&
+                item.symbol_in === token.symbol_in &&
+                item.symbol_out === token.symbol_out &&
+                item.chain === token.chain
+            );
+
+            if (alreadyExists) {
+                toastr.warning("DATA TOKEN-PAIR SUDAH ADA");
+                return;
+            }
+
+            current.push(token);
+            saveToLocalStorage("TOKEN_SCANNER", current);
+
+            toastr.success("DATA TOKEN PAIR BERHASIL DIIMPORT.", {
+                timeOut: 2000,
+                progressBar: true,
+                closeButton: true,
+            });
+        }
+
         $('#dataTableBody').on('click', '.edit-btn', function() {
             const index = $(this).data('index');
             editRow(index);
@@ -763,10 +821,13 @@
                     <td class="uk-text-center">
                         <input type="checkbox" class="statusCheckbox" data-index="${data.no}" ${data.status ? 'checked' : ''}>AKTIF
                     </td>
+                  
                     <td class="action-buttons">
-                        <button class="uk-icon-button uk-button-secondary edit-btn" uk-icon="pencil" data-index="${index}"></button>
-                        <button class="uk-icon-button uk-button-danger delete-btn" uk-icon="trash" data-index="${index}"></button>
+                        <button class="uk-icon-button up-btn" uk-icon="sign-in" title="Import" style="background-color: #19ee0f;" data-index="${index}"></button>
+                        <button class="uk-icon-button edit-btn" uk-icon="pencil" title="Ubah" style="background-color: #cbe2f9;" data-index="${index}"></button>
+                        <button class="uk-icon-button delete-btn" uk-icon="trash" title="Hapus" style="background-color: #f2a3b2;" data-index="${index}"></button>
                     </td>
+
                 </tr>
             `;
             rows += row; // Menambahkan row ke dalam string
