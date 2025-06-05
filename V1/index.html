@@ -542,22 +542,30 @@
     const SETTING_KEY = "DATA_SETTING";
 
     function downloadTokenScannerJSON() {
-        const tokenData = getFromLocalStorage(TOKEN_KEY, []);
-        const settingData = getFromLocalStorage(SETTING_KEY, {});
+        // Ambil data dari localStorage
+        const tokenData = getFromLocalStorage("TOKEN_SCANNER", []);
+        const settingData = getFromLocalStorage("DATA_SETTING", {});
 
+        // Gabungkan data ke dalam satu objek
         const combined = {
-            [TOKEN_KEY]: tokenData,
-            [SETTING_KEY]: settingData
+            "TOKEN_SCANNER": tokenData,
+            "DATA_SETTING": settingData
         };
 
-        const blob = new Blob([JSON.stringify(combined, null, 2)], { type: "application/json" });
-        const url = URL.createObjectURL(blob);
+        // Konversi ke file JSON
+        const blob = new Blob([JSON.stringify(combined, null, 2)], {
+            type: "application/json"
+        });
 
+        const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
+
         a.href = url;
         a.download = "PROFIL_APP.json";
         document.body.appendChild(a);
         a.click();
+
+        // Bersihkan elemen dan URL
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
 
@@ -579,15 +587,16 @@
                     return;
                 }
 
-                // Cek data masing-masing
-                if (json[TOKEN_KEY]) {
-                    saveToLocalStorage(TOKEN_KEY, json[TOKEN_KEY]);
+                // Cek dan simpan data token
+                if (json["TOKEN_SCANNER"]) {
+                    saveToLocalStorage("TOKEN_SCANNER", json["TOKEN_SCANNER"]);
                 } else {
                     console.warn("TOKEN_SCANNER tidak ditemukan di file.");
                 }
 
-                if (json[SETTING_KEY]) {
-                    saveToLocalStorage(SETTING_KEY, json[SETTING_KEY]);
+                // Cek dan simpan data setting
+                if (json["DATA_SETTING"]) {
+                    saveToLocalStorage("DATA_SETTING", json["DATA_SETTING"]);
                 } else {
                     console.warn("DATA_SETTING tidak ditemukan di file.");
                 }
@@ -604,7 +613,7 @@
         reader.readAsText(file);
     }
 
-
+    
     // Fungsi untuk mendapatkan data chain berdasarkan nama chain
     function getChainData(chainName) {
         const chainData = CONFIG_CHAINS[chainName]; // base
