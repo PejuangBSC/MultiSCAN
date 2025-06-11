@@ -1,0 +1,841 @@
+     // fungsi dapatkan harga token dari Exchanger
+    function getPriceCEX(coins, NameToken, NamePair, cex, callback) {
+        const config = exchangeConfig[cex];
+        if (!config) {
+            callback(`Exchange ${cex} tidak ditemukan dalam konfigurasi.`, null);
+            return;
+        }
+
+        const feeList = getFromLocalStorage("TOKEN_SCANNER", []);
+        if (!Array.isArray(feeList) || feeList.length === 0) {
+            toastr.error("PERIKSA ULANG FEE WD dari EXCHANGER !!");
+            callback("Token scanner belum diatur.", null);
+            return;
+        }
+
+        const tokenData = feeList.find(item =>
+            item.symbol_in === NameToken && item.symbol_out === NamePair && item.cex === cex
+        );
+
+        const isStablecoin = (token) => stablecoins.includes(token);
+        let results = {};
+
+        const urls = [
+            isStablecoin(NameToken) ? null : config.url({ symbol: NameToken }),
+            isStablecoin(NamePair) ? null : config.url({ symbol: NamePair })
+        ];
+
+        const processFinalResult = () => {
+            if (Object.keys(results).length === 2) {
+                const priceBuyToken = results[NameToken]?.price_buy || 0;
+                const priceBuyPair = results[NamePair]?.price_buy || 0;
+
+                const feeWDToken = parseFloat(tokenData?.feeWDToken || 0) * priceBuyToken;
+                const feeWDPair = parseFloat(tokenData?.feeWDPair || 0) * priceBuyPair;
+
+                if (isNaN(feeWDToken) || feeWDToken < 0) {
+                    callback(`FeeWD untuk ${NameToken} di ${cex} tidak valid: ${feeWDToken}`, null);
+                    return;
+                }
+                if (isNaN(feeWDPair) || feeWDPair < 0) {
+                    callback(`FeeWD untuk ${NamePair} di ${cex} tidak valid: ${feeWDPair}`, null);
+                    return;
+                }
+
+                const finalResult = {
+                    token: NameToken.toUpperCase(),
+                    sc_input: coins.sc_in,
+                    sc_output: coins.sc_out,
+                    pair: NamePair.toUpperCase(),
+                    cex: cex.toUpperCase(),
+                    price_sellToken: results[NameToken]?.price_sell || 0,
+                    price_buyToken: priceBuyToken,
+                    price_sellPair: results[NamePair]?.price_sell || 0,
+                    price_buyPair: priceBuyPair,
+                    volumes_sellToken: results[NameToken]?.volumes_sell || [],
+                    volumes_buyToken: results[NameToken]?.volumes_buy || [],
+                    volumes_sellPair: results[NamePair]?.volumes_sell || [],
+                    volumes_buyPair: results[NamePair]?.volumes_buy || [],
+                    feeWDToken: feeWDToken,
+                    feeWDPair: feeWDPair
+                };
+
+                updateTableVolCEX({}, finalResult, cex);
+                callback(null, finalResult);
+            }
+        };
+
+        urls.forEach((url, index) => {
+            const tokenName = index === 0 ? NameToken : NamePair;
+            if (isStablecoin(tokenName)) {
+                results[tokenName] = {
+                    price_sell: 1,
+                    price_buy: 1,
+                    volumes_sell: Array(3).fill({ price: 1, volume: 10000 }),
+                    volumes_buy: Array(3).fill({ price: 1, volume: 10000 })
+                };
+                processFinalResult();
+                return;
+            }
+
+            if (url) {
+                $.ajax({
+                    url: url,
+                    method: 'GET',
+                    success: function (data) {
+                        let processedData;
+                        try {
+                            processedData = config.processData(data);
+                        } catch (error) {
+                            console.error(`Error processing data untuk ${tokenName} di ${cex}:`, error);
+                            callback(`Error processing data untuk ${tokenName} di ${cex}.`, null);
+                            return;
+                        }
+
+                        const isIndodax = cex.toLowerCase() === "indodax";
+                        let priceBuy, priceSell, volumesBuy, volumesSell;
+
+                        if (isIndodax) {
+                            priceBuy = processedData?.priceSell?.[2]?.price || 0;
+                            priceSell = processedData?.priceBuy?.[2]?.price || 0;
+                            volumesBuy = processedData?.priceSell || [];
+                            volumesSell = processedData?.priceBuy || [];
+                        } else {
+
+                            // Urutkan data harga dan volume
+                            volumesBuy = (processedData?.priceBuy || []).sort((a, b) => b.price - a.price);   // beli → tertinggi ke rendah
+                            volumesSell = (processedData?.priceSell || []).sort((a, b) => a.price - b.price); // jual → terendah ke tinggi
+
+                            // Ambil harga berdasarkan urutan yang sudah benar
+                            priceBuy = volumesBuy[2]?.price || 0;
+                            priceSell = volumesSell[2]?.price || 0;
+
+                        }
+
+                        if (priceBuy <= 0 || priceSell <= 0) {
+                            callback(`Harga tidak valid untuk ${tokenName} di ${cex}.`, null);
+                            return;
+                        }
+
+                        results[tokenName] = {
+                            price_sell: priceSell,
+                            price_buy: priceBuy,
+                            volumes_sell: processedData?.priceBuy || [],
+                            volumes_buy: processedData?.priceSell || []
+                        };
+
+                        processFinalResult();
+                    },
+                    error: function (xhr) {
+                        const errorMessage = xhr.responseJSON?.msg || "Unknown ERROR";
+                        callback(`Error koneksi API untuk ${tokenName} di ${cex}: ${errorMessage}`, null);
+                    }
+                });
+            }
+        });
+    }
+
+    function updateTableVolCEX(processedData, finalResult, cex) {
+        const cexName = cex.toUpperCase();
+        const TokenPair = finalResult.token + "_" + finalResult.pair;
+        const isIndodax = cexName === 'INDODAX';
+
+        const getPriceIDR = priceUSDT => {
+            const rateIDR = getFromLocalStorage("PriceRateUSDT", 0);
+            return rateIDR ? (priceUSDT * rateIDR).toLocaleString("id-ID", { style: "currency", currency: "IDR" }) : "N/A";
+        };
+
+        // LEFT: token → pair
+        const volumesBuyToken = isIndodax
+            ? finalResult.volumes_buyToken.slice().sort((a, b) => b.price - a.price)
+            : finalResult.volumes_buyToken.slice().sort((a, b) => b.price - a.price); // harga besar → kecil
+
+        const volumesSellPair = isIndodax
+            ? finalResult.volumes_sellPair
+            : finalResult.volumes_sellPair; // harga kecil → besar
+
+        // RIGHT: pair → token
+        const volumesBuyPair = isIndodax
+            ? finalResult.volumes_buyPair.slice().sort((a, b) => b.price - a.price) // harga besar → kecil
+            : finalResult.volumes_buyPair.slice().sort((a, b) => b.price - a.price); 
+
+        const volumesSellToken = isIndodax
+            ? finalResult.volumes_sellToken
+            : finalResult.volumes_sellToken.slice().sort((a, b) => b.price - a.price); // harga besar → kecil
+
+        $('#LEFT_' + cexName + '_' + TokenPair + '_' + DTChain.Nama_Chain.toUpperCase()).html(
+            volumesBuyToken.map(data => `
+                <span class='uk-text-success' title="IDR: ${getPriceIDR(data.price)}">
+                    ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
+                </span>
+            `).join('') +
+            `<span class='uk-text-primary uk-text-bolder'>${finalResult.token} -> ${finalResult.pair}</span><br/>` +
+            volumesSellPair.map(data => `
+                <span class='uk-text-danger' title="IDR: ${getPriceIDR(data.price)}">
+                    ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
+                </span>
+            `).join('')
+        );
+
+        $('#RIGHT_' + cexName + '_' + TokenPair + '_' + DTChain.Nama_Chain.toUpperCase()).html(
+            volumesBuyPair.map(data => `
+                <span class='uk-text-success' title="IDR: ${getPriceIDR(data.price)}">
+                    ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
+                </span>
+            `).join('') +
+            `<span class='uk-text-primary uk-text-bolder'>${finalResult.pair} -> ${finalResult.token}</span><br/>` +
+            volumesSellToken.map(data => `
+                <span class='uk-text-danger' title="IDR: ${getPriceIDR(data.price)}">
+                    ${formatPrice(data.price || 0)} : <b>${data.volume.toFixed(2) || 0}$</b><br/>
+                </span>
+            `).join('')
+        );
+    }
+    // Fungsi untuk mengecek harga pada DEX  
+    function generateDexLink(dex, NameToken, sc_input, NamePair, sc_output) {
+        const link = {
+            'kyberswap': `https://kyberswap.com/swap/${DTChain.Nama_Chain}/${sc_input}-to-${sc_output}`,
+            'kana': `https://app.paraswap.xyz/#/swap/${sc_input}-${sc_output}?version=6.2&network=${DTChain.Nama_Chain}`,
+            'odos': "https://app.odos.xyz",
+            '0x': DTChain.Nama_Chain.toLowerCase() === 'solana' 
+           // `https://matcha.xyz/tokens/solana/${sc_input.toLowerCase()}?buyChain=1399811149&buyAddress=${sc_output.toLowerCase()}`
+            ? `https://matcha.xyz/tokens/solana/${sc_input}?sellChain=1399811149&sellAddress=${sc_output}` 
+            : `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
+        
+           // '0x': `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
+            '1inch': ` https://app.1inch.io/advanced/swap?network=${DTChain.Kode_Chain}&src=${sc_input.toUpperCase()}&dst=${sc_output.toUpperCase()}`,
+          // '1inch': `https://app.1inch.io/#/${DTChain.Kode_Chain}/advanced/swap/${sc_input}/${sc_output}`,
+            'okx': `https://www.okx.com/web3/dex-swap?inputChain=${DTChain.Kode_Chain}&inputCurrency=${sc_input}&outputChain=501&outputCurrency=${sc_output}`,
+            'magpie': `https://app.magpiefi.xyz/swap/${DTChain.Nama_Chain.toLowerCase()}/${NameToken.toUpperCase()}/${DTChain.Nama_Chain.toLowerCase()}/${NamePair.toUpperCase()}`,
+            'paraswap': `https://app.paraswap.xyz/#/swap/${sc_input}-${sc_output}?version=6.2&network=${DTChain.Nama_Chain}`,
+            'openocean' : `https://app.openocean.finance/swap/${DTChain.Nama_Chain}/${sc_input}/${sc_output}`,
+            'jupiter': `https://jup.ag/swap/${sc_input}-${sc_output}`,
+            'lifi' : `https://jumper.exchange/?fromChain=${DTChain.Kode_Chain}&fromToken=${sc_input}&toChain=${DTChain.Kode_Chain}&toToken=${sc_output}`,
+        };
+       // https://matcha.xyz/tokens/solana/So11111111111111111111111111111111111111112?sellChain=1399811149&sellAddress=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&sellAmount=100
+        return link[dex] || null;
+    }
+
+    function getPriceDEX(sc_input_in, des_input, sc_output_in, des_output, amount_in, PriceRate,  dexType, NameToken, NamePair, cex,action, callback) {
+        var selectedServer = getRandomServerFromCORSList();
+        var sc_input=sc_input_in.toLowerCase();
+        var sc_output=sc_output_in.toLowerCase();
+        var dexId = `${cex}_${dexType.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
+        var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
+        var selectedApiKey = getRandomApiKeyOKX();
+
+        // var multiplier = Math.pow(10, des_input);
+        // var numericAmount = multiplier * amount_in;
+
+        // if (isNaN(numericAmount) || !isFinite(numericAmount)) {
+        //     console.error("Nilai amount_in tidak valid:", { des_input, amount_in });
+        //     callback("Nilai amount_in tidak valid untuk konversi ke BigInt.", null);
+        //     return;
+        // }
+
+        // var amount_in = BigInt(Math.round(numericAmount));
+
+        var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in));
+        var apiUrl, requestData,headers;   
+        let normalizedNamePair = NamePair === "ETH" ? "WETH" :
+                                NamePair === "BNB" ? "WBNB" :
+                                NamePair === "POL" ? "WPOL" :
+                                NamePair === "SOL" ? "WSOL" :
+                                NamePair === "AVAX" ? "WAVAX" :
+                                NamePair;
+        var linkDEX = generateDexLink(dexType, NameToken, sc_input_in, NamePair, sc_output_in);
+        // Mapping chainId untuk Kana
+        const KanaChainID = {
+            'solana': 1,
+            'polygon': 3,
+            'bsc': 4,
+            'ethereum': 6,
+            'Avalanche': 10,
+            'Arbitrum': 11,
+        };
+
+        switch (dexType) {
+            case 'kyberswap':
+                let NetChain;
+                if (DTChain.Nama_Chain.toUpperCase() === "AVAX") {
+                    NetChain = "avalanche";
+                }else{
+                    NetChain=DTChain.Nama_Chain;
+                }
+                
+                apiUrl = "https://aggregator-api.kyberswap.com/" + NetChain.toLowerCase() + "/api/v1/routes?tokenIn=" + sc_input + "&tokenOut=" + sc_output + "&amountIn=" + amount_in+ "&gasInclude=true";
+                break;
+            case 'odos':
+                apiUrl = "https://api.odos.xyz/sor/quote/v2";               
+                requestData = {
+                    chainId: DTChain.Kode_Chain,
+                    compact: true,
+                    disableRFQs: true,
+                    userAddr: SavedSettingData.walletMeta,
+                    inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
+                    outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
+                    slippageLimitPercent: 0.3,
+                };                
+                break;
+            case 'altodos':
+                apiUrl = "https://ethmainnet.server.hinkal.pro/OdosSwapData";               
+                requestData = {
+                    chainId: DTChain.Kode_Chain,
+                    compact: true,
+                    disableRFQs: true,
+                    userAddr: SavedSettingData.walletMeta,
+                    inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
+                    outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
+                    slippageLimitPercent: 0.3,
+                };                
+                break;
+            case 'alt0x':           
+                  apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
+                break;
+            case '0x':           
+                    if(DTChain.Nama_Chain.toLowerCase() === 'solana'){
+                        apiUrl = selectedServer+"https://matcha.xyz/api/swap/quote/solana?sellTokenAddress="+sc_input_in+"&buyTokenAddress="+sc_output_in+"&sellAmount="+amount_in+"&dynamicSlippage=true&slippageBps=50&userPublicKey=Eo6CpSc1ViboPva7NZ1YuxUnDCgqnFDXzcDMDAF6YJ1L";
+                    }else{
+                        apiUrl = "https://matcha.xyz/api/swap/price?chainId=" + DTChain.Kode_Chain +"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in ;
+                    }
+                    break;
+                    //
+            case '1inch':
+                //https://proxy-app.1inch.io/v2.0/fusion/quoter/v1.0/501/quote?wallet=11111111111111111111111111111111&srcToken=AxaTJdRuuc3626FtPWdQCMcWPH6yzgxXKWbFCZN3TMgy&dstToken=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&amount=260745399000&enableEstimate=false
+                //apiUrl = "https://api-defillama.1inch.io/v2.0/fusion/quoter/v1.0/501/quote?wallet=11111111111111111111111111111111&srcToken=AxaTJdRuuc3626FtPWdQCMcWPH6yzgxXKWbFCZN3TMgy&dstToken=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&amount=260745399000&enableEstimate=false";
+                    apiUrl = "https://api-defillama.1inch.io/v6.0/" + DTChain.Kode_Chain + "/quote?src=" + sc_input + "&dst=" + sc_output + "&amount=" + amount_in + "&includeGas=true";
+                break;
+            case 'magpie':
+                if(DTChain.Nama_Chain.toLowerCase() === 'bsc'){
+                     apiUrl = "https://api.magpiefi.xyz/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=true&slippage=0.1"+
+                     "&liquiditySources=pancakeswap-v2%2Cmdex%2Cbakeryswap%2Cbiswap%2Capeswap%2Cbabyswap%2Cjetswap%2Cjulswap%2Cwardenswap%2Cacsiswap-stable%2Cacsiswap-weighted%2Cuniswap-v3%2Ctrident-stable%2Ctrident-constant-product%2Ckyber-swap-classic-static%2Ckyber-swap-classic-dynamic%2Csushi%2Ctrader-joe%2Celk-finance%2Cbaby-doge-swap%2Cw3-swap%2Cthena-fusion%2Cnomiswap-v3%2Chashflow-v3%2Cwoo-fi%2Cwombat%2Cthena-stable%2Cthena-volatile%2Ctrader-joe-v2-1%2Cradio-shack-swap%2Carchly-stable%2Carchly-volatile%2Csushi-v3%2Cnomiswap%2Csynapse%2Clif3-swap%2Ckapinus%2Cben-swap%2Cplanet%2Cknight-swap%2Calita-finance%2Ccoin-swap%2Cdinosaur-eggs%2Ckyoto-swap%2Cpanther-swap%2Ci-swap-v2%2Chyper-jump%2Cpad-swap%2Cnative%2Cpancakeswap-v3%2Ca-crypto-s%2Cellipsis-stable%2Ca-crypto-s-lp%2Cellipsis-stable-lp%2Cellipsis-crypto%2Cellipsis-crypto-lp%2Cmaverick%2Cpancakeswap-stable%2Cpancakeswap-stable-lp%2Cpancakeswap-v2-lp%2Cmdex-lp%2Cbakeryswap-lp%2Cbiswap-lp%2Capeswap-lp%2Cbabyswap-lp%2Cjetswap-lp%2Cjulswap-lp%2Cwardenswap-lp%2Csushi-lp%2Ctrader-joe-lp%2Celk-finance-lp%2Cbaby-doge-swap-lp%2Cw3-swap-lp%2Cradio-shack-swap-lp%2Cnomiswap-lp%2Clif3-swap-lp%2Ckapinus-lp%2Cben-swap-lp%2Cplanet-lp%2Cknight-swap-lp%2Calita-finance-lp%2Ccoin-swap-lp%2Cdinosaur-eggs-lp%2Ckyoto-swap-lp%2Cpanther-swap-lp%2Ci-swap-v2-lp%2Chyper-jump-lp%2Cpad-swap-lp%2Cspartan%2Csmar-dex%2Cmaverick-v2%2Cbebop%2Cbeefy%2Cswaap-v2%2Celk-finance-v3%2Cyield-nest-max-lrt-vault%2Cerc-4626%2Cuniswap-v2%2Cuniswap-v2-lp%2Cizi-swap";
+                 }else if(DTChain.Nama_Chain.toLowerCase() === 'ethereum'){
+                     apiUrl = "https://api.magpiefi.xyz/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=true&slippage=0.1"+
+                     "&liquiditySources=sushi,balancer-v2-stable,balancer-v2-weighted,curve-crypto,curve-stable,defi-swap,lua-swap,sake-swap,shibaswap,uniswap-v3,curve-crypto2,dodo-v2-stable,dodo-v2-private,verse-dex,kyber-swap-classic-static,kyber-swap-classic-dynamic,integral-size,apeswap,elk-finance,pancakeswap-v2,hashflow-v3,saddle-base,saddle-meta,trader-joe-v2-1,radio-shack-swap,sushi-v3,solidly-v2-stable,solidly-v2-volatile,synapse,aave-v2,aave-v3,capital-dex,native,curve-crypto-lp,curve-stable-lp,curve-crypto2-lp,pancakeswap-v3,dodo-v2-vending-manchine,swapr,synthetix,synthetix-lp,swaap-v2,clipper,bancor-v2-1,smoothy-v1,solidly-v3,lido,maverick,defi-plaza,gyroscope-2clp,gyroscope-3clp,gyroscope-eclp,sushi-lp,uniswap-v2-lp,defi-swap-lp,lua-swap-lp,sake-swap-lp,shibaswap-lp,verse-dex-lp,apeswap-lp,elk-finance-lp,pancakeswap-v2-lp,radio-shack-swap-lp,capital-dex-lp,swapr-lp,bedrock,psm-usdc,wagmi,smar-dex,dfx-v2,dfx-v3,maverick-v2,bebop,beefy,rings-usdc,rings-eth,elk-finance-v3,wombat,yield-nest-nlrt,balancer-v3-stable,balancer-v3-weighted,erc-4626,liquid-move-eth";
+                 }else{
+                    apiUrl = "https://api.magpiefi.xyz/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=false&slippage=0.2";
+                 }
+                 //
+
+                 break; 
+            case 'kana':
+                    // Mapping chainId dari DTChain.Nama_Chain ke KanaChainID
+                const chainName = DTChain.Nama_Chain.toLowerCase();
+                const kanaChainId = KanaChainID[chainName];
+
+                if (!kanaChainId) {
+                    apiUrl = "https://api.paraswap.io/prices?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + DTChain.Kode_Chain + "&amount=" + amount_in + "&version=6.2";
+                }
+
+                // Endpoint untuk Kana
+                apiUrl = `https://ag.kanalabs.io/v1/swapQuote?inputToken=${sc_input}&outputToken=${sc_output}&chain=${kanaChainId}&amountIn=${amount_in.toString()}&slippage=0.5&isFeeReferrer=false`;
+                break;
+            case 'okx':
+                var queryString = `/api/v5/dex/aggregator/quote?amount=${amount_in}&chainId=${DTChain.Kode_Chain}` + `&fromTokenAddress=${sc_input_in}&toTokenAddress=${sc_output_in}`;
+                var timestamp = new Date().toISOString();
+                var method = "GET";
+                var dataToSign = timestamp + method + queryString;
+                apiUrl = `https://www.okx.com${queryString}`;
+
+                var signature = calculateSignature("OKX",  selectedApiKey.secretKeyOKX, dataToSign, "BASE64");
+                break;
+                
+            case 'openocean':
+                apiUrl = "https://open-api.openocean.finance/v4/"+ DTChain.Kode_Chain +"/quote?inTokenAddress="+ sc_input +"&outTokenAddress="+ sc_output +"&amount="+ amount_in.toString()+"&gasPrice=" + Math.ceil(parseFloat(getFromLocalStorage('gasGWEI', 0)));
+
+                break;
+
+            case 'paraswap':
+                apiUrl = "https://api.paraswap.io/prices?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + DTChain.Kode_Chain + "&amount=" + amount_in + "&version=6.2";
+                break;
+            case 'jupiter':
+                apiUrl = "https://quote-api.jup.ag/v6/quote?inputMint=" + sc_input_in + "&outputMint=" + sc_output_in + "&amount=" + amount_in;
+                headers = {}; // Tidak memerlukan header khusus
+                break; 
+            
+            case 'lifi':
+                apiUrl = "https://api.relay.link/quote";
+                requestData = {
+                    user: SavedSettingData.walletMeta,
+                    originChainId: DTChain.Kode_Chain,            // chain asal
+                    destinationChainId: DTChain.Kode_Chain,       // chain tujuan (ubah jika berbeda)
+                    originCurrency: sc_input,                     // token address asal
+                    destinationCurrency: sc_output,               // token address tujuan
+                    amount: amount_in.toString(),                 // nilai dalam smallest unit (misalnya wei)
+                    tradeType: "EXACT_INPUT"                      // atau "EXACT_OUTPUT", tergantung kebutuhan
+                };
+                break;
+
+            default:
+                console.error("Unsupported DEX type");
+                return;
+        }
+    
+        $.ajax({
+            url: apiUrl,
+            method: ['odos','altodos','bebop'].includes(dexType) ? 'POST' : 'GET', // Cek tipe DEX
+            headers: Object.assign(
+                {}, 
+                headers || {}, // Header tambahan dari variabel `headers`
+               // dexType === '0x' ? { '0x-api-key': "6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5" } : {},
+               //62df698d503e453a80ef7b0e0e2f7e41
+                dexType === 'okx' ? {
+                    "OK-ACCESS-PROJECT": selectedApiKey.ProjectOKX,
+                    "OK-ACCESS-KEY": selectedApiKey.ApiKeyOKX,
+                    "OK-ACCESS-SIGN": signature,
+                    "OK-ACCESS-PASSPHRASE": selectedApiKey.PassphraseOKX,
+                    "OK-ACCESS-TIMESTAMP": timestamp,
+                } : {}
+            ),
+            data: ['odos','altodos','bebop' ].includes(dexType) ? JSON.stringify(requestData) : requestData, // Format data berdasarkan tipe DEX
+            contentType: ['odos','altodos','bebop'].includes(dexType) ? 'application/json' : undefined, // Set `contentType` hanya jika diperlukan
+          //  timeout: parseInt(SavedSettingData.waktuTunggu) * 1000, // Ambil waktu tunggu dari localStorage atau default ke 0
+            success: function (response, xhr) {
+                //console.log("RESPONSE DEX: ",response)
+                var amount_out = null, FeeSwap = null; // Default kosong
+                try {
+                        switch (dexType) {
+                            case 'kyberswap':
+                                amount_out = response.data.routeSummary.amountOut / Math.pow(10, des_output);
+                                FeeSwap =  parseFloat(response.data.routeSummary.gasUsd);
+                               // FeeSwap = ((response.data.routeSummary.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0))) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // Menggunakan getFromLocalStorage
+                                break;
+                            case 'kana':
+                                const chainName = DTChain.Nama_Chain.toLowerCase();
+                                const kanaChainId = KanaChainID[chainName];
+                                if (!kanaChainId) {
+                                    amount_out = response.priceRoute.destAmount / Math.pow(10, des_output);
+                                    FeeSwap = parseFloat(response.priceRoute.gasCostUSD);
+                                }else{
+                                    amount_out = response.data[0].finalAmountOut / Math.pow(10, des_output);
+                                    FeeSwap = (response.data[0].estimatedGas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0)) * parseFloat(getFromLocalStorage('PRICEGAS', 0));                                    
+                                }
+                                break;
+                            case 'odos':
+                            if (action === "TokentoPair") {
+                                    amount_out = response.outValues / PriceRate; 
+                                } else if (action === "PairtoToken") {
+                                    amount_out = parseFloat(response.outAmounts) / Math.pow(10, des_output);
+                                }                               
+                                FeeSwap = response.gasEstimateValue;
+                                break;
+                            case 'altodos':
+                                // if (action === "TokentoPair") {
+                                //     amount_out = parseFloat(response.odosResponse.outValues[0]) / PriceRate; 
+                                // } else if (action === "PairtoToken") {
+                                    amount_out = parseFloat(response.odosResponse.outValues[0]) / Math.pow(10, des_output);
+                                //}                               
+                                FeeSwap = response.odosResponse.gasEstimateValue;
+                                break;
+                            case 'paraswap':
+                                amount_out = response.priceRoute.destAmount / Math.pow(10, des_output);
+                                FeeSwap = parseFloat(response.priceRoute.gasCostUSD);
+                                break;
+                            case 'openocean':
+                                amount_out = response.data.outAmount / Math.pow(10, des_output);
+                                FeeSwap = parseFloat(response.data.estimatedGas);
+                                break;
+                            case '0x':
+                                // Konversi buyAmount ke satuan desimal (jumlah token yang diterima)
+                                amount_out = response.buyAmount / Math.pow(10, des_output);
+
+                                if (DTChain.Nama_Chain.toLowerCase() === 'solana') {
+                                    // Jika jaringan adalah Solana, fee berasal dari totalNetworkFee (dalam lamport)
+                                    let feeLamport = Number(response.totalNetworkFee || 0); // fallback jika null
+                                    FeeSwap =( feeLamport / 1e9)* parseFloat(getFromLocalStorage('PRICEGAS', 0)); // konversi lamport ke SOL
+                                   
+                                } else {
+                                    const gasUsed = parseFloat(response.gas); // contoh: 164208
+                                    const gasPriceGwei = parseFloat(response.gasPrice) / 1e9; // dari wei → gwei
+                                    const PRICEGAS = parseFloat(getFromLocalStorage('PRICEGAS', 0)); // harga ETH (USD)
+
+                                     FeeSwap = (gasUsed * gasPriceGwei) / 1e9 * PRICEGAS;
+                                   // FeeSwap = (response.gas / 1e9) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // hasil dalam native coin (ETH, BNB, dll.)
+                                }
+                                break;
+
+                            case 'alt0x':
+                                amount_out = response.buyAmount / Math.pow(10, des_output);
+                                FeeSwap = ((response.transaction.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('PRICEGAS', 0))) ; // Menggunakan getFromLocalStorage
+                                break;
+
+                            case '1inch':
+                                amount_out = parseFloat(response.dstAmount) / Math.pow(10, des_output);
+                                FeeSwap = ((response.gas / Math.pow(10, 9) * parseFloat(getFromLocalStorage('gasGWEI', 0)))) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // Menggunakan getFromLocalStorage
+                                break;
+                            case 'magpie':
+                                amount_out = parseFloat(response.amountOut) / Math.pow(10, des_output);
+                                FeeSwap = parseFloat(response.fees[0].value);
+                                break;    
+                            case 'okx':
+                                amount_out = response.data[0].toTokenAmount / Math.pow(10, des_output);
+                                FeeSwap = (response.data[0].estimateGasFee / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0)) * parseFloat(getFromLocalStorage('PRICEGAS', 0));            
+                                break;  
+                            case 'jupiter':
+                                var amount_out = response.outAmount / Math.pow(10, des_output);
+                                
+                                FeeSwap =0.1;
+                                break;
+
+                            default:
+                                throw new Error(`DEX type ${dexType} not supported.`);
+                        }
+                
+                        const result = {
+                            sc_input: sc_input,
+                            des_input: des_input,
+                            sc_output: sc_output,
+                            des_output: des_output,
+                            FeeSwap: FeeSwap,
+                            amount_out: amount_out,
+                            apiUrl: apiUrl,
+                        };
+                        callback(null, result);
+                    } catch (error) {
+                        callback({
+                            statusCode: 500,
+                            pesanDEX: `Error DEX : ${error.message}`,
+                            color: "#f39999",
+                            DEX: dexType.toUpperCase(),
+                        }, null);
+                    }
+            },
+            
+            error: function (xhr) {
+                var alertMessage = "Terjadi kesalahan";
+                var warna = "#f39999";
+                switch (xhr.status) {
+                    case 0:  
+                        if(dexType=='kyberswap' || dexType =='odos' ||  dexType == '0x'){
+                            alertMessage = "KENA LIMIT";
+                        }
+                            else{
+                            alertMessage = "NULL RESPONSE";
+                        }
+                        break;                        
+                    case 400:
+                        try { 
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            if (
+                                (errorResponse.description && errorResponse.description.toLowerCase().includes("insufficient liquidity")) || 
+                                (errorResponse.error && errorResponse.error.toLowerCase().includes("no routes found with enough liquidity"))
+                            ) {
+                                alertMessage = "NO LP (No Liquidity Provider)";
+                                warna = "#f39999";
+                            } else {
+                                alertMessage = errorResponse.detail || errorResponse.description || errorResponse.error || "KONEKSI BURUK";
+                            }
+                        } catch (e) {
+                            alertMessage = "KONEKSI LAMBAT"; // Jika parsing gagal
+                        }
+                    break;
+                    case 401:
+                        alertMessage = "API SALAH";
+                        break;
+                    case 403:
+                        alertMessage = "AKSES DIBLOK";
+                        warna = "#fff";
+                        break;
+                    case 404:
+                        alertMessage = "Permintaan tidak ditemukan";
+                        break ;
+                    case 429:
+                            warna = "#f39999";
+                            alertMessage = "AKSES KENA LIMIT";
+                        break;
+                    case 500:
+                        try {
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            if (errorResponse.msg && errorResponse.msg.toLowerCase().includes("too many requests")) {
+                                alertMessage = "AKSES KENA LIMIT (500 Too Many Requests)";
+                                warna = "#f39999";
+                            } else {
+                                alertMessage = errorResponse.detail || "GAGAL DAPATKAN DATA";
+                            }
+                        } catch (e) {
+                            alertMessage = "GAGAL DAPATKAN DATA";
+                        }
+                        break;
+                    case 503:
+                        alertMessage = "Layanan tidak tersedia";
+                        break;
+                    case 502:
+                        alertMessage = "Respons tidak valid";
+                        break;
+                    default:
+                        warna = "#f39999";
+                        alertMessage = "Status: " + xhr.status;
+                }
+                $(`#SWAP_${dexId}`).html(`<a href="${linkDEX}" title="${dexType.toUpperCase()}: ${alertMessage}" target="_blank" class="uk-text-danger"><i class="bi bi-x-circle"></i> ${dexType.toUpperCase()} </a>`);
+
+                callback({ 
+                    statusCode: xhr.status, 
+                    pesanDEX:`${dexType.toUpperCase()}: ${alertMessage}`,
+                    color: warna, 
+                    DEX: dexType.toUpperCase(),
+                    dexURL: linkDEX 
+                }, null);
+            }, 
+        });
+    }
+    
+    // Fungsi untuk mengecek harga pada SWOOP
+    function getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, PriceRate,  dexType, NameToken, NamePair, cex,action, callback) {
+        // Mengambil data setting dari localStorage
+        var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
+        var dexId = `${cex}_${dexType.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
+       // var amount_in = Math.pow(10, des_input) * amount_in;
+        var amount_in = BigInt(Math.round(Number(amount_in)));
+
+        var dexURL = generateDexLink(dexType, NameToken, sc_input, NamePair, sc_output);
+        
+        var payload = {
+            "chainId": DTChain.Kode_Chain,
+            "aggregatorSlug": dexType.toLowerCase(),
+            "sender": SavedSettingData.walletMeta,
+            "inToken": {
+                "chainId": DTChain.Kode_Chain,
+                "type": "TOKEN",
+                "address": sc_input.toLowerCase(),
+                "decimals": parseFloat(des_input)
+            },
+            "outToken": {
+                "chainId": DTChain.Kode_Chain,
+                "type": "TOKEN",
+                "address": sc_output.toLowerCase(),
+                "decimals": parseFloat(des_output)
+            },
+            "amountInWei": String(amount_in),
+            "slippageBps": "100",
+            "gasPriceGwei": Number(getFromLocalStorage('gasGWEI', 0)),
+        };
+    
+        $.ajax({
+            url:'https://bzvwrjfhuefn.up.railway.app/swap',
+
+           // url:'https://swoop-backend.up.railway.app/swap',
+           // url:'https://swoop-backend-2.up.railway.app/swap',
+
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(payload),
+            success: function (response) {
+                    var amount_out = parseFloat(response.amountOutWei) / Math.pow(10, des_output);
+                    var FeeSwap = ((parseFloat(getFromLocalStorage('gasGWEI')) * 250000) / Math.pow(10, 9))*parseFloat(getFromLocalStorage('PRICEGAS'));
+                    const result = {
+                            sc_input: sc_input,
+                            des_input: des_input,
+                            sc_output: sc_output,
+                            des_output: des_output,
+                            FeeSwap: FeeSwap,
+                            dex: dexType,
+                            amount_out: amount_out,
+                        };
+                        callback(null, result);
+                    },
+            error: function (xhr) {
+                var alertMessage = "Terjadi kesalahan";
+                var warna = "#f39999";
+            
+                switch (xhr.status) {
+                    case 0:
+                        alertMessage = "NO RESPONSE";
+                        break;
+                    case 400:
+                        try {
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            alertMessage = errorResponse.detail || errorResponse.description || "KONEKSI BURUK";
+                        } catch (e) {
+                            alertMessage = "KONEKSI LAMBAT"; // Jika parsing gagal
+                        }
+                        break;
+                    case 403:
+                        alertMessage = "AKSES DIBLOK";
+                        break;
+                    case 404:
+                        alertMessage = "Permintaan tidak ditemukan";
+                        break;
+                    case 429:
+                       alertMessage = "AKSES KENA LIMIT";
+                        break;
+                    case 500:
+                        try {
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            alertMessage = errorResponse.message || "GAGAL DAPATKAN DATA";
+                        } catch (e) {
+                            alertMessage = "GAGAL DAPATKAN DATA"; // Jika parsing gagal
+                        }
+                        break;
+                    case 503:
+                        alertMessage = "Layanan tidak tersedia";
+                        break;
+                    case 502:
+                        alertMessage = "Respons tidak valid";
+                        break;
+                    default:
+                        warna = "#f39999";
+                        alertMessage = "Status: " + xhr.status;
+                }
+
+//                $(`#SWAP_${dexId}`).html(`<a href="${dexURL}" title="${dexType.toUpperCase()}: ${alertMessage}" target="_blank" class="uk-text-danger"><i class="bi bi-x-circle"></i> ${dexType.toUpperCase()} </a>`);
+
+                // Kirim callback untuk penanganan lebih lanjut
+                callback({ 
+                    statusCode: xhr.status, 
+                    pesanDEX: "SWOOP: "+alertMessage, 
+                    color: warna, 
+                    DEX: dexType.toUpperCase(), 
+                    dexURL: dexURL 
+                }, null);
+            }
+            
+        });
+    }
+
+    // Fungsi untuk mengecek harga pada RANGO
+    function getPriceRANGO(sc_input, des_input, sc_output, des_output, amount_in, PriceRate,dexType, NameToken,  NamePair, cex,action, callback) {
+        var dexId = `${cex}_${dexType.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
+      //  var amount_in = Number(amount_in) / Math.pow(10, 18);
+
+        let transformedChain = 
+            DTChain.Nama_Chain.toUpperCase() === "ETHEREUM" ? "ETH" : 
+            DTChain.Nama_Chain.toUpperCase() === "AVAX" ? "AVAX_CCHAIN" : 
+            DTChain.Nama_Chain.toUpperCase();
+            
+        var dexLinks = generateDexLink(dexType, NameToken, sc_input, NamePair, sc_output);
+
+        const NetworkChain = (DTChain.Nama_Chain || "").toUpperCase() === "ETHEREUM"
+            ? "ETH"
+            : (DTChain.Nama_Chain || "").toUpperCase() === "AVAX"
+                ? "AVAX_CCHAIN"
+                : DTChain.Nama_Chain.toUpperCase();
+
+        const swappersMap = {
+          //  kyberswap: ["KyberSwapV3"],
+          //  kana: ["kana"],
+            odos: ["Odos"],
+         //   okx: ["Okc Swap"],
+         //   "1inch": ["1Inch"],
+        };
+        const swapperGroups = swappersMap[dexType] || [];
+        const apiKeysRango = [
+            "a24ca428-a18e-4e84-b57f-edb3e2a5bf13", // rubic
+            "c6381a79-2817-4602-83bf-6a641a409e32", // umum
+           // "4a624ab5-16ff-4f96-90b7-ab00ddfc342c" //baru
+        ];
+
+        // Fungsi untuk mendapatkan API Key secara acak
+        function getRandomApiKeyRango() {
+            const randomIndex = Math.floor(Math.random() * apiKeysRango.length);
+            return apiKeysRango[randomIndex];
+        }
+//https://api-edge.rango.exchange/routing/bests?apiKey=4a624ab5-16ff-4f96-90b7-ab00ddfc342c
+
+        // Variabel untuk API Key
+        const apiRango = getRandomApiKeyRango();
+        const apiUrl = `https://api.rango.exchange/routing/bests?apiKey=${apiRango}`;
+
+        const requestData = {
+            from: {
+                blockchain: NetworkChain,
+                symbol: NameToken.toUpperCase(),
+                address: sc_input,
+            },
+            to: {
+                blockchain: NetworkChain,
+                symbol: NamePair.toUpperCase(),
+                address: sc_output,
+            },
+            amount: amount_in.toString(),
+            swappersExclude: false,
+            swapperGroups: swapperGroups,
+        };
+
+        $.ajax({
+            url: apiUrl,
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(requestData),
+            success: function (response, xhr) {
+                if (response.results && Array.isArray(response.results) && response.results.length > 0) {
+                const firstResult = response.results[0];
+                const amount_out = parseFloat(firstResult.outputAmount); // Jumlah output
+                let FeeSwap = 0;
+            
+                // Proses fee jika data swap tersedia
+                if (firstResult.swaps && firstResult.swaps.length > 0) {
+                    const swap = firstResult.swaps[0]; // Ambil swap pertama
+                    swapperId = swap.swapperId;        // Ambil swapperId
+                    toAmount = parseFloat(swap.toAmount); // Ambil toAmount
+            
+                    const feeArray = swap.fee; // Array fee
+                    // Cari Network Fee
+                    const networkFee = feeArray.find(fee => fee.name === "Network Fee");
+                    if (networkFee) {
+                        FeeSwap = parseFloat(networkFee.amount) * parseFloat(networkFee.price); // Hitung Fee Swap
+                    }
+                }              
+
+                const result = {
+                    sc_input:sc_input,
+                    des_input:des_input,
+                    sc_output:sc_output,
+                    des_output:des_output,
+                    FeeSwap: FeeSwap,
+                    amount_out: amount_out,
+                };
+                callback(null, result);
+            }
+
+            },                
+            
+            error: function (xhr) {
+                let alertMessage = "Kesalahan tidak diketahui";
+                let warna = "#f39999";
+            
+                // Jika ada responseJSON dan memiliki key description, gunakan pesan ini
+                if (xhr.responseJSON && xhr.responseJSON.description) {
+                    alertMessage = xhr.responseJSON.description;
+                } else {
+                    // Fallback ke switch berdasarkan status HTTP jika tidak ada description
+                    switch (xhr.status) {
+                        case 0: 
+                            alertMessage = "SERING SCAN"; 
+                            break;
+                        case 400: 
+                            alertMessage = "KONEKSI BURUK"; 
+                            break;
+                        case 403: 
+                            alertMessage = "AKSES DIBLOK"; 
+                            break;
+                        case 404: 
+                            alertMessage = "Permintaan tidak ditemukan"; 
+                            break;
+                        case 429:
+                            alertMessage = "KENA LIMIT";
+                            break;
+                        case 500: 
+                            alertMessage = xhr.responseJSONmessage || "GAGAL DAPATKAN DATA"; 
+                            break;
+                        case 503: 
+                            alertMessage = "Layanan tidak tersedia"; 
+                            break;
+                        default: 
+                           warna = "#f39999";
+                            alertMessage = `Status: ${xhr.status}`;
+                    }
+                }
+
+                // Kirim callback untuk menangani error lebih lanjut
+                callback({ 
+                    statusCode: xhr.status, 
+                    pesanDEX: "RANGO: "+alertMessage, 
+                    color: warna, 
+                    DEX: dexType.toUpperCase() 
+                }, null);
+            }
+            
+        });        
+    }
+    
+
