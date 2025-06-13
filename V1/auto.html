@@ -1499,7 +1499,7 @@
                                 if ($(`#${IdTokentoPair}`).length && $('input[type="checkbox"][value="Actionkiri"]').is(':checked')) {
                                      if (dextype === "lifi") {
                                        // toastr.info(`${TokenPair} ${dextype} RANGO RUNNING`);
-                                        var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in_token));
+                                       var amount_in = Math.pow(10, des_input) * amount_in_token;
                                          getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
                                             if (!altError) {
                                                 $(`#${IdTokentoPair}`).css('background-color', '#fbfefe');
@@ -1522,7 +1522,7 @@
                                                  //    ||  (error.statusCode == 429 && dextype == "okx")){
 
                                                    // toastr.info(`${TokenPair} ${dextype} PINDAH SERVER`);
-                                                    var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in_token));
+                                                    var amount_in = Math.pow(10, des_input) * amount_in_token;
                                                     getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
                                                         if (!altError) {
                                                             $(`#${IdTokentoPair}`).css('background-color', '#ded5d5');
@@ -1585,7 +1585,7 @@
                                 if ($(`#${IdPairtoToken}`).length && $('input[type="checkbox"][value="ActionKanan"]').is(':checked')) {
                                     if (dextype === "lifi") {
                                        // toastr.info(`${TokenPair} ${dextype} RANGO RUNNING`);
-                                        var amount_in = BigInt(Math.round(Math.pow(10, des_output) * amount_in_pair));
+                                        var amount_in = Math.pow(10, des_output) * amount_in_pair;
                                             getPriceSWOOP( sc_output, des_output,sc_input, des_input, amount_in, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
                                                 if (!altError) {
                                                     $(`#${IdPairtoToken}`).css('background-color', '#fbfefe');
@@ -1607,7 +1607,7 @@
                                                 
                                                     if ((error.statusCode == 0 && (dextype == "kyberswap"))) {
                                                     // toastr.info(`${PairToken} ${dextype} PINDAH SERVER`);
-                                                        var amount_in = BigInt(Math.round(Math.pow(10, des_output) * amount_in_pair));
+                                                        var amount_in = Math.pow(10, des_output) * amount_in_pair;
                                                         getPriceSWOOP( sc_output, des_output,sc_input, des_input, amount_in, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
                                                             if (!altError) {
                                                                 $(`#${IdPairtoToken}`).css('background-color', '#ded5d5');
@@ -2021,7 +2021,7 @@
 
             //https://app.rubic.exchange/?fromChain=ETH&toChain=ETH&from=VIB&to=ETH
             const linkOKDEX = createLink(`https://www.okx.com/web3/dex-swap?inputChain=${DTChain.Kode_Chain}&inputCurrency=${data.sc_in}&outputChain=501&outputCurrency=${data.sc_out}`, '#OK', 'uk-text-secondary');
-            const linkUNIDEX = createLink(`https://app.unidex.exchange/?chain=${DTChain.Nama_Chain}&from=${data.sc_in}&to=${data.sc_out}`, '#UN', 'uk-text-danger');
+            const linkUNIDEX = createLink(`https://app.unidex.exchange/?chain=${DTChain.Nama_Chain}&from=${data.sc_in}&to=${data.sc_out}`, '#UN', 'uk-text-warning');
             const linkRango = createLink(`https://app.rango.exchange/bridge?fromBlockchain=${chainName}&toBlockchain=${chainName}&fromToken=${data.symbol_in}--${data.sc_in}&toToken=${data.symbol_out}--${data.sc_out}`, '#RNGX', 'uk-text-success');
             const linkRBX = createLink(`https://app.rubic.exchange/?fromChain=${chainName}&toChain=${chainName}&from=${data.sc_in}&to=${data.sc_out}`, '#RBCX', 'uk-text-warning');
             const linkDEFIL = createLink(`https://swap.defillama.com/?chain=${DTChain.Nama_Chain}&from=${data.sc_in}&to=${data.sc_out}`, '#DF', 'uk-text-primary');
@@ -2029,6 +2029,7 @@
             const FINCH = createLink(`https://app.1inch.io/swap?src=${DTChain.Kode_Chain}:${data.symbol_in}&dst=${DTChain.Kode_Chain}:${data.symbol_out}`, '#1INCH', 'uk-text-warning');
             const linkRelay = createLink(`https://relay.link/bridge/${chainName2}?fromChainId=${DTChain.Kode_Chain}&fromCurrency=${data.sc_in}&toCurrency=${data.sc_out}`, '#RX', 'uk-text-warning');
             const linkLiFi = createLink(`https://jumper.exchange/?fromChain=${DTChain.Kode_Chain}&fromToken=${data.sc_in}&toChain=${DTChain.Kode_Chain}&toToken==${data.sc_out}`, '#LF', 'uk-text-warning');
+            const Link1INCH = createLink(`https://app.1inch.io/advanced/swap?network=${DTChain.Kode_Chain}&src=${data.sc_in.toUpperCase()}&dst=${data.sc_out.toUpperCase()}`, '#1NC', 'uk-text-danger');
 
             let row = document.createElement('tr');
             row.dataset.index = index;
@@ -2070,7 +2071,7 @@
                 <a href="${DTChain.URL_Chain}/token/${data.sc_in}" target="_blank" class="uk-link">[SC]</a>: ${linkStokToken}<br>    
                 <span class="uk-text-primary uk-text-bolder">${data.symbol_out}</span> 
                 <a href="${DTChain.URL_Chain}/token/${data.sc_out}" target="_blank" class="uk-link">[SC]</a>: ${linkStokPair}<br>                   
-               ${linkUNIDEX} ${linkOKDEX} ${linkDEFIL} ${linkLiFi} 
+               ${linkUNIDEX} ${linkOKDEX} ${linkDEFIL} ${Link1INCH} 
             `;
 
             row.appendChild(detailTd);
