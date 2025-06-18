@@ -838,4 +838,210 @@
         });        
     }
     
+    function getPriceRUBIC(sc_input, des_input, sc_output, des_output, amount_in, PriceRate, dexType, NameToken, NamePair, cex, action, callback) {
+        const namaChain = (DTChain.Nama_Chain || "").toUpperCase();
+        const NetworkChain = namaChain === "ETHEREUM" ? "ETH" :
+                            namaChain === "AVAX" ? "AVAX_CCHAIN" :
+                            namaChain || null;
 
+        // Validasi input penting
+        if (!NetworkChain || !sc_input || !sc_output || !amount_in || !des_input) {
+            return callback({
+                statusCode: 400,
+                pesanDEX: "DATA INPUT TIDAK LENGKAP / SALAH",
+                color: "#f39999",
+                DEX: dexType.toUpperCase()
+            }, null);
+        }
+
+        // Konversi amount ke satuan desimal token (misal 18)
+        const adjustedAmountIn = (parseFloat(amount_in) / Math.pow(10, des_input)).toString();
+
+        const requestData = {
+            dstTokenAddress: sc_output,
+            dstTokenBlockchain: NetworkChain,
+            srcTokenAddress: sc_input,
+            srcTokenBlockchain: NetworkChain,
+            srcTokenAmount: adjustedAmountIn,
+            referrer: "rubic.exchange"
+        };
+
+        const rubicURL = "https://api-v2.rubic.exchange/api/routes/quoteBest";
+
+        $.ajax({
+            url: rubicURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(requestData),
+            success: function (response) {
+                if (response && response.estimate) {
+                    const amount_out = parseFloat(response.estimate.destinationTokenAmount);
+                    const FeeSwap = parseFloat(response.fees?.gasTokenFees?.protocol?.fixedUsdAmount || 0);
+
+                    const result = {
+                        sc_input: sc_input,
+                        des_input: des_input,
+                        sc_output: sc_output,
+                        des_output: des_output,
+                        FeeSwap: FeeSwap,
+                        amount_out: amount_out,
+                    };
+                    callback(null, result);
+                } else {
+                    callback({
+                        statusCode: 204,
+                        pesanDEX: "RESPON RUBIC TIDAK VALID",
+                        color: "#ba1313",
+                        DEX: dexType.toUpperCase()
+                    }, null);
+                }
+            },
+            error: function (xhr) {
+                let alertMessage = "Kesalahan tidak diketahui";
+                let warna = "#ba1313";
+
+                if (xhr.responseJSON && xhr.responseJSON.errors && xhr.responseJSON.errors.length > 0) {
+                    alertMessage = xhr.responseJSON.errors.map(e => e.reason).join("; ");
+                } else {
+                    switch (xhr.status) {
+                        case 0: alertMessage = "KONEKSI GAGAL"; break;
+                        case 400: alertMessage = "BAD REQUEST"; break;
+                        case 403: alertMessage = "DIBLOK RUBIC"; break;
+                        case 404: alertMessage = "TIDAK DITEMUKAN"; break;
+                        case 429: alertMessage = "RATE LIMIT"; break;
+                        case 500: alertMessage = "SERVER RUBIC ERROR"; break;
+                        default: alertMessage = `Status: ${xhr.status}`;
+                    }
+                }
+
+                callback({
+                    statusCode: xhr.status,
+                    pesanDEX: "RUBIC: " + xhr.reason,
+                    color: warna,
+                    DEX: dexType.toUpperCase()
+                }, null);
+            }
+        });
+    }
+
+    function ResultEksekusi(amount_out, FeeSwap, sc_input, sc_output, cex, Modal, amount_in, priceBuyToken_CEX, priceSellToken_CEX, priceBuyPair_CEX, priceSellPair_CEX, Name_in, Name_out, feeWD, dextype, trx, vol) {
+            var NameX = Name_in + "_" + Name_out;
+            var FeeWD = parseFloat(feeWD);
+            var FeeTrade = parseFloat(0.0014 * Modal);
+    
+            FeeSwap = parseFloat(FeeSwap);    
+            Modal = parseFloat(Modal);
+            amount_in = parseFloat(amount_in);
+            amount_out = parseFloat(amount_out);
+            priceBuyToken_CEX = parseFloat(priceBuyToken_CEX);
+            priceSellPair_CEX = parseFloat(priceSellPair_CEX);
+
+            // Hitung harga rata-rata swap
+            var rateSellTokenDEX = (amount_out * priceSellPair_CEX) / amount_in;
+            var rateBuyPairDEX = (amount_in * priceBuyToken_CEX) / amount_out;
+            var rateTokentoPair = amount_out / amount_in;
+
+            // Hitung total nilai
+            var totalModal = Modal + FeeSwap + FeeWD + FeeTrade;
+            var totalFee = FeeSwap + FeeWD + FeeTrade;
+            // Hitung nilai output dalam USDT
+            var valueOutInUSDT = amount_out * priceSellPair_CEX; // Output DEX dalam USD via CEX
+            var valueInInUSDT = amount_out * priceBuyToken_CEX; // Input DEX dalam USD via CEX
+            
+            // let totalValue = 0;
+            // if (trx === "TokentoPair") {
+            //     totalValue = valueOutInUSDT; // Untuk transaksi TokentoPair
+            // } else if (trx === "PairtoToken") {
+            //     totalValue = amount_out*priceSellToken_CEX; // Untuk transaksi PairtoToken
+            // }
+            var totalValue = amount_out * priceSellPair_CEX; // Nilai akhir (USDT)
+//            console.warn("TOTAL VALUE",totalValue)
+            // console.log("TOKEN BUY:",priceBuyToken_CEX);
+            // console.log("TOKEN SELL:",priceSellToken_CEX);
+
+            // console.log("PAIR BUY:",priceBuyPair_CEX);
+            // console.log("PAIR SELL:",priceSellPair_CEX);
+            
+            var profitLoss = totalValue - totalModal;
+            var profitLossPercent = totalModal !== 0 ? (profitLoss / totalModal) * 100 : 0;
+
+            var filterPNLValue = parseFloat(SavedSettingData.filterPNL);
+            var conlusion = "NO SELISIH";
+            var selisih = false;
+
+            if (filterPNLValue === 0) {
+                if (totalValue > totalModal + totalFee) {
+                    conlusion = "GET SIGNAL";
+                    selisih = true;
+                }
+            } else {
+                if ((totalValue - totalModal) > filterPNLValue) {
+                    conlusion = "GET SIGNAL";
+                    selisih = true;
+                }
+            }
+         
+
+            let IdCELL = `${cex.toUpperCase()}_${dextype.toUpperCase()}_${NameX}_${(DTChain.Nama_Chain).toUpperCase()}`;
+            var linkDEX = generateDexLink(dextype.toLowerCase(), Name_in, sc_input, Name_out, sc_output);
+
+            if (!linkDEX) {
+                console.error(`DEX Type "${dexType}" tidak valid atau belum didukung.`);
+                return;
+            }
+
+            // Ambil rate IDR dari localStorage
+            const rateUSDTtoIDR = getFromLocalStorage("PriceRateUSDT", 0);
+            const toIDR = usdt => rateUSDTtoIDR ? (usdt * rateUSDTtoIDR).toLocaleString("id-ID", {
+                style: "currency",
+                currency: "IDR"
+            }) : "N/A";
+
+            let titleInfo = `${dextype.toUpperCase()}: `;
+            let RateSwap = "";
+
+            if (stablecoins.includes(Name_in)) {
+                titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateBuyPairDEX)}`;
+                titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
+                RateSwap = `<label class="uk-text-success" title="${titleInfo}">${formatPrice(rateBuyPairDEX)}</label>`;
+            } else if (stablecoins.includes(Name_out)) {
+                titleInfo += ` (${Name_in}->${Name_out}) : ${formatPrice(rateTokentoPair)}`;
+                titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
+                RateSwap = `<label class="uk-text-danger" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
+            } else {
+                // if (trx === "TokentoPair") {
+                //      // Selain itu, ambil rate dari TOKEN (symbol_in)
+                //     titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateSellTokenDEX)}`;
+                //     titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
+                //     RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;                   
+                // } else {
+                //     // Khusus USDT saat PairtoToken → ambil rate dari PAIR (symbol_out)
+                //     titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateBuyPairDEX)}`;
+                //     titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
+                //     RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
+                // }
+
+                 if (trx === "TokentoPair") {
+                     // Selain itu, ambil rate dari TOKEN (symbol_in)
+                    titleInfo += ` ${formatPrice(rateTokentoPair)} ${Name_in}/${Name_out}`;
+                    titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
+                    RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateSellTokenDEX)}</label>`;                   
+                } else {
+                    // Khusus USDT saat PairtoToken → ambil rate dari PAIR (symbol_out)
+                    titleInfo += ` ${formatPrice(rateBuyPairDEX/priceBuyToken_CEX)} ${Name_in}/${Name_out}`;
+                    titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
+                    RateSwap = `<label class="uk-text-primary" title="B:${titleInfo}">${formatPrice(rateBuyPairDEX)}</label>`;
+                }
+                
+
+            }
+
+        if ($(`#SWAP_${IdCELL}`).length > 0) {
+            $(`#SWAP_${IdCELL}`).html(`<a href="${linkDEX}" target="_blank">${RateSwap}</a>`);
+        }
+
+        // Menampilkan PNL
+        // Panggil fungsi tampilan hasil
+       // console.log(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent); 
+        DisplayPNL(profitLoss, cex, Name_in, NameX, totalFee, Modal, dextype, priceBuyToken_CEX, rateSellTokenDEX, FeeSwap, FeeWD, sc_input, sc_output, Name_out, totalValue, totalModal, conlusion, selisih, trx, profitLossPercent,vol);
+    }
