@@ -510,7 +510,7 @@
                 var symbol1 = $("#random1symbol").val().toUpperCase().trim();
                 if (symbol1) {
                     // Jika simbol token custom ada, coba untuk mengambil harga terbaru
-                    $.getJSON("https://www.binance.me/api/v3/ticker/price?symbol=" + symbol1 + "USDT")
+                    $.getJSON("https://api-gcp.binance.com/api/v3/ticker/price?symbol=" + symbol1 + "USDT")
                         .done(function(response) {
                             // Memperbarui harga custom token
                             ratePrice.random1 = parseFloat(response.price);
@@ -528,9 +528,46 @@
             });
 
             // Fetch initial rates
+            function fetchRatesx() {
+                const binanceURL = encodeURIComponent('https://www.binance.com/api/v3/ticker/price?symbols=["BTCUSDT","ETHUSDT","BNBUSDT","POLUSDT","AVAXUSDT","SOLUSDT"]');
+                const indodaxURL = encodeURIComponent('https://indodax.com/api/ticker/usdtidr');
+
+                $.when(
+                    $.ajax({
+                        url: `https://api.allorigins.win/get?url=${binanceURL}`,
+                        method: 'GET',
+                        dataType: 'json'
+                    }),
+                    $.ajax({
+                        url: `https://api.allorigins.win/get?url=${indodaxURL}`,
+                        method: 'GET',
+                        dataType: 'json'
+                    })
+                ).done(function (binanceResponse, indodaxResponse) {
+                    const binanceData = JSON.parse(binanceResponse.contents);
+                    const indodaxData = JSON.parse(indodaxResponse.contents);
+
+                    binanceData.forEach((res) => {
+                        switch (res.symbol) {
+                            case "BTCUSDT": ratePrice.btc = parseFloat(res.price); break;
+                            case "ETHUSDT": ratePrice.eth = parseFloat(res.price); break;
+                            case "BNBUSDT": ratePrice.bnb = parseFloat(res.price); break;
+                            case "POLUSDT": ratePrice.pol = parseFloat(res.price); break;
+                            case "AVAXUSDT": ratePrice.avax = parseFloat(res.price); break;
+                            case "SOLUSDT": ratePrice.sol = parseFloat(res.price); break;
+                        }
+                    });
+
+                    ratePrice.idr = parseFloat(indodaxData.ticker.last);
+                    console.log('✅ ratePrice:', ratePrice);
+                }).fail(function (error) {
+                    console.warn('❌ Failed to fetch rates:', error);
+                });
+            }
+
             function fetchRates() {
                 $.when(
-                    $.getJSON("https://www.binance.me/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22]"),
+                    $.getJSON("https://api-gcp.binance.com/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22,%22POLUSDT%22,%22AVAXUSDT%22,%22SOLUSDT%22]"),
                     $.getJSON("https://indodax.com/api/ticker/USDTIDR")
                 ).done(function (binanceResponse, indodaxResponse) {
                     binanceResponse[0].forEach((res) => {
@@ -538,6 +575,9 @@
                             case "BTCUSDT": ratePrice.btc = parseFloat(res.price); break;
                             case "ETHUSDT": ratePrice.eth = parseFloat(res.price); break;
                             case "BNBUSDT": ratePrice.bnb = parseFloat(res.price); break;
+                            case "POLUSDT": ratePrice.pol = parseFloat(res.price); break;
+                            case "AVAXUSDT": ratePrice.avax = parseFloat(res.price); break;
+                            case "SOLUSDT": ratePrice.sol = parseFloat(res.price); break;
                         }
                     });
                     ratePrice.idr = parseFloat(indodaxResponse[0].ticker.last);
@@ -555,7 +595,7 @@
                     return;
                 }
 
-                $.getJSON("https://www.binance.me/api/v3/ticker/price?symbol=" + symbol1 + "USDT")
+                $.getJSON("https://api-gcp.binance.com/api/v3/ticker/price?symbol=" + symbol1 + "USDT")
                     .done(function (response) {
                         ratePrice.random1 = parseFloat(response.price);
                         $("#random1price").prop("disabled", false).val(ratePrice.random1.toFixed(8));
@@ -1895,7 +1935,7 @@
         async function fetchTokenRates() {
             try {
                 // Melakukan fetch data dari API
-                const response = await fetch("https://www.binance.me/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22,%22POLUSDT%22,%22AVAXUSDT%22,%22SOLUSDT%22]");
+                const response = await fetch("https://api-gcp.binance.com/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22,%22POLUSDT%22,%22AVAXUSDT%22,%22SOLUSDT%22]");
                 
                 // Mengecek apakah respons valid
                 if (!response.ok) {
