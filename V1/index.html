@@ -825,89 +825,89 @@
         });
     });
 
-$(document).on('click', `[id^="SelMulti-"]`, function () {
-    const index = $(this).data('index');
-    const item = filteredTokens[index];
-    console.log(Nama_Chain,item);
-    if (!item) {
-        console.warn("Data tidak ditemukan di filteredTokens", index);
-        return;
-    }
+    $(document).on('click', `[id^="SelMulti-"]`, function () {
+        const index = $(this).data('index');
+        const item = filteredTokens[index];
+        console.log(Nama_Chain,item);
+        if (!item) {
+            console.warn("Data tidak ditemukan di filteredTokens", index);
+            return;
+        }
 
-    // Ambil data yang sudah disimpan
-    let tokens = JSON.parse(localStorage.getItem('TOKEN_MULTI') || '[]');
-    if (!Array.isArray(tokens)) tokens = [];
+        // Ambil data yang sudah disimpan
+        let tokens = JSON.parse(localStorage.getItem('TOKEN_MULTI') || '[]');
+        if (!Array.isArray(tokens)) tokens = [];
 
-    // Format chain (untuk validasi dan penyimpanan)
-    const rawChain = (Nama_Chain || "bsc").toLowerCase();
-    const chainFormatted = rawChain === "bsc"
-        ? "BSC"
-        : rawChain.charAt(0).toUpperCase() + rawChain.slice(1);
+        // Format chain (untuk validasi dan penyimpanan)
+        const rawChain = (Nama_Chain || "bsc").toLowerCase();
+        const chainFormatted = rawChain === "bsc"
+            ? "BSC"
+            : rawChain.charAt(0).toUpperCase() + rawChain.slice(1);
 
-    // ✅ Duplikat dicek SEBELUM input
-    const isExist = tokens.some(t =>
-        t.symbol === item.symbol_in &&
-        t.pairSymbol === item.symbol_out &&
-        (t.chain || '').toLowerCase() === rawChain
-    );
-    if (isExist) {
-        toastr.error("Token sudah pernah ditambahkan sebelumnya.", "❌ Duplikat");
-        return;
-    }
+        // ✅ Duplikat dicek SEBELUM input
+        const isExist = tokens.some(t =>
+            t.symbol === item.symbol_in &&
+            t.pairSymbol === item.symbol_out &&
+            (t.chain || '').toLowerCase() === rawChain
+        );
+        if (isExist) {
+            toastr.error("Token sudah pernah ditambahkan sebelumnya.", "❌ Duplikat");
+            return;
+        }
 
-    // ✅ Prompt input user
-    const modalCex = prompt(`Masukkan Modal CEX to DEX untuk ${item.symbol_in}`, "100");
-    if (modalCex === null) return;
+        // ✅ Prompt input user
+        const modalCex = prompt(`Masukkan Modal CEX to DEX untuk ${item.symbol_in}`, "100");
+        if (modalCex === null) return;
 
-    const modalDex = prompt(`Masukkan Modal DEX to CEX untuk ${item.symbol_in}`, "100");
-    if (modalDex === null) return;
+        const modalDex = prompt(`Masukkan Modal DEX to CEX untuk ${item.symbol_in}`, "100");
+        if (modalDex === null) return;
 
-    const cexInput = prompt(`Pilih CEX (pisahkan koma)\nContoh: Binance, Gateio`, "Binance, MEXC, Gateio");
-    if (cexInput === null) return;
+        const cexInput = prompt(`Pilih CEX (pisahkan koma)\nContoh: Binance, Gateio`, "Binance, MEXC, Gateio, INDODAX");
+        if (cexInput === null) return;
 
-    const dexInput = prompt(`Pilih DEX (pisahkan koma)\nContoh: KyberSwap, Magpie`, "KyberSwap, Matcha, OKXDEX, ODOS, ParaSwap, Magpie");
-    if (dexInput === null) return;
+        const dexInput = prompt(`Pilih DEX (pisahkan koma)\nContoh: KyberSwap, Magpie`, "KyberSwap, Matcha, OKXDEX, ODOS, ParaSwap, Magpie");
+        if (dexInput === null) return;
 
-    const modalCexToDex = Number(modalCex.trim());
-    const modalDexToCex = Number(modalDex.trim());
+        const modalCexToDex = Number(modalCex.trim());
+        const modalDexToCex = Number(modalDex.trim());
 
-    if (isNaN(modalCexToDex) || isNaN(modalDexToCex)) {
-        toastr.error("Modal harus berupa angka", "❌ Input Salah");
-        return;
-    }
+        if (isNaN(modalCexToDex) || isNaN(modalDexToCex)) {
+            toastr.error("Modal harus berupa angka", "❌ Input Salah");
+            return;
+        }
 
-    const selectedCexs = cexInput.split(',').map(c => c.trim()).filter(Boolean);
-    const selectedDexs = dexInput.split(',').map(d => d.trim()).filter(Boolean);
+        const selectedCexs = cexInput.split(',').map(c => c.trim()).filter(Boolean);
+        const selectedDexs = dexInput.split(',').map(d => d.trim()).filter(Boolean);
 
-    if (selectedCexs.length === 0 || selectedDexs.length === 0) {
-        toastr.warning("CEX dan DEX tidak boleh kosong", "❗ Input Kurang");
-        return;
-    }
+        if (selectedCexs.length === 0 || selectedDexs.length === 0) {
+            toastr.warning("CEX dan DEX tidak boleh kosong", "❗ Input Kurang");
+            return;
+        }
 
-    const tokenData = {
-        id: Date.now().toString(),
-        symbol: item.symbol_in,
-        pairSymbol: item.symbol_out,
-        contractAddress: item.sc_in || '', // pastikan key benar
-        pairContractAddress: item.sc_out || '',
-        decimals: item.decimals_in || 18,
-        pairDecimals: item.decimals_out || 18,
-        chain: chainFormatted,
-        modalCexToDex,
-        modalDexToCex,
-        isActive: true,
-        selectedCexs,
-        selectedDexs
-    };
+        const tokenData = {
+            id: Date.now().toString(),
+            symbol: item.symbol_in,
+            pairSymbol: item.symbol_out,
+            contractAddress: item.sc_in || '', // pastikan key benar
+            pairContractAddress: item.sc_out || '',
+            decimals: item.decimals_in || 18,
+            pairDecimals: item.decimals_out || 18,
+            chain: chainFormatted,
+            modalCexToDex,
+            modalDexToCex,
+            isActive: true,
+            selectedCexs,
+            selectedDexs
+        };
 
-    tokens.push(tokenData);
-    localStorage.setItem('TOKEN_MULTI', JSON.stringify(tokens));
+        tokens.push(tokenData);
+        localStorage.setItem('TOKEN_MULTI', JSON.stringify(tokens));
 
-    toastr.success(`✔️ Simpan ${tokenData.symbol} VS ${tokenData.pairSymbol} di Chain ${tokenData.chain}`, "✅ Tersimpan", {
-        timeOut: 4000,
-        closeButton: true
+        toastr.success(`✔️ Simpan ${tokenData.symbol} VS ${tokenData.pairSymbol} di Chain ${tokenData.chain}`, "✅ Tersimpan", {
+            timeOut: 4000,
+            closeButton: true
+        });
     });
-});
 
     // Mapping konfigurasi untuk setiap exchange
     const exchangeConfig = {
@@ -1519,7 +1519,7 @@ $(document).on('click', `[id^="SelMulti-"]`, function () {
 
                 let TokenPair = `${symbolIn}_${symbolOut}`;
                 let PairToken = `${symbolOut}_${symbolIn}`;
-
+                /*
                 await new Promise((resolve, reject) => {
                     let timeout = setTimeout(() => reject("Timeout"), speedScan);
                     //console.log("Detail TOKEN PAIR",token);
@@ -1843,6 +1843,293 @@ $(document).on('click', `[id^="SelMulti-"]`, function () {
                                                         }
                                                 });
                                             }
+                                            return;
+                                        } 
+                                        else {
+                                         
+                                            //$(`#${IdPairtoToken}`).css('background-color', "#faf6f6");
+                                                $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
+                                                $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
+                                                ResultEksekusi(DataDEX.amount_out,DataDEX.FeeSwap,sc_output, sc_input, cex, modalKanan, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken',sellVolPair);
+                                           }
+                                        
+                                    });
+                                    }
+                                }
+                                
+                            });
+
+                            resolve();
+                        }
+                    });
+                });
+                */
+                 await new Promise((resolve, reject) => {
+                    let timeout = setTimeout(() => reject("Timeout"), speedScan);
+                    //console.log("Detail TOKEN PAIR",token);
+                    getPriceCEX(token, token.symbol_in, token.symbol_out, token.cex, (error, DataCEX) => {
+                       // console.log(DataCEX);
+
+                        clearTimeout(timeout);
+                        
+                        if (error || !DataCEX) {
+                            console.error("Error data from CEX:", error || "Data tidak valid");
+                            toastr.error(`Cek ulang harga ${token.symbol_in}/${token.symbol_out} di ${token.cex}`);
+                            resolve(); // lanjut ke token berikutnya
+                            $('#' + token.cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
+                            return; // ⛔ Hentikan eksekusi agar tidak akses null
+                        }
+
+                        let isInvalid = false;
+                        let priceBuyTokenCEX = DataCEX.volumes_buyToken?.[0]?.price || 0;
+                        let priceSellTokenCEX = DataCEX.volumes_sellToken?.[0]?.price || 0;
+                        let priceBuyPairCEX = DataCEX.volumes_buyPair?.[0]?.price || 0;
+                        let priceSellPairCEX = DataCEX.volumes_sellPair?.[0]?.price || 0;
+
+                        // Validasi harga
+                        if (!isFinite(priceBuyTokenCEX) || priceBuyTokenCEX <= 0) {
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_in} pada ${token.cex}`);
+                            isInvalid = true;
+                        }
+                        if (!isFinite(priceSellTokenCEX) || priceSellTokenCEX <= 0) {
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_in} pada ${token.cex}`);
+                            isInvalid = true;
+                        }
+                        if (!isFinite(priceBuyPairCEX) || priceBuyPairCEX <= 0) {
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_out} pada ${token.cex}`);
+                            isInvalid = true;
+                        }
+                        if (!isFinite(priceSellPairCEX) || priceSellPairCEX <= 0) {
+                            toastr.error(`Tidak Dapat Harga ${token.symbol_out} pada ${token.cex}`);
+                            isInvalid = true;
+                        }
+
+                        if (isInvalid) {
+                            toastr.error(`CEK MANUAL ${token.symbol_in} di ${token.cex}`);
+                            resolve();
+                            $('#' + token.cex + '_' + TokenPair + '_' + (DTChain.Nama_Chain).toUpperCase()).css('background-color', '#949191');
+                            return;
+                        }
+                        else {
+                            
+                            const buyVolToken = (DataCEX.volumes_buyToken.length > 0) 
+                                ? DataCEX.volumes_buyToken.reduce((min, item) => item.price < min.price ? item : min).volume 
+                                : 1;
+
+                            const sellVolPair = (DataCEX.volumes_sellToken.length > 0) 
+                                ? DataCEX.volumes_sellToken.reduce((max, item) => item.price > max.price ? item : max).volume 
+                                : 1;
+
+                            dexList.forEach((dex) => {
+                                let IdTokentoPair = `${cex}_${dex.toUpperCase()}_${TokenPair}_${(DTChain.Nama_Chain).toUpperCase()}`;
+                                let IdPairtoToken = `${cex}_${dex.toUpperCase()}_${PairToken}_${(DTChain.Nama_Chain).toUpperCase()}`;
+                               
+                                   // Mendapatkan nilai modal kiri dan kanan dari localStorage
+                                let modalKeyKiri = `MODAL_KIRI_${dex.toUpperCase()}`;
+                                let modalKeyKanan = `MODAL_KANAN_${dex.toUpperCase()}`;
+                                
+                                let modalKiri = SavedSettingData[modalKeyKiri];
+                                let modalKanan = SavedSettingData[modalKeyKanan];
+                                
+                                let dextype = dex.toLowerCase();
+                                
+                                // Perhitungan untuk modal kiri dan kanan
+                                var amount_in_token = parseFloat(modalKiri) / parseFloat(priceBuyTokenCEX);
+                                var amount_in_pair = parseFloat(modalKanan) / parseFloat(priceBuyPairCEX);
+                                
+                                // dari KIRI
+                                // token to pair
+                                if ($(`#${IdTokentoPair}`).length && $('input[type="checkbox"][value="Actionkiri"]').is(':checked')) {
+                               // if ($(`#${IdTokentoPair}`).length) {
+                                    if (dextype === "lifi") {
+                                      
+                                        //KODE DENGAN ALTERNATIF LIFI -> RUBIC
+                                        var amount_in = Math.pow(10, des_input) * amount_in_token;
+                                         getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
+                                            if (!altError) {
+                                                $(`#${IdTokentoPair}`).css('background-color', '#fbfefe');
+                                                $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
+                                                $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
+                                                    ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, modalKiri, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair',buyVolToken);
+                                            } else{
+                                                // Jika error dari SWOOP adalah 500, maka larikan ke RUBIC
+                                                console.log(altError);
+                                                if (altError.statusCode == 500 || error.statusCode == 0 ) {
+                                                    getPriceRUBIC(sc_input, des_input, sc_output, des_output, amount_in_token, priceBuyPairCEX, dextype, NameToken, NamePair, cex, 'TokentoPair', function (rubErr, rubData) {
+                                                        if (!rubErr) {
+                                                            $(`#${IdTokentoPair}`).css('background-color', '#bbcef2');
+                                                            $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
+                                                            $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
+                                                            ResultEksekusi(rubData.amount_out, rubData.FeeSwap, sc_input, sc_output, cex, modalKiri, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair, DataCEX.feeWDToken, dextype, 'TokentoPair', buyVolToken);
+                                                        } else {
+                                                            $(`#${IdTokentoPair}`).css('background-color', rubErr.color || '#ffcccc');
+                                                            $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()}<br/><a href="${rubErr.dexURL}" target="_blank">#</a><span title="TIDAK DAPAT HARGA DARI RUBIC">[ERROR RUBIC]</span>`);
+                                                        }
+                                                    });
+                                                } else{
+                                                        $(`#${IdTokentoPair}`).css('background-color',altError.color);
+                                                        $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a> <span title="TIDAK DAPAT HARGA">[ERROR]</span>`);
+                                                }
+                                            }
+                                        });
+                                    }else{
+                                    getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in_token, priceBuyPairCEX, dextype, NameToken, NamePair, cex,'TokentoPair', function (error, DataDEX) {
+                                       // console.log(sc_input, des_input, sc_output, des_output, amount_in_token, priceBuyPairCEX, dextype, NameToken, NamePair, cex,'TokentoPair');
+                                        if (error || !DataDEX) {
+                                            $(`#${IdTokentoPair}`).css('background-color', error.color);
+                                            $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/> <span <span class=uk-text-danger title="${error.pesanDEX}">[ERROR]</span>`);
+                                              /*
+                                                if ((error.statusCode == 0 && (dextype == "kyberswap" ))){
+                                                 //    ||  (error.statusCode == 429 && dextype == "okx")){
+                                                     var amount_in = Math.pow(10, des_input) * amount_in_token;
+                                                    getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in, priceBuyPairCEX, dextype, NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
+                                                        if (!altError) {
+                                                            $(`#${IdTokentoPair}`).css('background-color', '#ded5d5');
+                                                            $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
+                                                            $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
+                                                                ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, modalKiri, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair',buyVolToken);
+                                                            }
+                                                        else{
+                                                                $(`#${IdTokentoPair}`).css('background-color',altError.color);
+                                                                $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/> <span <span class=uk-text-danger title="${altError.pesanDEX}">[ERROR]</span>`);
+                                                        }
+                                                    });
+                                                }
+                                                
+                                                
+                                                if (dextype === "odos") {
+                                                    getPriceSWOOP(sc_input, des_input, sc_output, des_output, amount_in_token, priceBuyPairCEX, 'altodos', NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
+                                                        if (!altError) {
+                                                            $(`#${IdTokentoPair}`).css('background-color', '#ded5d5');
+                                                            $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
+                                                            $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
+                                                                ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, modalKiri, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair',buyVolToken);
+                                                            }
+                                                        else{
+                                                                $(`#${IdTokentoPair}`).css('background-color',altError.color);
+                                                                $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a> <span title="TIDAK DAPAT HARGA">[ERROR]</span>`);
+                                                        }
+                                                    });
+                                                }
+
+                                                if (dextype === "alt0x") {
+                                                   // toastr.info(`${TokenPair} ${dextype} PINDAH SERVER`);
+                                                    getPriceDEX(sc_input, des_input, sc_output, des_output, amount_in_token, priceBuyPairCEX, 'alt0x', NameToken, NamePair, cex,'TokentoPair', function (altError, altDataDEX){  
+                                                        if (!altError) {
+                                                            $(`#${IdTokentoPair}`).css('background-color', '#ded5d5');
+                                                            $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
+                                                            $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
+                                                                ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_input, sc_output, cex, modalKiri, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair',buyVolToken);
+                                                            }
+                                                        else{
+                                                                $(`#${IdTokentoPair}`).css('background-color',altError.color);
+                                                                $(`#SWAP_${IdTokentoPair}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a> <span title="TIDAK DAPAT HARGA">[ERROR]</span>`);
+                                                        }
+                                                    });
+                                                }
+                                            */        
+                                            return;
+                                        } else {
+                                            $(`span#LEFT_${IdTokentoPair}`).html(`<label title="${cex} BUY: USDT->${NameToken}"> ${formatPrice(priceBuyTokenCEX)}</label>`);
+                                            $(`span#RIGHT_${IdTokentoPair}`).html(`<label title="${cex} SELL: ${NamePair}->USDT"> ${formatPrice(priceSellPairCEX)}</label>`);
+                                            
+                                            ResultEksekusi(DataDEX.amount_out,DataDEX.FeeSwap,sc_input, sc_output, cex, modalKiri, amount_in_token, priceBuyTokenCEX, priceSellTokenCEX, priceBuyPairCEX, priceSellPairCEX, NameToken, NamePair,DataCEX.feeWDToken, dextype,'TokentoPair',buyVolToken);
+                                        }
+                                    });
+                                        }                               
+                                    }
+
+                                // pair to token
+                                // DARI KANAN
+                               // if ($(`#${IdPairtoToken}`).length) {
+                                if ($(`#${IdPairtoToken}`).length && $('input[type="checkbox"][value="ActionKanan"]').is(':checked')) {
+                                    if (dextype === "lifi") {
+                                       
+                                        var amount_in = Math.pow(10, des_output) * amount_in_pair;
+                                        getPriceSWOOP(sc_output, des_output, sc_input, des_input, amount_in, priceBuyPairCEX, dextype, NamePair, NameToken, cex, 'PairtoToken', function (altError, altDataDEX) {
+                                            if (!altError) {
+                                                $(`#${IdPairtoToken}`).css('background-color', '#fbfefe');
+                                                $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
+                                                $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
+                                                ResultEksekusi(altDataDEX.amount_out, altDataDEX.FeeSwap, sc_output, sc_input, cex, modalKanan, amount_in_pair, priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair, NameToken, DataCEX.feeWDPair, dextype, 'PairtoToken', sellVolPair);
+                                            } else {
+                                                // Jika error dari SWOOP adalah 500, fallback ke Rubic
+                                                console.log(altError);
+                                                if (altError.statusCode == 500 || altError.statusCode == 0) {
+                                                    getPriceRUBIC(sc_output, des_output, sc_input, des_input, amount_in_pair, priceBuyPairCEX, dextype, NamePair, NameToken, cex, 'PairtoToken', function (rubErr, rubData) {
+                                                        if (!rubErr) {
+                                                            $(`#${IdPairtoToken}`).css('background-color', '#bbcef2');
+                                                            $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
+                                                            $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
+                                                            ResultEksekusi(rubData.amount_out, rubData.FeeSwap, sc_output, sc_input, cex, modalKanan, amount_in_pair, priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair, NameToken, DataCEX.feeWDPair, dextype, 'PairtoToken', sellVolPair);
+                                                        } else {
+                                                            $(`#${IdPairtoToken}`).css('background-color', rubErr.color || '#ffcccc');
+                                                            $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()}<br/><a href="${rubErr.dexURL}" target="_blank">#</a><span title="TIDAK DAPAT HARGA DARI RUBIC">[ERROR RUBIC]</span>`);
+                                                        }
+                                                    });
+                                                } else {
+                                                    $(`#${IdPairtoToken}`).css('background-color', altError.color || '#ffcccc');
+                                                    $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank">#</a>  <span title="TIDAK DAPAT HARGA">[ERROR]</span>`);
+                                                }
+                                            }
+                                        });
+                                    } else if(dextype==="odos"){
+                                        // toastr.info(`${PairToken} ${dextype} PINDAH SERVER`);
+                                        getPriceDEX( sc_output, des_output,sc_input, des_input, amount_in_pair, priceBuyPairCEX, 'altodos', NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
+                                            if (!altError) {
+                                               // $(`#${IdPairtoToken}`).css('background-color', '#ded5d5');
+                                                $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
+                                                $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
+
+                                                ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_output, sc_input, cex, modalKanan, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken',sellVolPair);
+                                            }else{
+                                                $(`#${IdPairtoToken}`).css('background-color',altError.color);
+                                                $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a>  <span title="TIDAK DAPAT HARGA">[ERROR]</span>`)
+                                            }
+                                         });
+                                    }else{
+                                        getPriceDEX( sc_output, des_output,sc_input, des_input, amount_in_pair, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (error, DataDEX) {
+                                        // console.log( sc_output, des_output,sc_input, des_input, amount_in_pair, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken');
+                                        if (error || !DataDEX) {
+                                            $(`#${IdPairtoToken}`).css('background-color', error.color);
+                                            $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/> <span <span class=uk-text-danger title="${error.pesanDEX}">[ERROR]</span>`);
+                                                
+                                                    if ((error.statusCode == 0 && (dextype == "kyberswap"))) {
+                                                    // toastr.info(`${PairToken} ${dextype} PINDAH SERVER`);
+                                                         var amount_in = Math.pow(10, des_output) * amount_in_pair;
+                                                        getPriceSWOOP( sc_output, des_output,sc_input, des_input, amount_in, priceBuyPairCEX, dextype, NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
+                                                            if (!altError) {
+                                                                $(`#${IdPairtoToken}`).css('background-color', '#ded5d5');
+                                                                $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
+                                                                $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
+
+                                                                ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_output, sc_input, cex, modalKanan, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken',sellVolPair);
+                                                            }else{
+                                                                $(`#${IdPairtoToken}`).css('background-color',altError.color);
+                                                                $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/> <span <span class=uk-text-danger title="${altError.pesanDEX}">[ERROR]</span>`);
+                                                            }
+                                                        });
+                                                }  
+                                            
+                                          
+                                            
+                                            /*
+                                            if(dextype==="alt0x"){
+                                                   // toastr.info(`${PairToken} ${dextype} PINDAH SERVER`);
+                                                    getPriceDEX( sc_output, des_output,sc_input, des_input, amount_in_pair, priceBuyPairCEX, 'alt0x', NamePair, NameToken, cex,'PairtoToken', function (altError, altDataDEX){                                                                
+                                                        if (!altError) {
+                                                            $(`#${IdPairtoToken}`).css('background-color', '#ded5d5');
+                                                            $(`span#LEFT_${IdPairtoToken}`).html(`<label title="${cex} BUY: USDT->${NamePair}"> ${formatPrice(priceBuyPairCEX)}</label>`);
+                                                            $(`span#RIGHT_${IdPairtoToken}`).html(`<label title="${cex} SELL: ${NameToken}->USDT"> ${formatPrice(priceSellTokenCEX)}</label>`);
+
+                                                            ResultEksekusi(altDataDEX.amount_out,altDataDEX.FeeSwap,sc_output, sc_input, cex, modalKanan, amount_in_pair,  priceBuyPairCEX, priceSellPairCEX, priceBuyTokenCEX, priceSellTokenCEX, NamePair,NameToken, DataCEX.feeWDPair, dextype,'PairtoToken',sellVolPair);
+                                                        }else{
+                                                            $(`#${IdPairtoToken}`).css('background-color',altError.color);
+                                                            $(`#SWAP_${IdPairtoToken}`).html(`${dex.toUpperCase()} <br/><a href=${altError.dexURL} target="_blank" >#</a>  <span title="TIDAK DAPAT HARGA">[ERROR]</span>`)
+                                                        }
+                                                });
+                                            }
+                                                */
                                             return;
                                         } 
                                         else {
@@ -2873,7 +3160,7 @@ $(document).on('click', `[id^="SelMulti-"]`, function () {
   
     // list api OKXDEX sell_BINANCE_USDT_buy_0x_BAL
     const apiKeysOKXDEX = [
-        
+        /*
         {
             ApiKeyOKX: "47953eea-d5aa-43f9-9d56-34966978d693",
             secretKeyOKX: "11C0BD3536C759C5A5E5F7A70077A483",
@@ -2956,7 +3243,83 @@ $(document).on('click', `[id^="SelMulti-"]`, function () {
             ProjectOKX: "8607ef99dc6e31a80e21b16f914a0f18"
         },
        
-        
+        */
+       {
+            ApiKeyOKX : "f47557fc-3fcc-45e0-b297-bd1244ccf93c",
+            secretKeyOKX : "C9689A761F2B7A51E8FA03E874905604",
+            PassphraseOKX : "Sukses-2025",
+            ProjectOKX: "5e5cd09efbe202ba8ff5b0d6cc67765c"
+            },{
+            ApiKeyOKX : "4e34bc4c-3cdb-404c-b21e-892fcb20c08e",
+            secretKeyOKX : "7C693E2F8ED3EEC9DB100A6F547684F3",
+            PassphraseOKX : "Sukses-2025",
+            ProjectOKX: "51c6d463f648cfaac41cc9c3d1a60e040",
+            },{
+            ApiKeyOKX : "1f460b15-76bc-4c26-ba36-af6c0acf41f8",
+            secretKeyOKX : "10858E91E66DA673AAD7B1EB63335557",
+            PassphraseOKX : "Sukses-2025",
+            ProjectOKX: "6a82f552b5489a4172b44741d48e1655"
+            },
+            {
+            ProjectOKX : "346d87e69f7038d66def274f35111654",
+            ApiKeyOKX : "e9d2ec06-24eb-468e-9590-9dabd8e5f2e9",
+            secretKeyOKX : "E9D97914D154F1446EB057A1D4B7A673",
+            PassphraseOKX : "211293-Dd"
+            },
+            {
+            ProjectOKX : "bc4a68edd9f763493c41d86e1ed135d9",
+            ApiKeyOKX : "eb630b79-862d-4751-bfb9-a44e61730812",
+            secretKeyOKX : "ED5709291C78EC01B913B37F11E324A7",
+            PassphraseOKX : "999999-Dd"
+            },
+            {
+            ProjectOKX : "6dbac47726ef6e7aed71cb0e0159c0a4",
+            ApiKeyOKX : "bf099815-cbb3-424c-a4be-20b9b1d6ee40",
+            secretKeyOKX : "A41A8E3D311CDF762ED73333FC47B3A1",
+            PassphraseOKX : "999999-Dd"
+            },
+            {
+            ProjectOKX : "1a97d60d4f20802f407d0773b566820a",
+            ApiKeyOKX : "97a59ab5-d561-4666-9974-96bf85746933",
+            secretKeyOKX : "CDF2B02006AD182F53FA20104E890213",
+            PassphraseOKX : "999999-Dd"
+            },
+            {
+            ProjectOKX : "1a97d60d4f20802f407d0773b566820a",
+            ApiKeyOKX : "97a59ab5-d561-4666-9974-96bf85746933",
+            secretKeyOKX : "CDF2B02006AD182F53FA20104E890213",
+            PassphraseOKX : "999999-Dd"
+            },
+            {
+            ProjectOKX : "314eabf2463dacb891af50c6e48b25fb",
+            ApiKeyOKX : "bbee0aed-c60e-4431-922c-b5df4db8f46d",
+            secretKeyOKX : "3C8600681DF86B2FB29C041F8E9ECBDA",
+            PassphraseOKX : "999999-Dd"
+            },
+            {
+            ProjectOKX : "66f6b0feb7d4ca900e64abb412b24043",
+            ApiKeyOKX : "a7c49a4d-0d18-40a8-80e6-59ba30d20e71",
+            secretKeyOKX : "DF8E561B5BC86543834A9B1B93B61A65",
+            PassphraseOKX : "999999-Dd"
+            },
+            {
+            ProjectOKX : "fb0d5484dcad49c2b2fb31cbecfe753d",
+            ApiKeyOKX : "3d7d292a-aef2-45af-a8f0-0eb89eb34abd",
+            secretKeyOKX : "0E3E221267C52F8978E5376C1DED72F7",
+            PassphraseOKX : "999999-Dd"
+            },
+            {
+            ApiKeyOKX : "f47557fc-3fcc-45e0-b297-bd1244ccf93c",
+            secretKeyOKX : "C9689A761F2B7A51E8FA03E874905604",
+            PassphraseOKX : "Sukses-2025",
+            ProjectOKX: "5e5cd09efbe202ba8ff5b0d6cc67765c"
+            },
+            {
+            ApiKeyOKX : "fb713c1b-634b-40b4-a6e3-02e441e14504",
+            secretKeyOKX : "459160A7AD08A2F38DA205599FAB3CCE",
+            PassphraseOKX : "Bismillah-100493",
+            ProjectOKX: "d54877fe8feb85d57133cf4f7533c711"
+            },
       ];
       
        // Fungsi untuk Signature
