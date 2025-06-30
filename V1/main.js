@@ -420,13 +420,18 @@
                                 FeeSwap = response.gasEstimateValue;
                                 break;
                             case 'altodos':
-                                // if (action === "TokentoPair") {
-                                //     amount_out = parseFloat(response.odosResponse.outValues[0]) / PriceRate; 
-                                // } else if (action === "PairtoToken") {
-                                    amount_out = parseFloat(response.odosResponse.outValues[0]) / Math.pow(10, des_output);
-                                //}                               
+                                if (action === "TokentoPair") {
+                                    // Net output dalam bentuk nilai USD atau USDT → bagi dengan Rate jika perlu konversi
+                                    amount_out = parseFloat(response.odosResponse.outValues[0]) / PriceRate;
+                                } else if (action === "PairtoToken") {
+                                    // Ambil amount dari outputTokens[0].amount dan ubah dari string ke float
+                                    const rawAmount = response.odosResponse.outputTokens[0].amount;
+                                    amount_out = parseFloat(rawAmount) / Math.pow(10, des_output);
+                                }
+
                                 FeeSwap = response.odosResponse.gasEstimateValue;
                                 break;
+
                             case 'paraswap':
                                 amount_out = response.priceRoute.destAmount / Math.pow(10, des_output);
                                 FeeSwap = parseFloat(response.priceRoute.gasCostUSD);
@@ -1009,17 +1014,6 @@
                 titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
                 RateSwap = `<label class="uk-text-danger" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
             } else {
-                // if (trx === "TokentoPair") {
-                //      // Selain itu, ambil rate dari TOKEN (symbol_in)
-                //     titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateSellTokenDEX)}`;
-                //     titleInfo += ` | ${toIDR(rateSellTokenDEX)}`;
-                //     RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;                   
-                // } else {
-                //     // Khusus USDT saat PairtoToken → ambil rate dari PAIR (symbol_out)
-                //     titleInfo += `(${Name_in}->${Name_out}) : ${formatPrice(rateBuyPairDEX)}`;
-                //     titleInfo += ` | ${toIDR(rateBuyPairDEX)}`;
-                //     RateSwap = `<label class="uk-text-primary" title="${titleInfo}">${formatPrice(rateTokentoPair)}</label>`;
-                // }
 
                  if (trx === "TokentoPair") {
                      // Selain itu, ambil rate dari TOKEN (symbol_in)
