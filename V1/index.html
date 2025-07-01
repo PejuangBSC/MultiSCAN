@@ -835,7 +835,7 @@
         }
 
         // Ambil data yang sudah disimpan
-        let tokens = JSON.parse(localStorage.getItem('TOKEN_MULTI') || '[]');
+        let tokens = JSON.parse(localStorage.getItem('MULTI_TOKENS') || '[]');
         if (!Array.isArray(tokens)) tokens = [];
 
         // Format chain (untuk validasi dan penyimpanan)
@@ -901,7 +901,7 @@
         };
 
         tokens.push(tokenData);
-        localStorage.setItem('TOKEN_MULTI', JSON.stringify(tokens));
+        localStorage.setItem('MULTI_TOKENS', JSON.stringify(tokens));
 
         toastr.success(`✔️ Simpan ${tokenData.symbol} VS ${tokenData.pairSymbol} di Chain ${tokenData.chain}`, "✅ Tersimpan", {
             timeOut: 4000,
