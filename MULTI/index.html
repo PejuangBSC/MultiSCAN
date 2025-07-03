@@ -279,7 +279,8 @@
             padding-left: 1rem;
         }
         #dexSignals li {
-            font-size: 0.75rem;
+            font-size: 0.8rem;
+            margin-bottom: 1px;
         }
         .highlight-row {
             background-color: #ffe8a1 !important;
@@ -439,7 +440,10 @@
 
                     <!-- Tombol Sort dan Search berdampingan -->
                     <div class="d-flex align-items-center gap-2 btn-sm">
-                          <button class="btn btn-success btn-sm" id="CheckPrice">
+                         <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
+                                <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px" />
+                        </a>
+                        <button class="btn btn-success btn-sm" id="CheckPrice">
                             <i class="bi bi-play-fill"></i> Check Price
                         </button>
                         <button class="btn btn-danger d-none btn-sm" id="StopScan">
@@ -521,9 +525,9 @@
                                         <i class="bi bi-upload"></i> Import
                                     </button>
 
-                                    <button class="btn btn-sm btn-outline-dark" id="Unlock">
+                                    <!-- <button class="btn btn-sm btn-outline-dark" id="Unlock">
                                         <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank"><i class="bi bi-lock"></i>Unlock</a>
-                                    </button>
+                                    </button> -->
 
                                     <button class="btn btn-sm btn-outline-info" id="CheckCEX">
                                         <i class="bi bi-wallet"></i> Check CEX
@@ -624,7 +628,7 @@
                                     </div>
 
                                     <div class="mb-3">
-                                        <label class="form-label">Jumlah Anggota [1-5]</label>
+                                        <label class="form-label">Jumlah Anggota Grup [1-5]</label>
                                         <input type="number" class="form-control" id="tokensPerBatch" min="1" max="5" required>
                                         <small class="form-text text-muted">Number of Grups</small>
                                     </div>
@@ -637,6 +641,11 @@
                                         <label class="form-label">Waktu Tunggu (ms) [1000-10000]</label>
                                         <input type="number" class="form-control" id="TimeoutCount" min="1000" max="10000" required>
                                         <small class="form-text text-muted">Time Out </small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">PNL Filter</label>
+                                        <input type="number" class="form-control" id="PNLFilter" value="0" required  min="0" step="0.01">
+                                        <small class="form-text text-muted">PNL Filter </small>
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">WALLET ADDRESS</label>
@@ -814,6 +823,20 @@
             </div>
         </div>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    <!-- Price APIs -->
+    <script src="price-apis.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
+
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
