@@ -267,9 +267,9 @@
               <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                 <!-- Gambar kiri -->
                 <div>
-                    <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
+                    <!-- <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
                         <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px" />
-                    </a>&nbsp;&nbsp;
+                    </a>&nbsp;&nbsp; -->
                     <!-- <a href="#" target="_blank" id="reload">
                       <img title="RELOAD PAGE" src="https://cdn-icons-png.freepik.com/512/210/210136.png" width="25px" />
                     </a>&nbsp;&nbsp; -->
@@ -1395,7 +1395,7 @@
             const apiSecret = $("#secretkeyBINANCE").val();
             if (!apiKey || !apiSecret) return;
 
-            const apiUrl = "https://api.binance.me/api/v3/account";
+            const apiUrl = "https://api.binance.com/api/v3/account";
             const timestamp = Date.now();
             const queryString = `timestamp=${timestamp}`;
             const signature = CryptoJS.HmacSHA256(queryString, apiSecret).toString(CryptoJS.enc.Hex);
