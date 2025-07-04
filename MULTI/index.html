@@ -141,16 +141,15 @@
             min-width: 200px;
         }
 
-        .token-detail-cell {
-            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-            border: 2px solid #e2e8f0;
-            /* font-weight: 600;
-            min-width: 200px; */
-            padding: 1rem;
+        /* Terapkan juga ke semua konten di dalamnya */
+        .token-detail-cell * {
+            background-color: #d7cef5;
+            padding-top:3px;
+            padding-bottom:3px;
         }
 
         .price-comparison-table thead th {
-            background: #d3d3fd;
+            background: #a5a6e2;
             color: rgb(6, 0, 0);
             font-weight: bold;
             text-align: center;
@@ -328,12 +327,18 @@
             background-color: #f3f4fe !important; 
         }
         /* Override warna strip bawaan Bootstrap */
-        #priceTable.table-striped tbody tr:nth-of-type(odd) {
-            background-color: #cbbcf2 !important;  /* biru muda */
+       
+        /* Orderbook ikut mewarisi warna belang */
+
+        .token-data-row.strip-even > td {
+        /* background-color: #f0f9f7 !important; */
+        background-color: #f3f4fe !important;
         }
-        #priceTable.table-striped tbody tr:nth-of-type(even) {
-            background-color: #ffffff !important;  /* putih */
+
+        .token-data-row.strip-odd > td {
+        background-color: #ede9fe !important;
         }
+
         .card.no-rounded-bottom {
             border-bottom-left-radius: 0 !important;
             border-bottom-right-radius: 0 !important;
@@ -512,7 +517,7 @@
                     <div class="card-body p-0">
                         <div class="scrollable-price-table" style="max-height: 800px; overflow-y: auto; overflow-x: auto; font-size: small;">
 
-                            <table class="table table-bordered table-hover price-comparison-table table-striped" id="priceTable">
+                            <table class="table table-bordered table-hover price-comparison-table" id="priceTable">
                                 <thead class="table-secondary">
                                     <tr>
                                         <th rowspan="2" class="text-center align-middle">CEX</th>
