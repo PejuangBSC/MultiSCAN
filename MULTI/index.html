@@ -156,35 +156,35 @@
             text-align: center;
         }
 
-/* 1. Hilangkan border atau garis bawah dari heading/tombol toggle */
-.card-body .d-flex .text-uppercase {
-    border-bottom: none !important;
-}
+        /* 1. Hilangkan border atau garis bawah dari heading/tombol toggle */
+        .card-body .d-flex .text-uppercase {
+            border-bottom: none !important;
+        }
 
-/* 2. Atur margin/padding di bawah ul agar lebih padat */
-.card-body ul {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
+        /* 2. Atur margin/padding di bawah ul agar lebih padat */
+        .card-body ul {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
 
-/* 3. Hilangkan padding bawah pada card-body */
-.card-body {
-    padding-bottom: 0.25rem !important;
-}
+        /* 3. Hilangkan padding bawah pada card-body */
+        .card-body {
+            padding-bottom: 0.25rem !important;
+        }
 
-/* 4. Hilangkan space putih bawah total card */
-.card.h-100 {
-    margin-bottom: 0 !important;
-}
+        /* 4. Hilangkan space putih bawah total card */
+        .card.h-100 {
+            margin-bottom: 0 !important;
+        }
 
-/* 5. Atur tinggi minimum (jika diperlukan) agar konsisten */
-.card .collapse {
-    min-height: 0 !important;
-}
-.collapse {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-}
+        /* 5. Atur tinggi minimum (jika diperlukan) agar konsisten */
+        .card .collapse {
+            min-height: 0 !important;
+        }
+        .collapse {
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
 
 
         .price-info {
@@ -347,6 +347,11 @@
         .fs-7 { font-size: 0.875rem; } /* 14px */
         .fs-8 { font-size: 0.75rem; }  /* 12px */
         .fs-9 { font-size: 0.7rem; } 
+        .td-not-scanned {
+            background-color: #b4abf5 !important;
+            color: #999 !important;
+            font-style: italic;
+        }
 </style>
 
 </head>
@@ -426,8 +431,8 @@
         <div class="tab-content">
             <!-- Price Monitoring Tab -->
             <div class="tab-pane fade show active" id="priceMonitoring">
-                 <div class="d-flex flex-wrap justify-content-between align-items-start mb-3">
-                    <div class="d-flex gap-2 flex-wrap">
+                <div class="d-flex flex-wrap justify-content-between align-items-start mb-3">
+                    <!-- <div class="d-flex gap-2 flex-wrap">
                         <div class="fw-bold text-secondary">📊 Statistik Token ~ <span id="totalBarisMonitoring" class="fw-bold text-danger">0</span> Baris</div>: 
                         <div class="text-success">Total: <span id="totalTokensMonitoring" class="fw-bold">0</span> Coins</div> [
                         <div class="text-warning">BSC: <span id="bscCountMonitoring" class="fw-bold">0</span></div>
@@ -435,6 +440,37 @@
                         <div class="text-info">Polygon: <span id="polyCountMonitoring" class="fw-bold">0</span></div>
                         <div class="text-secondary">Arbitrum: <span id="arbCountMonitoring" class="fw-bold">0</span></div>
                         <div class="text-danger">Base: <span id="baseCountMonitoring" class="fw-bold">0</span></div> ]
+                    </div> -->
+                    <div class="d-flex gap-2 flex-wrap align-items-center small text-nowrap">
+                        <div class="fw-bold text-secondary">📊 Statistik Token ~ <span id="totalBarisMonitoring" class="fw-bold text-danger">0</span> Baris</div>: 
+                        <div class="text-success">Total: <span id="totalTokensMonitoring" class="fw-bold">0</span> Coins</div> [
+
+                        <label class="text-warning mb-0">
+                            <input type="checkbox" class="me-1 chainFilterCheckbox" value="BSC">
+                            BSC: <span id="bscCountMonitoring" class="fw-bold">0</span>
+                        </label>
+
+                        <label class="text-primary mb-0">
+                            <input type="checkbox" class="me-1 chainFilterCheckbox" value="Ethereum">
+                            ETH: <span id="ethCountMonitoring" class="fw-bold">0</span>
+                        </label>
+
+                        <label class="text-info mb-0">
+                            <input type="checkbox" class="me-1 chainFilterCheckbox" value="Polygon">
+                            Polygon: <span id="polyCountMonitoring" class="fw-bold">0</span>
+                        </label>
+
+                        <label class="text-secondary mb-0">
+                            <input type="checkbox" class="me-1 chainFilterCheckbox" value="Arbitrum">
+                            Arbitrum: <span id="arbCountMonitoring" class="fw-bold">0</span>
+                        </label>
+
+                        <label class="text-danger mb-0">
+                            <input type="checkbox" class="me-1 chainFilterCheckbox" value="Base">
+                            Base: <span id="baseCountMonitoring" class="fw-bold">0</span>
+                        </label>
+
+                        ]
                     </div>
 
                     <!-- Tombol Sort dan Search berdampingan -->
@@ -457,15 +493,20 @@
                     </div>
                     
                 </div>
-                    <!-- Progress bar diletakkan di luar <ul>, agar tidak jadi tab -->
-                    <div class="progress mb-3" style="height: 26px;">
-                        <div class="progress-bar progress-bar-striped bg-success" id="scanProgressBar" role="progressbar" style="width: 0%;">
-                            <div class="d-flex justify-content-between w-100 px-2">
-                                 <strong ><small id="scanProgressText">Progress: 0 dari 0</small></strong>
-                                <small id="scanProgressPercent">(0%)</small>
-                            </div>
+                
+                <!-- <div class="border border-dark" style="background-color: beige;">
+                        <div id="dexSignals" class="ms-2 mt-2 me-2"></div>
+                </div> -->
+
+                <!-- Progress bar diletakkan di luar <ul>, agar tidak jadi tab -->
+                <div class="progress mb-3" style="height: 20px;">
+                    <div class="progress-bar progress-bar-striped bg-success" id="scanProgressBar" role="progressbar" style="width: 0%;">
+                        <div class="d-flex justify-content-between w-100 px-2">
+                                <strong ><small id="scanProgressText">Progress: 0 dari 0</small></strong>
+                            <small id="scanProgressPercent">(0%)</small>
                         </div>
                     </div>
+                </div>
 
                 <div class="card">
                     <div class="card-body p-0">
