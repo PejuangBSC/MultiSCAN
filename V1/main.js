@@ -521,68 +521,66 @@
 
                                 break;
 
-                           case 'lifi': {
-                                const bestRoute = response.routes?.[0];
+                         case 'lifi': {
+                            const bestRoute = response.routes?.[0];
 
-                                if (bestRoute) {
-                                    // Ambil data penting dari berbagai fallback lokasi
-                                    const rawAmount = bestRoute?.toAmount
-                                        ?? bestRoute?.steps?.[0]?.estimate?.toAmount
-                                        ?? bestRoute?.steps?.[0]?.includedSteps?.[0]?.estimate?.toAmount
-                                        ?? "0";
+                            if (bestRoute) {
+                                // ✅ Gunakan desimal dari input tujuan
+                                const decimals = des_output;
+                                const factor = Math.pow(10, parseInt(decimals));
 
-                                    const decimals = bestRoute?.toToken?.decimals
-                                        ?? bestRoute?.steps?.[0]?.estimate?.toToken?.decimals
-                                        ?? bestRoute?.steps?.[0]?.includedSteps?.[0]?.estimate?.toToken?.decimals
-                                        ?? des_output;
+                                const rawAmount = bestRoute?.toAmount
+                                    ?? bestRoute?.steps?.[0]?.estimate?.toAmount
+                                    ?? bestRoute?.steps?.[0]?.includedSteps?.[0]?.estimate?.toAmount
+                                    ?? "0";
 
-                                    const factor = Math.pow(10, parseInt(decimals));
-                                    amount_out = parseFloat(rawAmount) / factor;
+                                amount_out = parseFloat(rawAmount) / factor;
 
-                                    let gasCostUSD = bestRoute?.gasCostUSD;
+                                // ✅ Fee Swap
+                                let gasCostUSD = bestRoute?.gasCostUSD;
 
-                                    if (gasCostUSD === undefined) {
-                                        const gasCosts = bestRoute?.steps?.[0]?.estimate?.gasCosts
-                                            ?? bestRoute?.steps?.[0]?.includedSteps?.[0]?.estimate?.gasCosts
-                                            ?? [];
-                                        gasCostUSD = gasCosts.reduce((sum, g) => sum + parseFloat(g?.amountUSD || 0), 0);
-                                    }
-
-                                    FeeSwap = parseFloat(gasCostUSD || 0);
-
-                                    // 🧾 Ambil detail token dan harga untuk log analisa
-                                    const fromToken = bestRoute?.fromToken;
-                                    const toToken = bestRoute?.toToken;
-
-                                    const fromAmountRaw = bestRoute?.fromAmount ?? "0";
-                                    const fromDecimals = fromToken?.decimals ?? 18;
-                                    const fromAmount = parseFloat(fromAmountRaw) / Math.pow(10, fromDecimals);
-
-                                    const fromPriceUSD = parseFloat(fromToken?.priceUSD || "0");
-                                    const toPriceUSD = parseFloat(toToken?.priceUSD || "0");
-
-                                    const fromValueUSD = fromAmount * fromPriceUSD;
-                                    const toValueUSD = amount_out * toPriceUSD;
-
-                                    const lossUSD = fromValueUSD - toValueUSD - FeeSwap;
-
-                                    // 📦 Log analisa swap
-                            //         console.log(`🔁 SWAP via LiFi:
-                            // - Dari     : ${fromAmount.toFixed(6)} ${fromToken?.symbol} @ ${fromPriceUSD.toFixed(4)} USD
-                            // - Ke       : ${amount_out.toFixed(6)} ${toToken?.symbol} @ ${toPriceUSD.toFixed(4)} USD
-                            // - Modal    : ${fromValueUSD.toFixed(4)} USD
-                            // - Est. Hasil: ${toValueUSD.toFixed(4)} USD
-                            // - Fee Gas  : ${FeeSwap.toFixed(4)} USD
-                            // - ➖ Selisih/Loss: ${lossUSD.toFixed(4)} USD
-                            // `);
-                                } else {
-                                    amount_out = 0;
-                                    FeeSwap = 0;
-                                    console.warn("⚠️ LiFi: Tidak ada route tersedia.");
+                                if (gasCostUSD === undefined) {
+                                    const gasCosts = bestRoute?.steps?.[0]?.estimate?.gasCosts
+                                        ?? bestRoute?.steps?.[0]?.includedSteps?.[0]?.estimate?.gasCosts
+                                        ?? [];
+                                    gasCostUSD = gasCosts.reduce((sum, g) => sum + parseFloat(g?.amountUSD || 0), 0);
                                 }
 
-                                break;
+                                FeeSwap = parseFloat(gasCostUSD || 0);
+
+                                // 🔍 Detail token dan harga
+                                const fromToken = bestRoute?.fromToken;
+                                const toToken = bestRoute?.toToken;
+
+                                const fromAmountRaw = bestRoute?.fromAmount ?? "0";
+                                const fromDecimals = fromToken?.decimals ?? 18; // fallback jika kamu ingin dari response
+                                const fromAmount = parseFloat(fromAmountRaw) / Math.pow(10, fromDecimals);
+
+                                const fromPriceUSD = parseFloat(fromToken?.priceUSD || "0");
+                                const toPriceUSD = parseFloat(toToken?.priceUSD || "0");
+
+                                const fromValueUSD = fromAmount * fromPriceUSD;
+                                const toValueUSD = amount_out * toPriceUSD;
+
+                                const lossUSD = fromValueUSD - toValueUSD - FeeSwap;
+
+                                // 📦 Log swap
+                                console.log(`🔁 SWAP via LiFi:
+                        - Dari     : ${fromAmount.toFixed(6)} ${fromToken?.symbol} @ ${fromPriceUSD.toFixed(4)} USD
+                        - Ke       : ${amount_out.toFixed(6)} ${toToken?.symbol} @ ${toPriceUSD.toFixed(4)} USD
+                        - Modal    : ${fromValueUSD.toFixed(4)} USD
+                        - Est. Hasil: ${toValueUSD.toFixed(4)} USD
+                        - Fee Gas  : ${FeeSwap.toFixed(4)} USD
+                        - ➖ Selisih/Loss: ${lossUSD.toFixed(4)} USD
+                        `);
+                            } else {
+                                amount_out = 0;
+                                FeeSwap = 0;
+                                console.warn("⚠️ LiFi: Tidak ada route tersedia.");
                             }
+
+                            break;
+                        }
 
 
 
