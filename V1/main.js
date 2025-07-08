@@ -353,7 +353,7 @@
                 headers = {}; // Tidak memerlukan header khusus
                 break; 
             
-            case 'lifi':
+            case 'lifiLAMA':
                 apiUrl = "https://api.relay.link/quote";
                 requestData = {
                     user: SavedSettingData.walletMeta,
@@ -365,6 +365,37 @@
                     tradeType: "EXACT_INPUT"                      // atau "EXACT_OUTPUT", tergantung kebutuhan
                 };
                 break;
+            case 'lifi':
+                apiUrl = "https://api-v1.marbleland.io/api/v1/jumper/api/p/lifi/advanced/routes";
+
+                requestData = {
+                    fromAmount: amount_in.toString(),                      // dalam smallest unit (misal: wei)
+                    fromChainId: DTChain.Kode_Chain,                       // chain asal
+                    fromTokenAddress: sc_input,                            // alamat token asal
+                    toChainId: DTChain.Kode_Chain,                         // chain tujuan (ganti jika lintas chain)
+                    toTokenAddress: sc_output,                             // alamat token tujuan
+                    options: {
+                        integrator: "swap.marbleland.io",                  // integrator ID (optional bisa disesuaikan)
+                        order: "CHEAPEST",                                 // atau "FASTEST", "SAFEST", dst.
+                        maxPriceImpact: 0.4,
+                        allowSwitchChain: true,
+                        bridges: {
+                            deny: [
+                                "hop", "cbridge", "optimism", "arbitrum", "across", "omni", "celercircle", "allbridge",
+                                "thorswap", "symbiosis", "squid", "mayan", "mayanWH", "mayanMCTP", "relay", "polygon",
+                                "glacis", "stargateV2", "stargateV2Bus", "chainflip"
+                            ]
+                        },
+                        exchanges: {
+                            deny: [
+                                "dodo", "paraswap", "enso", "odos", "openocean", "0x", "stable", "kyberswap",
+                                "lifidexaggregator", "jupiter", "sushiswap", "bebop", "aftermath", "superswap",
+                                "bluefin7k", "liquidswap"
+                            ]
+                        }
+                    }
+                };
+                break;
 
             default:
                 console.error("Unsupported DEX type");
@@ -373,7 +404,7 @@
     
         $.ajax({
             url: apiUrl,
-            method: ['odos','altodos','bebop'].includes(dexType) ? 'POST' : 'GET', // Cek tipe DEX
+            method: ['odos','altodos','bebop','lifi'].includes(dexType) ? 'POST' : 'GET', // Cek tipe DEX
             headers: Object.assign(
                 {}, 
                 headers || {}, // Header tambahan dari variabel `headers`
@@ -387,8 +418,8 @@
                     "OK-ACCESS-TIMESTAMP": timestamp,
                 } : {}
             ),
-            data: ['odos','altodos','bebop' ].includes(dexType) ? JSON.stringify(requestData) : requestData, // Format data berdasarkan tipe DEX
-            contentType: ['odos','altodos','bebop'].includes(dexType) ? 'application/json' : undefined, // Set `contentType` hanya jika diperlukan
+            data: ['odos','altodos','bebop','lifi' ].includes(dexType) ? JSON.stringify(requestData) : requestData, // Format data berdasarkan tipe DEX
+            contentType: ['odos','altodos','bebop','lifi'].includes(dexType) ? 'application/json' : undefined, // Set `contentType` hanya jika diperlukan
           //  timeout: parseInt(SavedSettingData.waktuTunggu) * 1000, // Ambil waktu tunggu dari localStorage atau default ke 0
             success: function (response, xhr) {
                 //console.log("RESPONSE DEX: ",response)
@@ -481,6 +512,79 @@
                                 
                                 FeeSwap =0.1;
                                 break;
+                           case 'lifiLAMA':
+                                // Jumlah token yang didapat dari swap (dalam unit normal)
+                                amount_out = parseFloat(response.details?.currencyOut?.amount || 0) / Math.pow(10, des_output);
+
+                                // Biaya swap dalam USD langsung dari field fees.gas.amountUsd
+                                FeeSwap = parseFloat(response.fees?.gas?.amountUsd || 0);
+
+                                break;
+
+                           case 'lifi': {
+                                const bestRoute = response.routes?.[0];
+
+                                if (bestRoute) {
+                                    // Ambil data penting dari berbagai fallback lokasi
+                                    const rawAmount = bestRoute?.toAmount
+                                        ?? bestRoute?.steps?.[0]?.estimate?.toAmount
+                                        ?? bestRoute?.steps?.[0]?.includedSteps?.[0]?.estimate?.toAmount
+                                        ?? "0";
+
+                                    const decimals = bestRoute?.toToken?.decimals
+                                        ?? bestRoute?.steps?.[0]?.estimate?.toToken?.decimals
+                                        ?? bestRoute?.steps?.[0]?.includedSteps?.[0]?.estimate?.toToken?.decimals
+                                        ?? des_output;
+
+                                    const factor = Math.pow(10, parseInt(decimals));
+                                    amount_out = parseFloat(rawAmount) / factor;
+
+                                    let gasCostUSD = bestRoute?.gasCostUSD;
+
+                                    if (gasCostUSD === undefined) {
+                                        const gasCosts = bestRoute?.steps?.[0]?.estimate?.gasCosts
+                                            ?? bestRoute?.steps?.[0]?.includedSteps?.[0]?.estimate?.gasCosts
+                                            ?? [];
+                                        gasCostUSD = gasCosts.reduce((sum, g) => sum + parseFloat(g?.amountUSD || 0), 0);
+                                    }
+
+                                    FeeSwap = parseFloat(gasCostUSD || 0);
+
+                                    // 🧾 Ambil detail token dan harga untuk log analisa
+                                    const fromToken = bestRoute?.fromToken;
+                                    const toToken = bestRoute?.toToken;
+
+                                    const fromAmountRaw = bestRoute?.fromAmount ?? "0";
+                                    const fromDecimals = fromToken?.decimals ?? 18;
+                                    const fromAmount = parseFloat(fromAmountRaw) / Math.pow(10, fromDecimals);
+
+                                    const fromPriceUSD = parseFloat(fromToken?.priceUSD || "0");
+                                    const toPriceUSD = parseFloat(toToken?.priceUSD || "0");
+
+                                    const fromValueUSD = fromAmount * fromPriceUSD;
+                                    const toValueUSD = amount_out * toPriceUSD;
+
+                                    const lossUSD = fromValueUSD - toValueUSD - FeeSwap;
+
+                                    // 📦 Log analisa swap
+                            //         console.log(`🔁 SWAP via LiFi:
+                            // - Dari     : ${fromAmount.toFixed(6)} ${fromToken?.symbol} @ ${fromPriceUSD.toFixed(4)} USD
+                            // - Ke       : ${amount_out.toFixed(6)} ${toToken?.symbol} @ ${toPriceUSD.toFixed(4)} USD
+                            // - Modal    : ${fromValueUSD.toFixed(4)} USD
+                            // - Est. Hasil: ${toValueUSD.toFixed(4)} USD
+                            // - Fee Gas  : ${FeeSwap.toFixed(4)} USD
+                            // - ➖ Selisih/Loss: ${lossUSD.toFixed(4)} USD
+                            // `);
+                                } else {
+                                    amount_out = 0;
+                                    FeeSwap = 0;
+                                    console.warn("⚠️ LiFi: Tidak ada route tersedia.");
+                                }
+
+                                break;
+                            }
+
+
 
                             default:
                                 throw new Error(`DEX type ${dexType} not supported.`);
