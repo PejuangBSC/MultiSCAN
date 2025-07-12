@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitoring Price Coins</title>
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.freepik.com/512/9713/9713115.png" />
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/6811/6811895.png" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <style>
+<style>
         :root {
             --primary-color: #2563eb;
             --secondary-color: #64748b;
@@ -27,7 +27,9 @@
         }
 
         .navbar {
-            background: linear-gradient(135deg, var(--primary-color), #3b82f6);
+            /* background: linear-gradient(135deg, var(--primary-color), #3b82f6); */
+            background: linear-gradient(135deg, var(--primary-color), #a98467);
+
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
@@ -128,32 +130,28 @@
             box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
         }
 
-        .nav-tabs .nav-link.active {
+        /* .nav-tabs .nav-link.active {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
             color: white;
-        }
-
-        .token-detail-header {
-            background-color: #a5a6e2 !important;
-            color: white !important;
-            font-weight: 700;
-            min-width: 200px;
-        }
+        } */
 
         /* Terapkan juga ke semua konten di dalamnya */
         .token-detail-cell * {
-            background-color: #d7cef5;
-            padding-top:3px;
-            padding-bottom:3px;
+            background-color: #eed7bd;
+            padding-top:2px;
+            padding-bottom:2px;
         }
 
         .price-comparison-table thead th {
-            background: #a5a6e2;
-            color: rgb(6, 0, 0);
-            font-weight: bold;
-            text-align: center;
+            background: #b08968; /* warna coklat kalem */
+            color: #fff;
         }
+
+        .nav-tabs .nav-link.active {
+            background-color: #b08968; /* warna coklat kalem */
+        }
+
 
         /* 1. Hilangkan border atau garis bawah dari heading/tombol toggle */
         .card-body .d-flex .text-uppercase {
@@ -287,11 +285,10 @@
 
         /* Warna untuk tab AKTIF */
         .nav-tabs .nav-link.active {
-        background-color: #845ef5; /* hijau */
+        background-color: #b08968; /* warna coklat kalem */
         color: white;
         font-weight: bold;
         }
-
         /* Warna untuk tab NON-AKTIF */
         .nav-tabs .nav-link {
         background-color: #f3f4f6; /* abu muda */
@@ -326,19 +323,15 @@
             background-color: #eaeaeb !important; 
         }
         .biru{
-            background-color: #a5a6e1 !important; 
+            background-color: #d6bfa4 !important; 
         }
-        /* Override warna strip bawaan Bootstrap */
-       
-        /* Orderbook ikut mewarisi warna belang */
 
         .token-data-row.strip-even > td {
-        /* background-color: #f0f9f7 !important; */
-        background-color: #f3f4fe !important;
+            background-color: #f2e6d9 !important;
         }
 
         .token-data-row.strip-odd > td {
-        background-color: #ede9fe !important;
+            background-color: #faf9f8 !important;
         }
 
         .card.no-rounded-bottom {
@@ -375,10 +368,10 @@
 
                 <!-- Header Panel -->
                 <div class="card shadow-sm">
-                    <div class="px-3 py-2 rounded-top" style="background-color: #845ef5;">
+                    <div class="px-3 py-2 rounded-top" style="background-color: #b08968;">
                         <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
                             <div class="d-flex align-items-center flex-wrap gap-3">
-                                <h5 class="card-title text-light mb-0">[ Monitoring Price Coins V2]</h5>
+                                <h5 class="card-title text-light mb-0">[ Monitoring Price Coins]</h5>
                                 <div id="gasTokenPrices">
                                     <small class="fw-bold text-warning">BNB: <span id="bnbPrice">--</span> | </small>
                                     <small class="fw-bold text-dark">ETH: <span id="ethPrice">--</span> | </small>
@@ -412,18 +405,13 @@
                 </div>
 
                 <!-- Info + Kontrol Panel -->
-                <div class="border border-dark rounded-bottom px-3 py-2" style="background-color: #e5efff;">
+                <div class="border border-dark rounded-bottom px-3 py-2" style="background-color: #f4ebe2;">
                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
 
                         <!-- Info -->
                         <div>
                             <small class="fw-bold text-danger">
                                 INFO: <span id="infostatus" class="text-primary">---</span>
-                            </small>
-                        </div>
-                         <!-- durasi -->
-                        <div class="mt-2">
-                            <small id="scanTimeInfo" class="text-danger text-end fw-bold">                                
                             </small>
                         </div>
                         <!-- Kontrol -->
@@ -451,7 +439,7 @@
                     <!-- Progress Bar -->
                     <div class="bg-white" style="height: 18px;">
                         <div class="progress h-100">
-                            <div class="progress-bar progress-bar-striped  bg-primary d-flex align-items-center px-2"
+                            <div class="progress-bar progress-bar-striped  bg-warning d-flex align-items-center px-2"
                                 id="scanProgressBar"
                                 role="progressbar"
                                 style="width: 100%;">
@@ -474,21 +462,21 @@
                     top: 35%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    background: #8870e7;
-                    border: 2px solid rgba(145, 145, 245, 1);
-                    color: #ffffff;
+                    background: #f2e6d9;
+                    border: 2px solid b6753e(145, 145, 245, 1);
+                    color: #010000;
                     padding: 20px 30px;
                     border-radius: 10px;
                     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
                     font-family: sans-serif;
-                    font-size: 19px;
+                    font-size: 16px;
                     z-index: 9999;
                     text-align: center;
                 ">
                     ✅ <strong>SCAN SELESAI!</strong><br/>
-                    🎉 Harga CEX & DEX berhasil discan!<br/>
-                    💰 PNL dan profit sudah siap dianalisis!<br/>
-                    🕓 Ayo Semangat!! Mengejar Profit!<br/>
+                    <!-- 🎉 Harga CEX & DEX berhasil discan!<br/> -->
+                    💰 DATA Siap di ANALISA<br/>
+                    <!-- 🕓 Ayo Semangat!! Mengejar Profit!<br/> -->
                     🚀 Saatnya cari CUAN 🤩 !!
                 </div>
 
@@ -518,6 +506,13 @@
                     <i class="bi bi-gear"></i> Settings Aplikasi
                 </a>
             </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">
+                <small id="scanTimeInfo" class="text-danger text-end fw-bold"></small>  
+                <small id="scanProgressText" class="text-muted"></small>  
+            </a>
+        </li>
+
         </ul>
 
         <!-- Tab Content -->
@@ -578,31 +573,18 @@
                             <table class="table table-bordered table-hover price-comparison-table" id="priceTable">
                                 <thead class="table-secondary">
                                     <tr>
-                                        <th rowspan="2" class="text-center align-middle">CEX</th>
+                                        <th  class="text-center align-middle">CEX</th>
                                         <th colspan="6" class="text-center align-middle">CEX → DEX</th>
-                                        <th rowspan="2" class="text-center align-middle token-detail-header">DETAIL TOKEN  
+                                        <th  class="text-center align-middle token-detail-header">DETAIL TOKEN  
                                             <button class="btn" id="sortByToken">
                                             <i id="sortIcon" class="bi bi-sort-alpha-down"></i>
                                             </button>
                                         </th>
                                         <th colspan="6" class="text-center align-middle">DEX → CEX</th>
-                                        <th rowspan="2" class="text-center align-middle">CEX</th>
+                                        <th  class="text-center align-middle">CEX</th>
                                     </tr>
-                                    <tr id="dexHeaderRow">
-                                        <th class="text-center">LIFI</th>
-                                        <th class="text-center">KyberSwap</th>
-                                        <th class="text-center">Matcha</th>
-                                        <th class="text-center">OKDEX</th>
-                                        <th class="text-center">ODOS</th>
-                                        <th class="text-center">ParaSwap</th>
-                                        <!-- <th class="text-center">Magpie</th> -->
-                                        <th class="text-center">LIFI</th>
-                                        <th class="text-center">KyberSwap</th>
-                                        <th class="text-center">Matcha</th>
-                                        <th class="text-center">OKDEX</th>
-                                        <th class="text-center">ODOS</th>
-                                        <th class="text-center">ParaSwap</th>
-                                        <!-- <th class="text-center">Magpie</th> -->
+                                    <tr id="dexHeaderRow">                                        
+                                        
                                     </tr>
                                 </thead>
                                 <tbody id="priceTableBody">
@@ -633,10 +615,6 @@
                                     <button class="btn btn-sm btn-outline-danger" id="importTokensBtn">
                                         <i class="bi bi-upload"></i> Import
                                     </button>
-
-                                    <!-- <button class="btn btn-sm btn-outline-dark" id="Unlock">
-                                        <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank"><i class="bi bi-lock"></i>Unlock</a>
-                                    </button> -->
                                     
                                     <button class="btn btn-sm btn-outline-info" id="CheckCEX">
                                         <i class="bi bi-wallet"></i> Check CEX
@@ -724,10 +702,7 @@
             <div class="tab-pane fade" id="apiSettings">
                 <div class="row">
                     <div class="col-md-6 offset-md-3">
-                        <div class="card mt-4">
-                            <div class="card-header bg-primary text-white">
-                                <i class="bi bi-gear me-2"></i> APP Settings
-                            </div>
+                        <div class="card mt-4">                            
                             <div class="card-body">
                                 <form id="settingsForm">
                                     <div class="mb-3">
