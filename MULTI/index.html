@@ -130,19 +130,14 @@
             box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
         }
 
-        /* .nav-tabs .nav-link.active {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            color: white;
-        } */
-
         /* Terapkan juga ke semua konten di dalamnya */
-        .token-detail-cell * {
-            background-color: #eed7bd;
+       
+        .token-detail-cell *:not(button):not(.btn):not(i):not(.bi) {
+            background-color: #d6bfa4;
             padding-top:2px;
             padding-bottom:2px;
         }
-
+        
         .price-comparison-table thead th {
             background: #b08968; /* warna coklat kalem */
             color: #fff;
@@ -751,162 +746,6 @@
            
         </div>
     </div>
-
-    <!-- Token Modal 
-    <div class="modal fade" id="tokenModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">
-                        <i class="bi bi-coin me-2"></i>
-                        <span id="modalTitle">Add New Token</span>
-                    </h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="tokenForm">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Token Symbol</label>
-                                    <input type="text" class="form-control" id="tokenSymbol" placeholder="NAMA/SYMBOL KOIN DI CEX" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Pair Symbol</label>
-                                    <input type="text" class="form-control" id="pairSymbol" placeholder="NAMA/SYMBOL KOIN DI DEX" required>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Token Contract Address</label>
-                                    <input type="text" class="form-control" id="tokenContract" placeholder="0x..." required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Pair Contract Address</label>
-                                    <input type="text" class="form-control" id="pairContract" placeholder="0x..." required>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label class="form-label">Token Decimals</label>
-                                    <input type="number" class="form-control" id="tokenDecimals" value="18" min="0" max="18">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label class="form-label">Pair Decimals</label>
-                                    <input type="number" class="form-control" id="pairDecimals" value="18" min="0" max="18">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="mb-3">
-                                    <label class="form-label">Chain</label>
-                                    <select class="form-select" id="tokenChain" required>
-                                        <option value="">Select Chain</option>
-                                        <option value="BSC">BSC</option>
-                                        <option value="Ethereum">Ethereum</option>
-                                        <option value="Polygon">Polygon</option>
-                                        <option value="Base">Base</option>
-                                        <option value="Arbitrum">Arbitrum</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Modal CEX → DEX ($)</label>
-                                    <input type="number" class="form-control" id="modalCexToDex" value="100" min="1" step="0.01">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Modal DEX → CEX ($)</label>
-                                    <input type="number" class="form-control" id="modalDexToCex" value="100" min="1" step="0.01">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Select CEX</label>
-                                    <div class="border rounded p-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Binance" id="cexBinance">
-                                            <label class="form-check-label" for="cexBinance">Binance</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Gateio" id="cexGate">
-                                            <label class="form-check-label" for="cexGate">Gateio</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="MEXC" id="cexMexc">
-                                            <label class="form-check-label" for="cexMexc">MEXC</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="INDODAX" id="cexINDODAX">
-                                            <label class="form-check-label" for="cexMexc">INDODAX</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label class="form-label">Select DEX</label>
-                                    <div class="border rounded p-3">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Lifi" id="dexLifi">
-                                            <label class="form-check-label" for="dexLifi">Lifi <span class="text-danger">{Alternatif DEX}</span></label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="KyberSwap" id="dexKyber">
-                                            <label class="form-check-label" for="dexKyber">KyberSwap</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Matcha" id="dexMatcha">
-                                            <label class="form-check-label" for="dexMatcha">Matcha</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="OKXDEX" id="dexOkx">
-                                            <label class="form-check-label" for="dexOkx">OKX DEX</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="ODOS" id="dexOdos">
-                                            <label class="form-check-label" for="dexOdos">ODOS</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="ParaSwap" id="dexParaSwap">
-                                            <label class="form-check-label" for="dexParaSwap">ParaSwap</label>
-                                        </div>
-               
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" id="saveTokenBtn">
-                        <i class="bi bi-check-lg"></i> Save Token
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
--->
 <!-- ✅ MODAL TOKEN FORM -->
     <div class="modal fade" id="tokenModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
