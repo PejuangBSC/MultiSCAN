@@ -40,7 +40,7 @@
     }
 
     table#assetTableCexs thead.cex-header th {
-        background-color: rgb(30 135 240);
+        background-color: color(srgb 0.19 0.49 0.62);
         color: white !important;
         font-weight: bolder;
         text-align: center;
@@ -57,7 +57,7 @@
     }
 
     table#assetTablePNL thead.pnl-header th {
-        background-color:#abf89b;
+        background-color:#51c68f;
         color: black !important;
         font-weight: bolder;
         text-align: center;
@@ -94,9 +94,9 @@
 <body>
 
 <div class="uk-container uk-margin-small-top">
-    <!-- Grid Container -->
-        <h3 class="uk-heading-line" style="text-align: center; color: green; margin-bottom: 0px;"><span>MANAJEMEN ASSET</span> <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /></h3>
+        <h3 class="uk-heading-line" style="text-align: center; color: color(srgb 0.19 0.49 0.62); margin-bottom: 0px;"><span>PORTOFOLIO ASSET</span> <img src="https://coopsugar.org/storage/2022/03/new.gif" width="50px" /></h3>
 
+    <!-- Grid Container -->
     <div class="uk-grid uk-child-width-1-3 uk-grid-small " uk-grid>
       
          <div>
@@ -269,15 +269,9 @@
               <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                 <!-- Gambar kiri -->
                 <div>
-                    <!-- <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank">
-                        <img title="BUKA AKSES" src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px" />
-                    </a>&nbsp;&nbsp; -->
-                     <a href="https://multiscan-ruby.vercel.app/MULTI/modal.html" target="_blank">
+                    <a href="https://multiscan-ruby.vercel.app/MULTI/modal.html" target="_blank">
                         <img title="TAB SENDIRI" src="https://cdn-icons-png.flaticon.com/512/5548/5548820.png" width="28px" />
                     </a>&nbsp;&nbsp;
-                    <!-- <a href="#" target="_blank" id="reload">
-                      <img title="RELOAD PAGE" src="https://cdn-icons-png.freepik.com/512/210/210136.png" width="25px" />
-                    </a>&nbsp;&nbsp; -->
                     <a href="#" target="_blank" id="openModalKalkulator">
                         <img title="KALKULATOR" src="https://cdn-icons-png.flaticon.com/512/342/342344.png" width="25px" />
                     </a>&nbsp;&nbsp;
@@ -285,7 +279,7 @@
             
                 <!-- Tombol kanan -->
                 <div class="uk-text-right">
-                    <button class="uk-button uk-button-small uk-text-secondary" style="background-color: rgb(169, 232, 169); font-weight: bold;" id="CheckModal">Check ASSET</button>
+                    <button class="uk-button uk-button-small uk-text-secondary" style="background-color:color(srgb 0.32 0.78 0.56); font-weight: bold;" id="CheckModal">Check ASSET</button>
                     <button class="uk-button uk-button-small uk-button-danger" id="ResetModal">Reset MODAL</button>
                 </div>
             </div>
@@ -531,7 +525,7 @@
 
             // Fetch initial rates
             function fetchRatesx() {
-                const binanceURL = encodeURIComponent('https://www.binance.com/api/v3/ticker/price?symbols=["BTCUSDT","ETHUSDT","BNBUSDT","POLUSDT","AVAXUSDT","SOLUSDT"]');
+                const binanceURL = encodeURIComponent('https://data-api.binance.vision/api/v3/ticker/price?symbols=["BTCUSDT","ETHUSDT","BNBUSDT","POLUSDT","AVAXUSDT","SOLUSDT"]');
                 const indodaxURL = encodeURIComponent('https://indodax.com/api/ticker/usdtidr');
 
                 $.when(
@@ -719,8 +713,10 @@
         const chains = {
             ethereum: `https://mainnet.infura.io/v3/${infuraApiKey}`,
             bsc: 'https://bsc-dataseed.binance.org/',
+           //bsc:'https://binance.llamarpc.com',
             polygon: 'https://polygon-pokt.nodies.app',
-            base: 'https://mainnet.base.org',
+            base:'https://base.llamarpc.com',
+           // base: 'https://mainnet.base.org',
             arbitrum: `https://arbitrum-mainnet.infura.io/v3/${infuraApiKey}`,
             avax: `https://avalanche-mainnet.infura.io/v3/${infuraApiKey}`,
             solana: 'https://api.mainnet-beta.solana.com' 
@@ -1051,7 +1047,7 @@
 
         async function ETHUSDT() {
             try {
-                const response = await fetch("https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT");
+                const response = await fetch("https://data-api.binance.vision/api/v3/ticker/price?symbol=ETHUSDT");
                 const data = await response.json();
                 return parseFloat(data.price);
             } catch (error) {
@@ -1400,7 +1396,7 @@
             const apiSecret = $("#secretkeyBINANCE").val();
             if (!apiKey || !apiSecret) return;
 
-            const apiUrl = "https://api.binance.com/api/v3/account";
+            const apiUrl = "https://api-gcp.binance.com/api/v3/account";
             const timestamp = Date.now();
             const queryString = `timestamp=${timestamp}`;
             const signature = CryptoJS.HmacSHA256(queryString, apiSecret).toString(CryptoJS.enc.Hex);
@@ -1937,7 +1933,7 @@
         async function fetchTokenRates() {
             try {
                 // Melakukan fetch data dari API
-                const response = await fetch("https://api-gcp.binance.com/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22,%22POLUSDT%22,%22AVAXUSDT%22,%22SOLUSDT%22]");
+                const response = await fetch("https://data-api.binance.vision/api/v3/ticker/price?symbols=[%22BTCUSDT%22,%22ETHUSDT%22,%22BNBUSDT%22,%22POLUSDT%22,%22AVAXUSDT%22,%22SOLUSDT%22]");
                 
                 // Mengecek apakah respons valid
                 if (!response.ok) {
