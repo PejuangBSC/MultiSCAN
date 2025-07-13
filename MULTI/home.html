@@ -316,6 +316,15 @@
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
     }
 
+    /* Override bootstrap .table-striped striping dengan warna custom */
+    .custom-striped tbody tr:nth-of-type(odd) > td {
+        background-color: var(--strip-odd) !important;
+    }
+
+    .custom-striped tbody tr:nth-of-type(even) > td {
+        background-color: var(--strip-even) !important;
+    }
+
     </style>
 
 
@@ -596,15 +605,14 @@
 
                             <div class="card-body p-0">
                                 <div class="table-responsive sticky-table-container" style="max-height: 800px; overflow-y: auto;">
-                                    <table class="table table-hover table-striped mb-0 sticky-table" id="tokenTable">
+                                    <table class="table table-hover custom-striped mb-0 sticky-table" id="tokenTable">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Symbol</th>
-                                                <th>Chain</th>
-                                                <th>CEX</th>
+                                                <th>Symbol Token / Pair</th>
+                                                <th>Chain & Status</th>
+                                                <th>Exchanger (CEX)</th>
                                                 <th>DEX</th>
-                                                <th>Status</th>
                                             </tr>
                                         </thead>
                                         <tbody id="tokenTableBody">

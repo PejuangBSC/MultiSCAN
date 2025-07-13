@@ -105,23 +105,38 @@ class TokenPriceMonitor {
             this.logAction(`UBAH DATA KOIN`);
             console.log(`📝 Menyimpan field dari token ${token.symbol}:`, token);
 
+             this.loadTokenTable();
+             this.updateStats();
         });
 
+        $(document).off('change', '.update-cex-checkbox').on('change', '.update-cex-checkbox', (e) => {
+            const checkbox = $(e.target);
+            const tokenId = checkbox.data('token-id');
+            const cexName = checkbox.data('cex');
+            const isChecked = checkbox.is(':checked');
 
-        $(document).on('change', '.chainFilterCheckbox', () => {
-            const selectedChains = $('.chainFilterCheckbox:checked').map(function () {
-                return $(this).val();
-            }).get();
+            const tokenIndex = this.tokens.findIndex(t => t.id.toString() === tokenId.toString());
+            if (tokenIndex === -1) return;
 
-            localStorage.setItem('MULTI_selectedChains', JSON.stringify(selectedChains));
-            this.selectedChains = selectedChains; // <-- Penting!
+            const token = this.tokens[tokenIndex];
+            if (isChecked) {
+                if (!token.selectedCexs.includes(cexName)) {
+                    token.selectedCexs.push(cexName);
+                }
+            } else {
+                token.selectedCexs = token.selectedCexs.filter(c => c !== cexName);
+            }
 
-            this.generateEmptyTable();
-            this.updateStats();
-            location.reload();
+            this.saveTokensToStorage(true);
+
+            const emoji = isChecked ? '✅' : '❌';
+            const alertType = isChecked ? 'primary' : 'danger';
+            this.showAlert(`${emoji} ${cexName} ${isChecked ? 'ditambahkan ke' : 'dihapus dari'} token ${token.symbol}`, alertType);
+
+             this.logAction(`UBAH DATA KOIN`);
         });
 
-        $(document).off('change', '.update-dex-checkbox').on('change', '.update-dex-checkbox', (e) => {
+       $(document).off('change', '.update-dex-checkbox').on('change', '.update-dex-checkbox', (e) => {
             const checkbox = $(e.target);
             const tokenId = checkbox.data('token-id');
             const dexName = checkbox.data('dex');
@@ -139,12 +154,29 @@ class TokenPriceMonitor {
                 token.selectedDexs = token.selectedDexs.filter(d => d !== dexName);
             }
             this.saveTokensToStorage(true);
- 
+
             const emoji = isChecked ? '✅' : '❌';
             const alertType = isChecked ? 'primary' : 'danger';
             this.showAlert(`${emoji} ${dexName} ${isChecked ? 'ditambahkan ke' : 'dihapus dari'} token ${token.symbol}`, alertType);
+            
+            this.logAction(`UBAH DATA KOIN`);
 
         });
+
+        $(document).on('change', '.chainFilterCheckbox', () => {
+            const selectedChains = $('.chainFilterCheckbox:checked').map(function () {
+                return $(this).val();
+            }).get();
+
+            localStorage.setItem('MULTI_selectedChains', JSON.stringify(selectedChains));
+            this.selectedChains = selectedChains; // <-- Penting!
+
+            this.generateEmptyTable();
+            this.updateStats();
+            location.reload();
+        });
+
+       
 
         $('#CheckPrice').on('click', async () => {
             // Aktifkan tab Price Monitoring
@@ -803,17 +835,22 @@ class TokenPriceMonitor {
         if (token) {
             token.isActive = !token.isActive;
             this.saveTokensToStorage();
+
+            // ⬅️ Tambahkan ini agar tabel langsung ter-update:
+            this.loadTokenTable(); 
+            this.updateStats();
+
             const status = token.isActive ? 'diaktifkan' : 'dinonaktifkan';
             this.showAlert(`Token ${token.symbol} telah ${status}`, 'info');
 
             this.logAction(`UBAH STATUS KOIN`);
             return token;
         }
-        showAlert(`Token tidak ditemukan`, 'danger');
-            this.loadTokenTable();
-            this.updateStats();
+
+        this.showAlert(`Token tidak ditemukan`, 'danger');
         return null;
     }
+
 
     getCexList() {
         return CexList;
@@ -897,7 +934,7 @@ class TokenPriceMonitor {
                 const checkedAttr = isChecked ? 'checked' : '';
                 const colorClass = this.getBadgeColor(cex, 'cex');
                 return `<label class="me-2 badge ${colorClass}" style="cursor: pointer;">
-                            <input type="checkbox" class="update-cex-checkbox"
+                            <input type="checkbox" class="update-cex-checkbox btn-xs"
                                 data-token-id="${token.id}" data-cex="${cex}" value="${cex}" ${checkedAttr}/> ${cex}
                         </label>`;
             }).join('');
@@ -924,11 +961,15 @@ class TokenPriceMonitor {
                 </div>
             `;
 
-        const statusBtnClass = token.isActive ? 'btn-success' : 'btn-outline-secondary';
+            const isActive = token.isActive;
+            const statusText = isActive ? 'ON' : 'OFF';
+            const statusLabelClass = isActive ? 'btn-outline-success text-success' : 'btn-outline-danger text-danger';  // warna solid
+
+            const statusBtnClass = token.isActive ? 'btn-success' : 'btn-outline-secondary';
 
             tbody.append(`
                 <tr>
-                    <td>${index + 1}</td>
+                    <td class="align-middle">${index + 1}</td>
                     <td>
                         <div class="d-flex flex-column small text-muted" style="line-height: 1.2;">
                         
@@ -961,7 +1002,32 @@ class TokenPriceMonitor {
                             </div>
                         </div>
                     </td>
-                    <td>${chainSelect}</td>
+
+                   <td>
+                        <div class="d-flex flex-column gap-1">
+                            ${chainSelect}
+
+                            <!-- Grup ON/OFF + Delete -->
+                            <div class="btn-group btn-group-sm" role="group" aria-label="Control group">
+                                <!-- Label status ON/OFF -->
+                                <button class="btn ${statusLabelClass} btn-sm disable px-2 py-0">${statusText}</button>
+
+                                <!-- Tombol Power -->
+                                <button class="btn ${statusBtnClass} btn-sm px-2 py-0"
+                                        onclick="app.toggleTokenStatus('${token.id}')" title="Toggle Status">
+                                    <i class="bi bi-power small"></i>
+                                </button>
+
+                                <!-- Tombol Delete -->
+                                <button class="btn btn-outline-danger btn-sm px-2 py-0"
+                                        onclick="app.deleteToken('${token.id}')" title="Delete">
+                                    <i class="bi bi-trash small"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+
+
                     <td>
                         <div class="input-group input-group-sm mb-1 " style="width: 180px;">
                             <span class="me-2 fw-bold ">Modal:</span>
@@ -996,23 +1062,11 @@ class TokenPriceMonitor {
                         </div>
                         ${dexCheckboxes}
                     </td>
-                    <td>
-                        <div class="btn-group btn-group-sm">       
-                            <button class="btn ${statusBtnClass}" onclick="app.toggleTokenStatus('${token.id}')" title="Toggle Status">
-                                <i class="bi bi-power"></i>
-                            </button>
-                                            
-                            <button class="btn btn-outline-danger" onclick="app.deleteToken('${token.id}')" title="Delete">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </div>
-
-                    </td>
+                   
                 </tr>
             `);
         });
     }
-
 
     shortenAddress(address, start = 6, end = 6) {
         if (!address || address.length <= start + end) return address;
@@ -2339,7 +2393,7 @@ class TokenPriceMonitor {
             <div>
                 <!-- Baris tombol dan modal -->
                 <span class="d-block mb-0">   
-                    <button class="btn bg-info-subtle btn-xs text-dark"  onclick="app.confirmToggleToken('${token.id}')" title="Ganti Status">
+                    <button class="btn bg-success btn-xs text-light"  onclick="app.confirmToggleToken('${token.id}')" title="Ganti Status">
                         <i class="bi bi-power"></i>
                     </button>
 
