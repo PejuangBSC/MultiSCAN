@@ -4,479 +4,422 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitoring Price Coins</title>
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/6811/6811895.png" />
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/11286/11286940.png" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Custom CSS -->
-<style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #64748b;
-            --success-color: #10b981;
-            --danger-color: #ef4444;
-            --warning-color: #f59e0b;
-            --dark-color: #1e293b;
-            --light-color: #f8fafc;
-        }
+    <style>
 
-        body {
-            background-color: var(--light-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    :root {
+         --primary-color: #3270f8;
+        --secondary-color: #64748b;
+        --success-color: #10b981;
+        --danger-color: #d65959;
+        --warning-color: #d29403;
+        --dark-color: #1e293b;
+        --light-color: #f8fafc;
+        --card-color: #ffffff;
+        --accent-blue: #2f7c9f;
+        --muted-blue: #e0ecf4;
+        --strip-even: #e6edf4;
+        --strip-odd: #ffffff;
+        --not-scanned: #b3d1de;
+    }
 
-        .navbar {
-            /* background: linear-gradient(135deg, var(--primary-color), #3b82f6); */
-            background: linear-gradient(135deg, var(--primary-color), #a98467);
+    body {
+        background-color: var(--light-color);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--dark-color);
+    }
 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+    .navbar {
+        background: linear-gradient(135deg, var(--primary-color), #6d9dc5);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-        .card {
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
+    .card {
+        border: none;
+        border-radius: 12px;
+        background-color: var(--card-color);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
 
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
+    .btn {
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    .btn:hover {
+        transform: translateY(-1px);
+    }
 
-        .btn {
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
+    .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+    .btn-primary:hover {
+        background-color: #2c5ed3;
+    }
 
-        .btn:hover {
-            transform: translateY(-1px);
-        }
+    .btn-danger {
+        background-color: var(--danger-color);
+        border-color: var(--danger-color);
+    }
+    .btn-danger:hover {
+        background-color: #b94444;
+    }
 
-        .table thead th {
-            color: rgb(92, 94, 110);
-            border: none;
-            font-weight: 600;
-        }
+    .table thead th {
+        background-color: var(--accent-blue);
+        color: #fff;
+        border: none;
+        font-weight: 600;
+    }
 
-        .price-positive {
-            color: var(--success-color);
-            font-weight: 600;
-        }
+    .price-positive { color: var(--success-color); font-weight: 600; }
+    .price-negative { color: var(--danger-color); font-weight: 600; }
+    .price-neutral { color: var(--secondary-color); font-weight: 600; }
 
-        .price-negative {
-            color: var(--danger-color);
-            font-weight: 600;
-        }
+    .status-indicator {
+        width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 8px;
+    }
+    .status-active {
+        background-color: var(--success-color); animation: pulse 2s infinite;
+    }
+    .status-inactive { background-color: var(--secondary-color); }
 
-        .price-neutral {
-            color: var(--secondary-color);
-            font-weight: 600;
-        }
+    @keyframes pulse {
+        0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; }
+    }
 
-        .status-indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 8px;
-        }
+    .countdown {
+        font-family: 'Courier New', monospace;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
 
-        .status-active {
-            background-color: var(--success-color);
-            animation: pulse 2s infinite;
-        }
+    .exchange-badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        margin: 0.125rem;
+    }
 
-        .status-inactive {
-            background-color: var(--secondary-color);
-        }
+    .loading-spinner { display: none; }
+    .loading .loading-spinner { display: inline-block; }
 
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
+    .modal-header {
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-blue));
+        color: white;
+    }
 
-        .countdown {
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
+    .form-control:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+    }
 
-        .exchange-badge {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            margin: 0.125rem;
-        }
+    .token-detail-cell *:not(button):not(.btn):not(i):not(.bi) {
+        background-color: #d8f0ff;
+        padding-top:2px; padding-bottom:2px;
+        margin: 2px 0px;
+    }
 
-        .loading-spinner {
-            display: none;
-        }
+    .price-comparison-table thead th {
+        background: var(--accent-blue);
+        color: #fff;
+    }
 
-        .loading .loading-spinner {
-            display: inline-block;
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, var(--primary-color), #3b82f6);
-            color: white;
-        }
-
-        .form-control:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
-        }
-
-        /* Terapkan juga ke semua konten di dalamnya */
-       
-        .token-detail-cell *:not(button):not(.btn):not(i):not(.bi) {
-            background-color: #d6bfa4;
-            padding-top:2px;
-            padding-bottom:2px;
-        }
-        
-        .price-comparison-table thead th {
-            background: #b08968; /* warna coklat kalem */
-            color: #fff;
-        }
-
-        .nav-tabs .nav-link.active {
-            background-color: #b08968; /* warna coklat kalem */
-        }
-
-
-        /* 1. Hilangkan border atau garis bawah dari heading/tombol toggle */
-        .card-body .d-flex .text-uppercase {
-            border-bottom: none !important;
-        }
-
-        /* 2. Atur margin/padding di bawah ul agar lebih padat */
-        .card-body ul {
-            margin-bottom: 0 !important;
-            padding-bottom: 0 !important;
-        }
-
-        /* 3. Hilangkan padding bawah pada card-body */
-        .card-body {
-            padding-bottom: 0.25rem !important;
-        }
-
-        /* 4. Hilangkan space putih bawah total card */
-        .card.h-100 {
-            margin-bottom: 0 !important;
-        }
-
-        /* 5. Atur tinggi minimum (jika diperlukan) agar konsisten */
-        .card .collapse {
-            min-height: 0 !important;
-        }
-        .collapse {
-            padding-bottom: 0 !important;
-            margin-bottom: 0 !important;
-        }
-
-
-        .price-info {
-            margin-bottom: 0.25rem;
-        }
-
-        .fee-info {
-            color: #73091a;
-        }
-
-        .pnl-info {
-            font-size: 0.8rem;
-            font-weight: bolder;
-        }
-
-        .pnl-positive {
-            color: var(--success-color);
-        }
-
-        .pnl-negative {
-            color: var(--danger-color);
-        }
-
-        .token-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .token-links a {
-            font-size: 0.8rem;
-            text-decoration: none;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            background-color: #f1f5f9;
-            color: #475569;
-            transition: all 0.2s ease;
-        }
-
-        .token-links a:hover {
-            background-color: #e2e8f0;
-            color: #334155;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .opit {
-            color: #198754; /* hijau Bootstrap */
-        }
-
-        .lost {
-            color: #dc3545; /* merah Bootstrap */
-        }
-        
-        .scrollable-price-table {
-            overflow-x: auto;
-            overflow-y: auto;
-            max-height: 800px;
-            width: 100%;
-        }
-        .price-comparison-table {
-            min-width: 1800px; /* atau lebih besar */
-            table-layout: auto;
-        }
-        .price-comparison-table th {
-            position: sticky;
-            top: 0;
-            background-color: #f8f9fa;
-            z-index: 5;
-            white-space: nowrap;
-        }
-        .price-comparison-table td,
-        .price-comparison-table th {
-            word-break: break-word;
-            white-space: normal;
-            vertical-align: middle;
-        }
-        .dex-price-cell, .cex-price-cell, .token-detail-cell {
-            word-break: break-word;
-            white-space: normal;
-            max-width: 120px;
-            min-width: 100px;
-        }
-        #dexSignals div {
-            font-size: 0.75rem;
-            margin-bottom: 2px;
-        }
-        #dexSignals ul {
-            margin-bottom: 0;
-        }
-        #dexSignals li {
-            font-size: 0.8rem;
-            margin-bottom: 1px;
-        }
-        .highlight-row {
-            background-color: #ffe8a1 !important;
-            transition: background-color 0.5s ease;
-        }
-
-        /* Warna untuk tab AKTIF */
-        .nav-tabs .nav-link.active {
-        background-color: #b08968; /* warna coklat kalem */
+    .nav-tabs .nav-link.active {
+        background-color: var(--accent-blue);
         color: white;
         font-weight: bold;
-        }
-        /* Warna untuk tab NON-AKTIF */
-        .nav-tabs .nav-link {
-        background-color: #f3f4f6; /* abu muda */
+    }
+    .nav-tabs .nav-link {
+        background-color: #f3f4f6;
         color: #111827;
         border: 1px solid transparent;
         margin: 2px;
-        }
-
-        /* Hover (opsional) */
-        .nav-tabs .nav-link:hover {
+    }
+    .nav-tabs .nav-link:hover {
         background-color: #d1fae5;
         color: #065f46;
-        }
-        .pnl-highlight {
-            background-color: #cbfdd9 !important;
-        }
-        .highlight-cell {
-            outline: 3px solid orange;
-            animation: flashCell 1s ease-in-out;
-        }
-        @keyframes flashCell {
-            0% { background-color: #fffae6; }
-            100% { background-color: transparent; }
-        }
-        .pink{
-            background-color: #fccbce !important; 
-        } 
-        .abu{
-            background-color: #d8dbdf !important; 
-        }
-        .highlight{
-            background-color: #eaeaeb !important; 
-        }
-        .biru{
-            background-color: #d6bfa4 !important; 
-        }
+    }
 
-        .token-data-row.strip-even > td {
-            background-color: #f2e6d9 !important;
-        }
+    .card-body .d-flex .text-uppercase { border-bottom: none !important; }
+    .card-body ul { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+    .card-body { padding-bottom: 0.25rem !important; }
+    .card.h-100 { margin-bottom: 0 !important; }
+    .card .collapse { min-height: 0 !important; }
+    .collapse { padding-bottom: 0 !important; margin-bottom: 0 !important; }
 
-        .token-data-row.strip-odd > td {
-            background-color: #faf9f8 !important;
-        }
+    .price-info { margin-bottom: 0.25rem; }
+    .fee-info { color: #73091a; }
+    .pnl-info { font-size: 0.8rem; font-weight: bolder; }
+    .pnl-positive { color: var(--success-color); }
+    .pnl-negative { color: var(--danger-color); }
 
-        .card.no-rounded-bottom {
-            border-bottom-left-radius: 0 !important;
-            border-bottom-right-radius: 0 !important;
-        }
-        .btn-xs {
-            padding: 0.25rem 0.25rem;  /* lebih kecil dari .btn-sm */
-            font-size: 0.5rem;       /* kecilkan ukuran font */
-            line-height: 1;
-            border-radius: 0.3rem;
-        }
-        .fs-7 { font-size: 0.875rem; } /* 14px */
-        .fs-8 { font-size: 0.75rem; }  /* 12px */
-        .fs-9 { font-size: 0.7rem; } 
-        .td-not-scanned {
-            background-color: #b4abf5 !important;
-            color: #999 !important;
-            font-style: italic;
-        }
-        #priceTableBody td,
-        #priceTableBody th {
+    .token-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .token-links a {
+        font-size: 0.8rem;
+        text-decoration: none;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        background-color: #f1f5f9;
+        color: #475569;
+        transition: all 0.2s ease;
+    }
+    .token-links a:hover {
+        background-color: #e2e8f0;
+        color: #334155;
+    }
+
+    a { text-decoration: none; }
+    .opit { color: #198754; }
+    .lost { color: #dc3545; }
+
+    .scrollable-price-table {
+        overflow-x: auto;
+        overflow-y: auto;
+        max-height: 800px;
+        width: 100%;
+    }
+    .price-comparison-table {
+        min-width: 1800px;
+        table-layout: auto;
+    }
+    .price-comparison-table th {
+        position: sticky;
+        top: 0;
+        background-color: #f8f9fa;
+        z-index: 5;
+        white-space: nowrap;
+    }
+    .price-comparison-table td,
+    .price-comparison-table th {
+        word-break: break-word;
+        white-space: normal;
+        vertical-align: middle;
+    }
+    .dex-price-cell, .cex-price-cell, .token-detail-cell {
+        max-width: 140px;
+        min-width: 100px;
+    }
+
+    #dexSignals div { font-size: 0.75rem; }
+    #dexSignals ul { margin-bottom: 0; }
+    #dexSignals li { font-size: 0.8rem; margin-bottom: 1px; }
+
+    .highlight-row { background-color: #ffe8a1 !important; transition: background-color 0.5s ease; }
+    .pnl-highlight { background-color: #cbfdd9 !important; }
+    .highlight-cell {
+        outline: 3px solid orange;
+        animation: flashCell 1s ease-in-out;
+    }
+    @keyframes flashCell {
+        0% { background-color: #fffae6; }
+        100% { background-color: transparent; }
+    }
+
+    .pink { background-color: #fccbce !important; }
+    .abu { background-color: #d8dbdf !important; }
+    .highlight { background-color: #e5f0fb !important; }
+    .biru { background-color: #77bcdb !important; }
+
+    .token-data-row.strip-even > td { background-color: var(--strip-even) !important; }
+    .token-data-row.strip-odd > td { background-color: var(--strip-odd) !important; }
+
+    .card.no-rounded-bottom {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+
+    .btn-xs {
+        padding: 0.25rem 0.25rem;
+        font-size: 0.5rem;
+        line-height: 1;
+        border-radius: 0.3rem;
+    }
+
+    .fs-7 { font-size: 0.875rem; }
+    .fs-8 { font-size: 0.75rem; }
+    .fs-9 { font-size: 0.7rem; }
+
+    .td-not-scanned {
+        background-color: var(--not-scanned) !important;
+        color: #999 !important;
+        font-style: italic;
+    }
+
+    #priceTableBody td,
+    #priceTableBody th {
         padding: 0 !important;
-        }
-</style>
+    }
+
+    .section-header {
+        background: var(--accent-blue);
+        color: white;
+    }
+    .section-control-panel {
+        background-color: #e6edf4;
+    }
+
+    .loading-overlay {
+        display: none;
+        position: fixed;
+        top: 10%;
+        left: 0; right: 0; bottom: 0;
+        z-index: 9999;
+        background: rgba(255,255,255,0.8);
+        text-align: center;
+    }
+
+    .custom-alert {
+        display: none;
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #eaf4f2;
+        border: 2px solid rgba(50, 100, 200, 0.3);
+        color: #010000;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        font-family: sans-serif;
+        font-size: 16px;
+        z-index: 9999;
+        text-align: center;
+    }
+
+    /* Sticky header untuk tokenTable */
+    .sticky-table-container {
+        position: relative;
+    }
+
+    .sticky-table thead th {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: var(--accent-blue); /* warna dari :root Anda */
+        color: white;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Override bootstrap .table-striped striping dengan warna custom */
+    .custom-striped tbody tr:nth-of-type(odd) > td {
+        background-color: var(--strip-odd) !important;
+    }
+
+    .custom-striped tbody tr:nth-of-type(even) > td {
+        background-color: var(--strip-even) !important;
+    }
+
+    </style>
+
 
 </head>
 <body>
     <!-- Main Content -->
     <div class="container-fluid mt-0">
         <!-- Control Panel -->
-        <div class="row mb-3">
-            <div class="col-md-12">
+<div class="row mb-3">
+    <div class="col-md-12">
 
-                <!-- Header Panel -->
-                <div class="card shadow-sm">
-                    <div class="px-3 py-2 rounded-top" style="background-color: #b08968;">
-                        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
-                            <div class="d-flex align-items-center flex-wrap gap-3">
-                                <h5 class="card-title text-light mb-0">[ Monitoring Price Coins ]</h5>
-                                <div id="gasTokenPrices">
-                                    <small class="fw-bold text-warning">BNB: <span id="bnbPrice">--</span> | </small>
-                                    <small class="fw-bold text-dark">ETH: <span id="ethPrice">--</span> | </small>
-                                    <small class="fw-bold text-info">MATIC: <span id="maticPrice">--</span> | </small>
-                                    <small class="fw-bold text-light">USDT/IDR: <span id="usdtIdrPrice">--</span></small>
-                                </div>
-                            </div>
+        <!-- Header Panel -->
+        <div class="card shadow-sm">
+            <div class="section-header px-3 py-2 rounded-top">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                    <div class="d-flex align-items-center flex-wrap gap-3">
+                        <h5 class="card-title text-light mb-0">[ Monitoring Price Coins ]</h5>
+                        <div id="gasTokenPrices">
+                            <small class="fw-bold text-warning">BNB: <span id="bnbPrice">--</span> | </small>
+                            <small class="fw-bold text-dark">ETH: <span id="ethPrice">--</span> | </small>
+                            <small class="fw-bold text-info">MATIC: <span id="maticPrice">--</span> | </small>
+                            <small class="fw-bold text-light">USDT/IDR: <span id="usdtIdrPrice">--</span></small>
                         </div>
                     </div>
                 </div>
-
-                <!-- Overlay Loading -->
-                <div id="loadingOverlay" style="
-                    display:none;
-                    position:fixed;
-                    top:10%;
-                    left:0;
-                    right:0;
-                    bottom:0;
-                    z-index:9999;
-                    background:rgba(255,255,255,0.8);
-                    text-align:center;
-                ">
-                    <div class="spinner-border text-primary mt-5" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div>
-                    <p class="mt-3 fw-bold text-primary">
-                        Mohon Menunggu [Layar Freeze], Sedang Proses update wallet CEX...<br>
-                        Jika Mouse digerakkan Layar Akan Berkedip -_-
-                    </p>
-                </div>
-
-                <!-- Info + Kontrol Panel -->
-                <div class="border border-dark rounded-bottom px-3 py-2" style="background-color: #f4ebe2;">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-
-                        <!-- Info -->
-                        <div>
-                            <small class="fw-bold text-danger">
-                                INFO: <span id="infostatus" class="text-primary">---</span>
-                            </small>
-                        </div>
-                        <!-- Kontrol -->
-                        <div class="d-flex align-items-center flex-wrap gap-2">
-                            <a href="#" target="_blank" id="reload" title="RELOAD PAGE">
-                                <img src="https://cdn-icons-png.freepik.com/512/210/210136.png" width="23px">
-                            </a>
-                            <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" title="BUKA AKSES">
-                                <img src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px">
-                            </a>
-                            <button class="btn btn-success btn-sm" id="CheckPrice">
-                                <i class="bi bi-play-fill"></i> Check Price
-                            </button>
-                            <button class="btn btn-danger btn-sm d-none" id="StopScan">
-                                <i class="bi bi-stop-circle"></i> Stop Scan
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Wrapper Kontainer -->
-                <div class="mt-2 rounded border border-dark overflow-hidden">
-
-                    <!-- Progress Bar -->
-                    <div class="bg-white" style="height: 18px;">
-                        <div class="progress h-100">
-                            <div class="progress-bar progress-bar-striped  bg-warning d-flex align-items-center px-2"
-                                id="scanProgressBar"
-                                role="progressbar"
-                                style="width: 100%;">
-                                <small class="text-light fw-bold" id="scanProgressPercent">(0%)</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- DEX Signals -->
-                    <div class="bg-light p-2">
-                        <div id="dexSignals" class="ms-1 me-1"></div>
-                    </div>
-                </div>
-
-
-                <!-- Custom Alert -->
-                <div id="customAlert" style="
-                    display: none;
-                    position: fixed;
-                    top: 35%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: #f2e6d9;
-                    border: 2px solid b6753e(145, 145, 245, 1);
-                    color: #010000;
-                    padding: 20px 30px;
-                    border-radius: 10px;
-                    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-                    font-family: sans-serif;
-                    font-size: 16px;
-                    z-index: 9999;
-                    text-align: center;
-                ">
-                    ✅ <strong>SCAN SELESAI!</strong><br/>
-                    <!-- 🎉 Harga CEX & DEX berhasil discan!<br/> -->
-                    💰 DATA Siap di ANALISA<br/>
-                    <!-- 🕓 Ayo Semangat!! Mengejar Profit!<br/> -->
-                    🚀 Saatnya cari CUAN 🤩 !!
-                </div>
-
             </div>
         </div>
+
+        <!-- Overlay Loading -->
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="spinner-border text-primary mt-5" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-3 fw-bold text-primary">
+                Mohon Menunggu [Layar Freeze], Sedang Proses update wallet CEX...<br>
+                Jika Mouse digerakkan Layar Akan Berkedip -_-
+            </p>
+        </div>
+
+        <!-- Info + Kontrol Panel -->
+        <div class="section-control-panel border border-dark rounded-bottom px-3 py-2">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <!-- Info -->
+                <div>
+                    <small class="fw-bold text-danger">
+                        INFO: <span id="infostatus" class="text-primary">---</span>
+                    </small>
+                </div>
+                <!-- Kontrol -->
+                <div class="d-flex align-items-center flex-wrap gap-2">
+                    <a href="#" target="_blank" id="reload" title="RELOAD PAGE">
+                        <img src="https://cdn-icons-png.freepik.com/512/210/210136.png" width="23px">
+                    </a>
+                    <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" title="BUKA AKSES">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px">
+                    </a>
+                    <button class="btn btn-success btn-sm" id="CheckPrice">
+                        <i class="bi bi-play-fill"></i> Check Price
+                    </button>
+                    <button class="btn btn-danger btn-sm d-none" id="StopScan">
+                        <i class="bi bi-stop-circle"></i> Stop Scan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wrapper Kontainer -->
+        <div class="mt-2 rounded border border-dark overflow-hidden">
+            <!-- Progress Bar -->
+            <div class="bg-white" style="height: 18px;">
+                <div class="progress h-100">
+                    <div class="progress-bar progress-bar-striped bg-info d-flex align-items-center px-2"
+                         id="scanProgressBar"
+                         role="progressbar"
+                         style="width: 100%;">
+                        <small class="text-light fw-bold" id="scanProgressPercent">(0%)</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DEX Signals -->
+            <div class="bg-light p-2">
+                <div id="dexSignals" class="ms-1 me-1"></div>
+            </div>
+        </div>
+
+        <!-- Custom Alert -->
+        <div id="customAlert" class="custom-alert">
+            ✅ <strong>SCAN SELESAI!</strong><br/>
+            💰 DATA Siap di ANALISA<br/>
+            🚀 Saatnya cari CUAN 🤩 !!
+        </div>
+    </div>
+</div>
+
 
 
         <!-- Tabs -->
@@ -503,8 +446,8 @@
             </li>
           <li class="nav-item">
             <a class="nav-link disabled">
-                <small id="scanTimeInfo" class="text-danger text-end fw-bold"></small>  
-                <small id="scanProgressText" class="text-muted"></small>  
+                <small id="scanTimeInfo" class="text-primary text-end fw-bold"></small>  
+                <small id="scanProgressText" class="text-primary"></small>  
             </a>
         </li>
 
@@ -658,30 +601,27 @@
 
                             </div>
 
+                           
+
                             <div class="card-body p-0">
-                                <div class="table-responsive">
-                                    <table class="table table-hover table-striped mb-0" id="tokenTable">
+                                <div class="table-responsive sticky-table-container" style="max-height: 800px; overflow-y: auto;">
+                                    <table class="table table-hover custom-striped mb-0 sticky-table" id="tokenTable">
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                 <th>Symbol</th>
-                                                <th>Chain</th>
-                                                <th>CEX</th>
+                                                <th>Symbol Token / Pair</th>
+                                                <th>Chain & Status</th>
+                                                <th>Exchanger (CEX)</th>
                                                 <th>DEX</th>
-                                                <th>Status</th>
-                                                <th>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody id="tokenTableBody">
-                                            <tr>
-                                                <td colspan="6" class="text-center py-4 text-muted">
-                                                    No tokens added yet
-                                                </td>
-                                            </tr>
+                                            ...
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     
