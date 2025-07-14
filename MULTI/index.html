@@ -216,9 +216,8 @@
         min-width: 100px;
     }
 
-    #dexSignals div { font-size: 0.75rem; }
     #dexSignals ul { margin-bottom: 0; }
-    #dexSignals li { font-size: 0.8rem; margin-bottom: 1px; }
+    #dexSignals li { font-size: 0.8rem; margin-bottom: 0px; }
 
     .highlight-row { background-color: #ffe8a1 !important; transition: background-color 0.5s ease; }
     .pnl-highlight { background-color: #cbfdd9 !important; }
@@ -233,7 +232,7 @@
 
     .pink { background-color: #fccbce !important; }
     .abu { background-color: #d8dbdf !important; }
-    .highlight { background-color: #e5f0fb !important; }
+    .highlight { background-color: #c2fca2 !important; }
     .biru { background-color: #77bcdb !important; }
 
     .token-data-row.strip-even > td { background-color: var(--strip-even) !important; }
@@ -269,9 +268,6 @@
     .section-header {
         background: var(--accent-blue);
         color: white;
-    }
-    .section-control-panel {
-        background-color: #e6edf4;
     }
 
     .loading-overlay {
@@ -325,6 +321,22 @@
         background-color: var(--strip-even) !important;
     }
 
+    .signal-box {
+        display: inline-block;
+        white-space: normal !important;
+        font-size: 0.75rem;
+        line-height: 1.2;          /* lebih rapat vertikal */
+        padding: 1px 4px;          /* lebih sempit atas/bawah */
+        max-width: 100%;
+        word-break: break-word;
+        margin-top: 1px;
+        margin-bottom: 1px;        /* jarak antar sinyal bertumpuk juga rapat */
+    }
+
+    #sinyal{
+        background-color:rgb(230 237 244) !important;
+        padding: 0px;
+    }
     </style>
 
 
@@ -389,12 +401,9 @@
                     </button>
                 </div>
             </div>
-        </div>
 
-        <!-- Wrapper Kontainer -->
-        <div class="mt-2 rounded border border-dark overflow-hidden">
             <!-- Progress Bar -->
-            <div class="bg-white" style="height: 18px;">
+            <div class="bg-white mt-2" style="height: 12px;">
                 <div class="progress h-100">
                     <div class="progress-bar progress-bar-striped bg-info d-flex align-items-center px-2"
                          id="scanProgressBar"
@@ -404,9 +413,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Wrapper Kontainer -->
+        <div class="mt-2 rounded border border-dark overflow-hidden">
+            
 
             <!-- DEX Signals -->
-            <div class="bg-light p-2">
+            <div class="ps-2" id="sinyal">
                 <div id="dexSignals" class="ms-1 me-1"></div>
             </div>
         </div>
@@ -447,7 +461,8 @@
           <li class="nav-item">
             <a class="nav-link disabled">
                 <small id="scanTimeInfo" class="text-primary text-end fw-bold"></small>  
-                <small id="scanProgressText" class="text-primary"></small>  
+                <small id="scanProgressText" class="text-primary"></small>
+                 
             </a>
         </li>
 
@@ -611,12 +626,12 @@
                                                 <th>No</th>
                                                 <th>Symbol Token / Pair</th>
                                                 <th>Chain & Status</th>
+                                                <th>Modal {CEX & DEX}</th>
                                                 <th>Exchanger (CEX)</th>
                                                 <th>DEX</th>
                                             </tr>
                                         </thead>
                                         <tbody id="tokenTableBody">
-                                            ...
                                         </tbody>
                                     </table>
                                 </div>
