@@ -46,6 +46,8 @@ class TokenPriceMonitor {
         this.searchKeyword = '';
         this.sortAscending = true;
         this.selectedChains = JSON.parse(localStorage.getItem('MULTI_selectedChains')) || [];
+        this.isAutorun = false;
+        this.autorunTimer = null;
 
         this.init();
 
@@ -79,6 +81,17 @@ class TokenPriceMonitor {
     // Bind event handlers
     bindEvents() {
 
+        $('#autorunBtn').on('click', () => {
+            this.isAutorun = !this.isAutorun;
+            const btn = $('#autorunBtn');
+            const newText = this.isAutorun ? 'ON' : 'OFF';
+
+            btn.html('<i class="bi bi-power"></i> ' + newText)
+            .removeClass(this.isAutorun ? 'btn-outline-secondary' : 'btn-outline-primary')
+            .addClass(this.isAutorun ? 'btn-outline-primary' : 'btn-outline-secondary');
+
+        });
+        
        $(document).off('click', '.btn-save-inline').on('click', '.btn-save-inline', (e) => {
             const btn = $(e.currentTarget);
             const tokenId = btn.data('token-id');
@@ -182,8 +195,6 @@ class TokenPriceMonitor {
             location.reload();
         });
 
-       
-
         $('#CheckPrice').on('click', async () => {
             // Aktifkan tab Price Monitoring
             $('#mainTabs a[href="#priceMonitoring"]').tab('show');
@@ -227,9 +238,17 @@ class TokenPriceMonitor {
             $('#monitoringSearch').prop('disabled', false);
             $('#sortByToken').prop('disabled', false);
             $('#CheckPrice').prop('disabled', false).html('<i class="bi bi-arrow-clockwise"></i>Check Price');
+
+            // 🔁 Jika autorun aktif, jalankan ulang otomatis setelah jeda
+            if (this.isAutorun) {
+                this.startAutorunCountdown(() => $('#CheckPrice').trigger('click'));
+            }
         });
 
        $('#StopScan,#reload').on('click', () => {
+            clearInterval(this.autorunTimer);
+            $('#autorunCountdown').remove();
+
             location.reload(); // ⬅️ ini langsung reload halaman
         });
 
@@ -422,6 +441,28 @@ class TokenPriceMonitor {
                 $(el).prop('checked', true);
             }
         });
+    }
+
+    startAutorunCountdown(callback) {
+        clearInterval(this.autorunTimer);
+        let seconds = 15;
+        const $btn = $('#CheckPrice');
+
+        // Buat elemen countdown jika belum ada
+        let $countdown = $('#autorunCountdown');
+
+        $countdown.text(`⏳ Autorun in ${seconds}s`);
+
+        this.autorunTimer = setInterval(() => {
+            seconds--;
+            $countdown.text(`⏳ Autorun in ${seconds}s`);
+
+            if (seconds <= 0) {
+                clearInterval(this.autorunTimer);
+                $countdown.remove();
+                callback();
+            }
+        }, 1000);
     }
 
    initPairSymbolAutocomplete() {
