@@ -2098,8 +2098,8 @@ class TokenPriceMonitor {
                 ? `<span class="ps-1 pe-1 fw-bold ${cexColor} fs-8">${fromSide.toUpperCase()}</span><span class="text-success fw-bold fs-8">[${fromSymbol}⇄${toSymbol}] </span><span class="${chainColor} fs-8 fw-bold">[${shortChain}]</span>`
                 : `<span class="ps-1 pe-1 fw-bold ${cexColor} fs-8">${toSide.toUpperCase()}</span><span class="text-danger fw-bold fs-8">[${toSymbol}⇄${fromSymbol}] </span><span class="${chainColor} fs-8 fw-bold">[${shortChain}]</span>`;
 
-             const signalText = `🔆<a href="#${rowId}" class="text-decoration-none text-dark text-break">
-                ${directionLabel}:<span class="text-dark fw-bold">${modal}$</span><span class="text-success fw-bold">➔</span><span class="fs-7 fw-bold" style="color:#dd9d06;">${pnlNetto.toFixed(2)}$</span>
+             const signalText = `🔅<a href="#${rowId}" class="text-decoration-none text-dark text-break">
+                ${directionLabel}:<span class="text-dark fs-8 fw-bold">${modal}</span>➔<span class="fs-7 fw-bold" style="color:#dd9d06;">${pnlNetto.toFixed(2)}</span>
             </a>`;
 
             const signalKey = `${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}_${direction}`;
@@ -2125,7 +2125,7 @@ class TokenPriceMonitor {
 
                     li.innerHTML = signalText;
 
-                    listEl.prepend(li);
+                    listEl.append(li);
                 }
             }
 
@@ -2415,8 +2415,7 @@ class TokenPriceMonitor {
                 ? `<span class="fw-bold text-danger">DX</span>`
                 : `<span class="text-warning">⚠️</span>`;
       return `
-            <div>
-                <!-- Baris tombol dan modal -->
+          <div>
                 <span class="d-block mb-0">   
                     <button class="btn bg-success btn-xs text-light"  onclick="app.confirmToggleToken('${token.id}')" title="Ganti Status">
                         <i class="bi bi-power"></i>
@@ -2445,7 +2444,7 @@ class TokenPriceMonitor {
                 </span>
 
                 <!-- Status WD/DP masing-masing -->
-                <span class="d-block mb-0 text-secondary fs-8">
+                <span class="d-block mb-0 text-secondary fs-9">
                     ${tokenStok}[${wdBadgeToken} ${dpBadgeToken}]
                     ~
                     ${pairStok}[${wdBadgePair} ${dpBadgePair}]
@@ -2457,8 +2456,6 @@ class TokenPriceMonitor {
                 </span>
             </div>
             `;
-
-
     }
 
     confirmToggleToken(tokenId) {
