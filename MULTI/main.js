@@ -12,6 +12,12 @@ const chainCodeMap = {
             solana: 501
         };
 
+const CexShortMap = {
+    Binance: 'BNC',
+    MEXC: 'MXC',
+    Gateio: 'GTX',
+    INDODAX: 'IDX'
+};
 
 const chainShortMap = {
     BSC: 'BSC',
@@ -102,7 +108,7 @@ class TokenPriceMonitor {
             this.saveTokensToStorage(true);
             this.showAlert(`✅ SIMPAN perubahan untuk ${token.symbol} berhasil!`, 'success');
 
-            this.logAction(`UBAH DATA KOIN ${(token.symbol).toUpperCase}:`);
+            this.logAction(`UBAH DATA KOIN ${(token.symbol).toUpperCase()}`);
             console.log(`📝 Menyimpan field dari token ${token.symbol}:`, token);
 
              this.loadTokenTable();
@@ -2074,8 +2080,12 @@ class TokenPriceMonitor {
             const dexKey = dexName.toUpperCase();
             this.pnlSignals[dexKey] = this.pnlSignals[dexKey] || [];
 
-            const fromSide = direction === 'cex_to_dex' ? cexName : dexName;
-            const toSide = direction === 'cex_to_dex' ? dexName : cexName;
+            const fromSideRaw = direction === 'cex_to_dex' ? cexName : dexName;
+            const toSideRaw = direction === 'cex_to_dex' ? dexName : cexName;
+
+            const fromSide = CexShortMap[fromSideRaw] || fromSideRaw;
+            const toSide = CexShortMap[toSideRaw] || toSideRaw;
+
             const shortChain = chainShortMap[token.chain?.toUpperCase()] || 'CHAIN';
 
             const cexColor = this.getTextColorClassFromBadge(this.getBadgeColor(cexName, 'cex'));
@@ -2085,11 +2095,11 @@ class TokenPriceMonitor {
             const cexBadgeColor = this.getBadgeColor(cexName, 'cex');
             
             const directionLabel = direction === 'cex_to_dex'
-                ? `<span class="ps-1 pe-1 fw-bold ${cexColor} fs-8">${fromSide.toUpperCase()}</span><span class="text-success fw-bold fs-8">[${fromSymbol}] </span><span class="${chainColor} fs-8 fw-bold">[${shortChain}]</span>`
-                : `<span class="ps-1 pe-1 fw-bold ${cexColor} fs-8">${toSide.toUpperCase()}</span><span class="text-danger fw-bold fs-8">[${toSymbol}] </span><span class="${chainColor} fs-8 fw-bold">[${shortChain}]</span>`;
+                ? `<span class="ps-1 pe-1 fw-bold ${cexColor} fs-8">${fromSide.toUpperCase()}</span><span class="text-success fw-bold fs-8">[${fromSymbol}⇄${toSymbol}] </span><span class="${chainColor} fs-8 fw-bold">[${shortChain}]</span>`
+                : `<span class="ps-1 pe-1 fw-bold ${cexColor} fs-8">${toSide.toUpperCase()}</span><span class="text-danger fw-bold fs-8">[${toSymbol}⇄${fromSymbol}] </span><span class="${chainColor} fs-8 fw-bold">[${shortChain}]</span>`;
 
-             const signalText = `•<a href="#${rowId}" class="text-decoration-none text-dark text-break">
-                ${directionLabel}:<span class="text-dark fw-bold">${modal}$</span>→<span class="fs-7 fw-bold" style="color:#dd9d06;">${pnlNetto.toFixed(2)}$</span>
+             const signalText = `🔆<a href="#${rowId}" class="text-decoration-none text-dark text-break">
+                ${directionLabel}:<span class="text-dark fw-bold">${modal}$</span><span class="text-success fw-bold">➔</span><span class="fs-7 fw-bold" style="color:#dd9d06;">${pnlNetto.toFixed(2)}$</span>
             </a>`;
 
             const signalKey = `${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}_${direction}`;
