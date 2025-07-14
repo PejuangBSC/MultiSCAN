@@ -373,7 +373,7 @@
                 <!-- Info -->
                 <div>
                     <small class="fw-bold text-danger">
-                        INFO: <span id="infostatus" class="text-primary">---</span>
+                        INFO: <span id="infostatus" class="text-primary">---</span> <span id="autorunCountdown" class="ms-2 badge bg-warning text-dark"></span>
                     </small>
                 </div>
                 <!-- Kontrol -->
@@ -384,6 +384,9 @@
                     <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" title="BUKA AKSES">
                         <img src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px">
                     </a>
+                    <button id="autorunBtn" class="btn btn-outline-secondary btn-sm">
+                        <i class="bi bi-power"></i> OFF
+                    </button>
                     <button class="btn btn-success btn-sm" id="CheckPrice">
                         <i class="bi bi-play-fill"></i> Check Price
                     </button>
@@ -857,9 +860,9 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
     <!-- Price APIs -->
-    <script src="price-apis.js"></script>
+    <script src="MULTI/price-apis.js"></script>
     <!-- Custom JS -->
-    <script src="main.js"></script>
+    <script src="MULTI/main.js"></script>
 </body>
 </html>
 
