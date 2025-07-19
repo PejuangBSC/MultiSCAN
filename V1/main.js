@@ -198,21 +198,17 @@
             'kana': `https://app.paraswap.xyz/#/swap/${sc_input}-${sc_output}?version=6.2&network=${DTChain.Nama_Chain}`,
             'odos': "https://app.odos.xyz",
             '0x': DTChain.Nama_Chain.toLowerCase() === 'solana' 
-           // `https://matcha.xyz/tokens/solana/${sc_input.toLowerCase()}?buyChain=1399811149&buyAddress=${sc_output.toLowerCase()}`
-            ? `https://matcha.xyz/tokens/solana/${sc_input}?sellChain=1399811149&sellAddress=${sc_output}` 
-            : `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
-        
-           // '0x': `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
+                ? `https://matcha.xyz/tokens/solana/${sc_input}?sellChain=1399811149&sellAddress=${sc_output}` 
+                : `https://matcha.xyz/tokens/${DTChain.Nama_Chain}/${sc_input.toLowerCase()}?buyChain=${DTChain.Kode_Chain}&buyAddress=${sc_output.toLowerCase()}`,
             '1inch': ` https://app.1inch.io/advanced/swap?network=${DTChain.Kode_Chain}&src=${sc_input.toUpperCase()}&dst=${sc_output.toUpperCase()}`,
           // '1inch': `https://app.1inch.io/#/${DTChain.Kode_Chain}/advanced/swap/${sc_input}/${sc_output}`,
             'okx': `https://www.okx.com/web3/dex-swap?inputChain=${DTChain.Kode_Chain}&inputCurrency=${sc_input}&outputChain=501&outputCurrency=${sc_output}`,
-            'magpie': `https://api.fly.trade/swap/${DTChain.Nama_Chain.toLowerCase()}/${NameToken.toUpperCase()}/${DTChain.Nama_Chain.toLowerCase()}/${NamePair.toUpperCase()}`,
+            'magpie': `https://app.magpiefi.xyz/swap/${DTChain.Nama_Chain.toLowerCase()}/${NameToken.toUpperCase()}/${DTChain.Nama_Chain.toLowerCase()}/${NamePair.toUpperCase()}`,
             'paraswap': `https://app.paraswap.xyz/#/swap/${sc_input}-${sc_output}?version=6.2&network=${DTChain.Nama_Chain}`,
             'openocean' : `https://app.openocean.finance/swap/${DTChain.Nama_Chain}/${sc_input}/${sc_output}`,
             'jupiter': `https://jup.ag/swap/${sc_input}-${sc_output}`,
             'lifi' : `https://jumper.exchange/?fromChain=${DTChain.Kode_Chain}&fromToken=${sc_input}&toChain=${DTChain.Kode_Chain}&toToken=${sc_output}`,
         };
-       // https://matcha.xyz/tokens/solana/So11111111111111111111111111111111111111112?sellChain=1399811149&sellAddress=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&sellAmount=100
         return link[dex] || null;
     }
 
@@ -223,37 +219,10 @@
         var dexId = `${cex}_${dexType.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
         var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
         var selectedApiKey = getRandomApiKeyOKX();
-
-        // var multiplier = Math.pow(10, des_input);
-        // var numericAmount = multiplier * amount_in;
-
-        // if (isNaN(numericAmount) || !isFinite(numericAmount)) {
-        //     console.error("Nilai amount_in tidak valid:", { des_input, amount_in });
-        //     callback("Nilai amount_in tidak valid untuk konversi ke BigInt.", null);
-        //     return;
-        // }
-
-        // var amount_in = BigInt(Math.round(numericAmount));
-
         var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in));
         var apiUrl, requestData,headers;   
-        let normalizedNamePair = NamePair === "ETH" ? "WETH" :
-                                NamePair === "BNB" ? "WBNB" :
-                                NamePair === "POL" ? "WPOL" :
-                                NamePair === "SOL" ? "WSOL" :
-                                NamePair === "AVAX" ? "WAVAX" :
-                                NamePair;
         var linkDEX = generateDexLink(dexType, NameToken, sc_input_in, NamePair, sc_output_in);
-        // Mapping chainId untuk Kana
-        const KanaChainID = {
-            'solana': 1,
-            'polygon': 3,
-            'bsc': 4,
-            'ethereum': 6,
-            'Avalanche': 10,
-            'Arbitrum': 11,
-        };
-
+      
         switch (dexType) {
             case 'kyberswap':
                 let NetChain;
@@ -265,71 +234,109 @@
                 
                 apiUrl = "https://aggregator-api.kyberswap.com/" + NetChain.toLowerCase() + "/api/v1/routes?tokenIn=" + sc_input + "&tokenOut=" + sc_output + "&amountIn=" + amount_in+ "&gasInclude=true";
                 break;
-            case 'odos':
-                apiUrl = "https://api.odos.xyz/sor/quote/v2";               
-                requestData = {
-                    chainId: DTChain.Kode_Chain,
-                    compact: true,
-                    disableRFQs: true,
-                    userAddr: SavedSettingData.walletMeta,
-                    inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
-                    outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
-                    slippageLimitPercent: 0.3,
-                };                
-                break;
-            case 'altodos':
-                apiUrl = "https://ethmainnet.server.hinkal.pro/OdosSwapData";               
-                requestData = {
-                    chainId: DTChain.Kode_Chain,
-                    compact: true,
-                    disableRFQs: true,
-                    userAddr: SavedSettingData.walletMeta,
-                    inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
-                    outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
-                    slippageLimitPercent: 0.3,
-                };                
-                break;
-            case 'alt0x':           
-                  apiUrl = selectedServer+"https://app.unidex.exchange/api/0x/quote?chainId="+DTChain.Kode_Chain+"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in +"&taker="+SavedSettingData.walletMeta;
-                break;
-            case '0x':           
-                    if(DTChain.Nama_Chain.toLowerCase() === 'solana'){
-                        apiUrl = selectedServer+"https://matcha.xyz/api/swap/quote/solana?sellTokenAddress="+sc_input_in+"&buyTokenAddress="+sc_output_in+"&sellAmount="+amount_in+"&dynamicSlippage=true&slippageBps=50&userPublicKey=Eo6CpSc1ViboPva7NZ1YuxUnDCgqnFDXzcDMDAF6YJ1L";
-                    }else{
-                        apiUrl = "https://matcha.xyz/api/swap/price?chainId=" + DTChain.Kode_Chain +"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in ;
-                    }
-                    break;
-                    //
-            case '1inch':
-                //https://proxy-app.1inch.io/v2.0/fusion/quoter/v1.0/501/quote?wallet=11111111111111111111111111111111&srcToken=AxaTJdRuuc3626FtPWdQCMcWPH6yzgxXKWbFCZN3TMgy&dstToken=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&amount=260745399000&enableEstimate=false
-                //apiUrl = "https://api-defillama.1inch.io/v2.0/fusion/quoter/v1.0/501/quote?wallet=11111111111111111111111111111111&srcToken=AxaTJdRuuc3626FtPWdQCMcWPH6yzgxXKWbFCZN3TMgy&dstToken=Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB&amount=260745399000&enableEstimate=false";
-                    apiUrl = "https://api-defillama.1inch.io/v6.0/" + DTChain.Kode_Chain + "/quote?src=" + sc_input + "&dst=" + sc_output + "&amount=" + amount_in + "&includeGas=true";
-                break;
-            case 'magpie':
-                if(DTChain.Nama_Chain.toLowerCase() === 'bsc'){
-                     apiUrl = "https://api.magpiefi.xyz/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=true&slippage=0.1"+
-                     "&liquiditySources=pancakeswap-v2%2Cmdex%2Cbakeryswap%2Cbiswap%2Capeswap%2Cbabyswap%2Cjetswap%2Cjulswap%2Cwardenswap%2Cacsiswap-stable%2Cacsiswap-weighted%2Cuniswap-v3%2Ctrident-stable%2Ctrident-constant-product%2Ckyber-swap-classic-static%2Ckyber-swap-classic-dynamic%2Csushi%2Ctrader-joe%2Celk-finance%2Cbaby-doge-swap%2Cw3-swap%2Cthena-fusion%2Cnomiswap-v3%2Chashflow-v3%2Cwoo-fi%2Cwombat%2Cthena-stable%2Cthena-volatile%2Ctrader-joe-v2-1%2Cradio-shack-swap%2Carchly-stable%2Carchly-volatile%2Csushi-v3%2Cnomiswap%2Csynapse%2Clif3-swap%2Ckapinus%2Cben-swap%2Cplanet%2Cknight-swap%2Calita-finance%2Ccoin-swap%2Cdinosaur-eggs%2Ckyoto-swap%2Cpanther-swap%2Ci-swap-v2%2Chyper-jump%2Cpad-swap%2Cnative%2Cpancakeswap-v3%2Ca-crypto-s%2Cellipsis-stable%2Ca-crypto-s-lp%2Cellipsis-stable-lp%2Cellipsis-crypto%2Cellipsis-crypto-lp%2Cmaverick%2Cpancakeswap-stable%2Cpancakeswap-stable-lp%2Cpancakeswap-v2-lp%2Cmdex-lp%2Cbakeryswap-lp%2Cbiswap-lp%2Capeswap-lp%2Cbabyswap-lp%2Cjetswap-lp%2Cjulswap-lp%2Cwardenswap-lp%2Csushi-lp%2Ctrader-joe-lp%2Celk-finance-lp%2Cbaby-doge-swap-lp%2Cw3-swap-lp%2Cradio-shack-swap-lp%2Cnomiswap-lp%2Clif3-swap-lp%2Ckapinus-lp%2Cben-swap-lp%2Cplanet-lp%2Cknight-swap-lp%2Calita-finance-lp%2Ccoin-swap-lp%2Cdinosaur-eggs-lp%2Ckyoto-swap-lp%2Cpanther-swap-lp%2Ci-swap-v2-lp%2Chyper-jump-lp%2Cpad-swap-lp%2Cspartan%2Csmar-dex%2Cmaverick-v2%2Cbebop%2Cbeefy%2Cswaap-v2%2Celk-finance-v3%2Cyield-nest-max-lrt-vault%2Cerc-4626%2Cuniswap-v2%2Cuniswap-v2-lp%2Cizi-swap";
-                 }else if(DTChain.Nama_Chain.toLowerCase() === 'ethereum'){
-                     apiUrl = "https://api.magpiefi.xyz/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=true&slippage=0.1"+
-                     "&liquiditySources=sushi,balancer-v2-stable,balancer-v2-weighted,curve-crypto,curve-stable,defi-swap,lua-swap,sake-swap,shibaswap,uniswap-v3,curve-crypto2,dodo-v2-stable,dodo-v2-private,verse-dex,kyber-swap-classic-static,kyber-swap-classic-dynamic,integral-size,apeswap,elk-finance,pancakeswap-v2,hashflow-v3,saddle-base,saddle-meta,trader-joe-v2-1,radio-shack-swap,sushi-v3,solidly-v2-stable,solidly-v2-volatile,synapse,aave-v2,aave-v3,capital-dex,native,curve-crypto-lp,curve-stable-lp,curve-crypto2-lp,pancakeswap-v3,dodo-v2-vending-manchine,swapr,synthetix,synthetix-lp,swaap-v2,clipper,bancor-v2-1,smoothy-v1,solidly-v3,lido,maverick,defi-plaza,gyroscope-2clp,gyroscope-3clp,gyroscope-eclp,sushi-lp,uniswap-v2-lp,defi-swap-lp,lua-swap-lp,sake-swap-lp,shibaswap-lp,verse-dex-lp,apeswap-lp,elk-finance-lp,pancakeswap-v2-lp,radio-shack-swap-lp,capital-dex-lp,swapr-lp,bedrock,psm-usdc,wagmi,smar-dex,dfx-v2,dfx-v3,maverick-v2,bebop,beefy,rings-usdc,rings-eth,elk-finance-v3,wombat,yield-nest-nlrt,balancer-v3-stable,balancer-v3-weighted,erc-4626,liquid-move-eth";
-                 }else{
-                    apiUrl = "https://api.magpiefi.xyz/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=false&slippage=0.2";
-                 }
-                 //
+            
+           case '1inch':
+                if (action === "TokentoPair") {
+                    apiUrl = "https://api.dzap.io/v1/quotes"; 
+                    
+                    requestData = {
+                        account: SavedSettingData.walletMeta || '0x0000000000000000000000000000000000000000',
+                        fromChain: DTChain.Kode_Chain,
+                        integratorId: 'dzap', // opsional
+                        allowedSources: ["oneInchViaLifi"],
+                        notAllowedSources: [],
+                        data: [{
+                            amount: amount_in.toString(),
+                            srcToken: sc_input,
+                            srcDecimals: des_input, // kamu harus ambil dari metadata token
+                            destToken: sc_output,
+                            destDecimals: des_output, // ambil dari metadata juga
+                            slippage: 0.3,
+                            toChain: DTChain.Kode_Chain
+                        }]
+                    };
+ 
+                } else if (action === "PairtoToken") {
+                    apiUrl = "https://api-v1.marbleland.io/api/v1/jumper/api/p/lifi/advanced/routes";   
+                    
+                    requestData = {
+                        fromAmount: amount_in.toString(),
+                        fromChainId: DTChain.Kode_Chain,
+                        fromTokenAddress: sc_input,
+                        toChainId: DTChain.Kode_Chain,
+                        toTokenAddress: sc_output,
+                        options: {
+                            integrator: "swap.marbleland.io",
+                            order: "CHEAPEST",
+                            maxPriceImpact: 0.4,
+                            allowSwitchChain: false,
+                            bridges: {
+                                deny: [
+                                    "hop", "cbridge", "optimism", "arbitrum", "across", "omni", "celercircle", "allbridge",
+                                    "thorswap", "symbiosis", "squid", "mayan", "mayanWH", "mayanMCTP", "relay", "polygon",
+                                    "glacis", "stargateV2", "stargateV2Bus", "chainflip"
+                                ]
+                            },
+                            exchanges: {
+                                allow: ["1inch"]
+                            }
+                        }
+                    };
 
-                 break; 
-            case 'kana':
-                    // Mapping chainId dari DTChain.Nama_Chain ke KanaChainID
-                const chainName = DTChain.Nama_Chain.toLowerCase();
-                const kanaChainId = KanaChainID[chainName];
-
-                if (!kanaChainId) {
-                    apiUrl = "https://api.paraswap.io/prices?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + DTChain.Kode_Chain + "&amount=" + amount_in + "&version=6.2";
                 }
-
-                // Endpoint untuk Kana
-                apiUrl = `https://ag.kanalabs.io/v1/swapQuote?inputToken=${sc_input}&outputToken=${sc_output}&chain=${kanaChainId}&amountIn=${amount_in.toString()}&slippage=0.5&isFeeReferrer=false`;
                 break;
+
+            case 'odos':
+                 if (action === "TokentoPair") {
+                    apiUrl = "https://api.odos.xyz/sor/quote/v2";               
+                    requestData = {
+                        chainId: DTChain.Kode_Chain,
+                        compact: true,
+                        disableRFQs: true,
+                        userAddr: SavedSettingData.walletMeta,
+                        inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
+                        outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
+                        slippageLimitPercent: 0.3,
+                    };                
+                 } else if (action === "PairtoToken") {
+                    apiUrl = "https://bzvwrjfhuefn.up.railway.app/swap";               
+                    var amount_in = BigInt(Math.round(Number(amount_in)));
+                    
+                    var requestData = {
+                        "chainId": DTChain.Kode_Chain,
+                        "aggregatorSlug": 'odos',
+                        "sender": SavedSettingData.walletMeta,
+                        "inToken": {
+                            "chainId": DTChain.Kode_Chain,
+                            "type": "TOKEN",
+                            "address": sc_input.toLowerCase(),
+                            "decimals": parseFloat(des_input)
+                        },
+                        "outToken": {
+                            "chainId": DTChain.Kode_Chain,
+                            "type": "TOKEN",
+                            "address": sc_output.toLowerCase(),
+                            "decimals": parseFloat(des_output)
+                        },
+                        "amountInWei": String(amount_in),
+                        "slippageBps": "100",
+                        "gasPriceGwei": Number(getFromLocalStorage('gasGWEI', 0)),
+                    };
+                 }
+                 break;
+
+            case '0x':           
+                if(DTChain.Nama_Chain.toLowerCase() === 'solana'){
+                    apiUrl = selectedServer+"https://matcha.xyz/api/swap/quote/solana?sellTokenAddress="+sc_input_in+"&buyTokenAddress="+sc_output_in+"&sellAmount="+amount_in+"&dynamicSlippage=true&slippageBps=50&userPublicKey=Eo6CpSc1ViboPva7NZ1YuxUnDCgqnFDXzcDMDAF6YJ1L";
+                }else{
+                    apiUrl = "https://matcha.xyz/api/swap/price?chainId=" + DTChain.Kode_Chain +"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in ;
+                }
+                break;
+ 
+            case 'magpie':
+                    apiUrl = "https://api.fly.trade/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=false&slippage=0.2";
+                 break; 
+           
             case 'okx':
                 var queryString = `/api/v5/dex/aggregator/quote?amount=${amount_in}&chainId=${DTChain.Kode_Chain}` + `&fromTokenAddress=${sc_input_in}&toTokenAddress=${sc_output_in}`;
                 var timestamp = new Date().toISOString();
@@ -340,76 +347,31 @@
                 var signature = calculateSignature("OKX",  selectedApiKey.secretKeyOKX, dataToSign, "BASE64");
                 break;
                 
-            case 'openocean':
-                apiUrl = "https://open-api.openocean.finance/v4/"+ DTChain.Kode_Chain +"/quote?inTokenAddress="+ sc_input +"&outTokenAddress="+ sc_output +"&amount="+ amount_in.toString()+"&gasPrice=" + Math.ceil(parseFloat(getFromLocalStorage('gasGWEI', 0)));
-
-                break;
-
             case 'paraswap':
-                apiUrl = "https://api.paraswap.io/prices?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + DTChain.Kode_Chain + "&amount=" + amount_in + "&version=6.2";
-                break;
+                 if (action === "TokentoPair") {
+                    apiUrl = "https://api.paraswap.io/prices?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + DTChain.Kode_Chain + "&amount=" + amount_in + "&version=6.2";
+                 } else if (action === "PairtoToken") {
+                    apiUrl = `https://api.zeroswap.io/quote/paraswap?fromChain=${DTChain.Kode_Chain}&fromTokenAddress=${sc_input}&toTokenAddress=${sc_output}&fromTokenDecimals=${des_input}&toTokenDecimals=${des_output}&sellAmount=${amount_in}&slippage=0.3`;
+                 }
+                 break;
+
             case 'jupiter':
                 apiUrl = "https://quote-api.jup.ag/v6/quote?inputMint=" + sc_input_in + "&outputMint=" + sc_output_in + "&amount=" + amount_in;
                 headers = {}; // Tidak memerlukan header khusus
                 break; 
             
-            case 'lifiLAMA':
-                apiUrl = "https://api.relay.link/quote";
-                requestData = {
-                    user: SavedSettingData.walletMeta,
-                    originChainId: DTChain.Kode_Chain,            // chain asal
-                    destinationChainId: DTChain.Kode_Chain,       // chain tujuan (ubah jika berbeda)
-                    originCurrency: sc_input,                     // token address asal
-                    destinationCurrency: sc_output,               // token address tujuan
-                    amount: amount_in.toString(),                 // nilai dalam smallest unit (misalnya wei)
-                    tradeType: "EXACT_INPUT"                      // atau "EXACT_OUTPUT", tergantung kebutuhan
-                };
-                break;
-            case 'lifi':
-                apiUrl = "https://api-v1.marbleland.io/api/v1/jumper/api/p/lifi/advanced/routes";
-
-                requestData = {
-                    fromAmount: amount_in.toString(),                      // dalam smallest unit (misal: wei)
-                    fromChainId: DTChain.Kode_Chain,                       // chain asal
-                    fromTokenAddress: sc_input,                            // alamat token asal
-                    toChainId: DTChain.Kode_Chain,                         // chain tujuan (ganti jika lintas chain)
-                    toTokenAddress: sc_output,                             // alamat token tujuan
-                    options: {
-                        integrator: "swap.marbleland.io",                  // integrator ID (optional bisa disesuaikan)
-                        order: "CHEAPEST",                                 // atau "FASTEST", "SAFEST", dst.
-                        maxPriceImpact: 0.4,
-                        allowSwitchChain: true,
-                        bridges: {
-                            deny: [
-                                "hop", "cbridge", "optimism", "arbitrum", "across", "omni", "celercircle", "allbridge",
-                                "thorswap", "symbiosis", "squid", "mayan", "mayanWH", "mayanMCTP", "relay", "polygon",
-                                "glacis", "stargateV2", "stargateV2Bus", "chainflip"
-                            ]
-                        },
-                        exchanges: {
-                            deny: [
-                                "dodo", "paraswap", "enso", "odos", "openocean", "0x", "stable", "kyberswap",
-                                "lifidexaggregator", "jupiter", "sushiswap", "bebop", "aftermath", "superswap",
-                                "bluefin7k", "liquidswap"
-                            ]
-                        }
-                    }
-                };
-                break;
 
             default:
                 console.error("Unsupported DEX type");
                 return;
         }
     
-        $.ajax({
+       $.ajax({
             url: apiUrl,
-            method: ['odos','altodos','bebop','lifi'].includes(dexType) ? 'POST' : 'GET', // Cek tipe DEX
+            method: ['odos','1inch'].includes(dexType) ? 'POST' : 'GET', // Cek tipe DEX
             headers: Object.assign(
-                {}, 
-                headers || {}, // Header tambahan dari variabel `headers`
-               // dexType === '0x' ? { '0x-api-key': "6f5d5c4d-bfdd-4fc7-8d3f-d3137094feb5" } : {},
-               //62df698d503e453a80ef7b0e0e2f7e41
+                {},
+                headers || {},
                 dexType === 'okx' ? {
                     "OK-ACCESS-PROJECT": selectedApiKey.ProjectOKX,
                     "OK-ACCESS-KEY": selectedApiKey.ApiKeyOKX,
@@ -418,8 +380,10 @@
                     "OK-ACCESS-TIMESTAMP": timestamp,
                 } : {}
             ),
-            data: ['odos','altodos','bebop','lifi' ].includes(dexType) ? JSON.stringify(requestData) : requestData, // Format data berdasarkan tipe DEX
-            contentType: ['odos','altodos','bebop','lifi'].includes(dexType) ? 'application/json' : undefined, // Set `contentType` hanya jika diperlukan
+ 
+            data: ['odos','1inch'].includes(dexType) ? JSON.stringify(requestData) : requestData, // Format data berdasarkan tipe DEX
+            contentType: ['odos','1inch'].includes(dexType) ? 'application/json' : undefined, // Set `contentType` hanya jika diperlukan
+          
           //  timeout: parseInt(SavedSettingData.waktuTunggu) * 1000, // Ambil waktu tunggu dari localStorage atau default ke 0
             success: function (response, xhr) {
                 //console.log("RESPONSE DEX: ",response)
@@ -429,48 +393,50 @@
                             case 'kyberswap':
                                 amount_out = response.data.routeSummary.amountOut / Math.pow(10, des_output);
                                 FeeSwap =  parseFloat(response.data.routeSummary.gasUsd);
-                               // FeeSwap = ((response.data.routeSummary.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0))) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // Menggunakan getFromLocalStorage
                                 break;
-                            case 'kana':
-                                const chainName = DTChain.Nama_Chain.toLowerCase();
-                                const kanaChainId = KanaChainID[chainName];
-                                if (!kanaChainId) {
-                                    amount_out = response.priceRoute.destAmount / Math.pow(10, des_output);
-                                    FeeSwap = parseFloat(response.priceRoute.gasCostUSD);
-                                }else{
-                                    amount_out = response.data[0].finalAmountOut / Math.pow(10, des_output);
-                                    FeeSwap = (response.data[0].estimatedGas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0)) * parseFloat(getFromLocalStorage('PRICEGAS', 0));                                    
-                                }
-                                break;
+                           
                             case 'odos':
-                            if (action === "TokentoPair") {
-                                    amount_out = response.outValues / PriceRate; 
-                                } else if (action === "PairtoToken") {
-                                    amount_out = parseFloat(response.outAmounts) / Math.pow(10, des_output);
-                                }                               
-                                FeeSwap = response.gasEstimateValue;
-                                break;
-                            case 'altodos':
                                 if (action === "TokentoPair") {
-                                    // Net output dalam bentuk nilai USD atau USDT → bagi dengan Rate jika perlu konversi
-                                    amount_out = parseFloat(response.odosResponse.outValues[0]) / PriceRate;
-                                } else if (action === "PairtoToken") {
-                                    // Ambil amount dari outputTokens[0].amount dan ubah dari string ke float
-                                    const rawAmount = response.odosResponse.outputTokens[0].amount;
-                                    amount_out = parseFloat(rawAmount) / Math.pow(10, des_output);
-                                }
-
-                                FeeSwap = response.odosResponse.gasEstimateValue;
+                                    amount_out = response.outValues / PriceRate; 
+                                    FeeSwap = response.gasEstimateValue;
+                                } else if (action === "PairtoToken") { 
+                                    amount_out = parseFloat(response.amountOutWei) / Math.pow(10, des_output);
+                                    FeeSwap = ((parseFloat(getFromLocalStorage('gasGWEI')) * 250000) / Math.pow(10, 9))*parseFloat(getFromLocalStorage('PRICEGAS'));
+                                }                               
                                 break;
 
                             case 'paraswap':
                                 amount_out = response.priceRoute.destAmount / Math.pow(10, des_output);
                                 FeeSwap = parseFloat(response.priceRoute.gasCostUSD);
                                 break;
-                            case 'openocean':
-                                amount_out = response.data.outAmount / Math.pow(10, des_output);
-                                FeeSwap = parseFloat(response.data.estimatedGas);
-                                break;
+
+                            case '1inch':
+                                if (action === "TokentoPair") {
+                                    const key = Object.keys(response)[0];
+                                    const quoteData = response[key]?.quoteRates?.oneInchViaLifi;
+
+                                    if (quoteData) {
+                                        amount_out = parseFloat(quoteData.destAmount / Math.pow(10, des_output));
+
+                                        const gasFee = quoteData.fee?.gasFee?.[0]?.amountUSD || "0";
+                                        FeeSwap = parseFloat(gasFee); // sudah dalam USD
+                                    } else {
+                                        throw new Error("Quote data for 1inch via Dzap not found");
+                                    }
+                                } else if (action === "PairtoToken") { 
+                                    const quoteData = response.routes?.[0];
+
+                                    if (quoteData) {
+                                        amount_out = parseFloat(quoteData.toAmount / Math.pow(10, des_output));
+
+                                        const gasFee = quoteData.gasCostUSD || "0";
+                                        FeeSwap = parseFloat(gasFee); // sudah dalam USD
+                                    } else {
+                                        throw new Error("Quote data for 1inch via Marble not found");
+                                    }
+                                }
+                             break;
+
                             case '0x':
                                 // Konversi buyAmount ke satuan desimal (jumlah token yang diterima)
                                 amount_out = response.buyAmount / Math.pow(10, des_output);
@@ -490,19 +456,11 @@
                                 }
                                 break;
 
-                            case 'alt0x':
-                                amount_out = response.buyAmount / Math.pow(10, des_output);
-                                FeeSwap = ((response.transaction.gas / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('PRICEGAS', 0))) ; // Menggunakan getFromLocalStorage
-                                break;
-
-                            case '1inch':
-                                amount_out = parseFloat(response.dstAmount) / Math.pow(10, des_output);
-                                FeeSwap = ((response.gas / Math.pow(10, 9) * parseFloat(getFromLocalStorage('gasGWEI', 0)))) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // Menggunakan getFromLocalStorage
-                                break;
                             case 'magpie':
                                 amount_out = parseFloat(response.amountOut) / Math.pow(10, des_output);
                                 FeeSwap = parseFloat(response.fees[0].value);
-                                break;    
+                                break;   
+
                             case 'okx':
                                 amount_out = response.data[0].toTokenAmount / Math.pow(10, des_output);
                                 FeeSwap = (response.data[0].estimateGasFee / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0)) * parseFloat(getFromLocalStorage('PRICEGAS', 0));            
@@ -511,81 +469,10 @@
                                 var amount_out = response.outAmount / Math.pow(10, des_output);
                                 
                                 FeeSwap =0.1;
-                                break;
-                           case 'lifiLAMA':
-                                // Jumlah token yang didapat dari swap (dalam unit normal)
-                                amount_out = parseFloat(response.details?.currencyOut?.amount || 0) / Math.pow(10, des_output);
+                                break; 
 
-                                // Biaya swap dalam USD langsung dari field fees.gas.amountUsd
-                                FeeSwap = parseFloat(response.fees?.gas?.amountUsd || 0);
-
-                                break;
-
-                         case 'lifi': {
-                            const bestRoute = response.routes?.[0];
-
-                            if (bestRoute) {
-                                // ✅ Gunakan desimal dari input tujuan
-                                const decimals = des_output;
-                                const factor = Math.pow(10, parseInt(decimals));
-
-                                const rawAmount = bestRoute?.toAmount
-                                    ?? bestRoute?.steps?.[0]?.estimate?.toAmount
-                                    ?? bestRoute?.steps?.[0]?.includedSteps?.[0]?.estimate?.toAmount
-                                    ?? "0";
-
-                                amount_out = parseFloat(rawAmount) / factor;
-
-                                // ✅ Fee Swap
-                                let gasCostUSD = bestRoute?.gasCostUSD;
-
-                                if (gasCostUSD === undefined) {
-                                    const gasCosts = bestRoute?.steps?.[0]?.estimate?.gasCosts
-                                        ?? bestRoute?.steps?.[0]?.includedSteps?.[0]?.estimate?.gasCosts
-                                        ?? [];
-                                    gasCostUSD = gasCosts.reduce((sum, g) => sum + parseFloat(g?.amountUSD || 0), 0);
-                                }
-
-                                FeeSwap = parseFloat(gasCostUSD || 0);
-
-                                // 🔍 Detail token dan harga
-                                const fromToken = bestRoute?.fromToken;
-                                const toToken = bestRoute?.toToken;
-
-                                const fromAmountRaw = bestRoute?.fromAmount ?? "0";
-                                const fromDecimals = fromToken?.decimals ?? 18; // fallback jika kamu ingin dari response
-                                const fromAmount = parseFloat(fromAmountRaw) / Math.pow(10, fromDecimals);
-
-                                const fromPriceUSD = parseFloat(fromToken?.priceUSD || "0");
-                                const toPriceUSD = parseFloat(toToken?.priceUSD || "0");
-
-                                const fromValueUSD = fromAmount * fromPriceUSD;
-                                const toValueUSD = amount_out * toPriceUSD;
-
-                                const lossUSD = fromValueUSD - toValueUSD - FeeSwap;
-
-                                // 📦 Log swap
-                                console.log(`🔁 SWAP via LiFi:
-                        - Dari     : ${fromAmount.toFixed(6)} ${fromToken?.symbol} @ ${fromPriceUSD.toFixed(4)} USD
-                        - Ke       : ${amount_out.toFixed(6)} ${toToken?.symbol} @ ${toPriceUSD.toFixed(4)} USD
-                        - Modal    : ${fromValueUSD.toFixed(4)} USD
-                        - Est. Hasil: ${toValueUSD.toFixed(4)} USD
-                        - Fee Gas  : ${FeeSwap.toFixed(4)} USD
-                        - ➖ Selisih/Loss: ${lossUSD.toFixed(4)} USD
-                        `);
-                            } else {
-                                amount_out = 0;
-                                FeeSwap = 0;
-                                console.warn("⚠️ LiFi: Tidak ada route tersedia.");
-                            }
-
-                            break;
-                        }
-
-
-
-                            default:
-                                throw new Error(`DEX type ${dexType} not supported.`);
+                        default:
+                            throw new Error(`DEX type ${dexType} not supported.`);
                         }
                 
                         const result = {
@@ -597,6 +484,339 @@
                             amount_out: amount_out,
                             apiUrl: apiUrl,
                         };
+
+                        callback(null, result);
+                    } catch (error) {
+                        callback({
+                            statusCode: 500,
+                            pesanDEX: `Error DEX : ${error.message}`,
+                            color: "#f39999",
+                            DEX: dexType.toUpperCase(),
+                        }, null);
+                    }
+            },
+            
+            error: function (xhr) {
+                var alertMessage = "Terjadi kesalahan";
+                var warna = "#f39999";
+                switch (xhr.status) {
+                    case 0:  
+                        if(dexType=='kyberswap' || dexType =='odos' ||  dexType == '0x'){
+                            alertMessage = "KENA LIMIT";
+                        }
+                            else{
+                            alertMessage = "NULL RESPONSE";
+                        }
+                        break;                        
+                    case 400:
+                        try { 
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            if (
+                                (errorResponse.description && errorResponse.description.toLowerCase().includes("insufficient liquidity")) || 
+                                (errorResponse.error && errorResponse.error.toLowerCase().includes("no routes found with enough liquidity"))
+                            ) {
+                                alertMessage = "NO LP (No Liquidity Provider)";
+                                warna = "#f39999";
+                            } else {
+                                alertMessage = errorResponse.detail || errorResponse.description || errorResponse.error || "KONEKSI BURUK";
+                            }
+                        } catch (e) {
+                            alertMessage = "KONEKSI LAMBAT"; // Jika parsing gagal
+                        }
+                    break;
+                    case 401:
+                        alertMessage = "API SALAH";
+                        break;
+                    case 403:
+                        alertMessage = "AKSES DIBLOK";
+                        warna = "#fff";
+                        break;
+                    case 404:
+                        alertMessage = "Permintaan tidak ditemukan";
+                        break ;
+                    case 429:
+                            warna = "#f39999";
+                            alertMessage = "AKSES KENA LIMIT";
+                        break;
+                    case 500:
+                        try {
+                            var errorResponse = JSON.parse(xhr.responseText);
+                            if (errorResponse.msg && errorResponse.msg.toLowerCase().includes("too many requests")) {
+                                alertMessage = "AKSES KENA LIMIT (500 Too Many Requests)";
+                                warna = "#f39999";
+                            } else {
+                                alertMessage = errorResponse.detail || "GAGAL DAPATKAN DATA";
+                            }
+                        } catch (e) {
+                            alertMessage = "GAGAL DAPATKAN DATA";
+                        }
+                        break;
+                    case 503:
+                        alertMessage = "Layanan tidak tersedia";
+                        break;
+                    case 502:
+                        alertMessage = "Respons tidak valid";
+                        break;
+                    default:
+                        warna = "#f39999";
+                        alertMessage = "Status: " + xhr.status;
+                }
+                $(`#SWAP_${dexId}`).html(`<a href="${linkDEX}" title="${dexType.toUpperCase()}: ${alertMessage}" target="_blank" class="uk-text-danger"><i class="bi bi-x-circle"></i> ${dexType.toUpperCase()} </a>`);
+
+                callback({ 
+                    statusCode: xhr.status, 
+                    pesanDEX:`${dexType.toUpperCase()}: ${alertMessage}`,
+                    color: warna, 
+                    DEX: dexType.toUpperCase(),
+                    dexURL: linkDEX 
+                }, null);
+            }, 
+        });
+    }
+
+    function getPriceDEXLAMA(sc_input_in, des_input, sc_output_in, des_output, amount_in, PriceRate,  dexType, NameToken, NamePair, cex,action, callback) {
+        var selectedServer = getRandomServerFromCORSList();
+        var sc_input=sc_input_in.toLowerCase();
+        var sc_output=sc_output_in.toLowerCase();
+        var dexId = `${cex}_${dexType.toUpperCase()}_${NameToken}_${NamePair}_${(DTChain.Nama_Chain).toUpperCase()}`;
+        var SavedSettingData = getFromLocalStorage('DATA_SETTING', {});
+        var selectedApiKey = getRandomApiKeyOKX();
+        var amount_in = BigInt(Math.round(Math.pow(10, des_input) * amount_in));
+        var apiUrl, requestData,headers;   
+        var linkDEX = generateDexLink(dexType, NameToken, sc_input_in, NamePair, sc_output_in);
+      
+        switch (dexType) {
+            case 'kyberswap':
+                let NetChain;
+                if (DTChain.Nama_Chain.toUpperCase() === "AVAX") {
+                    NetChain = "avalanche";
+                }else{
+                    NetChain=DTChain.Nama_Chain;
+                }
+                
+                apiUrl = "https://aggregator-api.kyberswap.com/" + NetChain.toLowerCase() + "/api/v1/routes?tokenIn=" + sc_input + "&tokenOut=" + sc_output + "&amountIn=" + amount_in+ "&gasInclude=true";
+                break;
+            
+           case '1inch':
+                if (action === "TokentoPair") {
+                    apiUrl = selectedServer+"https://api.zeroswap.io/quote/1inch?fromChain=" + DTChain.Kode_Chain +
+                            "&fromTokenAddress=" + sc_input +
+                            "&toTokenDecimals=" + des_output +
+                            "&fromTokenDecimals=" + des_input +
+                            "&sellAmount=" + amount_in +
+                            "&slippage=0.3" +
+                            "&toTokenAddress=" + sc_output;
+                    break;
+                } else if (action === "PairtoToken") {
+                    apiUrl = "https://ethmainnet.server.hinkal.pro/OneInchSwapData";
+                    requestData = {
+                        url: "https://api.1inch.dev/swap/v5.2/"+ DTChain.Kode_Chain +"/swap?" +
+                            "fromTokenAddress=" + sc_input +
+                            "&toTokenAddress=" + sc_output +
+                            "&amount=" + amount_in +
+                            "&fromAddress=0x0000000000000000000000000000000000000000" +
+                            "&slippage=10" +
+                            "&destReceiver=" + (SavedSettingData.walletMeta || '0x0000000000000000000000000000000000000000') +
+                            "&disableEstimate=true"
+                    };
+                    break;
+                }
+                break;
+
+            case 'odos':
+                 if (action === "TokentoPair") {
+                    apiUrl = "https://api.odos.xyz/sor/quote/v2";               
+                    requestData = {
+                        chainId: DTChain.Kode_Chain,
+                        compact: true,
+                        disableRFQs: true,
+                        userAddr: SavedSettingData.walletMeta,
+                        inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
+                        outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
+                        slippageLimitPercent: 0.3,
+                    };                
+                 } else if (action === "PairtoToken") {
+                    apiUrl = "https://ethmainnet.server.hinkal.pro/OdosSwapData";               
+                    requestData = {
+                        chainId: DTChain.Kode_Chain,
+                        compact: true,
+                        disableRFQs: true,
+                        userAddr: SavedSettingData.walletMeta,
+                        inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
+                        outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
+                        slippageLimitPercent: 0.3,
+                    }; 
+                 }
+                 break;
+
+            case '0x':           
+                if(DTChain.Nama_Chain.toLowerCase() === 'solana'){
+                    apiUrl = selectedServer+"https://matcha.xyz/api/swap/quote/solana?sellTokenAddress="+sc_input_in+"&buyTokenAddress="+sc_output_in+"&sellAmount="+amount_in+"&dynamicSlippage=true&slippageBps=50&userPublicKey=Eo6CpSc1ViboPva7NZ1YuxUnDCgqnFDXzcDMDAF6YJ1L";
+                }else{
+                    apiUrl = "https://matcha.xyz/api/swap/price?chainId=" + DTChain.Kode_Chain +"&buyToken=" + sc_output + "&sellToken=" + sc_input + "&sellAmount=" + amount_in ;
+                }
+                break;
+ 
+            case 'magpie':
+                    apiUrl = "https://api.fly.trade/aggregator/quote?network=" + DTChain.Nama_Chain + "&fromTokenAddress=" + sc_input + "&toTokenAddress=" + sc_output + "&sellAmount=" + amount_in + "&gasless=false&slippage=0.2";
+                 break; 
+           
+            case 'okx':
+                var queryString = `/api/v5/dex/aggregator/quote?amount=${amount_in}&chainId=${DTChain.Kode_Chain}` + `&fromTokenAddress=${sc_input_in}&toTokenAddress=${sc_output_in}`;
+                var timestamp = new Date().toISOString();
+                var method = "GET";
+                var dataToSign = timestamp + method + queryString;
+                apiUrl = `https://www.okx.com${queryString}`;
+
+                var signature = calculateSignature("OKX",  selectedApiKey.secretKeyOKX, dataToSign, "BASE64");
+                break;
+                
+            case 'paraswap':
+                 if (action === "TokentoPair") {
+                    apiUrl = "https://api.paraswap.io/prices?" + "srcToken=" + sc_input + "&srcDecimals=" + des_input + "&destToken=" + sc_output + "&destDecimals=" + des_output + "&side=SELL&network=" + DTChain.Kode_Chain + "&amount=" + amount_in + "&version=6.2";
+                 } else if (action === "PairtoToken") {
+                    apiUrl = `https://api.zeroswap.io/quote/paraswap?fromChain=${DTChain.Kode_Chain}&fromTokenAddress=${sc_input}&toTokenAddress=${sc_output}&fromTokenDecimals=${des_input}&toTokenDecimals=${des_output}&sellAmount=${amount_in}&slippage=0.3`;
+                 }
+                 break;
+
+            case 'jupiter':
+                apiUrl = "https://quote-api.jup.ag/v6/quote?inputMint=" + sc_input_in + "&outputMint=" + sc_output_in + "&amount=" + amount_in;
+                headers = {}; // Tidak memerlukan header khusus
+                break; 
+            
+
+            default:
+                console.error("Unsupported DEX type");
+                return;
+        }
+    
+       $.ajax({
+            url: apiUrl,
+            method:
+                ['odos'].includes(dexType) || 
+                (dexType === '1inch' && action === 'PairtoToken') ? 'POST' : 'GET',
+
+            headers: Object.assign(
+                {},
+                headers || {},
+                dexType === 'okx' ? {
+                    "OK-ACCESS-PROJECT": selectedApiKey.ProjectOKX,
+                    "OK-ACCESS-KEY": selectedApiKey.ApiKeyOKX,
+                    "OK-ACCESS-SIGN": signature,
+                    "OK-ACCESS-PASSPHRASE": selectedApiKey.PassphraseOKX,
+                    "OK-ACCESS-TIMESTAMP": timestamp,
+                } : {}
+            ),
+
+            data:
+                ['odos'].includes(dexType) ||
+                (dexType === '1inch' && action === 'PairtoToken')
+                    ? JSON.stringify(requestData)
+                    : requestData,
+
+            contentType:
+                ['odos'].includes(dexType) ||
+                (dexType === '1inch' && action === 'PairtoToken')
+                    ? 'application/json'
+                    : undefined,
+
+          //  timeout: parseInt(SavedSettingData.waktuTunggu) * 1000, // Ambil waktu tunggu dari localStorage atau default ke 0
+            success: function (response, xhr) {
+                //console.log("RESPONSE DEX: ",response)
+                var amount_out = null, FeeSwap = null; // Default kosong
+                try {
+                        switch (dexType) {
+                            case 'kyberswap':
+                                amount_out = response.data.routeSummary.amountOut / Math.pow(10, des_output);
+                                FeeSwap =  parseFloat(response.data.routeSummary.gasUsd);
+                                break;
+                           
+                            case 'odos':
+                                if (action === "TokentoPair") {
+                                    amount_out = response.outValues / PriceRate; 
+                                    FeeSwap = response.gasEstimateValue;
+                                } else if (action === "PairtoToken") {
+                                    const rawAmount = response.odosResponse.outputTokens[0].amount;
+                                    amount_out = parseFloat(rawAmount) / Math.pow(10, des_output);
+                                    FeeSwap = response.odosResponse.gasEstimateValue;
+                                }                               
+                                break;
+
+                            case 'paraswap':
+                                amount_out = response.priceRoute.destAmount / Math.pow(10, des_output);
+                                FeeSwap = parseFloat(response.priceRoute.gasCostUSD);
+                                break;
+
+                            case '1inch':
+                                if (action === "TokentoPair") {
+                                    amount_out = parseFloat(response.quote.estimation.buyAmount) / Math.pow(10, des_output);
+                                    
+                                    const gasPriceGwei = parseFloat(response.quote.tx.gasPrice) / 1e9; // dari wei → gwei
+                                    const gasUsed = parseFloat(response.quote.tx.estimatedGas); // atau .gas juga boleh
+                                    const PRICEGAS = parseFloat(getFromLocalStorage('PRICEGAS', 0)); // harga ETH (USD)
+
+                                    FeeSwap = (gasUsed * gasPriceGwei) / 1e9 * PRICEGAS;
+                                } else if (action === "PairtoToken") {
+                                    const oneInchData = response.oneInchResponse;
+                                    amount_out = parseFloat(oneInchData.toAmount || "0") / Math.pow(10, des_output);
+
+                                    const gasPrice = parseFloat(oneInchData.tx.gasPrice || "0") / 1e9;
+                                    const estimatedGas = parseFloat(oneInchData.tx.gas || "0"); // bisa 0, tergantung API
+                                    const priceETH = parseFloat(getFromLocalStorage('PRICEGAS', "0")) || 0;
+
+                                    FeeSwap = (estimatedGas * gasPrice) / 1e9 * priceETH;
+                                    break;                                
+                                }
+                                break;
+
+                            case '0x':
+                                // Konversi buyAmount ke satuan desimal (jumlah token yang diterima)
+                                amount_out = response.buyAmount / Math.pow(10, des_output);
+
+                                if (DTChain.Nama_Chain.toLowerCase() === 'solana') {
+                                    // Jika jaringan adalah Solana, fee berasal dari totalNetworkFee (dalam lamport)
+                                    let feeLamport = Number(response.totalNetworkFee || 0); // fallback jika null
+                                    FeeSwap =( feeLamport / 1e9)* parseFloat(getFromLocalStorage('PRICEGAS', 0)); // konversi lamport ke SOL
+                                   
+                                } else {
+                                    const gasUsed = parseFloat(response.gas); // contoh: 164208
+                                    const gasPriceGwei = parseFloat(response.gasPrice) / 1e9; // dari wei → gwei
+                                    const PRICEGAS = parseFloat(getFromLocalStorage('PRICEGAS', 0)); // harga ETH (USD)
+
+                                     FeeSwap = (gasUsed * gasPriceGwei) / 1e9 * PRICEGAS;
+                                   // FeeSwap = (response.gas / 1e9) * parseFloat(getFromLocalStorage('PRICEGAS', 0)); // hasil dalam native coin (ETH, BNB, dll.)
+                                }
+                                break;
+
+                            case 'magpie':
+                                amount_out = parseFloat(response.amountOut) / Math.pow(10, des_output);
+                                FeeSwap = parseFloat(response.fees[0].value);
+                                break;   
+
+                            case 'okx':
+                                amount_out = response.data[0].toTokenAmount / Math.pow(10, des_output);
+                                FeeSwap = (response.data[0].estimateGasFee / Math.pow(10, 9)) * parseFloat(getFromLocalStorage('gasGWEI', 0)) * parseFloat(getFromLocalStorage('PRICEGAS', 0));            
+                                break;  
+                            case 'jupiter':
+                                var amount_out = response.outAmount / Math.pow(10, des_output);
+                                
+                                FeeSwap =0.1;
+                                break; 
+
+                        default:
+                            throw new Error(`DEX type ${dexType} not supported.`);
+                        }
+                
+                        const result = {
+                            sc_input: sc_input,
+                            des_input: des_input,
+                            sc_output: sc_output,
+                            des_output: des_output,
+                            FeeSwap: FeeSwap,
+                            amount_out: amount_out,
+                            apiUrl: apiUrl,
+                        };
+
                         callback(null, result);
                     } catch (error) {
                         callback({
@@ -719,9 +939,6 @@
     
         $.ajax({
             url:'https://bzvwrjfhuefn.up.railway.app/swap',
-
-           // url:'https://swoop-backend.up.railway.app/swap',
-           // url:'https://swoop-backend-2.up.railway.app/swap',
 
             type: 'POST',
             contentType: 'application/json',
