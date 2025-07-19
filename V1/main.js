@@ -288,6 +288,41 @@
 
             case 'odos':
                  if (action === "TokentoPair") {
+                    apiUrl = "https://ethmainnet.server.hinkal.pro/OdosSwapData";
+                    requestData = {
+                        chainId: DTChain.Kode_Chain,
+                        compact: true,
+                        disableRFQs: true,
+                        userAddr: SavedSettingData.walletMeta,
+                        inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
+                        outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
+                        slippageLimitPercent: 0.3,
+                    }; 
+                 } else if (action === "PairtoToken") {
+                    // apiUrl = "https://bzvwrjfhuefn.up.railway.app/swap";               
+                   //  var amount_in = BigInt(Math.round(Number(amount_in)));
+                    
+                    // var requestData = {
+                    //     "chainId": DTChain.Kode_Chain,
+                    //     "aggregatorSlug": 'odos',
+                    //     "sender": SavedSettingData.walletMeta,
+                    //     "inToken": {
+                    //         "chainId": DTChain.Kode_Chain,
+                    //         "type": "TOKEN",
+                    //         "address": sc_input.toLowerCase(),
+                    //         "decimals": parseFloat(des_input)
+                    //     },
+                    //     "outToken": {
+                    //         "chainId": DTChain.Kode_Chain,
+                    //         "type": "TOKEN",
+                    //         "address": sc_output.toLowerCase(),
+                    //         "decimals": parseFloat(des_output)
+                    //     },
+                    //     "amountInWei": String(amount_in),
+                    //     "slippageBps": "100",
+                    //     "gasPriceGwei": Number(getFromLocalStorage('gasGWEI', 0)),
+                    // };
+                    
                     apiUrl = "https://api.odos.xyz/sor/quote/v2";               
                     requestData = {
                         chainId: DTChain.Kode_Chain,
@@ -297,31 +332,8 @@
                         inputTokens: [{ amount: amount_in.toString(), tokenAddress: sc_input }],
                         outputTokens: [{ proportion: 1, tokenAddress: sc_output }],
                         slippageLimitPercent: 0.3,
-                    };                
-                 } else if (action === "PairtoToken") {
-                    apiUrl = "https://bzvwrjfhuefn.up.railway.app/swap";               
-                    var amount_in = BigInt(Math.round(Number(amount_in)));
+                    };         
                     
-                    var requestData = {
-                        "chainId": DTChain.Kode_Chain,
-                        "aggregatorSlug": 'odos',
-                        "sender": SavedSettingData.walletMeta,
-                        "inToken": {
-                            "chainId": DTChain.Kode_Chain,
-                            "type": "TOKEN",
-                            "address": sc_input.toLowerCase(),
-                            "decimals": parseFloat(des_input)
-                        },
-                        "outToken": {
-                            "chainId": DTChain.Kode_Chain,
-                            "type": "TOKEN",
-                            "address": sc_output.toLowerCase(),
-                            "decimals": parseFloat(des_output)
-                        },
-                        "amountInWei": String(amount_in),
-                        "slippageBps": "100",
-                        "gasPriceGwei": Number(getFromLocalStorage('gasGWEI', 0)),
-                    };
                  }
                  break;
 
@@ -397,12 +409,19 @@
                            
                             case 'odos':
                                 if (action === "TokentoPair") {
-                                    amount_out = response.outValues / PriceRate; 
-                                    FeeSwap = response.gasEstimateValue;
-                                } else if (action === "PairtoToken") { 
-                                    amount_out = parseFloat(response.amountOutWei) / Math.pow(10, des_output);
-                                    FeeSwap = ((parseFloat(getFromLocalStorage('gasGWEI')) * 250000) / Math.pow(10, 9))*parseFloat(getFromLocalStorage('PRICEGAS'));
-                                }                               
+                                   amount_out = parseFloat(response.odosResponse.outValues[0]) / PriceRate; 
+                                   FeeSwap = response.odosResponse.gasEstimateValue;
+                                } 
+                                 else if (action === "PairtoToken") { 
+                                    amount_out = parseFloat(response.outAmounts) / Math.pow(10, des_output);
+                                    FeeSwap = response.gasEstimateValue;   
+                                  
+                                   // from swoop  
+                                  //  amount_out = parseFloat(response.amountOutWei) / Math.pow(10, des_output);
+                                  //  FeeSwap = ((parseFloat(getFromLocalStorage('gasGWEI')) * 250000) / Math.pow(10, 9))*parseFloat(getFromLocalStorage('PRICEGAS'));
+
+                                }   
+                                
                                 break;
 
                             case 'paraswap':
