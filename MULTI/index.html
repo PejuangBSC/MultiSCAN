@@ -14,7 +14,7 @@
 
     :root {
         --primary-color: #1258c9;
-        --secondary-color: #6d7d6a;
+        --secondary-color: #287bdd;
         --success-color: #027f08;
         --danger-color: #f93c32;
         --warning-color: #f5a512;
@@ -22,7 +22,7 @@
         --light-color: #f8fafc;
         --card-color: #bac8ef;
         --accent-blue: #289ed3;
-        --muted-blue: #e0ecf4;
+        --muted-blue: #f1f5f8;
         --strip-odd: #daedff;
         --strip-even: #ffffff;
         --not-scanned: #b3d1de;
@@ -57,7 +57,7 @@
     .card {
         border: none;
         border-radius: 12px;
-        background-color: var(--card-color);
+        background-color: var(--accent-blue);
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         transition: all 0.3s ease;
     }
@@ -259,7 +259,7 @@
     .abu { background-color: #d8dbdf !important; }
     .highlight { 
         background-color: var(--sinyal-info) !important;
-        /* border-right: 1px black solid; */
+        border-right: 1px black solid;
     }
 
     .token-data-row.strip-even > td { background-color: var(--strip-even) !important }
@@ -353,24 +353,24 @@
     }
 
     .sinyalDEX{
-        background-color: var(--sinyal-info) !important;
+        background-color: var(--accent-blue) !important;
     }
 
     body.dark-mode {
     --primary-color: #2666c0;      /* Lebih redup dari #1258c9 */
-    --secondary-color: #c7f8f0;    /* Lebih kusam dari #6d7d6a */
+    --secondary-color: #1464c0;    /* Lebih kusam dari #6d7d6a */
     --success-color: #2a8438;      /* Redup dari #027f08 */
     --danger-color: #cc5249;       /* Redup dari #f93c32 */
     --warning-color: #c1832c;      /* Redup dari #f5a512 */
     --dark-color: #0c150c;         /* Terang kebalikan dari dark, agar teks tetap terlihat */
     --light-color: #1b1e23;        /* Latar belakang utama dark */
     --card-color: #165a9d;         /* Untuk panel, kartu, tabel */
-    --accent-blue: #104f73;        /* Biru pudar */
+    --accent-blue: #5c7381;        /* Biru pudar */
     --muted-blue: #47596b;         /* Biru abu */
     --strip-odd: #b1bcc6;          /* List bergantian gelap */
     --strip-even: #c6d4e3;
     --not-scanned: #4d636f;        /* Warna status belum discan */
-    --sinyal-info: #818c94;        /* Latar sinyal baru */
+    --sinyal-info: #d9dbd9;        /* Latar sinyal baru */
 }
 
     </style>
@@ -600,25 +600,25 @@
                             <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
                                 <!-- Tombol Aksi -->
                                 <div class="d-flex align-items-center gap-2 flex-wrap">
-                                    <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tokenModal">
+                                    <button class="btn btn-sm btn-outline-primary bg-light" data-bs-toggle="modal" data-bs-target="#tokenModal">
                                         <i class="bi bi-plus-lg"></i> Add Tokens
                                     </button>
 
-                                    <button class="btn btn-sm btn-outline-success" id="exportTokensBtn">
+                                    <button class="btn btn-sm btn-outline-success bg-light" id="exportTokensBtn">
                                         <i class="bi bi-download"></i> Export
                                     </button>
 
-                                    <button class="btn btn-sm btn-outline-danger" id="importTokensBtn">
+                                    <button class="btn btn-sm btn-outline-danger bg-light" id="importTokensBtn">
                                         <i class="bi bi-upload"></i> Import
                                     </button>
                                     
-                                    <button class="btn btn-sm btn-outline-info" id="WalletCEX">
+                                    <button class="btn btn-sm btn-outline-info bg-light" id="WalletCEX">
                                         <i class="bi bi-wallet"></i> Wallet CEX
                                     </button>
 
                                     <input type="file" id="importTokensInput" accept=".csv" hidden>
 
-                                    <div class="input-group input-group-sm" style="width: 200px;">
+                                    <div class="input-group input-group-sm bg-light" style="width: 200px;">
                                         <span class="input-group-text"><i class="bi bi-search"></i></span>
                                         <input type="text" id="tokenSearch" class="form-control" placeholder="Search token...">
                                     </div>
