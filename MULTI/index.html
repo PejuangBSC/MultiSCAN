@@ -20,7 +20,7 @@
         --warning-color: #f5a512;
         --dark-color: #2f3e46;
         --light-color: #f8fafc;
-        --card-color: #ffffff;
+        --card-color: #bac8ef;
         --accent-blue: #289ed3;
         --muted-blue: #e0ecf4;
         --strip-odd: #daedff;
@@ -37,6 +37,7 @@
 .text-warning     { color: var(--warning-color) !important; }
 .text-dark        { color: var(--dark-color) !important; }
 .text-light       { color: var(--light-color) !important; }
+.text-mute       { color: var(--muted-blue) !important; }
 
 /* BACKGROUND COLORS */
 .bg-primary       { background-color: var(--primary-color) !important;  }
@@ -46,6 +47,7 @@
 .bg-warning       { background-color: var(--warning-color) !important;}
 .bg-dark          { background-color: var(--dark-color) !important;  }
 .bg-light         { background-color: var(--light-color) !important;  }
+.bg-muted         { background-color: var(--muted-blue) !important;  }
 
     .navbar {
         background: linear-gradient(135deg, var(--primary-color), #6d9dc5);
@@ -300,7 +302,7 @@
         text-align: center;
     }
     .section-control-panel{
-        background-color: var(--strip-even) !important;
+        background-color: var(--strip-odd) !important;
     }
     .custom-alert {
         display: none;
@@ -353,6 +355,24 @@
     .sinyalDEX{
         background-color: var(--sinyal-info) !important;
     }
+
+    body.dark-mode {
+    --primary-color: #2666c0;      /* Lebih redup dari #1258c9 */
+    --secondary-color: #c7f8f0;    /* Lebih kusam dari #6d7d6a */
+    --success-color: #2a8438;      /* Redup dari #027f08 */
+    --danger-color: #cc5249;       /* Redup dari #f93c32 */
+    --warning-color: #c1832c;      /* Redup dari #f5a512 */
+    --dark-color: #0c150c;         /* Terang kebalikan dari dark, agar teks tetap terlihat */
+    --light-color: #1b1e23;        /* Latar belakang utama dark */
+    --card-color: #165a9d;         /* Untuk panel, kartu, tabel */
+    --accent-blue: #104f73;        /* Biru pudar */
+    --muted-blue: #47596b;         /* Biru abu */
+    --strip-odd: #b1bcc6;          /* List bergantian gelap */
+    --strip-even: #c6d4e3;
+    --not-scanned: #4d636f;        /* Warna status belum discan */
+    --sinyal-info: #818c94;        /* Latar sinyal baru */
+}
+
     </style>
 
 </head>
@@ -404,6 +424,10 @@
                     </div>
                     <!-- Kontrol -->
                     <div class="d-flex align-items-center flex-wrap gap-2">
+                        <!-- Toggle Mode Terang/Gelap -->
+                        <button id="themeToggleBtn" class="btn btn-outline-light bg-dark btn-sm" title="Ganti Mode Gelap / Terang">
+                            🌙
+                        </button>
 
                         <a href="#" target="_blank" id="reload" title="RELOAD PAGE">
                             <img src="https://cdn-icons-png.freepik.com/512/210/210136.png" width="23px">
@@ -561,9 +585,11 @@
                                     <!-- Dynamic Content -->
                                 </tbody>
                             </table>
+
                         </div>
                     </div>
-            </div>
+                </div>
+
             </div>
 
             <!-- Token Management Tab -->
@@ -889,16 +915,27 @@
         </div>
     </div>
 
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
     <!-- Price APIs -->
-    <script src="MULTI/price-apis.js"></script>
+    <script src="price-apis.js"></script>
     <!-- Custom JS -->
-    <script src="MULTI/script.js"></script>
+    <script src="app.js"></script>
+
+    <!-- Tombol Scroll ke Atas -->
+    <button id="scrollTopBtn" title="Kembali ke Atas" class="btn btn-success rounded-circle shadow" style="
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        z-index: 9999;
+        display: none;">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 </body>
 </html>
 
