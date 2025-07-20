@@ -2478,8 +2478,8 @@ class TokenPriceMonitor {
             const cexBadgeColor = this.getBadgeColor(cexName, 'cex');
             
              const directionLabel = direction === 'cex_to_dex'
-                ? `<span class="ps-1 pe-1 ${cexColor} fw-bold">${fromSide.toUpperCase()}</span><span class="text-success fw-bold">[${fromSymbol}⇄${toSymbol}] </span><span class="${chainColor} ">[${shortChain}]</span>`
-                : `<span class="ps-1 pe-1 ${cexColor} fw-bold">${toSide.toUpperCase()}</span><span class="text-danger fw-bold">[${fromSymbol}⇄${toSymbol}] </span><span class="${chainColor} ">[${shortChain}]</span>`;
+                ? `<span class="pe-1 ${cexColor} fw-bold">${fromSide.toUpperCase()}</span><span class="text-success fw-bold">[${fromSymbol}⇄${toSymbol}] </span><span class="${chainColor} ">[${shortChain}]</span>`
+                : `<span class="pe-1 ${cexColor} fw-bold">${toSide.toUpperCase()}</span><span class="text-danger fw-bold">[${fromSymbol}⇄${toSymbol}] </span><span class="${chainColor} ">[${shortChain}]</span>`;
 
             const signalText = `
                 <a href="#${rowId}" class="text-decoration-none text-dark text-break align-middle">${directionLabel}:<span class="fw-bold " style="color:#dd9d06;">${modal}$</span>→<span class="text-dark fw-bold" >${pnlNetto.toFixed(2)}$</span></a>`;
@@ -2501,12 +2501,12 @@ class TokenPriceMonitor {
 
                     const highlightClass = parseFloat(pnlNetto) > parseFloat(this.settings.PNLFilter)
                         ? "highlight px-1 fs-8 fw-bold"
-                        : "fs-8";
+                        : "px-1 fs-8";
 
                     const li = document.createElement("li");
                     li.className = highlightClass;
                     li.setAttribute("data-key", signalKey);
-                    li.innerHTML = `[${signalText} ]`;
+                    li.innerHTML = `✶ ${signalText}`;
                     listEl.append(li);
                 }
             }
@@ -2521,7 +2521,7 @@ class TokenPriceMonitor {
                 };
 
                 // ✅ Ganti isi span jika memang lebih tinggi
-                $(`#new_${dexKey}_Signal`).html(signalText);
+                $(`#new_${dexKey}_Signal`).html(`${signalText}`);
             }
 
             const username = this.settings.UserName || 'Anon';
@@ -2585,6 +2585,67 @@ class TokenPriceMonitor {
     }
  
     initPNLSignalStructure() {
+        const container = $('#dexSignals');
+        container.empty();
+
+        this.pnlSignals = {};
+
+        // Gunakan row Bootstrap dengan grid responsive
+        const row = $('<div class="row g-2"></div>');
+
+        DexList.forEach((dex) => {
+            this.pnlSignals[dex] = [];
+
+            const dexId = dex.toUpperCase();
+            const collapseId = `collapse-${dexId}`;
+            const listId = `pnl-list-${dexId}`;
+            const textColor = this.getTextColorClassFromBadge(this.getBadgeColor(dex, 'dex'));
+
+            const card = $(`
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card border shadow-sm rounded-top no-rounded-bottom h-100">
+                        <!-- HEADER -->
+                        <div class="card-header px-1 py-1 d-flex justify-content-between align-items-center border-bottom-0 align-middle bg-dark-subtle" style="min-height: unset;">
+                            <div class="fw-semibold text-uppercase ${textColor} ps-2" style="font-size: 0.85rem;">
+                                ${dexId} &nbsp;<span class="badge fs-8 bg-warning-subtle" id="new_${dexId}_Signal" ></span>
+                            </div>
+                            <i class="bi bi-caret-down-fill toggle-icon" id="icon-${dexId}"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#${collapseId}"
+                                aria-expanded="true"
+                                aria-controls="${collapseId}"
+                                style="cursor: pointer; font-size: 0.85rem;"></i>
+                        </div>
+                        <!-- BODY -->
+                        <div class="card-body p-2 bg-light-subtle align-middle">
+                            <div id="${collapseId}" class="collapse show">
+                                <div id="${listId}" class="d-flex flex-column gap-1 small text-start"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `);
+
+            row.append(card);
+        });
+
+        container.append(row);
+
+        // Event collapse Bootstrap
+        container.on('shown.bs.collapse', function (e) {
+            const targetId = $(e.target).attr('id');
+            const dexId = targetId.replace('collapse-', '');
+            $(`#icon-${dexId}`).removeClass('bi-caret-right-fill').addClass('bi-caret-down-fill');
+        });
+
+        container.on('hidden.bs.collapse', function (e) {
+            const targetId = $(e.target).attr('id');
+            const dexId = targetId.replace('collapse-', '');
+            $(`#icon-${dexId}`).removeClass('bi-caret-down-fill').addClass('bi-caret-right-fill');
+        });
+    }
+
+    initPNLSignalStructure1BARIS() {
         const container = $('#dexSignals');
         container.empty();
 
