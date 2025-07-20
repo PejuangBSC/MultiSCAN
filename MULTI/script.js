@@ -240,6 +240,9 @@ class TokenPriceMonitor {
             this.dexErrorCount = {};
             DexList.forEach(d => this.dexErrorCount[d] = 0);
             DexList.forEach(d => this.updateDexErrorBadge(d));
+            
+            // Inisialisasi sekali saja di luar loop (bukan tiap iterasi sinyal)
+            this.highestPNLSignal = {}; // ✅ Reset setiap scan baru
 
             // Aktifkan tab Price Monitoring
             $('#mainTabs a[href="#priceMonitoring"]').tab('show');
@@ -2479,14 +2482,13 @@ class TokenPriceMonitor {
                 : `<span class="ps-1 pe-1 ${cexColor} fw-bold">${toSide.toUpperCase()}</span><span class="text-danger fw-bold">[${fromSymbol}⇄${toSymbol}] </span><span class="${chainColor} ">[${shortChain}]</span>`;
 
             const signalText = `
-                <a href="#${rowId}" class="text-decoration-none text-dark text-break align-middle">${directionLabel}:<span class="fw-bold " style="color:#dd9d06;">${modal}</span>→<span class="text-dark fw-bold" >${pnlNetto.toFixed(2)}</span></a>`;
+                <a href="#${rowId}" class="text-decoration-none text-dark text-break align-middle">${directionLabel}:<span class="fw-bold " style="color:#dd9d06;">${modal}$</span>→<span class="text-dark fw-bold" >${pnlNetto.toFixed(2)}$</span></a>`;
 
             const signalKey = `${token.symbol}_${token.pairSymbol}_${token.chain}_${cexName}_${dexName}_${direction}`;
             const listEl = document.getElementById(`pnl-list-${dexKey}`);
             const existingLI = listEl?.querySelector(`li[data-key="${signalKey}"]`);
             
-            // Inisialisasi sekali saja di luar loop (bukan tiap iterasi sinyal)
-            this.highestPNLSignal = this.highestPNLSignal || {};
+           // this.highestPNLSignal = this.highestPNLSignal || {};
 
             if (!this.pnlSignals[dexKey][signalKey] && !existingLI) {
                 this.pnlSignals[dexKey][signalKey] = {
@@ -2603,9 +2605,9 @@ class TokenPriceMonitor {
             const card = $(`
                 <div class="card border shadow-sm rounded-top no-rounded-bottom">
                     <!-- HEADER -->
-                    <div class="card-header px-2 py-1 d-flex justify-content-between align-items-center border-bottom-0 align-middle sinyalDEX" style="min-height: unset;">
+                    <div class="card-header px-1 py-1 d-flex justify-content-between align-items-center border-bottom-0 align-middle sinyalDEX" style="min-height: unset;">
                         <div class="fw-semibold text-uppercase ${textColor}" style="font-size: 0.85rem;">
-                            ${dexId} <span class="badge px-2 fs-7 bg-warning-subtle" id="new_${dexId}_Signal" ></span>
+                            ${dexId} &nbsp;<span class="badge fs-8 bg-warning-subtle" id="new_${dexId}_Signal" ></span>
                         </div>
                         <i class="bi bi-caret-down-fill toggle-icon" id="icon-${dexId}"
                             data-bs-toggle="collapse"
@@ -3046,6 +3048,27 @@ class TokenPriceMonitor {
 
 // Initialize the application when DOM is ready
 $(document).ready(function() {
+    $('#scrollTopBtn').show();
+
+    // ==== Toggle Dark Mode ====
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        $('body').addClass('dark-mode');
+        $('#themeToggleBtn').html('☀️');
+    }
+
+    $('#themeToggleBtn').click(function () {
+        $('body').toggleClass('dark-mode');
+
+        if ($('body').hasClass('dark-mode')) {
+            $('#themeToggleBtn').html('☀️');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            $('#themeToggleBtn').html('🌙');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
     window.app = new TokenPriceMonitor();
     
     if (!$('#alert-container').length) {
@@ -3085,7 +3108,20 @@ $(document).ready(function() {
             app.showAlert('❌ Auto Scroll NON AKTIF...!', 'warning');
         }
     });
-   
 
+    // Tampilkan tombol saat scroll
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#scrollTopBtn').fadeIn();
+        } else {
+            $('#scrollTopBtn').fadeOut();
+        }
+    });
+
+    // Scroll ke atas saat tombol diklik
+    $('#scrollTopBtn').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 300);
+        return false;
+    });
 });
 
