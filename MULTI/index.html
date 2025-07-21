@@ -23,8 +23,8 @@ body[data-theme="biru"] {
   --card-color: #e3f0fa;
   --utama: #1976d2;
   --muted: #f5f9fc;
-  --strip-odd: #daedff;
-  --strip-even: #b2d5f8;
+  --strip-even: #8cb9e6;
+  --strip-odd: #bbdaf9;
   --not-scanned: #b3d1de;
   --sinyal-info: #cbfbb0;  
 }
@@ -32,17 +32,17 @@ body[data-theme="biru"] {
 /* ======================= THEME: GREEN ======================= */
 body[data-theme="ijo"] {
   --primary-color: #0d6efd;        /* hijau daun */
-  --secondary-color: #81c784;      /* hijau pastel */
-  --success-color: #1b5e20;        /* hijau tua pekat */
-  --danger-color: #8b1f1f;         /* merah coklat (earthy) */
+  --secondary-color: #06660c;      /* hijau pastel */
+  --success-color: #075f0c;        /* hijau tua pekat */
+  --danger-color: #de0505;         /* merah coklat (earthy) */
   --warning-color:#ff9400;       /* oranye tanah (warm tone) */
   --dark-color: #2e423b;
   --light-color: #f1f5f9;
   --card-color: #d2ede1;
   --utama: #06643f;
   --muted: #f0f5f2;
-  --strip-odd: #ecf4f1;
-  --strip-even: #b6d8cd;
+  --strip-odd: #cdf2e1;
+  --strip-even: #8ee5be;
   --not-scanned: #c0d7ce;
   --sinyal-info: #cbfbb0;
 }
@@ -59,8 +59,8 @@ body[data-theme="coklat"] {
   --card-color: #d7c4b4;
   --utama: #5d4037;
   --muted: #f0e5dd;
-  --strip-even: #ede8e3;
-  --strip-odd: #d7d1ca;
+  --strip-odd: #ede8e3;
+  --strip-even: #d7d1ca;
   --sinyal-info: #cbfbb0;
   --not-scanned: #ffeac8;
 }
@@ -77,8 +77,8 @@ body[data-theme="abu"] {
   --utama: #566369;
   --card-color: #b2babe;
   --muted: #2f353d;
-  --strip-even: #9a9b9e;
-  --strip-odd: #b8bbbe;
+  --strip-odd: #e8ebee;
+  --strip-even: #cfd2d7;
   --sinyal-info: #cbfbb0;
   --not-scanned: #495160;
 }
@@ -95,8 +95,8 @@ body[data-theme="pink"] {
   --card-color: #f8d7e0;           /* pink lembut untuk kartu */
   --utama: #ef647a;                /* pink utama */
   --muted: #f5d5df;                /* pink sangat pucat */
-  --strip-even: #fce8f1;           /* baris genap */
-  --strip-odd: #f6d3e1;            /* baris ganjil */
+  --strip-odd: #fce8f1;           /* baris genap */
+  --strip-even: #f6d3e1;            /* baris ganjil */
   --sinyal-info: #cbfbb0;          /* biru muda kehijauan */
   --not-scanned: #ffe3ec;          /* merah muda kekuningan */
 }
@@ -113,8 +113,8 @@ body[data-theme="orange"] {
   --card-color: #ffe0b2;           /* warna kartu */
   --utama: #ff8a65;                /* oranye coral */
   --muted: #fae0ce;                /* oranye pudar */
-  --strip-even: #fff2e0;           /* baris genap */
-  --strip-odd: #fbdfb8;            /* baris ganjil */
+  --strip-odd: #fff2e0;           /* baris genap */
+  --strip-even: #fbdfb8;            /* baris ganjil */
   --sinyal-info: #cbfbb0;          /* hijau mint */
   --not-scanned: #fff2cc;          /* kuning pudar */
 }
@@ -131,8 +131,8 @@ body[data-theme="ungu"] {
   --card-color: #e9d7f5;           /* warna kartu */
   --utama: #7e57c2;                /* ungu utama */
   --muted: #f5e8fa;                /* ungu pudar */
-  --strip-even: #f3e6fc;           /* baris genap */
-  --strip-odd: #e4d3f2;            /* baris ganjil */
+  --strip-odd: #f3e6fc;           /* baris genap */
+  --strip-even: #e4d3f2;            /* baris ganjil */
   --sinyal-info: #cbfbb0;          /* biru kehijauan terang */
   --not-scanned: #f9e3fc;          /* pink keunguan pucat */
 }
@@ -381,7 +381,7 @@ body[data-theme="ungu"] {
     .pink { background-color: #fccbce !important; }
     .abu { background-color: #d8dbdf !important; }
     .highlight { 
-        background-color: var(--sinyal-info) !important;
+        background-color: #fff !important;
         border-right: 1px black solid;
     }
 
@@ -475,8 +475,13 @@ body[data-theme="ungu"] {
         word-break: break-word;
     }
 
-    .sinyalDEX{
-        background-color: var(--utama) !important;
+    .NameSinyalDEX{
+        background-color: var(--strip-even) !important;
+        color: black !important;
+    }
+
+    .InfoSinyalDEX{
+        background-color: var(--strip-odd) !important;
     }
 
     .progres{
@@ -1054,6 +1059,7 @@ body[data-theme="ungu"] {
             </div>
         </div>
     </div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery -->
