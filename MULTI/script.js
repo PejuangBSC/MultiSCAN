@@ -2575,8 +2575,8 @@ class TokenPriceMonitor {
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card border shadow-sm rounded-top no-rounded-bottom h-100">
                         <!-- HEADER -->
-                        <div class="card-header px-1 py-1 d-flex justify-content-between align-items-center border-bottom-0 align-middle sinyalDEX" style="min-height: unset;">
-                            <div class="fw-semibold text-uppercase text-light ps-2" style="font-size: 0.85rem;">
+                        <div class="card-header px-1 py-1 d-flex justify-content-between align-items-center border-bottom-0 align-middle NameSinyalDEX" style="min-height: unset;">
+                            <div class="fw-semibold text-uppercase text-black ps-2" style="font-size: 0.85rem;">
                                 ${dexId} &nbsp;<span class="badge fs-8 bg-warning-subtle" id="new_${dexId}_Signal" ></span>
                             </div>
                             <i class="bi bi-caret-down-fill toggle-icon" id="icon-${dexId}"
@@ -2587,7 +2587,7 @@ class TokenPriceMonitor {
                                 style="cursor: pointer; font-size: 0.85rem;"></i>
                         </div>
                         <!-- BODY -->
-                        <div class="card-body p-2 bg-light-subtle align-middle">
+                        <div class="card-body p-2  InfoSinyalDEX align-middle">
                             <div id="${collapseId}" class="collapse show">
                                 <div id="${listId}" class="d-flex flex-column gap-1 small text-start"></div>
                             </div>
