@@ -1076,7 +1076,7 @@ class TokenPriceMonitor {
                         style="width: 120px; height: 32px;">
                         ${chainOptions}
                     </select>
-                    <button class="btn btn-outline-success btn-save-inline btn-sm"
+                    <button class="btn btn-outline-dark btn-save-inline btn-sm"
                             data-token-id="${token.id}" data-field="chain" title="Simpan Chain"
                             style="height: 32px;">
                         <i class="bi bi-check-lg small"></i>
@@ -1101,7 +1101,7 @@ class TokenPriceMonitor {
                                         data-token-id="${token.id}" data-field="contractAddress" value="${token.contractAddress}" style="width:360px;" />
                                     <input type="text" class="form-control form-control-sm inline-edit me-1"
                                         data-token-id="${token.id}" data-field="decimals" value="${token.decimals}" style="width:60px;" />
-                                    <button class="btn btn-outline-success btn-save-inline btn-sm"
+                                    <button class="btn btn-outline-dark btn-save-inline btn-sm"
                                             data-token-id="${token.id}" data-field="contractAddress" title="Simpan SC">
                                         <i class="bi bi-check-lg small"></i>
                                     </button>
@@ -1113,7 +1113,7 @@ class TokenPriceMonitor {
                                         data-token-id="${token.id}" data-field="pairContractAddress" value="${token.pairContractAddress}" style="width:360px;" />
                                     <input type="text" class="form-control form-control-sm inline-edit me-1"
                                         data-token-id="${token.id}" data-field="pairDecimals" value="${token.pairDecimals}" style="width:60px;" />
-                                    <button class="btn btn-outline-success btn-save-inline btn-sm"
+                                    <button class="btn btn-outline-dark btn-save-inline btn-sm"
                                             data-token-id="${token.id}" data-field="pairContractAddress" title="Simpan Pair SC">
                                         <i class="bi bi-check-lg small"></i>
                                     </button>
@@ -1149,7 +1149,7 @@ class TokenPriceMonitor {
                                 data-token-id="${token.id}"
                                 data-field="modalCexToDex"
                                 value="${token.modalCexToDex}" />
-                            <button class="btn btn-outline-success btn-save-inline btn-sm"
+                            <button class="btn btn-outline-dark btn-save-inline btn-sm"
                                     data-token-id="${token.id}"
                                     data-field="modalCexToDex"
                                     title="Simpan">
@@ -1164,7 +1164,7 @@ class TokenPriceMonitor {
                                 data-token-id="${token.id}"
                                 data-field="modalDexToCex"
                                 value="${token.modalDexToCex}" />
-                            <button class="btn btn-outline-success btn-save-inline btn-sm"
+                            <button class="btn btn-outline-dark btn-save-inline btn-sm"
                                     data-token-id="${token.id}"
                                     data-field="modalDexToCex"
                                     title="Simpan">
@@ -3131,7 +3131,7 @@ $(document).ready(function() {
     const savedTheme = localStorage.getItem('MULTI_theme');
 
     if (!savedTheme || !isValidTheme(savedTheme)) {
-        alert("🎨 Silakan pilih salah satu warna tema terlebih dahulu!");
+        alert("🎨 SILAKAN PILIH WARNA TEMA DAHULU [POJOK KANAN ATAS]!");
         localStorage.removeItem('MULTI_theme'); // bersihkan jika tidak valid
     } else {
         applyTheme(savedTheme);
