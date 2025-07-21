@@ -35,7 +35,7 @@ body[data-theme="green"] {
   --secondary-color: #81c784;      /* hijau pastel */
   --success-color: #1b5e20;        /* hijau tua pekat */
   --danger-color: #8b1f1f;         /* merah coklat (earthy) */
-  --warning-color: #c97c00;        /* oranye tanah (warm tone) */
+  --warning-color:#f69417;       /* oranye tanah (warm tone) */
   --dark-color: #2e423b;
   --light-color: #f1f5f9;
   --card-color: #d2ede1;
@@ -69,7 +69,7 @@ body[data-theme="brown"] {
 body[data-theme="dark"] {
   --primary-color: #0640a1;        /* biru terang khas dark */
   --secondary-color: #313a3e;      /* abu netral */
-  --success-color: #12b767;        /* neon green, kontras */
+  --success-color: #067e44;        /* neon green, kontras */
   --danger-color: #970606;         /* neon merah, khas dark UI */
   --warning-color: #ffc107;        /* neon amber */
   --dark-color: #2b303b;
@@ -77,8 +77,8 @@ body[data-theme="dark"] {
   --utama: #566369;
   --card-color: #b2babe;
   --muted: #2f353d;
-  --strip-even: #696a6d;
-  --strip-odd: #797e84;
+  --strip-even: #9a9b9e;
+  --strip-odd: #b8bbbe;
   --sinyal-info: #c9cecc;
   --not-scanned: #495160;
 }
@@ -309,11 +309,6 @@ body[data-theme="dark"] {
         width: 100%;
     }
 
-    .price-comparison-table {
-        table-layout: auto !important;
-        width: max-content;
-    }
-
     .price-comparison-table th {
         position: sticky;
         top: 0;
@@ -321,17 +316,7 @@ body[data-theme="dark"] {
         z-index: 5;
         white-space: nowrap;
     }
-
-    .price-comparison-table td,
-    .price-comparison-table th {
-        white-space: nowrap;
-        overflow: hidden;
-        vertical-align: middle;
-        padding: 2px 0px;
-        min-width: 110px;
-    }
-
-
+    
     .highlight-row { background-color: #ffe8a1 !important; transition: background-color 0.5s ease; }
     .pnl-highlight { background-color: #cbfdd9 !important; }
     
@@ -445,6 +430,23 @@ body[data-theme="dark"] {
         background-color: var(--utama) !important;
     }
    
+   .scrollable-price-table {
+        overflow-x: auto;
+        overflow-y: auto;
+        width: 100%;
+        max-height: 800px;
+    }
+
+    .price-comparison-table {
+        table-layout: auto;
+        min-width: 1800px; /* nilai ini tergantung jumlah kolom DEX */
+    }
+
+    .price-comparison-table th,
+    .price-comparison-table td {
+        white-space: nowrap;
+    }
+
 </style>
 
 </head>
