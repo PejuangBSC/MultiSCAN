@@ -11,49 +11,52 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Custom CSS -->
 <style>
-/* ======================= THEME: BLUE ======================= */
+/* ======================= THEME: BIRU ======================= */
 body[data-theme="biru"] {
-  --primary-color: #0517bb;        /* biru utama, dominan */
-  --secondary-color: #5c9ee6;      /* biru muda */
-  --success-color: #1e8e3e;        /* hijau ke-biru-an, selaras */
-  --danger-color: #d32f2f;         /* merah keunguan, cocok dengan biru */
-  --warning-color: #ff9400;        /* kuning tua, masih senada */
+    background-color: #eef6fc;
+  --primary-color: #0517bb;
+  --secondary-color: #5c9ee6;
+  --success-color: #1e8e3e;
+  --danger-color: #d32f2f;
+  --warning-color: #ff9400;
   --dark-color: #2f3e46;
   --light-color: #f8fafc;
   --card-color: #e3f0fa;
   --utama: #1976d2;
   --muted: #f5f9fc;
-  --strip-even: #8cb9e6;
-  --strip-odd: #bbdaf9;
-  --not-scanned: #b3d1de;
-  --sinyal-info: #cbfbb0;  
+  --strip-even: #bbdaf9;
+  --strip-odd: rgba(187, 218, 249, 0.1);
+  --not-scanned: #8cb9e6;
+  --sinyal-info: #cbfbb0;
 }
 
-/* ======================= THEME: GREEN ======================= */
+/* ======================= THEME: IJO ======================= */
 body[data-theme="ijo"] {
-  --primary-color: #0d6efd;        /* hijau daun */
-  --secondary-color: #06660c;      /* hijau pastel */
-  --success-color: #075f0c;        /* hijau tua pekat */
-  --danger-color: #de0505;         /* merah coklat (earthy) */
-  --warning-color:#ff9400;       /* oranye tanah (warm tone) */
+    background-color: #e6f7f0;
+  --primary-color: #0d6efd;
+  --secondary-color: #06660c;
+  --success-color: #075f0c;
+  --danger-color: #de0505;
+  --warning-color: #ff9400;
   --dark-color: #2e423b;
   --light-color: #f1f5f9;
   --card-color: #d2ede1;
   --utama: #06643f;
   --muted: #f0f5f2;
-  --strip-odd: #cdf2e1;
-  --strip-even: #8ee5be;
-  --not-scanned: #c0d7ce;
+  --strip-odd: #def7ec;                    /* tetap */
+  --strip-even: #fafefc; 
+  --not-scanned: #cdf2e1;
   --sinyal-info: #cbfbb0;
 }
 
-/* ======================= THEME: BROWN ======================= */
+/* ======================= THEME: COKLAT ======================= */
 body[data-theme="coklat"] {
-  --primary-color: #417ff1;        /* coklat klasik */
-  --secondary-color: #684d44;      /* coklat muda */
-  --success-color: #4e7932;        /* olive hijau yang natural */
-  --danger-color: #b31907;         /* merah bata, hangat */
-  --warning-color: #ff9400;        /* oranye tanah yang lembut */
+    background-color: #f3ede7;
+  --primary-color: #417ff1;
+  --secondary-color: #684d44;
+  --success-color: #4e7932;
+  --danger-color: #b31907;
+  --warning-color: #ff9400;
   --dark-color: #3e2723;
   --light-color: #efebe9;
   --card-color: #d7c4b4;
@@ -61,17 +64,18 @@ body[data-theme="coklat"] {
   --muted: #f0e5dd;
   --strip-odd: #ede8e3;
   --strip-even: #d7d1ca;
+  --not-scanned: #dbcac5;
   --sinyal-info: #cbfbb0;
-  --not-scanned: #ffeac8;
 }
 
-/* ======================= THEME: DARK ======================= */
+/* ======================= THEME: ABU (DARK) ======================= */
 body[data-theme="abu"] {
-  --primary-color: #0640a1;        /* biru terang khas dark */
-  --secondary-color: #313a3e;      /* abu netral */
-  --success-color: #067e44;        /* neon green, kontras */
-  --danger-color: #970606;         /* neon merah, khas dark UI */
-  --warning-color: #ffb300;        /* neon amber */
+     background-color: #e3e7eb;
+  --primary-color: #0640a1;
+  --secondary-color: #313a3e;
+  --success-color: #067e44;
+  --danger-color: #970606;
+  --warning-color: #ffb300;
   --dark-color: #2b303b;
   --light-color: #d5dce2;
   --utama: #566369;
@@ -79,63 +83,67 @@ body[data-theme="abu"] {
   --muted: #2f353d;
   --strip-odd: #e8ebee;
   --strip-even: #cfd2d7;
+  --not-scanned: #e8ebee;
   --sinyal-info: #cbfbb0;
-  --not-scanned: #495160;
 }
 
 /* ======================= THEME: PINK ======================= */
 body[data-theme="pink"] {
-  --primary-color: #6c72df;        /* pink lembut */
-  --secondary-color: #dd7d8c;      /* pink pastel */
-  --success-color: #6fa36f;        /* hijau pastel */
-  --danger-color: #bf0909;         /* merah muda hangat */
-  --warning-color: #ff9400;        /* peach pastel */
-  --dark-color: #5a3e4d;           /* ungu gelap */
-  --light-color: #f7f0f2;          /* latar pink sangat terang */
-  --card-color: #f8d7e0;           /* pink lembut untuk kartu */
-  --utama: #ef647a;                /* pink utama */
-  --muted: #f5d5df;                /* pink sangat pucat */
-  --strip-odd: #fce8f1;           /* baris genap */
-  --strip-even: #f6d3e1;            /* baris ganjil */
-  --sinyal-info: #cbfbb0;          /* biru muda kehijauan */
-  --not-scanned: #ffe3ec;          /* merah muda kekuningan */
+    background-color: #fdeef2;
+  --primary-color: #6c72df;
+  --secondary-color: #dd7d8c;
+  --success-color: #6fa36f;
+  --danger-color: #bf0909;
+  --warning-color: #ff9400;
+  --dark-color: #5a3e4d;
+  --light-color: #f7f0f2;
+  --card-color: #f8d7e0;
+  --utama: #ef647a;
+  --muted: #f5d5df;
+  --strip-even: #f3b8d0;
+  --strip-odd: rgba(243, 184, 208, 0.1);
+  --not-scanned: #fce8f1;
+  --sinyal-info: #cbfbb0;
 }
 
 /* ======================= THEME: ORANGE ======================= */
 body[data-theme="orange"] {
-  --primary-color: #574cf1;        /* oranye peach */
-  --secondary-color: #d78a72;      /* oranye muda */
-  --success-color: #05880c;        /* hijau pastel */
-  --danger-color: #f11d1d;         /* merah lembut */
-  --warning-color: #ff9400;        /* oranye pastel */
-  --dark-color: #6d4c41;           /* coklat gelap */
-  --light-color: #faf7f3;          /* krem terang */
-  --card-color: #ffe0b2;           /* warna kartu */
-  --utama: #ff8a65;                /* oranye coral */
-  --muted: #fae0ce;                /* oranye pudar */
+    background-color: #fff3e0;
+  --primary-color: #574cf1;
+  --secondary-color: #d78a72;
+  --success-color: #05880c;
+  --danger-color: #f11d1d;
+  --warning-color: #ff8a65;
+  --dark-color: #6d4c41;
+  --light-color: #faf7f3;
+  --card-color: #ffe0b2;
+  --utama: #ffa500;
+  --muted: #fae0ce;
   --strip-odd: #fff2e0;           /* baris genap */
   --strip-even: #fbdfb8;            /* baris ganjil */
-  --sinyal-info: #cbfbb0;          /* hijau mint */
-  --not-scanned: #fff2cc;          /* kuning pudar */
+  --not-scanned: #fff2e0;
+  --sinyal-info: #cbfbb0;
 }
 
-/* ======================= THEME: PURPLE ======================= */
+/* ======================= THEME: UNGU ======================= */
 body[data-theme="ungu"] {
-  --primary-color: #1818ed;        /* ungu lembut utama */
-  --secondary-color: #9171cc;      /* ungu pastel */
-  --success-color: #08530b;        /* hijau pastel */
-  --danger-color: #e70c7d;         /* merah keunguan */
-  --warning-color: #ff9400;        /* kuning kalem */
-  --dark-color: #4e3c5b;           /* ungu gelap */
-  --light-color: #f4eff9;          /* latar sangat terang */
-  --card-color: #e9d7f5;           /* warna kartu */
-  --utama: #7e57c2;                /* ungu utama */
-  --muted: #f5e8fa;                /* ungu pudar */
-  --strip-odd: #f3e6fc;           /* baris genap */
-  --strip-even: #e4d3f2;            /* baris ganjil */
-  --sinyal-info: #cbfbb0;          /* biru kehijauan terang */
-  --not-scanned: #f9e3fc;          /* pink keunguan pucat */
+    background-color: #f4effc;
+  --primary-color: #1818ed;
+  --secondary-color: #9171cc;
+  --success-color: #08530b;
+  --danger-color: #e70c7d;
+  --warning-color: #ff9400;
+  --dark-color: #4e3c5b;
+  --light-color: #f4eff9;
+  --card-color: #e9d7f5;
+  --utama: #7e57c2;
+  --muted: #f5e8fa;
+  --strip-even: #d4acf6;
+  --strip-odd: rgba(212, 172, 246, 0.1);
+  --not-scanned: #f3e6fc;
+  --sinyal-info: #cbfbb0;
 }
+
 
      /* TEXT COLORS */
     .text-primary     { color: var(--primary-color) !important; }
@@ -380,10 +388,6 @@ body[data-theme="ungu"] {
 
     .pink { background-color: #fccbce !important; }
     .abu { background-color: #d8dbdf !important; }
-    .highlight { 
-        background-color: #fff !important;
-        border-right: 1px black solid;
-    }
 
     .token-data-row.strip-even > td { background-color: var(--strip-even) !important }
     .token-data-row.strip-odd > td { background-color: var(--strip-odd) !important }
@@ -404,11 +408,6 @@ body[data-theme="ungu"] {
     .fs-8 { font-size: 0.77rem; }
     .fs-9 { font-size: 0.7rem; }
 
-    .td-not-scanned {
-        background-color: var(--not-scanned) !important;
-        color: #999 !important;
-        font-style: italic;
-    }
 
     .section-header {
         background: var(--utama);
@@ -476,12 +475,21 @@ body[data-theme="ungu"] {
     }
 
     .NameSinyalDEX{
-        background-color: var(--strip-even) !important;
-        color: black !important;
+        background-color: var(--utama) !important;
+        color: #fff !important;
     }
 
     .InfoSinyalDEX{
         background-color: var(--strip-odd) !important;
+         /* background-color: var(--strip-even) !important; */
+    }
+
+    .biasa { 
+        background-color: #f8f8f8!important;
+    }
+     .highlight { 
+        background-color: #dbfcc9;
+        border-right: 1px black solid;
     }
 
     .progres{
@@ -580,8 +588,8 @@ body[data-theme="ungu"] {
                         <a href="https://cors-anywhere.herokuapp.com/corsdemo" target="_blank" title="BUKA AKSES">
                             <img src="https://cdn-icons-png.flaticon.com/512/8820/8820158.png" width="25px">
                         </a>
-                        <button id="autorunBtn" class="btn btn-light btn-sm text-dark btn-outline-danger">
-                             <i class="bi bi-arrow-repeat"></i> Auto RUN
+                        <button id="autorunBtn" class="btn btn-sm text-light bg-dark-subtle">
+                             <i class="bi bi-arrow-repeat"></i>
                         </button>
                         <button class="btn btn-success btn-sm" id="CheckPrice">
                             <i class="bi bi-play-fill"></i> Check Price
@@ -647,8 +655,7 @@ body[data-theme="ungu"] {
           <li class="nav-item">
             <a class="nav-link disabled">
                 <small id="scanTimeInfo" class="text-primary text-end fw-bold"></small>  
-                <small id="scanProgressText" class="text-primary"></small>
-                 
+                <small id="scanProgressText" class="text-primary"></small>                 
             </a>
         </li>
 
@@ -671,22 +678,22 @@ body[data-theme="ungu"] {
 
                         <label class="text-primary mb-0">
                             <input type="checkbox" class="me-1 chainFilterCheckbox" value="Ethereum">
-                            ETH: <span id="ethCountMonitoring" class="fw-bold">0</span>
+                            ERC: <span id="ethCountMonitoring" class="fw-bold">0</span>
                         </label>
 
                         <label class="text-info mb-0">
                             <input type="checkbox" class="me-1 chainFilterCheckbox" value="Polygon">
-                            Polygon: <span id="polyCountMonitoring" class="fw-bold">0</span>
+                            POLY: <span id="polyCountMonitoring" class="fw-bold">0</span>
                         </label>
 
                         <label class="text-secondary mb-0">
                             <input type="checkbox" class="me-1 chainFilterCheckbox" value="Arbitrum">
-                            Arbitrum: <span id="arbCountMonitoring" class="fw-bold">0</span>
+                            ARB: <span id="arbCountMonitoring" class="fw-bold">0</span>
                         </label>
 
                         <label class="text-danger mb-0">
                             <input type="checkbox" class="me-1 chainFilterCheckbox" value="Base">
-                            Base: <span id="baseCountMonitoring" class="fw-bold">0</span>
+                            BASE: <span id="baseCountMonitoring" class="fw-bold">0</span>
                         </label>
 
                         ]
@@ -782,7 +789,7 @@ body[data-theme="ungu"] {
 
                                     <label class="text-primary">
                                         <input type="checkbox" class="filter-chain-checkbox me-1" value="Ethereum" checked>
-                                        ETH: <span id="ethCountManagement" class="fw-bold">0</span>
+                                        ERC: <span id="ethCountManagement" class="fw-bold">0</span>
                                     </label>
 
                                     <label class="text-danger">
@@ -792,12 +799,12 @@ body[data-theme="ungu"] {
 
                                     <label class="text-info">
                                         <input type="checkbox" class="filter-chain-checkbox me-1" value="Polygon" checked>
-                                        POLYGON: <span id="polyCountManagement" class="fw-bold">0</span>
+                                        POLY: <span id="polyCountManagement" class="fw-bold">0</span>
                                     </label>
 
                                     <label class="text-secondary">
                                         <input type="checkbox" class="filter-chain-checkbox me-1" value="Arbitrum" checked>
-                                        ARBITRUM: <span id="arbCountManagement" class="fw-bold">0</span>
+                                        ARB: <span id="arbCountManagement" class="fw-bold">0</span>
                                     </label>
 
                                     <div class="text-dark fw-bolder">
@@ -979,7 +986,7 @@ body[data-theme="ungu"] {
                                     <select class="form-select" id="tokenChain" required>
                                         <option value="">Select Chain</option>
                                         <option value="BSC">BSC</option>
-                                        <option value="Ethereum">Ethereum</option>
+                                        <option value="Ethereum">ERC</option>
                                         <option value="Polygon">Polygon</option>
                                         <option value="Base">Base</option>
                                         <option value="Arbitrum">Arbitrum</option>
@@ -1059,6 +1066,7 @@ body[data-theme="ungu"] {
             </div>
         </div>
     </div>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
