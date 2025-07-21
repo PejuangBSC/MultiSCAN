@@ -1,5 +1,5 @@
 // Token Price Monitor Application - Updated for Frontend API Calls
-const DexList = ['1inch','KyberSwap', 'Matcha', 'ODOS','OKXDEX','ParaSwap'];
+const DexList = ['KyberSwap','OKXDEX', '1inch','ODOS', 'Matcha', 'ParaSwap'];
 const CexList = ['Binance', 'MEXC', 'Gateio', 'INDODAX'];
 const ChainList = ['BSC', 'Ethereum', 'Polygon', 'Arbitrum', 'Base'];
 
@@ -115,12 +115,11 @@ class TokenPriceMonitor {
         $('#autorunBtn').on('click', () => {
             this.isAutorun = !this.isAutorun;
             const btn = $('#autorunBtn');
-            const newText = this.isAutorun ? 'AUTO ON' : 'AUTO OFF';
 
-            btn.html('<i class="bi bi-power"></i> ' + newText)
-            .removeClass(this.isAutorun ? 'btn-secondary' : 'btn-primary')
-            .addClass(this.isAutorun ? 'btn-primary' : 'btn-secondary');
-
+            // Tetap pakai ikon power saja, tidak ada teks tambahan
+            btn.html('<i class="bi bi-power"></i>')
+                .removeClass(this.isAutorun ? 'btn-danger' : 'btn-success') // Hapus warna lama
+                .addClass(this.isAutorun ? 'btn-success' : 'btn-danger');   // Tambah warna baru
         });
 
         $('#tokenSearch').on('input', () => {
@@ -2471,7 +2470,7 @@ class TokenPriceMonitor {
 
                     const highlightClass = parseFloat(pnlNetto) > parseFloat(this.settings.PNLFilter)
                         ? "highlight px-1 fs-8 fw-bold"
-                        : "px-1 fs-8";
+                        : "biasa px-1 fs-8";
 
                     const li = document.createElement("li");
                     li.className = highlightClass;
@@ -2576,7 +2575,7 @@ class TokenPriceMonitor {
                     <div class="card border shadow-sm rounded-top no-rounded-bottom h-100">
                         <!-- HEADER -->
                         <div class="card-header px-1 py-1 d-flex justify-content-between align-items-center border-bottom-0 align-middle NameSinyalDEX" style="min-height: unset;">
-                            <div class="fw-semibold text-uppercase text-black ps-2" style="font-size: 0.85rem;">
+                            <div class="fw-semibold text-uppercase ps-2" style="font-size: 0.85rem;">
                                 ${dexId} &nbsp;<span class="badge fs-8 bg-warning-subtle" id="new_${dexId}_Signal" ></span>
                             </div>
                             <i class="bi bi-caret-down-fill toggle-icon" id="icon-${dexId}"
