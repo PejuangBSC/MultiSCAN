@@ -3110,41 +3110,38 @@ class TokenPriceMonitor {
 // Initialize the application when DOM is ready
 $(document).ready(function() {
     $('#scrollTopBtn').show();
+    
+   // Fungsi untuk menerapkan tema dan tandai kotak aktif
+    function applyTheme(theme) {
+        $('body').attr('data-theme', theme);
+        localStorage.setItem('MULTI_theme', theme);
 
-    // ==== Toggle Dark Mode ====
-   const currentTheme = localStorage.getItem('MULTI_theme');
-    if (currentTheme === 'dark') {
-        $('body').addClass('dark-mode');
-        $('#themeToggleBtn')
-            .html('☀️')
-            .removeClass('btn-outline-light bg-dark')
-            .addClass('btn-outline-dark bg-success');
-
-    } else {
-        $('#themeToggleBtn')
-            .html('🌙')
-            .removeClass('btn-outline-dark bg-sucess')
-            .addClass('btn-outline-light bg-dark');
+        // Highlight kotak aktif
+        $('.theme-box').removeClass('active');
+        $(`.theme-box[data-theme="${theme}"]`).addClass('active');
     }
 
-    $('#themeToggleBtn').click(function () {
-        $('body').toggleClass('dark-mode');
+    // Fungsi validasi tema yang tersedia
+    function isValidTheme(theme) {
+        const allowedThemes = ['blue', 'green', 'brown', 'dark'];
+        return allowedThemes.includes(theme);
+    }
 
-        if ($('body').hasClass('dark-mode')) {
-            $(this)
-                .html('☀️')
-                .removeClass('btn-outline-light bg-dark')
-                .addClass('btn-outline-dark bg-success');
-            localStorage.setItem('MULTI_theme', 'dark'); // ✅ BENAR
-        } else {
-            $(this)
-                .html('🌙')
-                .removeClass('btn-outline-dark bg-success')
-                .addClass('btn-outline-light bg-dark');
-            localStorage.setItem('MULTI_theme', 'light'); // ✅ BENAR
-        }
+    // === Saat awal page dimuat ===
+    const savedTheme = localStorage.getItem('MULTI_theme');
+
+    if (!savedTheme || !isValidTheme(savedTheme)) {
+        alert("🎨 Silakan pilih salah satu warna tema terlebih dahulu!");
+        localStorage.removeItem('MULTI_theme'); // bersihkan jika tidak valid
+    } else {
+        applyTheme(savedTheme);
+    }
+
+    // === Klik kotak palet warna ===
+    $('.theme-box').on('click', function () {
+        const selected = $(this).data('theme');
+        applyTheme(selected);
     });
-
 
     window.app = new TokenPriceMonitor();
     
