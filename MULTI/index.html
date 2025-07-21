@@ -3,51 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi Checker</title>
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/6204/6204186.png" />
+    <title>Monitoring Coins</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/8608/8608723.png" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Custom CSS -->
 <style>
-
-    :root {
+   :root {
         --primary-color: #1258c9;
         --secondary-color: #287bdd;
         --success-color: #027f08;
-        --danger-color: #f93c32;
-        --warning-color: #f5a512;
-        --dark-color: #2f3e46;
-        --light-color: #f8fafc;
-        --card-color: #bac8ef;
-        --accent-blue: #289ed3;
-        --muted-blue: #f1f5f8;
-        --strip-odd: #daedff;
+        --danger-color: #dc1006;
+        --warning-color: #f5a512;     /* Oranye pastel */
+        --dark-color: #2f3e46;           /* Teks gelap */
+        --light-color: #f1f5f9;          /* Latar lembut */
+        --card-color: #e9f5ec;           /* Latar kartu hijau keputihan */
+        --utama: #529772;               /* Hijau sage */
+        --muted: #dbe5dd;                /* Abu kehijauan */
+        --strip-odd: #ecf4f1;            /* Strip lembut */
         --strip-even: #ffffff;
-        --not-scanned: #b3d1de;
-        --sinyal-info: #d2eaff;  
+        --sinyal-info: #b8ead4;          /* Biru info */
+        --not-scanned: #e0e0e0;
     }
 
-    /* TEXT COLORS */
-.text-primary     { color: var(--primary-color) !important; }
-.text-secondary   { color: var(--secondary-color) !important; }
-.text-success     { color: var(--success-color) !important; }
-.text-danger      { color: var(--danger-color) !important; }
-.text-warning     { color: var(--warning-color) !important; }
-.text-dark        { color: var(--dark-color) !important; }
-.text-light       { color: var(--light-color) !important; }
-.text-mute       { color: var(--muted-blue) !important; }
+    body.dark-mode {
+        --primary-color: #0960ff;
+        --secondary-color: #363f42;
+        --success-color: #035508;
+        --danger-color: #ec1212;
+        --warning-color: #e29417;
+        --dark-color: #2b303b;        /* BACKGROUND UTAMA */
+        --light-color: #d5dce2;       /* TEKS UTAMA */
+        --utama: #33373d;        /* KARTU */
+        --card-color: #818c98;
+        --muted: #4c566a;
+        --strip-even: #8c939a;
+        --strip-odd: #828f9f;
+        --sinyal-info: #b8ead4;
+        --not-scanned: #495160;
+    }
 
-/* BACKGROUND COLORS */
-.bg-primary       { background-color: var(--primary-color) !important;  }
-.bg-secondary     { background-color: var(--secondary-color) !important;  }
-.bg-success       { background-color: var(--success-color) !important; }
-.bg-danger        { background-color: var(--danger-color) !important; }
-.bg-warning       { background-color: var(--warning-color) !important;}
-.bg-dark          { background-color: var(--dark-color) !important;  }
-.bg-light         { background-color: var(--light-color) !important;  }
-.bg-muted         { background-color: var(--muted-blue) !important;  }
+        /* TEXT COLORS */
+    .text-primary     { color: var(--primary-color) !important; }
+    .text-secondary   { color: var(--secondary-color) !important; }
+    .text-success     { color: var(--success-color) !important; }
+    .text-danger      { color: var(--danger-color) !important; }
+    .text-warning     { color: var(--warning-color) !important; }
+    .text-dark        { color: var(--dark-color) !important; }
+    .text-light       { color: var(--light-color) !important; }
+
+    /* BACKGROUND COLORS */
+    .bg-primary       { background-color: var(--primary-color) !important;  }
+    .bg-secondary     { background-color: var(--secondary-color) !important;  }
+    .bg-success       { background-color: var(--success-color) !important; }
+    .bg-danger        { background-color: var(--danger-color) !important; }
+    .bg-warning       { background-color: var(--warning-color) !important;}
+    .bg-dark          { background-color: var(--dark-color) !important;  }
+    .bg-light         { background-color: var(--light-color) !important;  }
 
     .navbar {
         background: linear-gradient(135deg, var(--primary-color), #6d9dc5);
@@ -57,7 +71,7 @@
     .card {
         border: none;
         border-radius: 12px;
-        background-color: var(--accent-blue);
+        background-color: var(--card-color);
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         transition: all 0.3s ease;
     }
@@ -92,7 +106,7 @@
     }
 
     .table thead th {
-        background-color: var(--accent-blue);
+        background-color: var(--utama);
         color: #fff;
         border: none;
         font-weight: 600;
@@ -131,7 +145,7 @@
     .loading .loading-spinner { display: inline-block; }
 
     .modal-header {
-        background: linear-gradient(135deg, var(--primary-color), var(--accent-blue));
+        background: linear-gradient(135deg, var(--primary-color), var(--utama));
         color: white;
     }
 
@@ -141,7 +155,7 @@
     }
 
     .token-detail-cell {
-        background-color: var(--muted-blue);
+        background-color: var(--muted);
         padding-top:2px; padding-bottom:2px;
         margin: 2px 0px;
         padding: 2px 0px;        
@@ -157,24 +171,30 @@
     }
 
     .price-comparison-table thead th {
-        background: var(--accent-blue);
+        background: var(--utama);
         color: #fff;
     }
 
+    .nav-tabs .nav-link {
+        background-color: var(--card-color);
+        color: var(--dark-color);
+    }
     .nav-tabs .nav-link.active {
-        background-color: var(--accent-blue);
+        background-color: var(--utama);
         color: white;
         font-weight: bold;
     }
-    .nav-tabs .nav-link {
-        background-color: #f3f4f6;
-        color: #111827;
-        border: 1px solid transparent;
-        margin: 2px;
+    body.dark-mode .nav-tabs .nav-link {
+        color: var(--light-color);
     }
+    body.dark-mode .nav-tabs .nav-link.active {
+        background-color: var(--utama);
+        color: white;
+    }
+
     .nav-tabs .nav-link:hover {
-        background-color: #d1fae5;
-        color: #065f46;
+        color: var(--card-color);
+        background-color: var(--utama);
     }
 
     .card-body .d-flex .text-uppercase { border-bottom: none !important; }
@@ -194,18 +214,15 @@
         flex-direction: column;
         gap: 0.5rem;
     }
+
     .token-links a {
-        font-size: 0.8rem;
+        background-color: var(--muted);
+        color: var(--dark-color);
         text-decoration: none;
-        padding: 0.25rem 0.5rem;
-        border-radius: 4px;
-        background-color: #f1f5f9;
-        color: #475569;
-        transition: all 0.2s ease;
     }
     .token-links a:hover {
-        background-color: #e2e8f0;
-        color: #334155;
+        background-color: var(--utama);
+        color: var(--light-color);
     }
 
     a { text-decoration: none; }
@@ -288,7 +305,7 @@
     }
 
     .section-header {
-        background: var(--accent-blue);
+        background: var(--utama);
         color: white;
     }
 
@@ -331,7 +348,7 @@
         position: sticky;
         top: 0;
         z-index: 10;
-        background-color: var(--accent-blue); /* warna dari :root Anda */
+        background-color: var(--utama); /* warna dari :root Anda */
         color: white;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
     }
@@ -353,27 +370,14 @@
     }
 
     .sinyalDEX{
-        background-color: var(--accent-blue) !important;
+        background-color: var(--sinyal-info) !important;
     }
 
-    body.dark-mode {
-    --primary-color: #2666c0;      /* Lebih redup dari #1258c9 */
-    --secondary-color: #1464c0;    /* Lebih kusam dari #6d7d6a */
-    --success-color: #2a8438;      /* Redup dari #027f08 */
-    --danger-color: #cc5249;       /* Redup dari #f93c32 */
-    --warning-color: #c1832c;      /* Redup dari #f5a512 */
-    --dark-color: #0c150c;         /* Terang kebalikan dari dark, agar teks tetap terlihat */
-    --light-color: #1b1e23;        /* Latar belakang utama dark */
-    --card-color: #165a9d;         /* Untuk panel, kartu, tabel */
-    --accent-blue: #5c7381;        /* Biru pudar */
-    --muted-blue: #47596b;         /* Biru abu */
-    --strip-odd: #b1bcc6;          /* List bergantian gelap */
-    --strip-even: #c6d4e3;
-    --not-scanned: #4d636f;        /* Warna status belum discan */
-    --sinyal-info: #d9dbd9;        /* Latar sinyal baru */
-}
-
-    </style>
+    .progres{
+        background-color: var(--utama) !important;
+    }
+   
+</style>
 
 </head>
 <body style="font-family: 10px;">
@@ -388,9 +392,9 @@
                 <div class="section-header px-3 py-2 rounded-top">
                     <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
                         <div class="d-flex align-items-center flex-wrap gap-3">
-                            <h5 class="card-title text-light mb-0">[ Multi Checker Price Coin ]</h5>
+                            <h5 class="card-title text-light mb-0">[ Monitoring Price Coin ]</h5>
                             <div id="gasTokenPrices">
-                                <small class="fw-bold text-dark">BTC: <span id="btcPrice">--</span> | </small>
+                                <small class="fw-bold text-danger">BTC: <span id="btcPrice">--</span> | </small>
                                 <small class="fw-bold text-warning">BNB: <span id="bnbPrice">--</span> | </small>
                                 <small class="fw-bold text-primary">ETH: <span id="ethPrice">--</span> | </small>
                                 <small class="fw-bold text-info">MATIC: <span id="maticPrice">--</span> | </small>
@@ -454,7 +458,7 @@
                  <!-- Progress Bar -->
                 <div class="bg-white mt-2" style="height: 14px;">
                     <div class="progress h-100">
-                        <div class="progress-bar progress-bar-striped bg-info d-flex align-items-center px-2"
+                        <div class="progress-bar progress-bar-striped progres d-flex align-items-center px-2"
                             id="scanProgressBar"
                             role="progressbar"
                             style="width: 100%;">
