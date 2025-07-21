@@ -1600,7 +1600,7 @@ class TokenPriceMonitor {
                 .map(([dex, stat]) => `${dex.toUpperCase()} <span class="text-warning">[${stat.timeout}🕒 | ${stat.dexError}⚠️]</span>`)
                 .join('  ');
 
-            $('#statERROR').append(`<span class="text-dark fw-bold">&nbsp;&nbsp;📊 ${errorSummary}</span>`);
+          //  $('#statERROR').append(`<span class="text-dark fw-bold">&nbsp;&nbsp;📊 ${errorSummary}</span>`);
         }
 
     }
@@ -2381,7 +2381,7 @@ class TokenPriceMonitor {
         const pnl = hasilUSDT - modal;
         const pnlNetto = pnl - totalFee;
         const pnlClass = pnlNetto > 0 ? 'opit' : 'lost';
-        const tdStyle = pnlNetto > 0 ? 'background-color:rgb(183, 235, 212) !important;' : '';
+        const tdStyle = pnlNetto > 0 ? 'background-color:var(--sinyal-info) !important;' : '';
 
         const fromSymbol = direction === 'cex_to_dex' ? token.symbol : token.pairSymbol;
         const toSymbol = direction === 'cex_to_dex' ? token.pairSymbol : token.symbol;
@@ -2857,7 +2857,7 @@ class TokenPriceMonitor {
                 ? `<span class="fw-bold text-danger">DX</span>`
                 : `<span class="text-warning">⚠️</span>`;
       return `
-          <div class="bg-secondary-subtle py-1">
+          <div class="bg-light py-1">
                 <div class="d-block mb-1">   
                     <button class="btn bg-success btn-xs text-light"  onclick="app.confirmToggleToken('${token.id}')" title="Ganti Status">
                         <i class="bi bi-power"></i>
@@ -3112,23 +3112,39 @@ $(document).ready(function() {
     $('#scrollTopBtn').show();
 
     // ==== Toggle Dark Mode ====
-    const currentTheme = localStorage.getItem('theme');
+   const currentTheme = localStorage.getItem('MULTI_theme');
     if (currentTheme === 'dark') {
         $('body').addClass('dark-mode');
-        $('#themeToggleBtn').html('☀️');
+        $('#themeToggleBtn')
+            .html('☀️')
+            .removeClass('btn-outline-light bg-dark')
+            .addClass('btn-outline-dark bg-success');
+
+    } else {
+        $('#themeToggleBtn')
+            .html('🌙')
+            .removeClass('btn-outline-dark bg-sucess')
+            .addClass('btn-outline-light bg-dark');
     }
 
     $('#themeToggleBtn').click(function () {
         $('body').toggleClass('dark-mode');
 
         if ($('body').hasClass('dark-mode')) {
-            $('#themeToggleBtn').html('☀️');
-            localStorage.setItem('theme', 'dark');
+            $(this)
+                .html('☀️')
+                .removeClass('btn-outline-light bg-dark')
+                .addClass('btn-outline-dark bg-success');
+            localStorage.setItem('MULTI_theme', 'dark'); // ✅ BENAR
         } else {
-            $('#themeToggleBtn').html('🌙');
-            localStorage.setItem('theme', 'light');
+            $(this)
+                .html('🌙')
+                .removeClass('btn-outline-dark bg-success')
+                .addClass('btn-outline-light bg-dark');
+            localStorage.setItem('MULTI_theme', 'light'); // ✅ BENAR
         }
     });
+
 
     window.app = new TokenPriceMonitor();
     
