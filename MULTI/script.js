@@ -1,5 +1,5 @@
 // Token Price Monitor Application - Updated for Frontend API Calls
-const DexList = ['1inch','KyberSwap', 'Matcha','OKXDEX', 'ODOS','ParaSwap'];
+const DexList = ['1inch','KyberSwap', 'Matcha', 'ODOS','OKXDEX','ParaSwap'];
 const CexList = ['Binance', 'MEXC', 'Gateio', 'INDODAX'];
 const ChainList = ['BSC', 'Ethereum', 'Polygon', 'Arbitrum', 'Base'];
 
@@ -1033,7 +1033,7 @@ class TokenPriceMonitor {
                         </label>
                         ${isChecked ? `
                             <div class="d-inline-flex align-items-center mt-1 fs-7">                                
-                                <span class="badge abu text-dark">
+                                <span class="badge text-dark bg-white">
                                     <strong class="text-dark">${tokenSymbol}</strong> [${wdToken}|${dpToken}] ⇄ 
                                     <strong class="text-dark">${pairSymbol}</strong> [${wdPair}|${dpPair}]
                                 </span>
@@ -2273,36 +2273,6 @@ class TokenPriceMonitor {
         const $cell = $('#' + cleanCellId);
         if (!$cell.length) return;
 
-        // if (!dexInfo || dexInfo.error || dexInfo.isFallbackLoading || !dexInfo.normalizedOut || dexInfo.normalizedOut <= 0 || dexInfo.hasilUSDT <= 0) {
-        //     let content = '';
-
-        //     if (dexInfo?.isFallbackLoading) {
-        //         content = `
-        //             <div class="price-info text-center text-dark small">⌛ Via Swoop...</div>
-        //             <div>&nbsp;</div>
-        //             <div class="pnl-info">&nbsp;</div>
-        //         `;
-        //         $cell.removeClass().addClass('dex-price-cell text-center text-warning').html(content);
-        //         return;
-        //     }
-
-        //     const isFallbackError = dexInfo?.isFromFallback === true;
-        //     const errorMsg = (dexInfo?.error?.message || dexInfo?.error || 'Fetch Error').toString().substring(0, 120);
-
-        //     content = `
-        //         <div class="price-info">&nbsp;</div>
-        //         <div  title="${dexName}: ${errorMsg}">
-        //             ${isFallbackError ? '⚠️' : '❌'}
-        //         </div>
-        //         <div class="pnl-info">&nbsp;</div>
-        //     `;
-
-        //     $cell.removeClass().addClass('dex-price-cell text-center text-light');
-        //     $cell.addClass(isFallbackError ? 'abu' : 'pink');
-        //     $cell.html(content);
-        //     return;
-        // }
-
         if (!dexInfo || dexInfo.error || dexInfo.isFallbackLoading || !dexInfo.normalizedOut || dexInfo.normalizedOut <= 0 || dexInfo.hasilUSDT <= 0) {
         let content = '';
 
@@ -2605,8 +2575,8 @@ class TokenPriceMonitor {
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card border shadow-sm rounded-top no-rounded-bottom h-100">
                         <!-- HEADER -->
-                        <div class="card-header px-1 py-1 d-flex justify-content-between align-items-center border-bottom-0 align-middle bg-dark-subtle" style="min-height: unset;">
-                            <div class="fw-semibold text-uppercase ${textColor} ps-2" style="font-size: 0.85rem;">
+                        <div class="card-header px-1 py-1 d-flex justify-content-between align-items-center border-bottom-0 align-middle sinyalDEX" style="min-height: unset;">
+                            <div class="fw-semibold text-uppercase text-light ps-2" style="font-size: 0.85rem;">
                                 ${dexId} &nbsp;<span class="badge fs-8 bg-warning-subtle" id="new_${dexId}_Signal" ></span>
                             </div>
                             <i class="bi bi-caret-down-fill toggle-icon" id="icon-${dexId}"
@@ -2857,7 +2827,7 @@ class TokenPriceMonitor {
                 ? `<span class="fw-bold text-danger">DX</span>`
                 : `<span class="text-warning">⚠️</span>`;
       return `
-          <div class="bg-light py-1">
+          <div class="bg-white py-1">
                 <div class="d-block mb-1">   
                     <button class="btn bg-success btn-xs text-light"  onclick="app.confirmToggleToken('${token.id}')" title="Ganti Status">
                         <i class="bi bi-power"></i>
@@ -3109,6 +3079,8 @@ class TokenPriceMonitor {
 
 // Initialize the application when DOM is ready
 $(document).ready(function() {
+    window.app = new TokenPriceMonitor();
+
     $('#scrollTopBtn').show();
     
    // Fungsi untuk menerapkan tema dan tandai kotak aktif
@@ -3123,7 +3095,7 @@ $(document).ready(function() {
 
     // Fungsi validasi tema yang tersedia
     function isValidTheme(theme) {
-        const allowedThemes = ['blue', 'green', 'brown', 'dark'];
+        const allowedThemes = ['biru', 'ijo', 'coklat', 'abu', 'pink', 'orange', 'ungu'];
         return allowedThemes.includes(theme);
     }
 
@@ -3143,7 +3115,6 @@ $(document).ready(function() {
         applyTheme(selected);
     });
 
-    window.app = new TokenPriceMonitor();
     
     if (!$('#alert-container').length) {
         $('body').append(`
