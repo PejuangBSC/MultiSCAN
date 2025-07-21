@@ -11,38 +11,100 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Custom CSS -->
 <style>
-   :root {
-        --primary-color: #1258c9;
-        --secondary-color: #287bdd;
-        --success-color: #027f08;
-        --danger-color: #dc1006;
-        --warning-color: #f5a512;     /* Oranye pastel */
-        --dark-color: #2f3e46;           /* Teks gelap */
-        --light-color: #f1f5f9;          /* Latar lembut */
-        --card-color: #e9f5ec;           /* Latar kartu hijau keputihan */
-        --utama: #529772;               /* Hijau sage */
-        --muted: #dbe5dd;                /* Abu kehijauan */
-        --strip-odd: #ecf4f1;            /* Strip lembut */
-        --strip-even: #ffffff;
-        --sinyal-info: #b8ead4;          /* Biru info */
-        --not-scanned: #e0e0e0;
+    /* ======================= THEME: BLUE ======================= */
+    body[data-theme="blue"] {
+    --primary-color: #1258c9;
+    --secondary-color: #287bdd;
+    --success-color: #027f08;
+    --danger-color: #f93c32;
+    --warning-color: #f5a512;
+    --dark-color: #2f3e46;
+    --light-color: #f8fafc;
+    --card-color: #dbedff;
+    --utama: #289ed3;
+    --muted: #f1f5f8;
+    --strip-odd: #daedff;
+    --strip-even: #ffffff;
+    --not-scanned: #b3d1de;
+    --sinyal-info: #bdf4c5;
     }
 
-    body.dark-mode {
-        --primary-color: #0960ff;
-        --secondary-color: #363f42;
-        --success-color: #035508;
-        --danger-color: #ec1212;
-        --warning-color: #e29417;
-        --dark-color: #2b303b;        /* BACKGROUND UTAMA */
-        --light-color: #d5dce2;       /* TEKS UTAMA */
-        --utama: #33373d;        /* KARTU */
-        --card-color: #818c98;
-        --muted: #4c566a;
-        --strip-even: #8c939a;
-        --strip-odd: #828f9f;
-        --sinyal-info: #b8ead4;
-        --not-scanned: #495160;
+    /* ======================= THEME: GREEN ======================= */
+    body[data-theme="green"] {
+    --primary-color: #1258c9;
+    --secondary-color: #287bdd;
+    --success-color: #027f08;
+    --danger-color: #dc1006;
+    --warning-color: #f5a512;
+    --dark-color: #2f3e46;
+    --light-color: #f1f5f9;
+    --card-color: #e9f5ec;
+    --utama: #529772;
+    --muted: #dbe5dd;
+    --strip-odd: #ecf4f1;
+    --strip-even: #ffffff;
+    --sinyal-info: #b8ead4;
+    --not-scanned: #e0e0e0;
+    }
+
+    /* ======================= THEME: BROWN ======================= */
+    body[data-theme="brown"] {
+    --primary-color: #455ff4;
+    --secondary-color: #a1887f;
+    --success-color: #4f9052;
+    --danger-color: #d84315;
+    --warning-color: #f5a512;
+    --dark-color: #150d0c;
+    --light-color: #efebe9;
+    --card-color: #b7998e;
+    --utama: #8d6e63;
+    --muted: #d7ccc8;
+    --strip-even: #fff;
+    --strip-odd: #faf0d1;
+    --sinyal-info: #ecdcc5;
+    --not-scanned: #e0e0e0;
+    }
+
+    /* ======================= THEME: DARK ======================= */
+    body[data-theme="dark"] {
+    --primary-color: #0960ff;
+    --secondary-color: #363f42;
+    --success-color: #035508;
+    --danger-color: #ec1212;
+    --warning-color: #e29417;
+    --dark-color: #2b303b;
+    --light-color: #d5dce2;
+    --utama: #33373d;
+    --card-color: #818c98;
+    --muted: #4c566a;
+    --strip-even: #8c939a;
+    --strip-odd: #828f9f;
+    --sinyal-info: #b8ead4;
+    --not-scanned: #495160;
+    }
+
+    /* Indikator tema aktif */
+    .theme-option.active {
+    transform: scale(1.2);
+    font-weight: bold;
+    }
+
+    .theme-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.2s;
+    border: 2px solid transparent;
+    }
+
+    .theme-box:hover {
+    box-shadow: 0 0 0 2px #fff;
+    }
+
+    .theme-box.active {
+    transform: scale(1.5);
+    border-color: #fff;
     }
 
         /* TEXT COLORS */
@@ -166,8 +228,7 @@
     .cex-price-cell {
         white-space: nowrap;
         overflow: hidden;
-        /* text-overflow: ellipsis; */
-        min-width: 150px;
+        padding: 4px 6px;
     }
 
     .price-comparison-table thead th {
@@ -237,9 +298,8 @@
     }
 
     .price-comparison-table {
-        min-width: 2200px;
-        table-layout: fixed;
-        width: 100%;
+        table-layout: auto !important;
+        width: max-content;
     }
 
     .price-comparison-table th {
@@ -254,13 +314,9 @@
     .price-comparison-table th {
         white-space: nowrap;
         overflow: hidden;
-        /* text-overflow: ellipsis; */
         vertical-align: middle;
-    }
-
-    .price-comparison-table td,
-    .price-comparison-table th {
-        min-width: 120px;
+        padding: 2px 0px;
+        min-width: 110px;
     }
 
 
@@ -401,6 +457,15 @@
                                 <small class="fw-bold text-light">USDT/IDR: <span id="usdtIdrPrice">--</span></small>
                             </div>
                         </div>
+                        <!-- Palet Tema Kotak -->
+                          
+                        <div id="themePalette" class="d-flex gap-2 my-2 flex-wrap">
+                            <small class="fw-bold text-light">Pilihan Tema:</small>
+                            <div class="theme-box" data-theme="blue" style="background-color: #289ed3;" title="Tema Biru"></div>
+                            <div class="theme-box" data-theme="green" style="background-color: #529772;" title="Tema Hijau"></div>
+                            <div class="theme-box" data-theme="brown" style="background-color: #8d6e63;" title="Tema Coklat"></div>
+                            <div class="theme-box" data-theme="dark" style="background-color: #2b303b;" title="Tema Gelap"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -425,13 +490,14 @@
                             INFO: <span id="infostatus" class="text-primary">---</span> <span id="autorunCountdown" class="ms-2 badge bg-danger text-light fs-8"></span>
                         </small>
                         <small id="statERROR"></small>
+
                     </div>
                     <!-- Kontrol -->
                     <div class="d-flex align-items-center flex-wrap gap-2">
                         <!-- Toggle Mode Terang/Gelap -->
-                        <button id="themeToggleBtn" class="btn btn-outline-light bg-dark btn-sm" title="Ganti Mode Gelap / Terang">
+                        <!-- <button id="themeToggleBtn" class="btn btn-outline-light bg-dark btn-sm" title="Ganti Mode Gelap / Terang">
                             🌙
-                        </button>
+                        </button> -->
 
                         <a href="#" target="_blank" id="reload" title="RELOAD PAGE">
                             <img src="https://cdn-icons-png.freepik.com/512/210/210136.png" width="23px">
