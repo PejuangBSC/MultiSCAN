@@ -655,8 +655,8 @@ class TokenPriceMonitor {
                     const gasUSDT = (gwei * chain.gasLimit * tokenPrice) / 1e9;
 
                     gasTextParts.push(
-                       // `<span class='${colorClass} fs-7 fw-bolder'>${chain.label} [${gwei.toFixed(3)} Gwei | $${gasUSDT.toFixed(4)}]</span>`
-                         `<span class='badge ${chainBadgeColor} fs-8 fw-bolder'>🔥 ${chain.label} [${gwei.toFixed(3)} | $${gasUSDT.toFixed(4)}]</span>`
+                       `<span class='badge bg-secondary text-white fs-8 fw-bolder'>🔥 ${chain.label} [${gwei.toFixed(3)} | $${gasUSDT.toFixed(4)}]</span>`
+                       //  `<span class='badge ${chainBadgeColor} fs-8 fw-bolder'>🔥 ${chain.label} [${gwei.toFixed(3)} | $${gasUSDT.toFixed(4)}]</span>`
                     );
                 }).fail(() => {
                     gasTextParts.push(`${chain.label}[err]`);
@@ -1245,10 +1245,10 @@ class TokenPriceMonitor {
         if (type === 'chain') {
             const colors = {
                 bsc: 'bg-warning text-dark',
-                ethereum: 'bg-primary',
-                polygon: 'bg-info text-dark',
-                arbitrum: 'bg-info text-light',
-                base: 'bg-dark text-info',
+                ethereum: 'bg-primary text-light',
+                polygon: 'bg-success text-light',
+                arbitrum: 'bg-info text-dark',
+                base: 'bg-dark text-light',
             };
             return colors[name.toLowerCase()] || 'bg-dark';
         }
@@ -2849,6 +2849,8 @@ class TokenPriceMonitor {
         const linkDEFIL = `<a href="https://swap.defillama.com/?chain=${token.chain}&from=${token.contractAddress}&to=${token.pairContractAddress}" target="_blank" class="text-success">#DFL</a>`;
         const link1INCH = `<a href="https://app.1inch.io/advanced/swap?network=${chainId}&src=${token.contractAddress}&dst=${token.pairContractAddress}" target="_blank" class="text-danger">#1NC</a>`;
         const linkLIFI = `<a href="https://jumper.exchange/?fromChain=${chainId}&fromToken=${token.contractAddress}&toChain=${chainId}&toToken=${token.pairContractAddress}" target="_blank" class="text-info">#LFX</a>`;
+        const linkSQUID = `<a href="https://app.squidrouter.com/?chains=${chainId}%2C${chainId}&tokens=${token.contractAddress}%2C${token.pairContractAddress}" target="_blank" class="text-info">#SQX</a>`;
+        const linkRELAY = `<a href="https://relay.link/bridge/${token.chain}?fromChainId=${chainId}&fromCurrency=${token.contractAddress}&toCurrency=${token.pairContractAddress}" target="_blank" class="text-warning">#RLY</a>`;
 
         // 🔍 Ambil info token & pair dari token.cexInfo
         const matchedCEXKey = Object.keys(token.cexInfo || {}).find(k => k.toUpperCase() === cexUpper);
@@ -2919,7 +2921,7 @@ class TokenPriceMonitor {
 
                 <!-- Link-link DEX -->
                 <div class="d-block mb-1 fw-bold fs-8">
-                    ${link1INCH} ${linkOKDEX} ${linkDEFIL} ${linkUNIDEX} ${linkLIFI} 
+                    ${link1INCH} ${linkOKDEX} ${linkDEFIL} ${linkUNIDEX} ${linkSQUID} 
                 </div>
             </div>
             `;
