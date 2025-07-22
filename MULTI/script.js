@@ -2398,12 +2398,13 @@ const chainBadgeColor = this.getBadgeColor(chain.key, 'chain');
         const linkSwap = direction === 'cex_to_dex'
             ? this.generateDexLink(dexName, token.chain, token.symbol, token.contractAddress, token.pairSymbol, token.pairContractAddress)
             : this.generateDexLink(dexName, token.chain, token.pairSymbol, token.pairContractAddress, token.symbol, token.contractAddress);
+        
         const mainSymbol = token.symbol.toUpperCase();
         const cexLinks = this.GeturlExchanger(cexName.toUpperCase(), mainSymbol, mainSymbol);
         const cexLink = cexLinks.tradeLink || '#';
         const buyLink = direction === 'cex_to_dex' ? cexLink : linkSwap;
         const sellLink = direction === 'cex_to_dex' ? linkSwap : cexLink;
-
+        
         // Konversi harga ke IDR
         const resultPriceUSDT = (
             cexInfo?.[`${resultSymbol.toUpperCase()}ToUSDT`]?.buy ||
@@ -2564,10 +2565,10 @@ const chainBadgeColor = this.getBadgeColor(chain.key, 'chain');
                 }
             }
 
-
         }
 
         // 🎯 Render ke dalam cell 
+        /*
         $cell
             .attr('style', tdStyle)
             .attr('title', tooltip)
@@ -2588,7 +2589,47 @@ const chainBadgeColor = this.getBadgeColor(chain.key, 'chain');
                 <div class="text-dark small" title="PNL - Fee Total"><strong>[${PriceUtils.formatPNL(pnl)}-${(totalFee).toFixed(2)}]</strong></div>
                 <div class="${pnlClass}"><strong>💰 NET: ${PriceUtils.formatPNL(pnlNetto)}</strong></div>
             `);
+        */        
+       // Render status WD/DP sesuai arah
+        let statusWalletCEX = '';
+        const wdStatus = token.cexInfo?.[matchedCEXKey]?.[token.symbol.toUpperCase()]?.wd ?? false;
+        const depoStatus = token.cexInfo?.[matchedCEXKey]?.[token.symbol.toUpperCase()]?.depo ?? false;
+ 
+        if (direction === 'cex_to_dex') {
+            if (wdStatus === true) {
+                statusWalletCEX = `<a href="${cexLinks.withdrawUrl}" target="_blank" class="text-primary fs-8">🈳 WD: ${PriceUtils.formatFee(feeWD)}</a>`;
+            } else if (wdStatus === false) {
+                statusWalletCEX = `<a href="${cexLinks.withdrawUrl}" target="_blank" class="text-primary fs-8">⛔ WD</a>`;
+            } else {
+                statusWalletCEX = `<a href="${cexLinks.withdrawUrl}" target="_blank" class="text-primary fs-8">❗ WD</a>`;
+            }
+        } else {
+            if (depoStatus === true) {
+                statusWalletCEX = `<a href="${cexLinks.depositUrl}" target="_blank" class="text-warning fs-8">🈷️ DP[${toSymbol}]</a>`;
+            } else if (depoStatus === false) {
+                statusWalletCEX = `<a href="${cexLinks.depositUrl}" target="_blank" class="text-warning fs-8">⛔ DP[${toSymbol}]</a>`;
+            } else {
+                statusWalletCEX = `<a href="${cexLinks.depositUrl}" target="_blank" class="text-warning fs-8">❗ DP[${toSymbol}]</a>`;
+            }
+        }
 
+        // 🎯 Render ke dalam cell 
+        $cell
+            .attr('style', tdStyle)
+            .attr('title', tooltip)
+            .removeClass()
+            .addClass('dex-price-cell align-middle')
+            .html(`
+                <div>
+                    <div class="small text-muted fw-bold">${(dexInfo.exchange).toUpperCase() || dexName.toUpperCase()}</div>
+                    <a href="${buyLink}" target="_blank" class="text-success">⬆ ${PriceUtils.formatPrice(buyPrice)}</a><br>
+                    <a href="${sellLink}" target="_blank" class="text-danger">⬇ ${PriceUtils.formatPrice(sellPrice)}</a>
+                </div>
+                ${statusWalletCEX}
+                <div class="fw-bold text-danger">Swap: ${PriceUtils.formatFee(fee)}</div>
+                <div class="text-dark small" title="PNL - Fee Total"><strong>[${PriceUtils.formatPNL(pnl)} - ${(totalFee).toFixed(2)}]</strong></div>
+                <div class="${pnlClass}"><strong>💰 NET: ${PriceUtils.formatPNL(pnlNetto)}</strong></div>
+            `);
     }
  
     initPNLSignalStructure() {
