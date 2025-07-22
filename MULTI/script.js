@@ -2940,7 +2940,7 @@ class TokenPriceMonitor {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    showAlert(message, type = 'info') {
+    showAlertLAMA(message, type = 'info') {
         const alertId = 'alert-' + Date.now();
 
         const alertHtml = `
@@ -2957,9 +2957,48 @@ class TokenPriceMonitor {
         setTimeout(() => {
             $(`#${alertId}`).alert('close');
         }, 5000);
+
+         // 🔔 Tambahan untuk Android WebView
+        if (window.Android && typeof window.Android.showToast === 'function') {
+            window.Android.showToast(message);
+        }
+
+        // 💥 Tambahan: Getar jika ada fungsi vibrate Android
+        if (window.Android && typeof window.Android.vibrate === 'function') {
+            window.Android.vibrate(200); // getar selama 200ms
+        }
     }
 
-     logAction(message) {
+    showAlert(message, type = 'info') {
+        const alertId = 'alert-' + Date.now();
+
+        const alertHtml = `
+            <div id="${alertId}" class="alert alert-${type} alert-dismissible fade show position-fixed d-flex align-items-center justify-content-between"
+                style="top: 1%; left: 50%; transform: translateX(-50%); z-index: 9999; min-width: 70%; max-width: 90vw; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 3rem;">
+                <div class="me-2">${message}</div>
+                <button type="button" class="btn-close ms-2" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        `;
+
+        $('body').append(alertHtml);
+
+        setTimeout(() => {
+            $(`#${alertId}`).alert('close');
+        }, 5000);
+
+        // 🔔 Tambahan Android: hapus HTML sebelum dikirim ke native
+        if (window.Android && typeof window.Android.showToast === 'function') {
+            const plainText = message.replace(/<[^>]*>/g, ''); // hapus semua <tag>
+            window.Android.showToast(plainText);
+        }
+
+        // 💥 Tambahan: Getar jika tersedia
+        if (window.Android && typeof window.Android.vibrate === 'function') {
+            window.Android.vibrate(200); // Getar 200ms
+        }
+    }
+
+    logAction(message) {
         const now = new Date();
 
         const dd = String(now.getDate()).padStart(2, '0');
