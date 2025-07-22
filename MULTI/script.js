@@ -37,11 +37,11 @@ const explorerUrls = {
 };
 
 const supportedChains = [
-    { key: "ethereum", label: "ERC", symbol: "ETH", gasLimit: 65000 },
-    { key: "bsc", label: "BSC", symbol: "BNB", gasLimit: 50000 },
-    { key: "polygon", label: "POL", symbol: "MATIC", gasLimit: 50000 },
-    { key: "arbitrum", label: "ARB", symbol: "ETH", gasLimit: 65000 },
-    { key: "base", label: "BASE", symbol: "ETH", gasLimit: 65000 }
+    { key: "ethereum", label: "ERC", symbol: "ETH", gasLimit: 250000 },
+    { key: "bsc", label: "BSC", symbol: "BNB", gasLimit: 80000 },
+    { key: "polygon", label: "POL", symbol: "MATIC", gasLimit: 80000 },
+    { key: "arbitrum", label: "ARB", symbol: "ETH", gasLimit: 100000 },
+    { key: "base", label: "BASE", symbol: "ETH", gasLimit: 100000 }
 ];
 
 const ratePrice = {}; // Menyimpan semua kurs mata uang (misal: IDR)
@@ -638,7 +638,7 @@ class TokenPriceMonitor {
 
                 const colorChain = this.getBadgeColor(chain.key, 'chain'); // FIXED
                 const colorClass = this.getTextColorClassFromBadge(this.getBadgeColor(chain.key, 'chain')); // FIXED
-const chainBadgeColor = this.getBadgeColor(chain.key, 'chain');
+                const chainBadgeColor = this.getBadgeColor(chain.key, 'chain');
                 if (!tokenPrice || !kodeChain) {
                     gasTextParts.push(`${chain.label}[n/a]`);
                     completed++;
@@ -651,7 +651,7 @@ const chainBadgeColor = this.getBadgeColor(chain.key, 'chain');
                 const infuraURL = `https://gas.api.infura.io/v3/9d0429abadc34232af7d5c0e6ab98631/networks/${kodeChain}/suggestedGasFees`;
 
                 $.getJSON(infuraURL).done(resp => {
-                    const gwei = parseFloat(resp.medium.suggestedMaxFeePerGas);
+                    const gwei = parseFloat(resp.low.suggestedMaxFeePerGas);
                     const gasUSDT = (gwei * chain.gasLimit * tokenPrice) / 1e9;
 
                     gasTextParts.push(
@@ -2567,29 +2567,6 @@ const chainBadgeColor = this.getBadgeColor(chain.key, 'chain');
 
         }
 
-        // 🎯 Render ke dalam cell 
-        /*
-        $cell
-            .attr('style', tdStyle)
-            .attr('title', tooltip)
-            .removeClass()
-            .addClass('dex-price-cell align-middle')
-            .html(`
-                <div >
-                    <div class="small text-muted fw-bold"> ${(dexInfo.exchange).toUpperCase() || dexName.toUpperCase()}</div>
-                    <a href="${buyLink}" target="_blank" class="text-success">⬆ ${PriceUtils.formatPrice(buyPrice)}</a><br>
-                    <a href="${sellLink}" target="_blank" class="text-danger">⬇ ${PriceUtils.formatPrice(sellPrice)}</a>
-                </div>
-                ${
-                    direction === 'cex_to_dex'
-                        ? `<a href="${cexLinks.withdrawUrl}" target="_blank" class="text-primary fs-8">🈳 WD: ${PriceUtils.formatFee(feeWD)} </a>`
-                        : `<a href="${cexLinks.depositUrl}" target="_blank" class="text-warning fs-8">🈷️ DP[${toSymbol}]</a>`
-                }
-                <div class="fw-bold text-danger">Swap: ${PriceUtils.formatFee(fee)}</div>
-                <div class="text-dark small" title="PNL - Fee Total"><strong>[${PriceUtils.formatPNL(pnl)}-${(totalFee).toFixed(2)}]</strong></div>
-                <div class="${pnlClass}"><strong>💰 NET: ${PriceUtils.formatPNL(pnlNetto)}</strong></div>
-            `);
-        */        
        // Render status WD/DP sesuai arah
         let statusWalletCEX = '';
         const wdStatus = token.cexInfo?.[matchedCEXKey]?.[token.symbol.toUpperCase()]?.wd ?? false;
