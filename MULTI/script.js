@@ -35,6 +35,15 @@ const explorerUrls = {
      '8453': 'https://basescan.org/',
      '501': 'https://solscan.io/',     
 };
+
+const supportedChains = [
+    { key: "ethereum", label: "ERC", symbol: "ETH", gasLimit: 65000 },
+    { key: "bsc", label: "BSC", symbol: "BNB", gasLimit: 50000 },
+    { key: "polygon", label: "POL", symbol: "MATIC", gasLimit: 50000 },
+    { key: "arbitrum", label: "ARB", symbol: "ETH", gasLimit: 65000 },
+    { key: "base", label: "BASE", symbol: "ETH", gasLimit: 65000 }
+];
+
 const ratePrice = {}; // Menyimpan semua kurs mata uang (misal: IDR)
 
 class TokenPriceMonitor {
@@ -261,7 +270,7 @@ class TokenPriceMonitor {
             $('#dexSignals').show();
 
             // Nonaktifkan tombol-tombol selama proses
-            $('#CheckPrice').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Scanning...');
+            $('#CheckPrice').prop('disabled', true).html('<span class="spinner-border spinner-border-sm"></span> Scan...');
             $('#autorunBtn').prop('disabled', true);
             $('#monitoringSearch').prop('disabled', true).val('');
             $('#sortByToken').prop('disabled', true);
@@ -603,38 +612,66 @@ class TokenPriceMonitor {
     }
 
     fetchGasTokenPrices() {
-        $.getJSON("https://data-api.binance.vision/api/v3/ticker/price?symbols=[\"BTCUSDT\",\"BNBUSDT\",\"ETHUSDT\",\"MATICUSDT\",\"SOLUSDT\"]")
-            .done(response => {
-                for (const item of response) {
-                    const price = parseFloat(item.price);
+        const binanceURL = 'https://data-api.binance.vision/api/v3/ticker/price?symbols=["BNBUSDT","ETHUSDT","MATICUSDT","BTCUSDT"]';
 
-                    if (item.symbol === 'BTCUSDT') {
-                        $('#btcPrice').text(`$${price.toFixed(2)}`);
-                    }
-                    
-                    if (item.symbol === 'BNBUSDT') {
-                        GasPriceUSD.BSC = price;
-                        $('#bnbPrice').text(`$${price.toFixed(2)}`);
-                    }
+        $('#gasTokenPrices').html(`<small class="text-muted">Loading Gwei info...</small>`);
 
-                    if (item.symbol === 'ETHUSDT') {
-                        GasPriceUSD.Ethereum = price;
-                        GasPriceUSD.Base = price;        // Base ikut harga ETH
-                        GasPriceUSD.Arbitrum = price;    // Arbitrum juga ikut harga ETH
-                        $('#ethPrice').text(`$${price.toFixed(2)}`);
-                    }
+        $.getJSON(binanceURL).done(priceList => {
+            const tokenPrices = {};
+            priceList.forEach(item => {
+                const symbol = item.symbol.replace("USDT", "");
+                tokenPrices[symbol] = parseFloat(item.price);
 
-                    if (item.symbol === 'MATICUSDT') {
-                        GasPriceUSD.Polygon = price;
-                        $('#maticPrice').text(`$${price.toFixed(2)}`);
+                // Update individual harga
+                if (symbol === 'BTC') $('#btcPrice').text(`$${tokenPrices[symbol].toFixed(2)}`);
+                if (symbol === 'BNB') $('#bnbPrice').text(`$${tokenPrices[symbol].toFixed(2)}`);
+                if (symbol === 'ETH') $('#ethPrice').text(`$${tokenPrices[symbol].toFixed(2)}`);
+                if (symbol === 'MATIC') $('#maticPrice').text(`$${tokenPrices[symbol].toFixed(2)}`);
+            });
+
+            const gasTextParts = [];
+            let completed = 0;
+
+            supportedChains.forEach(chain => {
+                const kodeChain = chainCodeMap[chain.key];
+                const tokenPrice = tokenPrices[chain.symbol];
+
+                const colorChain = this.getBadgeColor(chain.key, 'chain'); // FIXED
+                const colorClass = this.getTextColorClassFromBadge(this.getBadgeColor(chain.key, 'chain')); // FIXED
+const chainBadgeColor = this.getBadgeColor(chain.key, 'chain');
+                if (!tokenPrice || !kodeChain) {
+                    gasTextParts.push(`${chain.label}[n/a]`);
+                    completed++;
+                    if (completed === supportedChains.length) {
+                        $('#gasTokenPrices').html(gasTextParts.join(" "));
                     }
+                    return;
                 }
 
-                // console.log('[✔] Fetched gas token prices:', GasPriceUSD);
-            })
-            .fail(err => {
-                console.warn('[✘] Failed to fetch gas token prices', err);
+                const infuraURL = `https://gas.api.infura.io/v3/9d0429abadc34232af7d5c0e6ab98631/networks/${kodeChain}/suggestedGasFees`;
+
+                $.getJSON(infuraURL).done(resp => {
+                    const gwei = parseFloat(resp.medium.suggestedMaxFeePerGas);
+                    const gasUSDT = (gwei * chain.gasLimit * tokenPrice) / 1e9;
+
+                    gasTextParts.push(
+                       // `<span class='${colorClass} fs-7 fw-bolder'>${chain.label} [${gwei.toFixed(3)} Gwei | $${gasUSDT.toFixed(4)}]</span>`
+                         `<span class='badge ${chainBadgeColor} fs-8 fw-bolder'>🔥 ${chain.label} [${gwei.toFixed(3)} | $${gasUSDT.toFixed(4)}]</span>`
+                    );
+                }).fail(() => {
+                    gasTextParts.push(`${chain.label}[err]`);
+                }).always(() => {
+                    completed++;
+                    if (completed === supportedChains.length) {
+                        $('#gasTokenPrices').html(gasTextParts.join(" "));
+                    }
+                });
             });
+
+        }).fail(err => {
+            console.error("❌ Gagal ambil harga token dari Binance:", err);
+            $('#gasTokenPrices').html('<span class="text-danger">Gagal ambil data harga.</span>');
+        });
     }
 
     fetchUSDTtoIDRRate() {
@@ -1469,6 +1506,7 @@ class TokenPriceMonitor {
 
 
     async CheckPrices() {
+        this.fetchGasTokenPrices();
         $('.chainFilterCheckbox').prop('disabled', true);
         $("#statERROR").html('');
 
